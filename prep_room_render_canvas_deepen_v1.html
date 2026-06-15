@@ -983,7 +983,7 @@
     .cps-main-grid {
       min-height: 0;
       display: grid;
-      grid-template-columns: 230px minmax(720px, 1fr) 260px;
+      grid-template-columns: minmax(200px, 0.24fr) minmax(0, 1.56fr) minmax(220px, 0.32fr);
       gap: 12px;
       overflow: auto;
     }
@@ -1087,15 +1087,15 @@
     }
 
     .cps-board {
-      min-width: 760px;
+      min-width: 0;
       overflow: auto;
     }
 
     .cps-class-header-row,
     .cps-week-row {
       display: grid;
-      grid-template-columns: 104px repeat(5, minmax(176px, 176px));
-      width: max-content;
+      grid-template-columns: minmax(92px, 0.56fr) repeat(5, minmax(128px, 1fr));
+      width: 100%;
       min-width: 100%;
     }
 
@@ -1227,22 +1227,8 @@
 
     .cps-schedule-slot {
       min-height: 36px;
-      display: grid;
-      grid-template-columns: 54px minmax(0, 1fr);
-      gap: 6px;
+      display: block;
       align-items: stretch;
-    }
-
-    .cps-slot-label {
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--line);
-      border-radius: 7px;
-      background: #fff;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 760;
-      white-space: nowrap;
     }
 
     .cps-slot-card {
@@ -1286,10 +1272,6 @@
       color: #4e5a56;
     }
 
-    .cps-week-row.future .cps-slot-label {
-      color: #697570;
-      background: #fff;
-    }
 
     .cps-suggestion-list {
       display: grid;
@@ -2124,14 +2106,14 @@
       }
 
       .cps-main-grid {
-        grid-template-columns: 200px minmax(990px, 1fr) 230px;
+        grid-template-columns: minmax(180px, 0.35fr) minmax(180vw, 1.6fr) minmax(220px, 0.45fr);
         align-items: stretch;
         overflow-x: auto;
         padding-bottom: 4px;
       }
 
       .cps-board {
-        min-width: 990px;
+        min-width: 180vw;
       }
 
       .inspector {
@@ -2235,7 +2217,6 @@
       <div class="chat-avatar" aria-hidden="true">备</div>
       <div>
         <div class="chat-agent-name">小备</div>
-        <div class="chat-agent-role">当前空间 = 备课室 · 底部意图栏自动切换为小备</div>
       </div>
     </div>
     <div class="chat-input-shell">
@@ -3094,7 +3075,6 @@
       const nodeId = `cps-${week.id}-${klass.id}-${index + 1}`;
       return `
         <div class="cps-schedule-slot">
-          <div class="cps-slot-label">第${index + 1}课时</div>
           <button class="cps-slot-card ${html(cardType)}" type="button" data-node="${html(nodeId)}" data-cps-detail="${html(JSON.stringify(detail))}" title="${html(title || cpsCardTypeLabel(cardType))}">
             <span class="lesson-code">${html(code)}</span>
             <span>${html(title || cpsCardTypeLabel(cardType))}</span>
