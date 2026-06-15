@@ -1237,14 +1237,19 @@
 
     .cps-schedule-slot {
       min-height: 36px;
-      display: block;
-      align-items: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .cps-slot-card {
       min-width: 0;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0 auto;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 7px;
       padding: 0 9px;
       border: 1px solid #b9d9cf;
@@ -1253,7 +1258,7 @@
       color: #244c42;
       font-size: 13px;
       font-weight: 780;
-      text-align: left;
+      text-align: center;
       overflow: hidden;
     }
 
