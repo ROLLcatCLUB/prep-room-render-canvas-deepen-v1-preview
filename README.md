@@ -6,6 +6,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - `prep_room_render_canvas_deepen_v1.html`
 - `class_progress_schedule_board_design_v0.md`
+- `class_progress_schedule_board_v1.html`
 
 ## Preview Boundary
 
@@ -52,6 +53,7 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - The top area now uses a compact product navigation bar and context row; view switching lives in the context row, while the verbose canvas heading block has been removed.
 - The current space name is centered as large gradient text, with a horizontal AI tool strip below it using one icon per tool.
 - The third view is now `学期规划`, rendered as a left unit lesson catalog plus a right weekly lesson plan board.
+- `class_progress_schedule_board_v1.html` is an independent static preview for the next `班级进度与排课` scene, using a week-by-class board with two default weekly lesson slots per class.
 - The page now follows the shell principle: spaces are states rendered in the center stage, and agents are bottom intent-bar roles rather than room-internal page widgets.
 - Visual rule update: week indicators should be prominent, while actions use pill or circular button shapes by default.
 - Icon rule update: use a Lucide-like line icon style for circular controls; keep action text in `title` / accessible labels instead of visible button copy.
