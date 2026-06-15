@@ -678,6 +678,304 @@
       gap: 10px;
     }
 
+    .wc-scene {
+      min-height: 100%;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    .wc-control-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .wc-control-cluster,
+    .wc-mode-switcher,
+    .wc-legend-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      min-width: 0;
+    }
+
+    .wc-chip {
+      min-height: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--muted);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .wc-chip.active {
+      border-color: var(--green);
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(47, 118, 104, 0.14);
+    }
+
+    .wc-chip.week {
+      color: var(--green);
+      border-color: #b9d9cf;
+      background: var(--green-soft);
+    }
+
+    .wc-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 24px;
+      padding: 0 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 760;
+      white-space: nowrap;
+    }
+
+    .wc-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .wc-dot.today { background: #1e6f60; }
+    .wc-dot.warning,
+    .wc-dot.activity { background: var(--amber); }
+    .wc-dot.reschedule { background: var(--blue); }
+    .wc-dot.holiday { background: #c76d66; }
+    .wc-dot.makeup { background: #7565d4; }
+    .wc-dot.future { background: #8c9894; }
+
+    .wc-main-grid {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 0.28fr);
+      gap: 12px;
+      overflow: auto;
+    }
+
+    .wc-calendar-board,
+    .wc-side-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.93);
+      box-shadow: 0 12px 30px rgba(29, 39, 35, 0.05);
+    }
+
+    .wc-calendar-board {
+      min-width: 0;
+      overflow: auto;
+    }
+
+    .wc-header-row,
+    .wc-period-row {
+      display: grid;
+      grid-template-columns: minmax(64px, 0.5fr) repeat(7, minmax(112px, 1fr));
+      width: 100%;
+      min-width: 980px;
+    }
+
+    .wc-header-row {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wc-corner,
+    .wc-day-head,
+    .wc-period-label,
+    .wc-cell {
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wc-corner,
+    .wc-day-head,
+    .wc-period-label {
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      text-align: center;
+      font-weight: 900;
+    }
+
+    .wc-day-date {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .wc-day-head.today {
+      color: var(--green);
+      background: linear-gradient(135deg, rgba(224, 243, 237, 0.98), rgba(255, 255, 255, 0.96));
+      box-shadow: inset 0 -3px 0 var(--green);
+    }
+
+    .wc-day-head.workday {
+      color: #6857c8;
+      background: #f5f2ff;
+    }
+
+    .wc-day-head.weekend {
+      color: var(--muted);
+      background: #f6f8f7;
+    }
+
+    .wc-period-label {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--ink);
+    }
+
+    .wc-cell {
+      min-height: 74px;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .wc-cell.today {
+      background: rgba(224, 243, 237, 0.36);
+    }
+
+    .wc-cell.future,
+    .wc-cell.weekend {
+      background: rgba(243, 246, 245, 0.64);
+    }
+
+    .wc-empty {
+      width: 28px;
+      height: 1px;
+      background: #dfe7e4;
+    }
+
+    .wc-course-card {
+      width: min(100%, 150px);
+      display: grid;
+      gap: 3px;
+      justify-items: center;
+      padding: 8px 9px;
+      border: 1px solid #b9d9cf;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #edf8f5, #fff);
+      color: #244c42;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .wc-course-class {
+      font-size: 13px;
+      font-weight: 930;
+    }
+
+    .wc-course-title {
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .wc-course-status {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 760;
+    }
+
+    .wc-course-card.today { border-color: var(--green); box-shadow: inset 4px 0 0 var(--green); }
+    .wc-course-card.warning { border-color: #efc49c; background: var(--amber-soft); color: var(--amber); }
+    .wc-course-card.activity { border-color: #efc49c; background: var(--amber-soft); color: var(--amber); }
+    .wc-course-card.reschedule { border-color: #abc4f1; background: var(--blue-soft); color: var(--blue); }
+    .wc-course-card.holiday { border-color: #f1b7b1; background: var(--red-soft); color: var(--red); }
+    .wc-course-card.makeup { border-color: #c8c0f4; background: #f0edff; color: #6857c8; }
+    .wc-course-card.future { border-color: #d3dbd8; background: #f3f5f4; color: #4e5a56; }
+    .wc-course-card.done { border-color: #c8e2d8; background: #f1faf6; color: var(--green); }
+
+    .wc-side-panel {
+      padding: 12px;
+      overflow: auto;
+    }
+
+    .wc-side-section + .wc-side-section {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .wc-side-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 930;
+    }
+
+    .wc-side-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 9px;
+    }
+
+    .wc-side-item {
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
+      line-height: 1.5;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .wc-side-item strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .wc-summary-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 9px;
+    }
+
+    .wc-summary-cell {
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .wc-summary-cell strong {
+      display: block;
+      font-size: 16px;
+      color: var(--green);
+    }
+
     .node-top {
       display: flex;
       align-items: flex-start;
@@ -2131,6 +2429,25 @@
         min-width: 180vw;
       }
 
+      .wc-control-row {
+        align-items: flex-start;
+      }
+
+      .wc-main-grid {
+        grid-template-columns: minmax(240vw, 1fr) minmax(220px, 0.55fr);
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+
+      .wc-calendar-board {
+        min-width: 240vw;
+      }
+
+      .wc-header-row,
+      .wc-period-row {
+        min-width: 240vw;
+      }
+
       .inspector {
         position: relative;
         top: auto;
@@ -2227,17 +2544,17 @@
     </section>
   </main>
 
-  <section class="xiaobei-chat-entry" aria-label="小备聊天入口">
+  <section class="xiaobei-chat-entry" aria-label="小教意图入口">
     <div class="chat-agent">
-      <div class="chat-avatar" aria-hidden="true">备</div>
+      <div class="chat-avatar" aria-hidden="true">教</div>
       <div>
-        <div class="chat-agent-name">小备</div>
+        <div class="chat-agent-name">小教</div>
       </div>
     </div>
     <div class="chat-input-shell">
       <button class="chat-tool" id="chatUploadBtn" type="button" aria-label="上传资料">＋</button>
       <button class="chat-tool" id="chatVoiceBtn" type="button" aria-label="语音输入">声</button>
-      <input class="chat-input" id="chatInput" type="text" placeholder="告诉小备要调整的课包、周次或限制">
+      <input class="chat-input" id="chatInput" type="text" placeholder="对小教说一句……">
       <button class="chat-send" id="chatSendBtn" type="button">发送</button>
       <input class="chat-upload-input" id="chatUploadInput" type="file" multiple>
     </div>
@@ -2255,8 +2572,8 @@
     window.PREP_ROOM_RENDER_VIEW_MODEL = {
       stage_code: "PREP_ROOM_RENDER_CANVAS_DEEPEN_V1",
       renderer_mode: "static_fixture_only",
-      active_view: "weekPackage",
-      selected_node_id: "package-qinglv",
+      active_view: "weekCalendar",
+      selected_node_id: "wc-wed-p2",
       view_scroll_positions: {},
       role: {
         id: "art_teacher",
@@ -2289,10 +2606,10 @@
         { id: "loop", label: "回流", current: false }
       ],
       negotiation: {
-        assistant_name: "小备",
-        assistant_role: "备课室负责人 · 工作协商入口",
-        prompt: "告诉小备你的调整意图",
-        input_value: "第3周公开课临时提前，青绿中国色课包来不及补齐，想知道会影响哪些单元和课时。",
+        assistant_name: "小教",
+        assistant_role: "课前执行助理 · 周课表协商入口",
+        prompt: "对小教说一句",
+        input_value: "帮我看看本周哪些课前包还没备齐，先处理今天和明天要上的课。",
         chips: [
           "某个课包来不及准备",
           "学校活动占用一节课",
@@ -2301,104 +2618,67 @@
         ],
         understanding: [
           "影响范围：第3周《青绿中国色》、第5周评价归档、造型表现单元节奏。",
-          "小备建议：先压缩色彩复盘 1 课时，保留核心作品产出。",
+          "小教建议：先处理今日和明日课前包缺口，周六调休课保持预演。",
           "协同对象：小美补学习单视觉，小评预置评价维度，小管等待归档字段。"
         ],
         notes: {
-          weekPackage: "本周先把第3-5周色彩单元的两个课包补齐。《青绿中国色》缺学习单和评价维度；《色彩的对比与和谐》缺问题链和互评表。",
+          weekCalendar: "本周第2节和第5节有课前包待确认。建议先处理学习单和评价量规，周六调休课保持预演状态。",
           classProgressSchedule: "三3班和三5班本周存在调课/活动占用，建议先查看影响范围，再决定是否顺延或启用补课槽位。",
           flexibleSemesterMap: "学期计划已受到公开课提前和创艺节作品筹备影响。建议启用1个机动课包，并把造型表现单元压缩1课时。"
         }
       },
       views: [
         {
-          id: "weekPackage",
-          label: "周课包",
-          title: "周课包准备画布",
-          kicker: "Week Package Canvas",
-          summary: "把一周内要完善、拆分、协同和送入教室的课包作为可选节点渲染出来。点击节点只打开预演 inspector，不执行正式应用。",
-          metrics: [
-            { label: "待完善课包", value: "2" },
-            { label: "高压周段", value: "第3周" },
-            { label: "协同 Agent", value: "3" },
-            { label: "正式写入", value: "0" }
+          id: "weekCalendar",
+          label: "周课表",
+          title: "本周课表",
+          kicker: "Week Calendar Board",
+          summary: "展示本周每天每节课要上的班级、课题、课前包准备状态，以及活动、调课、节假日和调休占用。用于课前执行，不替代班级进度与排课。",
+          term: "2026春学期",
+          active_grade: "三年级",
+          week_label: "第8周",
+          date_range: "5.18 - 5.24",
+          grade_options: ["三年级", "四年级", "五年级", "六年级"],
+          week_modes: ["上一周", "本周", "下一周"],
+          days: [
+            { id: "mon", label: "周一", date: "5.18", state: "past" },
+            { id: "tue", label: "周二", date: "5.19", state: "past" },
+            { id: "wed", label: "周三", date: "5.20", state: "today" },
+            { id: "thu", label: "周四", date: "5.21", state: "future" },
+            { id: "fri", label: "周五", date: "5.22", state: "future" },
+            { id: "sat", label: "周六", date: "5.23", state: "workday" },
+            { id: "sun", label: "周日", date: "5.24", state: "weekend" }
           ],
-          nodes: [
-            {
-              id: "package-qinglv",
-              day: "周一",
-              type: "课包完善",
-              title: "《青绿中国色》",
-              state: "待完善",
-              risk: "高优先级",
-              progress: 70,
-              primary_gap: "学习单未完成",
-              hidden_gap_count: 2,
-              detail: "缺学习单、材料清单、评价维度。建议先补齐学习单，再交给小美优化视觉页。",
-              collaboration: "小备拆课 · 小评预设量规 · 知识馆补传统色资料",
-              primary_actions: ["完善备课包", "送入教室预览"],
-              actions: ["完善备课包", "补齐缺口", "交给小美"]
-            },
-            {
-              id: "unit-color",
-              day: "周二",
-              type: "单元重组",
-              title: "色彩单元",
-              state: "拆分中",
-              risk: "节奏偏紧",
-              progress: 45,
-              primary_gap: "课时拆分未确认",
-              hidden_gap_count: 2,
-              detail: "第3-5周色彩单元受到公开课提前影响，需要重新确认课时拆分和作品产出位置。",
-              collaboration: "小备重组单元 · 小评同步评价结构",
-              primary_actions: ["重组单元", "预演影响"],
-              actions: ["重组单元", "预演影响", "查看缺口"]
-            },
-            {
-              id: "package-football-culture",
-              day: "周三",
-              type: "资料课包",
-              title: "足球文化馆作品",
-              state: "资料待补",
-              risk: "正常",
-              progress: 58,
-              primary_gap: "观察问题链待补",
-              hidden_gap_count: 1,
-              detail: "已有展览案例和任务单框架，缺少作品观察问题链和课堂导入资料。",
-              collaboration: "知识馆补案例 · 小美整理视觉素材",
-              primary_actions: ["检索资料", "送入教室预览"],
-              actions: ["检索资料", "生成问题链"]
-            },
-            {
-              id: "package-future-football",
-              day: "周四",
-              type: "项目课包",
-              title: "《未来足球装备》",
-              state: "项目草案",
-              risk: "可延展",
-              progress: 42,
-              primary_gap: "项目量规未定",
-              hidden_gap_count: 2,
-              detail: "适合与校园活动联动，当前仍是项目草案，需要明确材料、流程和评价出口。",
-              collaboration: "小备拆流程 · 小评生成项目量规",
-              primary_actions: ["拆成课时", "预置评价"],
-              actions: ["拆成课时", "预置评价"]
-            },
-            {
-              id: "package-friday-check",
-              day: "周五",
-              type: "课包检查",
-              title: "课包准备汇总",
-              state: "汇总",
-              risk: "待确认",
-              progress: 63,
-              primary_gap: "重排方案待确认",
-              hidden_gap_count: 1,
-              detail: "本周课包整体可进入预览，但《青绿中国色》和色彩单元重排仍需教师确认。",
-              collaboration: "小备汇总 · 小管等待归档字段",
-              primary_actions: ["查看汇总", "生成待办"],
-              actions: ["查看汇总", "生成待办"]
-            }
+          periods: ["第1节", "第2节", "第3节", "第4节", "第5节", "第6节", "第7节", "第8节"],
+          slots: {
+            "p1-mon": [{ id: "wc-mon-p1", type: "done", classLabel: "三1班", code: "2-1", title: "拼贴练习", packageStatus: "已备齐" }],
+            "p1-wed": [{ id: "wc-wed-p1", type: "lesson", classLabel: "三3班", code: "1-5", title: "图案设计", packageStatus: "课前包已备齐" }],
+            "p1-thu": [{ id: "wc-thu-p1", type: "future", classLabel: "三4班", code: "2-1", title: "拼贴练习", packageStatus: "待上课" }],
+            "p2-tue": [{ id: "wc-tue-p2", type: "warning", classLabel: "三2班", code: "2-1", title: "拼贴练习", packageStatus: "缺：学习单确认" }],
+            "p2-wed": [{ id: "wc-wed-p2", type: "warning", classLabel: "三3班", code: "2-1", title: "拼贴练习", packageStatus: "缺：评价量规" }],
+            "p2-fri": [{ id: "wc-fri-p2", type: "reschedule", classLabel: "三5班", code: "2-1", title: "调课至周五", packageStatus: "原周三第2节" }],
+            "p3-mon": [{ id: "wc-mon-p3", type: "lesson", classLabel: "三4班", code: "2-2", title: "纸艺造型", packageStatus: "课前包已备齐" }],
+            "p3-wed": [{ id: "wc-wed-p3", type: "activity", classLabel: "", code: "", title: "艺术节彩排占用", packageStatus: "本节停课" }],
+            "p3-sat": [{ id: "wc-sat-p3", type: "makeup", classLabel: "三5班", code: "2-1", title: "拼贴练习", packageStatus: "调休补课" }],
+            "p4-thu": [{ id: "wc-thu-p4", type: "holiday", classLabel: "", code: "", title: "校务活动占用", packageStatus: "自动顺延" }],
+            "p5-fri": [{ id: "wc-fri-p5", type: "warning", classLabel: "三1班", code: "2-3", title: "纹样设计", packageStatus: "缺：资源图片" }],
+            "p6-sat": [{ id: "wc-sat-p6", type: "future", classLabel: "三2班", code: "2-2", title: "纸艺造型", packageStatus: "调休上课" }]
+          },
+          prep_items: [
+            { title: "第2节 三2班《拼贴练习》", status: "学习单候选待确认" },
+            { title: "第2节 三3班《拼贴练习》", status: "评价量规未生成" },
+            { title: "第5节 三1班《纹样设计》", status: "资源图片待补" }
+          ],
+          alerts: [
+            "三3班周三第2节课前包缺评价量规，建议用小评生成候选。",
+            "三5班本周因活动少上1节，已投影到周六调休补课。",
+            "周四第4节校务活动占用，后续课时保持顺延预演。"
+          ],
+          package_summary: [
+            ["已备齐", "6节"],
+            ["待确认", "3节"],
+            ["缺材料", "2节"],
+            ["调课影响", "1节"]
           ]
         },
         {
@@ -2665,62 +2945,6 @@
         }
       ],
       node_details: {
-        "package-qinglv": {
-          type: "课包节点",
-          title: "编辑课包：《青绿中国色》",
-          fields: [
-            ["当前状态", "课包待完善"],
-            ["完成度", "70%"],
-            ["缺口", "学习单、材料清单、评价维度"],
-            ["协同建议", "交给小美优化学习单视觉，同时调用小评生成评价维度"],
-            ["正式边界", "仅生成预演，教师确认前不应用"]
-          ],
-          actions: ["更新课包状态", "补齐缺口", "交给小美", "调用小评", "送入教室预览"]
-        },
-        "unit-color": {
-          type: "单元节点",
-          title: "编辑单元：色彩单元",
-          fields: [
-            ["状态", "单元计划待确认"],
-            ["完成度", "45%"],
-            ["缺口", "单元目标细化、课时拆分、评价量规"],
-            ["建议协同", "小备、小评、知识馆"],
-            ["风险", "公开课提前导致第3周压力升高"]
-          ],
-          actions: ["重组色彩单元", "生成课时拆分", "查看影响范围"]
-        },
-        "package-football-culture": {
-          type: "课包节点",
-          title: "编辑课包：足球文化馆作品",
-          fields: [
-            ["当前状态", "资料待补"],
-            ["完成度", "58%"],
-            ["缺口", "观察问题链、课堂导入资料"],
-            ["建议协同", "知识馆补案例，小美整理视觉素材"]
-          ],
-          actions: ["检索资料", "生成问题链", "交给小美"]
-        },
-        "package-future-football": {
-          type: "项目节点",
-          title: "编辑课包：《未来足球装备》",
-          fields: [
-            ["当前状态", "项目草案"],
-            ["完成度", "42%"],
-            ["缺口", "材料清单、流程节点、项目量规"],
-            ["建议协同", "小备拆流程，小评生成项目量规"]
-          ],
-          actions: ["拆成课时", "预置评价", "查看材料"]
-        },
-        "package-friday-check": {
-          type: "汇总节点",
-          title: "编辑汇总：周五课包检查",
-          fields: [
-            ["整体状态", "可进入预览"],
-            ["待教师确认", "色彩单元重排、青绿中国色缺口补齐"],
-            ["下一步", "生成待办并保持预览状态"]
-          ],
-          actions: ["查看汇总", "生成待办"]
-        },
         "teaching-block-color": {
           type: "学期地图节点",
           title: "编辑教学块：色彩单元",
@@ -2738,7 +2962,7 @@
         { id: "textbook", icon: "目", title: "教材解析", desc: "解析教材，建立学期结构，辅助单元重组。", actions: ["解析目录", "关联单元"] },
         { id: "unit", icon: "元", title: "单元重组", desc: "将教材内容重组成教学单元块，规划课包产出。", actions: ["重组色彩单元", "重组造型单元"] },
         { id: "split", icon: "拆", title: "拆课", desc: "将单元拆分为课时草案和课包框架。", actions: ["拆分色彩单元", "拆分项目单元"] },
-        { id: "weekly", icon: "周", title: "课包周历", desc: "生成周课包计划，调整优先级。", actions: ["生成周课包", "调整优先级"] },
+        { id: "weekly", icon: "周", title: "周课表", desc: "查看本周每天每节课的班级、课题与课前包状态。", actions: ["生成周课表", "查看课前准备"] },
         { id: "reschedule", icon: "排", title: "重排工具", desc: "检查学校临时任务对学期计划的影响，生成重排方案。", actions: ["检查扰动", "生成重排方案", "查看影响范围"] },
         { id: "flow", icon: "流", title: "课堂流程", desc: "生成课时流程结构，纳入备课包。", actions: ["生成流程", "调整环节"] },
         { id: "worksheet", icon: "单", title: "学习单", desc: "基于课包生成学习单初稿，可交给小美。", actions: ["生成学习单", "交给小美优化"] },
@@ -2750,7 +2974,7 @@
       pending_changes: [
         {
           id: "pending-001",
-          text: "小备已生成1个重排方案，等待教师确认。",
+          text: "小教已生成1个课前处理建议，等待教师确认。",
           source: "初始预演",
           applied: false
         }
@@ -2825,7 +3049,7 @@
     }
 
     function iconForView(viewId) {
-      if (viewId === "weekPackage") return "calendar";
+      if (viewId === "weekCalendar") return "calendar";
       if (viewId === "classProgressSchedule") return "layers";
       if (viewId === "semesterMap") return "map";
       return "prep";
@@ -2925,6 +3149,24 @@
     }
 
     function getNodeDetail(nodeId) {
+      const wcElement = Array.from(document.querySelectorAll("[data-wc-detail]")).find((item) => item.dataset.node === nodeId);
+      if (wcElement) {
+        const detail = JSON.parse(wcElement.dataset.wcDetail);
+        return {
+          type: "课前包详情",
+          title: detail.code ? `${detail.classLabel} ${detail.code} ${detail.title}` : detail.title,
+          fields: [
+            ["时间", `${detail.day} ${detail.date} ${detail.period}`],
+            ["班级", detail.classLabel || "全校/活动"],
+            ["类型", wcCardTypeLabel(detail.type)],
+            ["课前包状态", detail.packageStatus],
+            ["已准备", detail.type === "warning" ? "课时设计、资源参考" : "课时设计、学习单、资源参考"],
+            ["待处理", detail.type === "warning" ? "学习单/评价量规待确认" : "无正式写入，仅预演"],
+            ["上次轻记录", detail.classLabel ? "学生对材料组合和色彩关系需要更多示范。" : "事件占用将影响后续课时落点。"]
+          ],
+          actions: ["打开课时设计", "确认学习单", "生成量规", "顺手记一笔"]
+        };
+      }
       const cpsElement = Array.from(document.querySelectorAll("[data-cps-detail]")).find((item) => item.dataset.node === nodeId);
       if (cpsElement) {
         const detail = JSON.parse(cpsElement.dataset.cpsDetail);
@@ -2966,7 +3208,7 @@
       const panel = byId("negotiationPanel");
       if (!panel) return;
       const source = model.negotiation;
-      const activeNote = source.notes[model.active_view] || source.notes.weekPackage;
+      const activeNote = source.notes[model.active_view] || source.notes.weekCalendar;
       panel.innerHTML = `
         <div class="assistant-head">
           <div class="assistant-avatar" aria-hidden="true">备</div>
@@ -2978,7 +3220,7 @@
 
         <section class="section">
           <div class="section-title">
-            <span>小备当前判断</span>
+            <span>小教当前判断</span>
             <span class="quiet-tag">只预演</span>
           </div>
           <div class="agent-note" id="agentNote">${html(activeNote)}</div>
@@ -3030,33 +3272,116 @@
       `;
     }
 
-    function renderWeekPackageCanvas(view) {
+    function wcCardTypeLabel(type) {
+      const map = {
+        lesson: "正常上课",
+        today: "今日课时",
+        future: "未来课时",
+        warning: "课前包未齐",
+        reschedule: "调课",
+        activity: "活动占用",
+        holiday: "停课",
+        makeup: "补课/顺延",
+        done: "已完成"
+      };
+      return map[type] || "课时";
+    }
+
+    function renderWeekCalendarCard(item, day, period) {
+      const detail = {
+        id: item.id,
+        day: day.label,
+        date: day.date,
+        period,
+        type: item.type,
+        classLabel: item.classLabel,
+        code: item.code,
+        title: item.title,
+        packageStatus: item.packageStatus
+      };
+      const cardType = day.state === "today" && item.type === "lesson" ? "today" : item.type;
       return `
-        ${renderMetrics(view.metrics)}
-        <div class="week-board">
-          ${view.nodes.map((node) => `
-            <article class="canvas-node week-card ${node.id === model.selected_node_id ? "selected" : ""}" tabindex="0" data-node="${html(node.id)}">
-              <div class="node-top">
-                <div>
-                  <div class="node-eyebrow"><span class="weekday-badge">${html(node.day)}</span><span class="node-type">${html(node.type)}</span></div>
-                  <div class="node-title">${html(node.title)}</div>
+        <button class="wc-course-card ${html(cardType)}" type="button" data-node="${html(item.id)}" data-wc-detail="${html(JSON.stringify(detail))}" title="${html(item.title)}">
+          ${item.classLabel ? `<span class="wc-course-class">${html(item.classLabel)}</span>` : ""}
+          <span class="wc-course-title">${html(item.code ? `${item.code} ${item.title}` : item.title)}</span>
+          <span class="wc-course-status">${html(item.packageStatus || wcCardTypeLabel(cardType))}</span>
+        </button>
+      `;
+    }
+
+    function renderWeekCalendarCanvas(view) {
+      return `
+        <div class="wc-scene">
+          <div class="wc-control-row">
+            <div class="wc-control-cluster">
+              <span class="wc-chip week">${html(view.term)}</span>
+              ${view.grade_options.map((grade) => `<button class="wc-chip ${grade === view.active_grade ? "active" : ""}" type="button" data-pending="已切换到${html(grade)}周课表预演，等待接入真实课表。">${html(grade)}</button>`).join("")}
+              <span class="wc-chip week">${html(view.week_label)} · ${html(view.date_range)}</span>
+              ${view.week_modes.map((mode) => `<button class="wc-chip ${mode === "本周" ? "active" : ""}" type="button" data-pending="${html(mode)}周课表已进入预演队列。">${html(mode)}</button>`).join("")}
+              <div class="wc-legend-row" aria-label="周课表状态图例">
+                <span class="wc-legend-item"><span class="wc-dot"></span>正常</span>
+                <span class="wc-legend-item"><span class="wc-dot today"></span>今日</span>
+                <span class="wc-legend-item"><span class="wc-dot warning"></span>未齐</span>
+                <span class="wc-legend-item"><span class="wc-dot reschedule"></span>调课</span>
+                <span class="wc-legend-item"><span class="wc-dot activity"></span>活动</span>
+                <span class="wc-legend-item"><span class="wc-dot holiday"></span>停课</span>
+                <span class="wc-legend-item"><span class="wc-dot makeup"></span>补课</span>
+              </div>
+            </div>
+          </div>
+          <div class="wc-main-grid">
+            <section class="wc-calendar-board" aria-label="本周课表">
+              <div class="wc-header-row">
+                <div class="wc-corner">节次</div>
+                ${view.days.map((day) => `
+                  <div class="wc-day-head ${html(day.state)}">
+                    <div>
+                      <div>${html(day.label)}</div>
+                      <div class="wc-day-date">${html(day.date)}${day.state === "today" ? " · 今日" : day.state === "workday" ? " · 调休" : ""}</div>
+                    </div>
+                  </div>
+                `).join("")}
+              </div>
+              ${view.periods.map((period, periodIndex) => `
+                <div class="wc-period-row">
+                  <div class="wc-period-label">${html(period)}</div>
+                  ${view.days.map((day) => {
+                    const slotKey = `p${periodIndex + 1}-${day.id}`;
+                    const items = view.slots[slotKey] || [];
+                    return `
+                      <div class="wc-cell ${html(day.state)}">
+                        ${items.length ? items.map((item) => renderWeekCalendarCard(item, day, period)).join("") : `<span class="wc-empty" aria-hidden="true"></span>`}
+                      </div>
+                    `;
+                  }).join("")}
                 </div>
-                <span class="${node.risk.includes("高") || node.risk.includes("紧") ? "risk-tag" : "state-tag"}">${html(node.state)}</span>
+              `).join("")}
+            </section>
+            <aside class="wc-side-panel" aria-label="课前执行信息">
+              <section class="wc-side-section">
+                <div class="wc-side-title"><span>今日课前准备</span><span class="quiet-tag">需处理</span></div>
+                <div class="wc-side-list">
+                  ${view.prep_items.map((item) => `<div class="wc-side-item"><strong>${html(item.title)}</strong>${html(item.status)}</div>`).join("")}
+                </div>
+              </section>
+              <section class="wc-side-section">
+                <div class="wc-side-title"><span>小教提醒</span><span class="quiet-tag">预演</span></div>
+                <div class="wc-side-list">
+                  ${view.alerts.map((item) => `<div class="wc-side-item">${html(item)}</div>`).join("")}
+                </div>
+              </section>
+              <section class="wc-side-section">
+                <div class="wc-side-title"><span>本周课前包</span><span class="quiet-tag">统计</span></div>
+                <div class="wc-summary-row">
+                  ${view.package_summary.map(([label, value]) => `<div class="wc-summary-cell"><strong>${html(value)}</strong>${html(label)}</div>`).join("")}
+                </div>
+              </section>
+              <div class="chip-row" style="margin-top: 12px;">
+                <button class="node-action primary" data-pending="小教已打开课前包处理预演，等待教师确认。">${iconButtonLabel("打开课前包", "arrow")}</button>
+                <button class="node-action secondary" data-pending="小教已生成缺失材料候选，等待教师确认。">${iconButtonLabel("生成缺失材料", "wand")}</button>
               </div>
-              <div class="gap-summary">
-                <div class="gap-label">最需要先补</div>
-                <div class="gap-primary">${html(node.primary_gap || node.detail)}</div>
-                ${Number(node.hidden_gap_count) > 0 ? `<button class="more-gaps" type="button">还有 ${html(node.hidden_gap_count)} 项</button>` : ""}
-              </div>
-              <div class="progress-wrap">
-                <div class="progress-label"><span>课包完成度</span><span>${html(node.progress)}%</span></div>
-                <div class="progress-track"><div class="progress-fill" style="width: ${Number(node.progress) || 0}%"></div></div>
-              </div>
-              <div class="primary-actions">
-                ${(node.primary_actions || node.actions).slice(0, 2).map((action, index) => `<button class="node-action icon-only ${index === 0 ? "primary" : "secondary"}" title="${html(action)}" aria-label="${html(action)}" data-pending="小备已生成「${html(action)}」预演，等待教师确认。">${iconButtonLabel(action, iconForAction(action))}</button>`).join("")}
-              </div>
-            </article>
-          `).join("")}
+            </aside>
+          </div>
         </div>
       `;
     }
@@ -3256,7 +3581,7 @@
     }
 
     function renderActiveViewMarkup(view) {
-      if (view.id === "weekPackage") return renderWeekPackageCanvas(view);
+      if (view.id === "weekCalendar") return renderWeekCalendarCanvas(view);
       if (view.id === "classProgressSchedule") return renderClassProgressScheduleCanvas(view);
       return renderFlexibleSemesterMapCanvas(view);
     }
@@ -3380,7 +3705,7 @@
           <div>
             <div class="section-title"><span>可预演动作</span><span class="quiet-tag">需教师确认</span></div>
             <div class="inspector-actions">
-              ${detail.actions.map((action) => `<button class="node-action icon-only inspector-action" title="${html(action)}" aria-label="${html(action)}" data-pending="小备已生成「${html(action)}」预演，等待教师确认。">${iconButtonLabel(action, iconForAction(action))}</button>`).join("")}
+              ${detail.actions.map((action) => `<button class="node-action icon-only inspector-action" title="${html(action)}" aria-label="${html(action)}" data-pending="小教已生成「${html(action)}」预演，等待教师确认。">${iconButtonLabel(action, iconForAction(action))}</button>`).join("")}
             </div>
           </div>
           <div class="pending-panel" id="inspectorPending">
@@ -3458,7 +3783,8 @@
       const firstCpsWeek = view.week_axis?.[0]?.id;
       const firstCpsClass = view.class_headers?.[0]?.id;
       const firstCpsNode = firstCpsWeek && firstCpsClass ? `cps-${firstCpsWeek}-${firstCpsClass}-1` : "";
-      const firstNode = view.nodes?.[0]?.id || view.weeks?.[0]?.id || firstCpsNode || (firstPlanLesson ? `plan-${firstPlanLesson}` : "") || view.lanes?.[0]?.blocks?.[0]?.id;
+      const firstWcNode = Object.values(view.slots || {}).flat()[0]?.id || "";
+      const firstNode = firstWcNode || view.nodes?.[0]?.id || view.weeks?.[0]?.id || firstCpsNode || (firstPlanLesson ? `plan-${firstPlanLesson}` : "") || view.lanes?.[0]?.blocks?.[0]?.id;
       model.selected_node_id = firstNode || model.selected_node_id;
       byId("inspector").classList.add("hidden");
       renderPrepRoomCanvas({ animate: true });
@@ -3494,7 +3820,7 @@
         }
 
         if (event.target.closest("#chatVoiceBtn")) {
-          addPendingChange("小备已打开语音意图入口预演，等待教师继续输入。", "小备聊天入口");
+          addPendingChange("小教已打开语音意图入口预演，等待教师继续输入。", "小教意图入口");
           return;
         }
 
@@ -3552,7 +3878,7 @@
         if (!files.length) return;
         const names = files.slice(0, 3).map((file) => file.name).join("、");
         const more = files.length > 3 ? ` 等${files.length}个文件` : "";
-        addPendingChange(`小备已接收资料「${names}${more}」的本地挂载预演，未上传到服务器。`, "资料入口");
+        addPendingChange(`小教已接收资料「${names}${more}」的本地挂载预演，未上传到服务器。`, "资料入口");
         event.target.value = "";
       });
 
@@ -3570,12 +3896,12 @@
       const input = byId("chatInput");
       const text = input.value.trim();
       if (!text) {
-        showToast("先告诉小备你想调整什么");
+        showToast("先对小教说一句");
         input.focus();
         return;
       }
       model.negotiation.input_value = text;
-      addPendingChange(`小备已收到意图：「${text}」，正在生成影响范围预演。`, "小备聊天入口");
+      addPendingChange(`小教已收到意图：「${text}」，正在生成影响范围预演。`, "小教意图入口");
       input.value = "";
     }
 
@@ -3587,7 +3913,7 @@
       bindEvents();
     }
 
-    window.renderWeekPackageCanvas = renderWeekPackageCanvas;
+    window.renderWeekCalendarCanvas = renderWeekCalendarCanvas;
     window.renderClassProgressScheduleCanvas = renderClassProgressScheduleCanvas;
     window.renderFlexibleSemesterMapCanvas = renderFlexibleSemesterMapCanvas;
     window.renderToolRail = renderToolRail;
