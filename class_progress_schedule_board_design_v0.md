@@ -5,6 +5,7 @@ ACCEPT_AS_V0_STRUCTURE
 NEEDS_V0_1_WEEKLY_TWO_SLOT_RULE -> RESOLVED_IN_THIS_DOC
 ACCEPT_AS_V1_STATIC_PREVIEW
 INTEGRATED_IN_PREP_ROOM_RENDER_STAGE -> REPLACES_FORMER_MONTH_PROGRESS_VIEW
+CLASS_PROGRESS_SCHEDULE_BOARD_V1_1_READABILITY_POLISH -> APPLIED_IN_PREVIEW
 ```
 
 ## 0. 集成记录
@@ -33,6 +34,18 @@ weekly_period_capacity = 2
 
 后续接真实课表、校历、顺延和推送能力时，应围绕 `class_lesson_instance`
 继续扩展，不再恢复旧的“月进度压力卡”结构。
+
+V1.1 只处理可读性和密度，不接真实课表、校历、后端、Agent 调度或正式应用。已落实：
+
+```text
+当前周：整行高亮 + 左侧箭头 + 当前周胶囊
+两课时槽：第1课时 / 第2课时稳定显示
+未来课：灰化但保持文字可读
+状态颜色：正常 / 未来 / 活动 / 节假日 / 调课 / 补课顺延保持克制区分
+图例：轻量横向图例，不占主舞台
+右侧建议：保持轻面板，只承载问题、建议和确认入口
+移动端：保留横向滚动，不压碎班级列
+```
 
 ## 1. 模块定位
 
