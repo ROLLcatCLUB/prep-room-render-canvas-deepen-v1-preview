@@ -53,57 +53,185 @@
     }
 
     .topbar {
-      height: 58px;
-      display: flex;
+      min-height: 72px;
+      display: grid;
+      grid-template-columns: minmax(190px, 0.9fr) minmax(360px, 1.4fr) minmax(260px, 0.9fr);
       align-items: center;
-      justify-content: space-between;
       gap: 18px;
-      padding: 0 18px;
+      padding: 12px 18px;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(14px);
     }
 
-    .brand {
+    .logo-area {
       display: flex;
-      align-items: center;
-      gap: 12px;
+      align-items: baseline;
+      gap: 7px;
       min-width: 0;
     }
 
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--line-strong);
-      border-radius: 8px;
-      background: linear-gradient(135deg, #eef8f3, #eef4fb);
+    .logo-mark {
+      font-size: 25px;
       color: var(--green);
-      font-weight: 800;
+      font-weight: 900;
+      line-height: 1;
     }
 
-    .brand-title {
-      font-size: 17px;
-      font-weight: 800;
+    .logo-text {
+      font-size: 28px;
+      font-weight: 850;
+      line-height: 1;
+      color: #244c42;
       white-space: nowrap;
     }
 
-    .brand-subtitle {
+    .logo-sub {
       color: var(--muted);
       font-size: 12px;
-      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .space-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+
+    .space-btn {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 18px;
+      text-decoration: none;
+      transition: transform 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+    }
+
+    .space-btn:hover {
+      transform: translateY(-1px);
+      background: var(--green-soft);
+      border-color: #b9d9cf;
+    }
+
+    .space-btn.active {
+      background: var(--green);
+      color: #fff;
+      border-color: var(--green);
+      box-shadow: 0 8px 18px rgba(47, 118, 104, 0.16);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .search-box {
+      min-width: 0;
+      max-width: 230px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+    }
+
+    .search-box input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .nav-icon,
+    .user-avatar {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--green);
+      position: relative;
+    }
+
+    .nav-badge {
+      position: absolute;
+      top: -3px;
+      right: -4px;
+      min-width: 16px;
+      height: 16px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: #d46a4c;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .context-bar {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 18px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfdfb;
+    }
+
+    .context-title {
+      min-width: 0;
+      font-size: 18px;
+      font-weight: 850;
+      color: #244c42;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    .top-actions {
+    .context-meta {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       gap: 8px;
       min-width: 0;
+      flex-wrap: wrap;
+    }
+
+    .context-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      max-width: 100%;
+      min-height: 28px;
+      padding: 0 10px;
+      border: 1px solid #cfe0d9;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
     .pill {
@@ -131,7 +259,7 @@
     }
 
     .workspace {
-      height: calc(100vh - 58px - 42px);
+      height: calc(100vh - 72px - 54px - 78px - 42px);
       display: grid;
       grid-template-columns: 320px minmax(0, 1fr) 64px;
       gap: 0;
@@ -1076,6 +1204,99 @@
       transform: translateX(-50%) translateY(0);
     }
 
+    .xiaobei-chat-entry {
+      height: 78px;
+      display: grid;
+      grid-template-columns: 226px minmax(0, 1fr);
+      align-items: center;
+      gap: 14px;
+      padding: 10px 18px;
+      border-top: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .chat-agent {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .chat-avatar {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 12px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .chat-agent-name {
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .chat-agent-role {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .chat-input-shell {
+      min-width: 0;
+      min-height: 50px;
+      display: grid;
+      grid-template-columns: 38px 38px minmax(0, 1fr) 64px;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      border: 1px solid var(--line-strong);
+      border-radius: 16px;
+      background: #fbfdfc;
+    }
+
+    .chat-tool,
+    .chat-send {
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--green);
+      font-weight: 850;
+    }
+
+    .chat-tool:hover {
+      background: var(--green-soft);
+      border-color: #b9d9cf;
+    }
+
+    .chat-send {
+      border-color: var(--green);
+      background: var(--green);
+      color: #fff;
+    }
+
+    .chat-input {
+      width: 100%;
+      min-width: 0;
+      height: 38px;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--ink);
+      padding: 0 4px;
+    }
+
+    .chat-upload-input {
+      display: none;
+    }
+
     @media (max-width: 1180px) {
       .workspace {
         grid-template-columns: 286px minmax(0, 1fr) 60px;
@@ -1083,6 +1304,19 @@
 
       .status-strip {
         grid-template-columns: 286px minmax(0, 1fr) 60px;
+      }
+
+      .topbar {
+        grid-template-columns: minmax(180px, 0.8fr) minmax(300px, 1.2fr) minmax(220px, 0.8fr);
+      }
+
+      .space-nav {
+        gap: 7px;
+      }
+
+      .space-btn {
+        width: 38px;
+        height: 38px;
       }
 
       .canvas-head {
@@ -1151,33 +1385,59 @@
       .topbar {
         height: auto;
         min-height: 58px;
+        grid-template-columns: 1fr;
         align-items: flex-start;
-        flex-direction: column;
         padding: 12px;
         width: 100%;
         max-width: 100vw;
       }
 
-      .top-actions {
+      .space-nav,
+      .nav-right {
         width: 100%;
         max-width: calc(100vw - 24px);
         flex-wrap: wrap;
         justify-content: flex-start;
       }
 
-      .top-actions .pill.strong {
-        flex: 0 0 100%;
-        justify-content: center;
+      .nav-right {
+        display: grid;
+        grid-template-columns: 38px 38px;
       }
 
-      .top-actions .pill:not(.strong) {
-        flex: 0 0 100%;
-        justify-content: flex-start;
+      .search-box {
+        max-width: none;
+        width: calc(100vw - 24px);
+        grid-column: 1 / -1;
+      }
+
+      .context-bar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 10px 12px;
+      }
+
+      .context-title {
+        width: 100%;
+      }
+
+      .context-meta {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+      }
+
+      .context-chip {
+        min-width: 0;
+        justify-content: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .workspace {
         height: auto;
-        min-height: calc(100vh - 120px);
+        min-height: 720px;
         grid-template-columns: 1fr;
       }
 
@@ -1233,6 +1493,16 @@
         grid-template-columns: 1fr;
       }
 
+      .xiaobei-chat-entry {
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 12px;
+      }
+
+      .chat-input-shell {
+        grid-template-columns: 38px 38px minmax(0, 1fr) 58px;
+      }
+
       .status-cell {
         min-height: 36px;
         white-space: normal;
@@ -1257,20 +1527,40 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">
-      <div class="brand-mark" aria-hidden="true">师</div>
-      <div>
-        <div class="brand-title">师维 · 备课室</div>
-        <div class="brand-subtitle">小备调度台从静态页面转为备课室渲染画布</div>
-      </div>
+    <div class="logo-area">
+      <span class="logo-mark" aria-hidden="true">✦</span>
+      <span class="logo-text">师维</span>
+      <span class="logo-sub">| 教师AI工作台</span>
     </div>
-    <div class="top-actions">
-      <span class="pill strong">PREP_ROOM_RENDER_CANVAS_DEEPEN_V1</span>
-      <span class="pill">role = art_teacher</span>
-      <span class="pill">space = prep_room</span>
-      <span class="pill">preview_only · no_write</span>
+    <nav class="space-nav" aria-label="学校空间导航">
+      <a href="#" class="space-btn" aria-label="大厅">⌂</a>
+      <a href="#" class="space-btn" aria-label="教室">教</a>
+      <a href="#" class="space-btn active" aria-label="备课室">备</a>
+      <a href="#" class="space-btn" aria-label="课堂观察">观</a>
+      <a href="#" class="space-btn" aria-label="作品馆">作</a>
+      <a href="#" class="space-btn" aria-label="知识馆">知</a>
+      <a href="#" class="space-btn" aria-label="档案室">档</a>
+    </nav>
+    <div class="nav-right">
+      <label class="search-box" aria-label="搜索课包、单元、教材">
+        <span aria-hidden="true">⌕</span>
+        <input type="text" placeholder="搜索课包、单元">
+      </label>
+      <button class="nav-icon" type="button" aria-label="通知">铃<span class="nav-badge">2</span></button>
+      <button class="user-avatar" type="button" aria-label="教师账号">师</button>
     </div>
   </header>
+
+  <section class="context-bar" aria-label="备课室上下文">
+    <div class="context-title">备课室 · 本周课包准备</div>
+    <div class="context-meta">
+      <span class="context-chip">2026春学期</span>
+      <span class="context-chip">苏少版美术</span>
+      <span class="context-chip">三至六年级</span>
+      <span class="context-chip">20周</span>
+      <span class="context-chip">preview_only</span>
+    </div>
+  </section>
 
   <main class="workspace">
     <aside class="intent-panel" aria-label="小备备课室助理">
@@ -1294,6 +1584,23 @@
 
     <nav class="tool-rail" id="toolRail" aria-label="备课室工具轨"></nav>
   </main>
+
+  <section class="xiaobei-chat-entry" aria-label="小备聊天入口">
+    <div class="chat-agent">
+      <div class="chat-avatar" aria-hidden="true">备</div>
+      <div>
+        <div class="chat-agent-name">小备</div>
+        <div class="chat-agent-role">备课室负责人 · 支持文本、资料和语音意图</div>
+      </div>
+    </div>
+    <div class="chat-input-shell">
+      <button class="chat-tool" id="chatUploadBtn" type="button" aria-label="上传资料">＋</button>
+      <button class="chat-tool" id="chatVoiceBtn" type="button" aria-label="语音输入">声</button>
+      <input class="chat-input" id="chatInput" type="text" placeholder="告诉小备要调整的课包、周次或限制">
+      <button class="chat-send" id="chatSendBtn" type="button">发送</button>
+      <input class="chat-upload-input" id="chatUploadInput" type="file" multiple>
+    </div>
+  </section>
 
   <footer class="status-strip" aria-label="预览状态栏">
     <div class="status-cell"><span class="state-tag">预览层</span><span class="status-text">不接 API / 不接模型 / 不写数据库</span></div>
@@ -1766,23 +2073,16 @@
 
         <section class="section">
           <div class="section-title">
-            <span>${html(source.prompt)}</span>
-            <span class="quiet-tag">意图协商</span>
+            <span>小备当前判断</span>
+            <span class="quiet-tag">只预演</span>
           </div>
-          <textarea class="intent-input" id="intentInput">${html(source.input_value)}</textarea>
-          <div class="chip-row">
-            ${source.chips.map((chip) => `<button class="intent-chip" data-intent="${html(chip)}">${html(chip)}</button>`).join("")}
-          </div>
-          <div class="chip-row">
-            <button class="primary-button" id="submitIntentBtn">让小备理解影响</button>
-            <button class="ghost-button" data-pending="小备已生成1个课包调整预演，等待教师确认。">生成预演</button>
-          </div>
+          <div class="agent-note" id="agentNote">${html(activeNote)}</div>
         </section>
 
         <section class="section">
           <div class="section-title">
-            <span>小备理解</span>
-            <span class="state-tag">只预演</span>
+            <span>影响摘要</span>
+            <span class="state-tag">${html(getActiveView().label)}</span>
           </div>
           <ul class="result-list">
             ${source.understanding.map((item) => `<li>${html(item)}</li>`).join("")}
@@ -1790,13 +2090,10 @@
         </section>
 
         <section class="section">
-          <div class="section-title">
-            <span>当前建议</span>
-            <span class="quiet-tag">${html(getActiveView().label)}</span>
-          </div>
-          <div class="agent-note" id="agentNote">${html(activeNote)}</div>
+          <div class="section-title"><span>快速入口</span><span class="quiet-tag">底部输入</span></div>
           <div class="chip-row">
-            <button class="text-button" data-pending="小备已按当前画布生成下一步待办，等待教师确认。">按小备建议继续</button>
+            <button class="text-button" data-chat-fill="公开课提前，帮我看第3周怎么调整">公开课提前</button>
+            <button class="text-button" data-chat-fill="先补齐《青绿中国色》的学习单和评价维度">补齐课包</button>
             <button class="text-button" data-action="open-current">查看当前选中节点</button>
           </div>
         </section>
@@ -2146,6 +2443,36 @@
           return;
         }
 
+        const spaceButton = event.target.closest(".space-btn");
+        if (spaceButton) {
+          event.preventDefault();
+          showToast(`进入${spaceButton.getAttribute("aria-label") || "学校空间"}仍为预览入口`);
+          return;
+        }
+
+        const chatFill = event.target.closest("[data-chat-fill]");
+        if (chatFill) {
+          const input = byId("chatInput");
+          input.value = chatFill.dataset.chatFill;
+          input.focus();
+          return;
+        }
+
+        if (event.target.id === "chatUploadBtn") {
+          byId("chatUploadInput").click();
+          return;
+        }
+
+        if (event.target.id === "chatVoiceBtn") {
+          addPendingChange("小备已打开语音意图入口预演，等待教师继续输入。", "小备聊天入口");
+          return;
+        }
+
+        if (event.target.id === "chatSendBtn") {
+          submitChatMessage();
+          return;
+        }
+
         const pendingSource = event.target.closest("[data-pending]");
         if (pendingSource) {
           addPendingChange(pendingSource.dataset.pending);
@@ -2166,8 +2493,9 @@
 
         const intent = event.target.closest("[data-intent]");
         if (intent) {
-          const input = byId("intentInput");
+          const input = byId("chatInput");
           input.value = input.value ? `${input.value}\n${intent.dataset.intent}` : intent.dataset.intent;
+          input.focus();
           return;
         }
 
@@ -2177,14 +2505,25 @@
           return;
         }
 
-        if (event.target.id === "submitIntentBtn") {
-          addPendingChange("小备已把当前意图转成影响范围预演，等待教师确认。", "意图协商");
-          return;
-        }
-
         if (event.target.id === "closeInspectorBtn") {
           byId("inspector").classList.add("hidden");
         }
+      });
+
+      byId("chatInput").addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          submitChatMessage();
+        }
+      });
+
+      byId("chatUploadInput").addEventListener("change", (event) => {
+        const files = Array.from(event.target.files || []);
+        if (!files.length) return;
+        const names = files.slice(0, 3).map((file) => file.name).join("、");
+        const more = files.length > 3 ? ` 等${files.length}个文件` : "";
+        addPendingChange(`小备已接收资料「${names}${more}」的本地挂载预演，未上传到服务器。`, "资料入口");
+        event.target.value = "";
       });
 
       document.body.addEventListener("keydown", (event) => {
@@ -2195,6 +2534,19 @@
           openInspector(node.dataset.node);
         }
       });
+    }
+
+    function submitChatMessage() {
+      const input = byId("chatInput");
+      const text = input.value.trim();
+      if (!text) {
+        showToast("先告诉小备你想调整什么");
+        input.focus();
+        return;
+      }
+      model.negotiation.input_value = text;
+      addPendingChange(`小备已收到意图：「${text}」，正在生成影响范围预演。`, "小备聊天入口");
+      input.value = "";
     }
 
     function initPrepRoomRenderCanvas() {
