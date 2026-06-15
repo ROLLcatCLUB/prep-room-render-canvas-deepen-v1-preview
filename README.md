@@ -5,6 +5,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 ## Files
 
 - `prep_room_render_canvas_deepen_v1.html`
+- `week_calendar_board_design_v0.md`
 - `class_progress_schedule_board_design_v0.md`
 - `class_progress_schedule_board_v1.html`
 
@@ -52,6 +53,7 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - The bottom status area uses a global flow step bar for `备课室 -> 教室 -> 作品馆 -> 档案室 -> 回流`.
 - The top area now uses a compact product navigation bar and context row; view switching lives in the context row, while the verbose canvas heading block has been removed.
 - The current space name is centered as large gradient text, with a horizontal AI tool strip below it using one icon per tool.
+- The first view is now `周课表 / 本周课前看板`, replacing the former week-package card view. It renders a Monday-to-Sunday timetable for class, topic, package status, activities, holidays, reschedules, and makeup lessons.
 - The second view is now `班级排课 / 班级进度与排课`, rendered as a week-by-class board with two default weekly lesson slots per class.
 - V1.1 readability polish strengthens the current-week marker, keeps future lessons readable while muted, adds a compact status legend, removes the visible slot-label chips, and lets the dense class-by-week board expand horizontally.
 - The class schedule control strip now places compact metric pills directly after the grade switcher; metric labels are kept as hover titles, while the visible surface only shows icon plus value such as `5`, `3`, `4`, or `第8周`.
