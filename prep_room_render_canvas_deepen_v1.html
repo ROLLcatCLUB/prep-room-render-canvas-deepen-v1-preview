@@ -50,6 +50,7 @@
 
     button {
       cursor: pointer;
+      border-radius: 999px;
     }
 
     .topbar {
@@ -370,11 +371,11 @@
     .primary-button,
     .ghost-button {
       min-height: 32px;
-      border-radius: 8px;
+      border-radius: 999px;
       border: 1px solid var(--line);
       background: #fff;
       color: var(--ink);
-      padding: 0 10px;
+      padding: 0 14px;
     }
 
     .intent-chip {
@@ -501,17 +502,17 @@
       gap: 4px;
       padding: 4px;
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 999px;
       background: #fff;
     }
 
     .view-tab {
       min-height: 34px;
       border: 0;
-      border-radius: 6px;
+      border-radius: 999px;
       background: transparent;
       color: var(--muted);
-      padding: 0 10px;
+      padding: 0 16px;
       white-space: nowrap;
     }
 
@@ -563,16 +564,42 @@
     }
 
     .metric {
-      padding: 12px;
+      padding: 14px 16px;
       border: 1px solid var(--line);
-      border-radius: var(--radius);
+      border-radius: 18px;
       background: var(--panel);
     }
 
     .metric-value {
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 850;
       color: var(--ink);
+    }
+
+    .metric.week-metric {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-color: #abd5ca;
+      background: linear-gradient(135deg, #e8f5f1, #ffffff);
+    }
+
+    .metric.week-metric .metric-value {
+      min-width: 76px;
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--green);
+      color: #fff;
+      font-size: 25px;
+      box-shadow: 0 10px 22px rgba(47, 118, 104, 0.18);
+    }
+
+    .metric.week-metric .metric-label {
+      margin-top: 0;
+      font-weight: 800;
+      color: var(--green);
     }
 
     .metric-label {
@@ -625,9 +652,31 @@
     }
 
     .node-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       color: var(--muted);
       font-size: 12px;
       line-height: 1.4;
+      flex-wrap: wrap;
+    }
+
+    .weekday-badge {
+      min-height: 24px;
+      padding: 0 10px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      border: 1px solid #abd5ca;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .node-type {
+      color: var(--muted);
+      font-weight: 650;
     }
 
     .node-title {
@@ -675,7 +724,7 @@
       gap: 7px;
       padding: 9px;
       border: 1px solid #dce7e3;
-      border-radius: 8px;
+      border-radius: 16px;
       background: #f7fbfa;
     }
 
@@ -692,7 +741,7 @@
     .more-gaps {
       width: max-content;
       min-height: 24px;
-      padding: 0 8px;
+      padding: 0 10px;
       border: 1px solid var(--line);
       border-radius: 999px;
       background: #fff;
@@ -734,16 +783,16 @@
 
     .primary-actions {
       margin-top: auto;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 7px;
     }
 
     .node-action {
       min-height: 28px;
-      padding: 0 8px;
+      padding: 0 12px;
       border: 1px solid var(--line);
-      border-radius: 7px;
+      border-radius: 999px;
       background: #fff;
       color: var(--green);
       font-size: 12px;
@@ -833,7 +882,7 @@
       display: none;
       padding: 8px 9px;
       border: 1px solid var(--line-strong);
-      border-radius: 8px;
+      border-radius: 999px;
       background: #fff;
       color: var(--ink);
       box-shadow: var(--shadow);
@@ -1282,7 +1331,9 @@
     .chat-send {
       height: 38px;
       border: 1px solid var(--line);
-      border-radius: 12px;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
       background: #fff;
       color: var(--green);
       font-weight: 850;
@@ -1294,6 +1345,8 @@
     }
 
     .chat-send {
+      width: auto;
+      min-width: 62px;
       border-color: var(--green);
       background: var(--green);
       color: #fff;
@@ -1438,6 +1491,12 @@
       .pressure-grid,
       .lane-track {
         grid-template-columns: 1fr;
+      }
+
+      .metric.week-metric .metric-value {
+        min-width: 68px;
+        min-height: 48px;
+        font-size: 22px;
       }
 
       .inspector {
@@ -2083,7 +2142,7 @@
       return `
         <div class="metrics-row">
           ${metrics.map((metric) => `
-            <div class="metric">
+            <div class="metric ${String(metric.label).includes("周") || String(metric.value).includes("周") ? "week-metric" : ""}">
               <div class="metric-value">${html(metric.value)}</div>
               <div class="metric-label">${html(metric.label)}</div>
             </div>
@@ -2100,7 +2159,7 @@
             <article class="canvas-node week-card ${node.id === model.selected_node_id ? "selected" : ""}" tabindex="0" data-node="${html(node.id)}">
               <div class="node-top">
                 <div>
-                  <div class="node-eyebrow">${html(node.day)} · ${html(node.type)}</div>
+                  <div class="node-eyebrow"><span class="weekday-badge">${html(node.day)}</span><span class="node-type">${html(node.type)}</span></div>
                   <div class="node-title">${html(node.title)}</div>
                 </div>
                 <span class="${node.risk.includes("高") || node.risk.includes("紧") ? "risk-tag" : "state-tag"}">${html(node.state)}</span>
