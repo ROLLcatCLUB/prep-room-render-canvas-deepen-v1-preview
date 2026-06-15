@@ -35,3 +35,11 @@ PrepRoomWorkState
 ```
 
 Current V1 keeps the composer implicit inside the static fixture and exposes the renderer functions on `window` for later adapter work.
+
+## Visual Repair Notes
+
+- View switching now uses a lightweight fade transition on the render layer.
+- Week package cards show one primary gap plus two priority actions; secondary collaboration actions move to the floating inspector.
+- Month progress cards keep only week, pressure, and keyword on the card; reason appears on hover and full detail remains in the inspector.
+- The tool rail includes compact text labels under icons and wraps on tablet/mobile widths.
+- The bottom status area uses a global flow step bar for `备课室 -> 教室 -> 作品馆 -> 档案室 -> 回流`.
