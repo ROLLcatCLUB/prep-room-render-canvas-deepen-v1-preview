@@ -53,6 +53,7 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - The top area now uses a compact product navigation bar and context row; view switching lives in the context row, while the verbose canvas heading block has been removed.
 - The current space name is centered as large gradient text, with a horizontal AI tool strip below it using one icon per tool.
 - The second view is now `班级排课 / 班级进度与排课`, rendered as a week-by-class board with two default weekly lesson slots per class.
+- V1.1 readability polish strengthens the current-week marker, keeps future lessons readable while muted, adds a compact status legend, and preserves horizontal scrolling for the dense class-by-week board.
 - The third view remains `学期规划`, rendered as a left unit lesson catalog plus a right weekly lesson plan board.
 - `class_progress_schedule_board_v1.html` is retained as the accepted standalone reference preview for the integrated `班级进度与排课` scene.
 - The page now follows the shell principle: spaces are states rendered in the center stage, and agents are bottom intent-bar roles rather than room-internal page widgets.
