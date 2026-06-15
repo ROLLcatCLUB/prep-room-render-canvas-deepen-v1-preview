@@ -2342,7 +2342,6 @@
                 <div class="gap-primary">${html(node.primary_gap || node.detail)}</div>
                 ${Number(node.hidden_gap_count) > 0 ? `<button class="more-gaps" type="button">还有 ${html(node.hidden_gap_count)} 项</button>` : ""}
               </div>
-              <div class="node-text">下一步协同在右侧检查器里处理。</div>
               <div class="progress-wrap">
                 <div class="progress-label"><span>课包完成度</span><span>${html(node.progress)}%</span></div>
                 <div class="progress-track"><div class="progress-fill" style="width: ${Number(node.progress) || 0}%"></div></div>
