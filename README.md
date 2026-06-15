@@ -52,3 +52,4 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - The page now follows the shell principle: spaces are states rendered in the center stage, and agents are bottom intent-bar roles rather than room-internal page widgets.
 - Visual rule update: week indicators should be prominent, while actions use pill or circular button shapes by default.
 - Icon rule update: use a Lucide-like line icon style for circular controls; keep action text in `title` / accessible labels instead of visible button copy.
+- Inspector rule update: the floating inspector stays hidden on initial render and opens near the pointer after a node/action click.
