@@ -5,6 +5,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 ## Files
 
 - `prep_room_render_canvas_deepen_v1.html`
+- `class_progress_schedule_board_design_v0.md`
 
 ## Preview Boundary
 
