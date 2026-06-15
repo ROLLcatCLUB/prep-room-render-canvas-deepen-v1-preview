@@ -867,7 +867,15 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+    }
+
+    .cps-control-cluster {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      min-width: 0;
     }
 
     .cps-grade-switcher,
@@ -902,25 +910,28 @@
     }
 
     .cps-summary-row {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(132px, 1fr));
-      gap: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      min-width: 0;
     }
 
     .cps-summary-card {
-      min-height: 64px;
+      min-height: 30px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
+      gap: 5px;
+      padding: 0 9px 0 6px;
       border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.92);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      white-space: nowrap;
     }
 
     .cps-summary-icon {
-      width: 36px;
-      height: 36px;
+      width: 22px;
+      height: 22px;
       display: grid;
       place-items: center;
       border-radius: 999px;
@@ -929,15 +940,14 @@
       flex: 0 0 auto;
     }
 
-    .cps-summary-label {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 750;
+    .cps-summary-icon .icon-svg {
+      width: 14px;
+      height: 14px;
     }
 
     .cps-summary-value {
-      margin-top: 2px;
-      font-size: 22px;
+      margin-top: 0;
+      font-size: 16px;
       line-height: 1;
       font-weight: 950;
     }
@@ -947,8 +957,8 @@
       align-items: center;
       gap: 7px;
       flex-wrap: wrap;
-      min-height: 30px;
-      padding: 0 2px;
+      min-height: 28px;
+      padding: 0;
     }
 
     .cps-legend-item {
@@ -956,7 +966,7 @@
       align-items: center;
       gap: 6px;
       min-height: 24px;
-      padding: 0 9px;
+      padding: 0 8px;
       border: 1px solid var(--line);
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.72);
@@ -2095,8 +2105,8 @@
         grid-template-columns: 1fr;
       }
 
-      .cps-summary-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .cps-control-cluster {
+        align-items: flex-start;
       }
 
       .cps-legend-row {
@@ -3087,33 +3097,32 @@
       return `
         <div class="cps-scene">
           <div class="cps-control-row">
-            <div class="cps-grade-switcher" aria-label="年级切换">
-              ${view.grade_options.map((grade) => `<button class="cps-grade-btn ${grade.id === view.active_grade ? "active" : ""}" type="button" data-pending="已切换到${html(grade.label)}排课看板预演，等待接入真实课表。">${html(grade.label)}</button>`).join("")}
+            <div class="cps-control-cluster">
+              <div class="cps-grade-switcher" aria-label="年级切换">
+                ${view.grade_options.map((grade) => `<button class="cps-grade-btn ${grade.id === view.active_grade ? "active" : ""}" type="button" data-pending="已切换到${html(grade.label)}排课看板预演，等待接入真实课表。">${html(grade.label)}</button>`).join("")}
+              </div>
+              <div class="cps-summary-row" aria-label="排课摘要">
+                ${view.metrics.map((metric) => `
+                  <div class="cps-summary-card" title="${html(metric.label)}">
+                    <div class="cps-summary-icon">${icon(metric.label.includes("班") ? "classes" : metric.label.includes("一致") ? "check" : metric.label.includes("调整") ? "clock" : "calendar")}</div>
+                    <div class="cps-summary-value">${html(metric.value)}</div>
+                  </div>
+                `).join("")}
+              </div>
+              <div class="cps-legend-row" aria-label="排课状态图例">
+                <span class="cps-legend-item"><span class="cps-legend-dot"></span>正常课时</span>
+                <span class="cps-legend-item"><span class="cps-legend-dot future"></span>未来课</span>
+                <span class="cps-legend-item"><span class="cps-legend-dot activity"></span>活动</span>
+                <span class="cps-legend-item"><span class="cps-legend-dot holiday"></span>节假日</span>
+                <span class="cps-legend-item"><span class="cps-legend-dot reschedule"></span>调课</span>
+                <span class="cps-legend-item"><span class="cps-legend-dot makeup"></span>补课/顺延</span>
+              </div>
             </div>
             <div class="cps-mode-switcher" aria-label="视图模式">
               <button class="cps-mode-btn active" type="button">全班对照</button>
               <button class="cps-mode-btn" type="button" data-pending="单班详情视图已进入预演队列。">单班详情</button>
               <button class="cps-mode-btn" type="button" data-pending="调整建议视图已进入预演队列。">调整建议</button>
             </div>
-          </div>
-          <div class="cps-summary-row">
-            ${view.metrics.map((metric) => `
-              <div class="cps-summary-card">
-                <div class="cps-summary-icon">${icon(metric.label.includes("班") ? "classes" : metric.label.includes("一致") ? "check" : metric.label.includes("调整") ? "clock" : "calendar")}</div>
-                <div>
-                  <div class="cps-summary-label">${html(metric.label)}</div>
-                  <div class="cps-summary-value">${html(metric.value)}</div>
-                </div>
-              </div>
-            `).join("")}
-          </div>
-          <div class="cps-legend-row" aria-label="排课状态图例">
-            <span class="cps-legend-item"><span class="cps-legend-dot"></span>正常课时</span>
-            <span class="cps-legend-item"><span class="cps-legend-dot future"></span>未来课</span>
-            <span class="cps-legend-item"><span class="cps-legend-dot activity"></span>活动</span>
-            <span class="cps-legend-item"><span class="cps-legend-dot holiday"></span>节假日</span>
-            <span class="cps-legend-item"><span class="cps-legend-dot reschedule"></span>调课</span>
-            <span class="cps-legend-item"><span class="cps-legend-dot makeup"></span>补课/顺延</span>
           </div>
           <div class="cps-main-grid">
             <aside class="cps-catalog" aria-label="单元课时目录">
