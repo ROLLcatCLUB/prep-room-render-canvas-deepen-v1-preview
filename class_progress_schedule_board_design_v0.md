@@ -1,4 +1,9 @@
-# 师维「班级进度与排课」中台看板设计 V0
+# 师维「班级进度与排课」设计 V0.1
+
+```text
+ACCEPT_AS_V0_STRUCTURE
+NEEDS_V0_1_WEEKLY_TWO_SLOT_RULE -> RESOLVED_IN_THIS_DOC
+```
 
 ## 1. 模块定位
 
@@ -25,6 +30,18 @@
 - 下节课应该提前准备哪些课包、学习单、材料、评价量规。
 
 当前版本仍属于静态预览与结构讨论，不接 API、不写数据库、不自动正式应用。
+
+教师可见标题建议固定为：
+
+```text
+班级进度与排课
+```
+
+教师可见副标题可用：
+
+```text
+查看各班上课进度，处理活动、节假日和调课带来的顺延。
+```
 
 ## 2. 在师维系统中的位置
 
@@ -93,6 +110,60 @@ agent_position = xiaojiao_schedule_assistant
 6. `FutureMask`：未来未到课时灰化；
 7. `SuggestionPanel`：右侧或抽屉式建议，不抢主看板。
 
+## 3.1 WeeklySlotStack 双课时槽位规则
+
+这是 V0.1 必须补上的硬规则。
+
+```text
+每个 week × class 单元格，不是一个普通格子；
+它是一个 ClassWeekCell。
+每个 ClassWeekCell 内部默认包含 WeeklySlotStack。
+WeeklySlotStack 默认容量 weekly_period_capacity = 2。
+```
+
+默认两个槽位：
+
+```text
+第1课时
+第2课时
+```
+
+每个槽位只能放一种内容：
+
+```text
+lesson
+activity
+holiday
+reschedule
+delay
+makeup
+buffer
+empty
+```
+
+示例：
+
+```text
+第8周 × 三3班
+├─ 第1课时：调课至周五
+└─ 第2课时：2-1 拼贴练习
+```
+
+这条规则用于防止页面重新退化成“普通进度表”。真实排课看的是：某一周、某一班、该教师这一周的两个美术课时分别发生了什么。
+
+核心组件层级固定为：
+
+```text
+WeekClassScheduleGrid
+└─ WeekRow
+   └─ ClassWeekCell
+      └─ WeeklySlotStack
+         ├─ ScheduleSlot(slot_index=1)
+         └─ ScheduleSlot(slot_index=2)
+```
+
+`ClassWeekCell` 只负责承载本周本班状态；`ScheduleSlot` 才是真正的课时/事件落点。
+
 ## 4. 顶部控制区字段
 
 顶部控制只服务于“当前看哪一个排课上下文”，不要堆业务说明。
@@ -134,12 +205,13 @@ current_date
   "role": "art_teacher",
   "space": "prep_room",
   "agent_position": "xiaojiao_schedule_assistant",
+  "weekly_period_capacity": 2,
   "term": {},
   "subject": {},
   "grade_scope": {},
   "class_headers": [],
   "week_axis": [],
-  "schedule_cells": [],
+  "class_week_cells": [],
   "lesson_catalog": [],
   "calendar_events": [],
   "adjustment_candidates": [],
@@ -149,6 +221,49 @@ current_date
   "safety": {}
 }
 ```
+
+### 5.1.1 ClassWeekCell 与 ScheduleSlot
+
+`class_week_cells` 是页面施工时的主数据，不建议只用松散的 `schedule_cells`。
+
+```json
+{
+  "weekly_period_capacity": 2,
+  "class_week_cells": [
+    {
+      "cell_id": "cell_w08_g3_c3",
+      "week_id": "w08",
+      "class_id": "g3_c3",
+      "cell_state": "needs_adjustment",
+      "slots": [
+        {
+          "slot_id": "slot_w08_g3_c3_1",
+          "slot_index": 1,
+          "slot_label": "第1课时",
+          "card_type": "reschedule",
+          "title": "调课至周五",
+          "source_event_id": "event_school_activity_001",
+          "status": "rescheduled",
+          "is_future": false
+        },
+        {
+          "slot_id": "slot_w08_g3_c3_2",
+          "slot_index": 2,
+          "slot_label": "第2课时",
+          "card_type": "lesson",
+          "lesson_code": "2-1",
+          "lesson_title": "拼贴练习",
+          "lesson_instance_id": "inst_g3_c3_w08_2",
+          "status": "current",
+          "is_future": false
+        }
+      ]
+    }
+  ]
+}
+```
+
+如果某班每周实际课时量不是 2，可以通过 `weekly_period_capacity` 调整；但 V1 静态预览和默认交互先按 2 个槽位设计。
 
 ### 5.2 年级与班级
 
@@ -352,7 +467,11 @@ RenderStage
 ├─ MainScheduleBoard
 │  ├─ WeekAxis sticky
 │  ├─ ClassHeader sticky
-│  ├─ ScheduleGrid
+│  ├─ WeekClassScheduleGrid
+│  │  ├─ WeekRow
+│  │  ├─ ClassWeekCell
+│  │  ├─ WeeklySlotStack
+│  │  └─ ScheduleSlot
 │  ├─ TodayLine
 │  └─ FutureMask
 │
