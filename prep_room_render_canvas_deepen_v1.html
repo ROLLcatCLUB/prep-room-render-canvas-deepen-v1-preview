@@ -236,9 +236,9 @@
 
     .context-bar {
       min-height: 54px;
-      display: flex;
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto auto;
       align-items: center;
-      justify-content: space-between;
       gap: 14px;
       padding: 10px 18px;
       border-bottom: 1px solid var(--line);
@@ -491,54 +491,6 @@
         linear-gradient(0deg, rgba(216, 224, 220, 0.45) 1px, transparent 1px),
         #f9fbfa;
       background-size: 28px 28px;
-    }
-
-    .shell-note {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      width: max-content;
-      max-width: 100%;
-      min-height: 28px;
-      padding: 0 10px;
-      border: 1px solid #cfe0d9;
-      border-radius: 999px;
-      background: var(--green-soft);
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .canvas-head {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 16px;
-      align-items: center;
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(12px);
-    }
-
-    .canvas-kicker {
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-
-    .canvas-title {
-      margin: 0;
-      font-size: 20px;
-      line-height: 1.25;
-    }
-
-    .canvas-summary {
-      margin-top: 6px;
-      color: var(--muted);
-      line-height: 1.55;
-      max-width: 880px;
     }
 
     .view-tabs {
@@ -1441,10 +1393,6 @@
         height: 38px;
       }
 
-      .canvas-head {
-        grid-template-columns: 1fr;
-      }
-
       .view-tabs {
         width: max-content;
       }
@@ -1504,7 +1452,7 @@
 
       .context-bar {
         align-items: flex-start;
-        flex-direction: column;
+        grid-template-columns: 1fr;
         padding: 10px 12px;
       }
 
@@ -1639,21 +1587,12 @@
       <span class="context-chip">苏少版美术</span>
       <span class="context-chip">三至六年级</span>
       <span class="context-chip">20周</span>
-      <span class="context-chip">preview_only</span>
     </div>
+    <div class="view-tabs" id="viewTabs" role="tablist" aria-label="备课室视图"></div>
   </section>
 
   <main class="workspace">
     <section class="prep-render-canvas" aria-label="师维动态渲染舞台">
-      <div class="canvas-head">
-        <div>
-          <div class="canvas-kicker" id="canvasKicker">Prep Room Render Canvas</div>
-          <h1 class="canvas-title" id="canvasTitle">周课包准备画布</h1>
-          <div class="canvas-summary" id="canvasSummary"></div>
-          <div style="margin-top: 8px;"><span class="shell-note">师维动态渲染舞台 · 当前空间 = 备课室</span></div>
-        </div>
-        <div class="view-tabs" id="viewTabs" role="tablist" aria-label="备课室视图"></div>
-      </div>
       <div class="canvas-stage" id="canvasStage">
         <div class="render-layer" id="renderLayer"></div>
         <aside class="inspector hidden" id="inspector" aria-label="浮动检查器"></aside>
@@ -1709,7 +1648,6 @@
         agent_position: "xiaobei_prep_assistant"
       },
       safety: {
-        preview_only: true,
         provider_called: false,
         model_called: false,
         api_connected: false,
@@ -2303,9 +2241,6 @@
     }
 
     function renderCanvasHeader(view) {
-      byId("canvasKicker").textContent = view.kicker;
-      byId("canvasTitle").textContent = view.title;
-      byId("canvasSummary").textContent = view.summary;
       renderViewTabs();
     }
 
