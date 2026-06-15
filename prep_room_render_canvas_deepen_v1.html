@@ -942,6 +942,44 @@
       font-weight: 950;
     }
 
+    .cps-legend-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+      min-height: 30px;
+      padding: 0 2px;
+    }
+
+    .cps-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 24px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 760;
+      white-space: nowrap;
+    }
+
+    .cps-legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .cps-legend-dot.future { background: #8c9894; }
+    .cps-legend-dot.activity { background: var(--amber); }
+    .cps-legend-dot.holiday { background: #c76d66; }
+    .cps-legend-dot.reschedule { background: var(--blue); }
+    .cps-legend-dot.makeup { background: #7565d4; }
+
     .cps-main-grid {
       min-height: 0;
       display: grid;
@@ -1108,12 +1146,33 @@
     }
 
     .cps-week-row.current {
-      background: linear-gradient(90deg, rgba(47, 118, 104, 0.12), rgba(47, 118, 104, 0.02));
-      box-shadow: inset 4px 0 0 var(--green);
+      position: relative;
+      background: linear-gradient(90deg, rgba(47, 118, 104, 0.16), rgba(47, 118, 104, 0.045));
+      box-shadow: inset 5px 0 0 var(--green), inset 0 0 0 1px rgba(47, 118, 104, 0.2);
     }
 
     .cps-week-row.future {
-      opacity: 0.62;
+      background: rgba(243, 246, 245, 0.68);
+    }
+
+    .cps-week-row.current .cps-week-axis {
+      background: linear-gradient(135deg, rgba(224, 243, 237, 0.98), rgba(255, 255, 255, 0.96));
+      color: var(--green);
+    }
+
+    .cps-week-row.current .cps-week-title::before {
+      content: ">";
+      display: inline-grid;
+      place-items: center;
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+      border-radius: 999px;
+      background: var(--green);
+      color: #fff;
+      font-size: 13px;
+      line-height: 1;
+      vertical-align: 1px;
     }
 
     .cps-week-axis {
@@ -1142,9 +1201,14 @@
     .cps-today-mark {
       margin-top: 7px;
       display: inline-flex;
-      color: var(--green);
+      align-items: center;
+      min-height: 22px;
+      padding: 0 9px;
+      border-radius: 999px;
+      background: var(--green);
+      color: #fff;
       font-size: 12px;
-      font-weight: 850;
+      font-weight: 900;
     }
 
     .cps-class-week-cell {
@@ -1218,16 +1282,25 @@
     .cps-slot-card.future { border-color: #d3dbd8; background: #f3f5f4; color: #68736f; }
     .cps-slot-card.empty { border-style: dashed; background: #fbfcfc; color: #9ba6a2; font-weight: 650; }
 
+    .cps-week-row.future .cps-slot-card {
+      color: #4e5a56;
+    }
+
+    .cps-week-row.future .cps-slot-label {
+      color: #697570;
+      background: #fff;
+    }
+
     .cps-suggestion-list {
       display: grid;
       gap: 10px;
     }
 
     .cps-suggestion-item {
-      padding: 10px;
+      padding: 9px 10px;
       border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #fff;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
     }
 
     .cps-suggestion-index {
@@ -1246,7 +1319,7 @@
     .cps-suggestion-text {
       margin-top: 7px;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.5;
       font-size: 13px;
     }
 
@@ -2034,6 +2107,31 @@
         min-width: 68px;
         min-height: 48px;
         font-size: 22px;
+      }
+
+      .cps-control-row {
+        grid-template-columns: 1fr;
+      }
+
+      .cps-summary-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cps-legend-row {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 2px;
+      }
+
+      .cps-main-grid {
+        grid-template-columns: 200px minmax(990px, 1fr) 230px;
+        align-items: stretch;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+
+      .cps-board {
+        min-width: 990px;
       }
 
       .inspector {
@@ -3028,6 +3126,14 @@
                 </div>
               </div>
             `).join("")}
+          </div>
+          <div class="cps-legend-row" aria-label="排课状态图例">
+            <span class="cps-legend-item"><span class="cps-legend-dot"></span>正常课时</span>
+            <span class="cps-legend-item"><span class="cps-legend-dot future"></span>未来课</span>
+            <span class="cps-legend-item"><span class="cps-legend-dot activity"></span>活动</span>
+            <span class="cps-legend-item"><span class="cps-legend-dot holiday"></span>节假日</span>
+            <span class="cps-legend-item"><span class="cps-legend-dot reschedule"></span>调课</span>
+            <span class="cps-legend-item"><span class="cps-legend-dot makeup"></span>补课/顺延</span>
           </div>
           <div class="cps-main-grid">
             <aside class="cps-catalog" aria-label="单元课时目录">
