@@ -388,6 +388,19 @@
       min-width: 780px;
       min-height: 100%;
       position: relative;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+
+    .render-layer.is-fading {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    .render-layer.is-entering {
+      opacity: 0;
+      transform: translateY(8px);
     }
 
     .canvas-band {
@@ -512,6 +525,36 @@
       font-size: 13px;
     }
 
+    .gap-summary {
+      display: grid;
+      gap: 7px;
+      padding: 9px;
+      border: 1px solid #dce7e3;
+      border-radius: 8px;
+      background: #f7fbfa;
+    }
+
+    .gap-label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .gap-primary {
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .more-gaps {
+      width: max-content;
+      min-height: 24px;
+      padding: 0 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     .progress-wrap {
       margin-top: auto;
     }
@@ -544,6 +587,13 @@
       gap: 6px;
     }
 
+    .primary-actions {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
+    }
+
     .node-action {
       min-height: 28px;
       padding: 0 8px;
@@ -553,6 +603,20 @@
       color: var(--green);
       font-size: 12px;
       font-weight: 700;
+    }
+
+    .node-action.primary {
+      min-height: 32px;
+      border-color: var(--green);
+      background: var(--green);
+      color: #fff;
+    }
+
+    .node-action.secondary {
+      min-height: 32px;
+      color: var(--green);
+      border-color: #b9d9cf;
+      background: var(--green-soft);
     }
 
     .month-board {
@@ -570,7 +634,7 @@
     }
 
     .pressure-week {
-      min-height: 320px;
+      min-height: 250px;
       padding: 12px;
       display: flex;
       flex-direction: column;
@@ -599,6 +663,62 @@
     .pressure-meta {
       display: grid;
       gap: 5px;
+    }
+
+    .pressure-title {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .pressure-keyword {
+      color: var(--muted);
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .pressure-tooltip {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: calc(100% - 10px);
+      display: none;
+      padding: 8px 9px;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      box-shadow: var(--shadow);
+      font-size: 12px;
+      line-height: 1.5;
+      z-index: 4;
+    }
+
+    .pressure-week:hover .pressure-tooltip,
+    .pressure-week:focus .pressure-tooltip {
+      display: block;
+    }
+
+    .month-suggestion {
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .month-suggestion summary {
+      cursor: pointer;
+      color: var(--green);
+      font-weight: 700;
+      list-style: none;
+    }
+
+    .month-suggestion summary::-webkit-details-marker {
+      display: none;
     }
 
     .side-stack {
@@ -705,15 +825,18 @@
 
     .tool-btn {
       position: relative;
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      min-height: 54px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: #fff;
       color: var(--ink);
       display: grid;
+      grid-template-rows: 1fr auto;
       place-items: center;
-      font-size: 18px;
+      gap: 2px;
+      padding: 5px 2px;
+      font-size: 17px;
     }
 
     .tool-btn:hover,
@@ -743,6 +866,18 @@
 
     .tool-btn:hover::after {
       display: block;
+    }
+
+    .tool-label {
+      color: #9aa5a1;
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .tool-btn:hover .tool-label,
+    .tool-btn.active .tool-label {
+      color: var(--green);
     }
 
     .tool-separator {
@@ -882,6 +1017,42 @@
       text-overflow: ellipsis;
     }
 
+    .flow-steps {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .flow-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #9aa5a1;
+      white-space: nowrap;
+    }
+
+    .flow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #cbd5d1;
+    }
+
+    .flow-step.current {
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .flow-step.current .flow-dot {
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(47, 118, 104, 0.12);
+    }
+
+    .flow-sep {
+      color: #c4ceca;
+    }
+
     .toast {
       position: fixed;
       left: 50%;
@@ -926,6 +1097,43 @@
       .pressure-grid,
       .lane-track {
         grid-template-columns: repeat(3, minmax(150px, 1fr));
+      }
+    }
+
+    @media (max-width: 1080px) and (min-width: 901px) {
+      .workspace {
+        grid-template-columns: 286px minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr) auto;
+      }
+
+      .tool-rail {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        max-height: 92px;
+        padding: 8px 12px;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .tool-btn {
+        width: 54px;
+      }
+
+      .tool-btn::after {
+        display: none;
+      }
+
+      .tool-separator {
+        width: 1px;
+        height: 34px;
+        margin: 0 2px;
+      }
+
+      .status-strip {
+        grid-template-columns: 286px minmax(0, 1fr) 64px;
       }
     }
 
@@ -1001,6 +1209,7 @@
 
       .tool-rail {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: flex-start;
         border-left: 0;
         border-top: 1px solid var(--line);
@@ -1026,6 +1235,15 @@
 
       .status-cell {
         min-height: 36px;
+        white-space: normal;
+        align-items: flex-start;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      .flow-steps {
+        flex-wrap: wrap;
+        row-gap: 6px;
       }
 
       .status-main {
@@ -1091,6 +1309,7 @@
       renderer_mode: "static_fixture_only",
       active_view: "weekPackage",
       selected_node_id: "package-qinglv",
+      view_scroll_positions: {},
       role: {
         id: "art_teacher",
         label: "美术教师"
@@ -1109,6 +1328,13 @@
         formal_apply_performed: false,
         teacher_review_required: true
       },
+      flow_steps: [
+        { id: "prep_room", label: "备课室", current: true },
+        { id: "classroom", label: "教室", current: false },
+        { id: "gallery", label: "作品馆", current: false },
+        { id: "archive", label: "档案室", current: false },
+        { id: "loop", label: "回流", current: false }
+      ],
       negotiation: {
         assistant_name: "小备",
         assistant_role: "备课室负责人 · 工作协商入口",
@@ -1153,8 +1379,11 @@
               state: "待完善",
               risk: "高优先级",
               progress: 70,
+              primary_gap: "学习单未完成",
+              hidden_gap_count: 2,
               detail: "缺学习单、材料清单、评价维度。建议先补齐学习单，再交给小美优化视觉页。",
               collaboration: "小备拆课 · 小评预设量规 · 知识馆补传统色资料",
+              primary_actions: ["完善备课包", "送入教室预览"],
               actions: ["完善备课包", "补齐缺口", "交给小美"]
             },
             {
@@ -1165,8 +1394,11 @@
               state: "拆分中",
               risk: "节奏偏紧",
               progress: 45,
+              primary_gap: "课时拆分未确认",
+              hidden_gap_count: 2,
               detail: "第3-5周色彩单元受到公开课提前影响，需要重新确认课时拆分和作品产出位置。",
               collaboration: "小备重组单元 · 小评同步评价结构",
+              primary_actions: ["重组单元", "预演影响"],
               actions: ["重组单元", "预演影响", "查看缺口"]
             },
             {
@@ -1177,8 +1409,11 @@
               state: "资料待补",
               risk: "正常",
               progress: 58,
+              primary_gap: "观察问题链待补",
+              hidden_gap_count: 1,
               detail: "已有展览案例和任务单框架，缺少作品观察问题链和课堂导入资料。",
               collaboration: "知识馆补案例 · 小美整理视觉素材",
+              primary_actions: ["检索资料", "送入教室预览"],
               actions: ["检索资料", "生成问题链"]
             },
             {
@@ -1189,8 +1424,11 @@
               state: "项目草案",
               risk: "可延展",
               progress: 42,
+              primary_gap: "项目量规未定",
+              hidden_gap_count: 2,
               detail: "适合与校园活动联动，当前仍是项目草案，需要明确材料、流程和评价出口。",
               collaboration: "小备拆流程 · 小评生成项目量规",
+              primary_actions: ["拆成课时", "预置评价"],
               actions: ["拆成课时", "预置评价"]
             },
             {
@@ -1201,8 +1439,11 @@
               state: "汇总",
               risk: "待确认",
               progress: 63,
+              primary_gap: "重排方案待确认",
+              hidden_gap_count: 1,
               detail: "本周课包整体可进入预览，但《青绿中国色》和色彩单元重排仍需教师确认。",
               collaboration: "小备汇总 · 小管等待归档字段",
+              primary_actions: ["查看汇总", "生成待办"],
               actions: ["查看汇总", "生成待办"]
             }
           ]
@@ -1225,6 +1466,7 @@
               label: "第1周",
               pressure: 48,
               state: "正常",
+              keyword: "基础课包",
               reason: "基础课包整理",
               suggestion: "完成教材目录核对和基础课包归档",
               buffer: "可机动2课时"
@@ -1234,6 +1476,7 @@
               label: "第2周",
               pressure: 62,
               state: "偏紧",
+              keyword: "色彩单元启动",
               reason: "色彩单元启动",
               suggestion: "提前确认单元目标和课时拆分",
               buffer: "可机动1课时"
@@ -1243,6 +1486,7 @@
               label: "第3周",
               pressure: 86,
               state: "高",
+              keyword: "青绿中国色",
               reason: "青绿中国色 + 公开课准备",
               suggestion: "提前生成学习单并交给小美优化",
               buffer: "0课时"
@@ -1252,6 +1496,7 @@
               label: "第4周",
               pressure: 55,
               state: "可缓冲",
+              keyword: "作品补完",
               reason: "作品补完与展评可以缓冲",
               suggestion: "保留1课时作为作品补完课或展评课",
               buffer: "1课时"
@@ -1261,6 +1506,7 @@
               label: "第5周",
               pressure: 78,
               state: "偏高",
+              keyword: "评价归档",
               reason: "评价维度和归档字段需要提前准备",
               suggestion: "调用小评和小管预设评价与归档结构",
               buffer: "0课时"
@@ -1598,14 +1844,18 @@
                 </div>
                 <span class="${node.risk.includes("高") || node.risk.includes("紧") ? "risk-tag" : "state-tag"}">${html(node.state)}</span>
               </div>
-              <div class="node-text">${html(node.detail)}</div>
-              <div class="node-text">协同：${html(node.collaboration)}</div>
+              <div class="gap-summary">
+                <div class="gap-label">最需要先补</div>
+                <div class="gap-primary">${html(node.primary_gap || node.detail)}</div>
+                ${Number(node.hidden_gap_count) > 0 ? `<button class="more-gaps" type="button">还有 ${html(node.hidden_gap_count)} 项</button>` : ""}
+              </div>
+              <div class="node-text">下一步协同在右侧检查器里处理。</div>
               <div class="progress-wrap">
                 <div class="progress-label"><span>课包完成度</span><span>${html(node.progress)}%</span></div>
                 <div class="progress-track"><div class="progress-fill" style="width: ${Number(node.progress) || 0}%"></div></div>
               </div>
-              <div class="node-actions">
-                ${node.actions.map((action) => `<button class="node-action" data-pending="小备已生成「${html(action)}」预演，等待教师确认。">${html(action)}</button>`).join("")}
+              <div class="primary-actions">
+                ${(node.primary_actions || node.actions).slice(0, 2).map((action, index) => `<button class="node-action ${index === 0 ? "primary" : "secondary"}" data-pending="小备已生成「${html(action)}」预演，等待教师确认。">${html(action)}</button>`).join("")}
               </div>
             </article>
           `).join("")}
@@ -1620,18 +1870,24 @@
           <section class="canvas-band pressure-grid" aria-label="月进度压力">
             ${view.weeks.map((week) => `
               <article class="canvas-node pressure-week ${week.id === model.selected_node_id ? "selected" : ""}" tabindex="0" data-node="${html(week.id)}">
+                <div class="pressure-tooltip">原因：${html(week.reason)}；机动空间：${html(week.buffer)}。</div>
                 <div class="pressure-column">
                   <div class="pressure-bar" style="height: ${Number(week.pressure) || 0}%"></div>
                 </div>
                 <div class="pressure-meta">
                   <div class="node-top">
-                    <div class="node-title">${html(week.label)}</div>
+                    <div class="pressure-title">
+                      <div class="node-title">${html(week.label)}</div>
+                      <div class="pressure-keyword">${html(week.keyword || week.reason)} · ${html(week.state)}</div>
+                    </div>
                     <span class="${week.state === "高" || week.state === "偏高" ? "risk-tag" : "state-tag"}">${html(week.state)}</span>
                   </div>
                   <div class="node-text">压力：${html(week.pressure)}%</div>
-                  <div class="node-text">原因：${html(week.reason)}</div>
-                  <div class="node-text">建议：${html(week.suggestion)}</div>
-                  <div class="node-text">机动：${html(week.buffer)}</div>
+                  <details class="month-suggestion">
+                    <summary>小备建议：${html(week.suggestion)}</summary>
+                    <div>原因：${html(week.reason)}</div>
+                    <div>机动：${html(week.buffer)}</div>
+                  </details>
                 </div>
               </article>
             `).join("")}
@@ -1699,26 +1955,66 @@
       `;
     }
 
-    function renderPrepRoomCanvas() {
-      const view = getActiveView();
-      renderCanvasHeader(view);
+    function renderActiveViewMarkup(view) {
+      if (view.id === "weekPackage") return renderWeekPackageCanvas(view);
+      if (view.id === "monthProgress") return renderMonthProgressCanvas(view);
+      return renderFlexibleSemesterMapCanvas(view);
+    }
+
+    function commitCanvasRender(view) {
       const renderLayer = byId("renderLayer");
-      if (view.id === "weekPackage") {
-        renderLayer.innerHTML = renderWeekPackageCanvas(view);
-      } else if (view.id === "monthProgress") {
-        renderLayer.innerHTML = renderMonthProgressCanvas(view);
-      } else {
-        renderLayer.innerHTML = renderFlexibleSemesterMapCanvas(view);
-      }
+      renderLayer.innerHTML = renderActiveViewMarkup(view);
+      window.requestAnimationFrame(() => {
+        renderLayer.classList.remove("is-entering");
+      });
       openInspector(model.selected_node_id, { silent: true });
       renderNegotiationPanel();
       renderStatusBar();
+      const canvasStage = byId("canvasStage");
+      canvasStage.scrollTop = model.view_scroll_positions?.[view.id] || 0;
+    }
+
+    function renderPrepRoomCanvas(options = {}) {
+      const view = getActiveView();
+      renderCanvasHeader(view);
+      const renderLayer = byId("renderLayer");
+      if (!options.animate) {
+        commitCanvasRender(view);
+        return;
+      }
+      renderLayer.classList.add("is-fading");
+      window.clearTimeout(model.render_transition_timer);
+      model.render_transition_timer = window.setTimeout(() => {
+        renderLayer.classList.remove("is-fading");
+        renderLayer.classList.add("is-entering");
+        commitCanvasRender(view);
+      }, 150);
+    }
+
+    function toolShortLabel(tool) {
+      const map = {
+        textbook: "教材",
+        unit: "单元",
+        split: "拆课",
+        weekly: "周历",
+        reschedule: "重排",
+        flow: "流程",
+        worksheet: "学习单",
+        search: "检索",
+        xiaomei: "小美",
+        xiaoping: "小评",
+        xiaoguan: "小管"
+      };
+      return map[tool.id] || tool.title.slice(0, 3);
     }
 
     function renderToolRail() {
       byId("toolRail").innerHTML = model.tools.map((tool, index) => `
         ${index === 5 ? `<div class="tool-separator" aria-hidden="true"></div>` : ""}
-        <button class="tool-btn" data-tool="${html(tool.id)}" data-label="${html(tool.title)}" title="${html(tool.title)}" aria-label="${html(tool.title)}">${html(tool.icon)}</button>
+        <button class="tool-btn" data-tool="${html(tool.id)}" data-label="${html(tool.title)}" title="${html(tool.title)}" aria-label="${html(tool.title)}">
+          <span class="tool-icon-mark">${html(tool.icon)}</span>
+          <span class="tool-label">${html(toolShortLabel(tool))}</span>
+        </button>
       `).join("");
     }
 
@@ -1799,10 +2095,24 @@
       showToast(text);
     }
 
+    function renderFlowSteps() {
+      return `
+        <div class="flow-steps" aria-label="课包流转步骤">
+          ${model.flow_steps.map((step, index) => `
+            <span class="flow-step ${step.current ? "current" : ""}">
+              <span class="flow-dot" aria-hidden="true"></span>
+              <span>${html(step.label)}</span>
+            </span>
+            ${index < model.flow_steps.length - 1 ? `<span class="flow-sep" aria-hidden="true">›</span>` : ""}
+          `).join("")}
+        </div>
+      `;
+    }
+
     function renderStatusBar() {
       const latest = model.pending_changes[0];
       byId("statusMain").innerHTML = `
-        <span class="state-tag">teacher_review_required</span>
+        ${renderFlowSteps()}
         <span class="status-text">${html(latest ? latest.text : "暂无待确认预演。")}</span>
       `;
       byId("statusCount").textContent = `${model.pending_changes.length} 项`;
@@ -1818,11 +2128,13 @@
     }
 
     function selectView(viewId) {
+      const canvasStage = byId("canvasStage");
+      model.view_scroll_positions[model.active_view] = canvasStage.scrollTop;
       model.active_view = viewId;
       const view = getActiveView();
       const firstNode = view.nodes?.[0]?.id || view.weeks?.[0]?.id || view.lanes?.[0]?.blocks?.[0]?.id;
       model.selected_node_id = firstNode || model.selected_node_id;
-      renderPrepRoomCanvas();
+      renderPrepRoomCanvas({ animate: true });
       showToast(`已切换到${view.label}画布`);
     }
 
