@@ -48,7 +48,7 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Month progress cards keep only week, pressure, and keyword on the card; reason appears on hover and full detail remains in the inspector.
 - The tool rail includes compact text labels under icons and wraps on tablet/mobile widths.
 - The bottom status area uses a global flow step bar for `备课室 -> 教室 -> 作品馆 -> 档案室 -> 回流`.
-- The top area now uses a compact product navigation bar and context row; the 小备 input has moved to a bottom chat entry with upload, voice, and send controls.
+- The top area now uses a compact product navigation bar and context row; view switching lives in the context row, while the verbose canvas heading block has been removed.
 - The page now follows the shell principle: spaces are states rendered in the center stage, and agents are bottom intent-bar roles rather than room-internal page widgets.
 - Visual rule update: week indicators should be prominent, while actions use pill or circular button shapes by default.
 - Icon rule update: use a Lucide-like line icon style for circular controls; keep action text in `title` / accessible labels instead of visible button copy.
