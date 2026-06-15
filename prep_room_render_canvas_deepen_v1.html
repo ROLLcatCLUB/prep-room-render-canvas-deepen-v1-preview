@@ -1093,8 +1093,9 @@
 
     .inspector {
       position: absolute;
-      top: 18px;
-      right: 18px;
+      top: var(--inspector-top, 18px);
+      left: var(--inspector-left, auto);
+      right: auto;
       width: min(340px, calc(100% - 36px));
       max-height: calc(100% - 36px);
       overflow: auto;
@@ -2393,7 +2394,6 @@
       window.requestAnimationFrame(() => {
         renderLayer.classList.remove("is-entering");
       });
-      openInspector(model.selected_node_id, { silent: true });
       renderNegotiationPanel();
       renderStatusBar();
       const canvasStage = byId("canvasStage");
@@ -2446,6 +2446,27 @@
       `).join("");
     }
 
+    function placeInspectorNearPointer(inspector, pointerEvent) {
+      if (!pointerEvent) return;
+      const stage = byId("canvasStage");
+      const stageRect = stage.getBoundingClientRect();
+      const gap = 14;
+      const fallbackWidth = 340;
+      const fallbackHeight = 360;
+      const width = inspector.offsetWidth || Math.min(fallbackWidth, Math.max(260, stageRect.width - 36));
+      const height = inspector.offsetHeight || fallbackHeight;
+      const minLeft = 18;
+      const minTop = 18;
+      const maxLeft = Math.max(minLeft, stage.clientWidth - width - 18);
+      const maxTop = Math.max(minTop, stage.clientHeight - height - 18);
+      const rawLeft = pointerEvent.clientX - stageRect.left + stage.scrollLeft + gap;
+      const rawTop = pointerEvent.clientY - stageRect.top + stage.scrollTop + gap;
+      const left = Math.min(Math.max(rawLeft, minLeft), maxLeft);
+      const top = Math.min(Math.max(rawTop, minTop), maxTop);
+      inspector.style.setProperty("--inspector-left", `${Math.round(left)}px`);
+      inspector.style.setProperty("--inspector-top", `${Math.round(top)}px`);
+    }
+
     function openInspector(targetId, options = {}) {
       const inspector = byId("inspector");
       const tool = model.tools.find((item) => item.id === targetId);
@@ -2467,7 +2488,6 @@
         model.selected_node_id = targetId;
       }
 
-      inspector.classList.remove("hidden");
       inspector.innerHTML = `
         <div class="inspector-head">
           <div>
@@ -2496,6 +2516,8 @@
           </div>
         </div>
       `;
+      inspector.classList.remove("hidden");
+      placeInspectorNearPointer(inspector, options.event);
 
       document.querySelectorAll(".canvas-node").forEach((node) => {
         node.classList.toggle("selected", node.dataset.node === model.selected_node_id);
@@ -2562,6 +2584,7 @@
       const view = getActiveView();
       const firstNode = view.nodes?.[0]?.id || view.weeks?.[0]?.id || view.lanes?.[0]?.blocks?.[0]?.id;
       model.selected_node_id = firstNode || model.selected_node_id;
+      byId("inspector").classList.add("hidden");
       renderPrepRoomCanvas({ animate: true });
       showToast(`已切换到${view.label}画布`);
     }
@@ -2612,13 +2635,13 @@
 
         const node = event.target.closest("[data-node]");
         if (node) {
-          openInspector(node.dataset.node);
+          openInspector(node.dataset.node, { event });
           return;
         }
 
         const tool = event.target.closest("[data-tool]");
         if (tool) {
-          openInspector(tool.dataset.tool);
+          openInspector(tool.dataset.tool, { event });
           return;
         }
 
@@ -2632,7 +2655,7 @@
 
         const current = event.target.closest("[data-action='open-current']");
         if (current) {
-          openInspector(model.selected_node_id);
+          openInspector(model.selected_node_id, { event });
           return;
         }
 
