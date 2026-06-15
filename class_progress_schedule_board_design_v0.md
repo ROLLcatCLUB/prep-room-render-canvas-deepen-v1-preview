@@ -3,7 +3,36 @@
 ```text
 ACCEPT_AS_V0_STRUCTURE
 NEEDS_V0_1_WEEKLY_TWO_SLOT_RULE -> RESOLVED_IN_THIS_DOC
+ACCEPT_AS_V1_STATIC_PREVIEW
+INTEGRATED_IN_PREP_ROOM_RENDER_STAGE -> REPLACES_FORMER_MONTH_PROGRESS_VIEW
 ```
+
+## 0. 集成记录
+
+2026-06-16：`class_progress_schedule_board_v1.html` 的方向已收为静态预览样板，并接入
+`prep_room_render_canvas_deepen_v1.html` 的备课室 `RenderStage`。
+
+当前系统页中，原“月进度”视图已删除，第二个中心舞台状态改为：
+
+```text
+view_id = classProgressSchedule
+view_label = 班级排课
+teacher_title = 班级进度与排课
+weekly_period_capacity = 2
+```
+
+该视图固定采用：
+
+```text
+横向 = 班级
+纵向 = 周次
+单元格 = ClassWeekCell
+单元格内部 = WeeklySlotStack
+槽位 = ScheduleSlot(slot_index = 1 / 2)
+```
+
+后续接真实课表、校历、顺延和推送能力时，应围绕 `class_lesson_instance`
+继续扩展，不再恢复旧的“月进度压力卡”结构。
 
 ## 1. 模块定位
 
@@ -589,23 +618,24 @@ RenderStage
 - 复杂冲突求解器；
 - 跨学科全校排课。
 
-## 11. 当前预览线建议
+## 11. 当前预览线状态
 
-当前 `PREP_ROOM_RENDER_CANVAS_DEEPEN_V1` 已经有 `周课包 / 月进度 / 学期规划` 三个视图。
+当前 `PREP_ROOM_RENDER_CANVAS_DEEPEN_V1` 已更新为 `周课包 / 班级排课 / 学期规划` 三个视图。
 
-下一步建议：
+已完成：
 
 ```text
-将“月进度”升级为“班级进度与排课”
+删除“月进度”中心舞台
+接入“班级进度与排课”
 保留顶部 ShiweiShell
 保留底部 IntentBar
-中间 RenderStage 改成 ClassProgressScheduleBoard
+中间 RenderStage 的第二视图改成 ClassProgressScheduleBoard
 ```
 
 也就是说：
 
 ```text
-月进度 -> 班级进度与排课
+班级排课 -> 班级进度与排课
 学期规划 -> 保留为单元课时目录与学期周计划
 周课包 -> 保留为课包准备入口
 ```
