@@ -248,18 +248,15 @@
     .context-title {
       min-width: 0;
       justify-self: center;
-      min-height: 38px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 18px;
-      border: 1px solid #b9d9cf;
-      border-radius: 999px;
-      background: #ffffff;
-      box-shadow: 0 8px 20px rgba(47, 118, 104, 0.08);
-      font-size: 18px;
-      font-weight: 850;
-      color: #244c42;
+      padding: 0 10px;
+      font-size: 26px;
+      line-height: 1.1;
+      font-weight: 950;
+      color: transparent;
+      background: linear-gradient(135deg, #1f6f61 0%, #2f7668 42%, #315f90 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 0 10px 24px rgba(47, 118, 104, 0.18);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -1493,8 +1490,10 @@
       }
 
       .context-title {
-        width: 100%;
+        width: auto;
+        justify-self: center;
         order: -1;
+        font-size: 24px;
       }
 
       .context-meta {
