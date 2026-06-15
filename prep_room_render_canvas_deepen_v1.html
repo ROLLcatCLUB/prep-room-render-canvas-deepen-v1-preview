@@ -249,17 +249,32 @@
       min-width: 0;
       justify-self: center;
       padding: 0 10px;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
       font-size: 26px;
       line-height: 1.1;
       font-weight: 950;
-      color: transparent;
-      background: linear-gradient(135deg, #1f6f61 0%, #2f7668 42%, #315f90 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
+      color: var(--green);
       text-shadow: 0 10px 24px rgba(47, 118, 104, 0.18);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    .context-space-name {
+      color: transparent;
+      background: linear-gradient(135deg, #1f6f61 0%, #2f7668 42%, #315f90 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .context-view-name {
+      font-size: 0.72em;
+      font-weight: 850;
+      opacity: 0.82;
+      color: #2f7668;
+      text-shadow: none;
     }
 
     .context-meta {
@@ -2527,7 +2542,7 @@
       <span class="context-chip">三至六年级</span>
       <span class="context-chip">20周</span>
     </div>
-    <div class="context-title">备课室</div>
+    <div class="context-title" id="contextTitle">备课室</div>
     <div class="view-tabs" id="viewTabs" role="tablist" aria-label="备课室视图"></div>
   </section>
 
@@ -3256,6 +3271,11 @@
     }
 
     function renderCanvasHeader(view) {
+      const contextTitle = byId("contextTitle");
+      if (contextTitle) {
+        contextTitle.innerHTML = `<span class="context-space-name">${html(model.space.label)}</span><span class="context-view-name">· ${html(view.label)}</span>`;
+        contextTitle.title = `${model.space.label} · ${view.label}`;
+      }
       renderViewTabs();
     }
 
