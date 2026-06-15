@@ -856,106 +856,398 @@
       background: var(--green-soft);
     }
 
-    .month-board {
+    .cps-scene {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-rows: auto minmax(0, 1fr);
       gap: 12px;
-      align-items: stretch;
+      min-height: 100%;
     }
 
-    .pressure-grid {
+    .cps-control-row {
       display: grid;
-      grid-template-columns: repeat(5, minmax(112px, 1fr));
-      gap: 10px;
-      padding: 12px;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
     }
 
-    .pressure-week {
-      min-height: 250px;
-      padding: 12px;
+    .cps-grade-switcher,
+    .cps-mode-switcher,
+    .cps-filter-row {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+
+    .cps-grade-btn,
+    .cps-mode-btn,
+    .cps-filter-chip {
+      min-height: 32px;
+      padding: 0 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .cps-grade-btn.active,
+    .cps-mode-btn.active {
+      border-color: var(--green);
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(47, 118, 104, 0.14);
+    }
+
+    .cps-summary-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(132px, 1fr));
       gap: 10px;
     }
 
-    .pressure-column {
-      width: 100%;
-      min-height: 120px;
+    .cps-summary-card {
+      min-height: 64px;
       display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding: 8px;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: #f4f7f6;
+      background: rgba(255, 255, 255, 0.92);
     }
 
-    .pressure-bar {
-      width: 64%;
-      min-height: 34px;
-      border-radius: 6px 6px 0 0;
-      background: linear-gradient(180deg, var(--amber), var(--green));
-    }
-
-    .pressure-meta {
+    .cps-summary-icon {
+      width: 36px;
+      height: 36px;
       display: grid;
-      gap: 5px;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      flex: 0 0 auto;
     }
 
-    .pressure-title {
+    .cps-summary-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .cps-summary-value {
+      margin-top: 2px;
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 950;
+    }
+
+    .cps-main-grid {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 230px minmax(720px, 1fr) 260px;
+      gap: 12px;
+      overflow: auto;
+    }
+
+    .cps-catalog,
+    .cps-board,
+    .cps-suggestions {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.93);
+      box-shadow: 0 12px 30px rgba(29, 39, 35, 0.05);
+    }
+
+    .cps-catalog,
+    .cps-suggestions {
+      padding: 12px;
+      overflow: auto;
+    }
+
+    .cps-panel-head {
       display: flex;
-      flex-direction: column;
-      gap: 4px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .cps-unit-group {
+      display: grid;
+      gap: 7px;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cps-unit-group:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .cps-unit-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 880;
+    }
+
+    .cps-unit-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       min-width: 0;
     }
 
-    .pressure-keyword {
+    .cps-unit-mark {
+      width: 7px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .cps-unit-mark.blue { background: var(--blue); }
+    .cps-unit-mark.amber { background: var(--amber); }
+
+    .cps-unit-hours {
       color: var(--muted);
       font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .cps-catalog-lessons {
+      display: grid;
+      gap: 6px;
+      padding-left: 14px;
+      border-left: 1px solid var(--line);
+      margin-left: 3px;
+    }
+
+    .cps-catalog-lesson {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 6px;
+      align-items: center;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      text-align: left;
+      padding: 0;
+      border-radius: 0;
+      font-size: 13px;
+    }
+
+    .cps-catalog-lesson.active,
+    .cps-catalog-lesson:hover {
+      color: var(--green);
+      font-weight: 850;
+    }
+
+    .cps-board {
+      min-width: 760px;
+      overflow: auto;
+    }
+
+    .cps-class-header-row,
+    .cps-week-row {
+      display: grid;
+      grid-template-columns: 104px repeat(5, minmax(176px, 176px));
+      width: max-content;
+      min-width: 100%;
+    }
+
+    .cps-class-header-row {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cps-corner-cell,
+    .cps-class-header,
+    .cps-week-axis,
+    .cps-class-week-cell {
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cps-corner-cell,
+    .cps-class-header {
+      min-height: 56px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .cps-class-name {
+      font-weight: 930;
+    }
+
+    .cps-class-progress {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .cps-class-header.risk .cps-class-name::after {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-left: 6px;
+      border-radius: 999px;
+      background: var(--red);
+      vertical-align: middle;
+    }
+
+    .cps-week-row.current {
+      background: linear-gradient(90deg, rgba(47, 118, 104, 0.12), rgba(47, 118, 104, 0.02));
+      box-shadow: inset 4px 0 0 var(--green);
+    }
+
+    .cps-week-row.future {
+      opacity: 0.62;
+    }
+
+    .cps-week-axis {
+      min-height: 96px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.94);
+      text-align: center;
+    }
+
+    .cps-week-title {
+      font-size: 16px;
+      font-weight: 930;
+    }
+
+    .cps-week-date {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .cps-today-mark {
+      margin-top: 7px;
+      display: inline-flex;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .cps-class-week-cell {
+      min-height: 96px;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.66);
+    }
+
+    .cps-weekly-slot-stack {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 6px;
+      height: 100%;
+      min-height: 80px;
+    }
+
+    .cps-schedule-slot {
+      min-height: 36px;
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      gap: 6px;
+      align-items: stretch;
+    }
+
+    .cps-slot-label {
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 760;
+      white-space: nowrap;
+    }
+
+    .cps-slot-card {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 9px;
+      border: 1px solid #b9d9cf;
+      border-radius: 7px;
+      background: linear-gradient(135deg, #edf8f5, #fff);
+      color: #244c42;
+      font-size: 13px;
+      font-weight: 780;
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .cps-slot-card .lesson-code {
+      flex: 0 0 auto;
+      min-width: 32px;
+      white-space: nowrap;
+    }
+
+    .cps-slot-card span:last-child {
+      min-width: 0;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
 
-    .pressure-tooltip {
-      position: absolute;
-      left: 12px;
-      right: 12px;
-      bottom: calc(100% - 10px);
-      display: none;
-      padding: 8px 9px;
-      border: 1px solid var(--line-strong);
-      border-radius: 999px;
+    .cps-slot-card.activity { border-color: #efc49c; background: var(--amber-soft); color: var(--amber); }
+    .cps-slot-card.holiday { border-color: #f1b7b1; background: var(--red-soft); color: var(--red); }
+    .cps-slot-card.reschedule { border-color: #abc4f1; background: var(--blue-soft); color: var(--blue); }
+    .cps-slot-card.delay,
+    .cps-slot-card.makeup { border-color: #c8c0f4; background: #f0edff; color: #6857c8; }
+    .cps-slot-card.future { border-color: #d3dbd8; background: #f3f5f4; color: #68736f; }
+    .cps-slot-card.empty { border-style: dashed; background: #fbfcfc; color: #9ba6a2; font-weight: 650; }
+
+    .cps-suggestion-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .cps-suggestion-item {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       background: #fff;
-      color: var(--ink);
-      box-shadow: var(--shadow);
-      font-size: 12px;
-      line-height: 1.5;
-      z-index: 4;
     }
 
-    .pressure-week:hover .pressure-tooltip,
-    .pressure-week:focus .pressure-tooltip {
-      display: block;
-    }
-
-    .month-suggestion {
-      border-top: 1px solid var(--line);
-      padding-top: 8px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.55;
-    }
-
-    .month-suggestion summary {
-      cursor: pointer;
+    .cps-suggestion-index {
+      width: 20px;
+      height: 20px;
+      display: inline-grid;
+      place-items: center;
+      margin-right: 6px;
+      border-radius: 999px;
+      background: var(--green-soft);
       color: var(--green);
-      font-weight: 700;
-      list-style: none;
+      font-size: 12px;
+      font-weight: 900;
     }
 
-    .month-suggestion summary::-webkit-details-marker {
-      display: none;
+    .cps-suggestion-text {
+      margin-top: 7px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 13px;
     }
 
     .side-stack {
@@ -1614,7 +1906,6 @@
       }
 
       .week-board,
-      .pressure-grid,
       .lane-track {
         grid-template-columns: repeat(3, minmax(150px, 1fr));
       }
@@ -1719,11 +2010,9 @@
       }
 
       .metrics-row,
-      .month-board,
       .semester-plan,
       .map-lane,
       .week-board,
-      .pressure-grid,
       .lane-track {
         grid-template-columns: 1fr;
       }
@@ -1923,7 +2212,7 @@
         ],
         notes: {
           weekPackage: "本周先把第3-5周色彩单元的两个课包补齐。《青绿中国色》缺学习单和评价维度；《色彩的对比与和谐》缺问题链和互评表。",
-          monthProgress: "本月课包压力正常偏紧。第3周和第5周压力较高，建议提前调用小美和小评，减少临近上课前的准备压力。",
+          classProgressSchedule: "三3班和三5班本周存在调课/活动占用，建议先查看影响范围，再决定是否顺延或启用补课槽位。",
           flexibleSemesterMap: "学期计划已受到公开课提前和创艺节作品筹备影响。建议启用1个机动课包，并把造型表现单元压缩1课时。"
         }
       },
@@ -2019,73 +2308,106 @@
           ]
         },
         {
-          id: "monthProgress",
-          label: "月进度",
-          title: "月进度压力画布",
-          kicker: "Month Progress Canvas",
-          summary: "把第1-5周的课包压力、机动空间和小备建议转换为可点击周段。压力只用于预演，不改变正式进度。",
-          metrics: [
-            { label: "最高压力", value: "86%" },
-            { label: "机动课时", value: "3" },
-            { label: "可后移任务", value: "4" },
-            { label: "确认动作", value: "0" }
+          id: "classProgressSchedule",
+          label: "班级排课",
+          title: "班级进度与排课",
+          kicker: "Class Progress Schedule Board",
+          summary: "按授课年级查看各班真实课时落点。横向对比班级，纵向追踪周次，每周默认两个课时槽。",
+          weekly_period_capacity: 2,
+          grade_options: [
+            { id: "g3", label: "三年级" },
+            { id: "g4", label: "四年级" },
+            { id: "g5", label: "五年级" },
+            { id: "g6", label: "六年级" }
           ],
-          weeks: [
+          active_grade: "g3",
+          metrics: [
+            { label: "授课班级", value: "5" },
+            { label: "进度一致", value: "3" },
+            { label: "待调整课时", value: "4" },
+            { label: "当前周", value: "第8周" }
+          ],
+          class_headers: [
+            { id: "c1", label: "三1班", current: "2-1", state: "normal" },
+            { id: "c2", label: "三2班", current: "2-1", state: "normal" },
+            { id: "c3", label: "三3班", current: "1-5", state: "behind" },
+            { id: "c4", label: "三4班", current: "2-1", state: "rescheduled" },
+            { id: "c5", label: "三5班", current: "2-1", state: "behind" }
+          ],
+          lesson_catalog: [
             {
-              id: "month-week-1",
-              label: "第1周",
-              pressure: 48,
-              state: "正常",
-              keyword: "基础课包",
-              reason: "基础课包整理",
-              suggestion: "完成教材目录核对和基础课包归档",
-              buffer: "可机动2课时"
+              id: "unit-color",
+              title: "单元1 色彩单元",
+              hours: "共6课时",
+              tone: "green",
+              lessons: [["1-1", "色彩游戏"], ["1-2", "冷暖对比"], ["1-3", "综合色彩"], ["1-4", "线条的韵律"], ["1-5", "图案设计"], ["1-6", "创意拼贴"]]
             },
             {
-              id: "month-week-2",
-              label: "第2周",
-              pressure: 62,
-              state: "偏紧",
-              keyword: "色彩单元启动",
-              reason: "色彩单元启动",
-              suggestion: "提前确认单元目标和课时拆分",
-              buffer: "可机动1课时"
+              id: "unit-shape",
+              title: "单元2 造型表现单元",
+              hours: "共8课时",
+              tone: "blue",
+              lessons: [["2-1", "拼贴练习"], ["2-2", "纸艺造型"], ["2-3", "纹样设计"], ["2-4", "美术鉴赏"], ["2-5", "主题创作"], ["2-6", "展示与评价"]]
             },
             {
-              id: "month-week-3",
-              label: "第3周",
-              pressure: 86,
-              state: "高",
-              keyword: "青绿中国色",
-              reason: "青绿中国色 + 公开课准备",
-              suggestion: "提前生成学习单并交给小美优化",
-              buffer: "0课时"
-            },
-            {
-              id: "month-week-4",
-              label: "第4周",
-              pressure: 55,
-              state: "可缓冲",
-              keyword: "作品补完",
-              reason: "作品补完与展评可以缓冲",
-              suggestion: "保留1课时作为作品补完课或展评课",
-              buffer: "1课时"
-            },
-            {
-              id: "month-week-5",
-              label: "第5周",
-              pressure: 78,
-              state: "偏高",
-              keyword: "评价归档",
-              reason: "评价维度和归档字段需要提前准备",
-              suggestion: "调用小评和小管预设评价与归档结构",
-              buffer: "0课时"
+              id: "unit-project",
+              title: "单元3 综合创作",
+              hours: "共4课时",
+              tone: "amber",
+              lessons: [["3-1", "综合创作"], ["3-2", "作品展示"]]
             }
           ],
-          insights: [
-            "第3周是当前最大压力点，建议先处理《青绿中国色》的学习单与评价维度。",
-            "第4周具备缓冲空间，可承接作品补完或展评课。",
-            "第5周需要提前同步小评和小管，否则课堂完成后会形成归档滞后。"
+          week_axis: [
+            { id: "w05", label: "第5周", date: "4.20 - 4.26", state: "past" },
+            { id: "w06", label: "第6周", date: "4.27 - 5.03", state: "past" },
+            { id: "w07", label: "第7周", date: "5.04 - 5.10", state: "past" },
+            { id: "w08", label: "第8周", date: "5.18 - 5.24", state: "current" },
+            { id: "w09", label: "第9周", date: "5.25 - 5.31", state: "past" },
+            { id: "w10", label: "第10周", date: "6.01 - 6.07", state: "past" },
+            { id: "w11", label: "第11周", date: "6.08 - 6.14", state: "future" }
+          ],
+          class_week_cells: {
+            "w05-c1": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+            "w05-c2": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+            "w05-c3": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+            "w05-c4": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+            "w05-c5": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+            "w06-c1": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
+            "w06-c2": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
+            "w06-c3": [["activity", "", "校活动占用"], ["lesson", "1-3", "综合色彩"]],
+            "w06-c4": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
+            "w06-c5": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
+            "w07-c1": [["lesson", "1-5", "图案设计"], ["lesson", "1-6", "创意拼贴"]],
+            "w07-c2": [["lesson", "1-5", "图案设计"], ["lesson", "1-6", "创意拼贴"]],
+            "w07-c3": [["lesson", "1-4", "线条的韵律"], ["lesson", "1-5", "图案设计"]],
+            "w07-c4": [["lesson", "1-5", "图案设计"], ["lesson", "1-6", "创意拼贴"]],
+            "w07-c5": [["activity", "", "校活动占用"], ["lesson", "1-5", "图案设计"]],
+            "w08-c1": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+            "w08-c2": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+            "w08-c3": [["reschedule", "", "调课至周五"], ["reschedule", "", "调课至周五"]],
+            "w08-c4": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+            "w08-c5": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+            "w09-c1": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
+            "w09-c2": [["activity", "", "校活动占用"], ["activity", "", "校活动占用"]],
+            "w09-c3": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+            "w09-c4": [["holiday", "", "节假日停课"], ["holiday", "", "节假日停课"]],
+            "w09-c5": [["makeup", "", "补课：2-1 拼贴练习"], ["makeup", "", "补课：2-2 纸艺造型"]],
+            "w10-c1": [["lesson", "2-5", "主题创作"], ["lesson", "2-6", "展示与评价"]],
+            "w10-c2": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
+            "w10-c3": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
+            "w10-c4": [["delay", "", "顺延补课"], ["delay", "", "顺延补课"]],
+            "w10-c5": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
+            "w11-c1": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
+            "w11-c2": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
+            "w11-c3": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
+            "w11-c4": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
+            "w11-c5": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]]
+          },
+          suggestions: [
+            { tone: "warn", text: "三3班第8周两节课已调至周五，后续与三1班相比慢 1 课时。" },
+            { tone: "info", text: "三4班第9周因节假日停课，建议将 2-1 与 2-2 顺延至后续周次。" },
+            { tone: "warn", text: "三5班第7周第1课时被校活动占用，已生成第9周补课候选。" },
+            { tone: "normal", text: "下周优先准备 2-3 纹样设计学习单、2-4 美术鉴赏观察卡。" }
           ]
         },
         {
@@ -2305,17 +2627,6 @@
           ],
           actions: ["查看汇总", "生成待办"]
         },
-        "month-week-3": {
-          type: "周段节点",
-          title: "编辑月进度：第3周",
-          fields: [
-            ["课包压力", "高"],
-            ["主要原因", "青绿中国色 + 公开课准备"],
-            ["机动空间", "0课时"],
-            ["小备建议", "提前生成学习单并交给小美优化"]
-          ],
-          actions: ["生成重排方案", "查看影响范围"]
-        },
         "teaching-block-color": {
           type: "学期地图节点",
           title: "编辑教学块：色彩单元",
@@ -2376,6 +2687,8 @@
       search: '<circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path>',
       bell: '<path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 20a2 2 0 0 0 4 0"></path>',
       user: '<circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path>',
+      classes: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>',
+      clock: '<circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>',
       upload: '<path d="M12 4v12"></path><path d="m7 9 5-5 5 5"></path><path d="M5 20h14"></path>',
       mic: '<path d="M12 4a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V7a3 3 0 0 0-3-3z"></path><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path>',
       send: '<path d="m3 11 18-8-8 18-2-7z"></path><path d="m11 14 10-11"></path>',
@@ -2419,7 +2732,7 @@
 
     function iconForView(viewId) {
       if (viewId === "weekPackage") return "calendar";
-      if (viewId === "monthProgress") return "refresh";
+      if (viewId === "classProgressSchedule") return "layers";
       if (viewId === "semesterMap") return "map";
       return "prep";
     }
@@ -2518,6 +2831,23 @@
     }
 
     function getNodeDetail(nodeId) {
+      const cpsElement = Array.from(document.querySelectorAll("[data-cps-detail]")).find((item) => item.dataset.node === nodeId);
+      if (cpsElement) {
+        const detail = JSON.parse(cpsElement.dataset.cpsDetail);
+        return {
+          type: "班级课时实例",
+          title: detail.code ? `${detail.code} ${detail.title}` : detail.title,
+          fields: [
+            ["班级", detail.classLabel],
+            ["周次", `${detail.week} ${detail.date}`],
+            ["槽位", detail.slot],
+            ["类型", cpsCardTypeLabel(detail.type)],
+            ["联动", detail.type === "lesson" || detail.type === "future" ? "课包、学习单、评价量规、材料" : "小教调整候选、影响范围"],
+            ["正式边界", "仅生成预演，教师确认前不应用"]
+          ],
+          actions: detail.type === "lesson" || detail.type === "future" ? ["查看课包", "推送下节准备", "生成量规"] : ["查看影响", "采用调整", "暂不处理"]
+        };
+      }
       const planDetail = getPlanLessonDetail(nodeId);
       if (planDetail) return planDetail;
       if (model.node_details[nodeId]) return model.node_details[nodeId];
@@ -2637,50 +2967,133 @@
       `;
     }
 
-    function renderMonthProgressCanvas(view) {
+    function cpsCardTypeLabel(type) {
+      const map = {
+        lesson: "课时",
+        activity: "活动",
+        holiday: "停课",
+        reschedule: "调课",
+        delay: "顺延",
+        makeup: "补课",
+        future: "未来",
+        empty: "空"
+      };
+      return map[type] || "课时";
+    }
+
+    function renderClassProgressSlot(slot, week, klass, index) {
+      const [type, code, title] = slot || ["empty", "", "未排课"];
+      const cardType = week.state === "future" && type === "lesson" ? "future" : type;
+      const detail = {
+        week: week.label,
+        date: week.date,
+        classLabel: klass.label,
+        slot: `第${index + 1}课时`,
+        type: cardType,
+        code,
+        title
+      };
+      const nodeId = `cps-${week.id}-${klass.id}-${index + 1}`;
       return `
-        ${renderMetrics(view.metrics)}
-        <div class="month-board">
-          <section class="canvas-band pressure-grid" aria-label="月进度压力">
-            ${view.weeks.map((week) => `
-              <article class="canvas-node pressure-week ${week.id === model.selected_node_id ? "selected" : ""}" tabindex="0" data-node="${html(week.id)}">
-                <div class="pressure-tooltip">原因：${html(week.reason)}；机动空间：${html(week.buffer)}。</div>
-                <div class="pressure-column">
-                  <div class="pressure-bar" style="height: ${Number(week.pressure) || 0}%"></div>
-                </div>
-                <div class="pressure-meta">
-                  <div class="node-top">
-                    <div class="pressure-title">
-                      <div class="node-title">${html(week.label)}</div>
-                      <div class="pressure-keyword">${html(week.keyword || week.reason)} · ${html(week.state)}</div>
-                    </div>
-                    <span class="${week.state === "高" || week.state === "偏高" ? "risk-tag" : "state-tag"}">${html(week.state)}</span>
-                  </div>
-                  <div class="node-text">压力：${html(week.pressure)}%</div>
-                  <details class="month-suggestion">
-                    <summary>小备建议：${html(week.suggestion)}</summary>
-                    <div>原因：${html(week.reason)}</div>
-                    <div>机动：${html(week.buffer)}</div>
-                  </details>
-                </div>
-              </article>
-            `).join("")}
-          </section>
-          <section class="side-stack">
-            <div class="canvas-band insight-panel">
-              <div class="insight-title">小备月度判断</div>
-              <ul class="insight-list">
-                ${view.insights.map((item) => `<li>${html(item)}</li>`).join("")}
-              </ul>
+        <div class="cps-schedule-slot">
+          <div class="cps-slot-label">第${index + 1}课时</div>
+          <button class="cps-slot-card ${html(cardType)}" type="button" data-node="${html(nodeId)}" data-cps-detail="${html(JSON.stringify(detail))}" title="${html(title || cpsCardTypeLabel(cardType))}">
+            <span class="lesson-code">${html(code)}</span>
+            <span>${html(title || cpsCardTypeLabel(cardType))}</span>
+          </button>
+        </div>
+      `;
+    }
+
+    function renderClassProgressScheduleCanvas(view) {
+      return `
+        <div class="cps-scene">
+          <div class="cps-control-row">
+            <div class="cps-grade-switcher" aria-label="年级切换">
+              ${view.grade_options.map((grade) => `<button class="cps-grade-btn ${grade.id === view.active_grade ? "active" : ""}" type="button" data-pending="已切换到${html(grade.label)}排课看板预演，等待接入真实课表。">${html(grade.label)}</button>`).join("")}
             </div>
-            <div class="canvas-band insight-panel">
-              <div class="insight-title">预演动作</div>
-              <div class="inspector-actions">
-                <button class="primary-button" data-pending="小备已生成第3周压力缓解方案，等待教师确认。">生成压力缓解方案</button>
-                <button class="ghost-button" data-pending="小备已标记第4周缓冲课时，等待教师确认。">标记缓冲课时</button>
+            <div class="cps-mode-switcher" aria-label="视图模式">
+              <button class="cps-mode-btn active" type="button">全班对照</button>
+              <button class="cps-mode-btn" type="button" data-pending="单班详情视图已进入预演队列。">单班详情</button>
+              <button class="cps-mode-btn" type="button" data-pending="调整建议视图已进入预演队列。">调整建议</button>
+            </div>
+          </div>
+          <div class="cps-summary-row">
+            ${view.metrics.map((metric) => `
+              <div class="cps-summary-card">
+                <div class="cps-summary-icon">${icon(metric.label.includes("班") ? "classes" : metric.label.includes("一致") ? "check" : metric.label.includes("调整") ? "clock" : "calendar")}</div>
+                <div>
+                  <div class="cps-summary-label">${html(metric.label)}</div>
+                  <div class="cps-summary-value">${html(metric.value)}</div>
+                </div>
               </div>
-            </div>
-          </section>
+            `).join("")}
+          </div>
+          <div class="cps-main-grid">
+            <aside class="cps-catalog" aria-label="单元课时目录">
+              <div class="cps-panel-head"><span>单元课时目录</span><span class="quiet-tag">辅助栏</span></div>
+              ${view.lesson_catalog.map((unit) => `
+                <section class="cps-unit-group">
+                  <div class="cps-unit-title">
+                    <span class="cps-unit-name"><span class="cps-unit-mark ${html(unit.tone)}"></span>${html(unit.title)}</span>
+                    <span class="cps-unit-hours">${html(unit.hours)}</span>
+                  </div>
+                  <div class="cps-catalog-lessons">
+                    ${unit.lessons.map(([code, title]) => `<button class="cps-catalog-lesson" type="button" data-pending="已高亮 ${html(code)} 在各班中的课时落点。"><span class="lesson-code">${html(code)}</span><span>${html(title)}</span></button>`).join("")}
+                  </div>
+                </section>
+              `).join("")}
+            </aside>
+            <section class="cps-board" aria-label="周次班级排课看板">
+              <div class="cps-class-header-row">
+                <div class="cps-corner-cell">周次</div>
+                ${view.class_headers.map((klass) => `
+                  <div class="cps-class-header ${klass.state === "behind" ? "risk" : ""}">
+                    <div>
+                      <div class="cps-class-name">${html(klass.label)}</div>
+                      <div class="cps-class-progress">当前 ${html(klass.current)}</div>
+                    </div>
+                  </div>
+                `).join("")}
+              </div>
+              ${view.week_axis.map((week) => `
+                <div class="cps-week-row ${week.state === "current" ? "current" : ""} ${week.state === "future" ? "future" : ""}">
+                  <div class="cps-week-axis">
+                    <div>
+                      <div class="cps-week-title">${html(week.label)}</div>
+                      <div class="cps-week-date">${html(week.date)}</div>
+                      ${week.state === "current" ? `<div class="cps-today-mark">当前周</div>` : ""}
+                    </div>
+                  </div>
+                  ${view.class_headers.map((klass) => {
+                    const slots = view.class_week_cells[`${week.id}-${klass.id}`] || [["empty", "", "未排课"], ["empty", "", "未排课"]];
+                    return `
+                      <div class="cps-class-week-cell">
+                        <div class="cps-weekly-slot-stack">
+                          ${[0, 1].map((slotIndex) => renderClassProgressSlot(slots[slotIndex], week, klass, slotIndex)).join("")}
+                        </div>
+                      </div>
+                    `;
+                  }).join("")}
+                </div>
+              `).join("")}
+            </section>
+            <aside class="cps-suggestions" aria-label="小教建议">
+              <div class="cps-panel-head"><span>小教建议</span><span class="quiet-tag">需教师确认</span></div>
+              <div class="cps-suggestion-list">
+                ${view.suggestions.map((item, index) => `
+                  <div class="cps-suggestion-item">
+                    <div><span class="cps-suggestion-index">${index + 1}</span><strong>${html(item.tone === "normal" ? "下节准备" : "排课提醒")}</strong></div>
+                    <div class="cps-suggestion-text">${html(item.text)}</div>
+                  </div>
+                `).join("")}
+              </div>
+              <div class="chip-row" style="margin-top: 12px;">
+                <button class="node-action primary" data-pending="小教已生成调整方案预演，等待教师确认。">${iconButtonLabel("查看调整方案", "arrow")}</button>
+                <button class="node-action secondary" data-pending="小教已生成下节课准备推送预演，等待教师确认。">${iconButtonLabel("推送下节准备", "send")}</button>
+              </div>
+            </aside>
+          </div>
         </div>
       `;
     }
@@ -2744,7 +3157,7 @@
 
     function renderActiveViewMarkup(view) {
       if (view.id === "weekPackage") return renderWeekPackageCanvas(view);
-      if (view.id === "monthProgress") return renderMonthProgressCanvas(view);
+      if (view.id === "classProgressSchedule") return renderClassProgressScheduleCanvas(view);
       return renderFlexibleSemesterMapCanvas(view);
     }
 
@@ -2942,7 +3355,10 @@
       model.active_view = viewId;
       const view = getActiveView();
       const firstPlanLesson = view.plan_weeks?.[0]?.lessons?.[0]?.[0];
-      const firstNode = view.nodes?.[0]?.id || view.weeks?.[0]?.id || (firstPlanLesson ? `plan-${firstPlanLesson}` : "") || view.lanes?.[0]?.blocks?.[0]?.id;
+      const firstCpsWeek = view.week_axis?.[0]?.id;
+      const firstCpsClass = view.class_headers?.[0]?.id;
+      const firstCpsNode = firstCpsWeek && firstCpsClass ? `cps-${firstCpsWeek}-${firstCpsClass}-1` : "";
+      const firstNode = view.nodes?.[0]?.id || view.weeks?.[0]?.id || firstCpsNode || (firstPlanLesson ? `plan-${firstPlanLesson}` : "") || view.lanes?.[0]?.blocks?.[0]?.id;
       model.selected_node_id = firstNode || model.selected_node_id;
       byId("inspector").classList.add("hidden");
       renderPrepRoomCanvas({ animate: true });
@@ -3072,7 +3488,7 @@
     }
 
     window.renderWeekPackageCanvas = renderWeekPackageCanvas;
-    window.renderMonthProgressCanvas = renderMonthProgressCanvas;
+    window.renderClassProgressScheduleCanvas = renderClassProgressScheduleCanvas;
     window.renderFlexibleSemesterMapCanvas = renderFlexibleSemesterMapCanvas;
     window.renderToolRail = renderToolRail;
     window.openInspector = openInspector;
