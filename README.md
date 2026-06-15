@@ -25,13 +25,18 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 ## Canvas Shape
 
 ```text
+ShiweiShell
+├─ TopSpaceNav
+├─ RenderStage
+└─ BottomIntentBar
+
+Current space = prep_room
+Current bottom agent = xiaobei_prep_assistant
+
 PrepRoomWorkState
 -> composePrepRoomRenderDirective()
 -> window.PREP_ROOM_RENDER_VIEW_MODEL
--> renderPrepRoomCanvas()
--> renderWeekPackageCanvas()
--> renderMonthProgressCanvas()
--> renderFlexibleSemesterMapCanvas()
+-> RenderStage renders PrepRoomCanvas
 ```
 
 Current V1 keeps the composer implicit inside the static fixture and exposes the renderer functions on `window` for later adapter work.
@@ -44,3 +49,4 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - The tool rail includes compact text labels under icons and wraps on tablet/mobile widths.
 - The bottom status area uses a global flow step bar for `备课室 -> 教室 -> 作品馆 -> 档案室 -> 回流`.
 - The top area now uses a compact product navigation bar and context row; the 小备 input has moved to a bottom chat entry with upload, voice, and send controls.
+- The page now follows the shell principle: spaces are states rendered in the center stage, and agents are bottom intent-bar roles rather than room-internal page widgets.
