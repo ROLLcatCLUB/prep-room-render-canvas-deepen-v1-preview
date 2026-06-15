@@ -261,7 +261,7 @@
     .workspace {
       height: calc(100vh - 72px - 54px - 78px - 42px);
       display: grid;
-      grid-template-columns: 320px minmax(0, 1fr) 64px;
+      grid-template-columns: minmax(0, 1fr);
       gap: 0;
       overflow: hidden;
     }
@@ -445,6 +445,23 @@
         linear-gradient(0deg, rgba(216, 224, 220, 0.45) 1px, transparent 1px),
         #f9fbfa;
       background-size: 28px 28px;
+    }
+
+    .shell-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: max-content;
+      max-width: 100%;
+      min-height: 28px;
+      padding: 0 10px;
+      border: 1px solid #cfe0d9;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .canvas-head {
@@ -1298,14 +1315,6 @@
     }
 
     @media (max-width: 1180px) {
-      .workspace {
-        grid-template-columns: 286px minmax(0, 1fr) 60px;
-      }
-
-      .status-strip {
-        grid-template-columns: 286px minmax(0, 1fr) 60px;
-      }
-
       .topbar {
         grid-template-columns: minmax(180px, 0.8fr) minmax(300px, 1.2fr) minmax(220px, 0.8fr);
       }
@@ -1335,39 +1344,8 @@
     }
 
     @media (max-width: 1080px) and (min-width: 901px) {
-      .workspace {
-        grid-template-columns: 286px minmax(0, 1fr);
-        grid-template-rows: minmax(0, 1fr) auto;
-      }
-
-      .tool-rail {
-        grid-column: 1 / -1;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-start;
-        max-height: 92px;
-        padding: 8px 12px;
-        border-left: 0;
-        border-top: 1px solid var(--line);
-      }
-
-      .tool-btn {
-        width: 54px;
-      }
-
-      .tool-btn::after {
-        display: none;
-      }
-
-      .tool-separator {
-        width: 1px;
-        height: 34px;
-        margin: 0 2px;
-      }
-
       .status-strip {
-        grid-template-columns: 286px minmax(0, 1fr) 64px;
+        grid-template-columns: 220px minmax(0, 1fr) 64px;
       }
     }
 
@@ -1435,19 +1413,14 @@
         text-overflow: ellipsis;
       }
 
+      .view-tabs {
+        grid-template-columns: 1fr;
+      }
+
       .workspace {
         height: auto;
         min-height: 720px;
         grid-template-columns: 1fr;
-      }
-
-      .intent-panel {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .panel-scroll {
-        max-height: none;
       }
 
       .prep-render-canvas {
@@ -1465,18 +1438,6 @@
       .pressure-grid,
       .lane-track {
         grid-template-columns: 1fr;
-      }
-
-      .tool-rail {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        border-left: 0;
-        border-top: 1px solid var(--line);
-      }
-
-      .tool-btn::after {
-        display: none;
       }
 
       .inspector {
@@ -1563,16 +1524,13 @@
   </section>
 
   <main class="workspace">
-    <aside class="intent-panel" aria-label="小备备课室助理">
-      <div class="panel-scroll" id="negotiationPanel"></div>
-    </aside>
-
-    <section class="prep-render-canvas" aria-label="备课室渲染画布">
+    <section class="prep-render-canvas" aria-label="师维动态渲染舞台">
       <div class="canvas-head">
         <div>
           <div class="canvas-kicker" id="canvasKicker">Prep Room Render Canvas</div>
           <h1 class="canvas-title" id="canvasTitle">周课包准备画布</h1>
           <div class="canvas-summary" id="canvasSummary"></div>
+          <div style="margin-top: 8px;"><span class="shell-note">师维动态渲染舞台 · 当前空间 = 备课室</span></div>
         </div>
         <div class="view-tabs" id="viewTabs" role="tablist" aria-label="备课室视图"></div>
       </div>
@@ -1581,8 +1539,6 @@
         <aside class="inspector hidden" id="inspector" aria-label="浮动检查器"></aside>
       </div>
     </section>
-
-    <nav class="tool-rail" id="toolRail" aria-label="备课室工具轨"></nav>
   </main>
 
   <section class="xiaobei-chat-entry" aria-label="小备聊天入口">
@@ -1590,7 +1546,7 @@
       <div class="chat-avatar" aria-hidden="true">备</div>
       <div>
         <div class="chat-agent-name">小备</div>
-        <div class="chat-agent-role">备课室负责人 · 支持文本、资料和语音意图</div>
+        <div class="chat-agent-role">当前空间 = 备课室 · 底部意图栏自动切换为小备</div>
       </div>
     </div>
     <div class="chat-input-shell">
@@ -1620,6 +1576,12 @@
       role: {
         id: "art_teacher",
         label: "美术教师"
+      },
+      shell: {
+        name: "ShiweiShell",
+        top: "TopSpaceNav",
+        stage: "RenderStage",
+        bottom: "BottomIntentBar"
       },
       space: {
         id: "prep_room",
@@ -2060,9 +2022,11 @@
     }
 
     function renderNegotiationPanel() {
+      const panel = byId("negotiationPanel");
+      if (!panel) return;
       const source = model.negotiation;
       const activeNote = source.notes[model.active_view] || source.notes.weekPackage;
-      byId("negotiationPanel").innerHTML = `
+      panel.innerHTML = `
         <div class="assistant-head">
           <div class="assistant-avatar" aria-hidden="true">备</div>
           <div>
@@ -2306,7 +2270,9 @@
     }
 
     function renderToolRail() {
-      byId("toolRail").innerHTML = model.tools.map((tool, index) => `
+      const rail = byId("toolRail");
+      if (!rail) return;
+      rail.innerHTML = model.tools.map((tool, index) => `
         ${index === 5 ? `<div class="tool-separator" aria-hidden="true"></div>` : ""}
         <button class="tool-btn" data-tool="${html(tool.id)}" data-label="${html(tool.title)}" title="${html(tool.title)}" aria-label="${html(tool.title)}">
           <span class="tool-icon-mark">${html(tool.icon)}</span>
