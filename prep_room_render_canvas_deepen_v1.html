@@ -992,6 +992,189 @@
       gap: 12px;
     }
 
+    .semester-plan {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.34fr) minmax(620px, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .unit-catalog,
+    .week-plan-board {
+      min-height: 520px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 28px rgba(29, 39, 35, 0.04);
+    }
+
+    .plan-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-weight: 900;
+    }
+
+    .unit-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .unit-group {
+      display: grid;
+      gap: 8px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .unit-group:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .unit-group-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 850;
+    }
+
+    .unit-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .unit-color-mark {
+      width: 7px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .unit-hours {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .lesson-list {
+      display: grid;
+      gap: 7px;
+      padding-left: 16px;
+      border-left: 1px solid var(--line);
+      margin-left: 3px;
+    }
+
+    .lesson-line {
+      display: grid;
+      grid-template-columns: 46px minmax(0, 1fr);
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .lesson-code {
+      color: var(--green);
+      font-weight: 850;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .week-plan-list {
+      display: grid;
+      gap: 7px;
+    }
+
+    .week-row {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .week-label {
+      min-height: 46px;
+      display: grid;
+      place-items: center;
+      padding: 7px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      text-align: center;
+    }
+
+    .week-name {
+      font-weight: 900;
+    }
+
+    .week-date {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .week-slots {
+      min-height: 46px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(120px, 1fr));
+      gap: 8px;
+      align-items: center;
+      padding: 6px 10px;
+      border: 1px solid #e2e8e5;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .plan-lesson {
+      min-height: 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 12px;
+      border-radius: 8px;
+      border: 1px solid #b9d9cf;
+      background: linear-gradient(135deg, #edf8f5, #ffffff);
+      color: #244c42;
+      font-weight: 750;
+    }
+
+    .plan-lesson .lesson-code {
+      color: var(--green);
+      min-width: 34px;
+    }
+
+    .plan-lesson.blue {
+      border-color: #b7cbed;
+      background: linear-gradient(135deg, #eef5ff, #ffffff);
+    }
+
+    .plan-lesson.blue .lesson-code {
+      color: #2f63bd;
+    }
+
+    .plan-lesson.amber {
+      border-color: #efcaa5;
+      background: linear-gradient(135deg, #fff6ed, #ffffff);
+    }
+
+    .plan-lesson.amber .lesson-code {
+      color: #c06318;
+    }
+
+    .plan-lesson.buffer {
+      color: var(--muted);
+      border-color: #dce3df;
+      background: #fbfcfc;
+      font-weight: 650;
+    }
+
     .map-lane {
       display: grid;
       grid-template-columns: 170px minmax(0, 1fr);
@@ -1537,10 +1720,24 @@
 
       .metrics-row,
       .month-board,
+      .semester-plan,
       .map-lane,
       .week-board,
       .pressure-grid,
       .lane-track {
+        grid-template-columns: 1fr;
+      }
+
+      .unit-catalog,
+      .week-plan-board {
+        min-height: 0;
+      }
+
+      .week-row {
+        grid-template-columns: 1fr;
+      }
+
+      .week-slots {
         grid-template-columns: 1fr;
       }
 
@@ -1893,10 +2090,10 @@
         },
         {
           id: "flexibleSemesterMap",
-          label: "弹性学期地图",
-          title: "弹性学期地图画布",
-          kicker: "Flexible Semester Map",
-          summary: "把单元、机动课包和学校活动放在同一张学期地图上，显示可压缩、可延展和需教师确认的重排关系。",
+          label: "学期规划",
+          title: "学期规划",
+          kicker: "Semester Plan",
+          summary: "把单元课时目录和周次计划放在同一张规划表中，便于教师按周查看、调整和确认。",
           metrics: [
             { label: "教学块", value: "3" },
             { label: "机动课包", value: "6" },
@@ -1986,6 +2183,68 @@
             "方案A：压缩色彩复盘1课时，保留核心作品课。",
             "方案B：启用作品补完课包，保持色彩单元节奏。",
             "方案C：后移造型表现练习课，提前释放公开课准备窗口。"
+          ],
+          plan_units: [
+            {
+              id: "plan-unit-color",
+              title: "单元1 色彩单元",
+              hours: "共6课时",
+              tone: "green",
+              lessons: [
+                ["1-1", "认识色彩"],
+                ["1-2", "色彩的感受"],
+                ["1-3", "色彩的对比"],
+                ["1-4", "点线面的世界"],
+                ["1-5", "有趣的形状"],
+                ["1-6", "立体的构成感"]
+              ]
+            },
+            {
+              id: "plan-unit-shape",
+              title: "单元2 造型表现单元",
+              hours: "共10课时",
+              tone: "blue",
+              lessons: [
+                ["2-1", "形体与空间"],
+                ["2-2", "材料的奇妙"],
+                ["2-3", "形体的组合"],
+                ["2-4", "创意小物"],
+                ["2-5", "主题创作"],
+                ["2-6", "美术与生活"],
+                ["2-7", "作品欣赏"],
+                ["2-8", "名家作品赏析"],
+                ["2-9", "综合表现"],
+                ["2-10", "学期成果展示"]
+              ]
+            },
+            {
+              id: "plan-unit-explore",
+              title: "单元3 综合探索单元",
+              hours: "共8课时",
+              tone: "amber",
+              lessons: [
+                ["3-1", "创意与表达"],
+                ["3-2", "主题创作"],
+                ["3-3", "美术与生活"]
+              ]
+            }
+          ],
+          plan_weeks: [
+            { id: "plan-week-1", week: "第1周", date: "02.09 - 02.15", lessons: [["1-1", "认识色彩", "green"]] },
+            { id: "plan-week-2", week: "第2周", date: "02.16 - 02.22", lessons: [["1-2", "色彩的感受", "green"], ["1-3", "色彩的对比", "green"]] },
+            { id: "plan-week-3", week: "第3周", date: "02.23 - 03.01", lessons: [["1-4", "点线面的世界", "green"], ["1-5", "有趣的形状", "green"]] },
+            { id: "plan-week-4", week: "第4周", date: "03.02 - 03.08", lessons: [["2-1", "形体与空间", "blue"]] },
+            { id: "plan-week-5", week: "第5周", date: "03.09 - 03.15", lessons: [["2-2", "材料的奇妙", "blue"], ["2-3", "形体的组合", "blue"]] },
+            { id: "plan-week-6", week: "第6周", date: "03.16 - 03.22", lessons: [["2-4", "创意小物", "blue"], ["2-5", "主题创作", "blue"]] },
+            { id: "plan-week-7", week: "第7周", date: "03.23 - 03.29", lessons: [["2-6", "美术与生活", "blue"]] },
+            { id: "plan-week-8", week: "第8周", date: "03.30 - 04.05", lessons: [["2-7", "作品欣赏", "blue"], ["2-8", "名家作品赏析", "blue"]] },
+            { id: "plan-week-9", week: "第9周", date: "04.06 - 04.12", lessons: [["2-9", "综合表现", "blue"], ["2-10", "学期成果展示", "blue"]] },
+            { id: "plan-week-10", week: "第10周", date: "04.13 - 04.19", lessons: [["3-1", "创意与表达", "amber"]] },
+            { id: "plan-week-11", week: "第11周", date: "04.20 - 04.26", lessons: [["3-2", "主题创作", "amber"], ["3-3", "美术与生活", "amber"]] },
+            { id: "plan-week-12", week: "第12周", date: "04.27 - 05.03", lessons: [["buffer-12", "机动与复习", "buffer"]] },
+            { id: "plan-week-13", week: "第13周", date: "05.04 - 05.10", lessons: [["buffer-13", "机动与复习", "buffer"]] },
+            { id: "plan-week-14", week: "第14周", date: "05.11 - 05.17", lessons: [["buffer-14", "机动与复习", "buffer"]] },
+            { id: "plan-week-15", week: "第15-20周", date: "05.18 - 06.21", lessons: [["final-show", "期末展示与评价", "buffer"]] }
           ]
         }
       ],
@@ -2237,7 +2496,30 @@
       return model.views.find((view) => view.id === model.active_view) || model.views[0];
     }
 
+    function getPlanLessonDetail(nodeId) {
+      const planView = model.views.find((view) => view.id === "flexibleSemesterMap");
+      if (!planView || !String(nodeId).startsWith("plan-")) return null;
+      const lessonId = String(nodeId).replace(/^plan-/, "");
+      const week = (planView.plan_weeks || []).find((item) => item.lessons.some(([code]) => code === lessonId));
+      const lesson = week?.lessons.find(([code]) => code === lessonId);
+      if (!lesson) return null;
+      const [code, title, tone] = lesson;
+      return {
+        type: "学期规划课时",
+        title: code.startsWith("buffer") || code === "final-show" ? title : `${code} ${title}`,
+        fields: [
+          ["周次", week.week],
+          ["日期", week.date],
+          ["单元类型", tone === "blue" ? "造型表现单元" : tone === "amber" ? "综合探索单元" : tone === "buffer" ? "机动与评价" : "色彩单元"],
+          ["正式边界", "仅生成预演，教师确认前不应用"]
+        ],
+        actions: ["调整周次", "生成课包", "查看影响"]
+      };
+    }
+
     function getNodeDetail(nodeId) {
+      const planDetail = getPlanLessonDetail(nodeId);
+      if (planDetail) return planDetail;
       if (model.node_details[nodeId]) return model.node_details[nodeId];
       const allNodes = model.views.flatMap((view) => [
         ...(view.nodes || []),
@@ -2405,42 +2687,55 @@
 
     function renderFlexibleSemesterMapCanvas(view) {
       return `
-        ${renderMetrics(view.metrics)}
-        <div class="semester-map">
-          ${view.lanes.map((lane) => `
-            <section class="map-lane">
-              <div class="lane-label">
-                <div class="lane-title">${html(lane.title)}</div>
-                <div class="lane-note">${html(lane.note)}</div>
-              </div>
-              <div class="lane-track">
-                ${lane.blocks.map((block) => `
-                  <article class="canvas-node map-block ${block.id === model.selected_node_id ? "selected" : ""}" tabindex="0" data-node="${html(block.id)}">
-                    <div class="node-top">
-                      <div>
-                        <div class="node-eyebrow">${html(block.weeks)}</div>
-                        <div class="node-title">${html(block.title)}</div>
+        <div class="semester-plan">
+          <aside class="unit-catalog">
+            <div class="plan-panel-head">
+              <span>单元课时目录</span>
+              <span class="quiet-tag">展开全部</span>
+            </div>
+            <div class="unit-list">
+              ${view.plan_units.map((unit) => `
+                <section class="unit-group">
+                  <div class="unit-group-head">
+                    <span class="unit-name"><span class="unit-color-mark ${html(unit.tone)}"></span>${html(unit.title)}</span>
+                    <span class="unit-hours">${html(unit.hours)}</span>
+                  </div>
+                  <div class="lesson-list">
+                    ${unit.lessons.map(([code, title]) => `
+                      <div class="lesson-line">
+                        <span class="lesson-code">${html(code)}</span>
+                        <span>${html(title)}</span>
                       </div>
-                      <span class="${block.state.includes("风险") || block.state.includes("扰动") ? "risk-tag" : "state-tag"}">${html(block.state)}</span>
+                    `).join("")}
+                  </div>
+                </section>
+              `).join("")}
+            </div>
+          </aside>
+          <section class="week-plan-board">
+            <div class="plan-panel-head">
+              <span>周次计划（每周 1-2 课时）</span>
+              <span class="quiet-tag">教师确认后应用</span>
+            </div>
+            <div class="week-plan-list">
+              ${view.plan_weeks.map((week) => `
+                <div class="week-row">
+                  <div class="week-label">
+                    <div>
+                      <div class="week-name">${html(week.week)}</div>
+                      <div class="week-date">${html(week.date)}</div>
                     </div>
-                    <div class="node-text">${html(block.detail)}</div>
-                    <div class="node-actions">
-                      ${block.actions.map((action) => `<button class="node-action icon-only" title="${html(action)}" aria-label="${html(action)}" data-pending="小备已生成「${html(action)}」预演，等待教师确认。">${iconButtonLabel(action, iconForAction(action))}</button>`).join("")}
-                    </div>
-                  </article>
-                `).join("")}
-                ${Array.from({ length: Math.max(0, 5 - lane.blocks.length) }).map(() => `<div class="map-empty">可继续接入<br>课包 / 事件 / 空档</div>`).join("")}
-              </div>
-            </section>
-          `).join("")}
-          <section class="canvas-band insight-panel">
-            <div class="insight-title">小备重排建议</div>
-            <ul class="insight-list">
-              ${view.suggestions.map((item) => `<li>${html(item)}</li>`).join("")}
-            </ul>
-            <div class="chip-row">
-              <button class="primary-button" data-pending="小备已生成方案A重排预演，等待教师确认。">采用方案A预演</button>
-              <button class="ghost-button" data-pending="小备已生成方案B影响对比，等待教师确认。">对比方案B</button>
+                  </div>
+                  <div class="week-slots">
+                    ${week.lessons.map(([code, title, tone]) => `
+                      <button class="plan-lesson ${html(tone)}" data-node="${html(`plan-${code}`)}" title="${html(title)}">
+                        <span class="lesson-code">${html(code.startsWith("buffer") || code === "final-show" ? "" : code)}</span>
+                        <span>${html(title)}</span>
+                      </button>
+                    `).join("")}
+                  </div>
+                </div>
+              `).join("")}
             </div>
           </section>
         </div>
@@ -2646,7 +2941,8 @@
       model.view_scroll_positions[model.active_view] = canvasStage.scrollTop;
       model.active_view = viewId;
       const view = getActiveView();
-      const firstNode = view.nodes?.[0]?.id || view.weeks?.[0]?.id || view.lanes?.[0]?.blocks?.[0]?.id;
+      const firstPlanLesson = view.plan_weeks?.[0]?.lessons?.[0]?.[0];
+      const firstNode = view.nodes?.[0]?.id || view.weeks?.[0]?.id || (firstPlanLesson ? `plan-${firstPlanLesson}` : "") || view.lanes?.[0]?.blocks?.[0]?.id;
       model.selected_node_id = firstNode || model.selected_node_id;
       byId("inspector").classList.add("hidden");
       renderPrepRoomCanvas({ animate: true });
