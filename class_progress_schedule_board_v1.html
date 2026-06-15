@@ -1,0 +1,1322 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>师维 · 班级进度与排课 | V1</title>
+  <style>
+    :root {
+      --bg: #f5f7f7;
+      --panel: #ffffff;
+      --ink: #1d2723;
+      --muted: #65736e;
+      --line: #dce4e0;
+      --line-strong: #bdccc6;
+      --green: #2f7668;
+      --green-soft: #e7f4f0;
+      --blue: #3268bd;
+      --blue-soft: #edf4ff;
+      --amber: #c96b1f;
+      --amber-soft: #fff1e5;
+      --red: #bd4b43;
+      --red-soft: #fdecea;
+      --violet: #6857c8;
+      --violet-soft: #f0edff;
+      --gray-soft: #f3f5f4;
+      --shadow: 0 18px 44px rgba(29, 39, 35, 0.11);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(216, 224, 220, 0.38) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(216, 224, 220, 0.38) 1px, transparent 1px),
+        var(--bg);
+      background-size: 28px 28px;
+      font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    button,
+    input {
+      font: inherit;
+      letter-spacing: 0;
+    }
+
+    button {
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .app-shell {
+      height: 100vh;
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .topbar {
+      min-height: 66px;
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) auto minmax(260px, 1fr);
+      align-items: center;
+      gap: 16px;
+      padding: 10px 18px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      color: var(--green);
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    .brand-name {
+      font-size: 28px;
+      font-weight: 900;
+      color: #244c42;
+    }
+
+    .brand-sub {
+      color: var(--muted);
+      font-size: 12px;
+      border-left: 1px solid var(--line);
+      padding-left: 10px;
+    }
+
+    .page-title {
+      justify-self: center;
+      font-size: 25px;
+      font-weight: 950;
+      line-height: 1;
+      color: transparent;
+      background: linear-gradient(135deg, #1f6f61, #2f7668 48%, #315f90);
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 0 10px 24px rgba(47, 118, 104, 0.18);
+      white-space: nowrap;
+    }
+
+    .top-actions {
+      justify-self: end;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-width: 0;
+    }
+
+    .search-box {
+      width: min(260px, 28vw);
+      height: 38px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+    }
+
+    .search-box input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .round-btn {
+      width: 38px;
+      height: 38px;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--green);
+      position: relative;
+    }
+
+    .badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      min-width: 16px;
+      height: 16px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: #d95f45;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .control-strip {
+      display: grid;
+      grid-template-columns: auto auto minmax(320px, 1fr) auto auto;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .field-pill,
+    .segmented,
+    .filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .field-pill {
+      padding: 0 13px;
+      font-weight: 760;
+    }
+
+    .field-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .grade-switcher,
+    .view-switcher,
+    .filters {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+
+    .grade-btn,
+    .view-btn {
+      min-height: 36px;
+      padding: 0 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .grade-btn.active,
+    .view-btn.active {
+      border-color: var(--green);
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(47, 118, 104, 0.16);
+    }
+
+    .filter-chip {
+      padding: 0 12px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .main-area {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 284px;
+      gap: 12px;
+      padding: 12px 18px 10px;
+      overflow: hidden;
+    }
+
+    .left-main {
+      min-width: 0;
+      min-height: 0;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    .summary-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .summary-card {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 10px 26px rgba(29, 39, 35, 0.04);
+    }
+
+    .summary-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .summary-label {
+      color: var(--muted);
+      font-weight: 760;
+    }
+
+    .summary-value {
+      margin-top: 2px;
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 950;
+    }
+
+    .board-layout {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 246px minmax(720px, 1fr);
+      gap: 12px;
+      overflow: auto;
+    }
+
+    .unit-rail,
+    .schedule-board,
+    .suggestion-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.93);
+      box-shadow: 0 12px 30px rgba(29, 39, 35, 0.05);
+    }
+
+    .unit-rail {
+      min-height: 0;
+      padding: 13px;
+      overflow: auto;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .quiet-tag {
+      min-height: 24px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .unit-group {
+      display: grid;
+      gap: 7px;
+      padding-bottom: 13px;
+      margin-bottom: 13px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .unit-group:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .unit-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 880;
+    }
+
+    .unit-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .unit-mark {
+      width: 7px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .unit-mark.blue { background: var(--blue); }
+    .unit-mark.amber { background: var(--amber); }
+
+    .unit-hours {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .catalog-lessons {
+      display: grid;
+      gap: 6px;
+      padding-left: 14px;
+      border-left: 1px solid var(--line);
+      margin-left: 3px;
+    }
+
+    .catalog-lesson {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 6px;
+      align-items: center;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      text-align: left;
+      padding: 0;
+      border-radius: 0;
+      font-size: 13px;
+    }
+
+    .catalog-lesson:hover,
+    .catalog-lesson.active {
+      color: var(--green);
+      font-weight: 850;
+    }
+
+    .lesson-code {
+      color: var(--green);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .schedule-board {
+      min-width: 760px;
+      min-height: 0;
+      overflow: auto;
+    }
+
+    .class-header-row,
+    .week-row {
+      display: grid;
+      grid-template-columns: 104px repeat(5, minmax(156px, 1fr));
+    }
+
+    .class-header-row {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .corner-cell,
+    .class-header,
+    .week-axis,
+    .class-week-cell {
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .corner-cell,
+    .class-header {
+      min-height: 58px;
+      display: grid;
+      place-items: center;
+      padding: 10px;
+    }
+
+    .class-header {
+      text-align: center;
+    }
+
+    .class-name {
+      font-weight: 930;
+    }
+
+    .class-progress {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .class-header.risk .class-name::after {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-left: 6px;
+      border-radius: 999px;
+      background: var(--red);
+      vertical-align: middle;
+    }
+
+    .week-row.current {
+      background: linear-gradient(90deg, rgba(47, 118, 104, 0.10), rgba(47, 118, 104, 0.02));
+      box-shadow: inset 4px 0 0 var(--green);
+    }
+
+    .week-row.future {
+      opacity: 0.58;
+    }
+
+    .week-axis {
+      min-height: 98px;
+      display: grid;
+      place-items: center;
+      padding: 10px;
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.94);
+      text-align: center;
+    }
+
+    .week-title {
+      font-size: 16px;
+      font-weight: 930;
+    }
+
+    .week-date {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .today-mark {
+      margin-top: 7px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .class-week-cell {
+      min-height: 98px;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.66);
+    }
+
+    .weekly-slot-stack {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 6px;
+      height: 100%;
+      min-height: 82px;
+    }
+
+    .schedule-slot {
+      min-height: 36px;
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      gap: 6px;
+      align-items: stretch;
+    }
+
+    .slot-label {
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 760;
+      white-space: nowrap;
+    }
+
+    .slot-card {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 9px;
+      border: 1px solid #b9d9cf;
+      border-radius: 7px;
+      background: linear-gradient(135deg, #edf8f5, #fff);
+      color: #244c42;
+      font-size: 13px;
+      font-weight: 780;
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .slot-card span:last-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .slot-card.activity {
+      border-color: #efc49c;
+      background: var(--amber-soft);
+      color: var(--amber);
+    }
+
+    .slot-card.holiday {
+      border-color: #f1b7b1;
+      background: var(--red-soft);
+      color: var(--red);
+    }
+
+    .slot-card.reschedule {
+      border-color: #abc4f1;
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .slot-card.delay,
+    .slot-card.makeup {
+      border-color: #c8c0f4;
+      background: var(--violet-soft);
+      color: var(--violet);
+    }
+
+    .slot-card.future {
+      border-color: #d3dbd8;
+      background: var(--gray-soft);
+      color: #7f8a86;
+    }
+
+    .slot-card.empty {
+      border-style: dashed;
+      color: #9ba6a2;
+      background: #fbfcfc;
+      font-weight: 650;
+    }
+
+    .suggestion-panel {
+      min-height: 0;
+      padding: 16px;
+      overflow: auto;
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .agent-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .agent-avatar {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 950;
+    }
+
+    .agent-title {
+      font-weight: 930;
+    }
+
+    .suggestion-list {
+      display: grid;
+      gap: 11px;
+    }
+
+    .suggestion-item {
+      padding: 11px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .suggestion-index {
+      width: 20px;
+      height: 20px;
+      display: inline-grid;
+      place-items: center;
+      margin-right: 6px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .suggestion-item.warn .suggestion-index { background: var(--amber-soft); color: var(--amber); }
+    .suggestion-item.info .suggestion-index { background: var(--blue-soft); color: var(--blue); }
+
+    .suggestion-text {
+      margin-top: 8px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 13px;
+    }
+
+    .suggestion-actions {
+      display: grid;
+      gap: 9px;
+      margin-top: 16px;
+    }
+
+    .primary-action,
+    .ghost-action {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid var(--green);
+      background: var(--green);
+      color: #fff;
+      font-weight: 850;
+    }
+
+    .ghost-action {
+      background: #fff;
+      color: var(--green);
+      border-color: #b9d9cf;
+    }
+
+    .intent-bar {
+      min-height: 76px;
+      display: grid;
+      grid-template-columns: 228px minmax(0, 1fr);
+      align-items: center;
+      gap: 14px;
+      padding: 10px 18px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .agent-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .agent-chip .agent-avatar {
+      width: 42px;
+      height: 42px;
+    }
+
+    .agent-name {
+      font-weight: 900;
+    }
+
+    .agent-role {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .intent-input-shell {
+      min-height: 50px;
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr) 38px;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: #fbfdfc;
+    }
+
+    .intent-input {
+      width: 100%;
+      height: 38px;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .drawer {
+      position: fixed;
+      right: 18px;
+      top: 142px;
+      width: 360px;
+      max-height: calc(100vh - 238px);
+      display: none;
+      overflow: auto;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: var(--shadow);
+      z-index: 20;
+    }
+
+    .drawer.open { display: block; }
+
+    .drawer-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfdfc;
+    }
+
+    .drawer-title {
+      font-size: 16px;
+      font-weight: 930;
+    }
+
+    .drawer-body {
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .detail-row {
+      display: grid;
+      grid-template-columns: 84px minmax(0, 1fr);
+      gap: 10px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail-label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .detail-value {
+      font-weight: 780;
+      line-height: 1.5;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 88px;
+      transform: translateX(-50%) translateY(12px);
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: #fff;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.18s ease, transform 0.18s ease;
+      z-index: 30;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 1180px) {
+      .topbar,
+      .control-strip {
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+      }
+
+      .page-title,
+      .top-actions {
+        justify-self: start;
+      }
+
+      .main-area {
+        grid-template-columns: 1fr;
+        overflow: auto;
+      }
+
+      .suggestion-panel {
+        min-height: 260px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body { overflow: auto; height: auto; }
+      .app-shell { height: auto; min-height: 100vh; }
+      .summary-row { grid-template-columns: 1fr; }
+      .board-layout { grid-template-columns: 1fr; overflow: visible; }
+      .schedule-board { min-width: 820px; }
+      .main-area { padding: 10px 12px; }
+      .intent-bar { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">✦</span>
+        <span class="brand-name">师维</span>
+        <span class="brand-sub">教师AI工作台</span>
+      </div>
+      <div class="page-title">班级进度与排课</div>
+      <div class="top-actions">
+        <label class="search-box" aria-label="搜索班级、课程、资源">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+          <input type="text" placeholder="搜索班级、课程、资源">
+        </label>
+        <button class="round-btn" type="button" title="通知" aria-label="通知">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>
+          <span class="badge">8</span>
+        </button>
+        <button class="round-btn" type="button" title="教师账号" aria-label="教师账号">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="control-strip" aria-label="班级进度与排课筛选">
+      <div class="field-pill"><span class="field-label">学期</span><span>2026春学期</span></div>
+      <div class="field-pill"><span class="field-label">学科</span><span>美术</span></div>
+      <div class="grade-switcher" id="gradeSwitcher" aria-label="年级切换"></div>
+      <div class="view-switcher" aria-label="视图模式">
+        <button class="view-btn active" type="button">全班对照</button>
+        <button class="view-btn" type="button">单班详情</button>
+        <button class="view-btn" type="button">调整建议</button>
+      </div>
+      <div class="filters">
+        <button class="filter-chip" type="button">只看异常</button>
+        <button class="filter-chip" type="button">未来两周</button>
+      </div>
+    </section>
+
+    <main class="main-area">
+      <section class="left-main">
+        <div class="summary-row" id="summaryRow"></div>
+        <div class="board-layout">
+          <aside class="unit-rail" aria-label="单元课时目录">
+            <div class="panel-head"><span>单元课时目录</span><span class="quiet-tag">辅助栏</span></div>
+            <div id="unitCatalog"></div>
+          </aside>
+          <section class="schedule-board" aria-label="周次班级排课看板">
+            <div class="class-header-row" id="classHeaderRow"></div>
+            <div id="weekRows"></div>
+          </section>
+        </div>
+      </section>
+
+      <aside class="suggestion-panel" aria-label="小教建议">
+        <div class="agent-head">
+          <div class="agent-avatar">教</div>
+          <div>
+            <div class="agent-title">小教建议</div>
+            <div class="agent-role">只生成调整候选，教师确认前不应用</div>
+          </div>
+        </div>
+        <div class="suggestion-list" id="suggestionList"></div>
+        <div class="suggestion-actions">
+          <button class="primary-action" type="button" data-action="adjust">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            查看调整方案
+          </button>
+          <button class="ghost-action" type="button" data-action="push">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-8-8 18-2-7z"></path><path d="m11 14 10-11"></path></svg>
+            推送下节准备
+          </button>
+        </div>
+      </aside>
+    </main>
+
+    <section class="intent-bar" aria-label="底部意图栏">
+      <div class="agent-chip">
+        <div class="agent-avatar">教</div>
+        <div>
+          <div class="agent-name">小教</div>
+          <div class="agent-role">当前场景 = 班级进度与排课</div>
+        </div>
+      </div>
+      <div class="intent-input-shell">
+        <button class="round-btn" type="button" title="上传课表/校历" aria-label="上传课表/校历">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12"></path><path d="m7 9 5-5 5 5"></path><path d="M5 20h14"></path></svg>
+        </button>
+        <input class="intent-input" id="intentInput" type="text" placeholder="对小教说一句，例如：只看三3班后续顺延影响">
+        <button class="round-btn" type="button" id="sendBtn" title="发送" aria-label="发送">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-8-8 18-2-7z"></path><path d="m11 14 10-11"></path></svg>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <aside class="drawer" id="detailDrawer" aria-label="课时详情抽屉">
+    <div class="drawer-head">
+      <div>
+        <div class="quiet-tag" id="drawerType">课时实例</div>
+        <div class="drawer-title" id="drawerTitle">课时详情</div>
+      </div>
+      <button class="round-btn" id="closeDrawerBtn" type="button" aria-label="关闭">×</button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const boardState = {
+      activeGrade: "g3",
+      currentWeekId: "w08",
+      grades: [
+        { id: "g3", label: "三年级" },
+        { id: "g4", label: "四年级" },
+        { id: "g5", label: "五年级" },
+        { id: "g6", label: "六年级" }
+      ],
+      classes: [
+        { id: "c1", label: "三1班", progress: "2-1", state: "normal" },
+        { id: "c2", label: "三2班", progress: "2-1", state: "normal" },
+        { id: "c3", label: "三3班", progress: "1-5", state: "behind" },
+        { id: "c4", label: "三4班", progress: "2-1", state: "rescheduled" },
+        { id: "c5", label: "三5班", progress: "2-1", state: "behind" }
+      ],
+      summary: [
+        { icon: "classes", label: "授课班级", value: "5", suffix: "个班级" },
+        { icon: "check", label: "进度一致", value: "3", suffix: "个班级" },
+        { icon: "clock", label: "待调整课时", value: "4", suffix: "课时" },
+        { icon: "calendar", label: "当前周", value: "第8周", suffix: "5.18 - 5.24" }
+      ],
+      catalog: [
+        {
+          id: "unit1",
+          title: "单元1 色彩单元",
+          hours: "共6课时",
+          tone: "green",
+          lessons: [["1-1", "色彩游戏"], ["1-2", "冷暖对比"], ["1-3", "综合色彩"], ["1-4", "线条的韵律"], ["1-5", "图案设计"], ["1-6", "创意拼贴"]]
+        },
+        {
+          id: "unit2",
+          title: "单元2 造型表现单元",
+          hours: "共8课时",
+          tone: "blue",
+          lessons: [["2-1", "拼贴练习"], ["2-2", "纸艺造型"], ["2-3", "纹样设计"], ["2-4", "美术鉴赏"], ["2-5", "主题创作"], ["2-6", "展示与评价"]]
+        },
+        {
+          id: "unit3",
+          title: "单元3 综合创作",
+          hours: "共4课时",
+          tone: "amber",
+          lessons: [["3-1", "综合创作"], ["3-2", "作品展示"]]
+        }
+      ],
+      weeks: [
+        { id: "w05", label: "第5周", date: "4.20 - 4.26", state: "past" },
+        { id: "w06", label: "第6周", date: "4.27 - 5.03", state: "past" },
+        { id: "w07", label: "第7周", date: "5.04 - 5.10", state: "past" },
+        { id: "w08", label: "第8周", date: "5.18 - 5.24", state: "current" },
+        { id: "w09", label: "第9周", date: "5.25 - 5.31", state: "past" },
+        { id: "w10", label: "第10周", date: "6.01 - 6.07", state: "past" },
+        { id: "w11", label: "第11周", date: "6.08 - 6.14", state: "future" }
+      ],
+      cells: {
+        "w05-c1": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+        "w05-c2": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+        "w05-c3": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+        "w05-c4": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+        "w05-c5": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
+        "w06-c1": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
+        "w06-c2": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
+        "w06-c3": [["activity", "", "校活动占用"], ["lesson", "1-3", "综合色彩"]],
+        "w06-c4": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
+        "w06-c5": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
+        "w07-c1": [["lesson", "1-5", "图案设计"], ["lesson", "1-6", "创意拼贴"]],
+        "w07-c2": [["lesson", "1-5", "图案设计"], ["lesson", "1-6", "创意拼贴"]],
+        "w07-c3": [["lesson", "1-4", "线条的韵律"], ["lesson", "1-5", "图案设计"]],
+        "w07-c4": [["lesson", "1-5", "图案设计"], ["lesson", "1-6", "创意拼贴"]],
+        "w07-c5": [["activity", "", "校活动占用"], ["lesson", "1-5", "图案设计"]],
+        "w08-c1": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+        "w08-c2": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+        "w08-c3": [["reschedule", "", "调课至周五"], ["reschedule", "", "调课至周五"]],
+        "w08-c4": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+        "w08-c5": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+        "w09-c1": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
+        "w09-c2": [["activity", "", "校活动占用"], ["activity", "", "校活动占用"]],
+        "w09-c3": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
+        "w09-c4": [["holiday", "", "节假日停课"], ["holiday", "", "节假日停课"]],
+        "w09-c5": [["makeup", "", "补课：2-1 拼贴练习"], ["makeup", "", "补课：2-2 纸艺造型"]],
+        "w10-c1": [["lesson", "2-5", "主题创作"], ["lesson", "2-6", "展示与评价"]],
+        "w10-c2": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
+        "w10-c3": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
+        "w10-c4": [["delay", "", "顺延补课"], ["delay", "", "顺延补课"]],
+        "w10-c5": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
+        "w11-c1": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
+        "w11-c2": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
+        "w11-c3": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
+        "w11-c4": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
+        "w11-c5": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]]
+      },
+      suggestions: [
+        { tone: "warn", text: "三3班第8周两节课已调至周五，后续与三1班相比慢 1 课时。" },
+        { tone: "info", text: "三4班第9周因节假日停课，建议将 2-1 与 2-2 顺延至后续周次。" },
+        { tone: "warn", text: "三5班第7周第1课时被校活动占用，已生成第9周补课候选。" },
+        { tone: "normal", text: "下周优先准备 2-3 纹样设计学习单、2-4 美术鉴赏观察卡。" }
+      ]
+    };
+
+    const iconMap = {
+      classes: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>',
+      check: '<path d="M20 6 9 17l-5-5"></path>',
+      clock: '<circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>',
+      calendar: '<path d="M5 4h14v16H5z"></path><path d="M8 2v4"></path><path d="M16 2v4"></path><path d="M5 9h14"></path>'
+    };
+
+    const html = (value) => String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+
+    function icon(name) {
+      return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${iconMap[name] || iconMap.check}</svg>`;
+    }
+
+    function renderGradeSwitcher() {
+      document.getElementById("gradeSwitcher").innerHTML = boardState.grades.map((grade) => `
+        <button class="grade-btn ${grade.id === boardState.activeGrade ? "active" : ""}" type="button" data-grade="${html(grade.id)}">${html(grade.label)}</button>
+      `).join("");
+    }
+
+    function renderSummary() {
+      document.getElementById("summaryRow").innerHTML = boardState.summary.map((item) => `
+        <article class="summary-card">
+          <div class="summary-icon">${icon(item.icon)}</div>
+          <div>
+            <div class="summary-label">${html(item.label)}</div>
+            <div><span class="summary-value">${html(item.value)}</span> <span class="summary-label">${html(item.suffix)}</span></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderCatalog() {
+      document.getElementById("unitCatalog").innerHTML = boardState.catalog.map((unit) => `
+        <section class="unit-group">
+          <div class="unit-title">
+            <span class="unit-name"><span class="unit-mark ${html(unit.tone)}"></span>${html(unit.title)}</span>
+            <span class="unit-hours">${html(unit.hours)}</span>
+          </div>
+          <div class="catalog-lessons">
+            ${unit.lessons.map(([code, title]) => `
+              <button class="catalog-lesson" type="button" data-lesson="${html(code)}">
+                <span class="lesson-code">${html(code)}</span>
+                <span>${html(title)}</span>
+              </button>
+            `).join("")}
+          </div>
+        </section>
+      `).join("");
+    }
+
+    function cardLabel(type) {
+      const map = {
+        lesson: "课时",
+        activity: "活动",
+        holiday: "停课",
+        reschedule: "调课",
+        delay: "顺延",
+        makeup: "补课",
+        future: "未来",
+        empty: "空"
+      };
+      return map[type] || "课时";
+    }
+
+    function renderSlot(slot, week, klass, index) {
+      const [type, code, title] = slot || ["empty", "", "未排课"];
+      const cardType = week.state === "future" && type === "lesson" ? "future" : type;
+      return `
+        <div class="schedule-slot">
+          <div class="slot-label">第${index + 1}课时</div>
+          <button class="slot-card ${html(cardType)}" type="button" data-slot='${html(JSON.stringify({ week: week.label, date: week.date, class: klass.label, slot: `第${index + 1}课时`, type: cardType, code, title }))}'>
+            <span class="lesson-code">${html(code)}</span>
+            <span>${html(title || cardLabel(cardType))}</span>
+          </button>
+        </div>
+      `;
+    }
+
+    function renderScheduleBoard() {
+      document.getElementById("classHeaderRow").innerHTML = `
+        <div class="corner-cell">周次</div>
+        ${boardState.classes.map((klass) => `
+          <div class="class-header ${klass.state === "behind" ? "risk" : ""}">
+            <div>
+              <div class="class-name">${html(klass.label)}</div>
+              <div class="class-progress">${html(klass.progress)}</div>
+            </div>
+          </div>
+        `).join("")}
+      `;
+
+      document.getElementById("weekRows").innerHTML = boardState.weeks.map((week) => `
+        <div class="week-row ${week.state === "current" ? "current" : ""} ${week.state === "future" ? "future" : ""}">
+          <div class="week-axis">
+            <div>
+              <div class="week-title">${html(week.label)}</div>
+              <div class="week-date">${html(week.date)}</div>
+              ${week.state === "current" ? `<div class="today-mark">当前周</div>` : ""}
+            </div>
+          </div>
+          ${boardState.classes.map((klass) => {
+            const slots = boardState.cells[`${week.id}-${klass.id}`] || [["empty", "", "未排课"], ["empty", "", "未排课"]];
+            return `
+              <div class="class-week-cell">
+                <div class="weekly-slot-stack">
+                  ${[0, 1].map((slotIndex) => renderSlot(slots[slotIndex], week, klass, slotIndex)).join("")}
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      `).join("");
+    }
+
+    function renderSuggestions() {
+      document.getElementById("suggestionList").innerHTML = boardState.suggestions.map((item, index) => `
+        <div class="suggestion-item ${html(item.tone)}">
+          <div><span class="suggestion-index">${index + 1}</span><strong>${html(item.tone === "normal" ? "下节准备" : "排课提醒")}</strong></div>
+          <div class="suggestion-text">${html(item.text)}</div>
+        </div>
+      `).join("");
+    }
+
+    function openDrawer(detail) {
+      const drawer = document.getElementById("detailDrawer");
+      document.getElementById("drawerType").textContent = cardLabel(detail.type);
+      document.getElementById("drawerTitle").textContent = detail.code ? `${detail.code} ${detail.title}` : detail.title;
+      document.getElementById("drawerBody").innerHTML = [
+        ["班级", detail.class],
+        ["周次", `${detail.week} ${detail.date}`],
+        ["槽位", detail.slot],
+        ["类型", cardLabel(detail.type)],
+        ["联动", detail.type === "lesson" || detail.type === "future" ? "课包 / 学习单 / 评价量规 / 材料" : "小教调整候选 / 影响范围"],
+        ["边界", "仅生成预演，教师确认前不应用"]
+      ].map(([label, value]) => `
+        <div class="detail-row">
+          <div class="detail-label">${html(label)}</div>
+          <div class="detail-value">${html(value)}</div>
+        </div>
+      `).join("");
+      drawer.classList.add("open");
+    }
+
+    let toastTimer = null;
+    function showToast(text) {
+      const toast = document.getElementById("toast");
+      toast.textContent = text;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    function bindEvents() {
+      document.body.addEventListener("click", (event) => {
+        const gradeButton = event.target.closest("[data-grade]");
+        if (gradeButton) {
+          boardState.activeGrade = gradeButton.dataset.grade;
+          renderGradeSwitcher();
+          showToast(`已切换到${gradeButton.textContent.trim()}排课看板`);
+          return;
+        }
+
+        const lessonButton = event.target.closest("[data-lesson]");
+        if (lessonButton) {
+          document.querySelectorAll(".catalog-lesson").forEach((button) => button.classList.toggle("active", button === lessonButton));
+          showToast(`已高亮 ${lessonButton.dataset.lesson} 在各班中的课时落点`);
+          return;
+        }
+
+        const slotButton = event.target.closest("[data-slot]");
+        if (slotButton) {
+          openDrawer(JSON.parse(slotButton.dataset.slot));
+          return;
+        }
+
+        const action = event.target.closest("[data-action]");
+        if (action) {
+          showToast(action.dataset.action === "push" ? "已生成下节课准备推送预演" : "已打开调整方案预演");
+          return;
+        }
+
+        if (event.target.closest("#closeDrawerBtn")) {
+          document.getElementById("detailDrawer").classList.remove("open");
+          return;
+        }
+
+        if (event.target.closest("#sendBtn")) {
+          const input = document.getElementById("intentInput");
+          showToast(input.value.trim() ? "小教已收到排课意图，生成预演中" : "先告诉小教你想查看的班级或周次");
+          input.value = "";
+        }
+      });
+    }
+
+    function init() {
+      renderGradeSwitcher();
+      renderSummary();
+      renderCatalog();
+      renderScheduleBoard();
+      renderSuggestions();
+      bindEvents();
+    }
+
+    init();
+  </script>
+</body>
+</html>
