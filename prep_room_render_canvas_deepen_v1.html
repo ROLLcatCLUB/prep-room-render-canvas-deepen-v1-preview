@@ -2559,17 +2559,17 @@
     </section>
   </main>
 
-  <section class="xiaobei-chat-entry" aria-label="小教意图入口">
+  <section class="xiaobei-chat-entry" aria-label="小备意图入口">
     <div class="chat-agent">
-      <div class="chat-avatar" aria-hidden="true">教</div>
+      <div class="chat-avatar" aria-hidden="true">备</div>
       <div>
-        <div class="chat-agent-name">小教</div>
+        <div class="chat-agent-name">小备</div>
       </div>
     </div>
     <div class="chat-input-shell">
       <button class="chat-tool" id="chatUploadBtn" type="button" aria-label="上传资料">＋</button>
       <button class="chat-tool" id="chatVoiceBtn" type="button" aria-label="语音输入">声</button>
-      <input class="chat-input" id="chatInput" type="text" placeholder="对小教说一句……">
+      <input class="chat-input" id="chatInput" type="text" placeholder="对小备说一句……">
       <button class="chat-send" id="chatSendBtn" type="button">发送</button>
       <input class="chat-upload-input" id="chatUploadInput" type="file" multiple>
     </div>
@@ -2621,9 +2621,9 @@
         { id: "loop", label: "回流", current: false }
       ],
       negotiation: {
-        assistant_name: "小教",
-        assistant_role: "课前执行助理 · 周课表协商入口",
-        prompt: "对小教说一句",
+        assistant_name: "小备",
+        assistant_role: "备课室主助理 · 小教/小管协同",
+        prompt: "对小备说一句",
         input_value: "帮我看看本周哪些课前包还没备齐，先处理今天和明天要上的课。",
         chips: [
           "某个课包来不及准备",
@@ -2633,7 +2633,7 @@
         ],
         understanding: [
           "影响范围：第3周《青绿中国色》、第5周评价归档、造型表现单元节奏。",
-          "小教建议：先处理今日和明日课前包缺口，周六调休课保持预演。",
+          "小备判断：先处理今日和明日课前包缺口，周六调休课由小教协同保持预演。",
           "协同对象：小美补学习单视觉，小评预置评价维度，小管等待归档字段。"
         ],
         notes: {
@@ -2989,7 +2989,7 @@
       pending_changes: [
         {
           id: "pending-001",
-          text: "小教已生成1个课前处理建议，等待教师确认。",
+        text: "小备已生成1个课前处理建议，等待教师确认。",
           source: "初始预演",
           applied: false
         }
@@ -3235,7 +3235,7 @@
 
         <section class="section">
           <div class="section-title">
-            <span>小教当前判断</span>
+            <span>小备当前判断</span>
             <span class="quiet-tag">只预演</span>
           </div>
           <div class="agent-note" id="agentNote">${html(activeNote)}</div>
@@ -3840,7 +3840,7 @@
         }
 
         if (event.target.closest("#chatVoiceBtn")) {
-          addPendingChange("小教已打开语音意图入口预演，等待教师继续输入。", "小教意图入口");
+          addPendingChange("小备已打开语音意图入口预演，等待教师继续输入。", "小备意图入口");
           return;
         }
 
@@ -3898,7 +3898,7 @@
         if (!files.length) return;
         const names = files.slice(0, 3).map((file) => file.name).join("、");
         const more = files.length > 3 ? ` 等${files.length}个文件` : "";
-        addPendingChange(`小教已接收资料「${names}${more}」的本地挂载预演，未上传到服务器。`, "资料入口");
+        addPendingChange(`小备已接收资料「${names}${more}」的本地挂载预演，未上传到服务器。`, "资料入口");
         event.target.value = "";
       });
 
@@ -3916,12 +3916,12 @@
       const input = byId("chatInput");
       const text = input.value.trim();
       if (!text) {
-        showToast("先对小教说一句");
+        showToast("先对小备说一句");
         input.focus();
         return;
       }
       model.negotiation.input_value = text;
-      addPendingChange(`小教已收到意图：「${text}」，正在生成影响范围预演。`, "小教意图入口");
+      addPendingChange(`小备已收到意图：「${text}」，正在生成影响范围预演。`, "小备意图入口");
       input.value = "";
     }
 
