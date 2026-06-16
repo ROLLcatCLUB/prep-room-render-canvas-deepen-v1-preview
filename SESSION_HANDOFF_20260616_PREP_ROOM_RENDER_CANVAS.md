@@ -5,7 +5,7 @@ handoff_id=PREP_ROOM_RENDER_CANVAS_V1_SESSION_HANDOFF_20260616
 workspace=D:\Documents\SmartEdu\xiaobei-core
 package=outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1
 review_repo=https://github.com/ROLLcatCLUB/prep-room-render-canvas-deepen-v1-preview
-latest_review_commit=adf3cfdd4271234956b7126ebf726afab550e0ad
+latest_review_commit=see review repo main HEAD; this handoff may be included in a later commit
 status=STATIC_PREVIEW_AND_DOCUMENTATION_FOR_GPT_REVIEW
 ```
 
@@ -414,7 +414,8 @@ https://github.com/ROLLcatCLUB/prep-room-render-canvas-deepen-v1-preview
 Current review commit:
 
 ```text
-adf3cfdd4271234956b7126ebf726afab550e0ad
+Use the current `main` HEAD of:
+https://github.com/ROLLcatCLUB/prep-room-render-canvas-deepen-v1-preview
 ```
 
 Upload method used:
