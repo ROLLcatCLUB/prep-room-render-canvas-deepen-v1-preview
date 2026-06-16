@@ -6,6 +6,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - `prep_room_render_canvas_deepen_v1.html`
 - `shiwei_concept_archive_v0.md`
+- `prep_notebook_design_v0.md`
 - `week_calendar_board_design_v0.md`
 - `class_progress_schedule_board_design_v0.md`
 - `class_progress_schedule_board_v1.html`
@@ -58,10 +59,11 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - The bottom intent bar belongs to the prep-room space and defaults to `小备`; `小教` and `小管` may still appear as specialist collaborators inside weekly schedule, class progress, and timetable-adjustment panels.
 - `shiwei_concept_archive_v0.md` records the current concept boundary: `备课本 = 本学期过程性工作本`, `资料室 = 备用资源`, `档案室 = 用完留下的证据`.
 - The first view is now `周课表 / 本周课前看板`, replacing the former week-package card view. It renders a Monday-to-Sunday timetable for class, topic, package status, activities, holidays, reschedules, and makeup lessons.
-- The second view is now `班级排课 / 班级进度与排课`, rendered as a week-by-class board with two default weekly lesson slots per class.
+- `备课本` is now integrated directly after `周课表`, with a link button inside the week-calendar control strip. It renders the V0 structure: left semester/unit/lesson directory, center lesson work page, right drawer for 小备建议 / 可调用资料 / 待沉淀内容.
+- The third view is now `班级排课 / 班级进度与排课`, rendered as a week-by-class board with two default weekly lesson slots per class.
 - V1.1 readability polish strengthens the current-week marker, keeps future lessons readable while muted, adds a compact status legend, removes the visible slot-label chips, and lets the dense class-by-week board expand horizontally.
 - The class schedule control strip now places compact metric pills directly after the grade switcher; metric labels are kept as hover titles, while the visible surface only shows icon plus value such as `5`, `3`, `4`, or `第8周`.
-- The third view remains `学期规划`, rendered as a left unit lesson catalog plus a right weekly lesson plan board.
+- The fourth view remains `学期规划`, rendered as a left unit lesson catalog plus a right weekly lesson plan board.
 - `class_progress_schedule_board_v1.html` is retained as the accepted standalone reference preview for the integrated `班级进度与排课` scene.
 - The page now follows the shell principle: spaces are states rendered in the center stage, and agents are bottom intent-bar roles rather than room-internal page widgets.
 - Visual rule update: week indicators should be prominent, while actions use pill or circular button shapes by default.
