@@ -7,6 +7,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - `prep_room_render_canvas_deepen_v1.html`
 - `GPT_REVIEW_PROMPT.md`
 - `REVIEW_PACKAGE_MANIFEST.md`
+- `SESSION_HANDOFF_20260616_PREP_ROOM_RENDER_CANVAS.md`
 - `shiwei_concept_archive_v0.md`
 - `prep_notebook_design_v0.md`
 - `prep_notebook_right_drawer_source_inventory_v0.md`
