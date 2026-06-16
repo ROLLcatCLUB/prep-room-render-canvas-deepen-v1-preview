@@ -1051,26 +1051,47 @@
     }
 
     .nb-metrics {
-      margin-top: 12px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(47, 118, 104, 0.12);
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 7px;
     }
 
     .nb-metric {
-      padding: 9px 10px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.82);
-      color: var(--muted);
+      min-width: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #61716b;
       font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .nb-metric-light {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      flex: 0 0 auto;
+      background: var(--green);
+      box-shadow: 0 0 0 3px rgba(47, 118, 104, 0.1);
+    }
+
+    .nb-metric.warn .nb-metric-light {
+      background: var(--amber);
+      box-shadow: 0 0 0 3px rgba(181, 115, 28, 0.12);
+    }
+
+    .nb-metric.missing .nb-metric-light {
+      background: var(--red);
+      box-shadow: 0 0 0 3px rgba(199, 78, 70, 0.12);
     }
 
     .nb-metric strong {
-      display: block;
       color: var(--ink);
-      font-size: 18px;
-      line-height: 1.15;
+      font-size: 15px;
+      line-height: 1;
     }
 
     .nb-tree {
@@ -1108,6 +1129,7 @@
 
     .nb-tree-mark.blue { background: var(--blue); }
     .nb-tree-mark.amber { background: var(--amber); }
+    .nb-tree-mark.red { background: var(--red); }
 
     .nb-tree-items {
       display: grid;
@@ -1477,8 +1499,7 @@
     .nb-status-card,
     .nb-work-card,
     .nb-flow-step,
-    .nb-drawer-card,
-    .nb-metric {
+    .nb-drawer-card {
       border-radius: 8px;
       background: rgba(255, 255, 252, 0.78);
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.42);
@@ -1494,6 +1515,90 @@
 
     .nb-flow-step.current {
       background: rgba(222, 239, 226, 0.94);
+    }
+
+    .nb-scene {
+      grid-template-columns: minmax(840px, 1fr) minmax(280px, 0.34fr);
+      gap: 18px;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .nb-binder {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.32fr) 46px minmax(520px, 1fr);
+      gap: 0;
+      padding: 22px;
+      border-radius: 16px;
+      background:
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.035) 0 2px, transparent 2px 7px),
+        radial-gradient(circle at 18% 12%, rgba(156, 205, 169, 0.18), transparent 30%),
+        linear-gradient(135deg, #28624f 0%, #1d4b3d 44%, #12332b 100%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 18px 42px rgba(22, 58, 46, 0.24);
+      min-width: 0;
+    }
+
+    .nb-scene::before,
+    .nb-scene::after,
+    .nb-panel::after {
+      display: none;
+    }
+
+    .nb-gutter {
+      min-height: 560px;
+      position: relative;
+      background:
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 8px),
+        linear-gradient(90deg, #47695d 0%, #91b3a4 42%, #cfe0d6 50%, #7fa091 64%, #3f6155 100%);
+      box-shadow: inset 8px 0 18px rgba(14, 48, 38, 0.24), inset -8px 0 18px rgba(14, 48, 38, 0.22);
+      border-top: 1px solid rgba(232, 249, 239, 0.22);
+      border-bottom: 1px solid rgba(12, 45, 35, 0.22);
+      z-index: 2;
+    }
+
+    .nb-gutter::before {
+      content: "";
+      position: absolute;
+      inset: 0 17px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.04));
+      opacity: 0.75;
+    }
+
+    .nb-panel,
+    .nb-workspace,
+    .nb-drawer {
+      border-color: rgba(218, 215, 202, 0.82);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 250, 0.97), rgba(247, 244, 235, 0.94)),
+        radial-gradient(circle at 16px 16px, rgba(80, 70, 57, 0.045) 1px, transparent 1.4px);
+      background-size: auto, 18px 18px;
+      box-shadow: 0 14px 32px rgba(23, 30, 25, 0.18);
+    }
+
+    .nb-panel {
+      margin-right: 0;
+      border-radius: 12px 0 0 12px;
+      border-right: 0;
+    }
+
+    .nb-workspace {
+      margin-left: 0;
+      padding-left: 34px;
+      border-radius: 0 12px 12px 0;
+      border-left: 0;
+      background:
+        linear-gradient(90deg, rgba(222, 216, 204, 0.42) 0 1px, transparent 1px) 30px 0 / 100% 100% no-repeat,
+        linear-gradient(135deg, rgba(255, 255, 251, 0.98), rgba(249, 246, 237, 0.94));
+    }
+
+    .nb-workspace::before {
+      display: none;
+    }
+
+    .nb-drawer {
+      border-radius: 12px;
     }
 
     .node-top {
@@ -1879,6 +1984,7 @@
 
     .cps-unit-mark.blue { background: var(--blue); }
     .cps-unit-mark.amber { background: var(--amber); }
+    .cps-unit-mark.red { background: var(--red); }
 
     .cps-unit-hours {
       color: var(--muted);
@@ -2237,6 +2343,9 @@
       background: var(--green);
       flex: 0 0 auto;
     }
+    .unit-color-mark.blue { background: var(--blue); }
+    .unit-color-mark.amber { background: var(--amber); }
+    .unit-color-mark.red { background: var(--red); }
 
     .unit-hours {
       color: var(--muted);
@@ -2346,6 +2455,15 @@
 
     .plan-lesson.amber .lesson-code {
       color: #c06318;
+    }
+
+    .plan-lesson.red {
+      border-color: #e5b7b1;
+      background: linear-gradient(135deg, #fff1ef, #ffffff);
+    }
+
+    .plan-lesson.red .lesson-code {
+      color: var(--red);
     }
 
     .plan-lesson.buffer {
@@ -2595,6 +2713,14 @@
       background: #ffffff;
       color: var(--muted);
       font-size: 12px;
+    }
+
+    body[data-active-view="prepNotebook"] .workspace {
+      height: calc(100vh - 72px - 54px - 78px);
+    }
+
+    body[data-active-view="prepNotebook"] .status-strip {
+      display: none;
     }
 
     .status-cell {
@@ -2972,9 +3098,15 @@
         grid-template-columns: 1fr;
       }
 
+      .nb-binder {
+        grid-template-columns: 1fr;
+        padding: 14px;
+      }
+
       .nb-scene::before,
       .nb-scene::after,
-      .nb-panel::after {
+      .nb-panel::after,
+      .nb-gutter {
         display: none;
       }
 
@@ -3072,10 +3204,10 @@
 
   <section class="context-bar" aria-label="备课室上下文">
     <div class="context-meta">
-      <span class="context-chip">2026春学期</span>
+      <span class="context-chip">2025学年第二学期</span>
       <span class="context-chip">苏少版美术</span>
-      <span class="context-chip">三至六年级</span>
-      <span class="context-chip">20周</span>
+      <span class="context-chip">三年级</span>
+      <span class="context-chip">16周</span>
     </div>
     <div class="context-title" id="contextTitle">备课室</div>
     <div class="view-tabs" id="viewTabs" role="tablist" aria-label="备课室视图"></div>
@@ -3167,15 +3299,15 @@
           "想保留作品产出"
         ],
         understanding: [
-          "影响范围：第3周《青绿中国色》、第5周评价归档、造型表现单元节奏。",
+          "影响范围：第10-11周《青绿中国色》、第12周《足下生辉》和本学期作品沉淀。",
           "小备判断：先处理今日和明日课前包缺口，周六调休课由小教协同保持预演。",
           "协同对象：小美补学习单视觉，小评预置评价维度，小管等待归档字段。"
         ],
         notes: {
-          weekCalendar: "本周第2节和第5节有课前包待确认。建议先处理学习单和评价量规，周六调休课保持预演状态。",
-          prepNotebook: "备课本是本学期正在发生的过程性工作本。建议先处理《色彩的感觉》的学习单确认，再生成评价量规候选。",
-          classProgressSchedule: "三3班和三5班本周存在调课/活动占用，建议先查看影响范围，再决定是否顺延或启用补课槽位。",
-          flexibleSemesterMap: "学期计划已受到公开课提前和创艺节作品筹备影响。建议启用1个机动课包，并把造型表现单元压缩1课时。"
+          weekCalendar: "周课表依据《2025学年第二学期三年级美术教学工作计划》投影到周四、周五课时；班级落点仍为静态预览。",
+          prepNotebook: "备课本已按教学工作计划建立 7 个教材单元、创艺节和机动复习目录。当前先以第四单元《青绿中国色》作为备课样例。",
+          classProgressSchedule: "班级排课使用真实课题和周次主线，但班级差异仍是预览推演；接入真实课表后再正式计算顺延。",
+          flexibleSemesterMap: "学期规划已采用 16 周教学进度：教材学习 19 课时、创艺节 4 课时、机动 6 课时。"
         }
       },
       views: [
@@ -3185,68 +3317,63 @@
           title: "本周课表",
           kicker: "Week Calendar Board",
           summary: "展示本周每天每节课要上的班级、课题、课前包准备状态，以及活动、调课、节假日和调休占用。用于课前执行，不替代班级进度与排课。",
-          term: "2026春学期",
+          term: "2025学年第二学期",
           active_grade: "三年级",
-          week_label: "第8周",
-          date_range: "5.18 - 5.24",
+          week_label: "第10周",
+          date_range: "5.05 - 5.11",
           grade_options: ["三年级", "四年级", "五年级", "六年级"],
           week_modes: ["上一周", "本周", "下一周"],
           days: [
-            { id: "mon", label: "周一", date: "5.18", state: "past" },
-            { id: "tue", label: "周二", date: "5.19", state: "past" },
-            { id: "wed", label: "周三", date: "5.20", state: "today" },
-            { id: "thu", label: "周四", date: "5.21", state: "future" },
-            { id: "fri", label: "周五", date: "5.22", state: "future" },
-            { id: "sat", label: "周六", date: "5.23", state: "workday" },
-            { id: "sun", label: "周日", date: "5.24", state: "weekend" }
+            { id: "mon", label: "周一", date: "5.05", state: "past" },
+            { id: "tue", label: "周二", date: "5.06", state: "past" },
+            { id: "wed", label: "周三", date: "5.07", state: "past" },
+            { id: "thu", label: "周四", date: "5.08", state: "today" },
+            { id: "fri", label: "周五", date: "5.09", state: "future" },
+            { id: "sat", label: "周六", date: "5.10", state: "workday" },
+            { id: "sun", label: "周日", date: "5.11", state: "weekend" }
           ],
           periods: ["第1节", "第2节", "第3节", "第4节", "第5节", "第6节", "第7节", "第8节"],
           slots: {
-            "p1-mon": [{ id: "wc-mon-p1", type: "done", classLabel: "三1班", code: "2-1", title: "拼贴练习", packageStatus: "已备齐" }],
-            "p1-wed": [{ id: "wc-wed-p1", type: "lesson", classLabel: "三3班", code: "1-5", title: "图案设计", packageStatus: "课前包已备齐" }],
-            "p1-thu": [{ id: "wc-thu-p1", type: "future", classLabel: "三4班", code: "2-1", title: "拼贴练习", packageStatus: "待上课" }],
-            "p2-tue": [{ id: "wc-tue-p2", type: "warning", classLabel: "三2班", code: "2-1", title: "拼贴练习", packageStatus: "缺：学习单确认" }],
-            "p2-wed": [{ id: "wc-wed-p2", type: "warning", classLabel: "三3班", code: "2-1", title: "拼贴练习", packageStatus: "缺：评价量规" }],
-            "p2-fri": [{ id: "wc-fri-p2", type: "reschedule", classLabel: "三5班", code: "2-1", title: "调课至周五", packageStatus: "原周三第2节" }],
-            "p3-mon": [{ id: "wc-mon-p3", type: "lesson", classLabel: "三4班", code: "2-2", title: "纸艺造型", packageStatus: "课前包已备齐" }],
-            "p3-wed": [{ id: "wc-wed-p3", type: "activity", classLabel: "", code: "", title: "艺术节彩排占用", packageStatus: "本节停课" }],
-            "p3-sat": [{ id: "wc-sat-p3", type: "makeup", classLabel: "三5班", code: "2-1", title: "拼贴练习", packageStatus: "调休补课" }],
-            "p4-thu": [{ id: "wc-thu-p4", type: "holiday", classLabel: "", code: "", title: "校务活动占用", packageStatus: "自动顺延" }],
-            "p5-fri": [{ id: "wc-fri-p5", type: "warning", classLabel: "三1班", code: "2-3", title: "纹样设计", packageStatus: "缺：资源图片" }],
-            "p6-sat": [{ id: "wc-sat-p6", type: "future", classLabel: "三2班", code: "2-2", title: "纸艺造型", packageStatus: "调休上课" }]
+            "p2-thu": [{ id: "wc-thu-p2", type: "warning", classLabel: "三1班", code: "4-1", title: "矿物颜料与青绿山水", packageStatus: "缺：学习单确认" }],
+            "p2-fri": [{ id: "wc-fri-p2", type: "future", classLabel: "三2班", code: "4-2", title: "诗画合一", packageStatus: "待上课" }],
+            "p3-thu": [{ id: "wc-thu-p3", type: "lesson", classLabel: "三3班", code: "4-1", title: "矿物颜料与青绿山水", packageStatus: "课前包待确认" }],
+            "p3-sat": [{ id: "wc-sat-p3", type: "makeup", classLabel: "三4班", code: "4-1", title: "矿物颜料与青绿山水", packageStatus: "调休补课预演" }],
+            "p4-fri": [{ id: "wc-fri-p4", type: "warning", classLabel: "三5班", code: "4-2", title: "诗画合一", packageStatus: "缺：资源图片" }],
+            "p5-thu": [{ id: "wc-thu-p5", type: "reschedule", classLabel: "三2班", code: "4-1", title: "调课至周五", packageStatus: "五一收尾影响" }],
+            "p6-sun": [{ id: "wc-sun-p6", type: "future", classLabel: "三1班", code: "4-2", title: "诗画合一", packageStatus: "调休预留" }]
           },
           prep_items: [
-            { title: "第2节 三2班《拼贴练习》", status: "学习单候选待确认" },
-            { title: "第2节 三3班《拼贴练习》", status: "评价量规未生成" },
-            { title: "第5节 三1班《纹样设计》", status: "资源图片待补" }
+            { title: "周四第2节 三1班《矿物颜料与青绿山水》", status: "学习单候选待确认" },
+            { title: "周四第3节 三3班《矿物颜料与青绿山水》", status: "课前包待确认" },
+            { title: "周五第4节 三5班《诗画合一》", status: "资源图片待补" }
           ],
           alerts: [
-            "三3班周三第2节课前包缺评价量规，建议用小评生成候选。",
-            "三5班本周因活动少上1节，已投影到周六调休补课。",
-            "周四第4节校务活动占用，后续课时保持顺延预演。"
+            "第10周来自教学工作计划：第四单元《青绿中国色》进入课堂实施。",
+            "当前课题先按 2 课时拆为《矿物颜料与青绿山水》《诗画合一》，后续需教师确认正式课时标题。",
+            "周六、周日保留调休槽位，只做预演，不自动写入正式排课。"
           ],
           package_summary: [
-            ["已备齐", "6节"],
-            ["待确认", "3节"],
-            ["缺材料", "2节"],
-            ["调课影响", "1节"]
+            ["计划来源", "Word"],
+            ["本周课时", "2节"],
+            ["待确认", "3项"],
+            ["调休预演", "2槽"]
           ]
         },
         {
           id: "prepNotebook",
           label: "备课本",
-          title: "2026春学期 · 三年级美术备课本",
+          title: "2025学年第二学期 · 三年级美术备课本",
           kicker: "Prep Notebook",
           summary: "本学期正在生长的过程性工作本。它承接学期、单元、课时、班级课时、课前包、课堂记录、作品证据和课后反思。",
-          active_node: "nb-lesson-1-2",
+          active_node: "nb-lesson-4-1",
           cover: {
-            title: "三年级美术 · 2026春学期",
-            subtitle: "结构化目录 + 抽屉式工作台 + 学期过程沉淀",
+            title: "三年级美术 · 2025学年第二学期",
+            subtitle: "来源：2025学年第二学期三年级美术教学工作计划",
             metrics: [
-              ["已备课", "12节"],
-              ["待确认", "3节"],
-              ["缺材料", "4项"],
-              ["本周要上", "6节"]
+              ["教材单元", "7个"],
+              ["教材课时", "19节"],
+              ["创艺节", "4节"],
+              ["机动复习", "6节"]
             ]
           },
           tree: [
@@ -3262,40 +3389,88 @@
             },
             {
               id: "nb-unit-color",
-              title: "单元一 色彩单元",
+              title: "第一单元 多变的色彩",
               tone: "green",
               items: [
-                { id: "nb-lesson-1-1", code: "1-1", title: "认识色彩", status: "done" },
-                { id: "nb-lesson-1-2", code: "1-2", title: "色彩的感觉", status: "warn" },
-                { id: "nb-lesson-1-3", code: "1-3", title: "色彩的对比", status: "draft" }
+                { id: "nb-lesson-1-1", code: "1-1", title: "渐变的魅力", status: "done" },
+                { id: "nb-lesson-1-2", code: "1-2", title: "颜料的渐变", status: "done" },
+                { id: "nb-lesson-1-3", code: "1-3", title: "渐变的节奏", status: "done" }
               ]
             },
             {
               id: "nb-unit-shape",
-              title: "单元二 造型表现",
+              title: "第二单元 辽阔的海洋",
               tone: "blue",
               items: [
-                { id: "nb-lesson-2-1", code: "2-1", title: "拼贴练习", status: "warn" },
-                { id: "nb-lesson-2-2", code: "2-2", title: "纸艺造型", status: "draft" },
-                { id: "nb-lesson-2-3", code: "2-3", title: "纹样设计", status: "missing" }
+                { id: "nb-lesson-2-1", code: "2-1", title: "奇异的海洋生物", status: "done" },
+                { id: "nb-lesson-2-2", code: "2-2", title: "跳动的蓝色心脏", status: "done" },
+                { id: "nb-lesson-2-3", code: "2-3", title: "守护生命的摇篮", status: "done" }
               ]
             },
             {
-              id: "nb-unit-project",
-              title: "单元三 综合创作",
+              id: "nb-unit-red",
+              title: "第三单元 红领巾告诉我",
+              tone: "red",
+              items: [
+                { id: "nb-lesson-3-1", code: "3-1", title: "影像创作", status: "done" },
+                { id: "nb-lesson-3-2", code: "3-2", title: "红色精神传承", status: "done" }
+              ]
+            },
+            {
+              id: "nb-unit-qinglv",
+              title: "第四单元 青绿中国色",
               tone: "amber",
               items: [
-                { id: "nb-lesson-3-1", code: "3-1", title: "综合创作", status: "draft" },
-                { id: "nb-lesson-3-2", code: "3-2", title: "作品展示", status: "draft" }
+                { id: "nb-lesson-4-1", code: "4-1", title: "矿物颜料与青绿山水", status: "warn" },
+                { id: "nb-lesson-4-2", code: "4-2", title: "诗画合一", status: "draft" }
+              ]
+            },
+            {
+              id: "nb-unit-shoes",
+              title: "第五单元 足下生辉",
+              tone: "green",
+              items: [
+                { id: "nb-lesson-5-1", code: "5-1", title: "鞋的写生与设计", status: "draft" },
+                { id: "nb-lesson-5-2", code: "5-2", title: "废旧材料创意做鞋", status: "draft" },
+                { id: "nb-lesson-5-3", code: "5-3", title: "足下生辉作品完成", status: "draft" }
+              ]
+            },
+            {
+              id: "nb-unit-tiger",
+              title: "第六单元 虎虎生威",
+              tone: "amber",
+              items: [
+                { id: "nb-lesson-6-1", code: "6-1", title: "民间虎文化", status: "draft" },
+                { id: "nb-lesson-6-2", code: "6-2", title: "布老虎制作", status: "draft" }
+              ]
+            },
+            {
+              id: "nb-unit-diary",
+              title: "第七单元 成长日记",
+              tone: "blue",
+              items: [
+                { id: "nb-lesson-7-1", code: "7-1", title: "序列画与视觉笔记本", status: "draft" },
+                { id: "nb-lesson-7-2", code: "7-2", title: "成长记录", status: "draft" }
+              ]
+            },
+            {
+              id: "nb-unit-festival",
+              title: "创艺节 足球梦",
+              tone: "amber",
+              items: [
+                { id: "nb-lesson-f-1", code: "F-1", title: "走近足球文化", status: "draft" },
+                { id: "nb-lesson-f-2", code: "F-2", title: "我的班级球衣", status: "draft" },
+                { id: "nb-lesson-f-3", code: "F-3", title: "足球奖杯设计", status: "draft" },
+                { id: "nb-lesson-f-4", code: "F-4", title: "加油海报与闭幕展", status: "draft" }
               ]
             }
           ],
           current_lesson: {
-            code: "1-2",
-            title: "色彩的感觉",
-            unit: "单元一 色彩单元",
-            status: "课前包缺学习单确认",
-            brief: "本节课正在备课本中推进：课时设计已有草稿，学习单有候选，评价量规未生成，资源参考待选择。",
+            code: "4-1",
+            title: "矿物颜料与青绿山水",
+            unit: "第四单元 青绿中国色",
+            status: "课时拆解待教师确认",
+            brief: "本节课从教学工作计划的第四单元拆出，当前用于验证备课本如何承接真实学期规划、资料候选、课前包确认和课后沉淀。",
             status_cards: [
               ["课时设计", "待确认", "draft"],
               ["学习单", "已有候选", "warn"],
@@ -3308,19 +3483,19 @@
                 title: "课时设计",
                 state: "待确认",
                 tone: "warn",
-                note: "教学目标、导入问题和活动顺序已形成候选，需要教师确认后进入课前包。"
+                note: "依据教学工作计划中的“矿物颜料、青绿山水、诗画合一”先拆成两课时，当前需教师确认 4-1 的课堂目标与活动顺序。"
               },
               {
                 title: "本课材料夹",
                 state: "缺学习单确认",
                 tone: "missing",
-                note: "已有图片素材与资源参考，学习单候选尚未确认，评价量规待小评生成。"
+                note: "已有青绿山水、矿物颜料和诗画合一资料候选，学习单尚未确认，评价量规待小评生成。"
               },
               {
                 title: "班级课时",
                 state: "关联三1/三2/三3班",
                 tone: "normal",
-                note: "不同班级进度来自班级排课看板；三3班需要关注活动占用后的顺延。"
+                note: "班级落点来自静态排课预演；接入真实周四、周五课表后再计算各班顺延。"
               },
               {
                 title: "课后沉淀",
@@ -3337,7 +3512,7 @@
               tag: "主助理",
               items: [
                 "先确认学习单候选，再让小评生成评价量规。",
-                "本节课的冷暖色案例可从资料室调用，不直接复制为档案。",
+                "本节课应承接教学工作计划中的第四单元《青绿中国色》，不再使用临时拟题。",
                 "课后记录完成前，仍保持在备课本过程态。"
               ]
             },
@@ -3345,9 +3520,9 @@
               title: "可调用资料",
               tag: "资料室",
               items: [
-                "苏少版三年级色彩单元课标摘录",
-                "冷暖色图片素材 12 张",
-                "优秀课例《色彩的感觉》2 个"
+                "2025学年第二学期三年级美术教学工作计划",
+                "第四单元《青绿中国色》内容库导出",
+                "矿物颜料、青绿山水、诗画合一资料候选"
               ]
             },
             {
@@ -3379,89 +3554,110 @@
             { label: "授课班级", value: "5" },
             { label: "进度一致", value: "3" },
             { label: "待调整课时", value: "4" },
-            { label: "当前周", value: "第8周" }
+            { label: "当前周", value: "第10周" }
           ],
           class_headers: [
-            { id: "c1", label: "三1班", current: "2-1", state: "normal" },
-            { id: "c2", label: "三2班", current: "2-1", state: "normal" },
-            { id: "c3", label: "三3班", current: "1-5", state: "behind" },
-            { id: "c4", label: "三4班", current: "2-1", state: "rescheduled" },
-            { id: "c5", label: "三5班", current: "2-1", state: "behind" }
+            { id: "c1", label: "三1班", current: "4-1", state: "normal" },
+            { id: "c2", label: "三2班", current: "4-1", state: "normal" },
+            { id: "c3", label: "三3班", current: "F-4", state: "behind" },
+            { id: "c4", label: "三4班", current: "4-1", state: "rescheduled" },
+            { id: "c5", label: "三5班", current: "4-2", state: "normal" }
           ],
           lesson_catalog: [
             {
               id: "unit-color",
-              title: "单元1 色彩单元",
-              hours: "共6课时",
+              title: "单元1 多变的色彩",
+              hours: "共3课时",
               tone: "green",
-              lessons: [["1-1", "色彩游戏"], ["1-2", "冷暖对比"], ["1-3", "综合色彩"], ["1-4", "线条的韵律"], ["1-5", "图案设计"], ["1-6", "创意拼贴"]]
+              lessons: [["1-1", "渐变的魅力"], ["1-2", "颜料的渐变"], ["1-3", "渐变的节奏"]]
             },
             {
               id: "unit-shape",
-              title: "单元2 造型表现单元",
-              hours: "共8课时",
+              title: "单元2 辽阔的海洋",
+              hours: "共3课时",
               tone: "blue",
-              lessons: [["2-1", "拼贴练习"], ["2-2", "纸艺造型"], ["2-3", "纹样设计"], ["2-4", "美术鉴赏"], ["2-5", "主题创作"], ["2-6", "展示与评价"]]
+              lessons: [["2-1", "奇异的海洋生物"], ["2-2", "跳动的蓝色心脏"], ["2-3", "守护生命的摇篮"]]
             },
             {
-              id: "unit-project",
-              title: "单元3 综合创作",
+              id: "unit-red",
+              title: "单元3 红领巾告诉我",
+              hours: "共2课时",
+              tone: "red",
+              lessons: [["3-1", "影像创作"], ["3-2", "红色精神传承"]]
+            },
+            {
+              id: "unit-qinglv",
+              title: "单元4 青绿中国色",
+              hours: "共2课时",
+              tone: "amber",
+              lessons: [["4-1", "矿物颜料与青绿山水"], ["4-2", "诗画合一"]]
+            },
+            {
+              id: "unit-shoes",
+              title: "单元5 足下生辉",
+              hours: "共3课时",
+              tone: "green",
+              lessons: [["5-1", "鞋的写生与设计"], ["5-2", "废旧材料创意做鞋"], ["5-3", "足下生辉作品完成"]]
+            },
+            {
+              id: "unit-festival",
+              title: "创艺节 足球梦",
               hours: "共4课时",
               tone: "amber",
-              lessons: [["3-1", "综合创作"], ["3-2", "作品展示"]]
+              lessons: [["F-1", "走近足球文化"], ["F-2", "我的班级球衣"], ["F-3", "足球奖杯设计"], ["F-4", "加油海报与闭幕展"]]
             }
           ],
           week_axis: [
-            { id: "w05", label: "第5周", date: "4.20 - 4.26", state: "past" },
-            { id: "w06", label: "第6周", date: "4.27 - 5.03", state: "past" },
-            { id: "w07", label: "第7周", date: "5.04 - 5.10", state: "past" },
-            { id: "w08", label: "第8周", date: "5.18 - 5.24", state: "current" },
-            { id: "w09", label: "第9周", date: "5.25 - 5.31", state: "past" },
-            { id: "w10", label: "第10周", date: "6.01 - 6.07", state: "past" },
-            { id: "w11", label: "第11周", date: "6.08 - 6.14", state: "future" }
+            { id: "w07", label: "第7周", date: "4.14 - 4.18", state: "past" },
+            { id: "w08", label: "第8周", date: "4.21 - 4.25", state: "past" },
+            { id: "w09", label: "第9周", date: "4.28 - 5.02", state: "past" },
+            { id: "w10", label: "第10周", date: "5.05 - 5.09", state: "current" },
+            { id: "w11", label: "第11周", date: "5.11 - 5.15", state: "future" },
+            { id: "w12", label: "第12周", date: "5.18 - 5.22", state: "future" },
+            { id: "w13", label: "第13周", date: "5.25 - 5.29", state: "future" }
           ],
           class_week_cells: {
-            "w05-c1": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
-            "w05-c2": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
-            "w05-c3": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
-            "w05-c4": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
-            "w05-c5": [["lesson", "1-1", "色彩游戏"], ["lesson", "1-2", "冷暖对比"]],
-            "w06-c1": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
-            "w06-c2": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
-            "w06-c3": [["activity", "", "校活动占用"], ["lesson", "1-3", "综合色彩"]],
-            "w06-c4": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
-            "w06-c5": [["lesson", "1-3", "综合色彩"], ["lesson", "1-4", "线条的韵律"]],
-            "w07-c1": [["lesson", "1-5", "图案设计"], ["lesson", "1-6", "创意拼贴"]],
-            "w07-c2": [["lesson", "1-5", "图案设计"], ["lesson", "1-6", "创意拼贴"]],
-            "w07-c3": [["lesson", "1-4", "线条的韵律"], ["lesson", "1-5", "图案设计"]],
-            "w07-c4": [["lesson", "1-5", "图案设计"], ["lesson", "1-6", "创意拼贴"]],
-            "w07-c5": [["activity", "", "校活动占用"], ["lesson", "1-5", "图案设计"]],
-            "w08-c1": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
-            "w08-c2": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
-            "w08-c3": [["reschedule", "", "调课至周五"], ["reschedule", "", "调课至周五"]],
-            "w08-c4": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
-            "w08-c5": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
-            "w09-c1": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
-            "w09-c2": [["activity", "", "校活动占用"], ["activity", "", "校活动占用"]],
-            "w09-c3": [["lesson", "2-1", "拼贴练习"], ["lesson", "2-2", "纸艺造型"]],
-            "w09-c4": [["holiday", "", "节假日停课"], ["holiday", "", "节假日停课"]],
-            "w09-c5": [["makeup", "", "补课：2-1 拼贴练习"], ["makeup", "", "补课：2-2 纸艺造型"]],
-            "w10-c1": [["lesson", "2-5", "主题创作"], ["lesson", "2-6", "展示与评价"]],
-            "w10-c2": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
-            "w10-c3": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
-            "w10-c4": [["delay", "", "顺延补课"], ["delay", "", "顺延补课"]],
-            "w10-c5": [["lesson", "2-3", "纹样设计"], ["lesson", "2-4", "美术鉴赏"]],
-            "w11-c1": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
-            "w11-c2": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
-            "w11-c3": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
-            "w11-c4": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]],
-            "w11-c5": [["future", "3-1", "综合创作"], ["future", "3-2", "作品展示"]]
+            "w07-c1": [["lesson", "3-1", "影像创作"], ["lesson", "3-2", "红色精神传承"]],
+            "w07-c2": [["lesson", "3-1", "影像创作"], ["lesson", "3-2", "红色精神传承"]],
+            "w07-c3": [["lesson", "3-1", "影像创作"], ["lesson", "3-2", "红色精神传承"]],
+            "w07-c4": [["lesson", "3-1", "影像创作"], ["lesson", "3-2", "红色精神传承"]],
+            "w07-c5": [["lesson", "3-1", "影像创作"], ["lesson", "3-2", "红色精神传承"]],
+            "w08-c1": [["lesson", "F-1", "走近足球文化"], ["lesson", "F-2", "我的班级球衣"]],
+            "w08-c2": [["lesson", "F-1", "走近足球文化"], ["lesson", "F-2", "我的班级球衣"]],
+            "w08-c3": [["activity", "", "足球联赛占用"], ["lesson", "F-1", "走近足球文化"]],
+            "w08-c4": [["lesson", "F-1", "走近足球文化"], ["lesson", "F-2", "我的班级球衣"]],
+            "w08-c5": [["lesson", "F-1", "走近足球文化"], ["lesson", "F-2", "我的班级球衣"]],
+            "w09-c1": [["lesson", "F-3", "足球奖杯设计"], ["lesson", "F-4", "加油海报与闭幕展"]],
+            "w09-c2": [["holiday", "", "五一停课"], ["holiday", "", "自动顺延"]],
+            "w09-c3": [["lesson", "F-2", "我的班级球衣"], ["lesson", "F-3", "足球奖杯设计"]],
+            "w09-c4": [["holiday", "", "五一停课"], ["holiday", "", "自动顺延"]],
+            "w09-c5": [["lesson", "F-3", "足球奖杯设计"], ["lesson", "F-4", "加油海报与闭幕展"]],
+            "w10-c1": [["lesson", "4-1", "矿物颜料与青绿山水"], ["lesson", "4-2", "诗画合一"]],
+            "w10-c2": [["lesson", "4-1", "矿物颜料与青绿山水"], ["reschedule", "", "调课至周五"]],
+            "w10-c3": [["makeup", "", "补完创艺节闭幕展"], ["lesson", "4-1", "矿物颜料与青绿山水"]],
+            "w10-c4": [["lesson", "4-1", "矿物颜料与青绿山水"], ["lesson", "4-2", "诗画合一"]],
+            "w10-c5": [["lesson", "4-1", "矿物颜料与青绿山水"], ["lesson", "4-2", "诗画合一"]],
+            "w11-c1": [["future", "4-1", "青绿中国色复看"], ["future", "4-2", "诗画合一"]],
+            "w11-c2": [["future", "4-1", "矿物颜料与青绿山水"], ["future", "4-2", "诗画合一"]],
+            "w11-c3": [["future", "4-1", "矿物颜料与青绿山水"], ["future", "4-2", "诗画合一"]],
+            "w11-c4": [["future", "4-1", "矿物颜料与青绿山水"], ["future", "4-2", "诗画合一"]],
+            "w11-c5": [["future", "4-1", "矿物颜料与青绿山水"], ["future", "4-2", "诗画合一"]],
+            "w12-c1": [["future", "5-1", "鞋的写生与设计"], ["future", "5-2", "废旧材料创意做鞋"]],
+            "w12-c2": [["future", "5-1", "鞋的写生与设计"], ["future", "5-2", "废旧材料创意做鞋"]],
+            "w12-c3": [["future", "5-1", "鞋的写生与设计"], ["future", "5-2", "废旧材料创意做鞋"]],
+            "w12-c4": [["future", "5-1", "鞋的写生与设计"], ["future", "5-2", "废旧材料创意做鞋"]],
+            "w12-c5": [["future", "5-1", "鞋的写生与设计"], ["future", "5-2", "废旧材料创意做鞋"]],
+            "w13-c1": [["future", "5-2", "废旧材料创意做鞋"], ["future", "5-3", "足下生辉作品完成"]],
+            "w13-c2": [["future", "5-2", "废旧材料创意做鞋"], ["future", "5-3", "足下生辉作品完成"]],
+            "w13-c3": [["future", "5-2", "废旧材料创意做鞋"], ["future", "5-3", "足下生辉作品完成"]],
+            "w13-c4": [["future", "5-2", "废旧材料创意做鞋"], ["future", "5-3", "足下生辉作品完成"]],
+            "w13-c5": [["future", "5-2", "废旧材料创意做鞋"], ["future", "5-3", "足下生辉作品完成"]]
           },
           suggestions: [
-            { tone: "warn", text: "三3班第8周两节课已调至周五，后续与三1班相比慢 1 课时。" },
-            { tone: "info", text: "三4班第9周因节假日停课，建议将 2-1 与 2-2 顺延至后续周次。" },
-            { tone: "warn", text: "三5班第7周第1课时被校活动占用，已生成第9周补课候选。" },
-            { tone: "normal", text: "下周优先准备 2-3 纹样设计学习单、2-4 美术鉴赏观察卡。" }
+            { tone: "warn", text: "第8-9周创艺节与五一假期会影响部分班级节奏，当前仅做静态预演。" },
+            { tone: "info", text: "第10-11周进入第四单元《青绿中国色》，建议先确认两课时拆分。" },
+            { tone: "warn", text: "三3班第10周仍有创艺节补完任务，接入真实课表后再判断是否顺延。" },
+            { tone: "normal", text: "下周优先准备《矿物颜料与青绿山水》学习单、《诗画合一》观察卡。" }
           ]
         },
         {
@@ -3471,177 +3667,269 @@
           kicker: "Semester Plan",
           summary: "把单元课时目录和周次计划放在同一张规划表中，便于教师按周查看、调整和确认。",
           metrics: [
-            { label: "教学块", value: "3" },
-            { label: "机动课包", value: "6" },
-            { label: "可释放课时", value: "3" },
-            { label: "风险单元", value: "2" }
+            { label: "教材单元", value: "7" },
+            { label: "教材课时", value: "19" },
+            { label: "创艺节", value: "4" },
+            { label: "机动复习", value: "6" },
+            { label: "周次", value: "16" }
           ],
           lanes: [
             {
               id: "lane-units",
-              title: "教学单元",
-              note: "以单元块承载课包与课时，不把美术教师场景写死。",
+              title: "教材学习",
+              note: "来源于 2025 学年第二学期三年级美术教学工作计划，共 7 个单元、19 课时。",
               blocks: [
                 {
                   id: "teaching-block-color",
-                  title: "色彩单元",
-                  state: "风险高",
-                  weeks: "第3-6周",
-                  detail: "标准4课时，最短3课时，可延展1课时。公开课准备占用1课时。",
-                  actions: ["压缩复盘", "保留核心作品"]
+                  title: "第一单元 多变的色彩",
+                  state: "3课时",
+                  weeks: "第2-3周",
+                  detail: "渐变的魅力、颜料的渐变、渐变的节奏。",
+                  actions: ["查看课时", "进入备课本"]
                 },
                 {
                   id: "teaching-block-shape",
-                  title: "造型表现单元",
-                  state: "风险中",
-                  weeks: "第7-8周",
-                  detail: "被压缩1周，建议减少练习课，保留核心作品产出。",
-                  actions: ["调整周次", "查看影响"]
+                  title: "第二单元 辽阔的海洋",
+                  state: "3课时",
+                  weeks: "第3-6周",
+                  detail: "奇异的海洋生物、跳动的蓝色心脏、守护生命的摇篮。",
+                  actions: ["查看课时", "进入备课本"]
                 },
                 {
-                  id: "teaching-block-project",
-                  title: "综合创作单元",
-                  state: "正常",
-                  weeks: "第11-14周",
-                  detail: "提前为校园画展预留作品筛选时间。",
-                  actions: ["保持节奏", "关联作品馆"]
-                }
-              ]
-            },
-            {
-              id: "lane-buffer",
-              title: "机动课包",
-              note: "作为缓冲，不直接替换正式计划。",
-              blocks: [
-                {
-                  id: "buffer-work-complete",
-                  title: "作品补完课包",
-                  state: "可启用",
-                  weeks: "第4周",
-                  detail: "可承接第3周未完成作品与课堂观察记录。",
-                  actions: ["启用预演", "查看材料"]
+                  id: "teaching-block-red",
+                  title: "第三单元 红领巾告诉我",
+                  state: "2课时",
+                  weeks: "第7周",
+                  detail: "影像创作与红色精神传承，重点使用景别表达。",
+                  actions: ["查看课时", "进入备课本"]
                 },
                 {
-                  id: "buffer-color-game",
-                  title: "色彩小游戏课包",
-                  state: "可释放",
-                  weeks: "第6周",
-                  detail: "必要时可释放1课时，用于色彩单元收束。",
-                  actions: ["释放课时", "保留备选"]
+                  id: "teaching-block-qinglv",
+                  title: "第四单元 青绿中国色",
+                  state: "2课时",
+                  weeks: "第10-11周",
+                  detail: "矿物颜料、青绿山水、诗画合一。",
+                  actions: ["拆成课时", "进入备课本"]
+                },
+                {
+                  id: "teaching-block-shoes",
+                  title: "第五单元 足下生辉",
+                  state: "3课时",
+                  weeks: "第12-13周",
+                  detail: "鞋的写生与设计、废旧材料创意做鞋。",
+                  actions: ["查看课时", "进入备课本"]
+                },
+                {
+                  id: "teaching-block-tiger",
+                  title: "第六单元 虎虎生威",
+                  state: "2课时",
+                  weeks: "第14周",
+                  detail: "民间虎文化、布老虎制作。",
+                  actions: ["查看课时", "进入备课本"]
+                },
+                {
+                  id: "teaching-block-diary",
+                  title: "第七单元 成长日记",
+                  state: "2课时",
+                  weeks: "第15周",
+                  detail: "序列画、视觉笔记本、成长记录。",
+                  actions: ["查看课时", "进入备课本"]
                 }
               ]
             },
             {
               id: "lane-events",
-              title: "学校事件",
-              note: "外部扰动只进入预演队列。",
+              title: "创艺节与校历",
+              note: "创艺节是独立课程板块，不挤占教材单元；节假日只作为扰动进入预演。",
               blocks: [
                 {
-                  id: "event-open-class",
-                  title: "公开课提前",
-                  state: "扰动",
-                  weeks: "第3周",
-                  detail: "影响《青绿中国色》学习单、材料清单、评价维度。",
-                  actions: ["计算影响", "生成方案A"]
+                  id: "event-football-week-8",
+                  title: "创艺节·足球梦 上",
+                  state: "2课时",
+                  weeks: "第8周",
+                  detail: "走近足球文化、我的班级球衣。",
+                  actions: ["查看活动", "进入备课本"]
                 },
                 {
-                  id: "event-art-festival",
-                  title: "创艺节作品筹备",
-                  state: "需预留",
-                  weeks: "第11-14周",
-                  detail: "需要提前筛选作品并回流作品馆。",
-                  actions: ["关联作品馆", "查看归档"]
+                  id: "event-football-week-9",
+                  title: "创艺节·足球梦 下",
+                  state: "2课时",
+                  weeks: "第9周",
+                  detail: "足球奖杯设计、加油海报与闭幕展。",
+                  actions: ["查看活动", "进入备课本"]
+                },
+                {
+                  id: "event-qingming",
+                  title: "清明假期",
+                  state: "扰动",
+                  weeks: "第5周",
+                  detail: "4/4-4/6 清明假期，影响需由班级课表确认。",
+                  actions: ["查看影响", "暂存"]
+                },
+                {
+                  id: "event-mayday",
+                  title: "五一假期",
+                  state: "扰动",
+                  weeks: "第9-10周",
+                  detail: "5/1-5/5 五一假期与第10周收尾相邻。",
+                  actions: ["查看影响", "暂存"]
+                }
+              ]
+            },
+            {
+              id: "lane-buffer",
+              title: "机动复习",
+              note: "教学工作计划预留 6 课时，服务补完、复习、总结和考试周。",
+              blocks: [
+                {
+                  id: "buffer-final",
+                  title: "机动 / 复习 / 总结",
+                  state: "2课时",
+                  weeks: "第16周",
+                  detail: "考试周，承接作品补完、学习证据整理和学期总结。",
+                  actions: ["生成清单", "进入档案室"]
+                },
+                {
+                  id: "buffer-reserve",
+                  title: "机动课时池",
+                  state: "6课时",
+                  weeks: "全学期",
+                  detail: "只作为缓冲，不自动替换正式单元课。",
+                  actions: ["查看规则", "保留"]
                 }
               ]
             }
           ],
           suggestions: [
-            "方案A：压缩色彩复盘1课时，保留核心作品课。",
-            "方案B：启用作品补完课包，保持色彩单元节奏。",
-            "方案C：后移造型表现练习课，提前释放公开课准备窗口。"
+            "第8-9周创艺节作为独立板块处理，不要并入教材单元。",
+            "第10-11周进入《青绿中国色》，先确认 2 课时拆分，再写入备课本。",
+            "第16周机动/复习/总结用于作品补完、学习证据整理和档案室沉淀。"
           ],
           plan_units: [
             {
               id: "plan-unit-color",
-              title: "单元1 色彩单元",
-              hours: "共6课时",
+              title: "单元1 多变的色彩",
+              hours: "共3课时",
               tone: "green",
               lessons: [
-                ["1-1", "认识色彩"],
-                ["1-2", "色彩的感受"],
-                ["1-3", "色彩的对比"],
-                ["1-4", "点线面的世界"],
-                ["1-5", "有趣的形状"],
-                ["1-6", "立体的构成感"]
+                ["1-1", "渐变的魅力"],
+                ["1-2", "颜料的渐变"],
+                ["1-3", "渐变的节奏"]
               ]
             },
             {
               id: "plan-unit-shape",
-              title: "单元2 造型表现单元",
-              hours: "共10课时",
+              title: "单元2 辽阔的海洋",
+              hours: "共3课时",
               tone: "blue",
               lessons: [
-                ["2-1", "形体与空间"],
-                ["2-2", "材料的奇妙"],
-                ["2-3", "形体的组合"],
-                ["2-4", "创意小物"],
-                ["2-5", "主题创作"],
-                ["2-6", "美术与生活"],
-                ["2-7", "作品欣赏"],
-                ["2-8", "名家作品赏析"],
-                ["2-9", "综合表现"],
-                ["2-10", "学期成果展示"]
+                ["2-1", "奇异的海洋生物"],
+                ["2-2", "跳动的蓝色心脏"],
+                ["2-3", "守护生命的摇篮"]
               ]
             },
             {
-              id: "plan-unit-explore",
-              title: "单元3 综合探索单元",
-              hours: "共8课时",
+              id: "plan-unit-red",
+              title: "单元3 红领巾告诉我",
+              hours: "共2课时",
+              tone: "red",
+              lessons: [
+                ["3-1", "影像创作"],
+                ["3-2", "红色精神传承"]
+              ]
+            },
+            {
+              id: "plan-unit-qinglv",
+              title: "单元4 青绿中国色",
+              hours: "共2课时",
               tone: "amber",
               lessons: [
-                ["3-1", "创意与表达"],
-                ["3-2", "主题创作"],
-                ["3-3", "美术与生活"]
+                ["4-1", "矿物颜料与青绿山水"],
+                ["4-2", "诗画合一"]
+              ]
+            },
+            {
+              id: "plan-unit-shoes",
+              title: "单元5 足下生辉",
+              hours: "共3课时",
+              tone: "green",
+              lessons: [
+                ["5-1", "鞋的写生与设计"],
+                ["5-2", "废旧材料创意做鞋"],
+                ["5-3", "足下生辉作品完成"]
+              ]
+            },
+            {
+              id: "plan-unit-tiger",
+              title: "单元6 虎虎生威",
+              hours: "共2课时",
+              tone: "amber",
+              lessons: [
+                ["6-1", "民间虎文化"],
+                ["6-2", "布老虎制作"]
+              ]
+            },
+            {
+              id: "plan-unit-diary",
+              title: "单元7 成长日记",
+              hours: "共2课时",
+              tone: "blue",
+              lessons: [
+                ["7-1", "序列画与视觉笔记本"],
+                ["7-2", "成长记录"]
+              ]
+            },
+            {
+              id: "plan-unit-festival",
+              title: "创艺节 足球梦",
+              hours: "共4课时",
+              tone: "amber",
+              lessons: [
+                ["F-1", "走近足球文化"],
+                ["F-2", "我的班级球衣"],
+                ["F-3", "足球奖杯设计"],
+                ["F-4", "加油海报与闭幕展"]
               ]
             }
           ],
           plan_weeks: [
-            { id: "plan-week-1", week: "第1周", date: "02.09 - 02.15", lessons: [["1-1", "认识色彩", "green"]] },
-            { id: "plan-week-2", week: "第2周", date: "02.16 - 02.22", lessons: [["1-2", "色彩的感受", "green"], ["1-3", "色彩的对比", "green"]] },
-            { id: "plan-week-3", week: "第3周", date: "02.23 - 03.01", lessons: [["1-4", "点线面的世界", "green"], ["1-5", "有趣的形状", "green"]] },
-            { id: "plan-week-4", week: "第4周", date: "03.02 - 03.08", lessons: [["2-1", "形体与空间", "blue"]] },
-            { id: "plan-week-5", week: "第5周", date: "03.09 - 03.15", lessons: [["2-2", "材料的奇妙", "blue"], ["2-3", "形体的组合", "blue"]] },
-            { id: "plan-week-6", week: "第6周", date: "03.16 - 03.22", lessons: [["2-4", "创意小物", "blue"], ["2-5", "主题创作", "blue"]] },
-            { id: "plan-week-7", week: "第7周", date: "03.23 - 03.29", lessons: [["2-6", "美术与生活", "blue"]] },
-            { id: "plan-week-8", week: "第8周", date: "03.30 - 04.05", lessons: [["2-7", "作品欣赏", "blue"], ["2-8", "名家作品赏析", "blue"]] },
-            { id: "plan-week-9", week: "第9周", date: "04.06 - 04.12", lessons: [["2-9", "综合表现", "blue"], ["2-10", "学期成果展示", "blue"]] },
-            { id: "plan-week-10", week: "第10周", date: "04.13 - 04.19", lessons: [["3-1", "创意与表达", "amber"]] },
-            { id: "plan-week-11", week: "第11周", date: "04.20 - 04.26", lessons: [["3-2", "主题创作", "amber"], ["3-3", "美术与生活", "amber"]] },
-            { id: "plan-week-12", week: "第12周", date: "04.27 - 05.03", lessons: [["buffer-12", "机动与复习", "buffer"]] },
-            { id: "plan-week-13", week: "第13周", date: "05.04 - 05.10", lessons: [["buffer-13", "机动与复习", "buffer"]] },
-            { id: "plan-week-14", week: "第14周", date: "05.11 - 05.17", lessons: [["buffer-14", "机动与复习", "buffer"]] },
-            { id: "plan-week-15", week: "第15-20周", date: "05.18 - 06.21", lessons: [["final-show", "期末展示与评价", "buffer"]] }
+            { id: "plan-week-1", week: "第1周", date: "03.05", lessons: [["start-1", "开学第一课：美术世界，我来了！", "buffer"]] },
+            { id: "plan-week-2", week: "第2周", date: "03.10 - 03.14", lessons: [["1-1", "渐变的魅力", "green"], ["1-2", "颜料的渐变", "green"]] },
+            { id: "plan-week-3", week: "第3周", date: "03.17 - 03.21", lessons: [["1-3", "渐变的节奏", "green"], ["2-1", "奇异的海洋生物", "blue"]] },
+            { id: "plan-week-4", week: "第4周", date: "03.24 - 03.28", lessons: [["2-2", "跳动的蓝色心脏", "blue"], ["2-3", "守护生命的摇篮", "blue"]] },
+            { id: "plan-week-5", week: "第5周", date: "03.31 - 04.04", lessons: [["2-2", "辽阔的海洋延展", "blue"], ["event-qingming", "清明假期 4/4-4/6", "buffer"]] },
+            { id: "plan-week-6", week: "第6周", date: "04.07 - 04.11", lessons: [["2-3", "辽阔的海洋整理", "blue"], ["league-6", "足球联赛月", "buffer"]] },
+            { id: "plan-week-7", week: "第7周", date: "04.14 - 04.18", lessons: [["3-1", "影像创作", "red"], ["3-2", "红色精神传承", "red"]] },
+            { id: "plan-week-8", week: "第8周", date: "04.21 - 04.25", lessons: [["F-1", "走近足球文化", "amber"], ["F-2", "我的班级球衣", "amber"]] },
+            { id: "plan-week-9", week: "第9周", date: "04.28 - 05.02", lessons: [["F-3", "足球奖杯设计", "amber"], ["F-4", "加油海报与闭幕展", "amber"], ["event-mayday", "五一 5/1-5/5", "buffer"]] },
+            { id: "plan-week-10", week: "第10周", date: "05.05 - 05.09", lessons: [["4-1", "矿物颜料与青绿山水", "amber"], ["4-2", "诗画合一", "amber"]] },
+            { id: "plan-week-11", week: "第11周", date: "05.11 - 05.15", lessons: [["4-1b", "青绿中国色巩固", "amber"], ["4-2b", "诗画合一作品整理", "amber"]] },
+            { id: "plan-week-12", week: "第12周", date: "05.18 - 05.22", lessons: [["5-1", "鞋的写生与设计", "green"], ["5-2", "废旧材料创意做鞋", "green"]] },
+            { id: "plan-week-13", week: "第13周", date: "05.25 - 05.29", lessons: [["5-2b", "废旧材料创意做鞋", "green"], ["5-3", "足下生辉作品完成", "green"]] },
+            { id: "plan-week-14", week: "第14周", date: "06.01 - 06.05", lessons: [["6-1", "民间虎文化", "amber"], ["6-2", "布老虎制作", "amber"]] },
+            { id: "plan-week-15", week: "第15周", date: "06.09 - 06.13", lessons: [["7-1", "序列画与视觉笔记本", "blue"], ["7-2", "成长记录", "blue"]] },
+            { id: "plan-week-16", week: "第16周", date: "06.16 - 06.21", lessons: [["buffer-final", "机动 / 复习 / 总结", "buffer"], ["exam-week", "考试周", "buffer"]] }
           ]
         }
       ],
       node_details: {
-        "teaching-block-color": {
+        "teaching-block-qinglv": {
           type: "学期地图节点",
-          title: "编辑教学块：色彩单元",
+          title: "编辑教学块：第四单元 青绿中国色",
           fields: [
-            ["建议周次", "第3-5周"],
-            ["当前安排", "第3-6周"],
-            ["标准课时", "4课时"],
-            ["最短课时", "3课时"],
-            ["当前风险", "公开课准备占用1课时"]
+            ["建议周次", "第10-11周"],
+            ["当前安排", "第10-11周"],
+            ["计划课时", "2课时"],
+            ["来源", "2025学年第二学期三年级美术教学工作计划"],
+            ["当前风险", "课时标题和材料清单待教师确认"]
           ],
-          actions: ["压缩复盘", "保留核心作品", "生成方案A"]
+          actions: ["确认拆课", "进入备课本", "生成课前包"]
         }
       },
       tools: [
         { id: "textbook", icon: "目", title: "教材解析", desc: "解析教材，建立学期结构，辅助单元重组。", actions: ["解析目录", "关联单元"] },
-        { id: "unit", icon: "元", title: "单元重组", desc: "将教材内容重组成教学单元块，规划课包产出。", actions: ["重组色彩单元", "重组造型单元"] },
-        { id: "split", icon: "拆", title: "拆课", desc: "将单元拆分为课时草案和课包框架。", actions: ["拆分色彩单元", "拆分项目单元"] },
+        { id: "unit", icon: "元", title: "单元重组", desc: "将教材内容重组成教学单元块，规划课包产出。", actions: ["重组青绿中国色", "重组辽阔的海洋"] },
+        { id: "split", icon: "拆", title: "拆课", desc: "将单元拆分为课时草案和课包框架。", actions: ["拆分教学工作计划", "拆分创艺节课程"] },
         { id: "weekly", icon: "周", title: "周课表", desc: "查看本周每天每节课的班级、课题与课前包状态。", actions: ["生成周课表", "查看课前准备"] },
         { id: "reschedule", icon: "排", title: "重排工具", desc: "检查学校临时任务对学期计划的影响，生成重排方案。", actions: ["检查扰动", "生成重排方案", "查看影响范围"] },
         { id: "flow", icon: "流", title: "课堂流程", desc: "生成课时流程结构，纳入备课包。", actions: ["生成流程", "调整环节"] },
@@ -3822,7 +4110,7 @@
         fields: [
           ["周次", week.week],
           ["日期", week.date],
-          ["单元类型", tone === "blue" ? "造型表现单元" : tone === "amber" ? "综合探索单元" : tone === "buffer" ? "机动与评价" : "色彩单元"],
+          ["单元类型", tone === "blue" ? "海洋/成长类单元" : tone === "amber" ? "青绿中国色/创艺节单元" : tone === "red" ? "红色主题单元" : tone === "buffer" ? "机动与评价" : "教材学习单元"],
           ["正式边界", "仅生成预演，教师确认前不应用"]
         ],
         actions: ["调整周次", "生成课包", "查看影响"]
@@ -3952,6 +4240,7 @@
     }
 
     function renderCanvasHeader(view) {
+      document.body.dataset.activeView = view.id;
       const contextTitle = byId("contextTitle");
       if (contextTitle) {
         contextTitle.innerHTML = `<span class="context-space-name">${html(model.space.label)}</span><span class="context-view-name">· ${html(view.label)}</span>`;
@@ -3998,6 +4287,12 @@
       return map[status] || "过程态";
     }
 
+    function nbMetricTone(label) {
+      if (String(label).includes("缺")) return "missing";
+      if (String(label).includes("待")) return "warn";
+      return "done";
+    }
+
     function renderPrepNotebookTree(view) {
       return view.tree.map((group) => `
         <section class="nb-tree-group">
@@ -4028,69 +4323,76 @@
       const lesson = view.current_lesson;
       return `
         <div class="nb-scene">
-          <aside class="nb-panel" aria-label="备课本目录">
-            <div class="nb-panel-head"><span>备课本目录</span><span class="quiet-tag">过程本</span></div>
-            <div class="nb-cover">
-              <div class="nb-cover-title">${html(view.cover.title)}</div>
-              <div class="nb-cover-sub">${html(view.cover.subtitle)}</div>
-              <div class="nb-metrics">
-                ${view.cover.metrics.map(([label, value]) => `<div class="nb-metric"><strong>${html(value)}</strong>${html(label)}</div>`).join("")}
-              </div>
-            </div>
-            <div class="nb-tree">${renderPrepNotebookTree(view)}</div>
-          </aside>
-
-          <section class="nb-workspace" aria-label="当前课时工作页">
-            <div class="nb-hero">
-              <div>
-                <div class="nb-kicker">${html(lesson.unit)}</div>
-                <div class="nb-title">${html(lesson.code)}《${html(lesson.title)}》</div>
-                <div class="nb-subtitle">${html(lesson.brief)}</div>
-              </div>
-              <div class="nb-hero-actions">
-                <button class="node-action primary" data-pending="小备已进入继续备课预演，等待教师确认。">${iconButtonLabel("继续备课", "arrow")}</button>
-                <button class="node-action secondary" data-view="weekCalendar">${iconButtonLabel("返回周课表", "calendar")}</button>
-              </div>
-            </div>
-
-            <section>
-              <div class="nb-section-head"><span>本课状态</span><span class="quiet-tag">${html(lesson.status)}</span></div>
-              <div class="nb-status-grid">
-                ${lesson.status_cards.map(([label, value]) => `
-                  <div class="nb-status-card">
-                    <strong>${html(value)}</strong>
-                    <span>${html(label)}</span>
-                  </div>
-                `).join("")}
-              </div>
-            </section>
-
-            <section>
-              <div class="nb-section-head"><span>工作区</span><span class="quiet-tag">教师确认后应用</span></div>
-              <div class="nb-work-sections">
-                ${lesson.work_cards.map((card) => `
-                  <article class="nb-work-card ${html(card.tone)}">
-                    <div class="nb-work-title">
-                      <span>${html(card.title)}</span>
-                      <span class="quiet-tag">${html(card.state)}</span>
+          <div class="nb-binder" aria-label="备课本活页夹">
+            <aside class="nb-panel" aria-label="备课本目录">
+              <div class="nb-cover">
+                <div class="nb-cover-title">${html(view.cover.title)}</div>
+                <div class="nb-metrics">
+                  ${view.cover.metrics.map(([label, value]) => `
+                    <div class="nb-metric ${nbMetricTone(label)}">
+                      <span class="nb-metric-light" aria-hidden="true"></span>
+                      <strong>${html(value)}</strong>
+                      <span>${html(label)}</span>
                     </div>
-                    <div class="nb-work-note">${html(card.note)}</div>
-                    <div class="nb-link-row">
-                      <button class="node-action icon-only" title="打开" aria-label="打开" data-pending="小备已打开「${html(card.title)}」预演，等待教师确认。">${iconButtonLabel("打开", "arrow")}</button>
-                      <button class="node-action icon-only" title="生成候选" aria-label="生成候选" data-pending="小备已生成「${html(card.title)}」候选预演，等待教师确认。">${iconButtonLabel("生成候选", "wand")}</button>
-                    </div>
-                  </article>
-                `).join("")}
+                  `).join("")}
+                </div>
               </div>
-            </section>
+              <div class="nb-tree">${renderPrepNotebookTree(view)}</div>
+            </aside>
 
-            <section>
-              <div class="nb-section-head"><span>流转关系</span><span class="quiet-tag">备用 / 正在用 / 用完留下</span></div>
-              <div class="nb-flow">
-                ${lesson.flow.map((step, index) => `<div class="nb-flow-step ${index === 1 ? "current" : ""}">${html(step)}</div>`).join("")}
+            <div class="nb-gutter" aria-hidden="true"></div>
+
+            <section class="nb-workspace" aria-label="当前课时工作页">
+              <div class="nb-hero">
+                <div>
+                  <div class="nb-kicker">${html(lesson.unit)}</div>
+                  <div class="nb-title">${html(lesson.code)}《${html(lesson.title)}》</div>
+                </div>
+                <div class="nb-hero-actions">
+                  <button class="node-action primary" data-pending="小备已进入继续备课预演，等待教师确认。">${iconButtonLabel("继续备课", "arrow")}</button>
+                  <button class="node-action secondary" data-view="weekCalendar">${iconButtonLabel("返回周课表", "calendar")}</button>
+                </div>
               </div>
+
+              <section>
+                <div class="nb-section-head"><span>本课状态</span><span class="quiet-tag">${html(lesson.status)}</span></div>
+                <div class="nb-status-grid">
+                  ${lesson.status_cards.map(([label, value]) => `
+                    <div class="nb-status-card">
+                      <strong>${html(value)}</strong>
+                      <span>${html(label)}</span>
+                    </div>
+                  `).join("")}
+                </div>
+              </section>
+
+              <section>
+                <div class="nb-section-head"><span>工作区</span><span class="quiet-tag">教师确认后应用</span></div>
+                <div class="nb-work-sections">
+                  ${lesson.work_cards.map((card) => `
+                    <article class="nb-work-card ${html(card.tone)}">
+                      <div class="nb-work-title">
+                        <span>${html(card.title)}</span>
+                        <span class="quiet-tag">${html(card.state)}</span>
+                      </div>
+                      <div class="nb-work-note">${html(card.note)}</div>
+                      <div class="nb-link-row">
+                        <button class="node-action icon-only" title="打开" aria-label="打开" data-pending="小备已打开「${html(card.title)}」预演，等待教师确认。">${iconButtonLabel("打开", "arrow")}</button>
+                        <button class="node-action icon-only" title="生成候选" aria-label="生成候选" data-pending="小备已生成「${html(card.title)}」候选预演，等待教师确认。">${iconButtonLabel("生成候选", "wand")}</button>
+                      </div>
+                    </article>
+                  `).join("")}
+                </div>
+              </section>
+
+              <section>
+                <div class="nb-section-head"><span>流转关系</span><span class="quiet-tag">备用 / 正在用 / 用完留下</span></div>
+                <div class="nb-flow">
+                  ${lesson.flow.map((step, index) => `<div class="nb-flow-step ${index === 1 ? "current" : ""}">${html(step)}</div>`).join("")}
+                </div>
+              </section>
             </section>
-          </section>
+          </div>
 
           <aside class="nb-drawer" aria-label="备课本抽屉">
             <div class="nb-panel-head"><span>右侧抽屉</span><span class="quiet-tag">按需打开</span></div>
@@ -4388,7 +4690,7 @@
                   <div class="week-slots">
                     ${week.lessons.map(([code, title, tone]) => `
                       <button class="plan-lesson ${html(tone)}" data-node="${html(`plan-${code}`)}" title="${html(title)}">
-                        <span class="lesson-code">${html(code.startsWith("buffer") || code === "final-show" ? "" : code)}</span>
+                        <span class="lesson-code">${html(code.startsWith("buffer") || code.startsWith("event") || code.startsWith("league") || code.startsWith("start") || code.startsWith("exam") || code === "final-show" ? "" : code)}</span>
                         <span>${html(title)}</span>
                       </button>
                     `).join("")}
