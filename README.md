@@ -5,6 +5,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 ## Files
 
 - `prep_room_render_canvas_deepen_v1.html`
+- `shiwei_concept_archive_v0.md`
 - `week_calendar_board_design_v0.md`
 - `class_progress_schedule_board_design_v0.md`
 - `class_progress_schedule_board_v1.html`
@@ -54,6 +55,8 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - The top area now uses a compact product navigation bar and context row; view switching lives in the context row, while the verbose canvas heading block has been removed.
 - The current space name is centered as large gradient text, with a horizontal AI tool strip below it using one icon per tool.
 - The centered context title now shows the active board after the space name, for example `备课室 · 周课表`, `备课室 · 班级排课`, or `备课室 · 学期规划`.
+- The bottom intent bar belongs to the prep-room space and defaults to `小备`; `小教` and `小管` may still appear as specialist collaborators inside weekly schedule, class progress, and timetable-adjustment panels.
+- `shiwei_concept_archive_v0.md` records the current concept boundary: `备课本 = 本学期过程性工作本`, `资料室 = 备用资源`, `档案室 = 用完留下的证据`.
 - The first view is now `周课表 / 本周课前看板`, replacing the former week-package card view. It renders a Monday-to-Sunday timetable for class, topic, package status, activities, holidays, reschedules, and makeup lessons.
 - The second view is now `班级排课 / 班级进度与排课`, rendered as a week-by-class board with two default weekly lesson slots per class.
 - V1.1 readability polish strengthens the current-week marker, keeps future lessons readable while muted, adds a compact status legend, removes the visible slot-label chips, and lets the dense class-by-week board expand horizontally.
