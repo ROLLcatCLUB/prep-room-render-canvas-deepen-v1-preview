@@ -5,7 +5,7 @@ handoff_id=PREP_ROOM_RENDER_CANVAS_V1_SESSION_HANDOFF_20260616
 workspace=D:\Documents\SmartEdu\xiaobei-core
 package=outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1
 review_repo=https://github.com/ROLLcatCLUB/prep-room-render-canvas-deepen-v1-preview
-latest_review_commit=efbd26fc4ca5bd4a700a75cd4919c45f6a2d27b4
+latest_review_commit=adf3cfdd4271234956b7126ebf726afab550e0ad
 status=STATIC_PREVIEW_AND_DOCUMENTATION_FOR_GPT_REVIEW
 ```
 
@@ -414,7 +414,7 @@ https://github.com/ROLLcatCLUB/prep-room-render-canvas-deepen-v1-preview
 Current review commit:
 
 ```text
-efbd26fc4ca5bd4a700a75cd4919c45f6a2d27b4
+adf3cfdd4271234956b7126ebf726afab550e0ad
 ```
 
 Upload method used:
@@ -532,4 +532,3 @@ safe snapshots, and the next session should continue by deepening the prep noteb
 right drawer or wiring a readonly schedule adapter without exposing secrets or
 formally applying the preview into runtime.
 ```
-
