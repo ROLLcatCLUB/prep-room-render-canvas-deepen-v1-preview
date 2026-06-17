@@ -1,0 +1,98 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "step": "EffectivenessEvaluator",
+    "ok": true,
+    "output": {
+      "contract_errors": [],
+      "effectiveness": {
+        "resource_purpose_score": 5,
+        "attention_focus_score": 5,
+        "teacher_guidance_score": 5,
+        "student_response_prediction_score": 5,
+        "scaffold_quality_score": 5,
+        "collection_method_reasoning_score": 5,
+        "media_material_timing_score": 5,
+        "assessment_evidence_score": 5,
+        "transition_script_score": 5,
+        "time_feasibility_score": 5,
+        "age_appropriateness_score": 5,
+        "overall_effectiveness_score": 5.0,
+        "pass": true,
+        "blockers": [],
+        "issues": [],
+        "time_balance": {
+          "target_minutes": 40,
+          "total_event_minutes": 40.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        }
+      }
+    },
+    "errors": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "step": "EffectivenessEvaluator",
+    "ok": true,
+    "output": {
+      "contract_errors": [],
+      "effectiveness": {
+        "resource_purpose_score": 5,
+        "attention_focus_score": 5,
+        "teacher_guidance_score": 5,
+        "student_response_prediction_score": 5,
+        "scaffold_quality_score": 5,
+        "collection_method_reasoning_score": 5,
+        "media_material_timing_score": 5,
+        "assessment_evidence_score": 5,
+        "transition_script_score": 5,
+        "time_feasibility_score": 5,
+        "age_appropriateness_score": 5,
+        "overall_effectiveness_score": 5.0,
+        "pass": true,
+        "blockers": [],
+        "issues": [],
+        "time_balance": {
+          "target_minutes": 40,
+          "total_event_minutes": 40.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        }
+      }
+    },
+    "errors": []
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "step": "EffectivenessEvaluator",
+    "ok": true,
+    "output": {
+      "contract_errors": [],
+      "effectiveness": {
+        "resource_purpose_score": 5,
+        "attention_focus_score": 5,
+        "teacher_guidance_score": 5,
+        "student_response_prediction_score": 5,
+        "scaffold_quality_score": 5,
+        "collection_method_reasoning_score": 5,
+        "media_material_timing_score": 5,
+        "assessment_evidence_score": 5,
+        "transition_script_score": 5,
+        "time_feasibility_score": 5,
+        "age_appropriateness_score": 5,
+        "overall_effectiveness_score": 5.0,
+        "pass": true,
+        "blockers": [],
+        "issues": [],
+        "time_balance": {
+          "target_minutes": 40,
+          "total_event_minutes": 40.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        }
+      }
+    },
+    "errors": []
+  }
+]

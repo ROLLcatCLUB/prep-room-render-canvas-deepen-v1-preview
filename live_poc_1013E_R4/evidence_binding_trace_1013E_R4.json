@@ -1,0 +1,80 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "step": "EvidenceBinder",
+    "ok": true,
+    "output": {
+      "evidence_bindings": [
+        {
+          "evidence_id": "EVID_COLOR_SORT",
+          "event_id": "EVT_3",
+          "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+          "collection_method": "小组把色卡或图片贴到感受词下方。",
+          "what_it_proves": "学生是否能依据感受而不是死记颜色分类。"
+        },
+        {
+          "evidence_id": "EVID_REASON_SENTENCE",
+          "event_id": "EVT_4",
+          "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+          "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+          "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。"
+        }
+      ],
+      "binding_pass": true,
+      "blockers": []
+    },
+    "errors": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "step": "EvidenceBinder",
+    "ok": true,
+    "output": {
+      "evidence_bindings": [
+        {
+          "evidence_id": "EVID_FOCUS_WORD",
+          "event_id": "EVT_2",
+          "assessment_evidence": "EVID_FOCUS_WORD：节奏词和一句理由。",
+          "collection_method": "观看后先写一个节奏词，再口头补一句理由。",
+          "what_it_proves": "学生是否把注意力放在节奏特征而不是动作好看。"
+        },
+        {
+          "evidence_id": "EVID_VISUAL_TRANSLATION",
+          "event_id": "EVT_4",
+          "assessment_evidence": "EVID_VISUAL_TRANSLATION：草图与理由对应。",
+          "collection_method": "学习单一格小草图和同桌说明。",
+          "what_it_proves": "学生能否把节奏转成线条或色彩。"
+        }
+      ],
+      "binding_pass": true,
+      "blockers": []
+    },
+    "errors": []
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "step": "EvidenceBinder",
+    "ok": true,
+    "output": {
+      "evidence_bindings": [
+        {
+          "evidence_id": "EVID_COLOR_SORT",
+          "event_id": "EVT_3",
+          "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+          "collection_method": "小组把色卡或图片贴到感受词下方。",
+          "what_it_proves": "学生是否能依据感受而不是死记颜色分类。"
+        },
+        {
+          "evidence_id": "EVID_REASON_SENTENCE",
+          "event_id": "EVT_4",
+          "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+          "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+          "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。"
+        }
+      ],
+      "binding_pass": true,
+      "blockers": []
+    },
+    "errors": []
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "step": "ClassroomEventGenerator",
+    "ok": true,
+    "output": {
+      "classroom_events": [
+        {
+          "event_id": "EVT_1",
+          "event_name": "唤起颜色经验",
+          "event_type": "experience_evoke",
+          "learning_purpose": "从学生已有颜色经验进入感受问题",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生知道今天不只说颜色名",
+          "recommended_minutes": 4,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_2",
+          "event_name": "对比观察",
+          "event_type": "comparison",
+          "learning_purpose": "用图片/色卡建立冷暖直观差异",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生能说出一组感受词",
+          "recommended_minutes": 8,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_3",
+          "event_name": "色卡分类探究",
+          "event_type": "analysis",
+          "learning_purpose": "让学生用分类和理由处理卡点",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生能说明冷暖或情绪分类依据",
+          "recommended_minutes": 10,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_4",
+          "event_name": "表达小练习",
+          "event_type": "practice",
+          "learning_purpose": "把理解迁移到个人色彩表达",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生能完成一组感受表达",
+          "recommended_minutes": 13,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_5",
+          "event_name": "分享证据",
+          "event_type": "sharing",
+          "learning_purpose": "用作品和学习单验证目标达成",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生能听懂同伴理由并修正",
+          "recommended_minutes": 5,
+          "teacher_review_required": true
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "step": "ClassroomEventGenerator",
+    "ok": true,
+    "output": {
+      "classroom_events": [
+        {
+          "event_id": "EVT_1",
+          "event_name": "定观看焦点",
+          "event_type": "experience_evoke",
+          "learning_purpose": "把资源从热闹观看变成带任务观看",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生知道只看节奏变化",
+          "recommended_minutes": 4,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_2",
+          "event_name": "短资源感受",
+          "event_type": "comparison",
+          "learning_purpose": "用舞蹈/音乐片段激活节奏经验",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生有一个节奏词",
+          "recommended_minutes": 8,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_3",
+          "event_name": "收感受并转译",
+          "event_type": "comparison",
+          "learning_purpose": "把听觉和身体感受转成线条色彩",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生能说一个视觉转译理由",
+          "recommended_minutes": 8,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_4",
+          "event_name": "个人小练习",
+          "event_type": "practice",
+          "learning_purpose": "形成可观察作品证据",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生完成一格节奏表达",
+          "recommended_minutes": 14,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_5",
+          "event_name": "展示与连接",
+          "event_type": "sharing",
+          "learning_purpose": "回到美术表达标准并接下一环节",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生知道如何继续完善画面",
+          "recommended_minutes": 6,
+          "teacher_review_required": true
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "step": "ClassroomEventGenerator",
+    "ok": true,
+    "output": {
+      "classroom_events": [
+        {
+          "event_id": "EVT_1",
+          "event_name": "唤起颜色经验",
+          "event_type": "experience_evoke",
+          "learning_purpose": "从学生已有颜色经验进入感受问题",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生知道今天不只说颜色名",
+          "recommended_minutes": 4,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_2",
+          "event_name": "对比观察",
+          "event_type": "comparison",
+          "learning_purpose": "用图片/色卡建立冷暖直观差异",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生能说出一组感受词",
+          "recommended_minutes": 8,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_3",
+          "event_name": "色卡分类探究",
+          "event_type": "analysis",
+          "learning_purpose": "让学生用分类和理由处理卡点",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生能说明冷暖或情绪分类依据",
+          "recommended_minutes": 10,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_4",
+          "event_name": "表达小练习",
+          "event_type": "practice",
+          "learning_purpose": "把理解迁移到个人色彩表达",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生能完成一组感受表达",
+          "recommended_minutes": 13,
+          "teacher_review_required": true
+        },
+        {
+          "event_id": "EVT_5",
+          "event_name": "分享证据",
+          "event_type": "sharing",
+          "learning_purpose": "用作品和学习单验证目标达成",
+          "student_state_before": "尚未进入本环节的学习任务。",
+          "student_state_after": "学生能听懂同伴理由并修正",
+          "recommended_minutes": 5,
+          "teacher_review_required": true
+        }
+      ]
+    },
+    "errors": []
+  }
+]

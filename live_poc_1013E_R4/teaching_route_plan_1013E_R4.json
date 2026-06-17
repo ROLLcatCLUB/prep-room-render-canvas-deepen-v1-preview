@@ -1,0 +1,143 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "step": "TeachingRoutePlanner",
+    "ok": true,
+    "output": {
+      "teaching_route": [
+        {
+          "route_step_id": "R1",
+          "route_step_name": "唤起颜色经验",
+          "role_in_learning_progression": "从学生已有颜色经验进入感受问题",
+          "expected_student_state_after": "学生知道今天不只说颜色名",
+          "recommended_duration_minutes": 4
+        },
+        {
+          "route_step_id": "R2",
+          "route_step_name": "对比观察",
+          "role_in_learning_progression": "用图片/色卡建立冷暖直观差异",
+          "expected_student_state_after": "学生能说出一组感受词",
+          "recommended_duration_minutes": 8
+        },
+        {
+          "route_step_id": "R3",
+          "route_step_name": "色卡分类探究",
+          "role_in_learning_progression": "让学生用分类和理由处理卡点",
+          "expected_student_state_after": "学生能说明冷暖或情绪分类依据",
+          "recommended_duration_minutes": 10
+        },
+        {
+          "route_step_id": "R4",
+          "route_step_name": "表达小练习",
+          "role_in_learning_progression": "把理解迁移到个人色彩表达",
+          "expected_student_state_after": "学生能完成一组感受表达",
+          "recommended_duration_minutes": 13
+        },
+        {
+          "route_step_id": "R5",
+          "route_step_name": "分享证据",
+          "role_in_learning_progression": "用作品和学习单验证目标达成",
+          "expected_student_state_after": "学生能听懂同伴理由并修正",
+          "recommended_duration_minutes": 5
+        }
+      ],
+      "route_rationale": "从经验唤起到直观对比，再到小组分类和个人表达，逐步把颜色名称推进到感受理由。",
+      "time_risk": "若交流过长，优先减少展示人数，不删探究证据。"
+    },
+    "errors": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "step": "TeachingRoutePlanner",
+    "ok": true,
+    "output": {
+      "teaching_route": [
+        {
+          "route_step_id": "R1",
+          "route_step_name": "定观看焦点",
+          "role_in_learning_progression": "把资源从热闹观看变成带任务观看",
+          "expected_student_state_after": "学生知道只看节奏变化",
+          "recommended_duration_minutes": 4
+        },
+        {
+          "route_step_id": "R2",
+          "route_step_name": "短资源感受",
+          "role_in_learning_progression": "用舞蹈/音乐片段激活节奏经验",
+          "expected_student_state_after": "学生有一个节奏词",
+          "recommended_duration_minutes": 8
+        },
+        {
+          "route_step_id": "R3",
+          "route_step_name": "收感受并转译",
+          "role_in_learning_progression": "把听觉和身体感受转成线条色彩",
+          "expected_student_state_after": "学生能说一个视觉转译理由",
+          "recommended_duration_minutes": 8
+        },
+        {
+          "route_step_id": "R4",
+          "route_step_name": "个人小练习",
+          "role_in_learning_progression": "形成可观察作品证据",
+          "expected_student_state_after": "学生完成一格节奏表达",
+          "recommended_duration_minutes": 14
+        },
+        {
+          "route_step_id": "R5",
+          "route_step_name": "展示与连接",
+          "role_in_learning_progression": "回到美术表达标准并接下一环节",
+          "expected_student_state_after": "学生知道如何继续完善画面",
+          "recommended_duration_minutes": 6
+        }
+      ],
+      "route_rationale": "先定焦点，再用候选资源触发感受，随后马上收束到视觉语言，避免学生只讨论舞蹈好不好看。",
+      "time_risk": "若交流过长，优先减少展示人数，不删探究证据。"
+    },
+    "errors": []
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "step": "TeachingRoutePlanner",
+    "ok": true,
+    "output": {
+      "teaching_route": [
+        {
+          "route_step_id": "R1",
+          "route_step_name": "唤起颜色经验",
+          "role_in_learning_progression": "从学生已有颜色经验进入感受问题",
+          "expected_student_state_after": "学生知道今天不只说颜色名",
+          "recommended_duration_minutes": 4
+        },
+        {
+          "route_step_id": "R2",
+          "route_step_name": "对比观察",
+          "role_in_learning_progression": "用图片/色卡建立冷暖直观差异",
+          "expected_student_state_after": "学生能说出一组感受词",
+          "recommended_duration_minutes": 8
+        },
+        {
+          "route_step_id": "R3",
+          "route_step_name": "色卡分类探究",
+          "role_in_learning_progression": "让学生用分类和理由处理卡点",
+          "expected_student_state_after": "学生能说明冷暖或情绪分类依据",
+          "recommended_duration_minutes": 10
+        },
+        {
+          "route_step_id": "R4",
+          "route_step_name": "表达小练习",
+          "role_in_learning_progression": "把理解迁移到个人色彩表达",
+          "expected_student_state_after": "学生能完成一组感受表达",
+          "recommended_duration_minutes": 13
+        },
+        {
+          "route_step_id": "R5",
+          "route_step_name": "分享证据",
+          "role_in_learning_progression": "用作品和学习单验证目标达成",
+          "expected_student_state_after": "学生能听懂同伴理由并修正",
+          "recommended_duration_minutes": 5
+        }
+      ],
+      "route_rationale": "从经验唤起到直观对比，再到小组分类和个人表达，逐步把颜色名称推进到感受理由。",
+      "time_risk": "若交流过长，优先减少展示人数，不删探究证据。"
+    },
+    "errors": []
+  }
+]

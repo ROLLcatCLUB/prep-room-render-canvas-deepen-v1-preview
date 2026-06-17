@@ -1,0 +1,17 @@
+{
+  "provider_called": false,
+  "model_called": false,
+  "strategy": "local_staged_rule_derivation",
+  "case_count": 3,
+  "aggregate": {
+    "case_count": 3,
+    "pipeline_pass_count": 3,
+    "standard_daily_pass": true,
+    "learning_problem_success_count": 3,
+    "target_shift_success_count": 3,
+    "classroom_events_success_count": 3,
+    "evidence_binding_success_count": 3,
+    "time_balance_success_count": 3,
+    "secret_scan_ok": true
+  }
+}

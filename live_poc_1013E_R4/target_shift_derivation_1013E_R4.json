@@ -1,0 +1,53 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "step": "TargetShiftDeriver",
+    "ok": true,
+    "output": {
+      "target_shift": {
+        "from_state": "能说颜色名称和喜欢不喜欢。",
+        "to_state": "能根据色彩带来的温暖、清凉、安静、热烈等感受进行分类并说明理由。",
+        "observable_behavior": "学生能把色卡或图片放入感受类别，并用一句话说明依据。",
+        "success_evidence": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+      },
+      "key_focus": "色彩感受分类与理由表达",
+      "key_difficulty": "冷暖是感受判断，不是背红黄蓝绿的分类表；学生需要通过情境、色卡和同伴理由建立判断依据。",
+      "teacher_review_required": true
+    },
+    "errors": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "step": "TargetShiftDeriver",
+    "ok": true,
+    "output": {
+      "target_shift": {
+        "from_state": "能说舞蹈或音乐很快、很好看。",
+        "to_state": "能抓住一个节奏特征，并用线条或色彩说明它带来的视觉感受。",
+        "observable_behavior": "学生能说出“我看到/听到的节奏像什么线条或颜色”，并完成一格节奏转译草图。",
+        "success_evidence": "学习单上的节奏词、线条/色彩选择和一句理由能互相对应。"
+      },
+      "key_focus": "节奏到视觉语言的转译",
+      "key_difficulty": "把注意力从动作热闹转到节奏特征",
+      "teacher_review_required": true
+    },
+    "errors": []
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "step": "TargetShiftDeriver",
+    "ok": true,
+    "output": {
+      "target_shift": {
+        "from_state": "能说颜色名称和喜欢不喜欢。",
+        "to_state": "能根据色彩带来的温暖、清凉、安静、热烈等感受进行分类并说明理由。",
+        "observable_behavior": "学生能把色卡或图片放入感受类别，并用一句话说明依据。",
+        "success_evidence": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+      },
+      "key_focus": "色彩感受分类与理由表达",
+      "key_difficulty": "如果只讲概念，学生会停在好看、漂亮，难以说出颜色带来的具体感受。",
+      "teacher_review_required": true
+    },
+    "errors": []
+  }
+]

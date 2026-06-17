@@ -1,0 +1,44 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "step": "LearningProblemDeriver",
+    "ok": true,
+    "output": {
+      "core_learning_problem": "学生把冷暖色当成颜色名称或固定答案，缺少从视觉感受到理由表达的连接。",
+      "real_stuck_point": "冷暖是感受判断，不是背红黄蓝绿的分类表；学生需要通过情境、色卡和同伴理由建立判断依据。",
+      "student_baseline": "学生知道常见颜色，也能说喜欢或不喜欢，但容易把冷暖色理解成颜色名称，缺少感受分类和理由表达。",
+      "why_this_lesson_matters": "本课要让学生从说颜色好看，走向能说颜色给自己的感觉以及为什么这样感受。",
+      "confidence": "high",
+      "needs_teacher_confirmation": true
+    },
+    "errors": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "step": "LearningProblemDeriver",
+    "ok": true,
+    "output": {
+      "core_learning_problem": "学生能感到节奏，但不一定能把节奏转译成线条疏密、方向变化和色彩强弱。",
+      "real_stuck_point": "注意力容易停在舞蹈动作是否好看，而不是观察节奏如何被艺术语言表现。",
+      "student_baseline": "学生能感到音乐或舞蹈热闹，但容易把注意力放在动作好看，未必能转到线条、色彩和节奏的视觉表达。",
+      "why_this_lesson_matters": "本课要把身体和听觉经验转成可画、可说、可评价的视觉表达。",
+      "confidence": "medium",
+      "needs_teacher_confirmation": true
+    },
+    "errors": []
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "step": "LearningProblemDeriver",
+    "ok": true,
+    "output": {
+      "core_learning_problem": "学生需要看得见、摸得着的材料来理解色彩感受，低资源条件下更要让观察和表达任务清楚。",
+      "real_stuck_point": "如果只讲概念，学生会停在好看、漂亮，难以说出颜色带来的具体感受。",
+      "student_baseline": "学生需要直观材料支撑，单靠口头解释会停在好看、漂亮等笼统表达。",
+      "why_this_lesson_matters": "低资源课堂仍要保住直观比较、表达支架和可观察证据。",
+      "confidence": "high",
+      "needs_teacher_confirmation": true
+    },
+    "errors": []
+  }
+]

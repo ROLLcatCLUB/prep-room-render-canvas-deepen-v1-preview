@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "step": "TimeRebalancer",
+    "ok": true,
+    "output": {
+      "target_minutes": 40,
+      "total_event_minutes": 40.0,
+      "time_balance_pass": true,
+      "rebalance_candidates": []
+    },
+    "errors": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "step": "TimeRebalancer",
+    "ok": true,
+    "output": {
+      "target_minutes": 40,
+      "total_event_minutes": 40.0,
+      "time_balance_pass": true,
+      "rebalance_candidates": []
+    },
+    "errors": []
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "step": "TimeRebalancer",
+    "ok": true,
+    "output": {
+      "target_minutes": 40,
+      "total_event_minutes": 40.0,
+      "time_balance_pass": true,
+      "rebalance_candidates": []
+    },
+    "errors": []
+  }
+]

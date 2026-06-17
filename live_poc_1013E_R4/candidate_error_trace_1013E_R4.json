@@ -1,0 +1,17 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "candidate_errors": [],
+    "contract_errors": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "candidate_errors": [],
+    "contract_errors": []
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "candidate_errors": [],
+    "contract_errors": []
+  }
+]

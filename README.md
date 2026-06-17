@@ -198,3 +198,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - What failed: the standard-daily main case and the teacher-provided dance/rhythm case did not produce parseable unfolding graph payloads in the final live POC.
 - Conclusion: do not enter `1013F` UI binding yet. Next stage should be `1013E_R4_MODEL_STRATEGY_ADJUSTMENT`, likely using a staged multi-call strategy instead of asking one call to generate the full unfolding graph.
 - Boundary: provider was called; no database write, memory write, Feishu write, formal apply, official export, official archive, UI binding, real knowledge-base retrieval, large ZIP, or main-project commit/push was performed.
+
+## 1013E_R4 Staged Lesson Derivation Pipeline
+
+- `high_quality_prep_system_market_research_and_classroom_reasoning_report_20260617.md` records the market and pedagogy research conclusion: Shiwei/Xiaobei should become a classroom reasoning collaboration system, not a faster lesson-plan generator.
+- `prep_room_1013E_R4_staged_lesson_derivation_pipeline_plan.md` records the R4 strategy shift: stop competitor research for now, stop one-call full lesson graph generation, and move to staged derivation.
+- `backend/xiaobei_ai/prep_room_staged_derivation_pipeline_1013E_R4.py` adds a local staged derivation pipeline: context pack, learning problem, target shift, evidence plan, teaching route, classroom events, event unfolding, time rebalance, evidence binding, effectiveness evaluation, and teacher review candidate.
+- `scripts/run_prep_room_1013e_r4_staged_derivation_pipeline.py` runs the 3-case R4 POC.
+- Output directory: `live_poc_1013E_R4/`.
+- Required files were generated: `1013E_R4_result.json`, `1013E_R4_report.md`, `case_results_1013E_R4.json`, `staged_pipeline_trace_1013E_R4.json`, `learning_problem_derivation_1013E_R4.json`, `target_shift_derivation_1013E_R4.json`, `evidence_plan_1013E_R4.json`, `teaching_route_plan_1013E_R4.json`, `classroom_event_generation_1013E_R4.json`, `event_unfolding_expansion_1013E_R4.json`, `time_rebalance_trace_1013E_R4.json`, `evidence_binding_trace_1013E_R4.json`, `effectiveness_eval_1013E_R4.json`, `candidate_error_trace_1013E_R4.json`, `provider_metrics_1013E_R4.json`, and `redacted_provider_trace_1013E_R4.json`.
+- Final status: `PASS_STAGED_LESSON_DERIVATION_PIPELINE`.
+- Benchmark summary: 3 cases, 3 pipeline passes; the main `standard_daily_cold_warm_more_visual` case passed.
+- Strategy note: R4 is local rule-based staged derivation first, so provider/model were not called in this pass. This proves the staged reasoning shape before reintroducing model calls or UI binding.
+- Boundary: no UI binding, no database write, no memory write, no Feishu write, no formal apply, no official export, no official archive, no real knowledge-base retrieval, and no raw model output was sent to frontend.

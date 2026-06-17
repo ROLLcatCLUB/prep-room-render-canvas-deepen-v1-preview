@@ -1,0 +1,3378 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "lesson_design_mode": "standard_daily",
+    "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+    "pipeline_pass": true,
+    "learning_problem_generated": true,
+    "target_shift_generated": true,
+    "classroom_events_generated": true,
+    "evidence_binding_pass": true,
+    "time_balance_pass": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "official_archive_created": false,
+    "provider_called": false,
+    "model_called": false,
+    "contract_errors": [],
+    "candidate_errors": [],
+    "effectiveness": {
+      "resource_purpose_score": 5,
+      "attention_focus_score": 5,
+      "teacher_guidance_score": 5,
+      "student_response_prediction_score": 5,
+      "scaffold_quality_score": 5,
+      "collection_method_reasoning_score": 5,
+      "media_material_timing_score": 5,
+      "assessment_evidence_score": 5,
+      "transition_script_score": 5,
+      "time_feasibility_score": 5,
+      "age_appropriateness_score": 5,
+      "overall_effectiveness_score": 5.0,
+      "pass": true,
+      "blockers": [],
+      "issues": [],
+      "time_balance": {
+        "target_minutes": 40,
+        "total_event_minutes": 40.0,
+        "time_balance_pass": true,
+        "rebalance_candidates": []
+      }
+    },
+    "candidate": {
+      "lesson_unfolding_graph": {
+        "lesson_design_mode": "standard_daily",
+        "design_context": {
+          "grade": "三年级",
+          "subject": "美术",
+          "lesson_title": "1-2《色彩的感觉》",
+          "unit_position": "unit_middle"
+        },
+        "cognitive_grounding": {
+          "core_learning_problem": "学生把冷暖色当成颜色名称或固定答案，缺少从视觉感受到理由表达的连接。",
+          "student_baseline": "学生知道常见颜色，也能说喜欢或不喜欢，但容易把冷暖色理解成颜色名称，缺少感受分类和理由表达。",
+          "real_stuck_point": "冷暖是感受判断，不是背红黄蓝绿的分类表；学生需要通过情境、色卡和同伴理由建立判断依据。",
+          "target_shift": {
+            "from_state": "能说颜色名称和喜欢不喜欢。",
+            "to_state": "能根据色彩带来的温暖、清凉、安静、热烈等感受进行分类并说明理由。",
+            "observable_behavior": "学生能把色卡或图片放入感受类别，并用一句话说明依据。",
+            "success_evidence": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+          },
+          "key_focus": "色彩感受分类与理由表达",
+          "key_difficulty": "冷暖是感受判断，不是背红黄蓝绿的分类表；学生需要通过情境、色卡和同伴理由建立判断依据。"
+        },
+        "constraints": {
+          "total_duration_minutes": 40,
+          "resource_budget": "medium",
+          "class_condition": "候选推演，不接真实课堂数据。",
+          "lesson_position": "unit_middle",
+          "material_conditions": [
+            "可使用黑板、图片、色卡、学习单",
+            "不接真实资料库"
+          ]
+        },
+        "main_event_sequence": [
+          "EVT_1",
+          "EVT_2",
+          "EVT_3",
+          "EVT_4",
+          "EVT_5"
+        ],
+        "classroom_events": [
+          {
+            "event_id": "EVT_1",
+            "event_name": "唤起颜色经验",
+            "event_type": "experience_evoke",
+            "learning_purpose": "把已有颜色经验转成感受问题。",
+            "duration": {
+              "recommended_minutes": 4,
+              "min_minutes": 2,
+              "max_minutes": 6,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "今天不急着分对错，先说颜色让你想到什么。",
+              "core_question": "看到这个颜色，你身体里先出现什么感觉？",
+              "student_task": "每人说一个颜色联想。",
+              "teacher_summary_sentence": "颜色不只叫红黄蓝，也会带来感受。"
+            },
+            "design_view": {
+              "learning_purpose": "把已有颜色经验转成感受问题。",
+              "design_intent": "把已有颜色经验转成感受问题。",
+              "student_state_before": "学生会说颜色名和喜好。",
+              "student_state_after": "学生知道今天要说颜色带来的感觉。",
+              "teacher_action": "展示两张生活图片，板书学生感受词。",
+              "student_action": "口头联想并听同伴词语。",
+              "big_screen_state": "展示两张冷暖对比图片。",
+              "textbook_or_material_state": "图片和色卡只做感受入口。",
+              "learning_sheet_state": "学习单暂不发，先口头收集。",
+              "assessment_evidence": "学生能说出至少一个感受词。",
+              "transition_from_previous": "承接已有颜色经验。",
+              "transition_to_next": "转入色卡对比，让感觉有依据。",
+              "risk_and_adjustment": "如果只说喜欢，追问像什么场景。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕颜色感受说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "图片/色卡",
+              "why_needed": "让抽象冷暖变直观。",
+              "attention_focus": "只看颜色带来的温度和情绪感。",
+              "fallback_if_unavailable": "用黑板画两个色块并口头联想。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_2",
+            "event_name": "对比观察",
+            "event_type": "comparison",
+            "learning_purpose": "建立冷暖差异的直观依据。",
+            "duration": {
+              "recommended_minutes": 8,
+              "min_minutes": 6,
+              "max_minutes": 10,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "只看颜色，别先看画得像不像。",
+              "core_question": "这两组颜色让你觉得哪里不一样？",
+              "student_task": "同桌选一组图，说出冷/暖或其他感受。",
+              "teacher_summary_sentence": "冷暖不是背表，是你能说出理由的感受判断。"
+            },
+            "design_view": {
+              "learning_purpose": "建立冷暖差异的直观依据。",
+              "design_intent": "建立冷暖差异的直观依据。",
+              "student_state_before": "学生有感受词但分类不稳。",
+              "student_state_after": "学生能发现同一画面换色后感受会变。",
+              "teacher_action": "引导学生比较两组色卡和图片。",
+              "student_action": "同桌讨论并举卡选择。",
+              "big_screen_state": "大屏或黑板呈现两组对比图。",
+              "textbook_or_material_state": "色卡按组发放。",
+              "learning_sheet_state": "学习单只露出感受词区。",
+              "assessment_evidence": "同桌能说出一组颜色差异理由。",
+              "transition_from_previous": "从词语进入比较。",
+              "transition_to_next": "转入小组分类探究。",
+              "risk_and_adjustment": "若学生抢答固定答案，换成情境图片追问理由。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕冷暖对比说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "冷暖图片和色卡",
+              "why_needed": "提供可比较对象。",
+              "attention_focus": "颜色变化如何改变感受。",
+              "fallback_if_unavailable": "教师在黑板贴两组彩纸。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_3",
+            "event_name": "色卡分类探究",
+            "event_type": "analysis",
+            "learning_purpose": "让学生用分类和理由处理卡点。",
+            "duration": {
+              "recommended_minutes": 10,
+              "min_minutes": 8,
+              "max_minutes": 12,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "你们不是给颜色找标准答案，而是给感受找证据。",
+              "core_question": "为什么这张色卡应该放在这里？",
+              "student_task": "小组把色卡贴到感受词下，并准备一句理由。",
+              "teacher_summary_sentence": "只要理由说得通，分类可以有不同想法。"
+            },
+            "design_view": {
+              "learning_purpose": "让学生用分类和理由处理卡点。",
+              "design_intent": "让学生用分类和理由处理卡点。",
+              "student_state_before": "学生能感受差异但理由松散。",
+              "student_state_after": "学生能把色卡放入感受类别并说明依据。",
+              "teacher_action": "巡视并追问学生分类依据。",
+              "student_action": "小组分类、移动色卡、记录理由。",
+              "big_screen_state": "黑板分成温暖、清凉、安静、热烈四区。",
+              "textbook_or_material_state": "色卡、图片、黑板磁贴。",
+              "learning_sheet_state": "学习单记录一组颜色和理由。",
+              "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+              "transition_from_previous": "从比较进入主动分类。",
+              "transition_to_next": "转入个人表达练习。",
+              "risk_and_adjustment": "若争论停在对错，提醒回到感受依据。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕色卡分类说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "色卡分组",
+              "why_needed": "让学生用动作完成判断。",
+              "attention_focus": "分类理由，不是贴得快。",
+              "fallback_if_unavailable": "学生在纸上写颜色名称代替贴卡。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_4",
+            "event_name": "表达小练习",
+            "event_type": "practice",
+            "learning_purpose": "把理解迁移到个人色彩表达。",
+            "duration": {
+              "recommended_minutes": 13,
+              "min_minutes": 11,
+              "max_minutes": 15,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "选两三种颜色，画出一种你想表达的感觉。",
+              "core_question": "你的颜色组合想让别人感到什么？",
+              "student_task": "完成一格小画，并写一句理由。",
+              "teacher_summary_sentence": "这句话就是你作品的证据。"
+            },
+            "design_view": {
+              "learning_purpose": "把理解迁移到个人色彩表达。",
+              "design_intent": "把理解迁移到个人色彩表达。",
+              "student_state_before": "学生已能分类但还未表达个人感受。",
+              "student_state_after": "学生能用颜色组合表达一种心情或场景。",
+              "teacher_action": "示范一句理由，不示范完整作品。",
+              "student_action": "个人完成小练习。",
+              "big_screen_state": "大屏保留句式：我用了...因为...。",
+              "textbook_or_material_state": "色卡作为参考，不再要求照抄。",
+              "learning_sheet_state": "学习单完成小画和理由句。",
+              "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+              "transition_from_previous": "从小组分类转到个人表达。",
+              "transition_to_next": "转入分享时看理由是否成立。",
+              "risk_and_adjustment": "若学生画太复杂，提醒只做一格感受练习。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕色彩表达说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "学习单",
+              "why_needed": "留下可观察证据。",
+              "attention_focus": "颜色和理由是否对应。",
+              "fallback_if_unavailable": "用作业纸画一格并口头说明。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_5",
+            "event_name": "分享证据",
+            "event_type": "sharing",
+            "learning_purpose": "用作品和理由验证目标达成。",
+            "duration": {
+              "recommended_minutes": 5,
+              "min_minutes": 3,
+              "max_minutes": 7,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "我们不评谁最好看，只听颜色和理由是否连得上。",
+              "core_question": "他的颜色让你感受到他说的意思了吗？",
+              "student_task": "两三位学生展示，小组补一句建议。",
+              "teacher_summary_sentence": "好作品不是颜色多，而是感受说得清。"
+            },
+            "design_view": {
+              "learning_purpose": "用作品和理由验证目标达成。",
+              "design_intent": "用作品和理由验证目标达成。",
+              "student_state_before": "学生完成小练习但还未校准表达。",
+              "student_state_after": "学生能听懂同伴理由并修正自己的表达。",
+              "teacher_action": "选择典型作品快速展示。",
+              "student_action": "展示、倾听、补充建议。",
+              "big_screen_state": "实物投影或举作品。",
+              "textbook_or_material_state": "学生作品和学习单。",
+              "learning_sheet_state": "学习单作为课后回收证据。",
+              "assessment_evidence": "学生能用理由评价同伴作品。",
+              "transition_from_previous": "承接个人小练习。",
+              "transition_to_next": "下节课可用这些感受理由深化创作。",
+              "risk_and_adjustment": "若时间不足，只展示一正一改两个样本。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕分享理由说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "学生作品",
+              "why_needed": "验证表达是否被理解。",
+              "attention_focus": "理由和颜色是否对应。",
+              "fallback_if_unavailable": "学生举作品口头说明。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          }
+        ],
+        "structure_rebalance_candidates": [],
+        "evidence_plan": [
+          {
+            "evidence_id": "EVID_COLOR_SORT",
+            "what_it_proves": "学生是否能依据感受而不是死记颜色分类。",
+            "collection_method": "小组把色卡或图片贴到感受词下方。",
+            "expected_student_output": "至少两张色卡归类，并能说出分类依据。",
+            "linked_target_shift": "学生能把色卡或图片放入感受类别，并用一句话说明依据。"
+          },
+          {
+            "evidence_id": "EVID_REASON_SENTENCE",
+            "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。",
+            "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+            "expected_student_output": "一条颜色、感受、理由相连的短句。",
+            "linked_target_shift": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+          }
+        ],
+        "evidence_bindings": [
+          {
+            "evidence_id": "EVID_COLOR_SORT",
+            "event_id": "EVT_3",
+            "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+            "collection_method": "小组把色卡或图片贴到感受词下方。",
+            "what_it_proves": "学生是否能依据感受而不是死记颜色分类。"
+          },
+          {
+            "evidence_id": "EVID_REASON_SENTENCE",
+            "event_id": "EVT_4",
+            "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+            "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+            "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。"
+          }
+        ],
+        "lesson_position_connection": {
+          "unit_start_entry": "",
+          "unit_middle_next_lesson_connection": "下一课可基于本课学习单，继续观察色彩/线条如何服务个人表达。",
+          "unit_end_closure": ""
+        },
+        "closure_plan": "用学生作品或学习单中的一句理由收束，不追求一次讲完概念。",
+        "next_lesson_connection": "保留学生证据，下一课先回看典型理由再进入创作深化。",
+        "quality_gate": {
+          "level": "ready_to_teach",
+          "teacher_review_required": true
+        },
+        "time_balance": {
+          "target_minutes": 40,
+          "total_event_minutes": 40.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        }
+      },
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "standard_daily_learning_problem",
+          "target_section": "学情分析",
+          "target_step_id": "",
+          "target_field": "学习卡点",
+          "patch_type": "revise",
+          "before_summary": "学生基础描述偏泛。",
+          "after_candidate": "冷暖是感受判断，不是背红黄蓝绿的分类表；学生需要通过情境、色卡和同伴理由建立判断依据。",
+          "reasoning_basis": [
+            "教师输入",
+            "教材与课堂经验推测",
+            "小备推演"
+          ],
+          "impact_scope": [
+            "教学过程",
+            "学习单",
+            "评价证据"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "standard_daily_teaching_route",
+          "target_section": "教学过程",
+          "target_step_id": "classroom_events",
+          "target_field": "课堂事件",
+          "patch_type": "restructure",
+          "before_summary": "流程可以更明确地服务目标变化。",
+          "after_candidate": "学生能把色卡或图片放入感受类别，并用一句话说明依据。",
+          "reasoning_basis": [
+            "目标变化",
+            "证据计划",
+            "时间重算"
+          ],
+          "impact_scope": [
+            "教师动作",
+            "学生任务",
+            "大屏/黑板",
+            "评价证据"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "教师话术从讲概念转为提醒学生看什么、说什么、如何给理由。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "student_activity",
+          "impact_summary": "学生任务从听讲转为观察、分类、表达和说明理由。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "根据资源条件使用大屏、黑板或图片，核心是聚焦观察点。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "handout",
+          "impact_summary": "学习单只保留关键证据格，避免变成填空表。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "证据来自分类结果、理由句、草图和同伴能否读懂。",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "ready_to_teach",
+        "passed_items": [
+          "学习问题具体",
+          "目标可观察",
+          "课堂事件有证据绑定",
+          "时间由代码计算"
+        ],
+        "missing_items": [
+          "需要教师确认资源和班级真实状态"
+        ],
+        "risk_items": [
+          "学生表达可能停在好看，需要支架句式"
+        ],
+        "next_best_action": "请老师确认候选课堂事件和资源条件后再进入 UI 绑定。"
+      },
+      "teacher_review_candidate": {
+        "summary": "已形成分阶段课堂展开候选，等待教师确认。",
+        "edit_target": "教学过程",
+        "teacher_review_required": true
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "staged_trace": [
+      {
+        "step": "LessonContextPack",
+        "ok": true,
+        "output": {
+          "lesson_title": "1-2《色彩的感觉》",
+          "grade": "三年级",
+          "subject": "美术",
+          "duration_minutes": 40,
+          "lesson_design_mode": "standard_daily",
+          "unit_position": "unit_middle",
+          "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+          "student_baseline": "学生知道常见颜色，也能说喜欢或不喜欢，但容易把冷暖色理解成颜色名称，缺少感受分类和理由表达。",
+          "resource_constraints": [
+            "可使用黑板、图片、色卡、学习单",
+            "不接真实资料库"
+          ],
+          "reference_candidates": [
+            {
+              "source_label": "资料室候选",
+              "use_policy": "reference_only",
+              "title": "本地色彩单元课例字段样本"
+            },
+            {
+              "source_label": "资料室候选",
+              "use_policy": "reference_only",
+              "title": "教材图例候选"
+            },
+            {
+              "source_label": "资料室候选",
+              "use_policy": "reference_only",
+              "title": "色卡活动样本"
+            }
+          ],
+          "source_labels": [
+            "教材",
+            "课标",
+            "教师输入",
+            "小备推测",
+            "资料室候选"
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "LearningProblemDeriver",
+        "ok": true,
+        "output": {
+          "core_learning_problem": "学生把冷暖色当成颜色名称或固定答案，缺少从视觉感受到理由表达的连接。",
+          "real_stuck_point": "冷暖是感受判断，不是背红黄蓝绿的分类表；学生需要通过情境、色卡和同伴理由建立判断依据。",
+          "student_baseline": "学生知道常见颜色，也能说喜欢或不喜欢，但容易把冷暖色理解成颜色名称，缺少感受分类和理由表达。",
+          "why_this_lesson_matters": "本课要让学生从说颜色好看，走向能说颜色给自己的感觉以及为什么这样感受。",
+          "confidence": "high",
+          "needs_teacher_confirmation": true
+        },
+        "errors": []
+      },
+      {
+        "step": "TargetShiftDeriver",
+        "ok": true,
+        "output": {
+          "target_shift": {
+            "from_state": "能说颜色名称和喜欢不喜欢。",
+            "to_state": "能根据色彩带来的温暖、清凉、安静、热烈等感受进行分类并说明理由。",
+            "observable_behavior": "学生能把色卡或图片放入感受类别，并用一句话说明依据。",
+            "success_evidence": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+          },
+          "key_focus": "色彩感受分类与理由表达",
+          "key_difficulty": "冷暖是感受判断，不是背红黄蓝绿的分类表；学生需要通过情境、色卡和同伴理由建立判断依据。",
+          "teacher_review_required": true
+        },
+        "errors": []
+      },
+      {
+        "step": "EvidencePlanDeriver",
+        "ok": true,
+        "output": {
+          "evidence_plan": [
+            {
+              "evidence_id": "EVID_COLOR_SORT",
+              "what_it_proves": "学生是否能依据感受而不是死记颜色分类。",
+              "collection_method": "小组把色卡或图片贴到感受词下方。",
+              "expected_student_output": "至少两张色卡归类，并能说出分类依据。",
+              "linked_target_shift": "学生能把色卡或图片放入感受类别，并用一句话说明依据。"
+            },
+            {
+              "evidence_id": "EVID_REASON_SENTENCE",
+              "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。",
+              "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+              "expected_student_output": "一条颜色、感受、理由相连的短句。",
+              "linked_target_shift": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+            }
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "TeachingRoutePlanner",
+        "ok": true,
+        "output": {
+          "teaching_route": [
+            {
+              "route_step_id": "R1",
+              "route_step_name": "唤起颜色经验",
+              "role_in_learning_progression": "从学生已有颜色经验进入感受问题",
+              "expected_student_state_after": "学生知道今天不只说颜色名",
+              "recommended_duration_minutes": 4
+            },
+            {
+              "route_step_id": "R2",
+              "route_step_name": "对比观察",
+              "role_in_learning_progression": "用图片/色卡建立冷暖直观差异",
+              "expected_student_state_after": "学生能说出一组感受词",
+              "recommended_duration_minutes": 8
+            },
+            {
+              "route_step_id": "R3",
+              "route_step_name": "色卡分类探究",
+              "role_in_learning_progression": "让学生用分类和理由处理卡点",
+              "expected_student_state_after": "学生能说明冷暖或情绪分类依据",
+              "recommended_duration_minutes": 10
+            },
+            {
+              "route_step_id": "R4",
+              "route_step_name": "表达小练习",
+              "role_in_learning_progression": "把理解迁移到个人色彩表达",
+              "expected_student_state_after": "学生能完成一组感受表达",
+              "recommended_duration_minutes": 13
+            },
+            {
+              "route_step_id": "R5",
+              "route_step_name": "分享证据",
+              "role_in_learning_progression": "用作品和学习单验证目标达成",
+              "expected_student_state_after": "学生能听懂同伴理由并修正",
+              "recommended_duration_minutes": 5
+            }
+          ],
+          "route_rationale": "从经验唤起到直观对比，再到小组分类和个人表达，逐步把颜色名称推进到感受理由。",
+          "time_risk": "若交流过长，优先减少展示人数，不删探究证据。"
+        },
+        "errors": []
+      },
+      {
+        "step": "ClassroomEventGenerator",
+        "ok": true,
+        "output": {
+          "classroom_events": [
+            {
+              "event_id": "EVT_1",
+              "event_name": "唤起颜色经验",
+              "event_type": "experience_evoke",
+              "learning_purpose": "从学生已有颜色经验进入感受问题",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生知道今天不只说颜色名",
+              "recommended_minutes": 4,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_2",
+              "event_name": "对比观察",
+              "event_type": "comparison",
+              "learning_purpose": "用图片/色卡建立冷暖直观差异",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生能说出一组感受词",
+              "recommended_minutes": 8,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_3",
+              "event_name": "色卡分类探究",
+              "event_type": "analysis",
+              "learning_purpose": "让学生用分类和理由处理卡点",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生能说明冷暖或情绪分类依据",
+              "recommended_minutes": 10,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_4",
+              "event_name": "表达小练习",
+              "event_type": "practice",
+              "learning_purpose": "把理解迁移到个人色彩表达",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生能完成一组感受表达",
+              "recommended_minutes": 13,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_5",
+              "event_name": "分享证据",
+              "event_type": "sharing",
+              "learning_purpose": "用作品和学习单验证目标达成",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生能听懂同伴理由并修正",
+              "recommended_minutes": 5,
+              "teacher_review_required": true
+            }
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "EventUnfoldingExpander",
+        "ok": true,
+        "output": {
+          "classroom_events": [
+            {
+              "event_id": "EVT_1",
+              "event_name": "唤起颜色经验",
+              "event_type": "experience_evoke",
+              "learning_purpose": "把已有颜色经验转成感受问题。",
+              "duration": {
+                "recommended_minutes": 4,
+                "min_minutes": 2,
+                "max_minutes": 6,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "今天不急着分对错，先说颜色让你想到什么。",
+                "core_question": "看到这个颜色，你身体里先出现什么感觉？",
+                "student_task": "每人说一个颜色联想。",
+                "teacher_summary_sentence": "颜色不只叫红黄蓝，也会带来感受。"
+              },
+              "design_view": {
+                "learning_purpose": "把已有颜色经验转成感受问题。",
+                "design_intent": "把已有颜色经验转成感受问题。",
+                "student_state_before": "学生会说颜色名和喜好。",
+                "student_state_after": "学生知道今天要说颜色带来的感觉。",
+                "teacher_action": "展示两张生活图片，板书学生感受词。",
+                "student_action": "口头联想并听同伴词语。",
+                "big_screen_state": "展示两张冷暖对比图片。",
+                "textbook_or_material_state": "图片和色卡只做感受入口。",
+                "learning_sheet_state": "学习单暂不发，先口头收集。",
+                "assessment_evidence": "学生能说出至少一个感受词。",
+                "transition_from_previous": "承接已有颜色经验。",
+                "transition_to_next": "转入色卡对比，让感觉有依据。",
+                "risk_and_adjustment": "如果只说喜欢，追问像什么场景。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕颜色感受说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "图片/色卡",
+                "why_needed": "让抽象冷暖变直观。",
+                "attention_focus": "只看颜色带来的温度和情绪感。",
+                "fallback_if_unavailable": "用黑板画两个色块并口头联想。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_2",
+              "event_name": "对比观察",
+              "event_type": "comparison",
+              "learning_purpose": "建立冷暖差异的直观依据。",
+              "duration": {
+                "recommended_minutes": 8,
+                "min_minutes": 6,
+                "max_minutes": 10,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "只看颜色，别先看画得像不像。",
+                "core_question": "这两组颜色让你觉得哪里不一样？",
+                "student_task": "同桌选一组图，说出冷/暖或其他感受。",
+                "teacher_summary_sentence": "冷暖不是背表，是你能说出理由的感受判断。"
+              },
+              "design_view": {
+                "learning_purpose": "建立冷暖差异的直观依据。",
+                "design_intent": "建立冷暖差异的直观依据。",
+                "student_state_before": "学生有感受词但分类不稳。",
+                "student_state_after": "学生能发现同一画面换色后感受会变。",
+                "teacher_action": "引导学生比较两组色卡和图片。",
+                "student_action": "同桌讨论并举卡选择。",
+                "big_screen_state": "大屏或黑板呈现两组对比图。",
+                "textbook_or_material_state": "色卡按组发放。",
+                "learning_sheet_state": "学习单只露出感受词区。",
+                "assessment_evidence": "同桌能说出一组颜色差异理由。",
+                "transition_from_previous": "从词语进入比较。",
+                "transition_to_next": "转入小组分类探究。",
+                "risk_and_adjustment": "若学生抢答固定答案，换成情境图片追问理由。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕冷暖对比说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "冷暖图片和色卡",
+                "why_needed": "提供可比较对象。",
+                "attention_focus": "颜色变化如何改变感受。",
+                "fallback_if_unavailable": "教师在黑板贴两组彩纸。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_3",
+              "event_name": "色卡分类探究",
+              "event_type": "analysis",
+              "learning_purpose": "让学生用分类和理由处理卡点。",
+              "duration": {
+                "recommended_minutes": 10,
+                "min_minutes": 8,
+                "max_minutes": 12,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "你们不是给颜色找标准答案，而是给感受找证据。",
+                "core_question": "为什么这张色卡应该放在这里？",
+                "student_task": "小组把色卡贴到感受词下，并准备一句理由。",
+                "teacher_summary_sentence": "只要理由说得通，分类可以有不同想法。"
+              },
+              "design_view": {
+                "learning_purpose": "让学生用分类和理由处理卡点。",
+                "design_intent": "让学生用分类和理由处理卡点。",
+                "student_state_before": "学生能感受差异但理由松散。",
+                "student_state_after": "学生能把色卡放入感受类别并说明依据。",
+                "teacher_action": "巡视并追问学生分类依据。",
+                "student_action": "小组分类、移动色卡、记录理由。",
+                "big_screen_state": "黑板分成温暖、清凉、安静、热烈四区。",
+                "textbook_or_material_state": "色卡、图片、黑板磁贴。",
+                "learning_sheet_state": "学习单记录一组颜色和理由。",
+                "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+                "transition_from_previous": "从比较进入主动分类。",
+                "transition_to_next": "转入个人表达练习。",
+                "risk_and_adjustment": "若争论停在对错，提醒回到感受依据。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕色卡分类说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "色卡分组",
+                "why_needed": "让学生用动作完成判断。",
+                "attention_focus": "分类理由，不是贴得快。",
+                "fallback_if_unavailable": "学生在纸上写颜色名称代替贴卡。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_4",
+              "event_name": "表达小练习",
+              "event_type": "practice",
+              "learning_purpose": "把理解迁移到个人色彩表达。",
+              "duration": {
+                "recommended_minutes": 13,
+                "min_minutes": 11,
+                "max_minutes": 15,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "选两三种颜色，画出一种你想表达的感觉。",
+                "core_question": "你的颜色组合想让别人感到什么？",
+                "student_task": "完成一格小画，并写一句理由。",
+                "teacher_summary_sentence": "这句话就是你作品的证据。"
+              },
+              "design_view": {
+                "learning_purpose": "把理解迁移到个人色彩表达。",
+                "design_intent": "把理解迁移到个人色彩表达。",
+                "student_state_before": "学生已能分类但还未表达个人感受。",
+                "student_state_after": "学生能用颜色组合表达一种心情或场景。",
+                "teacher_action": "示范一句理由，不示范完整作品。",
+                "student_action": "个人完成小练习。",
+                "big_screen_state": "大屏保留句式：我用了...因为...。",
+                "textbook_or_material_state": "色卡作为参考，不再要求照抄。",
+                "learning_sheet_state": "学习单完成小画和理由句。",
+                "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+                "transition_from_previous": "从小组分类转到个人表达。",
+                "transition_to_next": "转入分享时看理由是否成立。",
+                "risk_and_adjustment": "若学生画太复杂，提醒只做一格感受练习。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕色彩表达说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "学习单",
+                "why_needed": "留下可观察证据。",
+                "attention_focus": "颜色和理由是否对应。",
+                "fallback_if_unavailable": "用作业纸画一格并口头说明。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_5",
+              "event_name": "分享证据",
+              "event_type": "sharing",
+              "learning_purpose": "用作品和理由验证目标达成。",
+              "duration": {
+                "recommended_minutes": 5,
+                "min_minutes": 3,
+                "max_minutes": 7,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "我们不评谁最好看，只听颜色和理由是否连得上。",
+                "core_question": "他的颜色让你感受到他说的意思了吗？",
+                "student_task": "两三位学生展示，小组补一句建议。",
+                "teacher_summary_sentence": "好作品不是颜色多，而是感受说得清。"
+              },
+              "design_view": {
+                "learning_purpose": "用作品和理由验证目标达成。",
+                "design_intent": "用作品和理由验证目标达成。",
+                "student_state_before": "学生完成小练习但还未校准表达。",
+                "student_state_after": "学生能听懂同伴理由并修正自己的表达。",
+                "teacher_action": "选择典型作品快速展示。",
+                "student_action": "展示、倾听、补充建议。",
+                "big_screen_state": "实物投影或举作品。",
+                "textbook_or_material_state": "学生作品和学习单。",
+                "learning_sheet_state": "学习单作为课后回收证据。",
+                "assessment_evidence": "学生能用理由评价同伴作品。",
+                "transition_from_previous": "承接个人小练习。",
+                "transition_to_next": "下节课可用这些感受理由深化创作。",
+                "risk_and_adjustment": "若时间不足，只展示一正一改两个样本。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕分享理由说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "学生作品",
+                "why_needed": "验证表达是否被理解。",
+                "attention_focus": "理由和颜色是否对应。",
+                "fallback_if_unavailable": "学生举作品口头说明。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            }
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "TimeRebalancer",
+        "ok": true,
+        "output": {
+          "target_minutes": 40,
+          "total_event_minutes": 40.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        },
+        "errors": []
+      },
+      {
+        "step": "EvidenceBinder",
+        "ok": true,
+        "output": {
+          "evidence_bindings": [
+            {
+              "evidence_id": "EVID_COLOR_SORT",
+              "event_id": "EVT_3",
+              "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+              "collection_method": "小组把色卡或图片贴到感受词下方。",
+              "what_it_proves": "学生是否能依据感受而不是死记颜色分类。"
+            },
+            {
+              "evidence_id": "EVID_REASON_SENTENCE",
+              "event_id": "EVT_4",
+              "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+              "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+              "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。"
+            }
+          ],
+          "binding_pass": true,
+          "blockers": []
+        },
+        "errors": []
+      },
+      {
+        "step": "EffectivenessEvaluator",
+        "ok": true,
+        "output": {
+          "contract_errors": [],
+          "effectiveness": {
+            "resource_purpose_score": 5,
+            "attention_focus_score": 5,
+            "teacher_guidance_score": 5,
+            "student_response_prediction_score": 5,
+            "scaffold_quality_score": 5,
+            "collection_method_reasoning_score": 5,
+            "media_material_timing_score": 5,
+            "assessment_evidence_score": 5,
+            "transition_script_score": 5,
+            "time_feasibility_score": 5,
+            "age_appropriateness_score": 5,
+            "overall_effectiveness_score": 5.0,
+            "pass": true,
+            "blockers": [],
+            "issues": [],
+            "time_balance": {
+              "target_minutes": 40,
+              "total_event_minutes": 40.0,
+              "time_balance_pass": true,
+              "rebalance_candidates": []
+            }
+          }
+        },
+        "errors": []
+      }
+    ]
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "lesson_design_mode": "standard_daily",
+    "teacher_input": "我想放一段美术和音乐结合的舞蹈，让学生感受节奏，再引到线条和色彩表现。帮我设计这一段怎么展开。",
+    "pipeline_pass": true,
+    "learning_problem_generated": true,
+    "target_shift_generated": true,
+    "classroom_events_generated": true,
+    "evidence_binding_pass": true,
+    "time_balance_pass": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "official_archive_created": false,
+    "provider_called": false,
+    "model_called": false,
+    "contract_errors": [],
+    "candidate_errors": [],
+    "effectiveness": {
+      "resource_purpose_score": 5,
+      "attention_focus_score": 5,
+      "teacher_guidance_score": 5,
+      "student_response_prediction_score": 5,
+      "scaffold_quality_score": 5,
+      "collection_method_reasoning_score": 5,
+      "media_material_timing_score": 5,
+      "assessment_evidence_score": 5,
+      "transition_script_score": 5,
+      "time_feasibility_score": 5,
+      "age_appropriateness_score": 5,
+      "overall_effectiveness_score": 5.0,
+      "pass": true,
+      "blockers": [],
+      "issues": [],
+      "time_balance": {
+        "target_minutes": 40,
+        "total_event_minutes": 40.0,
+        "time_balance_pass": true,
+        "rebalance_candidates": []
+      }
+    },
+    "candidate": {
+      "lesson_unfolding_graph": {
+        "lesson_design_mode": "standard_daily",
+        "design_context": {
+          "grade": "三年级",
+          "subject": "美术",
+          "lesson_title": "节奏与线条色彩表现",
+          "unit_position": "unit_middle"
+        },
+        "cognitive_grounding": {
+          "core_learning_problem": "学生能感到节奏，但不一定能把节奏转译成线条疏密、方向变化和色彩强弱。",
+          "student_baseline": "学生能感到音乐或舞蹈热闹，但容易把注意力放在动作好看，未必能转到线条、色彩和节奏的视觉表达。",
+          "real_stuck_point": "注意力容易停在舞蹈动作是否好看，而不是观察节奏如何被艺术语言表现。",
+          "target_shift": {
+            "from_state": "能说舞蹈或音乐很快、很好看。",
+            "to_state": "能抓住一个节奏特征，并用线条或色彩说明它带来的视觉感受。",
+            "observable_behavior": "学生能说出“我看到/听到的节奏像什么线条或颜色”，并完成一格节奏转译草图。",
+            "success_evidence": "学习单上的节奏词、线条/色彩选择和一句理由能互相对应。"
+          },
+          "key_focus": "节奏到视觉语言的转译",
+          "key_difficulty": "把注意力从动作热闹转到节奏特征"
+        },
+        "constraints": {
+          "total_duration_minutes": 40,
+          "resource_budget": "medium",
+          "class_condition": "候选推演，不接真实课堂数据。",
+          "lesson_position": "unit_middle",
+          "material_conditions": [
+            "视频是教师提出的候选资源，不是默认资源",
+            "必须准备无视频替代方案"
+          ]
+        },
+        "main_event_sequence": [
+          "EVT_1",
+          "EVT_2",
+          "EVT_3",
+          "EVT_4",
+          "EVT_5"
+        ],
+        "classroom_events": [
+          {
+            "event_id": "EVT_1",
+            "event_name": "定观看焦点",
+            "event_type": "experience_evoke",
+            "learning_purpose": "先把资源目的说清，避免学生看热闹。",
+            "duration": {
+              "recommended_minutes": 4,
+              "min_minutes": 2,
+              "max_minutes": 6,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "等会儿只抓一个问题：节奏是跳的、流的，还是停顿的？",
+              "core_question": "你准备听/看哪一种节奏变化？",
+              "student_task": "先在学习单圈一个观察词。",
+              "teacher_summary_sentence": "有了焦点，资源才不会散。"
+            },
+            "design_view": {
+              "learning_purpose": "先把资源目的说清，避免学生看热闹。",
+              "design_intent": "先把资源目的说清，避免学生看热闹。",
+              "student_state_before": "学生期待看舞蹈或视频。",
+              "student_state_after": "学生知道要抓节奏而不是评价动作。",
+              "teacher_action": "说明观看任务，不评价舞蹈好坏。",
+              "student_action": "圈选观察词。",
+              "big_screen_state": "黑板写三类节奏词。",
+              "textbook_or_material_state": "资源暂不播放，先定观察焦点。",
+              "learning_sheet_state": "学习单出现节奏词。",
+              "assessment_evidence": "学生能选一个观察焦点。",
+              "transition_from_previous": "承接教师资源设想。",
+              "transition_to_next": "转入短资源感受。",
+              "risk_and_adjustment": "如果学生只问视频内容，重复观察任务。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕节奏焦点说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "教师提出的舞蹈/音乐候选",
+              "why_needed": "只有当它能提供清楚节奏变化时才使用。",
+              "attention_focus": "节奏变化，不看动作好不好看。",
+              "fallback_if_unavailable": "教师用拍手快慢和线条板书代替。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_2",
+            "event_name": "短资源感受",
+            "event_type": "comparison",
+            "learning_purpose": "用短资源激活节奏经验。",
+            "duration": {
+              "recommended_minutes": 8,
+              "min_minutes": 6,
+              "max_minutes": 10,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "只看30秒，看到节奏变化就记一个词。",
+              "core_question": "哪一处节奏最明显？",
+              "student_task": "观看或听一小段，写一个节奏词。",
+              "teacher_summary_sentence": "一个词够了，后面要把它变成线条。"
+            },
+            "design_view": {
+              "learning_purpose": "用短资源激活节奏经验。",
+              "design_intent": "用短资源激活节奏经验。",
+              "student_state_before": "学生有观察焦点但尚未形成视觉联想。",
+              "student_state_after": "学生能写下一个节奏词和初步感受。",
+              "teacher_action": "播放短片段或用拍手替代。",
+              "student_action": "观看、记录、同桌说。",
+              "big_screen_state": "大屏只放短片段或黑板节奏线。",
+              "textbook_or_material_state": "若放视频，只截取短段。",
+              "learning_sheet_state": "学习单记录节奏词。",
+              "assessment_evidence": "EVID_FOCUS_WORD：节奏词和一句理由。",
+              "transition_from_previous": "从焦点进入体验。",
+              "transition_to_next": "转入线条色彩转译。",
+              "risk_and_adjustment": "若学生讨论动作漂亮，立刻回到节奏词。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕节奏感受说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "30秒片段或拍手节奏",
+              "why_needed": "提供共同体验。",
+              "attention_focus": "快慢、停顿、重复。",
+              "fallback_if_unavailable": "全班拍手两种节奏并观察手势轨迹。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_3",
+            "event_name": "收感受并转译",
+            "event_type": "analysis",
+            "learning_purpose": "把听觉和身体经验转成视觉语言。",
+            "duration": {
+              "recommended_minutes": 8,
+              "min_minutes": 6,
+              "max_minutes": 10,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "如果这个节奏变成线条，它会是什么样？",
+              "core_question": "快节奏像密密的短线，还是长长的流线？为什么？",
+              "student_task": "用手势在空中画，再在纸上试一条线。",
+              "teacher_summary_sentence": "先用一条线说清楚，不急着画完整作品。"
+            },
+            "design_view": {
+              "learning_purpose": "把听觉和身体经验转成视觉语言。",
+              "design_intent": "把听觉和身体经验转成视觉语言。",
+              "student_state_before": "学生有节奏词但不会画。",
+              "student_state_after": "学生能把一个节奏词对应到线条或颜色。",
+              "teacher_action": "示范词到线条的转换，不给固定答案。",
+              "student_action": "空中比划并画一条线。",
+              "big_screen_state": "黑板列出节奏词到线条的多种可能。",
+              "textbook_or_material_state": "黑板和粉笔即可。",
+              "learning_sheet_state": "学习单完成一条试画线。",
+              "assessment_evidence": "学生能说明线条和节奏词的关系。",
+              "transition_from_previous": "从资源感受进入美术表达。",
+              "transition_to_next": "转入个人小练习。",
+              "risk_and_adjustment": "若转译过难，给二选一线条让学生选。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕视觉转译说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "黑板示范",
+              "why_needed": "降低从听觉到视觉的跨度。",
+              "attention_focus": "线条疏密方向与节奏的关系。",
+              "fallback_if_unavailable": "仍可用粉笔画两种线让学生比较。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_4",
+            "event_name": "个人小练习",
+            "event_type": "practice",
+            "learning_purpose": "形成可观察的节奏表达证据。",
+            "duration": {
+              "recommended_minutes": 14,
+              "min_minutes": 12,
+              "max_minutes": 16,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "选一个节奏词，用线条和一两种颜色画出来。",
+              "core_question": "别人看你的画，能猜到你的节奏词吗？",
+              "student_task": "完成一格节奏表达草图。",
+              "teacher_summary_sentence": "画面可以简单，但线条和颜色要有理由。"
+            },
+            "design_view": {
+              "learning_purpose": "形成可观察的节奏表达证据。",
+              "design_intent": "形成可观察的节奏表达证据。",
+              "student_state_before": "学生会试一条线但作品表达未完成。",
+              "student_state_after": "学生能完成一格节奏画面并配一句说明。",
+              "teacher_action": "巡视时问理由，不替学生改画。",
+              "student_action": "个人创作并写一句说明。",
+              "big_screen_state": "大屏保留句式。",
+              "textbook_or_material_state": "材料为纸和彩笔。",
+              "learning_sheet_state": "学习单完成小草图和说明。",
+              "assessment_evidence": "EVID_VISUAL_TRANSLATION：草图与理由对应。",
+              "transition_from_previous": "从共同转译进入个人表达。",
+              "transition_to_next": "转入展示校准。",
+              "risk_and_adjustment": "若学生画成具体舞蹈人物，提醒回到节奏线条。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕节奏表达说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "学习单/纸笔",
+              "why_needed": "留下目标达成证据。",
+              "attention_focus": "线条色彩是否服务节奏词。",
+              "fallback_if_unavailable": "普通作业纸分一格完成。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_5",
+            "event_name": "展示与连接",
+            "event_type": "sharing",
+            "learning_purpose": "用同伴猜测校准表达，并接到后续完整创作。",
+            "duration": {
+              "recommended_minutes": 6,
+              "min_minutes": 4,
+              "max_minutes": 8,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "我们先猜节奏，再听作者说理由。",
+              "core_question": "你从哪条线或哪个颜色猜出来的？",
+              "student_task": "两位学生展示，其他学生先猜再补充。",
+              "teacher_summary_sentence": "能被别人看出节奏，说明视觉语言开始成立。"
+            },
+            "design_view": {
+              "learning_purpose": "用同伴猜测校准表达，并接到后续完整创作。",
+              "design_intent": "用同伴猜测校准表达，并接到后续完整创作。",
+              "student_state_before": "学生完成草图但表达效果未校准。",
+              "student_state_after": "学生知道如何让节奏表达更清楚。",
+              "teacher_action": "组织猜测和作者说明。",
+              "student_action": "展示、猜测、修正。",
+              "big_screen_state": "实物投影或举纸。",
+              "textbook_or_material_state": "学生草图。",
+              "learning_sheet_state": "学习单作为下一环节创作依据。",
+              "assessment_evidence": "学生能指出作品中的节奏证据。",
+              "transition_from_previous": "承接个人小练习。",
+              "transition_to_next": "下一环节可把一格草图扩展成完整作品。",
+              "risk_and_adjustment": "若时间不足，只展示一个清楚样本和一个需要调整样本。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕展示校准说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "学生草图",
+              "why_needed": "验证视觉表达是否可读。",
+              "attention_focus": "别人从哪里看出节奏。",
+              "fallback_if_unavailable": "同桌互猜代替全班展示。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          }
+        ],
+        "structure_rebalance_candidates": [],
+        "evidence_plan": [
+          {
+            "evidence_id": "EVID_FOCUS_WORD",
+            "what_it_proves": "学生是否把注意力放在节奏特征而不是动作好看。",
+            "collection_method": "观看后先写一个节奏词，再口头补一句理由。",
+            "expected_student_output": "快、密、跳、缓、流动等词语及理由。",
+            "linked_target_shift": "学生能说出“我看到/听到的节奏像什么线条或颜色”，并完成一格节奏转译草图。"
+          },
+          {
+            "evidence_id": "EVID_VISUAL_TRANSLATION",
+            "what_it_proves": "学生能否把节奏转成线条或色彩。",
+            "collection_method": "学习单一格小草图和同桌说明。",
+            "expected_student_output": "线条疏密、方向或色彩强弱与节奏词对应。",
+            "linked_target_shift": "学习单上的节奏词、线条/色彩选择和一句理由能互相对应。"
+          }
+        ],
+        "evidence_bindings": [
+          {
+            "evidence_id": "EVID_FOCUS_WORD",
+            "event_id": "EVT_2",
+            "assessment_evidence": "EVID_FOCUS_WORD：节奏词和一句理由。",
+            "collection_method": "观看后先写一个节奏词，再口头补一句理由。",
+            "what_it_proves": "学生是否把注意力放在节奏特征而不是动作好看。"
+          },
+          {
+            "evidence_id": "EVID_VISUAL_TRANSLATION",
+            "event_id": "EVT_4",
+            "assessment_evidence": "EVID_VISUAL_TRANSLATION：草图与理由对应。",
+            "collection_method": "学习单一格小草图和同桌说明。",
+            "what_it_proves": "学生能否把节奏转成线条或色彩。"
+          }
+        ],
+        "lesson_position_connection": {
+          "unit_start_entry": "",
+          "unit_middle_next_lesson_connection": "下一课可基于本课学习单，继续观察色彩/线条如何服务个人表达。",
+          "unit_end_closure": ""
+        },
+        "closure_plan": "用学生作品或学习单中的一句理由收束，不追求一次讲完概念。",
+        "next_lesson_connection": "保留学生证据，下一课先回看典型理由再进入创作深化。",
+        "quality_gate": {
+          "level": "ready_to_teach",
+          "teacher_review_required": true
+        },
+        "time_balance": {
+          "target_minutes": 40,
+          "total_event_minutes": 40.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        }
+      },
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "standard_daily_learning_problem",
+          "target_section": "学情分析",
+          "target_step_id": "",
+          "target_field": "学习卡点",
+          "patch_type": "revise",
+          "before_summary": "学生基础描述偏泛。",
+          "after_candidate": "注意力容易停在舞蹈动作是否好看，而不是观察节奏如何被艺术语言表现。",
+          "reasoning_basis": [
+            "教师输入",
+            "教材与课堂经验推测",
+            "小备推演"
+          ],
+          "impact_scope": [
+            "教学过程",
+            "学习单",
+            "评价证据"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "standard_daily_teaching_route",
+          "target_section": "教学过程",
+          "target_step_id": "classroom_events",
+          "target_field": "课堂事件",
+          "patch_type": "restructure",
+          "before_summary": "流程可以更明确地服务目标变化。",
+          "after_candidate": "学生能说出“我看到/听到的节奏像什么线条或颜色”，并完成一格节奏转译草图。",
+          "reasoning_basis": [
+            "目标变化",
+            "证据计划",
+            "时间重算"
+          ],
+          "impact_scope": [
+            "教师动作",
+            "学生任务",
+            "大屏/黑板",
+            "评价证据"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "教师话术从讲概念转为提醒学生看什么、说什么、如何给理由。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "student_activity",
+          "impact_summary": "学生任务从听讲转为观察、分类、表达和说明理由。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "根据资源条件使用大屏、黑板或图片，核心是聚焦观察点。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "handout",
+          "impact_summary": "学习单只保留关键证据格，避免变成填空表。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "证据来自分类结果、理由句、草图和同伴能否读懂。",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "ready_to_teach",
+        "passed_items": [
+          "学习问题具体",
+          "目标可观察",
+          "课堂事件有证据绑定",
+          "时间由代码计算"
+        ],
+        "missing_items": [
+          "需要教师确认资源和班级真实状态"
+        ],
+        "risk_items": [
+          "学生表达可能停在好看，需要支架句式"
+        ],
+        "next_best_action": "请老师确认候选课堂事件和资源条件后再进入 UI 绑定。"
+      },
+      "teacher_review_candidate": {
+        "summary": "已形成分阶段课堂展开候选，等待教师确认。",
+        "edit_target": "教学过程",
+        "teacher_review_required": true
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "staged_trace": [
+      {
+        "step": "LessonContextPack",
+        "ok": true,
+        "output": {
+          "lesson_title": "节奏与线条色彩表现",
+          "grade": "三年级",
+          "subject": "美术",
+          "duration_minutes": 40,
+          "lesson_design_mode": "standard_daily",
+          "unit_position": "unit_middle",
+          "teacher_input": "我想放一段美术和音乐结合的舞蹈，让学生感受节奏，再引到线条和色彩表现。帮我设计这一段怎么展开。",
+          "student_baseline": "学生能感到音乐或舞蹈热闹，但容易把注意力放在动作好看，未必能转到线条、色彩和节奏的视觉表达。",
+          "resource_constraints": [
+            "视频是教师提出的候选资源，不是默认资源",
+            "必须准备无视频替代方案"
+          ],
+          "reference_candidates": [
+            {
+              "source_label": "资料室候选",
+              "use_policy": "reference_only",
+              "title": "本地听音乐画音乐薄案例"
+            },
+            {
+              "source_label": "资料室候选",
+              "use_policy": "reference_only",
+              "title": "线条节奏表达样本"
+            }
+          ],
+          "source_labels": [
+            "教材",
+            "课标",
+            "教师输入",
+            "小备推测",
+            "资料室候选"
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "LearningProblemDeriver",
+        "ok": true,
+        "output": {
+          "core_learning_problem": "学生能感到节奏，但不一定能把节奏转译成线条疏密、方向变化和色彩强弱。",
+          "real_stuck_point": "注意力容易停在舞蹈动作是否好看，而不是观察节奏如何被艺术语言表现。",
+          "student_baseline": "学生能感到音乐或舞蹈热闹，但容易把注意力放在动作好看，未必能转到线条、色彩和节奏的视觉表达。",
+          "why_this_lesson_matters": "本课要把身体和听觉经验转成可画、可说、可评价的视觉表达。",
+          "confidence": "medium",
+          "needs_teacher_confirmation": true
+        },
+        "errors": []
+      },
+      {
+        "step": "TargetShiftDeriver",
+        "ok": true,
+        "output": {
+          "target_shift": {
+            "from_state": "能说舞蹈或音乐很快、很好看。",
+            "to_state": "能抓住一个节奏特征，并用线条或色彩说明它带来的视觉感受。",
+            "observable_behavior": "学生能说出“我看到/听到的节奏像什么线条或颜色”，并完成一格节奏转译草图。",
+            "success_evidence": "学习单上的节奏词、线条/色彩选择和一句理由能互相对应。"
+          },
+          "key_focus": "节奏到视觉语言的转译",
+          "key_difficulty": "把注意力从动作热闹转到节奏特征",
+          "teacher_review_required": true
+        },
+        "errors": []
+      },
+      {
+        "step": "EvidencePlanDeriver",
+        "ok": true,
+        "output": {
+          "evidence_plan": [
+            {
+              "evidence_id": "EVID_FOCUS_WORD",
+              "what_it_proves": "学生是否把注意力放在节奏特征而不是动作好看。",
+              "collection_method": "观看后先写一个节奏词，再口头补一句理由。",
+              "expected_student_output": "快、密、跳、缓、流动等词语及理由。",
+              "linked_target_shift": "学生能说出“我看到/听到的节奏像什么线条或颜色”，并完成一格节奏转译草图。"
+            },
+            {
+              "evidence_id": "EVID_VISUAL_TRANSLATION",
+              "what_it_proves": "学生能否把节奏转成线条或色彩。",
+              "collection_method": "学习单一格小草图和同桌说明。",
+              "expected_student_output": "线条疏密、方向或色彩强弱与节奏词对应。",
+              "linked_target_shift": "学习单上的节奏词、线条/色彩选择和一句理由能互相对应。"
+            }
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "TeachingRoutePlanner",
+        "ok": true,
+        "output": {
+          "teaching_route": [
+            {
+              "route_step_id": "R1",
+              "route_step_name": "定观看焦点",
+              "role_in_learning_progression": "把资源从热闹观看变成带任务观看",
+              "expected_student_state_after": "学生知道只看节奏变化",
+              "recommended_duration_minutes": 4
+            },
+            {
+              "route_step_id": "R2",
+              "route_step_name": "短资源感受",
+              "role_in_learning_progression": "用舞蹈/音乐片段激活节奏经验",
+              "expected_student_state_after": "学生有一个节奏词",
+              "recommended_duration_minutes": 8
+            },
+            {
+              "route_step_id": "R3",
+              "route_step_name": "收感受并转译",
+              "role_in_learning_progression": "把听觉和身体感受转成线条色彩",
+              "expected_student_state_after": "学生能说一个视觉转译理由",
+              "recommended_duration_minutes": 8
+            },
+            {
+              "route_step_id": "R4",
+              "route_step_name": "个人小练习",
+              "role_in_learning_progression": "形成可观察作品证据",
+              "expected_student_state_after": "学生完成一格节奏表达",
+              "recommended_duration_minutes": 14
+            },
+            {
+              "route_step_id": "R5",
+              "route_step_name": "展示与连接",
+              "role_in_learning_progression": "回到美术表达标准并接下一环节",
+              "expected_student_state_after": "学生知道如何继续完善画面",
+              "recommended_duration_minutes": 6
+            }
+          ],
+          "route_rationale": "先定焦点，再用候选资源触发感受，随后马上收束到视觉语言，避免学生只讨论舞蹈好不好看。",
+          "time_risk": "若交流过长，优先减少展示人数，不删探究证据。"
+        },
+        "errors": []
+      },
+      {
+        "step": "ClassroomEventGenerator",
+        "ok": true,
+        "output": {
+          "classroom_events": [
+            {
+              "event_id": "EVT_1",
+              "event_name": "定观看焦点",
+              "event_type": "experience_evoke",
+              "learning_purpose": "把资源从热闹观看变成带任务观看",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生知道只看节奏变化",
+              "recommended_minutes": 4,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_2",
+              "event_name": "短资源感受",
+              "event_type": "comparison",
+              "learning_purpose": "用舞蹈/音乐片段激活节奏经验",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生有一个节奏词",
+              "recommended_minutes": 8,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_3",
+              "event_name": "收感受并转译",
+              "event_type": "comparison",
+              "learning_purpose": "把听觉和身体感受转成线条色彩",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生能说一个视觉转译理由",
+              "recommended_minutes": 8,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_4",
+              "event_name": "个人小练习",
+              "event_type": "practice",
+              "learning_purpose": "形成可观察作品证据",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生完成一格节奏表达",
+              "recommended_minutes": 14,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_5",
+              "event_name": "展示与连接",
+              "event_type": "sharing",
+              "learning_purpose": "回到美术表达标准并接下一环节",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生知道如何继续完善画面",
+              "recommended_minutes": 6,
+              "teacher_review_required": true
+            }
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "EventUnfoldingExpander",
+        "ok": true,
+        "output": {
+          "classroom_events": [
+            {
+              "event_id": "EVT_1",
+              "event_name": "定观看焦点",
+              "event_type": "experience_evoke",
+              "learning_purpose": "先把资源目的说清，避免学生看热闹。",
+              "duration": {
+                "recommended_minutes": 4,
+                "min_minutes": 2,
+                "max_minutes": 6,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "等会儿只抓一个问题：节奏是跳的、流的，还是停顿的？",
+                "core_question": "你准备听/看哪一种节奏变化？",
+                "student_task": "先在学习单圈一个观察词。",
+                "teacher_summary_sentence": "有了焦点，资源才不会散。"
+              },
+              "design_view": {
+                "learning_purpose": "先把资源目的说清，避免学生看热闹。",
+                "design_intent": "先把资源目的说清，避免学生看热闹。",
+                "student_state_before": "学生期待看舞蹈或视频。",
+                "student_state_after": "学生知道要抓节奏而不是评价动作。",
+                "teacher_action": "说明观看任务，不评价舞蹈好坏。",
+                "student_action": "圈选观察词。",
+                "big_screen_state": "黑板写三类节奏词。",
+                "textbook_or_material_state": "资源暂不播放，先定观察焦点。",
+                "learning_sheet_state": "学习单出现节奏词。",
+                "assessment_evidence": "学生能选一个观察焦点。",
+                "transition_from_previous": "承接教师资源设想。",
+                "transition_to_next": "转入短资源感受。",
+                "risk_and_adjustment": "如果学生只问视频内容，重复观察任务。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕节奏焦点说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "教师提出的舞蹈/音乐候选",
+                "why_needed": "只有当它能提供清楚节奏变化时才使用。",
+                "attention_focus": "节奏变化，不看动作好不好看。",
+                "fallback_if_unavailable": "教师用拍手快慢和线条板书代替。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_2",
+              "event_name": "短资源感受",
+              "event_type": "comparison",
+              "learning_purpose": "用短资源激活节奏经验。",
+              "duration": {
+                "recommended_minutes": 8,
+                "min_minutes": 6,
+                "max_minutes": 10,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "只看30秒，看到节奏变化就记一个词。",
+                "core_question": "哪一处节奏最明显？",
+                "student_task": "观看或听一小段，写一个节奏词。",
+                "teacher_summary_sentence": "一个词够了，后面要把它变成线条。"
+              },
+              "design_view": {
+                "learning_purpose": "用短资源激活节奏经验。",
+                "design_intent": "用短资源激活节奏经验。",
+                "student_state_before": "学生有观察焦点但尚未形成视觉联想。",
+                "student_state_after": "学生能写下一个节奏词和初步感受。",
+                "teacher_action": "播放短片段或用拍手替代。",
+                "student_action": "观看、记录、同桌说。",
+                "big_screen_state": "大屏只放短片段或黑板节奏线。",
+                "textbook_or_material_state": "若放视频，只截取短段。",
+                "learning_sheet_state": "学习单记录节奏词。",
+                "assessment_evidence": "EVID_FOCUS_WORD：节奏词和一句理由。",
+                "transition_from_previous": "从焦点进入体验。",
+                "transition_to_next": "转入线条色彩转译。",
+                "risk_and_adjustment": "若学生讨论动作漂亮，立刻回到节奏词。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕节奏感受说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "30秒片段或拍手节奏",
+                "why_needed": "提供共同体验。",
+                "attention_focus": "快慢、停顿、重复。",
+                "fallback_if_unavailable": "全班拍手两种节奏并观察手势轨迹。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_3",
+              "event_name": "收感受并转译",
+              "event_type": "analysis",
+              "learning_purpose": "把听觉和身体经验转成视觉语言。",
+              "duration": {
+                "recommended_minutes": 8,
+                "min_minutes": 6,
+                "max_minutes": 10,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "如果这个节奏变成线条，它会是什么样？",
+                "core_question": "快节奏像密密的短线，还是长长的流线？为什么？",
+                "student_task": "用手势在空中画，再在纸上试一条线。",
+                "teacher_summary_sentence": "先用一条线说清楚，不急着画完整作品。"
+              },
+              "design_view": {
+                "learning_purpose": "把听觉和身体经验转成视觉语言。",
+                "design_intent": "把听觉和身体经验转成视觉语言。",
+                "student_state_before": "学生有节奏词但不会画。",
+                "student_state_after": "学生能把一个节奏词对应到线条或颜色。",
+                "teacher_action": "示范词到线条的转换，不给固定答案。",
+                "student_action": "空中比划并画一条线。",
+                "big_screen_state": "黑板列出节奏词到线条的多种可能。",
+                "textbook_or_material_state": "黑板和粉笔即可。",
+                "learning_sheet_state": "学习单完成一条试画线。",
+                "assessment_evidence": "学生能说明线条和节奏词的关系。",
+                "transition_from_previous": "从资源感受进入美术表达。",
+                "transition_to_next": "转入个人小练习。",
+                "risk_and_adjustment": "若转译过难，给二选一线条让学生选。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕视觉转译说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "黑板示范",
+                "why_needed": "降低从听觉到视觉的跨度。",
+                "attention_focus": "线条疏密方向与节奏的关系。",
+                "fallback_if_unavailable": "仍可用粉笔画两种线让学生比较。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_4",
+              "event_name": "个人小练习",
+              "event_type": "practice",
+              "learning_purpose": "形成可观察的节奏表达证据。",
+              "duration": {
+                "recommended_minutes": 14,
+                "min_minutes": 12,
+                "max_minutes": 16,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "选一个节奏词，用线条和一两种颜色画出来。",
+                "core_question": "别人看你的画，能猜到你的节奏词吗？",
+                "student_task": "完成一格节奏表达草图。",
+                "teacher_summary_sentence": "画面可以简单，但线条和颜色要有理由。"
+              },
+              "design_view": {
+                "learning_purpose": "形成可观察的节奏表达证据。",
+                "design_intent": "形成可观察的节奏表达证据。",
+                "student_state_before": "学生会试一条线但作品表达未完成。",
+                "student_state_after": "学生能完成一格节奏画面并配一句说明。",
+                "teacher_action": "巡视时问理由，不替学生改画。",
+                "student_action": "个人创作并写一句说明。",
+                "big_screen_state": "大屏保留句式。",
+                "textbook_or_material_state": "材料为纸和彩笔。",
+                "learning_sheet_state": "学习单完成小草图和说明。",
+                "assessment_evidence": "EVID_VISUAL_TRANSLATION：草图与理由对应。",
+                "transition_from_previous": "从共同转译进入个人表达。",
+                "transition_to_next": "转入展示校准。",
+                "risk_and_adjustment": "若学生画成具体舞蹈人物，提醒回到节奏线条。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕节奏表达说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "学习单/纸笔",
+                "why_needed": "留下目标达成证据。",
+                "attention_focus": "线条色彩是否服务节奏词。",
+                "fallback_if_unavailable": "普通作业纸分一格完成。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_5",
+              "event_name": "展示与连接",
+              "event_type": "sharing",
+              "learning_purpose": "用同伴猜测校准表达，并接到后续完整创作。",
+              "duration": {
+                "recommended_minutes": 6,
+                "min_minutes": 4,
+                "max_minutes": 8,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "我们先猜节奏，再听作者说理由。",
+                "core_question": "你从哪条线或哪个颜色猜出来的？",
+                "student_task": "两位学生展示，其他学生先猜再补充。",
+                "teacher_summary_sentence": "能被别人看出节奏，说明视觉语言开始成立。"
+              },
+              "design_view": {
+                "learning_purpose": "用同伴猜测校准表达，并接到后续完整创作。",
+                "design_intent": "用同伴猜测校准表达，并接到后续完整创作。",
+                "student_state_before": "学生完成草图但表达效果未校准。",
+                "student_state_after": "学生知道如何让节奏表达更清楚。",
+                "teacher_action": "组织猜测和作者说明。",
+                "student_action": "展示、猜测、修正。",
+                "big_screen_state": "实物投影或举纸。",
+                "textbook_or_material_state": "学生草图。",
+                "learning_sheet_state": "学习单作为下一环节创作依据。",
+                "assessment_evidence": "学生能指出作品中的节奏证据。",
+                "transition_from_previous": "承接个人小练习。",
+                "transition_to_next": "下一环节可把一格草图扩展成完整作品。",
+                "risk_and_adjustment": "若时间不足，只展示一个清楚样本和一个需要调整样本。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕展示校准说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "学生草图",
+                "why_needed": "验证视觉表达是否可读。",
+                "attention_focus": "别人从哪里看出节奏。",
+                "fallback_if_unavailable": "同桌互猜代替全班展示。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            }
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "TimeRebalancer",
+        "ok": true,
+        "output": {
+          "target_minutes": 40,
+          "total_event_minutes": 40.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        },
+        "errors": []
+      },
+      {
+        "step": "EvidenceBinder",
+        "ok": true,
+        "output": {
+          "evidence_bindings": [
+            {
+              "evidence_id": "EVID_FOCUS_WORD",
+              "event_id": "EVT_2",
+              "assessment_evidence": "EVID_FOCUS_WORD：节奏词和一句理由。",
+              "collection_method": "观看后先写一个节奏词，再口头补一句理由。",
+              "what_it_proves": "学生是否把注意力放在节奏特征而不是动作好看。"
+            },
+            {
+              "evidence_id": "EVID_VISUAL_TRANSLATION",
+              "event_id": "EVT_4",
+              "assessment_evidence": "EVID_VISUAL_TRANSLATION：草图与理由对应。",
+              "collection_method": "学习单一格小草图和同桌说明。",
+              "what_it_proves": "学生能否把节奏转成线条或色彩。"
+            }
+          ],
+          "binding_pass": true,
+          "blockers": []
+        },
+        "errors": []
+      },
+      {
+        "step": "EffectivenessEvaluator",
+        "ok": true,
+        "output": {
+          "contract_errors": [],
+          "effectiveness": {
+            "resource_purpose_score": 5,
+            "attention_focus_score": 5,
+            "teacher_guidance_score": 5,
+            "student_response_prediction_score": 5,
+            "scaffold_quality_score": 5,
+            "collection_method_reasoning_score": 5,
+            "media_material_timing_score": 5,
+            "assessment_evidence_score": 5,
+            "transition_script_score": 5,
+            "time_feasibility_score": 5,
+            "age_appropriateness_score": 5,
+            "overall_effectiveness_score": 5.0,
+            "pass": true,
+            "blockers": [],
+            "issues": [],
+            "time_balance": {
+              "target_minutes": 40,
+              "total_event_minutes": 40.0,
+              "time_balance_pass": true,
+              "rebalance_candidates": []
+            }
+          }
+        },
+        "errors": []
+      }
+    ]
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "lesson_design_mode": "standard_daily",
+    "teacher_input": "这节课不能放视频，也没有平板，只有黑板和几张图片，帮我把活动改得还能上。",
+    "pipeline_pass": true,
+    "learning_problem_generated": true,
+    "target_shift_generated": true,
+    "classroom_events_generated": true,
+    "evidence_binding_pass": true,
+    "time_balance_pass": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "official_archive_created": false,
+    "provider_called": false,
+    "model_called": false,
+    "contract_errors": [],
+    "candidate_errors": [],
+    "effectiveness": {
+      "resource_purpose_score": 5,
+      "attention_focus_score": 5,
+      "teacher_guidance_score": 5,
+      "student_response_prediction_score": 5,
+      "scaffold_quality_score": 5,
+      "collection_method_reasoning_score": 5,
+      "media_material_timing_score": 5,
+      "assessment_evidence_score": 5,
+      "transition_script_score": 5,
+      "time_feasibility_score": 5,
+      "age_appropriateness_score": 5,
+      "overall_effectiveness_score": 5.0,
+      "pass": true,
+      "blockers": [],
+      "issues": [],
+      "time_balance": {
+        "target_minutes": 40,
+        "total_event_minutes": 40.0,
+        "time_balance_pass": true,
+        "rebalance_candidates": []
+      }
+    },
+    "candidate": {
+      "lesson_unfolding_graph": {
+        "lesson_design_mode": "standard_daily",
+        "design_context": {
+          "grade": "三年级",
+          "subject": "美术",
+          "lesson_title": "1-2《色彩的感觉》",
+          "unit_position": "unit_middle"
+        },
+        "cognitive_grounding": {
+          "core_learning_problem": "学生需要看得见、摸得着的材料来理解色彩感受，低资源条件下更要让观察和表达任务清楚。",
+          "student_baseline": "学生需要直观材料支撑，单靠口头解释会停在好看、漂亮等笼统表达。",
+          "real_stuck_point": "如果只讲概念，学生会停在好看、漂亮，难以说出颜色带来的具体感受。",
+          "target_shift": {
+            "from_state": "能说颜色名称和喜欢不喜欢。",
+            "to_state": "能根据色彩带来的温暖、清凉、安静、热烈等感受进行分类并说明理由。",
+            "observable_behavior": "学生能把色卡或图片放入感受类别，并用一句话说明依据。",
+            "success_evidence": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+          },
+          "key_focus": "色彩感受分类与理由表达",
+          "key_difficulty": "如果只讲概念，学生会停在好看、漂亮，难以说出颜色带来的具体感受。"
+        },
+        "constraints": {
+          "total_duration_minutes": 40,
+          "resource_budget": "low",
+          "class_condition": "候选推演，不接真实课堂数据。",
+          "lesson_position": "unit_middle",
+          "material_conditions": [
+            "不能放视频",
+            "没有平板",
+            "只有黑板和几张图片"
+          ]
+        },
+        "main_event_sequence": [
+          "EVT_1",
+          "EVT_2",
+          "EVT_3",
+          "EVT_4",
+          "EVT_5"
+        ],
+        "classroom_events": [
+          {
+            "event_id": "EVT_1",
+            "event_name": "唤起颜色经验",
+            "event_type": "experience_evoke",
+            "learning_purpose": "把已有颜色经验转成感受问题。",
+            "duration": {
+              "recommended_minutes": 4,
+              "min_minutes": 2,
+              "max_minutes": 6,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "今天不急着分对错，先说颜色让你想到什么。",
+              "core_question": "看到这个颜色，你身体里先出现什么感觉？",
+              "student_task": "每人说一个颜色联想。",
+              "teacher_summary_sentence": "颜色不只叫红黄蓝，也会带来感受。"
+            },
+            "design_view": {
+              "learning_purpose": "把已有颜色经验转成感受问题。",
+              "design_intent": "把已有颜色经验转成感受问题。",
+              "student_state_before": "学生会说颜色名和喜好。",
+              "student_state_after": "学生知道今天要说颜色带来的感觉。",
+              "teacher_action": "展示两张生活图片，板书学生感受词。",
+              "student_action": "口头联想并听同伴词语。",
+              "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+              "textbook_or_material_state": "图片和色卡只做感受入口。",
+              "learning_sheet_state": "学习单暂不发，先口头收集。",
+              "assessment_evidence": "学生能说出至少一个感受词。",
+              "transition_from_previous": "承接已有颜色经验。",
+              "transition_to_next": "转入色卡对比，让感觉有依据。",
+              "risk_and_adjustment": "如果只说喜欢，追问像什么场景。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕颜色感受说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "图片/色卡",
+              "why_needed": "让抽象冷暖变直观。",
+              "attention_focus": "只看颜色带来的温度和情绪感。",
+              "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_2",
+            "event_name": "对比观察",
+            "event_type": "comparison",
+            "learning_purpose": "建立冷暖差异的直观依据。",
+            "duration": {
+              "recommended_minutes": 8,
+              "min_minutes": 6,
+              "max_minutes": 10,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "只看颜色，别先看画得像不像。",
+              "core_question": "这两组颜色让你觉得哪里不一样？",
+              "student_task": "同桌选一组图，说出冷/暖或其他感受。",
+              "teacher_summary_sentence": "冷暖不是背表，是你能说出理由的感受判断。"
+            },
+            "design_view": {
+              "learning_purpose": "建立冷暖差异的直观依据。",
+              "design_intent": "建立冷暖差异的直观依据。",
+              "student_state_before": "学生有感受词但分类不稳。",
+              "student_state_after": "学生能发现同一画面换色后感受会变。",
+              "teacher_action": "引导学生比较两组色卡和图片。",
+              "student_action": "同桌讨论并举卡选择。",
+              "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+              "textbook_or_material_state": "几张图片轮流贴黑板，色卡不足时用粉笔写颜色名。",
+              "learning_sheet_state": "学习单只露出感受词区。",
+              "assessment_evidence": "同桌能说出一组颜色差异理由。",
+              "transition_from_previous": "从词语进入比较。",
+              "transition_to_next": "转入小组分类探究。",
+              "risk_and_adjustment": "若学生抢答固定答案，换成情境图片追问理由。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕冷暖对比说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "黑板图片/手绘色块",
+              "why_needed": "提供可比较对象。",
+              "attention_focus": "颜色变化如何改变感受。",
+              "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_3",
+            "event_name": "色卡分类探究",
+            "event_type": "analysis",
+            "learning_purpose": "让学生用分类和理由处理卡点。",
+            "duration": {
+              "recommended_minutes": 10,
+              "min_minutes": 8,
+              "max_minutes": 12,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "你们不是给颜色找标准答案，而是给感受找证据。",
+              "core_question": "为什么这张色卡应该放在这里？",
+              "student_task": "小组把色卡贴到感受词下，并准备一句理由。",
+              "teacher_summary_sentence": "只要理由说得通，分类可以有不同想法。"
+            },
+            "design_view": {
+              "learning_purpose": "让学生用分类和理由处理卡点。",
+              "design_intent": "让学生用分类和理由处理卡点。",
+              "student_state_before": "学生能感受差异但理由松散。",
+              "student_state_after": "学生能把色卡放入感受类别并说明依据。",
+              "teacher_action": "巡视并追问学生分类依据。",
+              "student_action": "小组分类、移动色卡、记录理由。",
+              "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+              "textbook_or_material_state": "几张图片轮流贴黑板，色卡不足时用粉笔写颜色名。",
+              "learning_sheet_state": "学习单记录一组颜色和理由。",
+              "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+              "transition_from_previous": "从比较进入主动分类。",
+              "transition_to_next": "转入个人表达练习。",
+              "risk_and_adjustment": "若争论停在对错，提醒回到感受依据。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕色卡分类说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "黑板图片/手绘色块",
+              "why_needed": "让学生用动作完成判断。",
+              "attention_focus": "分类理由，不是贴得快。",
+              "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_4",
+            "event_name": "表达小练习",
+            "event_type": "practice",
+            "learning_purpose": "把理解迁移到个人色彩表达。",
+            "duration": {
+              "recommended_minutes": 13,
+              "min_minutes": 11,
+              "max_minutes": 15,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "选两三种颜色，画出一种你想表达的感觉。",
+              "core_question": "你的颜色组合想让别人感到什么？",
+              "student_task": "完成一格小画，并写一句理由。",
+              "teacher_summary_sentence": "这句话就是你作品的证据。"
+            },
+            "design_view": {
+              "learning_purpose": "把理解迁移到个人色彩表达。",
+              "design_intent": "把理解迁移到个人色彩表达。",
+              "student_state_before": "学生已能分类但还未表达个人感受。",
+              "student_state_after": "学生能用颜色组合表达一种心情或场景。",
+              "teacher_action": "示范一句理由，不示范完整作品。",
+              "student_action": "个人完成小练习。",
+              "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+              "textbook_or_material_state": "色卡作为参考，不再要求照抄。",
+              "learning_sheet_state": "学习单完成小画和理由句。",
+              "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+              "transition_from_previous": "从小组分类转到个人表达。",
+              "transition_to_next": "转入分享时看理由是否成立。",
+              "risk_and_adjustment": "若学生画太复杂，提醒只做一格感受练习。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕色彩表达说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "学习单",
+              "why_needed": "留下可观察证据。",
+              "attention_focus": "颜色和理由是否对应。",
+              "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "EVT_5",
+            "event_name": "分享证据",
+            "event_type": "sharing",
+            "learning_purpose": "用作品和理由验证目标达成。",
+            "duration": {
+              "recommended_minutes": 5,
+              "min_minutes": 3,
+              "max_minutes": 7,
+              "time_risk": "交流超时则减少展示人数。"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "我们不评谁最好看，只听颜色和理由是否连得上。",
+              "core_question": "他的颜色让你感受到他说的意思了吗？",
+              "student_task": "两三位学生展示，小组补一句建议。",
+              "teacher_summary_sentence": "好作品不是颜色多，而是感受说得清。"
+            },
+            "design_view": {
+              "learning_purpose": "用作品和理由验证目标达成。",
+              "design_intent": "用作品和理由验证目标达成。",
+              "student_state_before": "学生完成小练习但还未校准表达。",
+              "student_state_after": "学生能听懂同伴理由并修正自己的表达。",
+              "teacher_action": "选择典型作品快速展示。",
+              "student_action": "展示、倾听、补充建议。",
+              "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+              "textbook_or_material_state": "学生作品和学习单。",
+              "learning_sheet_state": "学习单作为课后回收证据。",
+              "assessment_evidence": "学生能用理由评价同伴作品。",
+              "transition_from_previous": "承接个人小练习。",
+              "transition_to_next": "下节课可用这些感受理由深化创作。",
+              "risk_and_adjustment": "若时间不足，只展示一正一改两个样本。"
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "能围绕分享理由说出一个具体发现。",
+                "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                "scaffold": "用“我看到...所以觉得...”句式。"
+              },
+              {
+                "type": "misconception",
+                "student_response": "只说好看、漂亮或直接背答案。",
+                "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                "scaffold": "提供感受词卡和二选一比较。"
+              },
+              {
+                "type": "silent",
+                "student_response": "学生看着材料但说不出来。",
+                "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "学生作品",
+              "why_needed": "验证表达是否被理解。",
+              "attention_focus": "理由和颜色是否对应。",
+              "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          }
+        ],
+        "structure_rebalance_candidates": [],
+        "evidence_plan": [
+          {
+            "evidence_id": "EVID_COLOR_SORT",
+            "what_it_proves": "学生是否能依据感受而不是死记颜色分类。",
+            "collection_method": "小组把色卡或图片贴到感受词下方。",
+            "expected_student_output": "至少两张色卡归类，并能说出分类依据。",
+            "linked_target_shift": "学生能把色卡或图片放入感受类别，并用一句话说明依据。"
+          },
+          {
+            "evidence_id": "EVID_REASON_SENTENCE",
+            "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。",
+            "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+            "expected_student_output": "一条颜色、感受、理由相连的短句。",
+            "linked_target_shift": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+          }
+        ],
+        "evidence_bindings": [
+          {
+            "evidence_id": "EVID_COLOR_SORT",
+            "event_id": "EVT_3",
+            "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+            "collection_method": "小组把色卡或图片贴到感受词下方。",
+            "what_it_proves": "学生是否能依据感受而不是死记颜色分类。"
+          },
+          {
+            "evidence_id": "EVID_REASON_SENTENCE",
+            "event_id": "EVT_4",
+            "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+            "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+            "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。"
+          }
+        ],
+        "lesson_position_connection": {
+          "unit_start_entry": "",
+          "unit_middle_next_lesson_connection": "下一课可基于本课学习单，继续观察色彩/线条如何服务个人表达。",
+          "unit_end_closure": ""
+        },
+        "closure_plan": "用学生作品或学习单中的一句理由收束，不追求一次讲完概念。",
+        "next_lesson_connection": "保留学生证据，下一课先回看典型理由再进入创作深化。",
+        "quality_gate": {
+          "level": "ready_to_teach",
+          "teacher_review_required": true
+        },
+        "time_balance": {
+          "target_minutes": 40,
+          "total_event_minutes": 40.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        }
+      },
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "standard_daily_learning_problem",
+          "target_section": "学情分析",
+          "target_step_id": "",
+          "target_field": "学习卡点",
+          "patch_type": "revise",
+          "before_summary": "学生基础描述偏泛。",
+          "after_candidate": "如果只讲概念，学生会停在好看、漂亮，难以说出颜色带来的具体感受。",
+          "reasoning_basis": [
+            "教师输入",
+            "教材与课堂经验推测",
+            "小备推演"
+          ],
+          "impact_scope": [
+            "教学过程",
+            "学习单",
+            "评价证据"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "standard_daily_teaching_route",
+          "target_section": "教学过程",
+          "target_step_id": "classroom_events",
+          "target_field": "课堂事件",
+          "patch_type": "restructure",
+          "before_summary": "流程可以更明确地服务目标变化。",
+          "after_candidate": "学生能把色卡或图片放入感受类别，并用一句话说明依据。",
+          "reasoning_basis": [
+            "目标变化",
+            "证据计划",
+            "时间重算"
+          ],
+          "impact_scope": [
+            "教师动作",
+            "学生任务",
+            "大屏/黑板",
+            "评价证据"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "教师话术从讲概念转为提醒学生看什么、说什么、如何给理由。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "student_activity",
+          "impact_summary": "学生任务从听讲转为观察、分类、表达和说明理由。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "根据资源条件使用大屏、黑板或图片，核心是聚焦观察点。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "handout",
+          "impact_summary": "学习单只保留关键证据格，避免变成填空表。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "证据来自分类结果、理由句、草图和同伴能否读懂。",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "ready_to_teach",
+        "passed_items": [
+          "学习问题具体",
+          "目标可观察",
+          "课堂事件有证据绑定",
+          "时间由代码计算"
+        ],
+        "missing_items": [
+          "需要教师确认资源和班级真实状态"
+        ],
+        "risk_items": [
+          "学生表达可能停在好看，需要支架句式"
+        ],
+        "next_best_action": "请老师确认候选课堂事件和资源条件后再进入 UI 绑定。"
+      },
+      "teacher_review_candidate": {
+        "summary": "已形成分阶段课堂展开候选，等待教师确认。",
+        "edit_target": "教学过程",
+        "teacher_review_required": true
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "staged_trace": [
+      {
+        "step": "LessonContextPack",
+        "ok": true,
+        "output": {
+          "lesson_title": "1-2《色彩的感觉》",
+          "grade": "三年级",
+          "subject": "美术",
+          "duration_minutes": 40,
+          "lesson_design_mode": "standard_daily",
+          "unit_position": "unit_middle",
+          "teacher_input": "这节课不能放视频，也没有平板，只有黑板和几张图片，帮我把活动改得还能上。",
+          "student_baseline": "学生需要直观材料支撑，单靠口头解释会停在好看、漂亮等笼统表达。",
+          "resource_constraints": [
+            "不能放视频",
+            "没有平板",
+            "只有黑板和几张图片"
+          ],
+          "reference_candidates": [
+            {
+              "source_label": "资料室候选",
+              "use_policy": "reference_only",
+              "title": "低资源课堂组织样本"
+            },
+            {
+              "source_label": "资料室候选",
+              "use_policy": "reference_only",
+              "title": "图片观察和黑板归类样本"
+            }
+          ],
+          "source_labels": [
+            "教材",
+            "课标",
+            "教师输入",
+            "小备推测",
+            "资料室候选"
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "LearningProblemDeriver",
+        "ok": true,
+        "output": {
+          "core_learning_problem": "学生需要看得见、摸得着的材料来理解色彩感受，低资源条件下更要让观察和表达任务清楚。",
+          "real_stuck_point": "如果只讲概念，学生会停在好看、漂亮，难以说出颜色带来的具体感受。",
+          "student_baseline": "学生需要直观材料支撑，单靠口头解释会停在好看、漂亮等笼统表达。",
+          "why_this_lesson_matters": "低资源课堂仍要保住直观比较、表达支架和可观察证据。",
+          "confidence": "high",
+          "needs_teacher_confirmation": true
+        },
+        "errors": []
+      },
+      {
+        "step": "TargetShiftDeriver",
+        "ok": true,
+        "output": {
+          "target_shift": {
+            "from_state": "能说颜色名称和喜欢不喜欢。",
+            "to_state": "能根据色彩带来的温暖、清凉、安静、热烈等感受进行分类并说明理由。",
+            "observable_behavior": "学生能把色卡或图片放入感受类别，并用一句话说明依据。",
+            "success_evidence": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+          },
+          "key_focus": "色彩感受分类与理由表达",
+          "key_difficulty": "如果只讲概念，学生会停在好看、漂亮，难以说出颜色带来的具体感受。",
+          "teacher_review_required": true
+        },
+        "errors": []
+      },
+      {
+        "step": "EvidencePlanDeriver",
+        "ok": true,
+        "output": {
+          "evidence_plan": [
+            {
+              "evidence_id": "EVID_COLOR_SORT",
+              "what_it_proves": "学生是否能依据感受而不是死记颜色分类。",
+              "collection_method": "小组把色卡或图片贴到感受词下方。",
+              "expected_student_output": "至少两张色卡归类，并能说出分类依据。",
+              "linked_target_shift": "学生能把色卡或图片放入感受类别，并用一句话说明依据。"
+            },
+            {
+              "evidence_id": "EVID_REASON_SENTENCE",
+              "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。",
+              "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+              "expected_student_output": "一条颜色、感受、理由相连的短句。",
+              "linked_target_shift": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+            }
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "TeachingRoutePlanner",
+        "ok": true,
+        "output": {
+          "teaching_route": [
+            {
+              "route_step_id": "R1",
+              "route_step_name": "唤起颜色经验",
+              "role_in_learning_progression": "从学生已有颜色经验进入感受问题",
+              "expected_student_state_after": "学生知道今天不只说颜色名",
+              "recommended_duration_minutes": 4
+            },
+            {
+              "route_step_id": "R2",
+              "route_step_name": "对比观察",
+              "role_in_learning_progression": "用图片/色卡建立冷暖直观差异",
+              "expected_student_state_after": "学生能说出一组感受词",
+              "recommended_duration_minutes": 8
+            },
+            {
+              "route_step_id": "R3",
+              "route_step_name": "色卡分类探究",
+              "role_in_learning_progression": "让学生用分类和理由处理卡点",
+              "expected_student_state_after": "学生能说明冷暖或情绪分类依据",
+              "recommended_duration_minutes": 10
+            },
+            {
+              "route_step_id": "R4",
+              "route_step_name": "表达小练习",
+              "role_in_learning_progression": "把理解迁移到个人色彩表达",
+              "expected_student_state_after": "学生能完成一组感受表达",
+              "recommended_duration_minutes": 13
+            },
+            {
+              "route_step_id": "R5",
+              "route_step_name": "分享证据",
+              "role_in_learning_progression": "用作品和学习单验证目标达成",
+              "expected_student_state_after": "学生能听懂同伴理由并修正",
+              "recommended_duration_minutes": 5
+            }
+          ],
+          "route_rationale": "从经验唤起到直观对比，再到小组分类和个人表达，逐步把颜色名称推进到感受理由。",
+          "time_risk": "若交流过长，优先减少展示人数，不删探究证据。"
+        },
+        "errors": []
+      },
+      {
+        "step": "ClassroomEventGenerator",
+        "ok": true,
+        "output": {
+          "classroom_events": [
+            {
+              "event_id": "EVT_1",
+              "event_name": "唤起颜色经验",
+              "event_type": "experience_evoke",
+              "learning_purpose": "从学生已有颜色经验进入感受问题",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生知道今天不只说颜色名",
+              "recommended_minutes": 4,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_2",
+              "event_name": "对比观察",
+              "event_type": "comparison",
+              "learning_purpose": "用图片/色卡建立冷暖直观差异",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生能说出一组感受词",
+              "recommended_minutes": 8,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_3",
+              "event_name": "色卡分类探究",
+              "event_type": "analysis",
+              "learning_purpose": "让学生用分类和理由处理卡点",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生能说明冷暖或情绪分类依据",
+              "recommended_minutes": 10,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_4",
+              "event_name": "表达小练习",
+              "event_type": "practice",
+              "learning_purpose": "把理解迁移到个人色彩表达",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生能完成一组感受表达",
+              "recommended_minutes": 13,
+              "teacher_review_required": true
+            },
+            {
+              "event_id": "EVT_5",
+              "event_name": "分享证据",
+              "event_type": "sharing",
+              "learning_purpose": "用作品和学习单验证目标达成",
+              "student_state_before": "尚未进入本环节的学习任务。",
+              "student_state_after": "学生能听懂同伴理由并修正",
+              "recommended_minutes": 5,
+              "teacher_review_required": true
+            }
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "EventUnfoldingExpander",
+        "ok": true,
+        "output": {
+          "classroom_events": [
+            {
+              "event_id": "EVT_1",
+              "event_name": "唤起颜色经验",
+              "event_type": "experience_evoke",
+              "learning_purpose": "把已有颜色经验转成感受问题。",
+              "duration": {
+                "recommended_minutes": 4,
+                "min_minutes": 2,
+                "max_minutes": 6,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "今天不急着分对错，先说颜色让你想到什么。",
+                "core_question": "看到这个颜色，你身体里先出现什么感觉？",
+                "student_task": "每人说一个颜色联想。",
+                "teacher_summary_sentence": "颜色不只叫红黄蓝，也会带来感受。"
+              },
+              "design_view": {
+                "learning_purpose": "把已有颜色经验转成感受问题。",
+                "design_intent": "把已有颜色经验转成感受问题。",
+                "student_state_before": "学生会说颜色名和喜好。",
+                "student_state_after": "学生知道今天要说颜色带来的感觉。",
+                "teacher_action": "展示两张生活图片，板书学生感受词。",
+                "student_action": "口头联想并听同伴词语。",
+                "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+                "textbook_or_material_state": "图片和色卡只做感受入口。",
+                "learning_sheet_state": "学习单暂不发，先口头收集。",
+                "assessment_evidence": "学生能说出至少一个感受词。",
+                "transition_from_previous": "承接已有颜色经验。",
+                "transition_to_next": "转入色卡对比，让感觉有依据。",
+                "risk_and_adjustment": "如果只说喜欢，追问像什么场景。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕颜色感受说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "图片/色卡",
+                "why_needed": "让抽象冷暖变直观。",
+                "attention_focus": "只看颜色带来的温度和情绪感。",
+                "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_2",
+              "event_name": "对比观察",
+              "event_type": "comparison",
+              "learning_purpose": "建立冷暖差异的直观依据。",
+              "duration": {
+                "recommended_minutes": 8,
+                "min_minutes": 6,
+                "max_minutes": 10,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "只看颜色，别先看画得像不像。",
+                "core_question": "这两组颜色让你觉得哪里不一样？",
+                "student_task": "同桌选一组图，说出冷/暖或其他感受。",
+                "teacher_summary_sentence": "冷暖不是背表，是你能说出理由的感受判断。"
+              },
+              "design_view": {
+                "learning_purpose": "建立冷暖差异的直观依据。",
+                "design_intent": "建立冷暖差异的直观依据。",
+                "student_state_before": "学生有感受词但分类不稳。",
+                "student_state_after": "学生能发现同一画面换色后感受会变。",
+                "teacher_action": "引导学生比较两组色卡和图片。",
+                "student_action": "同桌讨论并举卡选择。",
+                "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+                "textbook_or_material_state": "几张图片轮流贴黑板，色卡不足时用粉笔写颜色名。",
+                "learning_sheet_state": "学习单只露出感受词区。",
+                "assessment_evidence": "同桌能说出一组颜色差异理由。",
+                "transition_from_previous": "从词语进入比较。",
+                "transition_to_next": "转入小组分类探究。",
+                "risk_and_adjustment": "若学生抢答固定答案，换成情境图片追问理由。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕冷暖对比说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "黑板图片/手绘色块",
+                "why_needed": "提供可比较对象。",
+                "attention_focus": "颜色变化如何改变感受。",
+                "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_3",
+              "event_name": "色卡分类探究",
+              "event_type": "analysis",
+              "learning_purpose": "让学生用分类和理由处理卡点。",
+              "duration": {
+                "recommended_minutes": 10,
+                "min_minutes": 8,
+                "max_minutes": 12,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "你们不是给颜色找标准答案，而是给感受找证据。",
+                "core_question": "为什么这张色卡应该放在这里？",
+                "student_task": "小组把色卡贴到感受词下，并准备一句理由。",
+                "teacher_summary_sentence": "只要理由说得通，分类可以有不同想法。"
+              },
+              "design_view": {
+                "learning_purpose": "让学生用分类和理由处理卡点。",
+                "design_intent": "让学生用分类和理由处理卡点。",
+                "student_state_before": "学生能感受差异但理由松散。",
+                "student_state_after": "学生能把色卡放入感受类别并说明依据。",
+                "teacher_action": "巡视并追问学生分类依据。",
+                "student_action": "小组分类、移动色卡、记录理由。",
+                "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+                "textbook_or_material_state": "几张图片轮流贴黑板，色卡不足时用粉笔写颜色名。",
+                "learning_sheet_state": "学习单记录一组颜色和理由。",
+                "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+                "transition_from_previous": "从比较进入主动分类。",
+                "transition_to_next": "转入个人表达练习。",
+                "risk_and_adjustment": "若争论停在对错，提醒回到感受依据。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕色卡分类说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "黑板图片/手绘色块",
+                "why_needed": "让学生用动作完成判断。",
+                "attention_focus": "分类理由，不是贴得快。",
+                "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_4",
+              "event_name": "表达小练习",
+              "event_type": "practice",
+              "learning_purpose": "把理解迁移到个人色彩表达。",
+              "duration": {
+                "recommended_minutes": 13,
+                "min_minutes": 11,
+                "max_minutes": 15,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "选两三种颜色，画出一种你想表达的感觉。",
+                "core_question": "你的颜色组合想让别人感到什么？",
+                "student_task": "完成一格小画，并写一句理由。",
+                "teacher_summary_sentence": "这句话就是你作品的证据。"
+              },
+              "design_view": {
+                "learning_purpose": "把理解迁移到个人色彩表达。",
+                "design_intent": "把理解迁移到个人色彩表达。",
+                "student_state_before": "学生已能分类但还未表达个人感受。",
+                "student_state_after": "学生能用颜色组合表达一种心情或场景。",
+                "teacher_action": "示范一句理由，不示范完整作品。",
+                "student_action": "个人完成小练习。",
+                "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+                "textbook_or_material_state": "色卡作为参考，不再要求照抄。",
+                "learning_sheet_state": "学习单完成小画和理由句。",
+                "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+                "transition_from_previous": "从小组分类转到个人表达。",
+                "transition_to_next": "转入分享时看理由是否成立。",
+                "risk_and_adjustment": "若学生画太复杂，提醒只做一格感受练习。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕色彩表达说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "学习单",
+                "why_needed": "留下可观察证据。",
+                "attention_focus": "颜色和理由是否对应。",
+                "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "event_id": "EVT_5",
+              "event_name": "分享证据",
+              "event_type": "sharing",
+              "learning_purpose": "用作品和理由验证目标达成。",
+              "duration": {
+                "recommended_minutes": 5,
+                "min_minutes": 3,
+                "max_minutes": 7,
+                "time_risk": "交流超时则减少展示人数。"
+              },
+              "execution_view": {
+                "teacher_focus_cue": "我们不评谁最好看，只听颜色和理由是否连得上。",
+                "core_question": "他的颜色让你感受到他说的意思了吗？",
+                "student_task": "两三位学生展示，小组补一句建议。",
+                "teacher_summary_sentence": "好作品不是颜色多，而是感受说得清。"
+              },
+              "design_view": {
+                "learning_purpose": "用作品和理由验证目标达成。",
+                "design_intent": "用作品和理由验证目标达成。",
+                "student_state_before": "学生完成小练习但还未校准表达。",
+                "student_state_after": "学生能听懂同伴理由并修正自己的表达。",
+                "teacher_action": "选择典型作品快速展示。",
+                "student_action": "展示、倾听、补充建议。",
+                "big_screen_state": "不使用视频和平板；黑板贴图片或手绘色块。",
+                "textbook_or_material_state": "学生作品和学习单。",
+                "learning_sheet_state": "学习单作为课后回收证据。",
+                "assessment_evidence": "学生能用理由评价同伴作品。",
+                "transition_from_previous": "承接个人小练习。",
+                "transition_to_next": "下节课可用这些感受理由深化创作。",
+                "risk_and_adjustment": "若时间不足，只展示一正一改两个样本。"
+              },
+              "student_response_model": [
+                {
+                  "type": "expected",
+                  "student_response": "能围绕分享理由说出一个具体发现。",
+                  "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+                  "scaffold": "用“我看到...所以觉得...”句式。"
+                },
+                {
+                  "type": "misconception",
+                  "student_response": "只说好看、漂亮或直接背答案。",
+                  "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+                  "scaffold": "提供感受词卡和二选一比较。"
+                },
+                {
+                  "type": "silent",
+                  "student_response": "学生看着材料但说不出来。",
+                  "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+                  "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+                }
+              ],
+              "resource_use": {
+                "resource_type": "学生作品",
+                "why_needed": "验证表达是否被理解。",
+                "attention_focus": "理由和颜色是否对应。",
+                "fallback_if_unavailable": "只用黑板、粉笔、几张图片和学生口头联想完成。"
+              },
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            }
+          ]
+        },
+        "errors": []
+      },
+      {
+        "step": "TimeRebalancer",
+        "ok": true,
+        "output": {
+          "target_minutes": 40,
+          "total_event_minutes": 40.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        },
+        "errors": []
+      },
+      {
+        "step": "EvidenceBinder",
+        "ok": true,
+        "output": {
+          "evidence_bindings": [
+            {
+              "evidence_id": "EVID_COLOR_SORT",
+              "event_id": "EVT_3",
+              "assessment_evidence": "EVID_COLOR_SORT：色卡归类和理由表达。",
+              "collection_method": "小组把色卡或图片贴到感受词下方。",
+              "what_it_proves": "学生是否能依据感受而不是死记颜色分类。"
+            },
+            {
+              "evidence_id": "EVID_REASON_SENTENCE",
+              "event_id": "EVT_4",
+              "assessment_evidence": "EVID_REASON_SENTENCE：颜色、感受、理由相连。",
+              "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+              "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。"
+            }
+          ],
+          "binding_pass": true,
+          "blockers": []
+        },
+        "errors": []
+      },
+      {
+        "step": "EffectivenessEvaluator",
+        "ok": true,
+        "output": {
+          "contract_errors": [],
+          "effectiveness": {
+            "resource_purpose_score": 5,
+            "attention_focus_score": 5,
+            "teacher_guidance_score": 5,
+            "student_response_prediction_score": 5,
+            "scaffold_quality_score": 5,
+            "collection_method_reasoning_score": 5,
+            "media_material_timing_score": 5,
+            "assessment_evidence_score": 5,
+            "transition_script_score": 5,
+            "time_feasibility_score": 5,
+            "age_appropriateness_score": 5,
+            "overall_effectiveness_score": 5.0,
+            "pass": true,
+            "blockers": [],
+            "issues": [],
+            "time_balance": {
+              "target_minutes": 40,
+              "total_event_minutes": 40.0,
+              "time_balance_pass": true,
+              "rebalance_candidates": []
+            }
+          }
+        },
+        "errors": []
+      }
+    ]
+  }
+]

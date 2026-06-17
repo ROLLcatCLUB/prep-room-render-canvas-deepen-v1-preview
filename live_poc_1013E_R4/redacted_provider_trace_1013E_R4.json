@@ -1,0 +1,23 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+    "provider_called": false,
+    "model_called": false,
+    "trace_step_count": 10
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "teacher_input": "我想放一段美术和音乐结合的舞蹈，让学生感受节奏，再引到线条和色彩表现。帮我设计这一段怎么展开。",
+    "provider_called": false,
+    "model_called": false,
+    "trace_step_count": 10
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "teacher_input": "这节课不能放视频，也没有平板，只有黑板和几张图片，帮我把活动改得还能上。",
+    "provider_called": false,
+    "model_called": false,
+    "trace_step_count": 10
+  }
+]

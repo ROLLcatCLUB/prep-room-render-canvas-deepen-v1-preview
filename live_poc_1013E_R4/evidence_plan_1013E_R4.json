@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "step": "EvidencePlanDeriver",
+    "ok": true,
+    "output": {
+      "evidence_plan": [
+        {
+          "evidence_id": "EVID_COLOR_SORT",
+          "what_it_proves": "学生是否能依据感受而不是死记颜色分类。",
+          "collection_method": "小组把色卡或图片贴到感受词下方。",
+          "expected_student_output": "至少两张色卡归类，并能说出分类依据。",
+          "linked_target_shift": "学生能把色卡或图片放入感受类别，并用一句话说明依据。"
+        },
+        {
+          "evidence_id": "EVID_REASON_SENTENCE",
+          "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。",
+          "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+          "expected_student_output": "一条颜色、感受、理由相连的短句。",
+          "linked_target_shift": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "step": "EvidencePlanDeriver",
+    "ok": true,
+    "output": {
+      "evidence_plan": [
+        {
+          "evidence_id": "EVID_FOCUS_WORD",
+          "what_it_proves": "学生是否把注意力放在节奏特征而不是动作好看。",
+          "collection_method": "观看后先写一个节奏词，再口头补一句理由。",
+          "expected_student_output": "快、密、跳、缓、流动等词语及理由。",
+          "linked_target_shift": "学生能说出“我看到/听到的节奏像什么线条或颜色”，并完成一格节奏转译草图。"
+        },
+        {
+          "evidence_id": "EVID_VISUAL_TRANSLATION",
+          "what_it_proves": "学生能否把节奏转成线条或色彩。",
+          "collection_method": "学习单一格小草图和同桌说明。",
+          "expected_student_output": "线条疏密、方向或色彩强弱与节奏词对应。",
+          "linked_target_shift": "学习单上的节奏词、线条/色彩选择和一句理由能互相对应。"
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "step": "EvidencePlanDeriver",
+    "ok": true,
+    "output": {
+      "evidence_plan": [
+        {
+          "evidence_id": "EVID_COLOR_SORT",
+          "what_it_proves": "学生是否能依据感受而不是死记颜色分类。",
+          "collection_method": "小组把色卡或图片贴到感受词下方。",
+          "expected_student_output": "至少两张色卡归类，并能说出分类依据。",
+          "linked_target_shift": "学生能把色卡或图片放入感受类别，并用一句话说明依据。"
+        },
+        {
+          "evidence_id": "EVID_REASON_SENTENCE",
+          "what_it_proves": "学生是否能把颜色和情绪/场景联系起来。",
+          "collection_method": "学习单填写“这个颜色让我想到……”句式。",
+          "expected_student_output": "一条颜色、感受、理由相连的短句。",
+          "linked_target_shift": "学习单中至少完成两组颜色感受记录，理由不只停在好看。"
+        }
+      ]
+    },
+    "errors": []
+  }
+]
