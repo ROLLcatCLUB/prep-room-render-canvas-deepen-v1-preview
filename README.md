@@ -211,3 +211,14 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Benchmark summary: 3 cases, 3 pipeline passes; the main `standard_daily_cold_warm_more_visual` case passed.
 - Strategy note: R4 is local rule-based staged derivation first, so provider/model were not called in this pass. This proves the staged reasoning shape before reintroducing model calls or UI binding.
 - Boundary: no UI binding, no database write, no memory write, no Feishu write, no formal apply, no official export, no official archive, no real knowledge-base retrieval, and no raw model output was sent to frontend.
+
+## 1013F Reasoning Field Patch To View/Edit UI Binding
+
+- `scripts/run_prep_room_1013f_view_edit_ui_binding.py` maps the R4 staged derivation output into teacher-readable view/edit binding samples.
+- Output directory: `1013F_view_edit_ui_binding/`.
+- Required files were generated: `1013F_result.json`, `1013F_report.md`, `view_mode_binding_sample_1013F.json`, `edit_mode_binding_sample_1013F.json`, `patch_candidate_cards_1013F.json`, `impact_scope_mapping_1013F.json`, `teacher_review_action_contract_1013F.json`, `candidate_error_display_1013F.json`, and `ui_smoke_screenshot_1013F.png`.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013F` opens the preview-only view binding state.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FEdit` opens the preview-only edit binding state focused on `教学过程 · 色卡分类探究`.
+- Final status: `PASS_REASONING_FIELD_PATCH_TO_VIEW_EDIT_UI_BINDING`.
+- Next stage: `1013G_TEACHER_REVIEW_ACTIONS_PREVIEW_SANDBOX`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, or main-project commit/push.
