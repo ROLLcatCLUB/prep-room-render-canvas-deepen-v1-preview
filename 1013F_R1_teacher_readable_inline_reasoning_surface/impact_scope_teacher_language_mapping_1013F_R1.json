@@ -1,0 +1,30 @@
+[
+  {
+    "teacher_label": "大屏",
+    "teacher_language": "大屏需要保留感受词和冷暖色对比图，支持学生指认理由。"
+  },
+  {
+    "teacher_label": "学习单",
+    "teacher_language": "学习单只增加一句理由记录，不做复杂表格。"
+  },
+  {
+    "teacher_label": "课堂观察",
+    "teacher_language": "观察学生能否说出颜色与感受之间的关系。"
+  },
+  {
+    "teacher_label": "教师追问",
+    "teacher_language": "教师追问分类依据，而不是直接判定对错。"
+  },
+  {
+    "teacher_label": "学生任务",
+    "teacher_language": "学生任务从听讲改为动手分类、说明理由。"
+  },
+  {
+    "teacher_label": "时间",
+    "teacher_language": "探究保留约10分钟，展示人数不足时压缩交流。"
+  },
+  {
+    "teacher_label": "下节承接",
+    "teacher_language": "下一节可回看本课理由句，再进入更完整的色彩表达。"
+  }
+]

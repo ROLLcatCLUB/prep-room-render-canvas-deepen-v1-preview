@@ -1,0 +1,30 @@
+{
+  "stage_id": "1013F_R1_TEACHER_READABLE_INLINE_REASONING_SURFACE_DENOISE",
+  "rendering_principle": "查看态正文回答怎么上；hover或点击旁注回答为什么这样安排；编辑态回答这一段怎么改、会影响什么。",
+  "default_view_rules": [
+    "教学过程默认渲染为连续自然段，不默认展示字段网格。",
+    "每个环节保留1到2个自然段，每段2到4句。",
+    "轻量旁注默认隐藏，hover跟随鼠标，点击后只展开当前段落旁注。",
+    "同屏默认不超过1个段落旁注面板。",
+    "点击空白处关闭旁注，展开或收起时保留阅读位置。"
+  ],
+  "teacher_visible_forbidden_terms": [
+    "环节作用",
+    "设计意图",
+    "承上启下",
+    "学生当前状态",
+    "教师动作",
+    "学生活动",
+    "大屏状态",
+    "学习单 / 教材 / 材料",
+    "评价证据",
+    "风险与调整",
+    "lesson_unfolding_graph",
+    "classroom_event",
+    "pipeline",
+    "validator",
+    "schema",
+    "raw json",
+    "impact_scope"
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "paragraph_id": "p-intro-1",
+    "event_label": "导入",
+    "teacher_readable_summary": "先出示两组色彩气氛差异明显的生活图片，请学生说一说“这些颜色给你什么感觉”。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  {
+    "paragraph_id": "p-intro-2",
+    "event_label": "导入",
+    "teacher_readable_summary": "如果学生只说“好看”或“不好看”，教师可以追问学生感受的具体方向。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  {
+    "paragraph_id": "p-sense-1",
+    "event_label": "感知",
+    "teacher_readable_summary": "把生活图片和教材作品放在一起看，比较颜色差异和感受差异。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  {
+    "paragraph_id": "p-sense-2",
+    "event_label": "感知",
+    "teacher_readable_summary": "让学生发现颜色不只是名称，也会改变画面气氛。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  {
+    "paragraph_id": "p-explore-1",
+    "event_label": "探究",
+    "teacher_readable_summary": "学生分组拿到色卡和生活物品，把颜色贴到感受词下面并说明理由。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  {
+    "paragraph_id": "p-explore-2",
+    "event_label": "探究",
+    "teacher_readable_summary": "教师巡视时重点听理由，把分类从颜色名称拉回到感受证据。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  {
+    "paragraph_id": "p-make-1",
+    "event_label": "表现",
+    "teacher_readable_summary": "学生围绕一种感受做色彩小练习，并选择基础、进阶或挑战任务。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  {
+    "paragraph_id": "p-make-2",
+    "event_label": "表现",
+    "teacher_readable_summary": "教师提醒学生先想清楚要表达什么，再选择颜色。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  {
+    "paragraph_id": "p-share-1",
+    "event_label": "交流展示",
+    "teacher_readable_summary": "学生说明自己的色彩选择，同伴说出自己读到的感受。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  {
+    "paragraph_id": "p-share-2",
+    "event_label": "交流展示",
+    "teacher_readable_summary": "时间不够时保留典型作品，帮助全班看见颜色是否服务于表达。",
+    "hover_enabled": true,
+    "click_selected_note_enabled": true,
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  }
+]

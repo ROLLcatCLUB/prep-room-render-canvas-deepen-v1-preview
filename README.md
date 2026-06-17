@@ -222,3 +222,15 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_REASONING_FIELD_PATCH_TO_VIEW_EDIT_UI_BINDING`.
 - Next stage: `1013G_TEACHER_REVIEW_ACTIONS_PREVIEW_SANDBOX`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, or main-project commit/push.
+
+## 1013F_R1 Teacher Readable Inline Reasoning Surface
+
+- `scripts/run_prep_room_1013f_r1_teacher_readable_quality_check.py` runs the multi-pass teacher-reading quality check.
+- Output directory: `1013F_R1_teacher_readable_inline_reasoning_surface/`.
+- Required files were generated: `1013F_R1_result.json`, `1013F_R1_report.md`, `teacher_readable_paragraph_render_rules_1013F_R1.json`, `paragraph_anchor_mapping_1013F_R1.json`, `hover_reasoning_note_sample_1013F_R1.json`, `selected_paragraph_design_note_sample_1013F_R1.json`, `edit_mode_selected_paragraph_sample_1013F_R1.json`, `impact_scope_teacher_language_mapping_1013F_R1.json`, `candidate_error_inline_display_1013F_R1.json`, `ui_smoke_screenshot_1013F_R1_view.png`, and `ui_smoke_screenshot_1013F_R1_hover_or_selected.png`.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR1` opens the denoised reading surface.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR1Selected` opens the selected-paragraph note state.
+- The teaching process now reads as continuous classroom paragraphs. Hover notes follow the pointer; clicking a paragraph opens one local note panel; clicking blank space closes it; scroll position is preserved during note toggles.
+- Final status: `PASS_TEACHER_READABLE_INLINE_REASONING_SURFACE`.
+- Next stage: `1013F_R2_CLASSROOM_EVENT_DETAIL_POLISH`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.

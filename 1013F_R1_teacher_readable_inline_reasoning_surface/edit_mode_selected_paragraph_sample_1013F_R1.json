@@ -1,0 +1,16 @@
+{
+  "current_paragraph": "p-explore-1",
+  "current_section": "教学过程 · 探究",
+  "teacher_visible_current_paragraph": "学生分组拿到色卡和生活物品，把颜色贴到感受词下面并说明理由。",
+  "xiaobei_suggestion": "把探究环节保留为动手分类，不直接讲结论；教师重点追问分类理由。",
+  "before": "学生只是观察冷暖色，容易停留在颜色名称或好看不好看。",
+  "after": "学生先按感受词分类色卡，再选择一张色卡说出理由。",
+  "teacher_actions": [
+    "采纳到本段",
+    "继续精修",
+    "追问原因",
+    "暂不采用"
+  ],
+  "teacher_review_required": true,
+  "formal_apply_performed": false
+}
