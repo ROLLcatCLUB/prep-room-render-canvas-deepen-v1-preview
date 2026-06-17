@@ -148,6 +148,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_CONTENT_REVIEW_WITH_CASE_REFERENCE_STRUCTURE_ONLY`.
 - Next stage: `1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION`.
 - Boundary: no provider/model call, no Feishu/database/memory write, no formal apply, no 1013G, and no copied case text was inserted into the lesson.
+
+## 1013M MiniMax M3 Connection
+
+- `backend/xiaobei_ai/providers.py` now defaults MiniMax generation and vision fallback models to `MiniMax-M3`.
+- M3 OpenAI-compatible calls use `max_completion_tokens` and default to `thinking: {"type":"disabled"}` for business JSON calls. `MINIMAX_M3_THINKING=adaptive` can be used when a stage explicitly needs M3 thinking output.
+- `MINIMAX_MODEL=MiniMax-M3` is documented in `.env.example`, and the local user environment has been set to `MiniMax-M3`.
+- Prep-room reasoning POC scripts that previously hardcoded `MiniMax-M2.7-highspeed` now request `MiniMax-M3`.
+- `scripts/run_minimax_m3_connection_smoke.py` performs a minimal live JSON smoke.
+- Output directory: `1013M_minimax_m3_connection/`.
+- Final status: `PASS_MINIMAX_M3_CONNECTED`.
 - What failed: `standard_daily` started producing the expected structure but did not return parseable complete JSON; `open_class` and `research_lesson` timed out.
 - Conclusion: the model path is plausible, but the prompt is too heavy for stable four-case output. Next stage should be `1013E_R1_PROMPT_REPAIR`, with shorter schema, smaller source context, and mode-specific prompt compression.
 - Boundary: no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.

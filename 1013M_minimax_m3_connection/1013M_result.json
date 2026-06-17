@@ -1,0 +1,28 @@
+{
+  "stage": "1013M_MINIMAX_M3_CONNECTION_SMOKE",
+  "final_status": "PASS_MINIMAX_M3_CONNECTED",
+  "model_requested": "MiniMax-M3",
+  "provider_family": "minimax",
+  "provider_enabled": true,
+  "credential_source": "env",
+  "base_url_host": "api.minimaxi.com",
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M3",
+    "credential_source": "env",
+    "reasoning_split": false,
+    "latency_ms": 884
+  },
+  "parsed_response": {
+    "ok": true,
+    "model_check": "m3"
+  },
+  "m3_thinking_default_for_business_calls": "disabled",
+  "m3_token_field": "max_completion_tokens",
+  "teacher_review_required": true,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}
