@@ -1,0 +1,77 @@
+{
+  "stage": "1013D_LESSON_DESIGN_REASONING_FIELD_MODEL",
+  "lesson": "三年级美术 第一单元 1-2《色彩的感觉》",
+  "quality_gate": {
+    "level": "ready_to_teach",
+    "level_options": [
+      "basic_usable",
+      "ready_to_teach",
+      "refined",
+      "open_class_ready"
+    ],
+    "checks": {
+      "curriculum_aligned": {
+        "status": "pass",
+        "teacher_note": "目标聚焦观察、感受、表达，符合三年级美术学习边界。"
+      },
+      "textbook_grounded": {
+        "status": "pass",
+        "teacher_note": "课题使用真实教材课题 1-2《色彩的感觉》。"
+      },
+      "student_baseline_clear": {
+        "status": "partial",
+        "teacher_note": "已有三年级常见学情预设，仍等待真实学生档案和课堂反馈校准。"
+      },
+      "target_shift_clear": {
+        "status": "pass",
+        "teacher_note": "从看到颜色，到说出感受，再到用色彩表达。"
+      },
+      "teaching_route_coherent": {
+        "status": "pass",
+        "teacher_note": "生活感受、图片观察、色卡分类、分层表达、交流展示形成连续路径。"
+      },
+      "step_intent_clear": {
+        "status": "pass",
+        "teacher_note": "五个环节均说明了环节作用与承上启下。"
+      },
+      "teacher_action_operable": {
+        "status": "pass",
+        "teacher_note": "教师动作具体到出示、追问、示范、巡视和归纳。"
+      },
+      "student_action_visible": {
+        "status": "pass",
+        "teacher_note": "学生有观察、比较、分类、创作、说明和倾听。"
+      },
+      "big_screen_state_defined": {
+        "status": "pass",
+        "teacher_note": "每个环节都有大屏呈现状态。"
+      },
+      "material_timing_clear": {
+        "status": "pass",
+        "teacher_note": "教材、色卡、学习单、作品展示的使用时机已区分。"
+      },
+      "assessment_evidence_defined": {
+        "status": "pass",
+        "teacher_note": "评价证据包含表达句、分类理由、作品、作品说明和同伴反馈。"
+      },
+      "risk_adjustment_ready": {
+        "status": "pass",
+        "teacher_note": "针对只说好看、分类混乱、随意涂色、展示时间不足均有调整办法。"
+      },
+      "not_too_easy": {
+        "status": "pass",
+        "teacher_note": "不只停留在认识冷暖色，而要求说明理由和作品表达。"
+      },
+      "not_over_scope": {
+        "status": "pass",
+        "teacher_note": "不进入复杂色彩心理学和专业配色理论。"
+      }
+    },
+    "missing_for_refined": [
+      "接入真实班级过往作品或课堂观察后，校准学生起点。",
+      "补一组可直接上屏的冷暖色图片。",
+      "补一张简短学习单样稿。"
+    ],
+    "teacher_visible_summary": "这节课已达到正常上课水平。若要精磨，还需要用真实班级记录校准学情，并补齐大屏图片和学习单样稿。"
+  }
+}

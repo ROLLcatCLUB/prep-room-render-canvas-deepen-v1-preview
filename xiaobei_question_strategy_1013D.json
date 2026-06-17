@@ -1,0 +1,114 @@
+{
+  "stage": "1013D_LESSON_DESIGN_REASONING_FIELD_MODEL",
+  "purpose": "Define how Xiaobei asks before generating lesson design candidates.",
+  "question_priority": [
+    {
+      "rank": 1,
+      "question": "这节课按什么程度备？快速、标准、精磨、公开课，还是研究课？",
+      "why": "Determines generation depth, resource calls, evidence requirement, and how many follow-up questions are acceptable."
+    },
+    {
+      "rank": 2,
+      "question": "学生现在主要卡在哪里？",
+      "why": "Prevents the lesson from becoming generic activity filling."
+    },
+    {
+      "rank": 3,
+      "question": "这节课更想让学生理解什么，还是表达什么？",
+      "why": "Clarifies the target shift and avoids tasks that are too easy or over scope."
+    },
+    {
+      "rank": 4,
+      "question": "有没有必须使用的材料、图片、教材页或作品？",
+      "why": "Controls material timing and avoids impossible classroom media plans."
+    },
+    {
+      "rank": 5,
+      "question": "是否需要学习单？",
+      "why": "Decides whether student thinking must be captured in written evidence."
+    },
+    {
+      "rank": 6,
+      "question": "你希望用什么证据判断学生达成？",
+      "why": "Connects activity design to assessment evidence."
+    },
+    {
+      "rank": 7,
+      "question": "课堂时间是否完整 40 分钟？",
+      "why": "Controls activity depth and presentation time."
+    },
+    {
+      "rank": 8,
+      "question": "是否有班级特殊情况？",
+      "why": "Allows future student archive and classroom feedback to affect difficulty and support."
+    }
+  ],
+  "mode_rules": {
+    "quick_daily": {
+      "max_questions": 1,
+      "default_offer": "我先按日常可上课版本生成，之后你再补一句调整。",
+      "must_ask_if_missing": [
+        "lesson_design_mode"
+      ]
+    },
+    "standard_daily": {
+      "max_questions": 2,
+      "default_offer": "我先按标准日常课生成，重点补齐目标、过程、任务和评价。",
+      "must_ask_if_missing": [
+        "core_learning_problem",
+        "student_baseline"
+      ]
+    },
+    "refined_lesson": {
+      "max_questions": 3,
+      "default_offer": "我先按精磨课生成，重点看学情、问题串、材料和评价证据。",
+      "must_ask_if_missing": [
+        "student_baseline",
+        "target_shift",
+        "evidence_plan"
+      ]
+    },
+    "open_class": {
+      "max_questions": 5,
+      "default_offer": "我先按公开课方向整理，但会标出还需要你确认的课堂节奏和展示证据。",
+      "must_ask_if_missing": [
+        "student_baseline",
+        "teacher_intent",
+        "classroom_constraints",
+        "big_screen_state",
+        "evidence_plan"
+      ]
+    },
+    "research_lesson": {
+      "max_questions": 5,
+      "default_offer": "我先按研究课方向整理教学假设和证据链，未确认的地方会放成候选。",
+      "must_ask_if_missing": [
+        "core_learning_problem",
+        "teaching_hypothesis",
+        "student_baseline",
+        "evidence_plan",
+        "post_lesson_analysis_plan"
+      ]
+    }
+  },
+  "sample_teacher_interaction": {
+    "teacher_input": "学生对冷暖色不太理解，要更直观。",
+    "xiaobei_response": "我先整理成两处候选：探究环节加色卡分组，学习单加感受记录格。等你确认。",
+    "candidate_targets": [
+      "教学过程 · 探究环节",
+      "学情分析",
+      "学习单与评价"
+    ],
+    "impact_range": [
+      "大屏增加冷暖色对比图",
+      "学习单增加我看到的颜色和我感受到的情绪",
+      "评价时记录学生是否能说出分类理由"
+    ]
+  },
+  "teacher_visible_rules": [
+    "Use plain teacher language.",
+    "Do not show internal field names.",
+    "Do not create long chat history.",
+    "Always keep candidates pending until teacher confirms."
+  ]
+}

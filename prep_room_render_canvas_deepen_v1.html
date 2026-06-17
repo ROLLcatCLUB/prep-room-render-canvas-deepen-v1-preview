@@ -1339,6 +1339,35 @@
       color: var(--amber);
     }
 
+    .nb-reasoning-brief {
+      display: grid;
+      gap: 8px;
+      padding: 12px;
+      border: 1px solid rgba(111, 128, 112, 0.18);
+      border-radius: var(--radius-small);
+      background: rgba(247, 250, 246, 0.78);
+    }
+
+    .nb-reasoning-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .nb-reasoning-item {
+      display: grid;
+      gap: 4px;
+      min-width: 0;
+      padding: 8px 0;
+      border-top: 1px solid rgba(111, 128, 112, 0.12);
+      line-height: 1.55;
+    }
+
+    .nb-reasoning-item strong {
+      color: var(--green);
+      font-size: 12px;
+    }
+
     .nb-field-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3764,6 +3793,13 @@
             label: "教学过程 · 探究环节"
           },
           expanded_intent_steps: [],
+          lesson_design_mode: "standard_daily",
+          lesson_design_modes: [
+            { id: "quick_daily", label: "快速", note: "今天能上就行" },
+            { id: "standard_daily", label: "标准", note: "正常教学使用" },
+            { id: "refined_lesson", label: "精磨", note: "想上得更稳" },
+            { id: "open_class", label: "公开课", note: "展示或教研" }
+          ],
           cover: {
             title: "三年级美术 · 2025学年第二学期",
             subtitle: "来源：正式课表 + 2025学年第二学期三年级美术教学工作计划",
@@ -3869,6 +3905,12 @@
             unit: "第一单元 多变的色彩",
             status: "可上课 · 2项待确认",
             brief: "本课使用真实课题 1-2《色彩的感觉》。当前学生档案和课堂反馈尚未接入，学情先按三年级常见认知做预设，后续再由真实记录校准。",
+            design_brief_summary: {
+              problem: "学生知道颜色，也会说喜欢或不喜欢，但还需要把颜色和感受、场景、作品表达联系起来。",
+              shift: "从看到颜色，到说出感受，再到有意识地用色彩表达心情或场景。",
+              route: "生活感受 → 图片观察 → 色卡分类 → 分层小练习 → 作品说明",
+              evidence: "看学生能否说出理由、能否在作品中用色表达、能否解释自己的选择。"
+            },
             status_cards: [
               ["正式课位", "8节", "done"],
               ["查看状态", "可阅读", "done"],
@@ -5065,6 +5107,37 @@
       `;
     }
 
+    function renderLessonDesignMode(view) {
+      const modes = view.lesson_design_modes || [];
+      const current = view.lesson_design_mode || "standard_daily";
+      return `
+        <div class="nb-mode-strip" aria-label="备课程度">
+          <span class="quiet-tag">备课程度</span>
+          ${modes.map((item) => `
+            <button class="nb-mode-pill ${item.id === current ? "active" : ""}" type="button" data-lesson-mode="${html(item.id)}" title="${html(item.note)}">
+              ${html(item.label)}
+            </button>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderLessonReasoningBrief(lesson) {
+      const brief = lesson.design_brief_summary;
+      if (!brief) return "";
+      return `
+        <section class="nb-reasoning-brief" aria-label="本课设计判断">
+          <div class="nb-section-head"><span>本课设计判断</span><span class="quiet-tag">先判断，再生成候选</span></div>
+          <div class="nb-reasoning-grid">
+            <div class="nb-reasoning-item"><strong>要解决的问题</strong><span>${html(brief.problem)}</span></div>
+            <div class="nb-reasoning-item"><strong>希望发生的变化</strong><span>${html(brief.shift)}</span></div>
+            <div class="nb-reasoning-item"><strong>教学路径</strong><span>${html(brief.route)}</span></div>
+            <div class="nb-reasoning-item"><strong>怎么看达成</strong><span>${html(brief.evidence)}</span></div>
+          </div>
+        </section>
+      `;
+    }
+
     function renderPrepNotebookRightPanel(view) {
       const mode = prepNotebookMode(view);
       const panels = view.right_panels?.[mode] || [];
@@ -5136,6 +5209,8 @@
                 </div>
               </div>
 
+              ${renderLessonDesignMode(view)}
+
               <section>
                 <div class="nb-section-head"><span>本课状态</span><span class="quiet-tag">真实课题 · 候选预览</span></div>
                 <div class="nb-status-grid">
@@ -5152,6 +5227,7 @@
 
               <div class="nb-doc">
                 <div class="nb-field-body">${html(lesson.brief)}</div>
+                ${renderLessonReasoningBrief(lesson)}
                 ${beforeProcess.map((section, index) => renderLessonSection(view, section, ["一", "二", "三", "四", "五"][index])).join("")}
                 ${renderProcessSection(view, "六")}
                 ${afterProcess.map((section, index) => renderLessonSection(view, section, ["七", "八", "九"][index])).join("")}
@@ -5729,6 +5805,17 @@
       showToast(prepView.prep_notebook_mode === "edit" ? `已进入编辑：${prepActiveTarget(prepView).label}` : "已回到查看状态");
     }
 
+    function setLessonDesignMode(modeId) {
+      const prepView = model.views.find((view) => view.id === "prepNotebook");
+      if (!prepView) return;
+      const modes = prepView.lesson_design_modes || [];
+      const selected = modes.find((item) => item.id === modeId);
+      if (!selected) return;
+      prepView.lesson_design_mode = selected.id;
+      renderPrepRoomCanvas();
+      showToast(`这节课先按“${selected.label}”准备`);
+    }
+
     function handlePrepEditTarget(value) {
       const [kind, id] = String(value || "").split(":");
       if (!id) return;
@@ -5780,6 +5867,12 @@
         const prepModeButton = event.target.closest("[data-nb-mode]");
         if (prepModeButton) {
           setPrepNotebookMode(prepModeButton.dataset.nbMode);
+          return;
+        }
+
+        const lessonModeButton = event.target.closest("[data-lesson-mode]");
+        if (lessonModeButton) {
+          setLessonDesignMode(lessonModeButton.dataset.lessonMode);
           return;
         }
 

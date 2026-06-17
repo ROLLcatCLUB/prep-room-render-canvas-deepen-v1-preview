@@ -1,0 +1,115 @@
+{
+  "stage": "1013D_LESSON_DESIGN_REASONING_FIELD_MODEL",
+  "status": "MODEL_READY_FOR_REVIEW",
+  "purpose": "Make lesson preparation start from teaching judgment instead of free-form lesson-plan generation.",
+  "lesson_design_mode": {
+    "field": "lesson_design_mode",
+    "teacher_visible_label": "这节课按什么程度备",
+    "values": [
+      {
+        "id": "quick_daily",
+        "label": "快速",
+        "meaning": "今天能上就行",
+        "max_questions": 1,
+        "resource_call_depth": "low",
+        "design_note_depth": "light",
+        "evidence_requirement": "basic"
+      },
+      {
+        "id": "standard_daily",
+        "label": "标准",
+        "meaning": "正常教学使用",
+        "max_questions": 2,
+        "resource_call_depth": "medium",
+        "design_note_depth": "normal",
+        "evidence_requirement": "ready_to_teach"
+      },
+      {
+        "id": "refined_lesson",
+        "label": "精磨",
+        "meaning": "想上得更稳",
+        "max_questions": 3,
+        "resource_call_depth": "medium_high",
+        "design_note_depth": "detailed",
+        "evidence_requirement": "refined"
+      },
+      {
+        "id": "open_class",
+        "label": "公开课",
+        "meaning": "展示、比赛或教研",
+        "max_questions": 5,
+        "resource_call_depth": "high",
+        "design_note_depth": "deep",
+        "evidence_requirement": "open_class_ready"
+      },
+      {
+        "id": "research_lesson",
+        "label": "研究课",
+        "meaning": "围绕问题和证据做教学研究",
+        "max_questions": 5,
+        "resource_call_depth": "high",
+        "design_note_depth": "deep_with_hypothesis",
+        "evidence_requirement": "research_ready"
+      }
+    ]
+  },
+  "lesson_design_brief_shape": {
+    "lesson_design_mode": "quick_daily | standard_daily | refined_lesson | open_class | research_lesson",
+    "core_learning_problem": "What student learning problem this lesson solves.",
+    "student_baseline": "What students likely know, cannot yet do, or misunderstand.",
+    "target_shift": "The expected movement from current state to lesson outcome.",
+    "unit_position": "Where this lesson sits in the unit and term plan.",
+    "curriculum_basis": [],
+    "textbook_basis": [],
+    "prior_learning_basis": [],
+    "teacher_intent": "Teacher's intention or preference for this lesson.",
+    "classroom_constraints": [],
+    "resource_budget": "low | medium | high",
+    "teaching_route": [],
+    "evidence_plan": [],
+    "risk_points": [],
+    "next_best_questions": []
+  },
+  "teaching_step_reasoning_shape": {
+    "step_id": "",
+    "step_name": "",
+    "duration": "",
+    "step_role": "",
+    "design_intent": "",
+    "student_state_before": "",
+    "student_state_after": "",
+    "teacher_action": "",
+    "student_action": "",
+    "big_screen_state": "",
+    "textbook_or_material_state": "",
+    "learning_sheet_state": "",
+    "assessment_evidence": "",
+    "transition_from_previous": "",
+    "transition_to_next": "",
+    "risk_and_adjustment": ""
+  },
+  "visible_surface_rules": {
+    "view_mode": [
+      "Show continuous lesson design text.",
+      "Show light source tags such as 教材, 课标, 资料室, 过往记录.",
+      "Use 查看设计说明 for deeper reasoning."
+    ],
+    "edit_mode": [
+      "Show current edit location.",
+      "Show brief summary, step reasoning, impact range, and candidates.",
+      "Keep edit tools around the current section or step."
+    ],
+    "reasoning_layer": [
+      "Show basis, student state, step role, teacher action, big screen, materials, learning sheet, evidence, and risk adjustment in teacher language.",
+      "Do not show internal field names on the teacher-facing surface."
+    ]
+  },
+  "boundary": {
+    "provider_call": false,
+    "database_write": false,
+    "memory_write": false,
+    "feishu_write": false,
+    "formal_export": false,
+    "archive_apply": false
+  }
+}

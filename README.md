@@ -109,3 +109,14 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - `prep_room_render_canvas_deepen_v1.html#prepNotebookIntent` opens the teaching-process intent layer with the `探究` design explanation expanded.
 - The visible teacher UI avoids engineering words and keeps edit tools around the current section or lesson step.
 - No large review package, ZIP, formal validator, provider call, database write, memory write, Feishu write, formal apply, or formal export was added in this implementation pass.
+
+## 1013D Lesson Design Reasoning Field Model
+
+- `lesson_design_reasoning_model_1013D.md` defines the next model layer: a lesson is a learning-problem solving chain, not a fixed set of process labels.
+- `lesson_design_reasoning_model_1013D.json` defines the field model for `lesson_design_mode`, `lesson_design_brief`, teaching-step reasoning, visible-surface rules, and hard no-write boundaries.
+- `lesson_design_brief_sample_1013D.json` gives the full sample for Grade 3 art, Unit 1, 1-2 `色彩的感觉`, with `standard_daily` as the sample preparation depth.
+- `teaching_step_reasoning_sample_1013D.json` gives five reasoning objects for 导入, 感知, 探究, 表现, and 交流展示.
+- `lesson_design_quality_gate_1013D.json` defines the quality gate dimensions: alignment, student baseline, target shift, route coherence, teacher/student actions, big screen, material timing, evidence, risk adjustment, not-too-easy, and not-over-scope.
+- `xiaobei_question_strategy_1013D.json` defines how 小备 asks before generating candidates, with question limits by preparation depth.
+- The HTML prep notebook now includes a lightweight teacher-facing preparation-depth selector: 快速 / 标准 / 精磨 / 公开课, plus a design-judgment summary for the current real topic.
+- Boundary: 1013D is a local model and light preview pass only. It does not call a provider, write a database, write memory, write Feishu, export officially, archive officially, or generate a large ZIP.
