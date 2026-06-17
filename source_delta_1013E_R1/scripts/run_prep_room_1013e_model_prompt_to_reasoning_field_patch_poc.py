@@ -304,6 +304,7 @@ def call_provider(case: dict[str, Any], source_context: dict[str, Any]) -> dict[
     )
     latency_ms = round((time.perf_counter() - started) * 1000)
     raw_text = provider_result.get("raw_text") or ""
+    meta = provider_result.get("provider_meta") or {}
     parsed, parser_meta = parse_lesson_reasoning_output(raw_text, meta)
     parser_mode = parser_meta.get("parser_mode") or "unknown"
     extraction_required = bool(parser_meta.get("extraction_required"))
@@ -311,7 +312,6 @@ def call_provider(case: dict[str, Any], source_context: dict[str, Any]) -> dict[
     if parser_meta.get("parse_error_code"):
         validation_errors = [parser_meta["parse_error_code"], *validation_errors]
     secret_hits = secret_scan_text(raw_text)
-    meta = provider_result.get("provider_meta") or {}
     success = not validation_errors and not secret_hits and parser_mode == "strict_json"
     return {
         "case_id": case["case_id"],

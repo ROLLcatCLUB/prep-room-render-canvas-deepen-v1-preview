@@ -1,0 +1,90 @@
+{
+  "stage_id": "1013E_R1_PROMPT_REPAIR_AND_READONLY_REASONING_PIPELINE",
+  "case_id": "test_standard_daily",
+  "lesson_design_mode": "standard_daily",
+  "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+  "provider_called": true,
+  "model_called": true,
+  "strict_json_success": false,
+  "safe_success": false,
+  "parser_mode": "json_parse_error",
+  "extraction_required": false,
+  "parser_meta": {
+    "parser_mode": "json_parse_error",
+    "parse_subcode": "fenced_markdown_output",
+    "parse_error_code": "json_parse_error",
+    "raw_prefix_type": null,
+    "provider_output_sanitized": false,
+    "extraction_required": false
+  },
+  "validation_errors": [
+    "json_parse_error",
+    "parsed_result_not_object"
+  ],
+  "secret_scan_hits": [],
+  "latency_ms": 58996,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": true,
+    "latency_ms": 58996
+  },
+  "readonly_result": {
+    "readonly": true,
+    "candidate_only": true,
+    "formal_apply_performed": false,
+    "parsed_compact": null,
+    "normalized_legacy_shape": null,
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    }
+  },
+  "visible_trace": {
+    "stage_id": "1013E_R1_PREP_ROOM_LESSON_REASONING_VISIBLE_TRACE",
+    "teacher_visible": true,
+    "raw_model_reasoning_visible": false,
+    "status": "blocked",
+    "headline": "这次输出还需要修正",
+    "steps": [
+      {
+        "id": "mode",
+        "label": "判断这节课准备到什么程度",
+        "status": "done",
+        "teacher_visible_text": "按标准日常课来处理，先控制生成深度。"
+      },
+      {
+        "id": "student_blocker",
+        "label": "查看学生可能卡在哪里",
+        "status": "done",
+        "teacher_visible_text": "重点看学生能否把颜色、感受和理由连起来。"
+      },
+      {
+        "id": "target",
+        "label": "定位要修改的段落或环节",
+        "status": "done",
+        "teacher_visible_text": "优先定位到学情分析和教学过程的探究环节。"
+      },
+      {
+        "id": "impact",
+        "label": "检查会影响大屏、学习单和评价证据",
+        "status": "blocked",
+        "teacher_visible_text": "同步检查材料呈现、学习记录和课堂观察证据。"
+      },
+      {
+        "id": "candidate",
+        "label": "整理成候选，等待老师确认",
+        "status": "blocked",
+        "teacher_visible_text": "整理为可并入的候选，不直接变成正式结果。"
+      }
+    ],
+    "teacher_note": "所有内容都先作为候选，等待老师确认。"
+  }
+}

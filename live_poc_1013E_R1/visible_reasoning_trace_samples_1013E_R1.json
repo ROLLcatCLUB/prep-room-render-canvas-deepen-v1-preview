@@ -1,0 +1,174 @@
+[
+  {
+    "case_id": "test_quick_daily",
+    "trace": {
+      "stage_id": "1013E_R1_PREP_ROOM_LESSON_REASONING_VISIBLE_TRACE",
+      "teacher_visible": true,
+      "raw_model_reasoning_visible": false,
+      "status": "done",
+      "headline": "已整理为只读候选，等待老师确认",
+      "steps": [
+        {
+          "id": "mode",
+          "label": "判断这节课准备到什么程度",
+          "status": "done",
+          "teacher_visible_text": "按快速日常课来处理，先控制生成深度。"
+        },
+        {
+          "id": "student_blocker",
+          "label": "查看学生可能卡在哪里",
+          "status": "done",
+          "teacher_visible_text": "重点看学生能否把颜色、感受和理由连起来。"
+        },
+        {
+          "id": "target",
+          "label": "定位要修改的段落或环节",
+          "status": "done",
+          "teacher_visible_text": "先定位到本课设计简报和教学过程关键环节。"
+        },
+        {
+          "id": "impact",
+          "label": "检查会影响大屏、学习单和评价证据",
+          "status": "done",
+          "teacher_visible_text": "同步检查材料呈现、学习记录和课堂观察证据。"
+        },
+        {
+          "id": "candidate",
+          "label": "整理成候选，等待老师确认",
+          "status": "done",
+          "teacher_visible_text": "整理为可并入的候选，不直接变成正式结果。"
+        }
+      ],
+      "teacher_note": "所有内容都先作为候选，等待老师确认。"
+    }
+  },
+  {
+    "case_id": "test_standard_daily",
+    "trace": {
+      "stage_id": "1013E_R1_PREP_ROOM_LESSON_REASONING_VISIBLE_TRACE",
+      "teacher_visible": true,
+      "raw_model_reasoning_visible": false,
+      "status": "blocked",
+      "headline": "这次输出还需要修正",
+      "steps": [
+        {
+          "id": "mode",
+          "label": "判断这节课准备到什么程度",
+          "status": "done",
+          "teacher_visible_text": "按标准日常课来处理，先控制生成深度。"
+        },
+        {
+          "id": "student_blocker",
+          "label": "查看学生可能卡在哪里",
+          "status": "done",
+          "teacher_visible_text": "重点看学生能否把颜色、感受和理由连起来。"
+        },
+        {
+          "id": "target",
+          "label": "定位要修改的段落或环节",
+          "status": "done",
+          "teacher_visible_text": "优先定位到学情分析和教学过程的探究环节。"
+        },
+        {
+          "id": "impact",
+          "label": "检查会影响大屏、学习单和评价证据",
+          "status": "blocked",
+          "teacher_visible_text": "同步检查材料呈现、学习记录和课堂观察证据。"
+        },
+        {
+          "id": "candidate",
+          "label": "整理成候选，等待老师确认",
+          "status": "blocked",
+          "teacher_visible_text": "整理为可并入的候选，不直接变成正式结果。"
+        }
+      ],
+      "teacher_note": "所有内容都先作为候选，等待老师确认。"
+    }
+  },
+  {
+    "case_id": "test_open_class",
+    "trace": {
+      "stage_id": "1013E_R1_PREP_ROOM_LESSON_REASONING_VISIBLE_TRACE",
+      "teacher_visible": true,
+      "raw_model_reasoning_visible": false,
+      "status": "done",
+      "headline": "已整理为只读候选，等待老师确认",
+      "steps": [
+        {
+          "id": "mode",
+          "label": "判断这节课准备到什么程度",
+          "status": "done",
+          "teacher_visible_text": "按公开课来处理，先控制生成深度。"
+        },
+        {
+          "id": "student_blocker",
+          "label": "查看学生可能卡在哪里",
+          "status": "done",
+          "teacher_visible_text": "重点看学生能否把颜色、感受和理由连起来。"
+        },
+        {
+          "id": "target",
+          "label": "定位要修改的段落或环节",
+          "status": "done",
+          "teacher_visible_text": "优先定位到问题串、学生表达和交流展示环节。"
+        },
+        {
+          "id": "impact",
+          "label": "检查会影响大屏、学习单和评价证据",
+          "status": "done",
+          "teacher_visible_text": "同步检查材料呈现、学习记录和课堂观察证据。"
+        },
+        {
+          "id": "candidate",
+          "label": "整理成候选，等待老师确认",
+          "status": "done",
+          "teacher_visible_text": "整理为可并入的候选，不直接变成正式结果。"
+        }
+      ],
+      "teacher_note": "所有内容都先作为候选，等待老师确认。"
+    }
+  },
+  {
+    "case_id": "test_research_lesson",
+    "trace": {
+      "stage_id": "1013E_R1_PREP_ROOM_LESSON_REASONING_VISIBLE_TRACE",
+      "teacher_visible": true,
+      "raw_model_reasoning_visible": false,
+      "status": "done",
+      "headline": "已整理为只读候选，等待老师确认",
+      "steps": [
+        {
+          "id": "mode",
+          "label": "判断这节课准备到什么程度",
+          "status": "done",
+          "teacher_visible_text": "按研究课来处理，先控制生成深度。"
+        },
+        {
+          "id": "student_blocker",
+          "label": "查看学生可能卡在哪里",
+          "status": "done",
+          "teacher_visible_text": "重点看学生能否把颜色、感受和理由连起来。"
+        },
+        {
+          "id": "target",
+          "label": "定位要修改的段落或环节",
+          "status": "done",
+          "teacher_visible_text": "优先定位到学习问题、学生状态变化和证据设计。"
+        },
+        {
+          "id": "impact",
+          "label": "检查会影响大屏、学习单和评价证据",
+          "status": "done",
+          "teacher_visible_text": "同步检查材料呈现、学习记录和课堂观察证据。"
+        },
+        {
+          "id": "candidate",
+          "label": "整理成候选，等待老师确认",
+          "status": "done",
+          "teacher_visible_text": "整理为可并入的候选，不直接变成正式结果。"
+        }
+      ],
+      "teacher_note": "所有内容都先作为候选，等待老师确认。"
+    }
+  }
+]

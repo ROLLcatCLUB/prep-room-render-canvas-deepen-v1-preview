@@ -1,0 +1,404 @@
+{
+  "stage_id": "1013E_R1_PROMPT_REPAIR_AND_READONLY_REASONING_PIPELINE",
+  "case_id": "test_research_lesson",
+  "lesson_design_mode": "research_lesson",
+  "teacher_input": "我想研究学生怎么从说颜色好看，过渡到能说明颜色带来的感受。",
+  "provider_called": true,
+  "model_called": true,
+  "strict_json_success": true,
+  "safe_success": true,
+  "parser_mode": "strict_json_parser",
+  "extraction_required": false,
+  "parser_meta": {
+    "parser_mode": "strict_json_parser",
+    "parse_subcode": null,
+    "parse_error_code": null,
+    "raw_prefix_type": "json_object",
+    "provider_output_sanitized": false,
+    "extraction_required": false
+  },
+  "validation_errors": [],
+  "secret_scan_hits": [],
+  "latency_ms": 40772,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": true,
+    "latency_ms": 40772
+  },
+  "readonly_result": {
+    "readonly": true,
+    "candidate_only": true,
+    "formal_apply_performed": false,
+    "parsed_compact": {
+      "lesson_design_mode": "research_lesson",
+      "intent_summary": "研究学生从说颜色好看到能说明颜色带来感受的过渡路径，收集学生颜色认知向感受表达发展的证据。",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "学生能说喜欢什么颜色，但还不能稳定说出颜色带来的感受和理由。",
+        "student_baseline": "学生认识常见颜色，会用好看、喜欢等词评价颜色，但缺乏将颜色与情绪、场景关联的意识。",
+        "target_shift": "从看到颜色说好看，过渡到能说出颜色带来的感受（温暖、凉爽、安静等），再尝试用色彩表达心情。",
+        "teaching_route": [
+          "生活图片唤起感受",
+          "作品和生活图比较",
+          "色卡和生活物品分组",
+          "分层色彩表达练习",
+          "作品说明和同伴反馈"
+        ],
+        "evidence_plan": [
+          "颜色+感受+原因的一句话描述",
+          "学习单或口头记录",
+          "作品色彩选择理由",
+          "同伴能否读到相近感受"
+        ],
+        "risk_points": [
+          "学生停留在好看/不好看层面",
+          "感受词汇单一",
+          "无法将颜色与生活场景关联"
+        ],
+        "basis_summary": [
+          "教材图例",
+          "冷暖色图片素材",
+          "优秀课例《色彩的感觉》",
+          "美术评价量规维度"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "goals",
+          "step_id": "",
+          "target_field": "教学目标",
+          "reason": "研究课目标需聚焦学生颜色认知到感受表达的过渡，具体化为可观察的行为表现，而非笼统的情感目标。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "sense",
+          "step_name": "感受颜色",
+          "student_state_before": "看到颜色能说出名称和喜好",
+          "student_state_after": "能用感受词描述颜色（如温暖的红色、凉爽的蓝色）",
+          "teacher_action": "展示生活场景图片，引导学生说出第一感受",
+          "student_action": "看图说感受，不评价对错，鼓励不同反应",
+          "big_screen_state": "呈现红色厨房和蓝色海边的对比图",
+          "learning_sheet_state": "记录第一感受词汇",
+          "assessment_evidence": "学生使用的感受词数量和多样性",
+          "risk_and_adjustment": "如学生仍说好看，可追问：看到这里你有什么感觉？"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "patch_001",
+          "target_section": "goals",
+          "target_step_id": "",
+          "target_field": "教学目标",
+          "patch_type": "add_example",
+          "before_summary": "能说出颜色带来的感受",
+          "after_candidate": "能说出颜色带来的感受（如看到红色感觉温暖，看到蓝色感觉安静），并能用色彩表达自己的心情。",
+          "reasoning_basis": [
+            "教师输入强调从说好看到说明感受的过渡",
+            "研究课需要具体可观察的学习表现"
+          ],
+          "impact_scope": [],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "handout",
+          "impact_summary": "学习单需增加感受词记录区域，支持学生从颜色到感受的表达练习",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "研究课需专项记录学生颜色认知到感受表达的发展证据",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "核心学习问题明确",
+          "教学假设清晰",
+          "证据计划具体"
+        ],
+        "missing_items": [
+          "具体教学环节时长分配",
+          "分层引导策略细节"
+        ],
+        "risk_items": [
+          "学生感受表达可能过于单一"
+        ],
+        "next_best_action": "在教学过程中增加感受词丰富度的观察和记录"
+      },
+      "teacher_questions": [
+        {
+          "question": "看到这个颜色，你有什么感觉？",
+          "why_needed": "引导学生从好不好看跨越到感受表达",
+          "options": []
+        },
+        {
+          "question": "为什么会有这种感觉？",
+          "why_needed": "引导学生建立颜色与感受的因果关联",
+          "options": []
+        }
+      ],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "goals",
+        "candidate_display_position": "目标编辑区域",
+        "right_tray_updates": [
+          "显示优秀课例参考",
+          "显示评价量规维度"
+        ],
+        "view_mode_summary": "研究课设计模式，聚焦学生颜色认知到感受表达的过渡研究"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "normalized_legacy_shape": {
+      "lesson_design_mode": "research_lesson",
+      "intent_summary": "研究学生从说颜色好看到能说明颜色带来感受的过渡路径，收集学生颜色认知向感受表达发展的证据。",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "学生能说喜欢什么颜色，但还不能稳定说出颜色带来的感受和理由。",
+        "student_baseline": "学生认识常见颜色，会用好看、喜欢等词评价颜色，但缺乏将颜色与情绪、场景关联的意识。",
+        "target_shift": "从看到颜色说好看，过渡到能说出颜色带来的感受（温暖、凉爽、安静等），再尝试用色彩表达心情。",
+        "teaching_route": [
+          "生活图片唤起感受",
+          "作品和生活图比较",
+          "色卡和生活物品分组",
+          "分层色彩表达练习",
+          "作品说明和同伴反馈"
+        ],
+        "evidence_plan": [
+          "颜色+感受+原因的一句话描述",
+          "学习单或口头记录",
+          "作品色彩选择理由",
+          "同伴能否读到相近感受"
+        ],
+        "risk_points": [
+          "学生停留在好看/不好看层面",
+          "感受词汇单一",
+          "无法将颜色与生活场景关联"
+        ],
+        "basis_summary": [
+          "教材图例",
+          "冷暖色图片素材",
+          "优秀课例《色彩的感觉》",
+          "美术评价量规维度"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "goals",
+          "step_id": "",
+          "target_field": "教学目标",
+          "reason": "研究课目标需聚焦学生颜色认知到感受表达的过渡，具体化为可观察的行为表现，而非笼统的情感目标。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "sense",
+          "step_name": "感受颜色",
+          "student_state_before": "看到颜色能说出名称和喜好",
+          "student_state_after": "能用感受词描述颜色（如温暖的红色、凉爽的蓝色）",
+          "teacher_action": "展示生活场景图片，引导学生说出第一感受",
+          "student_action": "看图说感受，不评价对错，鼓励不同反应",
+          "big_screen_state": "呈现红色厨房和蓝色海边的对比图",
+          "learning_sheet_state": "记录第一感受词汇",
+          "assessment_evidence": "学生使用的感受词数量和多样性",
+          "risk_and_adjustment": "如学生仍说好看，可追问：看到这里你有什么感觉？"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "patch_001",
+          "target_section": "goals",
+          "target_step_id": "",
+          "target_field": "教学目标",
+          "patch_type": "add_example",
+          "before_summary": "能说出颜色带来的感受",
+          "after_candidate": "能说出颜色带来的感受（如看到红色感觉温暖，看到蓝色感觉安静），并能用色彩表达自己的心情。",
+          "reasoning_basis": [
+            "教师输入强调从说好看到说明感受的过渡",
+            "研究课需要具体可观察的学习表现"
+          ],
+          "impact_scope": [],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "handout",
+          "impact_summary": "学习单需增加感受词记录区域，支持学生从颜色到感受的表达练习",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "研究课需专项记录学生颜色认知到感受表达的发展证据",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "核心学习问题明确",
+          "教学假设清晰",
+          "证据计划具体"
+        ],
+        "missing_items": [
+          "具体教学环节时长分配",
+          "分层引导策略细节"
+        ],
+        "risk_items": [
+          "学生感受表达可能过于单一"
+        ],
+        "next_best_action": "在教学过程中增加感受词丰富度的观察和记录"
+      },
+      "teacher_questions": [
+        {
+          "question": "看到这个颜色，你有什么感觉？",
+          "why_needed": "引导学生从好不好看跨越到感受表达",
+          "options": []
+        },
+        {
+          "question": "为什么会有这种感觉？",
+          "why_needed": "引导学生建立颜色与感受的因果关联",
+          "options": []
+        }
+      ],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "goals",
+        "candidate_display_position": "目标编辑区域",
+        "right_tray_updates": [
+          "显示优秀课例参考",
+          "显示评价量规维度"
+        ],
+        "view_mode_summary": "研究课设计模式，聚焦学生颜色认知到感受表达的过渡研究"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      },
+      "lesson_design_brief": {
+        "core_learning_problem": "学生能说喜欢什么颜色，但还不能稳定说出颜色带来的感受和理由。",
+        "student_baseline": "学生认识常见颜色，会用好看、喜欢等词评价颜色，但缺乏将颜色与情绪、场景关联的意识。",
+        "target_shift": "从看到颜色说好看，过渡到能说出颜色带来的感受（温暖、凉爽、安静等），再尝试用色彩表达心情。",
+        "unit_position": "三年级美术色彩单元 1-2《色彩的感觉》。",
+        "curriculum_basis": [],
+        "textbook_basis": [],
+        "prior_learning_basis": [],
+        "teacher_intent": "研究学生从说颜色好看到能说明颜色带来感受的过渡路径，收集学生颜色认知向感受表达发展的证据。",
+        "classroom_constraints": [
+          "40分钟一课时。"
+        ],
+        "resource_budget": "medium",
+        "teaching_route": [
+          "生活图片唤起感受",
+          "作品和生活图比较",
+          "色卡和生活物品分组",
+          "分层色彩表达练习",
+          "作品说明和同伴反馈"
+        ],
+        "evidence_plan": [
+          "颜色+感受+原因的一句话描述",
+          "学习单或口头记录",
+          "作品色彩选择理由",
+          "同伴能否读到相近感受"
+        ],
+        "risk_points": [
+          "学生停留在好看/不好看层面",
+          "感受词汇单一",
+          "无法将颜色与生活场景关联"
+        ],
+        "next_best_questions": []
+      },
+      "patch_target_resolution": [
+        {
+          "section_id": "goals",
+          "step_id": "",
+          "target_field": "教学目标",
+          "reason": "研究课目标需聚焦学生颜色认知到感受表达的过渡，具体化为可观察的行为表现，而非笼统的情感目标。"
+        }
+      ],
+      "teaching_step_reasoning_updates": [
+        {
+          "step_id": "sense",
+          "step_name": "感受颜色",
+          "student_state_before": "看到颜色能说出名称和喜好",
+          "student_state_after": "能用感受词描述颜色（如温暖的红色、凉爽的蓝色）",
+          "teacher_action": "展示生活场景图片，引导学生说出第一感受",
+          "student_action": "看图说感受，不评价对错，鼓励不同反应",
+          "big_screen_state": "呈现红色厨房和蓝色海边的对比图",
+          "learning_sheet_state": "记录第一感受词汇",
+          "assessment_evidence": "学生使用的感受词数量和多样性",
+          "risk_and_adjustment": "如学生仍说好看，可追问：看到这里你有什么感觉？"
+        }
+      ]
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    }
+  },
+  "visible_trace": {
+    "stage_id": "1013E_R1_PREP_ROOM_LESSON_REASONING_VISIBLE_TRACE",
+    "teacher_visible": true,
+    "raw_model_reasoning_visible": false,
+    "status": "done",
+    "headline": "已整理为只读候选，等待老师确认",
+    "steps": [
+      {
+        "id": "mode",
+        "label": "判断这节课准备到什么程度",
+        "status": "done",
+        "teacher_visible_text": "按研究课来处理，先控制生成深度。"
+      },
+      {
+        "id": "student_blocker",
+        "label": "查看学生可能卡在哪里",
+        "status": "done",
+        "teacher_visible_text": "重点看学生能否把颜色、感受和理由连起来。"
+      },
+      {
+        "id": "target",
+        "label": "定位要修改的段落或环节",
+        "status": "done",
+        "teacher_visible_text": "优先定位到学习问题、学生状态变化和证据设计。"
+      },
+      {
+        "id": "impact",
+        "label": "检查会影响大屏、学习单和评价证据",
+        "status": "done",
+        "teacher_visible_text": "同步检查材料呈现、学习记录和课堂观察证据。"
+      },
+      {
+        "id": "candidate",
+        "label": "整理成候选，等待老师确认",
+        "status": "done",
+        "teacher_visible_text": "整理为可并入的候选，不直接变成正式结果。"
+      }
+    ],
+    "teacher_note": "所有内容都先作为候选，等待老师确认。"
+  }
+}

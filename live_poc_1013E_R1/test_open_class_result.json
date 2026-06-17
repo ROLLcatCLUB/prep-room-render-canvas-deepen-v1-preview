@@ -1,0 +1,550 @@
+{
+  "stage_id": "1013E_R1_PROMPT_REPAIR_AND_READONLY_REASONING_PIPELINE",
+  "case_id": "test_open_class",
+  "lesson_design_mode": "open_class",
+  "teacher_input": "这节课我要拿来展示，问题串、学生表达和评价证据要更清楚。",
+  "provider_called": true,
+  "model_called": true,
+  "strict_json_success": true,
+  "safe_success": true,
+  "parser_mode": "strict_json_parser",
+  "extraction_required": false,
+  "parser_meta": {
+    "parser_mode": "strict_json_parser",
+    "parse_subcode": null,
+    "parse_error_code": null,
+    "raw_prefix_type": "json_object",
+    "provider_output_sanitized": false,
+    "extraction_required": false
+  },
+  "validation_errors": [],
+  "secret_scan_hits": [],
+  "latency_ms": 57385,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": true,
+    "latency_ms": 57385
+  },
+  "readonly_result": {
+    "readonly": true,
+    "candidate_only": true,
+    "formal_apply_performed": false,
+    "parsed_compact": {
+      "lesson_design_mode": "open_class",
+      "intent_summary": "教师需要将本课用于展示，需强化问题串、学生表达路径和评价证据，同时标记待确认的教学细节。",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "学生知道颜色名称，但还不能稳定说出颜色带来的感受和理由。",
+        "student_baseline": "学生能说出喜欢的颜色，但缺乏将颜色与情绪、场景联系起来的表达经验。",
+        "target_shift": "从被动看到颜色，转向主动说出感受，再到能用色彩表达心情或场景。",
+        "teaching_route": [
+          "生活图片唤起感受",
+          "作品和生活图比较",
+          "色卡和生活物品分组",
+          "分层色彩表达练习",
+          "作品说明和同伴反馈"
+        ],
+        "evidence_plan": [
+          "颜色+感受+原因的一句话记录",
+          "学习单或口头记录",
+          "作品色彩选择理由",
+          "同伴能否读到相近感受"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "teacher_questions",
+          "reason": "展示课需要更清晰的问题串，引导学生层层深入表达颜色感受。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "intro",
+          "step_name": "导入",
+          "student_state_before": "对颜色有直观印象，能说喜欢什么颜色。",
+          "student_state_after": "开始意识到颜色与感受可能有联系。",
+          "teacher_action": "展示生活图片，提问：你看到什么颜色？有什么感觉？",
+          "student_action": "观察并自由发言，记录第一反应。",
+          "big_screen_state": "显示生活场景图片和问题。",
+          "learning_sheet_state": "准备记录颜色和感受的关联。",
+          "assessment_evidence": "学生能说出2-3种颜色及对应的即时感受。",
+          "risk_and_adjustment": "如果学生只停留在'好看'等简单词汇，需追问：是什么让你觉得好看？"
+        },
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "有初步感受意识，但表达不丰富。",
+          "student_state_after": "能用较丰富的词汇描述颜色带来的感受。",
+          "teacher_action": "展示冷暖色对比作品，提出分层问题串。",
+          "student_action": "对比观察，分组讨论并记录感受词汇。",
+          "big_screen_state": "显示冷暖色对比图和学习任务。",
+          "learning_sheet_state": "完成色卡与感受词的连线。",
+          "assessment_evidence": "能说出冷暖色各2种以上的感受词并说明理由。",
+          "risk_and_adjustment": "注意避免学生随意选择，需引导说出选择理由。"
+        },
+        {
+          "step_id": "share",
+          "step_name": "展示",
+          "student_state_before": "完成色彩表达作品，有自己的想法。",
+          "student_state_after": "能清晰向同伴解释自己作品中的色彩选择理由。",
+          "teacher_action": "组织同伴互读和全班展示，收集评价证据。",
+          "student_action": "展示作品并说明，同伴尝试读出创作者的心情。",
+          "big_screen_state": "循环展示学生作品。",
+          "learning_sheet_state": "记录同伴反馈和自己学到的表达。",
+          "assessment_evidence": "作品色彩选择有理由，同伴能读出相近感受。",
+          "risk_and_adjustment": "展示时间有限，需预先筛选有代表性的作品。"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "FP001",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "teacher_questions",
+          "patch_type": "enrich",
+          "before_summary": "原有问题串较为简单，缺乏层次。",
+          "after_candidate": "分层问题串：1）这两种颜色给你的感觉一样吗？2）如果让你用一种颜色代表开心，会选哪个？为什么？3）换一个颜色代表难过呢？4）你能用颜色画一个让你感到温暖的生活场景吗？",
+          "reasoning_basis": [
+            "展示课需要清晰的问题引导",
+            "分层问题能照顾不同表达能力的学生",
+            "问题从描述到联系生活再到创作"
+          ],
+          "impact_scope": [
+            "big_screen",
+            "handout"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "FP002",
+          "target_section": "assessment",
+          "target_step_id": "",
+          "target_field": "evidence_note",
+          "patch_type": "add_example",
+          "before_summary": "评价证据描述不够具体，缺乏展示课需要的可操作性。",
+          "after_candidate": "展示课评价证据清单：1）口头表达证据：学生能用'因为……所以我觉得……'的句式说颜色感受；2）作品证据：作品说明卡记录色彩选择理由；3）同伴互读证据：3人以上能准确读出作者意图；4）过程记录：学习单上至少5个不同的感受词汇。",
+          "reasoning_basis": [
+            "展示课需要更明确的评价证据",
+            "便于评委或观课教师快速识别学习效果",
+            "为分层指导提供依据"
+          ],
+          "impact_scope": [
+            "rubric",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "展示课的大屏幕需提前设计问题呈现格式，每一步骤的问题要清晰可见，便于观课教师理解教学逻辑。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "handout",
+          "impact_summary": "学习单需包含分层任务，从基础的颜色感受记录到拓展的颜色与情绪联系。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "rubric",
+          "impact_summary": "评价量规需明确'展示可用'的标准，特别是学生表达清晰度和作品理由完整性。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "需补充展示课专用的证据收集提示，便于教师在课堂中快速记录学生表现。",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "open_class_ready",
+        "passed_items": [
+          "核心学习目标明确，指向颜色感受的表达",
+          "教学流程完整，包含感受唤起、探究、创作、展示环节",
+          "有基本的评价维度设计"
+        ],
+        "missing_items": [
+          "问题串具体措辞待确认",
+          "学生表达支架示例待补充",
+          "展示环节时间分配待敲定"
+        ],
+        "risk_items": [
+          "展示课时间紧凑，可能影响学生充分表达",
+          "问题串深度需根据班级实际调整",
+          "评价证据的收集方式需简洁易操作"
+        ],
+        "next_best_action": "确认问题串措辞，预设学生可能的回答方向，准备候补追问问题。"
+      },
+      "teacher_questions": [
+        {
+          "question": "如果用一个词形容暖色调给你的感觉，你会用什么？为什么选这个词？",
+          "why_needed": "引导学生从感受描述过渡到原因说明，这是表达深化的关键。",
+          "options": [
+            "温暖，因为像阳光",
+            "热闹，因为颜色很鲜艳",
+            "开心，因为暖色看起来很舒服"
+          ]
+        },
+        {
+          "question": "你的同桌能从你的画里读出你的心情吗？他会猜对吗？",
+          "why_needed": "检验色彩表达的有效性，同时引出同伴互读的展示环节。",
+          "options": [
+            "能读对",
+            "大概能猜到",
+            "可能读不出来"
+          ]
+        },
+        {
+          "question": "你用了哪些颜色？这些颜色让你想到了生活中的什么场景？",
+          "why_needed": "引导学生建立色彩与生活场景的联系，为创作环节做铺垫。",
+          "options": []
+        }
+      ],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "teacher_questions",
+        "candidate_display_position": "问题串编辑区域",
+        "right_tray_updates": [
+          "问题串候选列表",
+          "评价证据模板"
+        ],
+        "view_mode_summary": "当前显示课时设计概要，点击可展开各步骤详情并编辑。"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "normalized_legacy_shape": {
+      "lesson_design_mode": "open_class",
+      "intent_summary": "教师需要将本课用于展示，需强化问题串、学生表达路径和评价证据，同时标记待确认的教学细节。",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "学生知道颜色名称，但还不能稳定说出颜色带来的感受和理由。",
+        "student_baseline": "学生能说出喜欢的颜色，但缺乏将颜色与情绪、场景联系起来的表达经验。",
+        "target_shift": "从被动看到颜色，转向主动说出感受，再到能用色彩表达心情或场景。",
+        "teaching_route": [
+          "生活图片唤起感受",
+          "作品和生活图比较",
+          "色卡和生活物品分组",
+          "分层色彩表达练习",
+          "作品说明和同伴反馈"
+        ],
+        "evidence_plan": [
+          "颜色+感受+原因的一句话记录",
+          "学习单或口头记录",
+          "作品色彩选择理由",
+          "同伴能否读到相近感受"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "teacher_questions",
+          "reason": "展示课需要更清晰的问题串，引导学生层层深入表达颜色感受。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "intro",
+          "step_name": "导入",
+          "student_state_before": "对颜色有直观印象，能说喜欢什么颜色。",
+          "student_state_after": "开始意识到颜色与感受可能有联系。",
+          "teacher_action": "展示生活图片，提问：你看到什么颜色？有什么感觉？",
+          "student_action": "观察并自由发言，记录第一反应。",
+          "big_screen_state": "显示生活场景图片和问题。",
+          "learning_sheet_state": "准备记录颜色和感受的关联。",
+          "assessment_evidence": "学生能说出2-3种颜色及对应的即时感受。",
+          "risk_and_adjustment": "如果学生只停留在'好看'等简单词汇，需追问：是什么让你觉得好看？"
+        },
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "有初步感受意识，但表达不丰富。",
+          "student_state_after": "能用较丰富的词汇描述颜色带来的感受。",
+          "teacher_action": "展示冷暖色对比作品，提出分层问题串。",
+          "student_action": "对比观察，分组讨论并记录感受词汇。",
+          "big_screen_state": "显示冷暖色对比图和学习任务。",
+          "learning_sheet_state": "完成色卡与感受词的连线。",
+          "assessment_evidence": "能说出冷暖色各2种以上的感受词并说明理由。",
+          "risk_and_adjustment": "注意避免学生随意选择，需引导说出选择理由。"
+        },
+        {
+          "step_id": "share",
+          "step_name": "展示",
+          "student_state_before": "完成色彩表达作品，有自己的想法。",
+          "student_state_after": "能清晰向同伴解释自己作品中的色彩选择理由。",
+          "teacher_action": "组织同伴互读和全班展示，收集评价证据。",
+          "student_action": "展示作品并说明，同伴尝试读出创作者的心情。",
+          "big_screen_state": "循环展示学生作品。",
+          "learning_sheet_state": "记录同伴反馈和自己学到的表达。",
+          "assessment_evidence": "作品色彩选择有理由，同伴能读出相近感受。",
+          "risk_and_adjustment": "展示时间有限，需预先筛选有代表性的作品。"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "FP001",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "teacher_questions",
+          "patch_type": "enrich",
+          "before_summary": "原有问题串较为简单，缺乏层次。",
+          "after_candidate": "分层问题串：1）这两种颜色给你的感觉一样吗？2）如果让你用一种颜色代表开心，会选哪个？为什么？3）换一个颜色代表难过呢？4）你能用颜色画一个让你感到温暖的生活场景吗？",
+          "reasoning_basis": [
+            "展示课需要清晰的问题引导",
+            "分层问题能照顾不同表达能力的学生",
+            "问题从描述到联系生活再到创作"
+          ],
+          "impact_scope": [
+            "big_screen",
+            "handout"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "FP002",
+          "target_section": "assessment",
+          "target_step_id": "",
+          "target_field": "evidence_note",
+          "patch_type": "add_example",
+          "before_summary": "评价证据描述不够具体，缺乏展示课需要的可操作性。",
+          "after_candidate": "展示课评价证据清单：1）口头表达证据：学生能用'因为……所以我觉得……'的句式说颜色感受；2）作品证据：作品说明卡记录色彩选择理由；3）同伴互读证据：3人以上能准确读出作者意图；4）过程记录：学习单上至少5个不同的感受词汇。",
+          "reasoning_basis": [
+            "展示课需要更明确的评价证据",
+            "便于评委或观课教师快速识别学习效果",
+            "为分层指导提供依据"
+          ],
+          "impact_scope": [
+            "rubric",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "展示课的大屏幕需提前设计问题呈现格式，每一步骤的问题要清晰可见，便于观课教师理解教学逻辑。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "handout",
+          "impact_summary": "学习单需包含分层任务，从基础的颜色感受记录到拓展的颜色与情绪联系。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "rubric",
+          "impact_summary": "评价量规需明确'展示可用'的标准，特别是学生表达清晰度和作品理由完整性。",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "需补充展示课专用的证据收集提示，便于教师在课堂中快速记录学生表现。",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "open_class_ready",
+        "passed_items": [
+          "核心学习目标明确，指向颜色感受的表达",
+          "教学流程完整，包含感受唤起、探究、创作、展示环节",
+          "有基本的评价维度设计"
+        ],
+        "missing_items": [
+          "问题串具体措辞待确认",
+          "学生表达支架示例待补充",
+          "展示环节时间分配待敲定"
+        ],
+        "risk_items": [
+          "展示课时间紧凑，可能影响学生充分表达",
+          "问题串深度需根据班级实际调整",
+          "评价证据的收集方式需简洁易操作"
+        ],
+        "next_best_action": "确认问题串措辞，预设学生可能的回答方向，准备候补追问问题。"
+      },
+      "teacher_questions": [
+        {
+          "question": "如果用一个词形容暖色调给你的感觉，你会用什么？为什么选这个词？",
+          "why_needed": "引导学生从感受描述过渡到原因说明，这是表达深化的关键。",
+          "options": [
+            "温暖，因为像阳光",
+            "热闹，因为颜色很鲜艳",
+            "开心，因为暖色看起来很舒服"
+          ]
+        },
+        {
+          "question": "你的同桌能从你的画里读出你的心情吗？他会猜对吗？",
+          "why_needed": "检验色彩表达的有效性，同时引出同伴互读的展示环节。",
+          "options": [
+            "能读对",
+            "大概能猜到",
+            "可能读不出来"
+          ]
+        },
+        {
+          "question": "你用了哪些颜色？这些颜色让你想到了生活中的什么场景？",
+          "why_needed": "引导学生建立色彩与生活场景的联系，为创作环节做铺垫。",
+          "options": []
+        }
+      ],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "teacher_questions",
+        "candidate_display_position": "问题串编辑区域",
+        "right_tray_updates": [
+          "问题串候选列表",
+          "评价证据模板"
+        ],
+        "view_mode_summary": "当前显示课时设计概要，点击可展开各步骤详情并编辑。"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      },
+      "lesson_design_brief": {
+        "core_learning_problem": "学生知道颜色名称，但还不能稳定说出颜色带来的感受和理由。",
+        "student_baseline": "学生能说出喜欢的颜色，但缺乏将颜色与情绪、场景联系起来的表达经验。",
+        "target_shift": "从被动看到颜色，转向主动说出感受，再到能用色彩表达心情或场景。",
+        "unit_position": "三年级美术色彩单元 1-2《色彩的感觉》。",
+        "curriculum_basis": [],
+        "textbook_basis": [],
+        "prior_learning_basis": [],
+        "teacher_intent": "教师需要将本课用于展示，需强化问题串、学生表达路径和评价证据，同时标记待确认的教学细节。",
+        "classroom_constraints": [
+          "40分钟一课时。"
+        ],
+        "resource_budget": "medium",
+        "teaching_route": [
+          "生活图片唤起感受",
+          "作品和生活图比较",
+          "色卡和生活物品分组",
+          "分层色彩表达练习",
+          "作品说明和同伴反馈"
+        ],
+        "evidence_plan": [
+          "颜色+感受+原因的一句话记录",
+          "学习单或口头记录",
+          "作品色彩选择理由",
+          "同伴能否读到相近感受"
+        ],
+        "risk_points": [],
+        "next_best_questions": []
+      },
+      "patch_target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "teacher_questions",
+          "reason": "展示课需要更清晰的问题串，引导学生层层深入表达颜色感受。"
+        }
+      ],
+      "teaching_step_reasoning_updates": [
+        {
+          "step_id": "intro",
+          "step_name": "导入",
+          "student_state_before": "对颜色有直观印象，能说喜欢什么颜色。",
+          "student_state_after": "开始意识到颜色与感受可能有联系。",
+          "teacher_action": "展示生活图片，提问：你看到什么颜色？有什么感觉？",
+          "student_action": "观察并自由发言，记录第一反应。",
+          "big_screen_state": "显示生活场景图片和问题。",
+          "learning_sheet_state": "准备记录颜色和感受的关联。",
+          "assessment_evidence": "学生能说出2-3种颜色及对应的即时感受。",
+          "risk_and_adjustment": "如果学生只停留在'好看'等简单词汇，需追问：是什么让你觉得好看？"
+        },
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "有初步感受意识，但表达不丰富。",
+          "student_state_after": "能用较丰富的词汇描述颜色带来的感受。",
+          "teacher_action": "展示冷暖色对比作品，提出分层问题串。",
+          "student_action": "对比观察，分组讨论并记录感受词汇。",
+          "big_screen_state": "显示冷暖色对比图和学习任务。",
+          "learning_sheet_state": "完成色卡与感受词的连线。",
+          "assessment_evidence": "能说出冷暖色各2种以上的感受词并说明理由。",
+          "risk_and_adjustment": "注意避免学生随意选择，需引导说出选择理由。"
+        },
+        {
+          "step_id": "share",
+          "step_name": "展示",
+          "student_state_before": "完成色彩表达作品，有自己的想法。",
+          "student_state_after": "能清晰向同伴解释自己作品中的色彩选择理由。",
+          "teacher_action": "组织同伴互读和全班展示，收集评价证据。",
+          "student_action": "展示作品并说明，同伴尝试读出创作者的心情。",
+          "big_screen_state": "循环展示学生作品。",
+          "learning_sheet_state": "记录同伴反馈和自己学到的表达。",
+          "assessment_evidence": "作品色彩选择有理由，同伴能读出相近感受。",
+          "risk_and_adjustment": "展示时间有限，需预先筛选有代表性的作品。"
+        }
+      ]
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    }
+  },
+  "visible_trace": {
+    "stage_id": "1013E_R1_PREP_ROOM_LESSON_REASONING_VISIBLE_TRACE",
+    "teacher_visible": true,
+    "raw_model_reasoning_visible": false,
+    "status": "done",
+    "headline": "已整理为只读候选，等待老师确认",
+    "steps": [
+      {
+        "id": "mode",
+        "label": "判断这节课准备到什么程度",
+        "status": "done",
+        "teacher_visible_text": "按公开课来处理，先控制生成深度。"
+      },
+      {
+        "id": "student_blocker",
+        "label": "查看学生可能卡在哪里",
+        "status": "done",
+        "teacher_visible_text": "重点看学生能否把颜色、感受和理由连起来。"
+      },
+      {
+        "id": "target",
+        "label": "定位要修改的段落或环节",
+        "status": "done",
+        "teacher_visible_text": "优先定位到问题串、学生表达和交流展示环节。"
+      },
+      {
+        "id": "impact",
+        "label": "检查会影响大屏、学习单和评价证据",
+        "status": "done",
+        "teacher_visible_text": "同步检查材料呈现、学习记录和课堂观察证据。"
+      },
+      {
+        "id": "candidate",
+        "label": "整理成候选，等待老师确认",
+        "status": "done",
+        "teacher_visible_text": "整理为可并入的候选，不直接变成正式结果。"
+      }
+    ],
+    "teacher_note": "所有内容都先作为候选，等待老师确认。"
+  }
+}

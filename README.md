@@ -151,3 +151,15 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - `backend/xiaobei_ai/prep_room_lesson_reasoning_contract_1013E.py` now centralizes the real lesson context, required output shape, boundary flags, strict parser binding, and lesson-reasoning payload validation.
 - `scripts/run_prep_room_1013e_model_prompt_to_reasoning_field_patch_poc.py` now uses that contract instead of local loose JSON extraction and duplicate validation.
 - Next stage: `1013E_R1_PROMPT_REPAIR_AND_READONLY_REASONING_PIPELINE`.
+
+## 1013E_R1 Prompt Repair And Readonly Reasoning Pipeline
+
+- `backend/xiaobei_ai/prep_room_lesson_reasoning_pipeline_1013E_R1.py` adds the internal read-only lesson reasoning pipeline.
+- `scripts/run_prep_room_1013e_r1_prompt_repair_readonly_pipeline.py` runs the repaired compact-prompt live POC for four lesson-design modes.
+- Output directory: `live_poc_1013E_R1/`.
+- Required files were generated: `1013E_R1_result.json`, `1013E_R1_report.md`, four mode result JSON files, `provider_metrics_1013E_R1.json`, `redacted_provider_trace_1013E_R1.json`, `visible_reasoning_trace_samples_1013E_R1.json`, and `prompt_repair_1013E_R1.md`.
+- Final status: `PASS_STRICT_JSON_WITH_ONE_FAILURE`.
+- What passed: `quick_daily`, `open_class`, and `research_lesson` produced strict JSON and passed the compact lesson-reasoning contract.
+- What failed: `standard_daily` still returned non-parseable JSON.
+- Boundary: provider was called; no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.
+- Next stage: `1013F_REASONING_FIELD_PATCH_TO_VIEW_EDIT_UI_BINDING`.
