@@ -138,6 +138,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Required files were generated: `1013E_result.json`, `1013E_report.md`, four test result JSON files, `provider_metrics_1013E.json`, `redacted_provider_trace_1013E.json`, and `prompt_used_1013E.md`.
 - Final status: `FAIL_MODEL_OUTPUT_NOT_STABLE`.
 - What worked: `quick_daily` produced strict JSON and usable lesson-design field patch structure.
+
+## 1013F R2D Content Review Then Case Reference Assimilation
+
+- `scripts/run_prep_room_1013f_r2d_content_review.py` performs the R2D content-quality gate for the R2C classroom-event polish baseline.
+- Output directory: `1013F_R2D_content_review_then_case_reference_assimilation/`.
+- Local knowledge-base cases were checked first. No same-topic mature case for 1-2 `色彩的感觉` was found, but six local art cases are usable for structure-only calibration.
+- Best local references: Grade 3 `渐变的魅力`, Grade 3 `走进青绿山水`, official Grade 3 `色彩的碰撞`, Grade 3 `多变的色彩`, plus Grade 4 `色彩的和谐/对比` as upper-bound references.
+- Final status: `PASS_CONTENT_REVIEW_WITH_CASE_REFERENCE_STRUCTURE_ONLY`.
+- Next stage: `1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION`.
+- Boundary: no provider/model call, no Feishu/database/memory write, no formal apply, no 1013G, and no copied case text was inserted into the lesson.
 - What failed: `standard_daily` started producing the expected structure but did not return parseable complete JSON; `open_class` and `research_lesson` timed out.
 - Conclusion: the model path is plausible, but the prompt is too heavy for stable four-case output. Next stage should be `1013E_R1_PROMPT_REPAIR`, with shorter schema, smaller source context, and mode-specific prompt compression.
 - Boundary: no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.

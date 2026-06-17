@@ -1,0 +1,30 @@
+[
+  {
+    "location": "教学过程 · 探究",
+    "issue_type": "time_and_material_flow",
+    "severity": "minor",
+    "why_not_real_enough": "色卡、生活物品、记录单同时进入，10分钟内如果分发和收束不清楚，容易挤压理由表达。",
+    "candidate_direction": "把生活物品降为可选，主材料先用色卡；记录单只写一行理由。"
+  },
+  {
+    "location": "教学过程 · 表现",
+    "issue_type": "task_load",
+    "severity": "minor",
+    "why_not_real_enough": "基础、进阶、挑战三层是对的，但教师如果同时讲三层标准，学生可能先听复杂了。",
+    "candidate_direction": "默认先说基础任务，再给提前完成的学生打开进阶和挑战。"
+  },
+  {
+    "location": "教学过程 · 交流展示",
+    "issue_type": "time_risk",
+    "severity": "minor",
+    "why_not_real_enough": "5分钟展示两三件作品可行，但如果还要同伴反馈和教师归纳，可能超时。",
+    "candidate_direction": "固定展示一件清楚、一件待调整；同伴只回答一个问题。"
+  },
+  {
+    "location": "全课话术",
+    "issue_type": "ai_like_complete_sentence",
+    "severity": "minor",
+    "why_not_real_enough": "个别总结句完整但略像教案书面语，课堂上可拆成短句和追问。",
+    "candidate_direction": "保留教师可执行短句，把理论判断放到旁注而不是口头全说。"
+  }
+]

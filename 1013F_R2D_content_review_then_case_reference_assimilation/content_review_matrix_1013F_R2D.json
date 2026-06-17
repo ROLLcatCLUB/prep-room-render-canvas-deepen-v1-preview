@@ -1,0 +1,88 @@
+{
+  "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\prep_room_render_canvas_deepen_v1.html",
+  "readable_step_plan_found": true,
+  "review_checks": [
+    {
+      "dimension": "年段适配",
+      "status": "PASS_WITH_MINOR_REPAIR",
+      "why": "任务围绕看色、分色、说理由和小练习，三年级能做；但教师话术仍要避免一次给太多抽象词。",
+      "evidence": [
+        "每个环节都有学生动作",
+        "学习单保持三格",
+        "分层作业给基础入口"
+      ]
+    },
+    {
+      "dimension": "美术学科真实性",
+      "status": "PASS",
+      "why": "课堂主线围绕色彩感受、作品观察、色卡分类和色彩表达，没有偏离到泛泛讨论。",
+      "evidence": [
+        "色彩气氛",
+        "冷暖/安静/热烈",
+        "用颜色表达感受"
+      ]
+    },
+    {
+      "dimension": "课堂节奏",
+      "status": "NEEDS_LIGHT_REPAIR",
+      "why": "5个环节总时长合理，但探究、表现、展示都承载了较多任务，真实课堂需要给材料分发、收束和展示留机动时间。",
+      "evidence": [
+        "探究10分钟",
+        "表现15分钟",
+        "交流展示5分钟"
+      ]
+    },
+    {
+      "dimension": "教师话术自然度",
+      "status": "PASS_WITH_MINOR_REPAIR",
+      "why": "已有可说出口的话术；个别总结句仍偏完整书面化，可再压成短句和追问。",
+      "evidence": [
+        "先不判断对不对，只说第一眼的感觉",
+        "你把它放在这里，是因为它像什么"
+      ]
+    },
+    {
+      "dimension": "学生反应真实性",
+      "status": "PASS_WITH_MINOR_REPAIR",
+      "why": "已经写到学生可能只说好看、按颜色名称分类、说不清理由；还可以补一个低水平回答样例和教师即时追问。",
+      "evidence": [
+        "好看/不好看",
+        "按红黄蓝绿分类",
+        "能画但说不清"
+      ]
+    },
+    {
+      "dimension": "评价证据可观察性",
+      "status": "PASS",
+      "why": "证据落在口头理由、色卡分类、学习单三格、作品和一句话说明，教师能在课堂中看见或收集。",
+      "evidence": [
+        "颜色 + 感受 + 原因",
+        "三格学习单",
+        "作品说明句"
+      ]
+    },
+    {
+      "dimension": "过渡自然度",
+      "status": "PASS",
+      "why": "导入到感知、感知到探究、探究到表现、表现到展示均有承接语和学习任务变化。",
+      "evidence": [
+        "会看了 -> 摆一摆说一说",
+        "分类理由 -> 自己的小画面"
+      ]
+    }
+  ],
+  "content_review_pass": true,
+  "grade_level_fit_pass": true,
+  "art_subject_fit_pass": true,
+  "classroom_flow_pass": true,
+  "teacher_language_natural_pass": true,
+  "student_response_realistic_pass": true,
+  "assessment_evidence_observable_pass": true,
+  "transition_logic_pass": true,
+  "needs_light_repair_dimensions": [
+    "年段适配",
+    "课堂节奏",
+    "教师话术自然度",
+    "学生反应真实性"
+  ]
+}
