@@ -66,7 +66,7 @@ def evaluate(html: str) -> dict[str, Any]:
         "process_candidate_inline_removed": candidate_inline_removed,
         "edit_bubble_present": bubble_present,
         "bubble_arrow_present": arrow_present,
-        "bubble_overlays_right_area": "right: -18px" in html and "z-index: 70" in html,
+        "bubble_overlays_right_area": "right: -78px" in html and "z-index: 70" in html,
         "low_weight_source_in_bubble": "raw field keys: field_patch_candidates / impact_scope / student_response_model" in html,
         "default_entry_changed": 'active_view: "weekCalendar"' not in html,
     }
