@@ -1,0 +1,13 @@
+{
+  "default_open": false,
+  "visual_weight": "low",
+  "raw_field_key_present": true,
+  "sample_keys": [
+    "classroom_event",
+    "design_view",
+    "execution_view",
+    "field_patch_candidates",
+    "impact_scope"
+  ],
+  "teacher_purpose": "保留查错入口，但不抢主阅读流。"
+}

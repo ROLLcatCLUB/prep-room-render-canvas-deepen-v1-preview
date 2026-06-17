@@ -1,0 +1,23 @@
+{
+  "stage_id": "1013F_R2B_TEACHER_READABLE_COPY_AND_VISUAL_TONE_REPAIR",
+  "principle": "读课优先，字段降权，操作围绕当前段落。",
+  "reading_rules": {
+    "main_body_font_size": "16px",
+    "main_body_line_height": "1.76",
+    "main_reading_width": "max 760px",
+    "classroom_event_spacing": "44px",
+    "background": "warm paper gray"
+  },
+  "side_note_rules": {
+    "background": "light warm paper",
+    "border": "none or very low contrast",
+    "blocks": "light title plus bullet, no table lines",
+    "close_behavior": "click blank area"
+  },
+  "edit_surface_rules": {
+    "layout": "four focused reading blocks",
+    "desktop_before_after": "two columns",
+    "mobile_before_after": "stacked by existing responsive flow",
+    "raw_fields": "collapsed low-weight source details only"
+  }
+}

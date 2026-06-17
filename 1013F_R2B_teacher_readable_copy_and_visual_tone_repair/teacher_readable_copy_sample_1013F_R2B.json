@@ -1,0 +1,13 @@
+{
+  "assistant_visible_name": "小教",
+  "legacy_xiaobei_visible_hits": 0,
+  "teacher_facing_labels": [
+    "学生卡点",
+    "为什么这样",
+    "学生可能会",
+    "卡住怎么办",
+    "怎么算学会",
+    "接下来"
+  ],
+  "tone_rule": "少用命令式你应该，多用教师可追问、学生可能会、如果卡住、看学生能否。"
+}

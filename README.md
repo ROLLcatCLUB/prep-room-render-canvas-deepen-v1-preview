@@ -247,3 +247,17 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_INFORMATION_HIERARCHY_AND_EDIT_SURFACE_REPAIR`.
 - Next stage: `1013F_R2_CLASSROOM_EVENT_DETAIL_POLISH`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.
+
+## 1013F_R2B Teacher Readable Copy And Visual Tone Repair
+
+- `scripts/run_prep_room_1013f_r2b_teacher_readable_copy_visual_tone.py` runs the teacher-readable copy and visual-tone repair check.
+- Output directory: `1013F_R2B_teacher_readable_copy_and_visual_tone_repair/`.
+- Required files were generated: `1013F_R2B_result.json`, `1013F_R2B_report.md`, `teacher_display_label_map_1013F_R2B.json`, `visual_tone_rules_1013F_R2B.json`, `low_weight_source_sample_1013F_R2B.json`, `teacher_readable_copy_sample_1013F_R2B.json`, `ui_smoke_screenshot_1013F_R2B_view.png`, `ui_smoke_screenshot_1013F_R2B_selected_note.png`, and `ui_smoke_screenshot_1013F_R2B_edit.png`.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2B` opens the repaired reading tone state.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2BSelected` opens the softened selected-note state.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2BEdit` opens the softened edit surface.
+- Added `teacher_display_label_map` so raw backend field keys can map to teacher-readable labels. Raw field keys remain only in collapsed low-weight source details for debugging and error observation.
+- Visible assistant copy now uses `小教`; visible legacy assistant-name hits are zero.
+- Final status: `PASS_TEACHER_READABLE_COPY_AND_VISUAL_TONE_REPAIR`.
+- Next stage: `1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.
