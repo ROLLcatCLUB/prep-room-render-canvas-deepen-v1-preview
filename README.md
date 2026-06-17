@@ -130,3 +130,14 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - `prep_notebook_1013E_reasoning_trace_smoke.png` captures the completed reasoning-trace state.
 - The visible trace uses teacher language: judging preparation depth, checking student blocker, locating the section, checking basis and impact, and organizing candidates.
 - Boundary: this is a local static trace preview. It does not expose raw model reasoning, call a provider, write a database, write memory, write Feishu, formal apply, export officially, or archive officially.
+
+## 1013E Model Prompt To Reasoning Field Patch POC
+
+- `scripts/run_prep_room_1013e_model_prompt_to_reasoning_field_patch_poc.py` runs the live model POC for four fixed lesson-design modes.
+- Output directory: `live_poc_1013E/`.
+- Required files were generated: `1013E_result.json`, `1013E_report.md`, four test result JSON files, `provider_metrics_1013E.json`, `redacted_provider_trace_1013E.json`, and `prompt_used_1013E.md`.
+- Final status: `FAIL_MODEL_OUTPUT_NOT_STABLE`.
+- What worked: `quick_daily` produced strict JSON and usable lesson-design field patch structure.
+- What failed: `standard_daily` started producing the expected structure but did not return parseable complete JSON; `open_class` and `research_lesson` timed out.
+- Conclusion: the model path is plausible, but the prompt is too heavy for stable four-case output. Next stage should be `1013E_R1_PROMPT_REPAIR`, with shorter schema, smaller source context, and mode-specific prompt compression.
+- Boundary: no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.

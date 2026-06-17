@@ -1,0 +1,16 @@
+{
+  "case_id": "test_4_research_lesson",
+  "lesson_design_mode": "research_lesson",
+  "teacher_input": "我想研究学生怎么从说颜色好看，过渡到能说明颜色带来的感受。",
+  "strict_json_success": false,
+  "success": false,
+  "provider_called": true,
+  "model_called": true,
+  "parser_mode": "provider_error",
+  "validation_errors": [
+    "provider_timeout"
+  ],
+  "error_message_redacted": "Provider request timed out.",
+  "secret_scan_hits": [],
+  "parsed_json": null
+}

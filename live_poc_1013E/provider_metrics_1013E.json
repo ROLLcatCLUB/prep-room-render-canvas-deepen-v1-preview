@@ -1,0 +1,20 @@
+{
+  "provider_called": true,
+  "model_called": true,
+  "case_count": 4,
+  "strict_json_success_count": 1,
+  "safe_success_count": 1,
+  "latency_summary": {
+    "count": 2,
+    "min_ms": 60632,
+    "max_ms": 61649,
+    "avg_ms": 61140
+  },
+  "provider_status": {
+    "provider_name": "openai_compatible",
+    "credential_available": true,
+    "credential_source": "env",
+    "model": "MiniMax-M2.7",
+    "base_url": "https://api.minimaxi.com/v1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "test_3_open_class",
+  "lesson_design_mode": "open_class",
+  "teacher_input": "这节课我要拿来展示，问题串、学生表达和评价证据要更清楚。",
+  "strict_json_success": false,
+  "success": false,
+  "provider_called": true,
+  "model_called": true,
+  "parser_mode": "provider_error",
+  "validation_errors": [
+    "provider_timeout"
+  ],
+  "error_message_redacted": "Provider request timed out.",
+  "secret_scan_hits": [],
+  "parsed_json": null
+}

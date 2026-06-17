@@ -1,0 +1,48 @@
+{
+  "stage_id": "1013E_MODEL_PROMPT_TO_REASONING_FIELD_PATCH_POC",
+  "created_at": "2026-06-17T03:28:25+00:00",
+  "final_status": "FAIL_MODEL_OUTPUT_NOT_STABLE",
+  "provider_called": true,
+  "model_called": true,
+  "provider_status": {
+    "provider_name": "openai_compatible",
+    "credential_available": true,
+    "credential_source": "env",
+    "model": "MiniMax-M2.7",
+    "base_url": "https://api.minimaxi.com/v1"
+  },
+  "pass_criteria": {
+    "strict_json_success_count": 1,
+    "safe_success_count": 1,
+    "cases_with_lesson_design_brief": 1,
+    "cases_with_field_patch_candidates": 1,
+    "cases_with_teaching_step_reasoning_updates": 1,
+    "targetable_patch_count": 1,
+    "impact_objects": [
+      "big_screen",
+      "evidence_note",
+      "handout"
+    ],
+    "quality_gate_levels": [
+      "basic_usable"
+    ],
+    "boundary_ok": true,
+    "secret_scan_ok": true
+  },
+  "case_files": [
+    "test_1_quick_daily_result.json",
+    "test_2_standard_daily_result.json",
+    "test_3_open_class_result.json",
+    "test_4_research_lesson_result.json"
+  ],
+  "boundary_flags": {
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "official_archive_created": false
+  },
+  "next_stage": "1013E_R1_PROMPT_REPAIR"
+}
