@@ -290,3 +290,20 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_LAYOUT_CLEANUP`.
 - Next stage: `1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.
+
+## 1013F_R2C Classroom Event Detail Polish
+
+- `scripts/run_prep_room_1013f_r2c_classroom_event_detail_polish.py` verifies the classroom-event content polish while inheriting the R2B2 layout baseline.
+- Output directory: `1013F_R2C_classroom_event_detail_polish/`.
+- Required files were generated: `1013F_R2C_result.json`, `1013F_R2C_report.md`, `classroom_event_detail_rules_1013F_R2C.json`, `ui_smoke_screenshot_1013F_R2C_view_numbered_sections.png`, `ui_smoke_screenshot_1013F_R2C_process_focus.png`, and `ui_smoke_screenshot_1013F_R2C_edit_bubble_kept.png`.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2C` opens the numbered-section reading state.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2CProcess` opens the teaching-process focus state.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2CEdit` opens the edit-bubble state after content polish.
+- Normal lesson sections now use visible numbered lines such as `1.` and `2.`.
+- Clicking normal sections no longer frames the main reading text; only the edit panel below keeps a container.
+- Teaching process now has a distinct warm focus background and a teacher-facing cue.
+- Teaching-process paragraphs now use visible process sequence numbers.
+- Classroom events were expanded with teacher language, likely student responses, scaffolds, resources, evidence, and transitions.
+- Final status: `PASS_CLASSROOM_EVENT_DETAIL_POLISH`.
+- Next stage: `1013F_R2D_CASE_REFERENCE_ASSIMILATION_OR_CONTENT_REVIEW`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.

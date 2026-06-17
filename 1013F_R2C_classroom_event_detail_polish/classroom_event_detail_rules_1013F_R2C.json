@@ -1,0 +1,12 @@
+{
+  "stage_id": "1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH",
+  "rules": [
+    "Normal lesson sections use numbered body lines.",
+    "Clicking normal sections must not frame the main reading text.",
+    "The edit panel may keep its border below the normal section.",
+    "Teaching process uses a distinct focus background.",
+    "Teaching process step paragraphs use visible 1/2/3 sequence numbers.",
+    "Each classroom event includes teacher language, likely student response, scaffold, resource/evidence, and transition.",
+    "R2B2 right-side assistant panels and edit-bubble mechanism remain inherited."
+  ]
+}
