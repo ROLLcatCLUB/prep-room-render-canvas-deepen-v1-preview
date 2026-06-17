@@ -273,3 +273,20 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_EDIT_BUBBLE_ANNOTATION_SURFACE`.
 - Next stage: `1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.
+
+## 1013F_R2B2 Layout Cleanup
+
+- `scripts/run_prep_room_1013f_r2b2_layout_cleanup.py` verifies the latest layout cleanup requested after R2B1.
+- Output directory: `1013F_R2B2_layout_cleanup/`.
+- Required files were generated: `1013F_R2B2_result.json`, `1013F_R2B2_report.md`, `layout_cleanup_rules_1013F_R2B2.json`, `ui_smoke_screenshot_1013F_R2B2_view.png`, and `ui_smoke_screenshot_1013F_R2B2_edit_toggle_bubble.png`.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2B2` opens the cleaned reading state.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2B2Edit` opens the edit bubble state focused on `教学过程 · 探究环节`.
+- Edit buttons now toggle open/closed for the current target; the focused edit button reads `收起`.
+- The edit bubble now starts near the right edge of the selected paragraph and expands over the right-side area.
+- Lesson status is reduced into colored lights plus short text in the view/edit state row.
+- The visible lesson-brief sentence was removed from the main body.
+- `本课设计判断` and `小教读课提示` moved to the right reading-assist area above the edit auxiliary panels and are collapsible.
+- The main reading area now enters the lesson body directly with a light text background.
+- Final status: `PASS_LAYOUT_CLEANUP`.
+- Next stage: `1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.

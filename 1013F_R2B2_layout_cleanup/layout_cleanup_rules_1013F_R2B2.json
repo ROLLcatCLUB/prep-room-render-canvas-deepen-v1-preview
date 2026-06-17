@@ -1,0 +1,12 @@
+{
+  "stage_id": "1013F_R2B2_LAYOUT_CLEANUP",
+  "rules": [
+    "Edit buttons toggle the edit bubble open and closed.",
+    "The removed lesson-brief sentence is not rendered in the main reading flow.",
+    "Lesson status is compressed into the view/edit state row with colored lights and text.",
+    "Design judgement and read-lesson hint move to the right auxiliary panel above other drawer content.",
+    "The main reading area enters the lesson body directly and uses a light text background.",
+    "Current-section modification stays inside the annotation bubble.",
+    "The edit bubble starts near the right edge of the current paragraph and expands over the right-side area."
+  ]
+}
