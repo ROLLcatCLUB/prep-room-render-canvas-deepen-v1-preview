@@ -1,0 +1,26 @@
+{
+  "actions": [
+    {
+      "id": "accept_preview",
+      "label": "采纳到本段",
+      "effect": "只更新预览状态，等待后续正式确认。"
+    },
+    {
+      "id": "refine_more",
+      "label": "继续精修",
+      "effect": "继续围绕当前课堂事件调整。"
+    },
+    {
+      "id": "ask_reason",
+      "label": "追问原因",
+      "effect": "显示小备为什么建议这样改。"
+    },
+    {
+      "id": "defer",
+      "label": "暂不采用",
+      "effect": "保留候选，不进入正文。"
+    }
+  ],
+  "teacher_review_required": true,
+  "formal_apply_performed": false
+}

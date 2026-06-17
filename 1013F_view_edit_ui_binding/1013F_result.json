@@ -1,0 +1,25 @@
+{
+  "stage_id": "1013F_REASONING_FIELD_PATCH_TO_VIEW_EDIT_UI_BINDING",
+  "created_at": "2026-06-17T09:49:40+00:00",
+  "final_status": "PASS_REASONING_FIELD_PATCH_TO_VIEW_EDIT_UI_BINDING",
+  "next_stage": "1013G_TEACHER_REVIEW_ACTIONS_PREVIEW_SANDBOX",
+  "view_mode_binding_pass": true,
+  "edit_mode_binding_pass": true,
+  "patch_candidate_card_pass": true,
+  "impact_scope_mapping_pass": true,
+  "screenshot_smoke_pass": true,
+  "edit_screenshot_smoke_pass": true,
+  "screenshot_files": [
+    "D:/Documents/SmartEdu/xiaobei-core/outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013F_view_edit_ui_binding/ui_smoke_screenshot_1013F.png",
+    "D:/Documents/SmartEdu/xiaobei-core/outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013F_view_edit_ui_binding/ui_smoke_screenshot_1013F_edit.png"
+  ],
+  "teacher_review_required": true,
+  "formal_apply_performed": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "default_entry_changed": false,
+  "forbidden_teacher_visible_hits": []
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "impact_key": "big_screen",
+    "label": "大屏",
+    "summary": "准备冷暖色对比图或黑板色块，并保留感受词。"
+  },
+  {
+    "impact_key": "handout",
+    "label": "学习单",
+    "summary": "增加“我这样分类的理由”记录格，不做复杂表格。"
+  },
+  {
+    "impact_key": "evidence_note",
+    "label": "评价证据",
+    "summary": "评价时看学生是否能说出颜色与感受的关系。"
+  },
+  {
+    "impact_key": "teacher_action",
+    "label": "教师引导",
+    "summary": "教师追问分类依据，而不是直接判定对错。"
+  },
+  {
+    "impact_key": "student_activity",
+    "label": "学生活动",
+    "summary": "学生从听讲改为动手分类、说明理由。"
+  },
+  {
+    "impact_key": "time_balance",
+    "label": "时间安排",
+    "summary": "探究环节保留 10 分钟，展示人数不足时压缩交流。"
+  },
+  {
+    "impact_key": "next_lesson_connection",
+    "label": "下一课承接",
+    "summary": "下一课可以回看本课理由句，再进入更完整的色彩表达。"
+  }
+]

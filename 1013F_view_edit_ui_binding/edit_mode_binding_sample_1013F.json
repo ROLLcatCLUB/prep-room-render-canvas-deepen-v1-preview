@@ -1,0 +1,39 @@
+{
+  "binding_id": "1013F_EDIT_MODE_EVT_3_COLOR_SORT",
+  "current_event": "教学过程 · 色卡分类探究",
+  "target_event_id": "EVT_3",
+  "student_state_before": "学生能感受差异但理由松散。",
+  "student_state_after": "学生能把色卡放入感受类别并说明依据。",
+  "teacher_focus_cue": "你们不是给颜色找标准答案，而是给感受找证据。",
+  "core_question": "为什么这张色卡应该放在这里？",
+  "student_task": "小组把色卡贴到感受词下，并准备一句理由。",
+  "student_response_models": [
+    {
+      "type_label": "可能回答",
+      "student_response": "能围绕色卡分类说出一个具体发现。",
+      "teacher_next_move": "追问依据，让学生把感受和材料连起来。",
+      "scaffold": "用“我看到...所以觉得...”句式。"
+    },
+    {
+      "type_label": "可能误解",
+      "student_response": "只说好看、漂亮或直接背答案。",
+      "teacher_next_move": "让学生指向画面或色卡中的具体部分。",
+      "scaffold": "提供感受词卡和二选一比较。"
+    },
+    {
+      "type_label": "沉默卡住",
+      "student_response": "学生看着材料但说不出来。",
+      "teacher_next_move": "先让同桌选词，再请学生补一个理由。",
+      "scaffold": "给出“像太阳/像冰水/像晚上”的生活联想。"
+    }
+  ],
+  "screen_material_handout": {
+    "big_screen": "黑板分成温暖、清凉、安静、热烈四区。",
+    "material": "色卡、图片、黑板磁贴。",
+    "handout": "学习单记录一组颜色和理由。"
+  },
+  "assessment_evidence": "色卡归类和理由表达。",
+  "transition_to_next": "转入个人表达练习。",
+  "teacher_review_required": true,
+  "formal_apply_performed": false
+}

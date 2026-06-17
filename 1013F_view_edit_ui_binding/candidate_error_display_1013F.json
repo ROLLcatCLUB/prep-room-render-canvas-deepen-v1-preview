@@ -1,0 +1,10 @@
+{
+  "candidate_error_policy": "如果缺少证据绑定或候选不完整，不生成修改卡片。",
+  "teacher_visible_message": "小备这次没有整理出可用候选，建议重新说一下你想调整的地方。",
+  "forbidden_behaviors": [
+    "空默认值",
+    "半截候选",
+    "无证据绑定的候选",
+    "工程错误暴露给教师"
+  ]
+}
