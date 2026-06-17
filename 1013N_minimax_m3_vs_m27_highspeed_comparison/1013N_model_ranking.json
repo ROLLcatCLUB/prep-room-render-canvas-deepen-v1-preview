@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "MiniMax-M3": 12,
+    "MiniMax-M2.7-highspeed": 9
+  },
+  "details": {
+    "MiniMax-M3": [
+      "json_probe: strict_json +2",
+      "json_probe: latency_under_3s +1",
+      "lesson_reasoning_standard_daily: strict_json +2",
+      "lesson_reasoning_standard_daily: contract +3",
+      "lesson_reasoning_standard_daily: teacher_quality +4"
+    ],
+    "MiniMax-M2.7-highspeed": [
+      "json_probe: strict_json +2",
+      "lesson_reasoning_standard_daily: strict_json +2",
+      "lesson_reasoning_standard_daily: teacher_quality +5"
+    ]
+  },
+  "winner": "MiniMax-M3",
+  "recommendation": "Use the winner for structured prep-room reasoning by default, then keep the other model as fallback."
+}

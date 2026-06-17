@@ -1,0 +1,512 @@
+{
+  "stage": "1013N_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON",
+  "final_status": "PASS_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON",
+  "models": [
+    "MiniMax-M3",
+    "MiniMax-M2.7-highspeed"
+  ],
+  "model_ranking": {
+    "scores": {
+      "MiniMax-M3": 12,
+      "MiniMax-M2.7-highspeed": 9
+    },
+    "details": {
+      "MiniMax-M3": [
+        "json_probe: strict_json +2",
+        "json_probe: latency_under_3s +1",
+        "lesson_reasoning_standard_daily: strict_json +2",
+        "lesson_reasoning_standard_daily: contract +3",
+        "lesson_reasoning_standard_daily: teacher_quality +4"
+      ],
+      "MiniMax-M2.7-highspeed": [
+        "json_probe: strict_json +2",
+        "lesson_reasoning_standard_daily: strict_json +2",
+        "lesson_reasoning_standard_daily: teacher_quality +5"
+      ]
+    },
+    "winner": "MiniMax-M3",
+    "recommendation": "Use the winner for structured prep-room reasoning by default, then keep the other model as fallback."
+  },
+  "interpretation": "For this prep-room structured reasoning sample, compare strict JSON first, then contract coverage, then teacher-readable quality. M3 contract_pass=True and quality=4; M2.7-highspeed contract_pass=False and quality=5.",
+  "case_results": [
+    {
+      "case_id": "json_probe",
+      "model": "MiniMax-M3",
+      "ok": true,
+      "latency_ms": 1012,
+      "provider_meta": {
+        "provider": "openai_compatible",
+        "model": "MiniMax-M3",
+        "credential_source": "env",
+        "reasoning_split": false
+      },
+      "evaluation": {
+        "strict_json_success": true,
+        "parsed": {
+          "ok": true,
+          "task": "json_probe",
+          "lesson": "color_feeling"
+        },
+        "raw_length": 56
+      },
+      "raw_text_redacted_prefix": "{\"ok\":true,\"task\":\"json_probe\",\"lesson\":\"color_feeling\"}",
+      "error": null
+    },
+    {
+      "case_id": "json_probe",
+      "model": "MiniMax-M2.7-highspeed",
+      "ok": true,
+      "latency_ms": 3893,
+      "provider_meta": {
+        "provider": "openai_compatible",
+        "model": "MiniMax-M2.7-highspeed",
+        "credential_source": "env",
+        "reasoning_split": false
+      },
+      "evaluation": {
+        "strict_json_success": true,
+        "parsed": {
+          "ok": true,
+          "task": "json_probe",
+          "lesson": "color_feeling"
+        },
+        "raw_length": 56
+      },
+      "raw_text_redacted_prefix": "{\"ok\":true,\"task\":\"json_probe\",\"lesson\":\"color_feeling\"}",
+      "error": null
+    },
+    {
+      "case_id": "lesson_reasoning_standard_daily",
+      "model": "MiniMax-M3",
+      "ok": true,
+      "latency_ms": 34776,
+      "provider_meta": {
+        "provider": "openai_compatible",
+        "model": "MiniMax-M3",
+        "credential_source": "env",
+        "reasoning_split": false
+      },
+      "evaluation": {
+        "strict_json_success": true,
+        "contract_pass": true,
+        "contract_errors": [],
+        "parser_meta": {
+          "parser_mode": "strict_json_parser",
+          "provider_output_sanitized": false,
+          "sanitize_method": null,
+          "raw_prefix_type": "json_object",
+          "raw_response_has_think_tag": false,
+          "raw_response_saved": false,
+          "extraction_required": false
+        },
+        "teacher_quality": {
+          "score": 4,
+          "signals": [
+            "student_blocker",
+            "teacher_action",
+            "student_action",
+            "assessment"
+          ],
+          "issues": [
+            "missing_resource_timing",
+            "missing_risk_adjustment",
+            "forbidden_terms:formal_apply"
+          ]
+        },
+        "raw_length": 3810,
+        "parsed": {
+          "stage_id": "1013N_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON",
+          "task": "Compare model ability to convert a teacher intent into compact lesson reasoning field patches.",
+          "lesson_design_mode": "standard_daily",
+          "intent_summary": "学生对冷暖色理解偏抽象，希望用更直观的方式建立色彩与情绪、场景的联系。",
+          "lesson_design_brief_compact": {
+            "core_learning_problem": "学生能说出冷暖色名称，但难以把色彩和自身感受、生活场景、作品表达连接起来。",
+            "student_baseline": "三年级，能识别常见颜色，会说喜欢或不喜欢；冷暖色概念偏抽象，缺少生活化感受经验。",
+            "target_shift": "从只认冷暖色名称，转向能用色彩描述情绪或场景，并在作品中尝试用冷暖表达。",
+            "teaching_route": [
+              "先用一个生活场景导入，激发学生对冷暖的直观感受",
+              "通过图片对比与身体感受，建立冷暖与情绪的小对应",
+              "让学生用少量颜色在小练习中表达一种情绪或场景",
+              "小组互看作品并说感受，迁移到生活场景",
+              "结合评价量规做简短自评和互评"
+            ],
+            "evidence_plan": [
+              "观察学生能否用语言说出冷暖带来的感受",
+              "收集小练习中色彩与场景的对应证据",
+              "听取学生互评中的描述是否包含感受词",
+              "对照评价量规中色彩与创意两个维度"
+            ],
+            "risk_points": [
+              "冷暖概念再次讲成定义，学生感受不足",
+              "小练习变成自由涂色，缺少色彩与情绪的对应",
+              "互评只评好不好看，忽略感受描述"
+            ],
+            "basis_summary": [
+              "教师输入：学生对冷暖色不太理解，需要更直观",
+              "教学预设：三年级以具象感受为主",
+              "课标候选：色彩单元强调感受与表达",
+              "评价量规：色彩、创意、过程性评价三维"
+            ]
+          },
+          "target_resolution": [
+            {
+              "section_id": "学情分析",
+              "step_id": "S1_学情分析",
+              "target_field": "学习难点描述",
+              "reason": "原描述偏抽象，加入冷暖理解困难与需要直观感受的判断"
+            },
+            {
+              "section_id": "教学过程",
+              "step_id": "S3_探究环节",
+              "target_field": "探究活动设计",
+              "reason": "把冷暖色探究从概念对比改为场景与感受对比"
+            }
+          ],
+          "step_reasoning_updates": [
+            {
+              "step_id": "S3_探究环节",
+              "step_name": "探究环节：冷暖色的感受",
+              "student_state_before": "能认出冷暖色，但说不清冷暖带来的不同感受。",
+              "student_state_after": "能用生活场景或身体感受描述冷暖色，并尝试用颜色表达一种情绪。",
+              "teacher_action": "出示三组冷暖场景图片，引导学生说像什么感觉；出示生活物品颜色，让学生联想场景与情绪。",
+              "student_action": "看图说感受；用2到3种颜色在小练习卡上表达一种情绪或场景，并写一两个词。",
+              "big_screen_state": "左右分屏对比冷暖场景图；中央留出感受词收集区。",
+              "learning_sheet_state": "小练习卡：左边贴或涂颜色，右边写场景或情绪词。",
+              "assessment_evidence": "学生口述的冷暖感受词、小练习中的颜色与场景对应、同伴互评中的感受描述。",
+              "risk_and_adjustment": "若学生只说像不像，追加身体温度联想；若小练习没有情绪，加入一个示范小例子。"
+            }
+          ],
+          "field_patch_candidates": [
+            {
+              "field_patch_id": "FP_1013_01",
+              "target_section": "学情分析",
+              "target_step_id": "S1_学情分析",
+              "target_field": "学习难点",
+              "patch_type": "revise",
+              "before_summary": "抽象描述冷暖色理解不足。",
+              "after_candidate": "学生对冷暖色的认识偏概念化，缺少把颜色和自身感受、生活场景、作品表达连起来的经验。",
+              "reasoning_basis": [
+                "教师输入：学生对冷暖色不太理解",
+                "小备推测：三年级需要具象感受经验",
+                "课标摘要：色彩单元强调感受与表达"
+              ],
+              "impact_scope": [
+                "big_screen",
+                "handout",
+                "evidence_note"
+              ],
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "field_patch_id": "FP_1013_02",
+              "target_section": "教学过程",
+              "target_step_id": "S3_探究环节",
+              "target_field": "探究活动",
+              "patch_type": "restructure",
+              "before_summary": "以冷暖色概念对比为主，活动偏认知。",
+              "after_candidate": "改为三步：先看冷暖场景图说感受，再连生活物品颜色与情绪，最后用2到3种颜色在小练习卡上表达一种情绪或场景。",
+              "reasoning_basis": [
+                "教师输入：需要更直观",
+                "课标：感受与表达并重",
+                "评价量规：色彩、创意、过程性评价",
+                "资源候选：冷暖色图片素材与优秀课例"
+              ],
+              "impact_scope": [
+                "big_screen",
+                "handout",
+                "evidence_note"
+              ],
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            }
+          ],
+          "impact_scope": [
+            {
+              "affected_object": "big_screen",
+              "impact_summary": "学情分析与探究环节需要同步刷新冷暖场景图与感受词收集区。",
+              "requires_teacher_confirmation": true
+            },
+            {
+              "affected_object": "handout",
+              "impact_summary": "小练习卡要增加颜色加场景或情绪词的对应格。",
+              "requires_teacher_confirmation": true
+            },
+            {
+              "affected_object": "evidence_note",
+              "impact_summary": "补充感受词记录与互评中的描述片段，作为评价量规中的过程性证据。",
+              "requires_teacher_confirmation": true
+            }
+          ],
+          "quality_gate_update": {
+            "level": "basic_usable",
+            "passed_items": [
+              "学情难点已对准教师输入",
+              "探究活动已改为直观感受路径",
+              "评价量规三维已挂钩"
+            ],
+            "missing_items": [
+              "未在教案中显式呈现评价量规评分标准",
+              "未列出资源候选的最终选用"
+            ],
+            "risk_items": [
+              "小练习可能滑回自由涂色",
+              "互评可能停在好看不好看"
+            ],
+            "next_best_action": "请教师确认小练习卡样式和冷暖场景图来源，再决定是否进入试讲。"
+          },
+          "teacher_questions": [
+            {
+              "question": "小练习卡上需要写感受词吗？",
+              "why_needed": "决定是否能收集到感受与表达的证据。",
+              "options": [
+                "写一两个词即可",
+                "不写，只口头说",
+                "教师统一给感受词"
+              ]
+            },
+            {
+              "question": "冷暖场景图用教材图例还是另选图片？",
+              "why_needed": "影响直观程度和资源选用。",
+              "options": [
+                "用教材图例",
+                "用冷暖色图片素材",
+                "混合使用"
+              ]
+            }
+          ],
+          "ui_binding_hint": {
+            "should_enter_edit_mode": true,
+            "edit_target": "学情分析 · 教学过程 · 探究环节",
+            "candidate_display_position": "right_tray",
+            "right_tray_updates": [
+              "显示2条候选补丁",
+              "显示1条探究环节推理更新",
+              "显示3项影响范围提示",
+              "提示教师先确认小练习卡与图片来源"
+            ],
+            "view_mode_summary": "日常课快速模式，仅显示补丁与影响范围。"
+          },
+          "boundary_flags": {
+            "teacher_review_required": true,
+            "formal_apply_performed": false,
+            "database_written": false,
+            "memory_written": false,
+            "feishu_written": false,
+            "formal_export_created": false,
+            "official_archive_created": false
+          }
+        }
+      },
+      "raw_text_redacted_prefix": "{\"stage_id\":\"1013N_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON\",\"task\":\"Compare model ability to convert a teacher intent into compact lesson reasoning field patches.\",\"lesson_design_mode\":\"standard_daily\",\"intent_summary\":\"学生对冷暖色理解偏抽象，希望用更直观的方式建立色彩与情绪、场景的联系。\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"学生能说出冷暖色名称，但难以把色彩和自身感受、生活场景、作品表达连接起来。\",\"student_baseline\":\"三年级，能识别常见颜色，会说喜欢或不喜欢；冷暖色概念偏抽象，缺少生活化感受经验。\",\"target_shift\":\"从只认冷暖色名称，转向能用色彩描述情绪或场景，并在作品中尝试用冷暖表达。\",\"teaching_route\":[\"先用一个生活场景导入，激发学生对冷暖的直观感受\",\"通过图片对比与身体感受，建立冷暖与情绪的小对应\",\"让学生用少量颜色在小练习中表达一种情绪或场景\",\"小组互看作品并说感受，迁移到生活场景\",\"结合评价量规做简短自评和互评\"],\"evidence_plan\":[\"观察学生能否用语言说出冷暖带来的感受\",\"收集小练习中色彩与场景的对应证据\",\"听取学生互评中的描述是否包含感受词\",\"对照评价量规中色彩与创意两个维度\"],\"risk_points\":[\"冷暖概念再次讲成定义，学生感受不足\",\"小练习变成自由涂色，缺少色彩与情绪的对应\",\"互评只评好不好看，忽略感受描述\"],\"basis_summary\":[\"教师输入：学生对冷暖色不太理解，需要更直观\",\"教学预设：三年级以具象感受为主\",\"课标候选：色彩单元强调感受与表达\",\"评价量规：色彩、创意、过程性评价三维\"]},\"target_resolution\":[{\"section_id\":\"学情分析\",\"step_id\":\"S1_学情分析\",\"target_field\":\"学习难点描述\",\"reason\":\"原描述偏抽象，加入冷暖理解困难与需要直观感受的判断\"},{\"section_id\":\"教学过程\",\"step_id\":\"S3_探究环节\",\"target_field\":\"探究活动设计\",\"reason\":\"把冷暖色探究从概念对比改为场景与感受对比\"}],\"step_reasoning_updates\":[{\"step_id\":\"S3_探究环节\",\"step_name\":\"探究环节：冷暖色的感受\",\"student_state_before\":\"能认出冷",
+      "error": null
+    },
+    {
+      "case_id": "lesson_reasoning_standard_daily",
+      "model": "MiniMax-M2.7-highspeed",
+      "ok": true,
+      "latency_ms": 62293,
+      "provider_meta": {
+        "provider": "openai_compatible",
+        "model": "MiniMax-M2.7-highspeed",
+        "credential_source": "env",
+        "reasoning_split": false
+      },
+      "evaluation": {
+        "strict_json_success": true,
+        "contract_pass": false,
+        "contract_errors": [
+          "missing_explore_patch",
+          "missing_explore_step_update"
+        ],
+        "parser_meta": {
+          "parser_mode": "strict_json_parser",
+          "provider_output_sanitized": false,
+          "sanitize_method": null,
+          "raw_prefix_type": "json_object",
+          "raw_response_has_think_tag": false,
+          "raw_response_saved": false,
+          "extraction_required": false
+        },
+        "teacher_quality": {
+          "score": 5,
+          "signals": [
+            "student_blocker",
+            "teacher_action",
+            "student_action",
+            "resource_timing",
+            "assessment"
+          ],
+          "issues": [
+            "missing_risk_adjustment",
+            "forbidden_terms:formal_apply"
+          ]
+        },
+        "raw_length": 2633,
+        "parsed": {
+          "lesson_design_mode": "standard_daily",
+          "intent_summary": "让学生直观感受冷暖色，能说出感受并尝试表达",
+          "lesson_design_brief_compact": {
+            "core_learning_problem": "学生对冷暖色的感受和表达不清晰",
+            "student_baseline": "知道颜色名称，喜欢颜色，但未将颜色与情绪/场景关联",
+            "target_shift": "从认识颜色到感受颜色，能用语言和绘画表达情绪",
+            "teaching_route": [
+              "情境导入",
+              "感受冷暖",
+              "作品创作",
+              "展示评价"
+            ],
+            "evidence_plan": [
+              "学生描述感受的词语",
+              "绘画作品的色彩选择",
+              "课堂即时反馈"
+            ],
+            "risk_points": [
+              "学生感受表达不主动",
+              "颜色区分仍混淆",
+              "时间把握不足"
+            ],
+            "basis_summary": [
+              "教材图例",
+              "冷暖色图片素材",
+              "美术评价量规维度"
+            ]
+          },
+          "target_resolution": [
+            {
+              "section_id": "学情分析",
+              "step_id": "",
+              "target_field": "student_baseline",
+              "reason": "补充学生未关联颜色与情绪的现状"
+            }
+          ],
+          "step_reasoning_updates": [
+            {
+              "step_id": "step2",
+              "step_name": "探索冷暖色的感受",
+              "student_state_before": "只能说出颜色名称",
+              "student_state_after": "能用温暖、凉爽等词描述颜色",
+              "teacher_action": "展示冷暖图片，引导讨论",
+              "student_action": "观察并说出感受",
+              "big_screen_state": "显示冷暖对比图",
+              "learning_sheet_state": "记录感受关键词",
+              "assessment_evidence": "学生描述记录",
+              "risk_and_adjustment": "若沉默，提供关键词提示"
+            }
+          ],
+          "field_patch_candidates": [
+            {
+              "field_patch_id": "patch1",
+              "target_section": "学情分析",
+              "target_step_id": "",
+              "target_field": "student_baseline",
+              "patch_type": "fill_missing",
+              "before_summary": "现有描述未涉及颜色与情绪关联",
+              "after_candidate": "学生能说出颜色带来的感受，但对冷暖色的具体情绪认知不足",
+              "reasoning_basis": [
+                "教师输入",
+                "教材图例"
+              ],
+              "impact_scope": [
+                "big_screen",
+                "handout"
+              ],
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            },
+            {
+              "field_patch_id": "patch2",
+              "target_section": "教学过程",
+              "target_step_id": "step2",
+              "target_field": "teacher_action",
+              "patch_type": "enrich",
+              "before_summary": "仅展示图片",
+              "after_candidate": "展示冷暖图片后，引导学生用身体动作表现冷暖",
+              "reasoning_basis": [
+                "优秀课例",
+                "美术评价量规维度"
+              ],
+              "impact_scope": [
+                "handout",
+                "evidence_note"
+              ],
+              "teacher_review_required": true,
+              "formal_apply_performed": false
+            }
+          ],
+          "impact_scope": [
+            {
+              "affected_object": "big_screen",
+              "impact_summary": "展示冷暖对比图，支持学生感受讨论",
+              "requires_teacher_confirmation": true
+            },
+            {
+              "affected_object": "handout",
+              "impact_summary": "学习单增加感受关键词记录栏",
+              "requires_teacher_confirmation": true
+            },
+            {
+              "affected_object": "evidence_note",
+              "impact_summary": "课堂记录增设学生描述颜色的即时记录",
+              "requires_teacher_confirmation": true
+            }
+          ],
+          "quality_gate_update": {
+            "level": "basic_usable",
+            "passed_items": [
+              "意图明确",
+              "核心学习问题清晰",
+              "教学路线基本完整"
+            ],
+            "missing_items": [
+              "探究环节具体活动描述",
+              "评价证据细化"
+            ],
+            "risk_items": [
+              "学生表达不主动",
+              "时间控制"
+            ],
+            "next_best_action": "补充探究环节活动细节，准备学习单和学习资源"
+          },
+          "teacher_questions": [
+            {
+              "question": "你看到这幅画时，感觉是温暖还是凉爽？",
+              "why_needed": "引导学生感受冷暖色",
+              "options": [
+                "温暖",
+                "凉爽",
+                "两者都有"
+              ]
+            }
+          ],
+          "ui_binding_hint": {
+            "should_enter_edit_mode": true,
+            "edit_target": "学情分析",
+            "candidate_display_position": "右侧候选区",
+            "right_tray_updates": [],
+            "view_mode_summary": "紧凑模式显示补丁和影响范围"
+          },
+          "boundary_flags": {
+            "teacher_review_required": true,
+            "formal_apply_performed": false,
+            "database_written": false,
+            "memory_written": false,
+            "feishu_written": false,
+            "formal_export_created": false,
+            "official_archive_created": false
+          }
+        }
+      },
+      "raw_text_redacted_prefix": "{\"lesson_design_mode\":\"standard_daily\",\"intent_summary\":\"让学生直观感受冷暖色，能说出感受并尝试表达\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"学生对冷暖色的感受和表达不清晰\",\"student_baseline\":\"知道颜色名称，喜欢颜色，但未将颜色与情绪/场景关联\",\"target_shift\":\"从认识颜色到感受颜色，能用语言和绘画表达情绪\",\"teaching_route\":[\"情境导入\",\"感受冷暖\",\"作品创作\",\"展示评价\"],\"evidence_plan\":[\"学生描述感受的词语\",\"绘画作品的色彩选择\",\"课堂即时反馈\"],\"risk_points\":[\"学生感受表达不主动\",\"颜色区分仍混淆\",\"时间把握不足\"],\"basis_summary\":[\"教材图例\",\"冷暖色图片素材\",\"美术评价量规维度\"]},\"target_resolution\":[{\"section_id\":\"学情分析\",\"step_id\":\"\",\"target_field\":\"student_baseline\",\"reason\":\"补充学生未关联颜色与情绪的现状\"}],\"step_reasoning_updates\":[{\"step_id\":\"step2\",\"step_name\":\"探索冷暖色的感受\",\"student_state_before\":\"只能说出颜色名称\",\"student_state_after\":\"能用温暖、凉爽等词描述颜色\",\"teacher_action\":\"展示冷暖图片，引导讨论\",\"student_action\":\"观察并说出感受\",\"big_screen_state\":\"显示冷暖对比图\",\"learning_sheet_state\":\"记录感受关键词\",\"assessment_evidence\":\"学生描述记录\",\"risk_and_adjustment\":\"若沉默，提供关键词提示\"}],\"field_patch_candidates\":[{\"field_patch_id\":\"patch1\",\"target_section\":\"学情分析\",\"target_step_id\":\"\",\"target_field\":\"student_baseline\",\"patch_type\":\"fill_missing\",\"before_summary\":\"现有描述未涉及颜色与情绪关联\",\"after_candidate\":\"学生能说出颜色带来的感受，但对冷暖色的具体情绪认知不足\",\"reasoning_basis\":[\"教师输入\",\"教材图例\"],\"impact_scope\":[\"big_screen\",\"handout\"],\"teach",
+      "error": null
+    }
+  ],
+  "provider_called": true,
+  "model_called": true,
+  "teacher_review_required": true,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

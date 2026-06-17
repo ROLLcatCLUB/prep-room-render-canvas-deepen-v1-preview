@@ -158,6 +158,17 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - `scripts/run_minimax_m3_connection_smoke.py` performs a minimal live JSON smoke.
 - Output directory: `1013M_minimax_m3_connection/`.
 - Final status: `PASS_MINIMAX_M3_CONNECTED`.
+
+## 1013N MiniMax M3 Vs M2.7-highspeed Comparison
+
+- `scripts/run_minimax_m3_vs_m27_highspeed_comparison.py` compares `MiniMax-M3` and `MiniMax-M2.7-highspeed` on two read-only cases.
+- Case 1: minimal strict JSON probe. Both models passed; M3 was faster in the measured run.
+- Case 2: standard daily prep-room reasoning for Grade 3 art 1-2 `色彩的感觉`.
+- M3 produced strict JSON and passed the compact lesson-reasoning contract.
+- M2.7-highspeed produced strict JSON but missed the required `探究环节` coverage in contract validation.
+- Output directory: `1013N_minimax_m3_vs_m27_highspeed_comparison/`.
+- Final status: `PASS_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON`.
+- Recommendation: use `MiniMax-M3` as default for structured prep-room reasoning; keep `MiniMax-M2.7-highspeed` only as fallback for simpler/shorter calls.
 - What failed: `standard_daily` started producing the expected structure but did not return parseable complete JSON; `open_class` and `research_lesson` timed out.
 - Conclusion: the model path is plausible, but the prompt is too heavy for stable four-case output. Next stage should be `1013E_R1_PROMPT_REPAIR`, with shorter schema, smaller source context, and mode-specific prompt compression.
 - Boundary: no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.
