@@ -1,58 +1,59 @@
 # Prep Room Render Canvas Review Entry
 
-status=1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH_COMPLETE
-final_status=PASS_CLASSROOM_EVENT_DETAIL_POLISH
-next_stage=1013F_R2D_CASE_REFERENCE_ASSIMILATION_OR_CONTENT_REVIEW
-baseline=1013F_R2B2_LAYOUT_CLEANUP
+status=1013S_FEISHU_SCHEDULE_REAL_TIME_BINDING_COMPLETE
+final_status=PASS_FEISHU_SNAPSHOT_SCHEDULE_REAL_TIME_BINDING_WITH_LIVE_CONFIG_CAVEAT
+next_stage=1013S_R1_FEISHU_LIVE_CREDENTIAL_BINDING_OR_1013F_R2D_CONTENT_REVIEW
+baseline=1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH
 upload_policy=github_review_repo_each_iteration
 
 ## What changed
 
-- Added `scripts/run_prep_room_1013f_r2c_classroom_event_detail_polish.py`.
-- Added the `1013F_R2C_classroom_event_detail_polish/` review output directory.
-- Added R2C preview hashes for numbered-section view, teaching-process focus, and edit-bubble state.
-- Normal lesson sections now render numbered lines inside the main body.
-- Clicking normal sections no longer frames the main reading body; the edit panel below may still keep its border.
-- Teaching process now uses a distinct warm focus background and a teacher-facing attention cue.
-- Teaching-process paragraphs now show visible process sequence numbers.
-- Classroom events were expanded with teacher language, likely student response, scaffolds, resource/evidence cues, and transitions.
-- Kept the R2B2 right-side auxiliary structure and edit-bubble mechanism.
+- Rechecked the existing Feishu schedule adapter before changing the preview.
+- Feishu live read was attempted first and returned `feishu_live_not_configured` in this local environment.
+- Auto mode successfully fell back to the Feishu full-dump schedule snapshot.
+- `backend/xiaobei_ai/prep_room_feishu_schedule_1013A.py` now adds local school-day time ranges to each schedule slot.
+- The week calendar view now carries Feishu record ids, room, period, and visible time ranges on lesson cards.
+- Week dates are generated from the current natural week, anchored to `2026-06-17` for this preview.
+- Period labels now show the local school-day time configuration.
+- R2C classroom-event layout and R2B2 edit-bubble baseline were kept.
 - Did not enter 1013G teacher review actions.
 
 ## Main review files
 
 - `prep_room_render_canvas_deepen_v1.html`
-- `1013F_R2C_classroom_event_detail_polish/1013F_R2C_result.json`
-- `1013F_R2C_classroom_event_detail_polish/1013F_R2C_report.md`
-- `1013F_R2C_classroom_event_detail_polish/classroom_event_detail_rules_1013F_R2C.json`
-- `1013F_R2C_classroom_event_detail_polish/ui_smoke_screenshot_1013F_R2C_view_numbered_sections.png`
-- `1013F_R2C_classroom_event_detail_polish/ui_smoke_screenshot_1013F_R2C_process_focus.png`
-- `1013F_R2C_classroom_event_detail_polish/ui_smoke_screenshot_1013F_R2C_edit_bubble_kept.png`
-- `source_delta_1013F_R2C/scripts/run_prep_room_1013f_r2c_classroom_event_detail_polish.py`
-- `source_delta_1013F_R2C/outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/prep_room_render_canvas_deepen_v1.html`
+- `backend/xiaobei_ai/prep_room_feishu_schedule_1013A.py`
+- `1013S_feishu_schedule_real_time_binding/1013S_result.json`
+- `1013S_feishu_schedule_real_time_binding/1013S_report.md`
+- `1013S_feishu_schedule_real_time_binding/feishu_schedule_probe_1013S.json`
+- `1013S_feishu_schedule_real_time_binding/period_time_map_1013S.json`
+- `1013S_feishu_schedule_real_time_binding/ui_smoke_screenshot_1013S_week_calendar_real_time.png`
+- `source_delta_1013S/scripts/run_prep_room_1013s_feishu_schedule_real_time_binding.py`
+- `source_delta_1013S/backend/xiaobei_ai/prep_room_feishu_schedule_1013A.py`
+- `source_delta_1013S/outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/prep_room_render_canvas_deepen_v1.html`
 - `README.md`
 
 ## Result Summary
 
-- Final status: `PASS_CLASSROOM_EVENT_DETAIL_POLISH`.
-- Section body numbered: PASS.
-- Section click without outer body frame: PASS.
-- Section edit panel still present: PASS.
-- Teaching-process distinct background: PASS.
-- Teaching-process numbered paragraphs: PASS.
-- Teaching-process not truncated: PASS.
-- Classroom event expansion: PASS.
-- R2B2 edit bubble kept: PASS.
-- R2B2 right-panel baseline kept: PASS.
+- Final status: `PASS_FEISHU_SNAPSHOT_SCHEDULE_REAL_TIME_BINDING_WITH_LIVE_CONFIG_CAVEAT`.
+- Auto schedule probe: PASS.
+- Snapshot schedule probe: PASS.
+- Live probe checked: PASS.
+- Live configured: false.
+- Live caveat: `feishu_live_not_configured`.
+- Feishu record ids present: PASS.
+- Period time map present: PASS.
+- Current week runtime dates: PASS.
+- Course card time and room display: PASS.
+- Detail panel source record display: PASS.
+- R2C layout baseline kept: PASS.
 - Screenshot smoke: PASS.
 - Teacher review required: true.
 - Formal apply performed: false.
-- Recommended next stage: `1013F_R2D_CASE_REFERENCE_ASSIMILATION_OR_CONTENT_REVIEW`.
 
 ## Boundary
 
-- Provider was not called for 1013F_R2C.
-- Model was not called for 1013F_R2C.
+- Provider was not called for 1013S.
+- Model was not called for 1013S.
 - No database write.
 - No memory write.
 - No Feishu write.
@@ -69,8 +70,8 @@ upload_policy=github_review_repo_each_iteration
 ## Local checks before upload
 
 - Python `py_compile`: PASS.
-- 1013F_R2C runner: PASS.
+- 1013S runner: PASS.
 - HTML inline script syntax check: PASS.
-- 1013F_R2C output JSON parse: PASS.
-- Strict secret scan on changed files and 1013F_R2C outputs: PASS.
+- 1013S output JSON parse: PASS.
+- Strict secret scan on changed files and 1013S outputs: PASS.
 - Screenshot smoke: PASS.

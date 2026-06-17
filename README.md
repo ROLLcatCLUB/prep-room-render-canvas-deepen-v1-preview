@@ -307,3 +307,18 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_CLASSROOM_EVENT_DETAIL_POLISH`.
 - Next stage: `1013F_R2D_CASE_REFERENCE_ASSIMILATION_OR_CONTENT_REVIEW`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.
+
+## 1013S Feishu Schedule Real Time Binding
+
+- `backend/xiaobei_ai/prep_room_feishu_schedule_1013A.py` now attaches local school-day time ranges to Feishu schedule slots.
+- `scripts/run_prep_room_1013s_feishu_schedule_real_time_binding.py` verifies Feishu schedule probing and real-time calendar rendering.
+- Output directory: `1013S_feishu_schedule_real_time_binding/`.
+- Required files were generated: `1013S_result.json`, `1013S_report.md`, `feishu_schedule_probe_1013S.json`, `period_time_map_1013S.json`, and `ui_smoke_screenshot_1013S_week_calendar_real_time.png`.
+- Feishu live read was checked first. It is not configured in this local environment, so auto mode falls back to the Feishu full-dump schedule snapshot.
+- Snapshot mode reads 8 Xu Tao grade-three art schedule slots from `tbl7OxfE4YPSE6GU`.
+- Week calendar cards now carry Feishu record id, room, period, and visible time range.
+- Week dates are generated from the current natural week, anchored to `2026-06-17` for this preview.
+- The left period column now shows the local school-day time configuration.
+- Final status: `PASS_FEISHU_SNAPSHOT_SCHEDULE_REAL_TIME_BINDING_WITH_LIVE_CONFIG_CAVEAT`.
+- Next stage: `1013S_R1_FEISHU_LIVE_CREDENTIAL_BINDING_OR_1013F_R2D_CONTENT_REVIEW`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.
