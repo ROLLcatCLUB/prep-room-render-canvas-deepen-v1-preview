@@ -1,0 +1,153 @@
+{
+  "case_id": "test_3",
+  "label": "深度打磨",
+  "teacher_input": "这节课我想做得更适合公开课展示，问题串和评价证据要更清楚。",
+  "success": true,
+  "parser_mode": "strict_json",
+  "extraction_required": false,
+  "validation_errors": [],
+  "provider_called": true,
+  "model_called": true,
+  "latency_ms": 51686,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": true
+  },
+  "raw_response_stored": false,
+  "raw_response_preview_redacted": "{\"intent_summary\": \"教师希望本课《色彩的感觉》适合公开课展示，需强化问题串设计和评价证据的清晰度\", \"target_lesson\": {\"lesson_code\": \"1-2\", \"lesson_title\": \"色彩的感觉\"}, \"field_patch_candidates\": [{\"field_patch_id\": \"patch_",
+  "parsed_json": {
+    "intent_summary": "教师希望本课《色彩的感觉》适合公开课展示，需强化问题串设计和评价证据的清晰度",
+    "target_lesson": {
+      "lesson_code": "1-2",
+      "lesson_title": "色彩的感觉"
+    },
+    "field_patch_candidates": [
+      {
+        "field_patch_id": "patch_001",
+        "target_layer": "l2_lesson_execution",
+        "target_field": "teacher_questions",
+        "patch_type": "enrich",
+        "before_summary": "仅有核心活动描述，无问题链",
+        "after_candidate": "Q1-导入：这两种颜色给你什么不同的感觉？（观察辨识）\nQ2-新授：冷暖色为什么能让人产生不同的情绪？（概念理解）\nQ3-实践：如果要表达开心/安静，你会选哪些颜色？（应用迁移）\nQ4-展示：你用了什么颜色？为什么这样用？（表达反思）",
+        "source_basis": [
+          "教师意图：问题串要更清楚"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      },
+      {
+        "field_patch_id": "patch_002",
+        "target_layer": "l3_resource_collab",
+        "target_field": "rubric",
+        "patch_type": "fill_missing",
+        "before_summary": "rubric缺失",
+        "after_candidate": "冷暖色辨识（25%）| 情绪表达意图（25%）| 色彩选择合理性（30%）| 课堂参与互动（20%）",
+        "source_basis": [
+          "教师意图：评价证据要更清楚",
+          "美术评价量规维度"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      },
+      {
+        "field_patch_id": "patch_003",
+        "target_layer": "l2_lesson_execution",
+        "target_field": "classroom_flow",
+        "patch_type": "revise",
+        "before_summary": "仅有核心活动，缺时间分配",
+        "after_candidate": "【导入】3min-观察冷暖色图，Q1引入\n【新授】7min-冷暖色概念+Q2讨论\n【实践】15min-创作+Q3应用，教师巡视收集证据\n【展示】10min-作品分享+Q4互评，收集评价证据\n【总结】5min-梳理收获，评价证据归档",
+        "source_basis": [
+          "教师意图：适合公开课展示",
+          "40分钟标准结构"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      },
+      {
+        "field_patch_id": "patch_004",
+        "target_layer": "l2_lesson_execution",
+        "target_field": "student_activities",
+        "patch_type": "enrich",
+        "before_summary": "仅有核心活动描述",
+        "after_candidate": "活动1-观察描述：看冷暖色图片，记录感受[证据：学生发言/学习单]\n活动2-小组讨论：色彩与情绪关系[证据：讨论记录表]\n活动3-个人创作：用色彩表达指定情绪[证据：作品+自评]",
+        "source_basis": [
+          "教师意图：评价证据要更清楚"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      },
+      {
+        "field_patch_id": "patch_005",
+        "target_layer": "l4_reflection",
+        "target_field": "evidence_note",
+        "patch_type": "revise",
+        "before_summary": "未开始",
+        "after_candidate": "证据类型：学生作品照片/学习单记录/课堂发言录音/讨论记录表；评价证据与rubric对应点：冷暖色辨识→Q1回答记录，情绪表达意图→自评表，色彩选择→作品标注，课堂参与→互动频次统计",
+        "source_basis": [
+          "教师意图：评价证据要更清楚"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      }
+    ],
+    "missing_slots": [
+      {
+        "slot": "l3_resource_collab.handout",
+        "question": "公开课展示是否需要更具体的学生活动学习单模板？",
+        "options": [
+          "沿用候选学习单",
+          "需补充色彩选择记录区",
+          "需补充自评区"
+        ]
+      },
+      {
+        "slot": "l1_basic.core_activity",
+        "question": "公开课展示的核心活动是否需要更明确的分组合作设计？",
+        "options": [
+          "保持现有描述",
+          "补充小组角色分工",
+          "增加组间对比展示"
+        ]
+      }
+    ],
+    "quality_gate": {
+      "level": "可公开展示",
+      "passed_items": [
+        "问题串完整（4步递进）",
+        "评价量规具备（4维度）",
+        "证据收集明确（5种形式）",
+        "课堂流程规范（5环节）"
+      ],
+      "missing_items": [
+        "学习单模板需确认",
+        "分组合作细节待定"
+      ],
+      "next_best_action": "教师确认问题串的递进逻辑是否合理，以及rubric各维度权重是否适合三年级学情"
+    },
+    "right_tray_updates": {
+      "suggestion": "建议优先确认rubric的权重要不要根据公开课评分侧重调整",
+      "pending_review_items": [
+        "问题串4步是否覆盖认知梯度",
+        "rubric权重是否合理",
+        "证据类型是否完整"
+      ],
+      "resource_candidates_used": [
+        "优秀课例《色彩的感觉》",
+        "美术评价量规维度：色彩、创意、过程性评价"
+      ],
+      "archive_candidates": []
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false
+    }
+  },
+  "secret_scan_hits": []
+}

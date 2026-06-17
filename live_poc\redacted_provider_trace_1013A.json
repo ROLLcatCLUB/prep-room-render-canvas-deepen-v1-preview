@@ -1,0 +1,56 @@
+[
+  {
+    "case_id": "test_1",
+    "provider_called": true,
+    "model_called": true,
+    "success": false,
+    "parser_mode": "json_parse_failed",
+    "extraction_required": true,
+    "latency_ms": 46213,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": true
+    },
+    "raw_response_stored": false,
+    "secret_scan_hits": []
+  },
+  {
+    "case_id": "test_2",
+    "provider_called": true,
+    "model_called": true,
+    "success": true,
+    "parser_mode": "strict_json",
+    "extraction_required": false,
+    "latency_ms": 39742,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": true
+    },
+    "raw_response_stored": false,
+    "secret_scan_hits": []
+  },
+  {
+    "case_id": "test_3",
+    "provider_called": true,
+    "model_called": true,
+    "success": true,
+    "parser_mode": "strict_json",
+    "extraction_required": false,
+    "latency_ms": 51686,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": true
+    },
+    "raw_response_stored": false,
+    "secret_scan_hits": []
+  }
+]

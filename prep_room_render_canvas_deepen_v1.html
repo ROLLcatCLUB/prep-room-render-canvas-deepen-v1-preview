@@ -1055,7 +1055,7 @@
       padding-top: 10px;
       border-top: 1px solid rgba(47, 118, 104, 0.12);
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 7px;
     }
 
@@ -1292,6 +1292,369 @@
       font-size: 13px;
     }
 
+    .nb-main-canvas {
+      display: grid;
+      gap: 12px;
+    }
+
+    .nb-mode-strip,
+    .nb-quality-strip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .nb-mode-pill,
+    .nb-quality-pill {
+      min-height: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 820;
+      white-space: nowrap;
+    }
+
+    .nb-mode-pill {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .nb-mode-pill.active,
+    .nb-quality-pill.ready {
+      border-color: #b9d9cf;
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .nb-quality-pill.pending {
+      border-color: #efc49c;
+      background: var(--amber-soft);
+      color: var(--amber);
+    }
+
+    .nb-field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .nb-field-block {
+      min-height: 156px;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      display: grid;
+      gap: 10px;
+      align-content: start;
+      cursor: pointer;
+    }
+
+    .nb-field-block.candidate {
+      border-color: #efc49c;
+      background: linear-gradient(135deg, rgba(255, 248, 237, 0.98), rgba(255, 255, 255, 0.9));
+    }
+
+    .nb-field-block.confirmed {
+      border-color: #b9d9cf;
+      background: linear-gradient(135deg, rgba(237, 248, 245, 0.98), rgba(255, 255, 255, 0.9));
+    }
+
+    .nb-field-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 930;
+    }
+
+    .nb-field-body {
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 13px;
+    }
+
+    .nb-source-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nb-source-chip {
+      min-height: 24px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.76);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .nb-candidate-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .nb-candidate-item {
+      padding: 9px 10px;
+      border-radius: 8px;
+      border: 1px solid #efc49c;
+      background: var(--amber-soft);
+      color: #5f4620;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .nb-state-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 10px 0 4px;
+      border-bottom: 1px dashed rgba(111, 128, 112, 0.22);
+    }
+
+    .nb-mode-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .nb-mode-btn {
+      min-height: 30px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 860;
+      cursor: pointer;
+    }
+
+    .nb-mode-btn.active {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .nb-doc {
+      display: grid;
+      gap: 12px;
+    }
+
+    .nb-doc-section {
+      padding: 14px 0 12px;
+      border-bottom: 1px solid rgba(111, 128, 112, 0.16);
+      scroll-margin-top: 90px;
+    }
+
+    .nb-doc-section.edit-focus {
+      margin-left: -12px;
+      margin-right: -12px;
+      padding: 14px 12px 12px;
+      border: 1px solid #efc49c;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255, 248, 237, 0.96), rgba(255, 255, 251, 0.94));
+    }
+
+    .nb-doc-section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .nb-doc-title {
+      font-size: 17px;
+      font-weight: 940;
+      color: var(--ink);
+    }
+
+    .nb-doc-body {
+      display: grid;
+      gap: 8px;
+      color: #2f3936;
+      line-height: 1.72;
+      font-size: 14px;
+    }
+
+    .nb-doc-body p {
+      margin: 0;
+    }
+
+    .nb-section-tags,
+    .nb-step-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 9px;
+    }
+
+    .nb-section-tag {
+      min-height: 23px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.76);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .nb-section-candidate,
+    .nb-step-candidate {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border: 1px solid #efc49c;
+      border-radius: 8px;
+      background: var(--amber-soft);
+      color: #5f4620;
+      line-height: 1.55;
+      font-size: 13px;
+    }
+
+    .nb-process-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .nb-process-step {
+      padding: 12px;
+      border: 1px solid rgba(197, 207, 194, 0.72);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .nb-process-step.edit-focus {
+      border-color: #efc49c;
+      background: linear-gradient(135deg, rgba(255, 248, 237, 0.98), rgba(255, 255, 251, 0.92));
+      box-shadow: inset 4px 0 0 var(--amber);
+    }
+
+    .nb-step-main {
+      display: grid;
+      grid-template-columns: minmax(92px, 0.22fr) minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .nb-step-index {
+      display: grid;
+      gap: 3px;
+      color: var(--green);
+      font-weight: 930;
+    }
+
+    .nb-step-index span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 780;
+    }
+
+    .nb-step-summary {
+      color: #2f3936;
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .nb-intent-panel {
+      margin-top: 10px;
+      padding: 12px;
+      border: 1px dashed #c9d6d1;
+      border-radius: 8px;
+      background: rgba(248, 251, 249, 0.86);
+    }
+
+    .nb-intent-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .nb-intent-item {
+      min-height: 78px;
+      padding: 10px;
+      border: 1px solid rgba(197, 207, 194, 0.72);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.84);
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 13px;
+    }
+
+    .nb-intent-item strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .nb-edit-panel {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid #efc49c;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255, 248, 237, 0.96), rgba(255, 255, 251, 0.92));
+    }
+
+    .nb-edit-panel-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 940;
+    }
+
+    .nb-edit-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nb-soft-button {
+      min-height: 30px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--green);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .nb-soft-button.primary {
+      border-color: var(--green);
+      background: var(--green);
+      color: #fff;
+    }
+
+    .nb-right-note {
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 13px;
+    }
+
     .nb-link-row {
       margin-top: 10px;
       display: flex;
@@ -1498,6 +1861,7 @@
 
     .nb-status-card,
     .nb-work-card,
+    .nb-field-block,
     .nb-flow-step,
     .nb-drawer-card {
       border-radius: 8px;
@@ -3126,8 +3490,19 @@
 
       .nb-status-grid,
       .nb-work-sections,
+      .nb-field-grid,
+      .nb-intent-grid,
       .nb-flow {
         grid-template-columns: 1fr;
+      }
+
+      .nb-step-main {
+        grid-template-columns: 1fr;
+      }
+
+      .nb-doc-section-head,
+      .nb-state-bar {
+        align-items: flex-start;
       }
 
       .inspector {
@@ -3243,7 +3618,7 @@
   </section>
 
   <footer class="status-strip" aria-label="预览状态栏">
-    <div class="status-cell"><span class="state-tag">预览层</span><span class="status-text">不接 API / 不接模型 / 不写数据库</span></div>
+    <div class="status-cell"><span class="state-tag">预览层</span><span class="status-text">候选预览 / 教师确认前不生效</span></div>
     <div class="status-cell status-main" id="statusMain"></div>
     <div class="status-cell"><span class="quiet-tag" id="statusCount">0 项</span></div>
   </footer>
@@ -3276,9 +3651,19 @@
         provider_called: false,
         model_called: false,
         api_connected: false,
+        feishu_schedule_read_allowed: true,
+        feishu_schedule_write_performed: false,
         database_write_performed: false,
         formal_apply_performed: false,
         teacher_review_required: true
+      },
+      schedule_adapter: {
+        stage_id: "1013A_FEISHU_FORMAL_SCHEDULE_READONLY_ADAPTER",
+        endpoint: "http://127.0.0.1:8082/api/xiaobei/prep-room/schedule",
+        source_kind: "feishu_full_dump_snapshot",
+        live_read_allowed: true,
+        write_allowed: false,
+        status: "课表快照已绑定，正式凭据就绪后自动读取只读接口"
       },
       flow_steps: [
         { id: "prep_room", label: "备课室", current: true },
@@ -3304,9 +3689,9 @@
           "协同对象：小美补学习单视觉，小评预置评价维度，小管等待归档字段。"
         ],
         notes: {
-          weekCalendar: "周课表依据《2025学年第二学期三年级美术教学工作计划》投影到周四、周五课时；班级落点仍为静态预览。",
-          prepNotebook: "备课本已按教学工作计划建立 7 个教材单元、创艺节和机动复习目录。当前先以第四单元《青绿中国色》作为备课样例。",
-          classProgressSchedule: "班级排课使用真实课题和周次主线，但班级差异仍是预览推演；接入真实课表后再正式计算顺延。",
+          weekCalendar: "周课表已绑定正式课表只读来源；当前展示徐涛老师三年级美术正式课位，后续凭据就绪后可自动刷新。",
+          prepNotebook: "备课本当前聚焦真实课题 1-2《色彩的感觉》：默认读课，编辑时再集中处理段落候选、资料引用和待沉淀内容。",
+          classProgressSchedule: "班级排课使用真实课题和正式课位作为落点依据，但顺延和调课仍等待教师确认。",
           flexibleSemesterMap: "学期规划已采用 16 周教学进度：教材学习 19 课时、创艺节 4 课时、机动 6 课时。"
         }
       },
@@ -3317,10 +3702,10 @@
           title: "本周课表",
           kicker: "Week Calendar Board",
           summary: "展示本周每天每节课要上的班级、课题、课前包准备状态，以及活动、调课、节假日和调休占用。用于课前执行，不替代班级进度与排课。",
-          term: "2025学年第二学期",
+          term: "2025-2026学年第二学期",
           active_grade: "三年级",
-          week_label: "第10周",
-          date_range: "5.05 - 5.11",
+          week_label: "正式课表周",
+          date_range: "课表只读",
           grade_options: ["三年级", "四年级", "五年级", "六年级"],
           week_modes: ["上一周", "本周", "下一周"],
           days: [
@@ -3334,29 +3719,35 @@
           ],
           periods: ["第1节", "第2节", "第3节", "第4节", "第5节", "第6节", "第7节", "第8节"],
           slots: {
-            "p2-thu": [{ id: "wc-thu-p2", type: "warning", classLabel: "三1班", code: "4-1", title: "矿物颜料与青绿山水", packageStatus: "缺：学习单确认" }],
-            "p2-fri": [{ id: "wc-fri-p2", type: "future", classLabel: "三2班", code: "4-2", title: "诗画合一", packageStatus: "待上课" }],
-            "p3-thu": [{ id: "wc-thu-p3", type: "lesson", classLabel: "三3班", code: "4-1", title: "矿物颜料与青绿山水", packageStatus: "课前包待确认" }],
-            "p3-sat": [{ id: "wc-sat-p3", type: "makeup", classLabel: "三4班", code: "4-1", title: "矿物颜料与青绿山水", packageStatus: "调休补课预演" }],
-            "p4-fri": [{ id: "wc-fri-p4", type: "warning", classLabel: "三5班", code: "4-2", title: "诗画合一", packageStatus: "缺：资源图片" }],
-            "p5-thu": [{ id: "wc-thu-p5", type: "reschedule", classLabel: "三2班", code: "4-1", title: "调课至周五", packageStatus: "五一收尾影响" }],
-            "p6-sun": [{ id: "wc-sun-p6", type: "future", classLabel: "三1班", code: "4-2", title: "诗画合一", packageStatus: "调休预留" }]
+            "p6-mon": [{ id: "wc-feishu-mon-p6-g35", type: "lesson", classLabel: "三5班", code: "1-2", title: "色彩的感觉", packageStatus: "正式课表 · 待备课" }],
+            "p7-mon": [{ id: "wc-feishu-mon-p7-g31", type: "lesson", classLabel: "三1班", code: "1-2", title: "色彩的感觉", packageStatus: "正式课表 · 待备课" }],
+            "p6-tue": [{ id: "wc-feishu-tue-p6-g33", type: "lesson", classLabel: "三3班", code: "1-2", title: "色彩的感觉", packageStatus: "正式课表 · 待备课" }],
+            "p3-wed": [{ id: "wc-feishu-wed-p3-g34", type: "lesson", classLabel: "三4班", code: "1-2", title: "色彩的感觉", packageStatus: "正式课表 · 待备课" }],
+            "p7-wed": [{ id: "wc-feishu-wed-p7-g33", type: "lesson", classLabel: "三3班", code: "1-2", title: "色彩的感觉", packageStatus: "正式课表 · 待备课" }],
+            "p7-thu": [{ id: "wc-feishu-thu-p7-g32", type: "lesson", classLabel: "三2班", code: "1-2", title: "色彩的感觉", packageStatus: "正式课表 · 待备课" }],
+            "p5-fri": [{ id: "wc-feishu-fri-p5-g32", type: "lesson", classLabel: "三2班", code: "1-2", title: "色彩的感觉", packageStatus: "正式课表 · 待备课" }],
+            "p7-fri": [{ id: "wc-feishu-fri-p7-g31", type: "lesson", classLabel: "三1班", code: "1-2", title: "色彩的感觉", packageStatus: "正式课表 · 待备课" }]
           },
           prep_items: [
-            { title: "周四第2节 三1班《矿物颜料与青绿山水》", status: "学习单候选待确认" },
-            { title: "周四第3节 三3班《矿物颜料与青绿山水》", status: "课前包待确认" },
-            { title: "周五第4节 三5班《诗画合一》", status: "资源图片待补" }
+            { title: "周一第6节 三5班《色彩的感觉》", status: "进入备课本候选" },
+            { title: "周一第7节 三1班《色彩的感觉》", status: "进入备课本候选" },
+            { title: "周二第6节 三3班《色彩的感觉》", status: "进入备课本候选" },
+            { title: "周三第3节 三4班《色彩的感觉》", status: "进入备课本候选" },
+            { title: "周三第7节 三3班《色彩的感觉》", status: "进入备课本候选" },
+            { title: "周四第7节 三2班《色彩的感觉》", status: "进入备课本候选" },
+            { title: "周五第5节 三2班《色彩的感觉》", status: "进入备课本候选" },
+            { title: "周五第7节 三1班《色彩的感觉》", status: "进入备课本候选" }
           ],
           alerts: [
-            "第10周来自教学工作计划：第四单元《青绿中国色》进入课堂实施。",
-            "当前课题先按 2 课时拆为《矿物颜料与青绿山水》《诗画合一》，后续需教师确认正式课时标题。",
-            "周六、周日保留调休槽位，只做预演，不自动写入正式排课。"
+            "已接入徐涛老师三年级美术 8 条正式课位快照。",
+            "课表只作为备课上下文，不写回来源系统。",
+            "本轮聚焦 1-2《色彩的感觉》主备课画布，课题仍需教师确认。"
           ],
           package_summary: [
-            ["计划来源", "Word"],
-            ["本周课时", "2节"],
-            ["待确认", "3项"],
-            ["调休预演", "2槽"]
+            ["课表来源", "正式"],
+            ["课位", "8节"],
+            ["待备课", "8项"],
+            ["写回", "0次"]
           ]
         },
         {
@@ -3365,15 +3756,22 @@
           title: "2025学年第二学期 · 三年级美术备课本",
           kicker: "Prep Notebook",
           summary: "本学期正在生长的过程性工作本。它承接学期、单元、课时、班级课时、课前包、课堂记录、作品证据和课后反思。",
-          active_node: "nb-lesson-4-1",
+          active_node: "nb-lesson-1-2",
+          prep_notebook_mode: "view",
+          active_edit_target: {
+            section_id: "teaching_process",
+            step_id: "explore",
+            label: "教学过程 · 探究环节"
+          },
+          expanded_intent_steps: [],
           cover: {
             title: "三年级美术 · 2025学年第二学期",
-            subtitle: "来源：2025学年第二学期三年级美术教学工作计划",
+            subtitle: "来源：正式课表 + 2025学年第二学期三年级美术教学工作计划",
             metrics: [
-              ["教材单元", "7个"],
-              ["教材课时", "19节"],
-              ["创艺节", "4节"],
-              ["机动复习", "6节"]
+              ["正式课位", "8节"],
+              ["当前课例", "1-2"],
+              ["待确认", "4项"],
+              ["写回", "0次"]
             ]
           },
           tree: [
@@ -3393,8 +3791,8 @@
               tone: "green",
               items: [
                 { id: "nb-lesson-1-1", code: "1-1", title: "渐变的魅力", status: "done" },
-                { id: "nb-lesson-1-2", code: "1-2", title: "颜料的渐变", status: "done" },
-                { id: "nb-lesson-1-3", code: "1-3", title: "渐变的节奏", status: "done" }
+                { id: "nb-lesson-1-2", code: "1-2", title: "色彩的感觉", status: "warn" },
+                { id: "nb-lesson-1-3", code: "1-3", title: "渐变的节奏", status: "draft" }
               ]
             },
             {
@@ -3466,75 +3864,248 @@
             }
           ],
           current_lesson: {
-            code: "4-1",
-            title: "矿物颜料与青绿山水",
-            unit: "第四单元 青绿中国色",
-            status: "课时拆解待教师确认",
-            brief: "本节课从教学工作计划的第四单元拆出，当前用于验证备课本如何承接真实学期规划、资料候选、课前包确认和课后沉淀。",
+            code: "1-2",
+            title: "色彩的感觉",
+            unit: "第一单元 多变的色彩",
+            status: "可上课 · 2项待确认",
+            brief: "本课使用真实课题 1-2《色彩的感觉》。当前学生档案和课堂反馈尚未接入，学情先按三年级常见认知做预设，后续再由真实记录校准。",
             status_cards: [
-              ["课时设计", "待确认", "draft"],
-              ["学习单", "已有候选", "warn"],
-              ["评价量规", "未生成", "missing"],
-              ["资源参考", "待选择", "warn"],
-              ["课堂记录", "暂无", "draft"]
+              ["正式课位", "8节", "done"],
+              ["查看状态", "可阅读", "done"],
+              ["编辑状态", "待开启", "warn"],
+              ["本课材料", "可调用", "done"],
+              ["分层任务", "待确认", "missing"]
             ],
-            work_cards: [
+            sections: [
               {
-                title: "课时设计",
-                state: "待确认",
-                tone: "warn",
-                note: "依据教学工作计划中的“矿物颜料、青绿山水、诗画合一”先拆成两课时，当前需教师确认 4-1 的课堂目标与活动顺序。"
+                id: "basis",
+                title: "本课依据",
+                status: "已确认",
+                sources: ["教材", "课标", "正式课表"],
+                body: [
+                  "本课为第一单元《多变的色彩》中的 1-2《色彩的感觉》，不再使用临时拟题。",
+                  "本课重点不是让学生背冷暖色概念，而是让学生把生活经验、作品观察和自己的色彩表达联系起来。"
+                ]
               },
               {
-                title: "本课材料夹",
-                state: "缺学习单确认",
-                tone: "missing",
-                note: "已有青绿山水、矿物颜料和诗画合一资料候选，学习单尚未确认，评价量规待小评生成。"
+                id: "analysis",
+                title: "学情分析",
+                status: "待真实记录校准",
+                sources: ["教师经验", "课堂预设"],
+                body: [
+                  "三年级学生通常能说出自己喜欢的颜色，也能凭直觉说“明亮、暗、热闹、安静”等感受，但容易停留在“好看/不好看”的表层判断。",
+                  "他们已经有生活色彩经验，但还需要借助图片、色卡、生活物品和作品范例，把颜色与情绪、场景、表达意图建立联系。",
+                  "本版学情是预设，不冒充真实学生画像；等资料库、学生档案和课堂反馈接入后，再用真实班级差异修正。"
+                ]
               },
               {
-                title: "班级课时",
-                state: "关联三1/三2/三3班",
-                tone: "normal",
-                note: "班级落点来自静态排课预演；接入真实周四、周五课表后再计算各班顺延。"
+                id: "goals",
+                title: "教学目标",
+                status: "可上课",
+                sources: ["课标", "本课学情"],
+                body: [
+                  "观察生活图片和美术作品，能说出不同色彩带来的冷暖、强弱、安静或热烈等感受。",
+                  "能用一组色彩完成一个小练习，表达自己的心情、场景或故事，不只是在纸上涂满颜色。",
+                  "能用一句话解释自己的色彩选择，并听懂同伴表达中的色彩感受。"
+                ]
               },
               {
-                title: "课后沉淀",
-                state: "待上课后写入",
-                tone: "normal",
-                note: "课堂轻记录、学生作品证据、评价摘要和课后反思暂不写入档案室。"
+                id: "keypoints",
+                title: "教学重难点",
+                status: "待确认",
+                sources: ["教材", "教师判断"],
+                body: [
+                  "重点：能感受色彩与情绪、场景之间的联系，并用语言表达自己的色彩体验。",
+                  "难点：从“颜色好看”推进到“为什么这种颜色让我有这样的感觉”，并把这种感受用在自己的小练习中。"
+                ]
+              },
+              {
+                id: "preparation",
+                title: "教学准备",
+                status: "可调用",
+                sources: ["资料室", "教师准备"],
+                body: [
+                  "教师准备：冷暖色生活图片、作品图、色卡或生活物品、情绪词卡、示范小稿、课堂计时和展示页面。",
+                  "学生准备：绘画工具、色彩体验记录单。教材可在感知环节打开，不把看教材变成形式。"
+                ]
+              },
+              {
+                id: "assessment",
+                title: "学习单与评价",
+                status: "待确认",
+                sources: ["学习单", "评价证据"],
+                body: [
+                  "学习单不做复杂表格，只保留三格：我看到的颜色、我感受到的情绪、我想表达的场景。",
+                  "作业分层：基础层选择 2-3 种颜色表达一种感受；进阶层用冷暖或明暗对比表达一个场景；挑战层为作品加一句说明，解释色彩选择。",
+                  "评价看三件事：能否说出色彩感受，能否把感受用于画面，能否用一句话解释自己的选择。"
+                ]
+              },
+              {
+                id: "reflection",
+                title: "课后记录与沉淀",
+                status: "待上课后补充",
+                sources: ["档案室"],
+                body: [
+                  "课堂后记录学生是否能从“好看”转向“颜色带来的感受”，保留 2-3 件有代表性的作品和学生说明。",
+                  "暂不进入正式沉淀；等教师确认后，再把作品证据、课堂观察和下次调整写入档案室。"
+                ]
               }
             ],
-            flow: ["资料室选材", "备课本加工", "课前包确认", "课堂执行记录", "档案室沉淀"]
+            process_steps: [
+              {
+                id: "intro",
+                name: "导入",
+                time: "3分钟",
+                summary: "播放两组色彩气氛差异明显的生活图片，让学生先说“看到这些颜色有什么感觉”。不急着讲概念，先把生活经验带进课堂。",
+                tags: ["生活经验", "激活感受"],
+                intent: {
+                  role: "唤起经验，判断学生能否说出基本感受。",
+                  design: "先让学生从熟悉场景进入，避免一开始就把课变成概念讲解。",
+                  transition: "从生活感受进入作品观察，为后面的色彩比较铺垫。",
+                  student: "多数学生能说出喜欢或不喜欢，但表达可能很笼统。",
+                  teacher: "追问“你为什么会有这种感觉”，把回答从好看引向原因。",
+                  activity: "学生观察图片，快速说出一个颜色和一个感受词。",
+                  screen: "大屏展示两组图片和三个提示词：温暖、安静、热烈。",
+                  material: "暂不发学习单，先让学生口头表达。",
+                  evidence: "学生能否说出至少一个颜色带来的感受。",
+                  risk: "如果学生只说好看，教师给出情绪词卡作支架。"
+                }
+              },
+              {
+                id: "sense",
+                name: "感知",
+                time: "7分钟",
+                summary: "出示生活图片和作品范例，引导学生比较不同色彩给人的冷暖、明暗和情绪差异，建立“色彩会影响感受”的初步联系。",
+                tags: ["作品观察", "建立联系"],
+                intent: {
+                  role: "建立色彩与感受之间的联系。",
+                  design: "用作品和生活图并置，帮助学生看见色彩不是孤立知识，而是表达感受的方式。",
+                  transition: "承接导入中的直觉感受，推进到有依据的比较。",
+                  student: "学生可能能分辨颜色差异，但还需要学习怎样说理由。",
+                  teacher: "示范一句表达：“这组橙黄色让我觉得温暖，因为像阳光。”",
+                  activity: "学生两两比较图片，说出颜色和感受的对应关系。",
+                  screen: "大屏显示图片对比、关键词和一句表达样例。",
+                  material: "可打开教材范图，不要求学生长时间阅读文字。",
+                  evidence: "学生能否用“颜色 + 感受 + 原因”说一句话。",
+                  risk: "如果比较太抽象，教师减少图片数量，只保留一冷一暖两组。"
+                }
+              },
+              {
+                id: "explore",
+                name: "探究",
+                time: "10分钟",
+                summary: "学生分组观察色卡和生活物品，尝试把颜色分成“温暖、清凉、安静、热烈”等感受类型，并说出理由。",
+                tags: ["分组判断", "说出理由"],
+                intent: {
+                  role: "让学生把感受判断从看图迁移到自己分类和说明理由。",
+                  design: "用色卡和实物降低理解门槛，让学生先动手分类，再用语言解释。",
+                  transition: "承接感知环节的观察比较，推进到学生主动判断。",
+                  student: "学生可能会按颜色名称分类，而不是按感受分类，需要教师追问。",
+                  teacher: "巡视时追问“你把它放在这里，是因为它像什么，还是让你想到什么？”",
+                  activity: "小组把色卡放到感受词旁边，并选择一张说理由。",
+                  screen: "大屏显示分组任务、感受词和倒计时。",
+                  material: "发放色卡和一张简短记录单。",
+                  evidence: "学生能否说明分类理由，而不是只报颜色名称。",
+                  risk: "如果分类混乱，教师先给一组示范，再让学生继续选择。"
+                },
+                candidate: "可加入“冷暖色物品分组”活动，让学生先分类再说理由；学习单增加“我的色彩感受”记录格。"
+              },
+              {
+                id: "make",
+                name: "表现",
+                time: "15分钟",
+                summary: "学生围绕“我心中的一种感受”进行色彩小练习，自选基础、进阶或挑战任务，用颜色表达一种心情、天气、场景或小故事。",
+                tags: ["分层任务", "创作表达"],
+                intent: {
+                  role: "把理解转化为个人表达，让不同层次学生都有够得着的任务。",
+                  design: "用分层选择避免作业太无聊或太难，给学生一点挑战但不超出认知。",
+                  transition: "承接探究环节的分类理由，进入个人色彩表达。",
+                  student: "基础层学生需要明确起步方式，能力强的学生需要更开放的表达空间。",
+                  teacher: "先说明三层任务，再巡视提醒学生让颜色服务于感受。",
+                  activity: "学生选择一层任务完成小练习，并准备一句说明。",
+                  screen: "大屏显示三层任务、时间提醒和示范小稿。",
+                  material: "使用绘画纸、色彩工具和学习单说明格。",
+                  evidence: "作品是否能看出情绪或场景，学生能否解释选择。",
+                  risk: "如果学生只追求涂满，教师提醒先确定一种感受再选色。"
+                }
+              },
+              {
+                id: "share",
+                name: "交流展示",
+                time: "5分钟",
+                summary: "选择几件作品展示，学生用一句话说明自己的色彩选择，同伴说出自己读到的感受，教师归纳色彩和情绪表达的关系。",
+                tags: ["表达说明", "同伴倾听"],
+                intent: {
+                  role: "把个人作品转化为可表达、可倾听、可评价的学习证据。",
+                  design: "通过说和听，帮助学生确认色彩表达是否被同伴理解。",
+                  transition: "承接表现环节的作品产出，回到本课目标的达成判断。",
+                  student: "有些学生能画但说不清，需要一句话模板支撑。",
+                  teacher: "引导学生用“我用了____色，因为我想表达____”说明。",
+                  activity: "学生展示作品，同伴说感受到的情绪或场景。",
+                  screen: "大屏展示作品照片和一句话说明模板。",
+                  material: "学习单最后一格记录作品说明。",
+                  evidence: "学生作品、说明句和同伴反馈构成本课主要证据。",
+                  risk: "如果时间不够，保留两件典型作品，课后再补记录。"
+                }
+              }
+            ],
+            edit_context: {
+              title: "教学过程 · 探究环节",
+              judgment: "学生可能还停在“这个颜色好看”的描述，需要先通过色卡和生活物品分类，把感受变得看得见、说得出。",
+              gap: "探究环节需要更直观；学习单需要有一个记录格承接分类理由。",
+              related: ["色彩情感卡片", "冷暖色图片对比", "优秀课例《色彩的感觉》"],
+              impacts: ["学习单增加“我看到的颜色 / 我感受到的情绪”记录格", "大屏准备冷暖色对比图和感受词卡", "评价证据记录学生能否说出分类理由"],
+              candidate: "把探究环节改为“色卡和生活物品分组”：学生先按感受分类，再选择一张色卡说理由。",
+              actions: ["并入本段", "替换本段", "再简化", "再具体一点", "补学习单", "补大屏呈现", "先放着"]
+            },
+            flow: ["正式课位", "备课本加工", "教师确认", "课堂执行记录", "档案室沉淀"]
           },
-          drawers: [
-            {
-              title: "小备建议",
-              tag: "主助理",
-              items: [
-                "先确认学习单候选，再让小评生成评价量规。",
-                "本节课应承接教学工作计划中的第四单元《青绿中国色》，不再使用临时拟题。",
-                "课后记录完成前，仍保持在备课本过程态。"
-              ]
-            },
-            {
-              title: "可调用资料",
-              tag: "资料室",
-              items: [
-                "2025学年第二学期三年级美术教学工作计划",
-                "第四单元《青绿中国色》内容库导出",
-                "矿物颜料、青绿山水、诗画合一资料候选"
-              ]
-            },
-            {
-              title: "待沉淀内容",
-              tag: "档案室",
-              items: [
-                "最终课时设计",
-                "课堂轻记录与学生表现摘要",
-                "本课作品证据和课后反思"
-              ]
-            }
-          ]
+          right_panels: {
+            view: [
+              {
+                title: "本课材料",
+                tag: "资料室",
+                items: ["教材原文片段", "冷暖色生活图片", "色彩情感卡片", "优秀课例《色彩的感觉》"]
+              },
+              {
+                title: "可调用资料",
+                tag: "按需打开",
+                items: ["第一单元《多变的色彩》课标摘要", "课堂大屏图片组", "情绪词卡", "三层任务示例"]
+              },
+              {
+                title: "待确认",
+                tag: "2项",
+                items: ["分层作业是否按基础/进阶/挑战三层呈现", "探究环节是否发学习单记录分类理由"]
+              },
+              {
+                title: "待沉淀",
+                tag: "档案室",
+                items: ["学生作品照片", "学生一句话说明", "教师课后轻记录"]
+              }
+            ],
+            edit: [
+              {
+                title: "当前编辑",
+                tag: "探究环节",
+                items: ["教学过程 · 探究环节", "目标：让学生把颜色感受说清楚，而不是只说好看。"]
+              },
+              {
+                title: "小备判断",
+                tag: "候选",
+                items: ["探究环节需要更直观。", "色卡分组能把抽象感受变成可操作活动。", "这个改动会带动学习单和大屏一起调整。"]
+              },
+              {
+                title: "影响范围",
+                tag: "3处",
+                items: ["学习单增加感受记录格", "大屏增加冷暖色对比图", "评价时记录学生说明理由"]
+              },
+              {
+                title: "候选确认",
+                tag: "待处理",
+                items: ["并入探究环节", "补一页大屏提示", "学习单增加一格，不做复杂表格"]
+              }
+            ]
+          }
         },
         {
           id: "classProgressSchedule",
@@ -3569,7 +4140,7 @@
               title: "单元1 多变的色彩",
               hours: "共3课时",
               tone: "green",
-              lessons: [["1-1", "渐变的魅力"], ["1-2", "颜料的渐变"], ["1-3", "渐变的节奏"]]
+              lessons: [["1-1", "渐变的魅力"], ["1-2", "色彩的感觉"], ["1-3", "渐变的节奏"]]
             },
             {
               id: "unit-shape",
@@ -3684,7 +4255,7 @@
                   title: "第一单元 多变的色彩",
                   state: "3课时",
                   weeks: "第2-3周",
-                  detail: "渐变的魅力、颜料的渐变、渐变的节奏。",
+                  detail: "渐变的魅力、色彩的感觉、渐变的节奏。",
                   actions: ["查看课时", "进入备课本"]
                 },
                 {
@@ -3813,7 +4384,7 @@
               tone: "green",
               lessons: [
                 ["1-1", "渐变的魅力"],
-                ["1-2", "颜料的渐变"],
+                ["1-2", "色彩的感觉"],
                 ["1-3", "渐变的节奏"]
               ]
             },
@@ -3894,7 +4465,7 @@
           ],
           plan_weeks: [
             { id: "plan-week-1", week: "第1周", date: "03.05", lessons: [["start-1", "开学第一课：美术世界，我来了！", "buffer"]] },
-            { id: "plan-week-2", week: "第2周", date: "03.10 - 03.14", lessons: [["1-1", "渐变的魅力", "green"], ["1-2", "颜料的渐变", "green"]] },
+            { id: "plan-week-2", week: "第2周", date: "03.10 - 03.14", lessons: [["1-1", "渐变的魅力", "green"], ["1-2", "色彩的感觉", "green"]] },
             { id: "plan-week-3", week: "第3周", date: "03.17 - 03.21", lessons: [["1-3", "渐变的节奏", "green"], ["2-1", "奇异的海洋生物", "blue"]] },
             { id: "plan-week-4", week: "第4周", date: "03.24 - 03.28", lessons: [["2-2", "跳动的蓝色心脏", "blue"], ["2-3", "守护生命的摇篮", "blue"]] },
             { id: "plan-week-5", week: "第5周", date: "03.31 - 04.04", lessons: [["2-2", "辽阔的海洋延展", "blue"], ["event-qingming", "清明假期 4/4-4/6", "buffer"]] },
@@ -4096,6 +4667,34 @@
       return model.views.find((view) => view.id === model.active_view) || model.views[0];
     }
 
+    function applyInitialViewFromHash() {
+      const viewId = decodeURIComponent((window.location.hash || "").replace(/^#/, ""));
+      if (!viewId) return;
+      const prepView = model.views.find((view) => view.id === "prepNotebook");
+      if (viewId === "prepNotebookEdit" && prepView) {
+        model.active_view = "prepNotebook";
+        prepView.prep_notebook_mode = "edit";
+        prepView.expanded_intent_steps = ["explore"];
+        prepView.active_edit_target = { section_id: "teaching_process", step_id: "explore", label: "教学过程 · 探究环节" };
+      } else if (viewId === "prepNotebookIntent" && prepView) {
+        model.active_view = "prepNotebook";
+        prepView.prep_notebook_mode = "view";
+        prepView.expanded_intent_steps = ["explore"];
+        prepView.active_edit_target = { section_id: "teaching_process", step_id: "explore", label: "教学过程 · 探究环节" };
+        model.initial_scroll_target = "nb-step-explore";
+      } else {
+        if (!model.views.some((view) => view.id === viewId)) return;
+        model.active_view = viewId;
+        if (viewId === "prepNotebook" && prepView) {
+          prepView.prep_notebook_mode = "view";
+          prepView.expanded_intent_steps = [];
+        }
+      }
+      const view = getActiveView();
+      const firstWcNode = Object.values(view.slots || {}).flat()[0]?.id || "";
+      model.selected_node_id = view.active_node || firstWcNode || model.selected_node_id;
+    }
+
     function getPlanLessonDetail(nodeId) {
       const planView = model.views.find((view) => view.id === "flexibleSemesterMap");
       if (!planView || !String(nodeId).startsWith("plan-")) return null;
@@ -4131,6 +4730,22 @@
             ["正式边界", "仅生成预演，教师确认前不应用"]
           ],
           actions: ["打开工作页", "补齐课前包", "查看资料", "写课后记录"]
+        };
+      }
+      const prepFieldElement = Array.from(document.querySelectorAll("[data-prep-field]")).find((item) => item.dataset.node === nodeId);
+      if (prepFieldElement) {
+        const detail = JSON.parse(prepFieldElement.dataset.prepField);
+        return {
+          type: detail.type,
+          title: detail.title,
+          fields: [
+            ["当前状态", detail.state],
+            ["字段内容", detail.body],
+            ["依据", (detail.sources || []).join("、")],
+            ["候选", (detail.candidates || []).join("；") || "暂无"],
+            ["正式边界", "教师确认前不应用"]
+          ],
+          actions: ["确认候选", "继续打磨", "引用资料", "标记待沉淀"]
         };
       }
       const wcElement = Array.from(document.querySelectorAll("[data-wc-detail]")).find((item) => item.dataset.node === nodeId);
@@ -4319,14 +4934,170 @@
       `).join("");
     }
 
+    function prepNotebookMode(view) {
+      return view.prep_notebook_mode === "edit" ? "edit" : "view";
+    }
+
+    function prepActiveTarget(view) {
+      const target = view.active_edit_target || {};
+      return {
+        sectionId: target.section_id || "",
+        stepId: target.step_id || "",
+        label: target.label || "当前段落"
+      };
+    }
+
+    function processStepById(view, stepId) {
+      return (view.current_lesson?.process_steps || []).find((step) => step.id === stepId);
+    }
+
+    function renderSectionTags(items = []) {
+      return items.length ? `<div class="nb-section-tags">${items.map((item) => `<span class="nb-section-tag">${html(item)}</span>`).join("")}</div>` : "";
+    }
+
+    function renderLessonSection(view, section, number) {
+      const mode = prepNotebookMode(view);
+      const target = prepActiveTarget(view);
+      const focused = mode === "edit" && target.sectionId === section.id;
+      return `
+        <section class="nb-doc-section ${focused ? "edit-focus" : ""}" id="nb-section-${html(section.id)}">
+          <div class="nb-doc-section-head">
+            <div class="nb-doc-title">${html(number)}、${html(section.title)}</div>
+            <button class="nb-soft-button" type="button" data-edit-target="section:${html(section.id)}" title="编辑本段">进入编辑</button>
+          </div>
+          <div class="nb-doc-body">
+            ${(section.body || []).map((line) => `<p>${html(line)}</p>`).join("")}
+          </div>
+          ${renderSectionTags([...(section.sources || []), section.status].filter(Boolean))}
+          ${section.candidate ? `<div class="nb-section-candidate">${html(section.candidate)}</div>` : ""}
+          ${focused ? renderEditPanel(view, section.title) : ""}
+        </section>
+      `;
+    }
+
+    function renderIntentPanel(step) {
+      const intent = step.intent || {};
+      const items = [
+        ["环节作用", intent.role],
+        ["设计意图", intent.design],
+        ["承上启下", intent.transition],
+        ["学生当前状态", intent.student],
+        ["教师动作", intent.teacher],
+        ["学生活动", intent.activity],
+        ["大屏状态", intent.screen],
+        ["学习单 / 教材 / 材料", intent.material],
+        ["评价证据", intent.evidence],
+        ["风险与调整", intent.risk]
+      ];
+      return `
+        <div class="nb-intent-panel">
+          <div class="nb-intent-grid">
+            ${items.map(([label, value]) => `
+              <div class="nb-intent-item"><strong>${html(label)}</strong>${html(value || "待补充")}</div>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderProcessStep(view, step, index) {
+      const mode = prepNotebookMode(view);
+      const target = prepActiveTarget(view);
+      const isFocused = mode === "edit" && target.stepId === step.id;
+      const expanded = (view.expanded_intent_steps || []).includes(step.id);
+      return `
+        <article class="nb-process-step ${isFocused ? "edit-focus" : ""}" id="nb-step-${html(step.id)}">
+          <div class="nb-step-main">
+            <div class="nb-step-index">
+              ${index + 1}. ${html(step.name)}
+              <span>${html(step.time)}</span>
+            </div>
+            <div>
+              <div class="nb-step-summary">${html(step.summary)}</div>
+              ${renderSectionTags(step.tags || [])}
+            </div>
+            <div class="nb-edit-tools">
+              <button class="nb-soft-button" type="button" data-intent-step="${html(step.id)}">${expanded ? "收起说明" : "查看设计说明"}</button>
+              <button class="nb-soft-button" type="button" data-edit-target="process:${html(step.id)}">编辑</button>
+            </div>
+          </div>
+          ${expanded || isFocused ? renderIntentPanel(step) : ""}
+          ${step.candidate && isFocused ? `<div class="nb-step-candidate">${html(step.candidate)}</div>` : ""}
+          ${isFocused ? renderEditPanel(view, `${step.name}环节`) : ""}
+        </article>
+      `;
+    }
+
+    function renderEditPanel(view, title) {
+      const edit = view.current_lesson.edit_context || {};
+      return `
+        <div class="nb-edit-panel">
+          <div class="nb-edit-panel-title">
+            <span>小备建议 · ${html(title)}</span>
+            <span class="quiet-tag">待你确认</span>
+          </div>
+          <div class="nb-right-note">${html(edit.judgment || "先把这段改成候选，不直接生效。")}</div>
+          <div class="nb-step-candidate">${html(edit.candidate || "暂无候选。")}</div>
+          <div class="nb-section-tags">
+            ${(edit.impacts || []).map((item) => `<span class="nb-section-tag">${html(item)}</span>`).join("")}
+          </div>
+          <div class="nb-edit-tools">
+            ${(edit.actions || []).map((action, index) => `
+              <button class="nb-soft-button ${index === 0 ? "primary" : ""}" type="button" data-pending="小备已把「${html(action)}」放入待确认队列。">${html(action)}</button>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderProcessSection(view, number) {
+      const lesson = view.current_lesson;
+      return `
+        <section class="nb-doc-section" id="nb-section-teaching-process">
+          <div class="nb-doc-section-head">
+            <div class="nb-doc-title">${html(number)}、教学过程</div>
+            <span class="quiet-tag">每个环节可看设计说明</span>
+          </div>
+          <div class="nb-process-list">
+            ${(lesson.process_steps || []).map((step, index) => renderProcessStep(view, step, index)).join("")}
+          </div>
+        </section>
+      `;
+    }
+
+    function renderPrepNotebookRightPanel(view) {
+      const mode = prepNotebookMode(view);
+      const panels = view.right_panels?.[mode] || [];
+      const title = mode === "edit" ? "编辑辅助" : "阅读辅助";
+      const tag = mode === "edit" ? prepActiveTarget(view).label : "按需打开";
+      return `
+        <aside class="nb-drawer" aria-label="${html(title)}">
+          <div class="nb-panel-head"><span>${html(title)}</span><span class="quiet-tag">${html(tag)}</span></div>
+          ${panels.map((drawer) => `
+            <section class="nb-drawer-card">
+              <div class="nb-drawer-title"><span>${html(drawer.title)}</span><span class="quiet-tag">${html(drawer.tag)}</span></div>
+              <ul class="nb-drawer-list">
+                ${drawer.items.map((item) => `<li>${html(item)}</li>`).join("")}
+              </ul>
+            </section>
+          `).join("")}
+        </aside>
+      `;
+    }
+
     function renderPrepNotebookCanvas(view) {
       const lesson = view.current_lesson;
+      const mode = prepNotebookMode(view);
+      const sections = lesson.sections || [];
+      const beforeProcess = sections.slice(0, 5);
+      const afterProcess = sections.slice(5);
       return `
         <div class="nb-scene">
           <div class="nb-binder" aria-label="备课本活页夹">
             <aside class="nb-panel" aria-label="备课本目录">
               <div class="nb-cover">
                 <div class="nb-cover-title">${html(view.cover.title)}</div>
+                <div class="nb-cover-sub">${html(view.cover.subtitle)}</div>
                 <div class="nb-metrics">
                   ${view.cover.metrics.map(([label, value]) => `
                     <div class="nb-metric ${nbMetricTone(label)}">
@@ -4349,13 +5120,24 @@
                   <div class="nb-title">${html(lesson.code)}《${html(lesson.title)}》</div>
                 </div>
                 <div class="nb-hero-actions">
-                  <button class="node-action primary" data-pending="小备已进入继续备课预演，等待教师确认。">${iconButtonLabel("继续备课", "arrow")}</button>
+                  <button class="node-action primary" data-nb-mode="${mode === "edit" ? "view" : "edit"}">${iconButtonLabel(mode === "edit" ? "回到查看" : "进入编辑", mode === "edit" ? "eye" : "arrow")}</button>
                   <button class="node-action secondary" data-view="weekCalendar">${iconButtonLabel("返回周课表", "calendar")}</button>
                 </div>
               </div>
 
+              <div class="nb-state-bar">
+                <div>
+                  <span class="state-tag">${mode === "edit" ? "编辑状态" : "查看状态"}</span>
+                  <span class="quiet-tag">${html(lesson.status)}</span>
+                </div>
+                <div class="nb-mode-toggle" aria-label="备课本状态">
+                  <button class="nb-mode-btn ${mode === "view" ? "active" : ""}" type="button" data-nb-mode="view">查看</button>
+                  <button class="nb-mode-btn ${mode === "edit" ? "active" : ""}" type="button" data-nb-mode="edit">编辑</button>
+                </div>
+              </div>
+
               <section>
-                <div class="nb-section-head"><span>本课状态</span><span class="quiet-tag">${html(lesson.status)}</span></div>
+                <div class="nb-section-head"><span>本课状态</span><span class="quiet-tag">真实课题 · 候选预览</span></div>
                 <div class="nb-status-grid">
                   ${lesson.status_cards.map(([label, value]) => `
                     <div class="nb-status-card">
@@ -4366,27 +5148,17 @@
                 </div>
               </section>
 
-              <section>
-                <div class="nb-section-head"><span>工作区</span><span class="quiet-tag">教师确认后应用</span></div>
-                <div class="nb-work-sections">
-                  ${lesson.work_cards.map((card) => `
-                    <article class="nb-work-card ${html(card.tone)}">
-                      <div class="nb-work-title">
-                        <span>${html(card.title)}</span>
-                        <span class="quiet-tag">${html(card.state)}</span>
-                      </div>
-                      <div class="nb-work-note">${html(card.note)}</div>
-                      <div class="nb-link-row">
-                        <button class="node-action icon-only" title="打开" aria-label="打开" data-pending="小备已打开「${html(card.title)}」预演，等待教师确认。">${iconButtonLabel("打开", "arrow")}</button>
-                        <button class="node-action icon-only" title="生成候选" aria-label="生成候选" data-pending="小备已生成「${html(card.title)}」候选预演，等待教师确认。">${iconButtonLabel("生成候选", "wand")}</button>
-                      </div>
-                    </article>
-                  `).join("")}
-                </div>
-              </section>
+              ${mode === "edit" ? `<section>${renderEditPanel(view, prepActiveTarget(view).label)}</section>` : ""}
+
+              <div class="nb-doc">
+                <div class="nb-field-body">${html(lesson.brief)}</div>
+                ${beforeProcess.map((section, index) => renderLessonSection(view, section, ["一", "二", "三", "四", "五"][index])).join("")}
+                ${renderProcessSection(view, "六")}
+                ${afterProcess.map((section, index) => renderLessonSection(view, section, ["七", "八", "九"][index])).join("")}
+              </div>
 
               <section>
-                <div class="nb-section-head"><span>流转关系</span><span class="quiet-tag">备用 / 正在用 / 用完留下</span></div>
+                <div class="nb-section-head"><span>流转关系</span><span class="quiet-tag">正在用 / 课堂 / 用完留下</span></div>
                 <div class="nb-flow">
                   ${lesson.flow.map((step, index) => `<div class="nb-flow-step ${index === 1 ? "current" : ""}">${html(step)}</div>`).join("")}
                 </div>
@@ -4394,17 +5166,7 @@
             </section>
           </div>
 
-          <aside class="nb-drawer" aria-label="备课本抽屉">
-            <div class="nb-panel-head"><span>右侧抽屉</span><span class="quiet-tag">按需打开</span></div>
-            ${view.drawers.map((drawer) => `
-              <section class="nb-drawer-card">
-                <div class="nb-drawer-title"><span>${html(drawer.title)}</span><span class="quiet-tag">${html(drawer.tag)}</span></div>
-                <ul class="nb-drawer-list">
-                  ${drawer.items.map((item) => `<li>${html(item)}</li>`).join("")}
-                </ul>
-              </section>
-            `).join("")}
-          </aside>
+          ${renderPrepNotebookRightPanel(view)}
         </div>
       `;
     }
@@ -4720,6 +5482,14 @@
       renderStatusBar();
       const canvasStage = byId("canvasStage");
       canvasStage.scrollTop = model.view_scroll_positions?.[view.id] || 0;
+      if (model.initial_scroll_target) {
+        const targetId = model.initial_scroll_target;
+        model.initial_scroll_target = "";
+        window.requestAnimationFrame(() => {
+          const target = byId(targetId);
+          if (target) target.scrollIntoView({ block: "center" });
+        });
+      }
     }
 
     function renderPrepRoomCanvas(options = {}) {
@@ -4737,6 +5507,43 @@
         renderLayer.classList.add("is-entering");
         commitCanvasRender(view);
       }, 150);
+    }
+
+    function applyScheduleAdapterPatch(payload) {
+      if (!payload?.success) return false;
+      const patch = payload.week_calendar_patch || {};
+      const weekView = model.views.find((view) => view.id === "weekCalendar");
+      if (!weekView) return false;
+      if (patch.term) weekView.term = patch.term;
+      if (patch.active_grade) weekView.active_grade = patch.active_grade;
+      if (patch.source_badge) weekView.week_label = patch.source_badge;
+      if (payload.source_kind) weekView.date_range = payload.source_kind === "feishu_live_readonly" ? "正式只读" : "快照只读";
+      if (patch.slots) weekView.slots = patch.slots;
+      if (patch.prep_items) weekView.prep_items = patch.prep_items;
+      if (patch.alerts) weekView.alerts = patch.alerts;
+      if (patch.package_summary) weekView.package_summary = patch.package_summary;
+      model.schedule_adapter.source_kind = payload.source_kind || model.schedule_adapter.source_kind;
+      model.schedule_adapter.status = payload.source_kind === "feishu_live_readonly" ? "已读取正式课表，只读展示" : "已读取课表快照，只读展示";
+      model.safety.api_connected = true;
+      return true;
+    }
+
+    function bindLiveScheduleAdapter() {
+      const adapter = model.schedule_adapter || {};
+      if (adapter.fetch_attempted || !adapter.endpoint || !window.fetch) return;
+      adapter.fetch_attempted = true;
+      fetch(adapter.endpoint, { method: "GET" })
+        .then((response) => (response.ok ? response.json() : null))
+        .then((payload) => {
+          if (!applyScheduleAdapterPatch(payload)) return;
+          renderNegotiationPanel();
+          if (model.active_view === "weekCalendar") {
+            renderPrepRoomCanvas();
+          }
+        })
+        .catch(() => {
+          adapter.status = "本地后端未连接，继续使用内置快照";
+        });
     }
 
     function toolShortLabel(tool) {
@@ -4898,6 +5705,53 @@
       toastTimer = window.setTimeout(() => toast.classList.remove("show"), 1800);
     }
 
+    function setPrepNotebookMode(mode, options = {}) {
+      const prepView = model.views.find((view) => view.id === "prepNotebook");
+      if (!prepView) return;
+      prepView.prep_notebook_mode = mode === "edit" ? "edit" : "view";
+      if (options.stepId) {
+        const step = processStepById(prepView, options.stepId);
+        prepView.active_edit_target = {
+          section_id: "teaching_process",
+          step_id: options.stepId,
+          label: `教学过程 · ${step?.name || "当前环节"}环节`
+        };
+        prepView.expanded_intent_steps = Array.from(new Set([...(prepView.expanded_intent_steps || []), options.stepId]));
+      } else if (options.sectionId) {
+        const section = (prepView.current_lesson.sections || []).find((item) => item.id === options.sectionId);
+        prepView.active_edit_target = {
+          section_id: options.sectionId,
+          step_id: "",
+          label: section?.title || "当前段落"
+        };
+      }
+      renderPrepRoomCanvas();
+      showToast(prepView.prep_notebook_mode === "edit" ? `已进入编辑：${prepActiveTarget(prepView).label}` : "已回到查看状态");
+    }
+
+    function handlePrepEditTarget(value) {
+      const [kind, id] = String(value || "").split(":");
+      if (!id) return;
+      if (kind === "process") {
+        setPrepNotebookMode("edit", { stepId: id });
+      } else {
+        setPrepNotebookMode("edit", { sectionId: id });
+      }
+    }
+
+    function togglePrepIntent(stepId) {
+      const prepView = model.views.find((view) => view.id === "prepNotebook");
+      if (!prepView) return;
+      const list = new Set(prepView.expanded_intent_steps || []);
+      if (list.has(stepId)) {
+        list.delete(stepId);
+      } else {
+        list.add(stepId);
+      }
+      prepView.expanded_intent_steps = Array.from(list);
+      renderPrepRoomCanvas();
+    }
+
     function selectView(viewId) {
       const canvasStage = byId("canvasStage");
       model.view_scroll_positions[model.active_view] = canvasStage.scrollTop;
@@ -4920,6 +5774,24 @@
         const viewButton = event.target.closest("[data-view]");
         if (viewButton) {
           selectView(viewButton.dataset.view);
+          return;
+        }
+
+        const prepModeButton = event.target.closest("[data-nb-mode]");
+        if (prepModeButton) {
+          setPrepNotebookMode(prepModeButton.dataset.nbMode);
+          return;
+        }
+
+        const prepEditTarget = event.target.closest("[data-edit-target]");
+        if (prepEditTarget) {
+          handlePrepEditTarget(prepEditTarget.dataset.editTarget);
+          return;
+        }
+
+        const prepIntentButton = event.target.closest("[data-intent-step]");
+        if (prepIntentButton) {
+          togglePrepIntent(prepIntentButton.dataset.intentStep);
           return;
         }
 
@@ -5025,16 +5897,39 @@
         return;
       }
       model.negotiation.input_value = text;
-      addPendingChange(`小备已收到意图：「${text}」，正在生成影响范围预演。`, "小备意图入口");
+      if (model.active_view === "prepNotebook") {
+        const prepView = model.views.find((view) => view.id === "prepNotebook");
+        const lesson = prepView?.current_lesson;
+        if (prepView && lesson) {
+          prepView.prep_notebook_mode = "edit";
+          prepView.active_edit_target = { section_id: "teaching_process", step_id: "explore", label: "教学过程 · 探究环节" };
+          prepView.expanded_intent_steps = Array.from(new Set([...(prepView.expanded_intent_steps || []), "explore"]));
+          const analysis = (lesson.sections || []).find((section) => section.id === "analysis");
+          if (analysis) {
+            analysis.candidate = "候选：增加一条学情判断，学生可能能分辨颜色冷暖，但还需要借助色卡和生活物品把感受说具体。";
+          }
+          const explore = (lesson.process_steps || []).find((step) => step.id === "explore");
+          if (explore) {
+            explore.candidate = "候选：探究环节加入色卡和生活物品分组，让学生先按感受分类，再选择一张色卡说出理由。";
+          }
+          lesson.status = "新增候选待确认";
+        }
+        addPendingChange("我先整理成两处候选：探究环节加色卡分组，学习单加感受记录格。等你确认。", "备课本编辑");
+        renderPrepRoomCanvas();
+      } else {
+        addPendingChange(`小备已收到意图：「${text}」，正在生成影响范围预演。`, "小备意图入口");
+      }
       input.value = "";
     }
 
     function initPrepRoomRenderCanvas() {
+      applyInitialViewFromHash();
       hydrateShellIcons();
       renderToolRail();
       renderNegotiationPanel();
       renderPrepRoomCanvas();
       bindEvents();
+      bindLiveScheduleAdapter();
     }
 
     window.renderWeekCalendarCanvas = renderWeekCalendarCanvas;

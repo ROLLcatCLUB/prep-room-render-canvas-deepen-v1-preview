@@ -84,3 +84,28 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Visual rule update: week indicators should be prominent, while actions use pill or circular button shapes by default.
 - Icon rule update: use a Lucide-like line icon style for circular controls; keep action text in `title` / accessible labels instead of visible button copy.
 - Inspector rule update: the floating inspector stays hidden on initial render and opens near the pointer after a node/action click.
+
+## 1013A Feishu Schedule And Prep Field POC
+
+- `backend/xiaobei_ai/prep_room_feishu_schedule_1013A.py` adds a read-only prep-room schedule adapter at `/api/xiaobei/prep-room/schedule`.
+- The adapter reads live Feishu only when formal env credentials are present; otherwise it falls back to the local full-dump snapshot for `教师课表`.
+- The preview page now binds the week calendar to Xu Tao's Grade 3 art schedule rows and opens the prep notebook on 1-2 `色彩的感觉`.
+- The prep notebook center area is the main prep canvas: field candidates, teacher confirmation, resource references, and archive candidates stay in preview state.
+- `scripts/run_prep_room_1013a_feishu_schedule_and_live_poc.py` runs the limited MiniMax field-patch POC and writes outputs under `outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/live_poc/`.
+- Boundary: no Feishu write, no database write, no memory write, no formal apply, no formal export, and no frontend secret exposure.
+
+## 1013C Prep Notebook View/Edit And Teaching Process Plan
+
+- `prep_notebook_1013C_view_edit_teaching_process_design_plan.md` records the next-stage redesign plan for the prep notebook.
+- Core direction: default `查看状态` reads like a continuous lesson design; `编辑状态` appears only when the teacher edits a section, step, or candidate.
+- The teaching process becomes the key design layer: every lesson step carries its role, intent, transition, student state, teacher action, screen/material state, evidence, and adjustment plan.
+- Market scan summary: absorb tool granularity, post-draft revision workflow, teacher-controlled AI, classroom evidence, and platform-chain awareness from current AI lesson-prep products; do not copy their tool-menu shape.
+- Boundary: 1013C remains preview/design implementation only; no provider call, Feishu write, database write, memory write, formal apply, or formal export.
+
+## 1013C Local Implementation
+
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook` now opens the prep notebook in `查看状态`: a continuous lesson design for real topic 1-2 `色彩的感觉`.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebookEdit` opens `编辑状态`, focused on `教学过程 · 探究环节`.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebookIntent` opens the teaching-process intent layer with the `探究` design explanation expanded.
+- The visible teacher UI avoids engineering words and keeps edit tools around the current section or lesson step.
+- No large review package, ZIP, formal validator, provider call, database write, memory write, Feishu write, formal apply, or formal export was added in this implementation pass.

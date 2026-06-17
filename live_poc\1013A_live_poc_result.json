@@ -1,0 +1,32 @@
+{
+  "stage_id": "1013A_LIVE_PREP_NOTEBOOK_FIELD_PATCH_POC_WITH_FEISHU_SCHEDULE",
+  "created_at": "2026-06-16T16:34:29+00:00",
+  "final_status": "PASS_WITH_EXTRACTION_CAVEAT",
+  "provider_called": true,
+  "model_called": true,
+  "strict_json_success_count": 2,
+  "extraction_required_count": 1,
+  "failed_count": 1,
+  "successful_case_count": 2,
+  "field_patch_candidate_generated": true,
+  "schedule_status_code": 200,
+  "schedule_source_kind": "feishu_full_dump_snapshot",
+  "schedule_slot_count": 8,
+  "boundary_flags": {
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "feishu_schedule_written": false,
+    "frontend_secret_exposed": false
+  },
+  "latency_summary": {
+    "count": 3,
+    "min_ms": 39742,
+    "max_ms": 51686,
+    "avg_ms": 45880
+  },
+  "next_stage": "1013B_PREP_NOTEBOOK_LIVE_FIELD_PATCH_TO_UI_BINDING"
+}

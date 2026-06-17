@@ -1,0 +1,25 @@
+{
+  "case_id": "test_1",
+  "label": "学情驱动修改",
+  "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+  "success": false,
+  "parser_mode": "json_parse_failed",
+  "extraction_required": true,
+  "validation_errors": [
+    "parsed_result_not_object"
+  ],
+  "provider_called": true,
+  "model_called": true,
+  "latency_ms": 46213,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": true
+  },
+  "raw_response_stored": false,
+  "raw_response_preview_redacted": "{\"intent_summary\": \"教师反映三年级学生对冷暖色概念理解困难，需要将教学设计得更直观、更可视化，降低认知门槛。\", \"target_lesson\": {\"lesson_code\": \"1-2\", \"lesson_title\": \"色彩的感觉\"}, \"field_patch_candidates\": [{\"field_patch_id\": \"",
+  "parsed_json": null,
+  "secret_scan_hits": []
+}

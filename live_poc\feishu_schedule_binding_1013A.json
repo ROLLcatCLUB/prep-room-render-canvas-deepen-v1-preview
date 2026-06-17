@@ -1,0 +1,435 @@
+{
+  "success": true,
+  "stage_id": "1013A_FEISHU_FORMAL_SCHEDULE_READONLY_ADAPTER",
+  "route_status": "readonly_schedule_adapter_active",
+  "generated_at": "2026-06-16T16:32:11+00:00",
+  "source_mode_requested": "auto",
+  "source_kind": "feishu_full_dump_snapshot",
+  "source_meta": {
+    "success": true,
+    "code": "snapshot_read_ok",
+    "table_id": "tbl7OxfE4YPSE6GU",
+    "table_name": "教师课表",
+    "record_count": 53,
+    "dump_last_modified": "2026-05-03T12:46:07+00:00"
+  },
+  "warnings": [
+    "feishu_live_not_configured"
+  ],
+  "filters": {
+    "teacher": "徐涛",
+    "subject": "美术",
+    "grade": "三年级",
+    "semester": "2025-2026学年第二学期"
+  },
+  "teacher_profile": {
+    "teacher_name": "徐涛",
+    "subject": "美术",
+    "grade": "三年级",
+    "semester": "2025-2026学年第二学期",
+    "schedule_slot_count": 8
+  },
+  "schedule_slots": [
+    {
+      "slot_id": "fs-recvd6CpwhuXXD",
+      "source_record_id": "recvd6CpwhuXXD",
+      "source_table_id": "tbl7OxfE4YPSE6GU",
+      "source_kind": "feishu_full_dump_snapshot",
+      "teacher_name": "徐涛",
+      "semester": "2025-2026学年第二学期",
+      "subject": "美术",
+      "grade": "三年级",
+      "class_name": "三(5)班",
+      "class_label": "三5班",
+      "weekday": "周一",
+      "weekday_id": "mon",
+      "period": "第6节",
+      "period_no": 6,
+      "room": "美术一室",
+      "lesson_ref": {
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉",
+        "unit": "第一单元 多变的色彩",
+        "duration_minutes": 40,
+        "prep_assistant": "小备"
+      },
+      "package_status": "正式课表 · 待备课"
+    },
+    {
+      "slot_id": "fs-recvd6Crqc3jE6",
+      "source_record_id": "recvd6Crqc3jE6",
+      "source_table_id": "tbl7OxfE4YPSE6GU",
+      "source_kind": "feishu_full_dump_snapshot",
+      "teacher_name": "徐涛",
+      "semester": "2025-2026学年第二学期",
+      "subject": "美术",
+      "grade": "三年级",
+      "class_name": "三(1)班",
+      "class_label": "三1班",
+      "weekday": "周一",
+      "weekday_id": "mon",
+      "period": "第7节",
+      "period_no": 7,
+      "room": "美术一室",
+      "lesson_ref": {
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉",
+        "unit": "第一单元 多变的色彩",
+        "duration_minutes": 40,
+        "prep_assistant": "小备"
+      },
+      "package_status": "正式课表 · 待备课"
+    },
+    {
+      "slot_id": "fs-recvd6CpTXPax8",
+      "source_record_id": "recvd6CpTXPax8",
+      "source_table_id": "tbl7OxfE4YPSE6GU",
+      "source_kind": "feishu_full_dump_snapshot",
+      "teacher_name": "徐涛",
+      "semester": "2025-2026学年第二学期",
+      "subject": "美术",
+      "grade": "三年级",
+      "class_name": "三(3)班",
+      "class_label": "三3班",
+      "weekday": "周二",
+      "weekday_id": "tue",
+      "period": "第6节",
+      "period_no": 6,
+      "room": "美术一室",
+      "lesson_ref": {
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉",
+        "unit": "第一单元 多变的色彩",
+        "duration_minutes": 40,
+        "prep_assistant": "小备"
+      },
+      "package_status": "正式课表 · 待备课"
+    },
+    {
+      "slot_id": "fs-recviyPKQb2ieh",
+      "source_record_id": "recviyPKQb2ieh",
+      "source_table_id": "tbl7OxfE4YPSE6GU",
+      "source_kind": "feishu_full_dump_snapshot",
+      "teacher_name": "徐涛",
+      "semester": "2025-2026学年第二学期",
+      "subject": "美术",
+      "grade": "三年级",
+      "class_name": "三(4)班",
+      "class_label": "三4班",
+      "weekday": "周三",
+      "weekday_id": "wed",
+      "period": "第3节",
+      "period_no": 3,
+      "room": "美术一室",
+      "lesson_ref": {
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉",
+        "unit": "第一单元 多变的色彩",
+        "duration_minutes": 40,
+        "prep_assistant": "小备"
+      },
+      "package_status": "正式课表 · 待备课"
+    },
+    {
+      "slot_id": "fs-recvd6CscCPKFT",
+      "source_record_id": "recvd6CscCPKFT",
+      "source_table_id": "tbl7OxfE4YPSE6GU",
+      "source_kind": "feishu_full_dump_snapshot",
+      "teacher_name": "徐涛",
+      "semester": "2025-2026学年第二学期",
+      "subject": "美术",
+      "grade": "三年级",
+      "class_name": "三(3)班",
+      "class_label": "三3班",
+      "weekday": "周三",
+      "weekday_id": "wed",
+      "period": "第7节",
+      "period_no": 7,
+      "room": "美术一室",
+      "lesson_ref": {
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉",
+        "unit": "第一单元 多变的色彩",
+        "duration_minutes": 40,
+        "prep_assistant": "小备"
+      },
+      "package_status": "正式课表 · 待备课"
+    },
+    {
+      "slot_id": "fs-recvd6CszGgPNd",
+      "source_record_id": "recvd6CszGgPNd",
+      "source_table_id": "tbl7OxfE4YPSE6GU",
+      "source_kind": "feishu_full_dump_snapshot",
+      "teacher_name": "徐涛",
+      "semester": "2025-2026学年第二学期",
+      "subject": "美术",
+      "grade": "三年级",
+      "class_name": "三(2)班",
+      "class_label": "三2班",
+      "weekday": "周四",
+      "weekday_id": "thu",
+      "period": "第7节",
+      "period_no": 7,
+      "room": "美术一室",
+      "lesson_ref": {
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉",
+        "unit": "第一单元 多变的色彩",
+        "duration_minutes": 40,
+        "prep_assistant": "小备"
+      },
+      "package_status": "正式课表 · 待备课"
+    },
+    {
+      "slot_id": "fs-recvd6Cp7nW4we",
+      "source_record_id": "recvd6Cp7nW4we",
+      "source_table_id": "tbl7OxfE4YPSE6GU",
+      "source_kind": "feishu_full_dump_snapshot",
+      "teacher_name": "徐涛",
+      "semester": "2025-2026学年第二学期",
+      "subject": "美术",
+      "grade": "三年级",
+      "class_name": "三(2)班",
+      "class_label": "三2班",
+      "weekday": "周五",
+      "weekday_id": "fri",
+      "period": "第5节",
+      "period_no": 5,
+      "room": "美术一室",
+      "lesson_ref": {
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉",
+        "unit": "第一单元 多变的色彩",
+        "duration_minutes": 40,
+        "prep_assistant": "小备"
+      },
+      "package_status": "正式课表 · 待备课"
+    },
+    {
+      "slot_id": "fs-recvd6CsUSNt3s",
+      "source_record_id": "recvd6CsUSNt3s",
+      "source_table_id": "tbl7OxfE4YPSE6GU",
+      "source_kind": "feishu_full_dump_snapshot",
+      "teacher_name": "徐涛",
+      "semester": "2025-2026学年第二学期",
+      "subject": "美术",
+      "grade": "三年级",
+      "class_name": "三(1)班",
+      "class_label": "三1班",
+      "weekday": "周五",
+      "weekday_id": "fri",
+      "period": "第7节",
+      "period_no": 7,
+      "room": "美术一室",
+      "lesson_ref": {
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉",
+        "unit": "第一单元 多变的色彩",
+        "duration_minutes": 40,
+        "prep_assistant": "小备"
+      },
+      "package_status": "正式课表 · 待备课"
+    }
+  ],
+  "week_calendar_patch": {
+    "term": "2025-2026学年第二学期",
+    "active_grade": "三年级",
+    "source_badge": "飞书课表快照",
+    "slots": {
+      "p6-mon": [
+        {
+          "id": "wc-fs-recvd6CpwhuXXD",
+          "type": "lesson",
+          "classLabel": "三5班",
+          "code": "1-2",
+          "title": "色彩的感觉",
+          "packageStatus": "正式课表 · 待备课",
+          "sourceRecordId": "recvd6CpwhuXXD",
+          "room": "美术一室",
+          "sourceKind": "feishu_full_dump_snapshot"
+        }
+      ],
+      "p7-mon": [
+        {
+          "id": "wc-fs-recvd6Crqc3jE6",
+          "type": "lesson",
+          "classLabel": "三1班",
+          "code": "1-2",
+          "title": "色彩的感觉",
+          "packageStatus": "正式课表 · 待备课",
+          "sourceRecordId": "recvd6Crqc3jE6",
+          "room": "美术一室",
+          "sourceKind": "feishu_full_dump_snapshot"
+        }
+      ],
+      "p6-tue": [
+        {
+          "id": "wc-fs-recvd6CpTXPax8",
+          "type": "lesson",
+          "classLabel": "三3班",
+          "code": "1-2",
+          "title": "色彩的感觉",
+          "packageStatus": "正式课表 · 待备课",
+          "sourceRecordId": "recvd6CpTXPax8",
+          "room": "美术一室",
+          "sourceKind": "feishu_full_dump_snapshot"
+        }
+      ],
+      "p3-wed": [
+        {
+          "id": "wc-fs-recviyPKQb2ieh",
+          "type": "lesson",
+          "classLabel": "三4班",
+          "code": "1-2",
+          "title": "色彩的感觉",
+          "packageStatus": "正式课表 · 待备课",
+          "sourceRecordId": "recviyPKQb2ieh",
+          "room": "美术一室",
+          "sourceKind": "feishu_full_dump_snapshot"
+        }
+      ],
+      "p7-wed": [
+        {
+          "id": "wc-fs-recvd6CscCPKFT",
+          "type": "lesson",
+          "classLabel": "三3班",
+          "code": "1-2",
+          "title": "色彩的感觉",
+          "packageStatus": "正式课表 · 待备课",
+          "sourceRecordId": "recvd6CscCPKFT",
+          "room": "美术一室",
+          "sourceKind": "feishu_full_dump_snapshot"
+        }
+      ],
+      "p7-thu": [
+        {
+          "id": "wc-fs-recvd6CszGgPNd",
+          "type": "lesson",
+          "classLabel": "三2班",
+          "code": "1-2",
+          "title": "色彩的感觉",
+          "packageStatus": "正式课表 · 待备课",
+          "sourceRecordId": "recvd6CszGgPNd",
+          "room": "美术一室",
+          "sourceKind": "feishu_full_dump_snapshot"
+        }
+      ],
+      "p5-fri": [
+        {
+          "id": "wc-fs-recvd6Cp7nW4we",
+          "type": "lesson",
+          "classLabel": "三2班",
+          "code": "1-2",
+          "title": "色彩的感觉",
+          "packageStatus": "正式课表 · 待备课",
+          "sourceRecordId": "recvd6Cp7nW4we",
+          "room": "美术一室",
+          "sourceKind": "feishu_full_dump_snapshot"
+        }
+      ],
+      "p7-fri": [
+        {
+          "id": "wc-fs-recvd6CsUSNt3s",
+          "type": "lesson",
+          "classLabel": "三1班",
+          "code": "1-2",
+          "title": "色彩的感觉",
+          "packageStatus": "正式课表 · 待备课",
+          "sourceRecordId": "recvd6CsUSNt3s",
+          "room": "美术一室",
+          "sourceKind": "feishu_full_dump_snapshot"
+        }
+      ]
+    },
+    "prep_items": [
+      {
+        "title": "周一 第6节 三5班《色彩的感觉》",
+        "status": "进入备课本候选"
+      },
+      {
+        "title": "周一 第7节 三1班《色彩的感觉》",
+        "status": "进入备课本候选"
+      },
+      {
+        "title": "周二 第6节 三3班《色彩的感觉》",
+        "status": "进入备课本候选"
+      },
+      {
+        "title": "周三 第3节 三4班《色彩的感觉》",
+        "status": "进入备课本候选"
+      },
+      {
+        "title": "周三 第7节 三3班《色彩的感觉》",
+        "status": "进入备课本候选"
+      },
+      {
+        "title": "周四 第7节 三2班《色彩的感觉》",
+        "status": "进入备课本候选"
+      },
+      {
+        "title": "周五 第5节 三2班《色彩的感觉》",
+        "status": "进入备课本候选"
+      },
+      {
+        "title": "周五 第7节 三1班《色彩的感觉》",
+        "status": "进入备课本候选"
+      }
+    ],
+    "alerts": [
+      "已读取8条徐涛老师三年级美术课表。",
+      "课表只进入备课室预览，不写回飞书。",
+      "课题仍由备课本当前课例和教学工作计划提供，等待教师确认。"
+    ],
+    "package_summary": [
+      [
+        "课表来源",
+        "快照"
+      ],
+      [
+        "本周课位",
+        "8节"
+      ],
+      [
+        "待备课",
+        "8项"
+      ],
+      [
+        "写回",
+        "0次"
+      ]
+    ]
+  },
+  "prep_room_binding": {
+    "binding_status": "ready_for_prep_notebook_context",
+    "current_lesson": {
+      "lesson_code": "1-2",
+      "lesson_title": "色彩的感觉",
+      "unit": "第一单元 多变的色彩",
+      "duration_minutes": 40,
+      "prep_assistant": "小备"
+    },
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  "boundary_flags": {
+    "readonly": true,
+    "feishu_live_read_allowed": true,
+    "feishu_api_called": false,
+    "feishu_written": false,
+    "database_written": false,
+    "memory_written": false,
+    "provider_called": false,
+    "model_called": false,
+    "formal_apply_performed": false,
+    "frontend_secret_exposed": false,
+    "tenant_token_exposed": false,
+    "live_meta_public": {
+      "success": true,
+      "code": "snapshot_read_ok",
+      "table_id": "tbl7OxfE4YPSE6GU",
+      "table_name": "教师课表",
+      "record_count": 53,
+      "dump_last_modified": "2026-05-03T12:46:07+00:00"
+    }
+  }
+}

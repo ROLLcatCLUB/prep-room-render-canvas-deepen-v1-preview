@@ -1,0 +1,148 @@
+{
+  "case_id": "test_2",
+  "label": "快速成稿",
+  "teacher_input": "先帮我快速生成一版能上课的基本课时设计。",
+  "success": true,
+  "parser_mode": "strict_json",
+  "extraction_required": false,
+  "validation_errors": [],
+  "provider_called": true,
+  "model_called": true,
+  "latency_ms": 39742,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": true
+  },
+  "raw_response_stored": false,
+  "raw_response_preview_redacted": "{\"intent_summary\": \"快速生成《色彩的感觉》基础可上课版本\",\"target_lesson\": {\"lesson_code\": \"1-2\", \"lesson_title\": \"色彩的感觉\"}, \"field_patch_candidates\": [{\"field_patch_id\": \"patch_l2_001\", \"target_laye",
+  "parsed_json": {
+    "intent_summary": "快速生成《色彩的感觉》基础可上课版本",
+    "target_lesson": {
+      "lesson_code": "1-2",
+      "lesson_title": "色彩的感觉"
+    },
+    "field_patch_candidates": [
+      {
+        "field_patch_id": "patch_l2_001",
+        "target_layer": "l2_lesson_execution",
+        "target_block": "learning_objectives",
+        "target_field": "learning_objectives",
+        "patch_type": "fill_missing",
+        "before_summary": "空",
+        "after_candidate": "[{\"obj_id\": \"lo1\", \"statement\": \"能说出冷色和暖色的名称及3种代表色\", \"level\": \"基础\"}, {\"obj_id\": \"lo2\", \"statement\": \"能表达冷暖色给自己带来的情绪感受\", \"level\": \"理解\"}, {\"obj_id\": \"lo3\", \"statement\": \"愿意参与色彩观察与分享活动\", \"level\": \"情感\"}]",
+        "source_basis": [
+          "课标摘要候选",
+          "l1_basic老师目标",
+          "三年级认知水平"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      },
+      {
+        "field_patch_id": "patch_l2_002",
+        "target_layer": "l2_lesson_execution",
+        "target_block": "classroom_flow",
+        "target_field": "classroom_flow",
+        "patch_type": "fill_missing",
+        "before_summary": "空",
+        "after_candidate": "[{\"phase\": \"导入\", \"duration\": \"5分钟\", \"content\": \"出示冷暖色对比图，提问：你看到这两组颜色有什么不同感觉？\"}, {\"phase\": \"新授\", \"duration\": \"10分钟\", \"content\": \"认识冷暖色概念，讲解暖色（红橙黄）和冷色（蓝绿紫），引导学生联想生活中冷暖色实例\"}, {\"phase\": \"实践\", \"duration\": \"15分钟\", \"content\": \"发放素材，创作一幅表现温暖或凉爽感觉的色彩小练习\"}, {\"phase\": \"展示\", \"duration\": \"5分钟\", \"content\": \"学生自愿展示，描述自己用了什么颜色、想表达什么感受\"}, {\"phase\": \"小结\", \"duration\": \"5分钟\", \"content\": \"回顾冷暖色概念，布置课后观察任务\"}]",
+        "source_basis": [
+          "优秀课例候选",
+          "40分钟时长约束",
+          "美术学科模板"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      },
+      {
+        "field_patch_id": "patch_l2_003",
+        "target_layer": "l2_lesson_execution",
+        "target_block": "teacher_questions",
+        "target_field": "teacher_questions",
+        "patch_type": "fill_missing",
+        "before_summary": "空",
+        "after_candidate": "[{\"q_id\": \"q1\", \"phase\": \"导入\", \"question\": \"看到红色你想到什么？看到蓝色你又想到什么？\"}, {\"q_id\": \"q2\", \"phase\": \"新授\", \"question\": \"哪些颜色让我们感觉温暖？哪些颜色让我们感觉凉爽？\"}, {\"q_id\": \"q3\", \"phase\": \"实践\", \"question\": \"你想用颜色表达什么情绪？\"}, {\"q_id\": \"q4\", \"phase\": \"展示\", \"question\": \"你用了哪些颜色？它们代表什么感受？\"}]",
+        "source_basis": [
+          "l1_basic核心活动",
+          "冷暖色图片素材",
+          "学生年龄特征"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      },
+      {
+        "field_patch_id": "patch_l2_004",
+        "target_layer": "l2_lesson_execution",
+        "target_block": "student_activities",
+        "target_field": "student_activities",
+        "patch_type": "fill_missing",
+        "before_summary": "空",
+        "after_candidate": "[{\"act_id\": \"sa1\", \"phase\": \"导入\", \"activity\": \"观察图片，说出冷暖感受\", \"type\": \"口头表达\"}, {\"act_id\": \"sa2\", \"phase\": \"新授\", \"activity\": \"联系生活，举例冷暖色事物\", \"type\": \"参与讨论\"}, {\"act_id\": \"sa3\", \"phase\": \"实践\", \"activity\": \"用冷色或暖色完成一幅色彩感受小练习\", \"type\": \"动手创作\"}, {\"act_id\": \"sa4\", \"phase\": \"展示\", \"activity\": \"介绍自己作品中的颜色和表达的感受\", \"type\": \"口头表达\"}]",
+        "source_basis": [
+          "l1_basic核心活动",
+          "l1_basic评估重点",
+          "美术学科模板"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      },
+      {
+        "field_patch_id": "patch_l3_001",
+        "target_layer": "l3_resource_collab",
+        "target_block": "rubric",
+        "target_field": "rubric",
+        "patch_type": "fill_missing",
+        "before_summary": "缺失",
+        "after_candidate": "{\"dimension\": [{\"name\": \"色彩认知\", \"weight\": \"40%\", \"desc\": \"能正确识别冷色和暖色\"}, {\"name\": \"感受表达\", \"weight\": \"40%\", \"desc\": \"能说出色彩带来的情绪感受\"}, {\"name\": \"参与过程\", \"weight\": \"20%\", \"desc\": \"积极观察、讨论、创作\"}]}",
+        "source_basis": [
+          "美术评价量规维度候选",
+          "l1_basic评估重点"
+        ],
+        "teacher_review_required": true,
+        "formal_apply_performed": false
+      }
+    ],
+    "missing_slots": [],
+    "quality_gate": {
+      "level": "可上课",
+      "passed_items": [
+        "学习目标3条，覆盖知识、情感、态度",
+        "课堂流程5环节，时间分配合理",
+        "教师提问4个，匹配各环节",
+        "学生活动4个，与流程对应",
+        "评价量规3维度已填充"
+      ],
+      "missing_items": [
+        "具体学情分析",
+        "分层任务设计",
+        "课后拓展作业"
+      ],
+      "next_best_action": "确认基础流程后，可补充学情分层或丰富作业设计"
+    },
+    "right_tray_updates": {
+      "suggestion": "基础版本已生成，可直接用于上课。建议确认冷暖色素材是否充足，或添加学生优秀作品作示范。",
+      "pending_review_items": [
+        "学习目标表述是否合适",
+        "课堂时长分配是否可行",
+        "是否需要分层任务"
+      ],
+      "resource_candidates_used": [
+        "冷暖色图片素材",
+        "美术评价量规维度"
+      ],
+      "archive_candidates": []
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false
+    }
+  },
+  "secret_scan_hits": []
+}
