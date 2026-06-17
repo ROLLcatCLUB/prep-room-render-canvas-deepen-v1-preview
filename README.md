@@ -261,3 +261,15 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_TEACHER_READABLE_COPY_AND_VISUAL_TONE_REPAIR`.
 - Next stage: `1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.
+
+## 1013F_R2B1 Edit Bubble Annotation Surface
+
+- `scripts/run_prep_room_1013f_r2b1_edit_bubble_annotation_surface.py` verifies that edit candidates no longer appear inside the lesson body.
+- Output directory: `1013F_R2B1_edit_bubble_annotation_surface/`.
+- Required files were generated: `1013F_R2B1_result.json`, `1013F_R2B1_report.md`, `edit_bubble_rules_1013F_R2B1.json`, `edit_bubble_sample_1013F_R2B1.json`, and `ui_smoke_screenshot_1013F_R2B1_edit_bubble.png`.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2B1EditBubble` opens the edit bubble state.
+- Edit mode now keeps the lesson body clean: the current paragraph is highlighted, while all current-section changes live in a floating annotation bubble with an arrow pointing to the body.
+- Low-weight source details remain available inside the bubble for debugging and error observation.
+- Final status: `PASS_EDIT_BUBBLE_ANNOTATION_SURFACE`.
+- Next stage: `1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.

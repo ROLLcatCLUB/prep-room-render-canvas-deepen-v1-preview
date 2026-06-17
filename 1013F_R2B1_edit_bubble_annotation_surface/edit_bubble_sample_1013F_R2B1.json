@@ -1,0 +1,21 @@
+{
+  "surface": "annotation_bubble",
+  "points_to": "教学过程 · 探究环节",
+  "inline_in_body": false,
+  "bubble_contains": [
+    "当前段落",
+    "小教建议",
+    "修改前",
+    "修改后",
+    "会影响什么",
+    "操作按钮",
+    "低权重来源"
+  ],
+  "body_contains_only": [
+    "正文",
+    "当前环节高亮",
+    "编辑入口"
+  ],
+  "teacher_review_required": true,
+  "formal_apply_performed": false
+}
