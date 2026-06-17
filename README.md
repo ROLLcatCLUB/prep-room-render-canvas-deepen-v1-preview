@@ -163,3 +163,14 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - What failed: `standard_daily` still returned non-parseable JSON.
 - Boundary: provider was called; no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.
 - Next stage: `1013F_REASONING_FIELD_PATCH_TO_VIEW_EDIT_UI_BINDING`.
+
+## 1013E_R2 Standard Daily Repair
+
+- `scripts/run_prep_room_1013e_r2_standard_daily_repair.py` runs the targeted repair for the failed `standard_daily` case only.
+- Output directory: `live_poc_1013E_R2/`.
+- Required files were generated: `1013E_R2_result.json`, `1013E_R2_report.md`, `test_standard_daily_repair_result.json`, `prompt_repair_standard_daily_1013E_R2.md`, `redacted_provider_trace_1013E_R2.json`, and `provider_metrics_1013E_R2.json`.
+- Final status: `STANDARD_DAILY_REPAIR_FAILED`.
+- What improved: the final R2 attempt produced strict JSON.
+- What still failed: the JSON did not satisfy the compact contract; key arrays were returned in looser shapes, so the validator correctly blocked UI binding readiness.
+- Conclusion: do not enter full `1013F` with `standard_daily` yet. Next stage should be `1013E_R3_PROMPT_REPAIR_OR_MODEL_STRATEGY_ADJUSTMENT`, likely adding a normalization step before UI binding.
+- Boundary: provider was called; no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.
