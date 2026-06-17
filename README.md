@@ -141,3 +141,13 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - What failed: `standard_daily` started producing the expected structure but did not return parseable complete JSON; `open_class` and `research_lesson` timed out.
 - Conclusion: the model path is plausible, but the prompt is too heavy for stable four-case output. Next stage should be `1013E_R1_PROMPT_REPAIR`, with shorter schema, smaller source context, and mode-specific prompt compression.
 - Boundary: no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.
+
+## 1013E_R1 Backend Reuse And Repair Review
+
+- `backend_reuse_and_repair_plan_1013E_R1.md` records which existing backend foundations can be reused for the prep notebook reasoning layer.
+- Direct reuse: provider transport, strict output parser, controlled MiniMax JSON extraction, and the read-only Feishu schedule adapter as schedule context.
+- Pattern-only reuse: visible action trace, semantic orchestration, side-effect gate, renderer patch plan, and read-only candidate repair patterns.
+- Not reused in this step: broad workbench agent runtime, memory modules, and teaching-planning candidate rules that would flatten lesson design into generic field filling.
+- `backend/xiaobei_ai/prep_room_lesson_reasoning_contract_1013E.py` now centralizes the real lesson context, required output shape, boundary flags, strict parser binding, and lesson-reasoning payload validation.
+- `scripts/run_prep_room_1013e_model_prompt_to_reasoning_field_patch_poc.py` now uses that contract instead of local loose JSON extraction and duplicate validation.
+- Next stage: `1013E_R1_PROMPT_REPAIR_AND_READONLY_REASONING_PIPELINE`.
