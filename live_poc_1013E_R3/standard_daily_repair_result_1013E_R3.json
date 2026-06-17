@@ -1,0 +1,84 @@
+{
+  "case_id": "standard_daily_cold_warm_more_visual",
+  "lesson_design_mode": "standard_daily",
+  "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+  "strict_json_success": false,
+  "wide_json_parse_success": false,
+  "normalization_success": false,
+  "contract_validation_success": false,
+  "contract_validation_errors": [
+    "payload_not_object"
+  ],
+  "effectiveness_pass": false,
+  "boundary_ok": false,
+  "secret_scan_hits": [],
+  "attempt_count": 2,
+  "attempts": [
+    {
+      "parser_mode": "json_parse_error",
+      "latency_ms": 71077,
+      "provider_meta": {
+        "provider": "openai_compatible",
+        "model": "MiniMax-M2.7-highspeed",
+        "base_url_host": "api.minimaxi.com",
+        "credential_source": "env",
+        "reasoning_split": false,
+        "latency_ms": 71077
+      },
+      "raw_response_prefix_redacted": "```json\n{\n  \"lesson_unfolding_graph\": {\n    \"lesson_design_mode\": \"standard_daily\",\n    \"design_context\": {\n      \"grade\": \"三年级\",\n      \"subject\": \"美术\",\n      \"topic\": \"1-2《色彩的感觉》\"\n    },\n    \"cognitive_grounding\": {\n      \"core_learning_problem\": \"学生对冷暖色的感知停留在语言标签层面，缺乏视觉联结和情感体验\",\n      \"student_baseline\": \"学生能说出红、橙、黄、蓝等颜色名称，部分学生能表达颜色喜好，但无法区分冷暖色属性\",\n      \"real_stuck_point\": \"冷暖是抽象的感受，需要通过真实情境和视觉材料才能建立联结\",\n      \"target_shift\": \"从'知道颜色名称'到'能依据冷暖感受对色彩进行分类并说明理由'\",\n      \"key_focus\": \"冷暖色的直观感知与分类\",\n      \"key_difficulty\": \"将抽象的冷暖感受与具体色彩建立对应关系\"\n    },\n    \"constraints\": {\n      \"total_duration_minutes\": 40,\n      \"resource_budget\": \"medium\",\n      \"class_condition\": \"普通美术教室，有展示台，学生课桌可灵活调整\",\n      \"lesson_position\": \"unit_middle\",\n      \"material_conditions\": [\n        \"彩色卡纸（红、橙、黄、蓝、绿、紫各若干）\",\n "
+    },
+    {
+      "parser_mode": "provider_error",
+      "latency_ms": null,
+      "provider_meta": {
+        "provider": null,
+        "model": null,
+        "base_url_host": "",
+        "credential_source": null,
+        "reasoning_split": false,
+        "latency_ms": null
+      },
+      "raw_response_prefix_redacted": ""
+    }
+  ],
+  "normalized_payload": null,
+  "classroom_unfolding_effectiveness": {
+    "resource_purpose_score": 0,
+    "attention_focus_score": 0,
+    "teacher_guidance_score": 0,
+    "student_response_prediction_score": 0,
+    "scaffold_quality_score": 0,
+    "collection_method_reasoning_score": 0,
+    "media_material_timing_score": 0,
+    "assessment_evidence_score": 0,
+    "transition_script_score": 0,
+    "time_feasibility_score": 0,
+    "age_appropriateness_score": 0,
+    "overall_effectiveness_score": 0,
+    "pass": false,
+    "blockers": [
+      "missing_lesson_unfolding_graph"
+    ],
+    "issues": [
+      "missing_lesson_unfolding_graph"
+    ]
+  },
+  "time_balance": {
+    "total_event_minutes": 0.0,
+    "target_minutes": 40.0,
+    "over_time_minutes": 0.0,
+    "under_time_minutes": 40.0,
+    "time_balance_pass": false,
+    "rebalance_candidates": []
+  },
+  "provider_called": true,
+  "model_called": true,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7-highspeed",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": false,
+    "latency_ms": 71077
+  }
+}

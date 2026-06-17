@@ -1,0 +1,53 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "normalization_success": false,
+    "contract_validation_success": false,
+    "contract_validation_errors": [
+      "payload_not_object"
+    ]
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "normalization_success": false,
+    "contract_validation_success": false,
+    "contract_validation_errors": [
+      "payload_not_object"
+    ]
+  },
+  {
+    "case_id": "quick_daily_basic_design",
+    "normalization_success": true,
+    "contract_validation_success": true,
+    "contract_validation_errors": []
+  },
+  {
+    "case_id": "open_class_question_expression_evidence",
+    "normalization_success": false,
+    "contract_validation_success": false,
+    "contract_validation_errors": [
+      "payload_not_object"
+    ]
+  },
+  {
+    "case_id": "research_lesson_color_feeling_transition",
+    "normalization_success": true,
+    "contract_validation_success": false,
+    "contract_validation_errors": [
+      "event_0_execution_view_too_empty",
+      "event_0_design_view_missing_student_state_before",
+      "event_0_design_view_missing_student_state_after",
+      "event_0_design_view_missing_assessment_evidence",
+      "event_1_execution_view_too_empty",
+      "event_1_design_view_missing_student_state_before",
+      "event_1_design_view_missing_student_state_after",
+      "event_1_design_view_missing_assessment_evidence"
+    ]
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "normalization_success": true,
+    "contract_validation_success": true,
+    "contract_validation_errors": []
+  }
+]

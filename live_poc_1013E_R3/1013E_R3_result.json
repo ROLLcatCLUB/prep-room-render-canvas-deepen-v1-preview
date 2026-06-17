@@ -1,0 +1,33 @@
+{
+  "stage_id": "1013E_R3_LESSON_UNFOLDING_GRAPH_SCHEMA_NORMALIZER_AND_EFFECTIVENESS_EVAL",
+  "created_at": "2026-06-17T07:45:26+00:00",
+  "final_status": "FAIL_STANDARD_DAILY_REPAIR",
+  "next_stage": "1013E_R4_MODEL_STRATEGY_ADJUSTMENT",
+  "provider_called": true,
+  "model_called": true,
+  "provider_status": {
+    "provider_name": "openai_compatible",
+    "credential_available": true,
+    "credential_source": "env",
+    "model": "MiniMax-M2.7",
+    "base_url": "https://api.minimaxi.com/v1"
+  },
+  "aggregate": {
+    "case_count": 6,
+    "strict_or_wide_parse_success_count": 3,
+    "normalization_success_count": 3,
+    "contract_validation_success_count": 2,
+    "effectiveness_pass_count": 2,
+    "boundary_ok_count": 3,
+    "secret_scan_ok": true
+  },
+  "boundary_flags": {
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "official_archive_created": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "provider_called": true,
+  "model_called": true,
+  "case_count": 6,
+  "aggregate": {
+    "case_count": 6,
+    "strict_or_wide_parse_success_count": 3,
+    "normalization_success_count": 3,
+    "contract_validation_success_count": 2,
+    "effectiveness_pass_count": 2,
+    "boundary_ok_count": 3,
+    "secret_scan_ok": true
+  },
+  "provider_status": {
+    "provider_name": "openai_compatible",
+    "credential_available": true,
+    "credential_source": "env",
+    "model": "MiniMax-M2.7",
+    "base_url": "https://api.minimaxi.com/v1"
+  }
+}

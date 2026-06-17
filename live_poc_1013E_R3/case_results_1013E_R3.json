@@ -1,0 +1,1699 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "lesson_design_mode": "standard_daily",
+    "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+    "strict_json_success": false,
+    "wide_json_parse_success": false,
+    "normalization_success": false,
+    "contract_validation_success": false,
+    "contract_validation_errors": [
+      "payload_not_object"
+    ],
+    "effectiveness_pass": false,
+    "boundary_ok": false,
+    "secret_scan_hits": [],
+    "attempt_count": 2,
+    "attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 71077,
+        "provider_meta": {
+          "provider": "openai_compatible",
+          "model": "MiniMax-M2.7-highspeed",
+          "base_url_host": "api.minimaxi.com",
+          "credential_source": "env",
+          "reasoning_split": false,
+          "latency_ms": 71077
+        },
+        "raw_response_prefix_redacted": "```json\n{\n  \"lesson_unfolding_graph\": {\n    \"lesson_design_mode\": \"standard_daily\",\n    \"design_context\": {\n      \"grade\": \"三年级\",\n      \"subject\": \"美术\",\n      \"topic\": \"1-2《色彩的感觉》\"\n    },\n    \"cognitive_grounding\": {\n      \"core_learning_problem\": \"学生对冷暖色的感知停留在语言标签层面，缺乏视觉联结和情感体验\",\n      \"student_baseline\": \"学生能说出红、橙、黄、蓝等颜色名称，部分学生能表达颜色喜好，但无法区分冷暖色属性\",\n      \"real_stuck_point\": \"冷暖是抽象的感受，需要通过真实情境和视觉材料才能建立联结\",\n      \"target_shift\": \"从'知道颜色名称'到'能依据冷暖感受对色彩进行分类并说明理由'\",\n      \"key_focus\": \"冷暖色的直观感知与分类\",\n      \"key_difficulty\": \"将抽象的冷暖感受与具体色彩建立对应关系\"\n    },\n    \"constraints\": {\n      \"total_duration_minutes\": 40,\n      \"resource_budget\": \"medium\",\n      \"class_condition\": \"普通美术教室，有展示台，学生课桌可灵活调整\",\n      \"lesson_position\": \"unit_middle\",\n      \"material_conditions\": [\n        \"彩色卡纸（红、橙、黄、蓝、绿、紫各若干）\",\n "
+      },
+      {
+        "parser_mode": "provider_error",
+        "latency_ms": null,
+        "provider_meta": {
+          "provider": null,
+          "model": null,
+          "base_url_host": "",
+          "credential_source": null,
+          "reasoning_split": false,
+          "latency_ms": null
+        },
+        "raw_response_prefix_redacted": ""
+      }
+    ],
+    "normalized_payload": null,
+    "classroom_unfolding_effectiveness": {
+      "resource_purpose_score": 0,
+      "attention_focus_score": 0,
+      "teacher_guidance_score": 0,
+      "student_response_prediction_score": 0,
+      "scaffold_quality_score": 0,
+      "collection_method_reasoning_score": 0,
+      "media_material_timing_score": 0,
+      "assessment_evidence_score": 0,
+      "transition_script_score": 0,
+      "time_feasibility_score": 0,
+      "age_appropriateness_score": 0,
+      "overall_effectiveness_score": 0,
+      "pass": false,
+      "blockers": [
+        "missing_lesson_unfolding_graph"
+      ],
+      "issues": [
+        "missing_lesson_unfolding_graph"
+      ]
+    },
+    "time_balance": {
+      "total_event_minutes": 0.0,
+      "target_minutes": 40.0,
+      "over_time_minutes": 0.0,
+      "under_time_minutes": 40.0,
+      "time_balance_pass": false,
+      "rebalance_candidates": []
+    },
+    "provider_called": true,
+    "model_called": true,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 71077
+    }
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "lesson_design_mode": "standard_daily",
+    "teacher_input": "我想放一段美术和音乐结合的舞蹈，让学生感受节奏，再引到线条和色彩表现。帮我设计这一段怎么展开。",
+    "strict_json_success": false,
+    "wide_json_parse_success": false,
+    "normalization_success": false,
+    "contract_validation_success": false,
+    "contract_validation_errors": [
+      "payload_not_object"
+    ],
+    "effectiveness_pass": false,
+    "boundary_ok": false,
+    "secret_scan_hits": [],
+    "attempt_count": 2,
+    "attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 69779,
+        "provider_meta": {
+          "provider": "openai_compatible",
+          "model": "MiniMax-M2.7-highspeed",
+          "base_url_host": "api.minimaxi.com",
+          "credential_source": "env",
+          "reasoning_split": false,
+          "latency_ms": 69779
+        },
+        "raw_response_prefix_redacted": "```json\n{\n  \"lesson_unfolding_graph\": {\n    \"lesson_design_mode\": \"standard_daily\",\n    \"design_context\": {\n      \"grade\": \"三年级\",\n      \"subject\": \"美术\",\n      \"topic\": \"节奏与色彩/线条表现\"\n    },\n    \"cognitive_grounding\": {\n      \"core_learning_problem\": \"学生难以将抽象的节奏感知转化为可视的线条和色彩语言\",\n      \"student_baseline\": \"学生知道线条和颜色能表达感受，但容易把节奏理解成热闹或好看\",\n      \"real_stuck_point\": \"学生能感受到舞蹈的热闹氛围，但无法将节奏的快慢、强弱与线条的曲直、粗细或色彩的冷暖联系起来\",\n      \"target_shift\": \"从把节奏等同于'热闹'的模糊感受，到能够辨识节奏的快慢、强弱并用相应的线条粗细、曲直和色彩明暗、冷暖来表现\",\n      \"key_focus\": \"通过舞蹈视觉元素建立节奏感与线条色彩表现之间的对应关系\",\n      \"key_difficulty\": \"将听觉节奏转化为视觉表达的语言转换\"\n    },\n    \"constraints\": {\n      \"total_duration_minutes\": 40,\n      \"resource_budget\": \"medium\",\n      \"class_condition\": \"普通美术教室，有投影设备\",\n      \"lesson_position\": \"unit_middle\",\n      \"material_conditions\": [\n     "
+      },
+      {
+        "parser_mode": "provider_error",
+        "latency_ms": null,
+        "provider_meta": {
+          "provider": null,
+          "model": null,
+          "base_url_host": "",
+          "credential_source": null,
+          "reasoning_split": false,
+          "latency_ms": null
+        },
+        "raw_response_prefix_redacted": ""
+      }
+    ],
+    "normalized_payload": null,
+    "classroom_unfolding_effectiveness": {
+      "resource_purpose_score": 0,
+      "attention_focus_score": 0,
+      "teacher_guidance_score": 0,
+      "student_response_prediction_score": 0,
+      "scaffold_quality_score": 0,
+      "collection_method_reasoning_score": 0,
+      "media_material_timing_score": 0,
+      "assessment_evidence_score": 0,
+      "transition_script_score": 0,
+      "time_feasibility_score": 0,
+      "age_appropriateness_score": 0,
+      "overall_effectiveness_score": 0,
+      "pass": false,
+      "blockers": [
+        "missing_lesson_unfolding_graph"
+      ],
+      "issues": [
+        "missing_lesson_unfolding_graph"
+      ]
+    },
+    "time_balance": {
+      "total_event_minutes": 0.0,
+      "target_minutes": 40.0,
+      "over_time_minutes": 0.0,
+      "under_time_minutes": 40.0,
+      "time_balance_pass": false,
+      "rebalance_candidates": []
+    },
+    "provider_called": true,
+    "model_called": true,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 69779
+    }
+  },
+  {
+    "case_id": "quick_daily_basic_design",
+    "lesson_design_mode": "quick_daily",
+    "teacher_input": "今天时间不多，先帮我快速整理一版能上课的基本设计。",
+    "strict_json_success": true,
+    "wide_json_parse_success": true,
+    "normalization_success": true,
+    "contract_validation_success": true,
+    "contract_validation_errors": [],
+    "effectiveness_pass": true,
+    "boundary_ok": true,
+    "secret_scan_hits": [],
+    "attempt_count": 1,
+    "attempts": [
+      {
+        "parser_mode": "strict_json_parser",
+        "latency_ms": 61205,
+        "provider_meta": {
+          "provider": "openai_compatible",
+          "model": "MiniMax-M2.7-highspeed",
+          "base_url_host": "api.minimaxi.com",
+          "credential_source": "env",
+          "reasoning_split": false,
+          "latency_ms": 61205
+        },
+        "raw_response_prefix_redacted": "{\n  \"lesson_unfolding_graph\": {\n    \"lesson_design_mode\": \"quick_daily\",\n    \"design_context\": {\n      \"grade\": \"三年级\",\n      \"subject\": \"美术\",\n      \"topic\": \"1-2《色彩的感觉》\"\n    },\n    \"cognitive_grounding\": {\n      \"core_learning_problem\": \"学生能用颜色名称指认颜色，但无法具体描述颜色带来的感觉理由，只会笼统说\\\"好看\\\"\\\"漂亮\\\"\",\n      \"student_baseline\": \"能说颜色名称，但表达理由容易停在好看、漂亮\",\n      \"real_stuck_point\": \"缺乏将色彩与具体感受（情绪、联想、氛围）建立联系的语言支架\",\n      \"target_shift\": \"从只会说\\\"好看\\\"到能用具体词语描述色彩带来的感觉\",\n      \"key_focus\": \"为学生提供色彩感觉的描述词支架，让表达从\\\"好看\\\"升级到具体感受词\",\n      \"key_difficulty\": \"学生已有\\\"颜色有感觉\\\"的直觉，但缺乏描述感觉的语言工具\"\n    },\n    \"constraints\": {\n      \"total_duration_minutes\": 40,\n      \"resource_budget\": \"low\",\n      \"class_condition\": \"普通美术教室，基本绘画材料有\",\n      \"lesson_position\": \"unit_middle\",\n      \"material_conditions\": [\n        \"色卡或彩色纸若干\",\n       "
+      }
+    ],
+    "normalized_payload": {
+      "lesson_unfolding_graph": {
+        "lesson_design_mode": "quick_daily",
+        "design_context": {
+          "grade": "三年级",
+          "subject": "美术",
+          "topic": "1-2《色彩的感觉》"
+        },
+        "cognitive_grounding": {
+          "core_learning_problem": "学生能用颜色名称指认颜色，但无法具体描述颜色带来的感觉理由，只会笼统说\"好看\"\"漂亮\"",
+          "student_baseline": "能说颜色名称，但表达理由容易停在好看、漂亮",
+          "real_stuck_point": "缺乏将色彩与具体感受（情绪、联想、氛围）建立联系的语言支架",
+          "target_shift": "从只会说\"好看\"到能用具体词语描述色彩带来的感觉",
+          "key_focus": "为学生提供色彩感觉的描述词支架，让表达从\"好看\"升级到具体感受词",
+          "key_difficulty": "学生已有\"颜色有感觉\"的直觉，但缺乏描述感觉的语言工具"
+        },
+        "constraints": {
+          "total_duration_minutes": 40.0,
+          "resource_budget": "low",
+          "class_condition": "普通美术教室，基本绘画材料有",
+          "lesson_position": "unit_middle",
+          "material_conditions": [
+            "色卡或彩色纸若干",
+            "学习单（色彩感觉配对练习）",
+            "彩色画笔或蜡笔"
+          ]
+        },
+        "main_event_sequence": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "classroom_events": [
+          {
+            "event_id": "E1",
+            "event_name": "色彩感觉直觉唤醒",
+            "duration": {
+              "recommended_minutes": 8.0,
+              "min_minutes": 6.0,
+              "max_minutes": 10.0,
+              "time_risk": "低"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "老师举红卡：看到这块红色，你想到了什么？",
+              "core_question": "看到这种颜色，你的第一感觉是什么？",
+              "student_task": "看着老师展示的色卡，说出第一感觉",
+              "teacher_summary_sentence": "原来颜色真的会让我们产生不一样的感觉。"
+            },
+            "design_view": {
+              "learning_purpose": "激活学生对色彩感觉的直觉认知，引出\"色彩有感觉\"这个核心概念",
+              "design_intent": "通过快速展示3-4张对比色卡（红vs蓝、橙vs绿），让学生感受色彩的冷暖、情绪差异，为后续描述词引入做铺垫",
+              "student_state_before": "只知道颜色名字，从未想过颜色和感觉有什么关系",
+              "student_state_after": "意识到\"颜色真的会让人有感觉\"，对接下来探索具体描述词产生好奇",
+              "teacher_action": "快速展示对比色卡，用眼神和手势引导学生关注",
+              "student_action": "看色卡，说出第一反应",
+              "big_screen_state": "无（口述展示色卡）",
+              "textbook_or_material_state": "暂不打开",
+              "learning_sheet_state": "未发",
+              "assessment_evidence": "学生能说出\"热/冷\"\"开心/安静\"等感觉词（即使只有一个词也算通过）",
+              "transition_from_previous": "无",
+              "transition_to_next": "过渡语：\"那我们怎么能说得更清楚一点呢？接下来做个配对小游戏。\"",
+              "risk_and_adjustment": ""
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "红色感觉很热/很激动",
+                "teacher_next_move": "追问：热的感觉？还有呢？",
+                "scaffold": "板书感觉词：热烈、激动、温暖、热情"
+              },
+              {
+                "type": "partial",
+                "student_response": "蓝色好看",
+                "teacher_next_move": "引导：好看是感觉，但能说得更具体吗？比如蓝色让你觉得…",
+                "scaffold": "给出选项：冷静、安静、忧郁、干净"
+              },
+              {
+                "type": "silent",
+                "student_response": "沉默不回答",
+                "teacher_next_move": "请举手同学先说，给出示范词选择",
+                "scaffold": "给两个词选：蓝色让你觉得冷还是暖？"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "色卡（红、蓝、橙、绿4张）",
+              "why_needed": "提供视觉刺激，让感觉体验具体可见",
+              "attention_focus": "选择对比明显的颜色组合",
+              "fallback_if_unavailable": "用彩笔在白纸上快速画出色块代替"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "E2",
+            "event_name": "色彩感觉配对练习",
+            "duration": {
+              "recommended_minutes": 15.0,
+              "min_minutes": 12.0,
+              "max_minutes": 18.0,
+              "time_risk": "中"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "老师发学习单：学习单上有两列，左边是颜色，右边是词语，连线题，动手做。",
+              "core_question": "这个颜色和哪个感觉词最配？",
+              "student_task": "完成学习单上的色彩-感觉连线题",
+              "teacher_summary_sentence": "颜色和感觉是有规律的，比如暖色让人温暖，冷色让人安静。"
+            },
+            "design_view": {
+              "learning_purpose": "通过配对练习，让学生接触并使用色彩感觉的描述词，建立\"颜色词+感觉词\"的表达习惯",
+              "design_intent": "学习单提供8组颜色-词语配对，包括冷暖两组，每组有正确选项和干扰项，完成后快速对答案讲解",
+              "student_state_before": "只能说\"好看\"，没有具体描述词可用",
+              "student_state_after": "掌握了5个以上描述色彩的词语（温暖、热烈、冷静、安静、活泼等），能用\"XX色让我觉得XX\"说话",
+              "teacher_action": "发学习单，巡视辅导有困难的学生，组织对答案",
+              "student_action": "独立完成连线题，对答案时举手补充",
+              "big_screen_state": "无",
+              "textbook_or_material_state": "打开到相关页面备用",
+              "learning_sheet_state": "发放中",
+              "assessment_evidence": "80%学生能正确完成6组以上连线，并能说出\"暖色让人感觉温暖\"等规律",
+              "transition_from_previous": "承接E1的概念，引出描述词工具",
+              "transition_to_next": "过渡语：\"会用词还不够，我们来画画看，用颜色表达你的感觉。\"",
+              "risk_and_adjustment": ""
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "红色连热烈，蓝色连冷静，全部做对",
+                "teacher_next_move": "请学生解释为什么这么连",
+                "scaffold": "肯定并追问：你能说说原因吗？"
+              },
+              {
+                "type": "off_focus",
+                "student_response": "在画小人或乱涂",
+                "teacher_next_move": "轻拍桌子提醒：先完成连线题",
+                "scaffold": "手指学习单：请先做完这几道题"
+              },
+              {
+                "type": "silent",
+                "student_response": "坐着不动，不知道从哪里开始",
+                "teacher_next_move": "走到身边，手指第一组：看这个红色，你感觉热还是冷？",
+                "scaffold": "给出明确指令：红色感觉暖，连到暖的字那边"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "学习单（色彩感觉配对练习纸）",
+              "why_needed": "提供结构化练习，让学生在选择中内化描述词",
+              "attention_focus": "题目数量控制在8组，确保10分钟内完成",
+              "fallback_if_unavailable": "老师口述题目，学生在课本上圈选关键词"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "E3",
+            "event_name": "色彩感觉创作表达",
+            "duration": {
+              "recommended_minutes": 15.0,
+              "min_minutes": 12.0,
+              "max_minutes": 17.0,
+              "time_risk": "中"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "老师：用颜色表达一种感觉，画一幅小画，只用颜色，不画具体东西，画完写一句话。",
+              "core_question": "你想表达什么感觉？用什么颜色？",
+              "student_task": "用纯色块画一幅表达特定感觉的作品，并写一句描述语",
+              "teacher_summary_sentence": "今天大家学会了用具体词语描述颜色感觉，这是从\"好看\"到\"有感觉\"的进步。"
+            },
+            "design_view": {
+              "learning_purpose": "将所学的感觉词迁移到创作中，实现\"用颜色表达感觉\"的创作目标，检测是否能用新学词语",
+              "design_intent": "要求用色块表达一种感觉（从热烈、温暖、冷静、活泼中选一个），不画具体形象，只用颜色组合，写一句话\"XX色让我觉得XX\"",
+              "student_state_before": "能识别和连线，但独立创作时可能回到\"好看\"的表达",
+              "student_state_after": "能用具体感觉词描述自己选择的颜色，创作意图清晰",
+              "teacher_action": "说明要求，巡视并对学生的创作意图进行提问确认",
+              "student_action": "用彩色纸撕贴或画笔涂色块，完成后写一句描述语",
+              "big_screen_state": "无",
+              "textbook_or_material_state": "课本示例供参考（不照搬）",
+              "learning_sheet_state": "无",
+              "assessment_evidence": "学生作品旁有一句包含感觉词的描述，如\"红色和橙色让我觉得热烈\"，达标率70%以上即合格",
+              "transition_from_previous": "承接E2的词语学习，用于创作实践",
+              "transition_to_next": "收集作品，下节课继续探索色彩的奥秘",
+              "risk_and_adjustment": ""
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "画了红橙色块，写\"红橙色让我觉得热烈\"",
+                "teacher_next_move": "肯定：很好，你用上了感觉词，还有其他感觉想表达吗？",
+                "scaffold": "提供其他感觉词选择"
+              },
+              {
+                "type": "partial",
+                "student_response": "画了红橙色块，但写\"我觉得很好看\"",
+                "teacher_next_move": "引导：很好看是一种感觉，但能说得更具体吗？比如热烈还是温暖？",
+                "scaffold": "手指感觉词板书：选一个写在旁边"
+              },
+              {
+                "type": "off_focus",
+                "student_response": "开始画人物或具体物品",
+                "teacher_next_move": "提醒：今天的要求是用颜色块表达感觉，不是画东西哦",
+                "scaffold": "展示优秀示例：用色块组合，不用画形象"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "彩色纸（红、橙、黄、蓝、绿5色各若干）+ 胶水，或彩色画笔",
+              "why_needed": "提供创作材料，让感受落地为作品",
+              "attention_focus": "时间有限，选一种材料即可（撕贴或画笔）",
+              "fallback_if_unavailable": "只用画笔涂色块，彩色纸可用白纸代替"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          }
+        ],
+        "structure_rebalance_candidates": [],
+        "evidence_plan": [
+          "E1中学生的感觉词回应（口述记录）",
+          "E2学习单连线完成率和正确率",
+          "E3作品旁描述语是否包含感觉词（拍照留存）"
+        ],
+        "lesson_position_connection": {
+          "unit_start_entry": "承接上节课颜色名称的认知，进入颜色感觉的探索",
+          "unit_middle_next_lesson_connection": "本节建立了感觉词汇支架，下节可继续探索色彩的温度或对比色的感觉",
+          "unit_end_closure": ""
+        },
+        "closure_plan": "快速收尾：收集作品，教师用2分钟总结\"今天我们学会了用热烈、温暖、冷静、活泼这些词描述颜色的感觉，比说'好看'具体多了。\"",
+        "next_lesson_connection": "可延续色彩感觉主题，探索\"暖色和冷色放在一起会怎样\"，或进行色彩感觉画创作",
+        "quality_gate": {},
+        "time_balance": {
+          "total_event_minutes": 38.0,
+          "target_minutes": 40.0,
+          "over_time_minutes": 0.0,
+          "under_time_minutes": 2.0,
+          "time_balance_pass": true,
+          "rebalance_candidates": []
+        }
+      },
+      "field_patch_candidates": [],
+      "impact_scope": [],
+      "quality_gate_update": {},
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      },
+      "classroom_events": [
+        {
+          "event_id": "E1",
+          "event_name": "色彩感觉直觉唤醒",
+          "duration": {
+            "recommended_minutes": 8.0,
+            "min_minutes": 6.0,
+            "max_minutes": 10.0,
+            "time_risk": "低"
+          },
+          "execution_view": {
+            "teacher_focus_cue": "老师举红卡：看到这块红色，你想到了什么？",
+            "core_question": "看到这种颜色，你的第一感觉是什么？",
+            "student_task": "看着老师展示的色卡，说出第一感觉",
+            "teacher_summary_sentence": "原来颜色真的会让我们产生不一样的感觉。"
+          },
+          "design_view": {
+            "learning_purpose": "激活学生对色彩感觉的直觉认知，引出\"色彩有感觉\"这个核心概念",
+            "design_intent": "通过快速展示3-4张对比色卡（红vs蓝、橙vs绿），让学生感受色彩的冷暖、情绪差异，为后续描述词引入做铺垫",
+            "student_state_before": "只知道颜色名字，从未想过颜色和感觉有什么关系",
+            "student_state_after": "意识到\"颜色真的会让人有感觉\"，对接下来探索具体描述词产生好奇",
+            "teacher_action": "快速展示对比色卡，用眼神和手势引导学生关注",
+            "student_action": "看色卡，说出第一反应",
+            "big_screen_state": "无（口述展示色卡）",
+            "textbook_or_material_state": "暂不打开",
+            "learning_sheet_state": "未发",
+            "assessment_evidence": "学生能说出\"热/冷\"\"开心/安静\"等感觉词（即使只有一个词也算通过）",
+            "transition_from_previous": "无",
+            "transition_to_next": "过渡语：\"那我们怎么能说得更清楚一点呢？接下来做个配对小游戏。\"",
+            "risk_and_adjustment": ""
+          },
+          "student_response_model": [
+            {
+              "type": "expected",
+              "student_response": "红色感觉很热/很激动",
+              "teacher_next_move": "追问：热的感觉？还有呢？",
+              "scaffold": "板书感觉词：热烈、激动、温暖、热情"
+            },
+            {
+              "type": "partial",
+              "student_response": "蓝色好看",
+              "teacher_next_move": "引导：好看是感觉，但能说得更具体吗？比如蓝色让你觉得…",
+              "scaffold": "给出选项：冷静、安静、忧郁、干净"
+            },
+            {
+              "type": "silent",
+              "student_response": "沉默不回答",
+              "teacher_next_move": "请举手同学先说，给出示范词选择",
+              "scaffold": "给两个词选：蓝色让你觉得冷还是暖？"
+            }
+          ],
+          "resource_use": {
+            "resource_type": "色卡（红、蓝、橙、绿4张）",
+            "why_needed": "提供视觉刺激，让感觉体验具体可见",
+            "attention_focus": "选择对比明显的颜色组合",
+            "fallback_if_unavailable": "用彩笔在白纸上快速画出色块代替"
+          },
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "event_id": "E2",
+          "event_name": "色彩感觉配对练习",
+          "duration": {
+            "recommended_minutes": 15.0,
+            "min_minutes": 12.0,
+            "max_minutes": 18.0,
+            "time_risk": "中"
+          },
+          "execution_view": {
+            "teacher_focus_cue": "老师发学习单：学习单上有两列，左边是颜色，右边是词语，连线题，动手做。",
+            "core_question": "这个颜色和哪个感觉词最配？",
+            "student_task": "完成学习单上的色彩-感觉连线题",
+            "teacher_summary_sentence": "颜色和感觉是有规律的，比如暖色让人温暖，冷色让人安静。"
+          },
+          "design_view": {
+            "learning_purpose": "通过配对练习，让学生接触并使用色彩感觉的描述词，建立\"颜色词+感觉词\"的表达习惯",
+            "design_intent": "学习单提供8组颜色-词语配对，包括冷暖两组，每组有正确选项和干扰项，完成后快速对答案讲解",
+            "student_state_before": "只能说\"好看\"，没有具体描述词可用",
+            "student_state_after": "掌握了5个以上描述色彩的词语（温暖、热烈、冷静、安静、活泼等），能用\"XX色让我觉得XX\"说话",
+            "teacher_action": "发学习单，巡视辅导有困难的学生，组织对答案",
+            "student_action": "独立完成连线题，对答案时举手补充",
+            "big_screen_state": "无",
+            "textbook_or_material_state": "打开到相关页面备用",
+            "learning_sheet_state": "发放中",
+            "assessment_evidence": "80%学生能正确完成6组以上连线，并能说出\"暖色让人感觉温暖\"等规律",
+            "transition_from_previous": "承接E1的概念，引出描述词工具",
+            "transition_to_next": "过渡语：\"会用词还不够，我们来画画看，用颜色表达你的感觉。\"",
+            "risk_and_adjustment": ""
+          },
+          "student_response_model": [
+            {
+              "type": "expected",
+              "student_response": "红色连热烈，蓝色连冷静，全部做对",
+              "teacher_next_move": "请学生解释为什么这么连",
+              "scaffold": "肯定并追问：你能说说原因吗？"
+            },
+            {
+              "type": "off_focus",
+              "student_response": "在画小人或乱涂",
+              "teacher_next_move": "轻拍桌子提醒：先完成连线题",
+              "scaffold": "手指学习单：请先做完这几道题"
+            },
+            {
+              "type": "silent",
+              "student_response": "坐着不动，不知道从哪里开始",
+              "teacher_next_move": "走到身边，手指第一组：看这个红色，你感觉热还是冷？",
+              "scaffold": "给出明确指令：红色感觉暖，连到暖的字那边"
+            }
+          ],
+          "resource_use": {
+            "resource_type": "学习单（色彩感觉配对练习纸）",
+            "why_needed": "提供结构化练习，让学生在选择中内化描述词",
+            "attention_focus": "题目数量控制在8组，确保10分钟内完成",
+            "fallback_if_unavailable": "老师口述题目，学生在课本上圈选关键词"
+          },
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "event_id": "E3",
+          "event_name": "色彩感觉创作表达",
+          "duration": {
+            "recommended_minutes": 15.0,
+            "min_minutes": 12.0,
+            "max_minutes": 17.0,
+            "time_risk": "中"
+          },
+          "execution_view": {
+            "teacher_focus_cue": "老师：用颜色表达一种感觉，画一幅小画，只用颜色，不画具体东西，画完写一句话。",
+            "core_question": "你想表达什么感觉？用什么颜色？",
+            "student_task": "用纯色块画一幅表达特定感觉的作品，并写一句描述语",
+            "teacher_summary_sentence": "今天大家学会了用具体词语描述颜色感觉，这是从\"好看\"到\"有感觉\"的进步。"
+          },
+          "design_view": {
+            "learning_purpose": "将所学的感觉词迁移到创作中，实现\"用颜色表达感觉\"的创作目标，检测是否能用新学词语",
+            "design_intent": "要求用色块表达一种感觉（从热烈、温暖、冷静、活泼中选一个），不画具体形象，只用颜色组合，写一句话\"XX色让我觉得XX\"",
+            "student_state_before": "能识别和连线，但独立创作时可能回到\"好看\"的表达",
+            "student_state_after": "能用具体感觉词描述自己选择的颜色，创作意图清晰",
+            "teacher_action": "说明要求，巡视并对学生的创作意图进行提问确认",
+            "student_action": "用彩色纸撕贴或画笔涂色块，完成后写一句描述语",
+            "big_screen_state": "无",
+            "textbook_or_material_state": "课本示例供参考（不照搬）",
+            "learning_sheet_state": "无",
+            "assessment_evidence": "学生作品旁有一句包含感觉词的描述，如\"红色和橙色让我觉得热烈\"，达标率70%以上即合格",
+            "transition_from_previous": "承接E2的词语学习，用于创作实践",
+            "transition_to_next": "收集作品，下节课继续探索色彩的奥秘",
+            "risk_and_adjustment": ""
+          },
+          "student_response_model": [
+            {
+              "type": "expected",
+              "student_response": "画了红橙色块，写\"红橙色让我觉得热烈\"",
+              "teacher_next_move": "肯定：很好，你用上了感觉词，还有其他感觉想表达吗？",
+              "scaffold": "提供其他感觉词选择"
+            },
+            {
+              "type": "partial",
+              "student_response": "画了红橙色块，但写\"我觉得很好看\"",
+              "teacher_next_move": "引导：很好看是一种感觉，但能说得更具体吗？比如热烈还是温暖？",
+              "scaffold": "手指感觉词板书：选一个写在旁边"
+            },
+            {
+              "type": "off_focus",
+              "student_response": "开始画人物或具体物品",
+              "teacher_next_move": "提醒：今天的要求是用颜色块表达感觉，不是画东西哦",
+              "scaffold": "展示优秀示例：用色块组合，不用画形象"
+            }
+          ],
+          "resource_use": {
+            "resource_type": "彩色纸（红、橙、黄、蓝、绿5色各若干）+ 胶水，或彩色画笔",
+            "why_needed": "提供创作材料，让感受落地为作品",
+            "attention_focus": "时间有限，选一种材料即可（撕贴或画笔）",
+            "fallback_if_unavailable": "只用画笔涂色块，彩色纸可用白纸代替"
+          },
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ]
+    },
+    "classroom_unfolding_effectiveness": {
+      "resource_purpose_score": 5,
+      "attention_focus_score": 5,
+      "teacher_guidance_score": 5,
+      "student_response_prediction_score": 5,
+      "scaffold_quality_score": 5,
+      "collection_method_reasoning_score": 5,
+      "media_material_timing_score": 5,
+      "assessment_evidence_score": 5,
+      "transition_script_score": 5,
+      "time_feasibility_score": 5,
+      "age_appropriateness_score": 5,
+      "overall_effectiveness_score": 5.0,
+      "pass": true,
+      "blockers": [],
+      "issues": [],
+      "time_balance": {
+        "total_event_minutes": 38.0,
+        "target_minutes": 40.0,
+        "over_time_minutes": 0.0,
+        "under_time_minutes": 2.0,
+        "time_balance_pass": true,
+        "rebalance_candidates": []
+      }
+    },
+    "time_balance": {
+      "total_event_minutes": 38.0,
+      "target_minutes": 40.0,
+      "over_time_minutes": 0.0,
+      "under_time_minutes": 2.0,
+      "time_balance_pass": true,
+      "rebalance_candidates": []
+    },
+    "provider_called": true,
+    "model_called": true,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 61205
+    }
+  },
+  {
+    "case_id": "open_class_question_expression_evidence",
+    "lesson_design_mode": "open_class",
+    "teacher_input": "这节课我要拿来展示，问题串、学生表达和评价证据要更清楚。",
+    "strict_json_success": false,
+    "wide_json_parse_success": false,
+    "normalization_success": false,
+    "contract_validation_success": false,
+    "contract_validation_errors": [
+      "payload_not_object"
+    ],
+    "effectiveness_pass": false,
+    "boundary_ok": false,
+    "secret_scan_hits": [],
+    "attempt_count": 2,
+    "attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 63291,
+        "provider_meta": {
+          "provider": "openai_compatible",
+          "model": "MiniMax-M2.7-highspeed",
+          "base_url_host": "api.minimaxi.com",
+          "credential_source": "env",
+          "reasoning_split": false,
+          "latency_ms": 63291
+        },
+        "raw_response_prefix_redacted": "```json\n{\n  \"lesson_unfolding_graph\": {\n    \"lesson_design_mode\": \"open_class\",\n    \"design_context\": {\n      \"grade\": \"三年级\",\n      \"subject\": \"美术\",\n      \"topic\": \"1-2《色彩的感觉》\"\n    },\n    \"cognitive_grounding\": {\n      \"core_learning_problem\": \"学生能识别色彩，但缺乏描述色彩感受的词汇和思维框架，常停留在'好看'的浅层表达\",\n      \"student_baseline\": \"愿意说，但常常只说'颜色好看'，需要问题和表达支架\",\n      \"real_stuck_point\": \"无法将视觉感受转化为语言描述，缺乏色彩感觉的认知词汇（如明快、沉闷、温暖、冷静等）\",\n      \"target_shift\": \"从笼统的'颜色好看'到能用色彩感觉词汇描述色彩带来的情绪或联想\",\n      \"key_focus\": \"问题串设计（递进式提问）、学生表达支架（句式引导）、大屏实时呈现学生表达\",\n      \"key_difficulty\": \"将主观感受客观化、具体化表达\"\n    },\n    \"constraints\": {\n      \"total_duration_minutes\": 40,\n      \"resource_budget\": \"medium\",\n      \"class_condition\": \"普通美术教室，有投影大屏，学生有水彩画具基础\",\n      \"lesson_position\": \"unit_middle\",\n      \"material_conditions\": [\n        \""
+      },
+      {
+        "parser_mode": "provider_error",
+        "latency_ms": null,
+        "provider_meta": {
+          "provider": null,
+          "model": null,
+          "base_url_host": "",
+          "credential_source": null,
+          "reasoning_split": false,
+          "latency_ms": null
+        },
+        "raw_response_prefix_redacted": ""
+      }
+    ],
+    "normalized_payload": null,
+    "classroom_unfolding_effectiveness": {
+      "resource_purpose_score": 0,
+      "attention_focus_score": 0,
+      "teacher_guidance_score": 0,
+      "student_response_prediction_score": 0,
+      "scaffold_quality_score": 0,
+      "collection_method_reasoning_score": 0,
+      "media_material_timing_score": 0,
+      "assessment_evidence_score": 0,
+      "transition_script_score": 0,
+      "time_feasibility_score": 0,
+      "age_appropriateness_score": 0,
+      "overall_effectiveness_score": 0,
+      "pass": false,
+      "blockers": [
+        "missing_lesson_unfolding_graph"
+      ],
+      "issues": [
+        "missing_lesson_unfolding_graph"
+      ]
+    },
+    "time_balance": {
+      "total_event_minutes": 0.0,
+      "target_minutes": 40.0,
+      "over_time_minutes": 0.0,
+      "under_time_minutes": 40.0,
+      "time_balance_pass": false,
+      "rebalance_candidates": []
+    },
+    "provider_called": true,
+    "model_called": true,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 63291
+    }
+  },
+  {
+    "case_id": "research_lesson_color_feeling_transition",
+    "lesson_design_mode": "research_lesson",
+    "teacher_input": "我想研究学生怎么从说颜色好看，过渡到能说明颜色带来的感受。",
+    "strict_json_success": true,
+    "wide_json_parse_success": true,
+    "normalization_success": true,
+    "contract_validation_success": false,
+    "contract_validation_errors": [
+      "event_0_execution_view_too_empty",
+      "event_0_design_view_missing_student_state_before",
+      "event_0_design_view_missing_student_state_after",
+      "event_0_design_view_missing_assessment_evidence",
+      "event_1_execution_view_too_empty",
+      "event_1_design_view_missing_student_state_before",
+      "event_1_design_view_missing_student_state_after",
+      "event_1_design_view_missing_assessment_evidence"
+    ],
+    "effectiveness_pass": false,
+    "boundary_ok": true,
+    "secret_scan_hits": [],
+    "attempt_count": 2,
+    "attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 63995,
+        "provider_meta": {
+          "provider": "openai_compatible",
+          "model": "MiniMax-M2.7-highspeed",
+          "base_url_host": "api.minimaxi.com",
+          "credential_source": "env",
+          "reasoning_split": false,
+          "latency_ms": 63995
+        },
+        "raw_response_prefix_redacted": "```json\n{\n  \"lesson_unfolding_graph\": {\n    \"lesson_design_mode\": \"research_lesson\",\n    \"design_context\": {\n      \"grade\": \"三年级\",\n      \"subject\": \"美术\",\n      \"topic\": \"1-2《色彩的感觉》\"\n    },\n    \"cognitive_grounding\": {\n      \"core_learning_problem\": \"学生如何从泛化的'好看/喜欢'判断，过渡到能具体描述颜色带来的感受，并能建立'颜色-感受-理由'的表达链条？\",\n      \"student_baseline\": \"学生有丰富的颜色感知经验，能判断颜色'好看'或'不好看'，但表达停留在喜好层面，缺乏感受描述和理由支撑。\",\n      \"real_stuck_point\": \"学生能将颜色与情绪建立直觉联系，但难以将这种内隐感受转化为外显语言；容易混淆'我觉得好看'和'颜色让我感到...'。\",\n      \"target_shift\": \"从'我喜欢这个颜色，因为它好看'到'这个颜色让我感到温暖，因为它的色调让我联想到阳光'\",\n      \"key_focus\": \"感受-语言的外化过程\",\n      \"key_difficulty\": \"从直觉感受到语言表征的转化\"\n    },\n    \"constraints\": {\n      \"total_duration_minutes\": 40,\n      \"resource_budget\": \"medium\",\n      \"class_condition\": \"三年级常规班级，有基本绘画经验\",\n      \"lesson_position\": \"unit_middle\""
+      },
+      {
+        "parser_mode": "strict_json_parser",
+        "latency_ms": 29109,
+        "provider_meta": {
+          "provider": "openai_compatible",
+          "model": "MiniMax-M2.7-highspeed",
+          "base_url_host": "api.minimaxi.com",
+          "credential_source": "env",
+          "reasoning_split": false,
+          "latency_ms": 29109
+        },
+        "raw_response_prefix_redacted": "{\n  \"lesson_unfolding_graph\": {\n    \"cognitive_grounding\": {\n      \"core_learning_problem\": \"学生从喜好判断过渡到理由链\",\n      \"student_baseline\": \"表达多停留好看喜欢\",\n      \"real_stuck_point\": \"缺少感受与颜色的关联词\",\n      \"target_shift\": \"能用感受词描述颜色\",\n      \"key_focus\": \"感受词归类与颜色对应\",\n      \"key_difficulty\": \"从好看到温暖冷峻的概念跨越\"\n    },\n    \"constraints\": {\n      \"total_duration_minutes\": 40,\n      \"resource_budget\": \"彩色卡纸感受词卡\",\n      \"class_condition\": \"小组讨论可用\",\n      \"lesson_position\": \"课程前期\",\n      \"material_conditions\": \"多媒体支持\"\n    },\n    \"main_event_sequence\": [\"E1\", \"E2\"],\n    \"classroom_events\": [\n      {\n        \"event_id\": \"E1\",\n        \"duration\": \"15分钟\",\n        \"execution_view\": \"学生看三张图片说颜色感受\",\n        \"design_view\": \"引出感受词收集任务\",\n        \"student_response_model\": \"学生从好看向感受词延伸\",\n        \"resource_use\": \"三张彩色图片词卡\""
+      }
+    ],
+    "normalized_payload": {
+      "lesson_unfolding_graph": {
+        "lesson_design_mode": "standard_daily",
+        "design_context": {
+          "grade": "三年级",
+          "subject": "美术",
+          "unit": "色彩单元",
+          "lesson_code": "1-2",
+          "lesson_title": "色彩的感觉"
+        },
+        "cognitive_grounding": {
+          "core_learning_problem": "学生从喜好判断过渡到理由链",
+          "student_baseline": "表达多停留好看喜欢",
+          "real_stuck_point": "缺少感受与颜色的关联词",
+          "target_shift": "能用感受词描述颜色",
+          "key_focus": "感受词归类与颜色对应",
+          "key_difficulty": "从好看到温暖冷峻的概念跨越"
+        },
+        "constraints": {
+          "total_duration_minutes": 40.0,
+          "resource_budget": "medium",
+          "class_condition": "小组讨论可用",
+          "lesson_position": "unit_middle",
+          "material_conditions": [
+            "多媒体支持"
+          ]
+        },
+        "main_event_sequence": [
+          "E1",
+          "E2"
+        ],
+        "classroom_events": [
+          {
+            "event_id": "E1",
+            "event_name": "课堂事件1",
+            "duration": {
+              "recommended_minutes": 5.0,
+              "min_minutes": 3.0,
+              "max_minutes": 7.0,
+              "time_risk": ""
+            },
+            "execution_view": {
+              "teacher_focus_cue": "",
+              "core_question": "",
+              "student_task": "",
+              "teacher_summary_sentence": ""
+            },
+            "design_view": {
+              "learning_purpose": "",
+              "design_intent": "",
+              "student_state_before": "",
+              "student_state_after": "",
+              "teacher_action": "",
+              "student_action": "",
+              "big_screen_state": "",
+              "textbook_or_material_state": "",
+              "learning_sheet_state": "",
+              "assessment_evidence": "",
+              "transition_from_previous": "",
+              "transition_to_next": "",
+              "risk_and_adjustment": ""
+            },
+            "student_response_model": [],
+            "resource_use": {
+              "resource_type": "",
+              "why_needed": "",
+              "attention_focus": "",
+              "fallback_if_unavailable": ""
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "E2",
+            "event_name": "课堂事件2",
+            "duration": {
+              "recommended_minutes": 5.0,
+              "min_minutes": 3.0,
+              "max_minutes": 7.0,
+              "time_risk": ""
+            },
+            "execution_view": {
+              "teacher_focus_cue": "",
+              "core_question": "",
+              "student_task": "",
+              "teacher_summary_sentence": ""
+            },
+            "design_view": {
+              "learning_purpose": "",
+              "design_intent": "",
+              "student_state_before": "",
+              "student_state_after": "",
+              "teacher_action": "",
+              "student_action": "",
+              "big_screen_state": "",
+              "textbook_or_material_state": "",
+              "learning_sheet_state": "",
+              "assessment_evidence": "",
+              "transition_from_previous": "",
+              "transition_to_next": "",
+              "risk_and_adjustment": ""
+            },
+            "student_response_model": [],
+            "resource_use": {
+              "resource_type": "",
+              "why_needed": "",
+              "attention_focus": "",
+              "fallback_if_unavailable": ""
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          }
+        ],
+        "structure_rebalance_candidates": [
+          {
+            "action": "expand",
+            "target_event_id": "E2",
+            "reason": "当前总时长少约 30.0 分钟，可增加表达、展示或反馈证据。",
+            "impact_chain": [
+              "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+            ]
+          }
+        ],
+        "evidence_plan": [],
+        "lesson_position_connection": {
+          "unit_start_entry": "",
+          "unit_middle_next_lesson_connection": "",
+          "unit_end_closure": ""
+        },
+        "closure_plan": "",
+        "next_lesson_connection": "",
+        "quality_gate": {
+          "gate_1": "学生说出非好看类感受词",
+          "gate_2": "小组归类形成理由说明",
+          "update_needed": "等待老师确认后更新"
+        },
+        "time_balance": {
+          "total_event_minutes": 10.0,
+          "target_minutes": 40.0,
+          "over_time_minutes": 0.0,
+          "under_time_minutes": 30.0,
+          "time_balance_pass": false,
+          "rebalance_candidates": [
+            {
+              "action": "expand",
+              "target_event_id": "E2",
+              "reason": "当前总时长少约 30.0 分钟，可增加表达、展示或反馈证据。",
+              "impact_chain": [
+                "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+              ]
+            }
+          ]
+        }
+      },
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "r3-p1",
+          "target_section": "teaching_process",
+          "target_step_id": "",
+          "target_field": "classroom_event",
+          "patch_type": "revise",
+          "before_summary": "",
+          "after_candidate": "",
+          "reasoning_basis": [
+            "教师输入",
+            "教学预设"
+          ],
+          "impact_scope": [],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "r3-p2",
+          "target_section": "teaching_process",
+          "target_step_id": "",
+          "target_field": "classroom_event",
+          "patch_type": "revise",
+          "before_summary": "",
+          "after_candidate": "",
+          "reasoning_basis": [
+            "教师输入",
+            "教学预设"
+          ],
+          "impact_scope": [],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [],
+      "quality_gate_update": {
+        "gate_1": "学生说出非好看类感受词",
+        "gate_2": "小组归类形成理由说明",
+        "update_needed": "等待老师确认后更新"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      },
+      "classroom_events": [
+        {
+          "event_id": "E1",
+          "event_name": "课堂事件1",
+          "duration": {
+            "recommended_minutes": 5.0,
+            "min_minutes": 3.0,
+            "max_minutes": 7.0,
+            "time_risk": ""
+          },
+          "execution_view": {
+            "teacher_focus_cue": "",
+            "core_question": "",
+            "student_task": "",
+            "teacher_summary_sentence": ""
+          },
+          "design_view": {
+            "learning_purpose": "",
+            "design_intent": "",
+            "student_state_before": "",
+            "student_state_after": "",
+            "teacher_action": "",
+            "student_action": "",
+            "big_screen_state": "",
+            "textbook_or_material_state": "",
+            "learning_sheet_state": "",
+            "assessment_evidence": "",
+            "transition_from_previous": "",
+            "transition_to_next": "",
+            "risk_and_adjustment": ""
+          },
+          "student_response_model": [],
+          "resource_use": {
+            "resource_type": "",
+            "why_needed": "",
+            "attention_focus": "",
+            "fallback_if_unavailable": ""
+          },
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "event_id": "E2",
+          "event_name": "课堂事件2",
+          "duration": {
+            "recommended_minutes": 5.0,
+            "min_minutes": 3.0,
+            "max_minutes": 7.0,
+            "time_risk": ""
+          },
+          "execution_view": {
+            "teacher_focus_cue": "",
+            "core_question": "",
+            "student_task": "",
+            "teacher_summary_sentence": ""
+          },
+          "design_view": {
+            "learning_purpose": "",
+            "design_intent": "",
+            "student_state_before": "",
+            "student_state_after": "",
+            "teacher_action": "",
+            "student_action": "",
+            "big_screen_state": "",
+            "textbook_or_material_state": "",
+            "learning_sheet_state": "",
+            "assessment_evidence": "",
+            "transition_from_previous": "",
+            "transition_to_next": "",
+            "risk_and_adjustment": ""
+          },
+          "student_response_model": [],
+          "resource_use": {
+            "resource_type": "",
+            "why_needed": "",
+            "attention_focus": "",
+            "fallback_if_unavailable": ""
+          },
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ]
+    },
+    "classroom_unfolding_effectiveness": {
+      "resource_purpose_score": 0,
+      "attention_focus_score": 0,
+      "teacher_guidance_score": 0,
+      "student_response_prediction_score": 0,
+      "scaffold_quality_score": 0,
+      "collection_method_reasoning_score": 0,
+      "media_material_timing_score": 0,
+      "assessment_evidence_score": 0,
+      "transition_script_score": 0,
+      "time_feasibility_score": 2,
+      "age_appropriateness_score": 5,
+      "overall_effectiveness_score": 0.64,
+      "pass": false,
+      "blockers": [],
+      "issues": [
+        "resource_purpose_score_low",
+        "attention_focus_score_low",
+        "teacher_guidance_score_low",
+        "student_response_prediction_score_low",
+        "scaffold_quality_score_low",
+        "collection_method_reasoning_score_low",
+        "media_material_timing_score_low",
+        "assessment_evidence_score_low",
+        "transition_script_score_low",
+        "time_feasibility_score_low"
+      ],
+      "time_balance": {
+        "total_event_minutes": 10.0,
+        "target_minutes": 40.0,
+        "over_time_minutes": 0.0,
+        "under_time_minutes": 30.0,
+        "time_balance_pass": false,
+        "rebalance_candidates": [
+          {
+            "action": "expand",
+            "target_event_id": "E2",
+            "reason": "当前总时长少约 30.0 分钟，可增加表达、展示或反馈证据。",
+            "impact_chain": [
+              "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+            ]
+          }
+        ]
+      }
+    },
+    "time_balance": {
+      "total_event_minutes": 10.0,
+      "target_minutes": 40.0,
+      "over_time_minutes": 0.0,
+      "under_time_minutes": 30.0,
+      "time_balance_pass": false,
+      "rebalance_candidates": [
+        {
+          "action": "expand",
+          "target_event_id": "E2",
+          "reason": "当前总时长少约 30.0 分钟，可增加表达、展示或反馈证据。",
+          "impact_chain": [
+            "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+          ]
+        }
+      ]
+    },
+    "provider_called": true,
+    "model_called": true,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 29109
+    }
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "lesson_design_mode": "standard_daily",
+    "teacher_input": "这节课不能放视频，也没有平板，只有黑板和几张图片，帮我把活动改得还能上。",
+    "strict_json_success": true,
+    "wide_json_parse_success": true,
+    "normalization_success": true,
+    "contract_validation_success": true,
+    "contract_validation_errors": [],
+    "effectiveness_pass": true,
+    "boundary_ok": true,
+    "secret_scan_hits": [],
+    "attempt_count": 1,
+    "attempts": [
+      {
+        "parser_mode": "strict_json_parser",
+        "latency_ms": 44714,
+        "provider_meta": {
+          "provider": "openai_compatible",
+          "model": "MiniMax-M2.7-highspeed",
+          "base_url_host": "api.minimaxi.com",
+          "credential_source": "env",
+          "reasoning_split": false,
+          "latency_ms": 44714
+        },
+        "raw_response_prefix_redacted": "{\n  \"lesson_unfolding_graph\": {\n    \"lesson_design_mode\": \"standard_daily\",\n    \"design_context\": {\n      \"grade\": \"三年级\",\n      \"subject\": \"美术\",\n      \"topic\": \"1-2《色彩的感觉》\"\n    },\n    \"cognitive_grounding\": {\n      \"core_learning_problem\": \"学生难以仅通过语言描述理解色彩的情绪表达和纯度变化\",\n      \"student_baseline\": \"学生需要直观材料支持，单靠口头讲解容易理解偏浅\",\n      \"real_stuck_point\": \"学生知道颜色不同，但对“纯度”“明度”等概念缺乏感知经验\",\n      \"target_shift\": \"从只知道颜色名称到能用色彩表达情绪和感受\",\n      \"key_focus\": \"色彩纯度与情感表达的对应关系\",\n      \"key_difficulty\": \"将抽象的色彩属性转化为具体的视觉感知和情感体验\"\n    },\n    \"constraints\": {\n      \"total_duration_minutes\": 40,\n      \"resource_budget\": \"low\",\n      \"class_condition\": \"无视频设备、无平板，黑板和图片可用\",\n      \"lesson_position\": \"unit_middle\",\n      \"material_conditions\": [\"黑板\", \"彩色粉笔\", \"白纸\", \"蜡笔或彩色铅笔\", \"2-3张色彩对比图片\"]\n    },\n    \"main_event_sequenc"
+      }
+    ],
+    "normalized_payload": {
+      "lesson_unfolding_graph": {
+        "lesson_design_mode": "standard_daily",
+        "design_context": {
+          "grade": "三年级",
+          "subject": "美术",
+          "topic": "1-2《色彩的感觉》"
+        },
+        "cognitive_grounding": {
+          "core_learning_problem": "学生难以仅通过语言描述理解色彩的情绪表达和纯度变化",
+          "student_baseline": "学生需要直观材料支持，单靠口头讲解容易理解偏浅",
+          "real_stuck_point": "学生知道颜色不同，但对“纯度”“明度”等概念缺乏感知经验",
+          "target_shift": "从只知道颜色名称到能用色彩表达情绪和感受",
+          "key_focus": "色彩纯度与情感表达的对应关系",
+          "key_difficulty": "将抽象的色彩属性转化为具体的视觉感知和情感体验"
+        },
+        "constraints": {
+          "total_duration_minutes": 40.0,
+          "resource_budget": "low",
+          "class_condition": "无视频设备、无平板，黑板和图片可用",
+          "lesson_position": "unit_middle",
+          "material_conditions": [
+            "黑板",
+            "彩色粉笔",
+            "白纸",
+            "蜡笔或彩色铅笔",
+            "2-3张色彩对比图片"
+          ]
+        },
+        "main_event_sequence": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "classroom_events": [
+          {
+            "event_id": "E1",
+            "event_name": "导入：色彩初感知",
+            "duration": {
+              "recommended_minutes": 5.0,
+              "min_minutes": 4.0,
+              "max_minutes": 6.0,
+              "time_risk": "低"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "同学们看这两块颜色，它们的“性格”一样吗？",
+              "core_question": "这两种红色给你的感觉有什么不同？",
+              "student_task": "观察图片，说出感受",
+              "teacher_summary_sentence": "颜色有明暗之分，这就是色彩的明度变化"
+            },
+            "design_view": {
+              "learning_purpose": "通过视觉对比激活学生对色彩感受的已有经验",
+              "design_intent": "用图片建立直观感知，为后续概念建构铺垫",
+              "student_state_before": "对色彩的认识停留在名称层面",
+              "student_state_after": "初步感知到不同纯度的色彩带来不同感受",
+              "teacher_action": "在黑板上贴出高纯度与低纯度对比图片，引导观察",
+              "student_action": "观察图片，用“感觉词”描述看到的颜色",
+              "big_screen_state": "无",
+              "textbook_or_material_state": "展示2-3张色彩对比图片",
+              "learning_sheet_state": "无",
+              "assessment_evidence": "学生能用“鲜艳-暗淡”“热闹-安静”等词汇描述色彩",
+              "transition_from_previous": "承接上节课的色彩认识",
+              "transition_to_next": "过渡到色彩纯度概念的正式讲解",
+              "risk_and_adjustment": ""
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "这块红颜色看起来很亮、很活泼，那块红颜色有点灰灰的、有点悲伤",
+                "teacher_next_move": "肯定学生感受，引出“纯度”概念",
+                "scaffold": "追问：它们让你想到不同的场景吗？"
+              },
+              {
+                "type": "off_focus",
+                "student_response": "我喜欢红色，不喜欢灰色",
+                "teacher_next_move": "将偏好转向感受描述",
+                "scaffold": "那你能说说灰色让你想到什么场景吗？"
+              },
+              {
+                "type": "silent",
+                "student_response": "（沉默，不知如何描述）",
+                "teacher_next_move": "提供感受词汇支架",
+                "scaffold": "像太阳一样热热的，还是像阴天那样凉凉的？"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "色彩对比图片（2-3张）",
+              "why_needed": "提供视觉参照，让学生有具体感知对象",
+              "attention_focus": "图片需有明显的高纯度与低纯度对比",
+              "fallback_if_unavailable": "用彩色粉笔在黑板上画出色块对比，直接演示"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "E2",
+            "event_name": "探究：色彩与情绪配对",
+            "duration": {
+              "recommended_minutes": 15.0,
+              "min_minutes": 12.0,
+              "max_minutes": 18.0,
+              "time_risk": "中"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "如果我要画一幅开心的生日会，该用什么颜色？悲伤的雨天呢？",
+              "core_question": "不同的色彩可以帮助我们表达什么样的心情？",
+              "student_task": "将情绪词汇与色彩进行匹配，说出理由",
+              "teacher_summary_sentence": "高纯度色彩让人感到欢快，低纯度色彩让人感到沉静"
+            },
+            "design_view": {
+              "learning_purpose": "深化色彩与情感对应关系的理解，建立应用意识",
+              "design_intent": "通过互动问答，让学生在思辨中建构色彩情感表达的概念",
+              "student_state_before": "知道不同颜色带来不同感受，但不确定如何选择",
+              "student_state_after": "能用“纯度”概念解释色彩与情绪的对应关系",
+              "teacher_action": "黑板板书情绪词汇，引导学生讨论并板书对应色彩",
+              "student_action": "参与讨论，说出自己选择某颜色的理由",
+              "big_screen_state": "无",
+              "textbook_or_material_state": "无",
+              "learning_sheet_state": "无",
+              "assessment_evidence": "学生能用“因为…所以选择…”的句式解释色彩选择",
+              "transition_from_previous": "从E1的颜色感知过渡到色彩选择的应用",
+              "transition_to_next": "过渡到实践创作环节",
+              "risk_and_adjustment": ""
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "开心的画要用很鲜艳的颜色，因为鲜艳的颜色看起来很热闹；难过的画可以用暗暗的蓝色或灰色",
+                "teacher_next_move": "追问：除了鲜艳，还有什么特点让颜色看起来开心？",
+                "scaffold": "颜色是亮还是暗？"
+              },
+              {
+                "type": "misconception",
+                "student_response": "蓝色就是悲伤的，所以画悲伤场景只能用蓝色",
+                "teacher_next_move": "提供反例，扩展思路",
+                "scaffold": "如果悲伤的场景里有一点阳光，你会用什么颜色点缀？"
+              },
+              {
+                "type": "silent",
+                "student_response": "（不确定如何回答）",
+                "teacher_next_move": "降低难度，给出选择",
+                "scaffold": "你觉得红色像开心还是蓝色像开心？"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "黑板板书",
+              "why_needed": "记录学生讨论成果，形成可视化概念框架",
+              "attention_focus": "板书布局清晰，情绪词汇与色彩形成对应关系",
+              "fallback_if_unavailable": "无（黑板为基本条件）"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          },
+          {
+            "event_id": "E3",
+            "event_name": "创作：我的色彩心情画",
+            "duration": {
+              "recommended_minutes": 16.0,
+              "min_minutes": 14.0,
+              "max_minutes": 20.0,
+              "time_risk": "中"
+            },
+            "execution_view": {
+              "teacher_focus_cue": "选一个你最想表达的情绪，用色彩把它画出来",
+              "core_question": "你选择的颜色能让人一眼看出你想表达的心情吗？",
+              "student_task": "用蜡笔或彩色铅笔创作一幅表达特定情绪的色彩画",
+              "teacher_summary_sentence": "用对了色彩，你的画就会说话"
+            },
+            "design_view": {
+              "learning_purpose": "将色彩情感表达的概念转化为实践创作能力",
+              "design_intent": "让学生在创作中体验色彩的情感表达功能",
+              "student_state_before": "了解色彩与情绪的对应关系，但未进行过有意识的创作",
+              "student_state_after": "能用色彩有意识地表达特定情绪",
+              "teacher_action": "巡视指导，关注色彩选择与表达意图的一致性",
+              "student_action": "创作色彩心情画，可画简单图形或色块组合",
+              "big_screen_state": "无",
+              "textbook_or_material_state": "无",
+              "learning_sheet_state": "无",
+              "assessment_evidence": "学生能用2-3句话解释自己画中色彩的选择理由",
+              "transition_from_previous": "从讨论环节进入实践创作",
+              "transition_to_next": "过渡到展示评价环节",
+              "risk_and_adjustment": ""
+            },
+            "student_response_model": [
+              {
+                "type": "expected",
+                "student_response": "我画的是开心的画面，所以用了大红色和黄色，背景用了淡淡的粉色",
+                "teacher_next_move": "肯定并追问细节",
+                "scaffold": "为什么背景用粉色而不是大红色？"
+              },
+              {
+                "type": "off_focus",
+                "student_response": "我画了一辆车",
+                "teacher_next_move": "引导回归色彩表达主题",
+                "scaffold": "你画的车是什么颜色的？它看起来是开心的车还是安静的车？"
+              },
+              {
+                "type": "silent",
+                "student_response": "（不知道画什么）",
+                "teacher_next_move": "提供简单选项",
+                "scaffold": "你想画开心还是安静？开心的话我们用什么颜色？"
+              }
+            ],
+            "resource_use": {
+              "resource_type": "白纸、蜡笔或彩色铅笔",
+              "why_needed": "创作基本工具，承载学生色彩表达实践",
+              "attention_focus": "确保每个学生都有足够的色彩材料可选",
+              "fallback_if_unavailable": "若蜡笔不足，可准备彩色粉笔让学生在黑板上创作"
+            },
+            "teacher_review_required": true,
+            "formal_apply_performed": false
+          }
+        ],
+        "structure_rebalance_candidates": [
+          {
+            "action": "expand",
+            "target_event_id": "E3",
+            "reason": "当前总时长少约 4.0 分钟，可增加表达、展示或反馈证据。",
+            "impact_chain": [
+              "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+            ]
+          }
+        ],
+        "evidence_plan": [
+          "E1阶段：观察学生能否用感受词汇描述色彩差异",
+          "E2阶段：记录学生能否用“因为…所以…”解释色彩选择",
+          "E3阶段：学生能用语言解释自己作品的色彩表达意图"
+        ],
+        "lesson_position_connection": {
+          "unit_start_entry": "承接上一课时对红、黄、蓝三原色的认识",
+          "unit_middle_next_lesson_connection": "本课时聚焦纯度与情感表达，下一课时可进入明度变化或色彩搭配内容",
+          "unit_end_closure": ""
+        },
+        "closure_plan": "邀请2-3名学生展示作品，用一句话说明色彩选择的理由。引导学生发现：用对色彩，画面就能传递情绪。",
+        "next_lesson_connection": "可继续探索色彩的明度变化，或者进入色彩搭配（邻近色、对比色）的内容",
+        "quality_gate": {},
+        "time_balance": {
+          "total_event_minutes": 36.0,
+          "target_minutes": 40.0,
+          "over_time_minutes": 0.0,
+          "under_time_minutes": 4.0,
+          "time_balance_pass": false,
+          "rebalance_candidates": [
+            {
+              "action": "expand",
+              "target_event_id": "E3",
+              "reason": "当前总时长少约 4.0 分钟，可增加表达、展示或反馈证据。",
+              "impact_chain": [
+                "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+              ]
+            }
+          ]
+        }
+      },
+      "classroom_events": [
+        {
+          "event_id": "E1",
+          "event_name": "导入：色彩初感知",
+          "duration": {
+            "recommended_minutes": 5.0,
+            "min_minutes": 4.0,
+            "max_minutes": 6.0,
+            "time_risk": "低"
+          },
+          "execution_view": {
+            "teacher_focus_cue": "同学们看这两块颜色，它们的“性格”一样吗？",
+            "core_question": "这两种红色给你的感觉有什么不同？",
+            "student_task": "观察图片，说出感受",
+            "teacher_summary_sentence": "颜色有明暗之分，这就是色彩的明度变化"
+          },
+          "design_view": {
+            "learning_purpose": "通过视觉对比激活学生对色彩感受的已有经验",
+            "design_intent": "用图片建立直观感知，为后续概念建构铺垫",
+            "student_state_before": "对色彩的认识停留在名称层面",
+            "student_state_after": "初步感知到不同纯度的色彩带来不同感受",
+            "teacher_action": "在黑板上贴出高纯度与低纯度对比图片，引导观察",
+            "student_action": "观察图片，用“感觉词”描述看到的颜色",
+            "big_screen_state": "无",
+            "textbook_or_material_state": "展示2-3张色彩对比图片",
+            "learning_sheet_state": "无",
+            "assessment_evidence": "学生能用“鲜艳-暗淡”“热闹-安静”等词汇描述色彩",
+            "transition_from_previous": "承接上节课的色彩认识",
+            "transition_to_next": "过渡到色彩纯度概念的正式讲解",
+            "risk_and_adjustment": ""
+          },
+          "student_response_model": [
+            {
+              "type": "expected",
+              "student_response": "这块红颜色看起来很亮、很活泼，那块红颜色有点灰灰的、有点悲伤",
+              "teacher_next_move": "肯定学生感受，引出“纯度”概念",
+              "scaffold": "追问：它们让你想到不同的场景吗？"
+            },
+            {
+              "type": "off_focus",
+              "student_response": "我喜欢红色，不喜欢灰色",
+              "teacher_next_move": "将偏好转向感受描述",
+              "scaffold": "那你能说说灰色让你想到什么场景吗？"
+            },
+            {
+              "type": "silent",
+              "student_response": "（沉默，不知如何描述）",
+              "teacher_next_move": "提供感受词汇支架",
+              "scaffold": "像太阳一样热热的，还是像阴天那样凉凉的？"
+            }
+          ],
+          "resource_use": {
+            "resource_type": "色彩对比图片（2-3张）",
+            "why_needed": "提供视觉参照，让学生有具体感知对象",
+            "attention_focus": "图片需有明显的高纯度与低纯度对比",
+            "fallback_if_unavailable": "用彩色粉笔在黑板上画出色块对比，直接演示"
+          },
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "event_id": "E2",
+          "event_name": "探究：色彩与情绪配对",
+          "duration": {
+            "recommended_minutes": 15.0,
+            "min_minutes": 12.0,
+            "max_minutes": 18.0,
+            "time_risk": "中"
+          },
+          "execution_view": {
+            "teacher_focus_cue": "如果我要画一幅开心的生日会，该用什么颜色？悲伤的雨天呢？",
+            "core_question": "不同的色彩可以帮助我们表达什么样的心情？",
+            "student_task": "将情绪词汇与色彩进行匹配，说出理由",
+            "teacher_summary_sentence": "高纯度色彩让人感到欢快，低纯度色彩让人感到沉静"
+          },
+          "design_view": {
+            "learning_purpose": "深化色彩与情感对应关系的理解，建立应用意识",
+            "design_intent": "通过互动问答，让学生在思辨中建构色彩情感表达的概念",
+            "student_state_before": "知道不同颜色带来不同感受，但不确定如何选择",
+            "student_state_after": "能用“纯度”概念解释色彩与情绪的对应关系",
+            "teacher_action": "黑板板书情绪词汇，引导学生讨论并板书对应色彩",
+            "student_action": "参与讨论，说出自己选择某颜色的理由",
+            "big_screen_state": "无",
+            "textbook_or_material_state": "无",
+            "learning_sheet_state": "无",
+            "assessment_evidence": "学生能用“因为…所以选择…”的句式解释色彩选择",
+            "transition_from_previous": "从E1的颜色感知过渡到色彩选择的应用",
+            "transition_to_next": "过渡到实践创作环节",
+            "risk_and_adjustment": ""
+          },
+          "student_response_model": [
+            {
+              "type": "expected",
+              "student_response": "开心的画要用很鲜艳的颜色，因为鲜艳的颜色看起来很热闹；难过的画可以用暗暗的蓝色或灰色",
+              "teacher_next_move": "追问：除了鲜艳，还有什么特点让颜色看起来开心？",
+              "scaffold": "颜色是亮还是暗？"
+            },
+            {
+              "type": "misconception",
+              "student_response": "蓝色就是悲伤的，所以画悲伤场景只能用蓝色",
+              "teacher_next_move": "提供反例，扩展思路",
+              "scaffold": "如果悲伤的场景里有一点阳光，你会用什么颜色点缀？"
+            },
+            {
+              "type": "silent",
+              "student_response": "（不确定如何回答）",
+              "teacher_next_move": "降低难度，给出选择",
+              "scaffold": "你觉得红色像开心还是蓝色像开心？"
+            }
+          ],
+          "resource_use": {
+            "resource_type": "黑板板书",
+            "why_needed": "记录学生讨论成果，形成可视化概念框架",
+            "attention_focus": "板书布局清晰，情绪词汇与色彩形成对应关系",
+            "fallback_if_unavailable": "无（黑板为基本条件）"
+          },
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "event_id": "E3",
+          "event_name": "创作：我的色彩心情画",
+          "duration": {
+            "recommended_minutes": 16.0,
+            "min_minutes": 14.0,
+            "max_minutes": 20.0,
+            "time_risk": "中"
+          },
+          "execution_view": {
+            "teacher_focus_cue": "选一个你最想表达的情绪，用色彩把它画出来",
+            "core_question": "你选择的颜色能让人一眼看出你想表达的心情吗？",
+            "student_task": "用蜡笔或彩色铅笔创作一幅表达特定情绪的色彩画",
+            "teacher_summary_sentence": "用对了色彩，你的画就会说话"
+          },
+          "design_view": {
+            "learning_purpose": "将色彩情感表达的概念转化为实践创作能力",
+            "design_intent": "让学生在创作中体验色彩的情感表达功能",
+            "student_state_before": "了解色彩与情绪的对应关系，但未进行过有意识的创作",
+            "student_state_after": "能用色彩有意识地表达特定情绪",
+            "teacher_action": "巡视指导，关注色彩选择与表达意图的一致性",
+            "student_action": "创作色彩心情画，可画简单图形或色块组合",
+            "big_screen_state": "无",
+            "textbook_or_material_state": "无",
+            "learning_sheet_state": "无",
+            "assessment_evidence": "学生能用2-3句话解释自己画中色彩的选择理由",
+            "transition_from_previous": "从讨论环节进入实践创作",
+            "transition_to_next": "过渡到展示评价环节",
+            "risk_and_adjustment": ""
+          },
+          "student_response_model": [
+            {
+              "type": "expected",
+              "student_response": "我画的是开心的画面，所以用了大红色和黄色，背景用了淡淡的粉色",
+              "teacher_next_move": "肯定并追问细节",
+              "scaffold": "为什么背景用粉色而不是大红色？"
+            },
+            {
+              "type": "off_focus",
+              "student_response": "我画了一辆车",
+              "teacher_next_move": "引导回归色彩表达主题",
+              "scaffold": "你画的车是什么颜色的？它看起来是开心的车还是安静的车？"
+            },
+            {
+              "type": "silent",
+              "student_response": "（不知道画什么）",
+              "teacher_next_move": "提供简单选项",
+              "scaffold": "你想画开心还是安静？开心的话我们用什么颜色？"
+            }
+          ],
+          "resource_use": {
+            "resource_type": "白纸、蜡笔或彩色铅笔",
+            "why_needed": "创作基本工具，承载学生色彩表达实践",
+            "attention_focus": "确保每个学生都有足够的色彩材料可选",
+            "fallback_if_unavailable": "若蜡笔不足，可准备彩色粉笔让学生在黑板上创作"
+          },
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "field_patch_candidates": [],
+      "impact_scope": [],
+      "quality_gate_update": {},
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "classroom_unfolding_effectiveness": {
+      "resource_purpose_score": 5,
+      "attention_focus_score": 5,
+      "teacher_guidance_score": 5,
+      "student_response_prediction_score": 5,
+      "scaffold_quality_score": 5,
+      "collection_method_reasoning_score": 5,
+      "media_material_timing_score": 5,
+      "assessment_evidence_score": 5,
+      "transition_script_score": 5,
+      "time_feasibility_score": 2,
+      "age_appropriateness_score": 5,
+      "overall_effectiveness_score": 4.73,
+      "pass": true,
+      "blockers": [],
+      "issues": [
+        "time_feasibility_score_low"
+      ],
+      "time_balance": {
+        "total_event_minutes": 36.0,
+        "target_minutes": 40.0,
+        "over_time_minutes": 0.0,
+        "under_time_minutes": 4.0,
+        "time_balance_pass": false,
+        "rebalance_candidates": [
+          {
+            "action": "expand",
+            "target_event_id": "E3",
+            "reason": "当前总时长少约 4.0 分钟，可增加表达、展示或反馈证据。",
+            "impact_chain": [
+              "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+            ]
+          }
+        ]
+      }
+    },
+    "time_balance": {
+      "total_event_minutes": 36.0,
+      "target_minutes": 40.0,
+      "over_time_minutes": 0.0,
+      "under_time_minutes": 4.0,
+      "time_balance_pass": false,
+      "rebalance_candidates": [
+        {
+          "action": "expand",
+          "target_event_id": "E3",
+          "reason": "当前总时长少约 4.0 分钟，可增加表达、展示或反馈证据。",
+          "impact_chain": [
+            "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+          ]
+        }
+      ]
+    },
+    "provider_called": true,
+    "model_called": true,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 44714
+    }
+  }
+]

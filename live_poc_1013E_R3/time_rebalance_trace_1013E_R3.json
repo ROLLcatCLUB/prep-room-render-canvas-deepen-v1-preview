@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "total_event_minutes": 0.0,
+    "target_minutes": 40.0,
+    "over_time_minutes": 0.0,
+    "under_time_minutes": 40.0,
+    "time_balance_pass": false,
+    "rebalance_candidates": []
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "total_event_minutes": 0.0,
+    "target_minutes": 40.0,
+    "over_time_minutes": 0.0,
+    "under_time_minutes": 40.0,
+    "time_balance_pass": false,
+    "rebalance_candidates": []
+  },
+  {
+    "case_id": "quick_daily_basic_design",
+    "total_event_minutes": 38.0,
+    "target_minutes": 40.0,
+    "over_time_minutes": 0.0,
+    "under_time_minutes": 2.0,
+    "time_balance_pass": true,
+    "rebalance_candidates": []
+  },
+  {
+    "case_id": "open_class_question_expression_evidence",
+    "total_event_minutes": 0.0,
+    "target_minutes": 40.0,
+    "over_time_minutes": 0.0,
+    "under_time_minutes": 40.0,
+    "time_balance_pass": false,
+    "rebalance_candidates": []
+  },
+  {
+    "case_id": "research_lesson_color_feeling_transition",
+    "total_event_minutes": 10.0,
+    "target_minutes": 40.0,
+    "over_time_minutes": 0.0,
+    "under_time_minutes": 30.0,
+    "time_balance_pass": false,
+    "rebalance_candidates": [
+      {
+        "action": "expand",
+        "target_event_id": "E2",
+        "reason": "当前总时长少约 30.0 分钟，可增加表达、展示或反馈证据。",
+        "impact_chain": [
+          "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "total_event_minutes": 36.0,
+    "target_minutes": 40.0,
+    "over_time_minutes": 0.0,
+    "under_time_minutes": 4.0,
+    "time_balance_pass": false,
+    "rebalance_candidates": [
+      {
+        "action": "expand",
+        "target_event_id": "E3",
+        "reason": "当前总时长少约 4.0 分钟，可增加表达、展示或反馈证据。",
+        "impact_chain": [
+          "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+        ]
+      }
+    ]
+  }
+]

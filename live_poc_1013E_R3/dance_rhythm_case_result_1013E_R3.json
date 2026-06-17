@@ -1,0 +1,84 @@
+{
+  "case_id": "standard_daily_art_music_dance_rhythm",
+  "lesson_design_mode": "standard_daily",
+  "teacher_input": "我想放一段美术和音乐结合的舞蹈，让学生感受节奏，再引到线条和色彩表现。帮我设计这一段怎么展开。",
+  "strict_json_success": false,
+  "wide_json_parse_success": false,
+  "normalization_success": false,
+  "contract_validation_success": false,
+  "contract_validation_errors": [
+    "payload_not_object"
+  ],
+  "effectiveness_pass": false,
+  "boundary_ok": false,
+  "secret_scan_hits": [],
+  "attempt_count": 2,
+  "attempts": [
+    {
+      "parser_mode": "json_parse_error",
+      "latency_ms": 69779,
+      "provider_meta": {
+        "provider": "openai_compatible",
+        "model": "MiniMax-M2.7-highspeed",
+        "base_url_host": "api.minimaxi.com",
+        "credential_source": "env",
+        "reasoning_split": false,
+        "latency_ms": 69779
+      },
+      "raw_response_prefix_redacted": "```json\n{\n  \"lesson_unfolding_graph\": {\n    \"lesson_design_mode\": \"standard_daily\",\n    \"design_context\": {\n      \"grade\": \"三年级\",\n      \"subject\": \"美术\",\n      \"topic\": \"节奏与色彩/线条表现\"\n    },\n    \"cognitive_grounding\": {\n      \"core_learning_problem\": \"学生难以将抽象的节奏感知转化为可视的线条和色彩语言\",\n      \"student_baseline\": \"学生知道线条和颜色能表达感受，但容易把节奏理解成热闹或好看\",\n      \"real_stuck_point\": \"学生能感受到舞蹈的热闹氛围，但无法将节奏的快慢、强弱与线条的曲直、粗细或色彩的冷暖联系起来\",\n      \"target_shift\": \"从把节奏等同于'热闹'的模糊感受，到能够辨识节奏的快慢、强弱并用相应的线条粗细、曲直和色彩明暗、冷暖来表现\",\n      \"key_focus\": \"通过舞蹈视觉元素建立节奏感与线条色彩表现之间的对应关系\",\n      \"key_difficulty\": \"将听觉节奏转化为视觉表达的语言转换\"\n    },\n    \"constraints\": {\n      \"total_duration_minutes\": 40,\n      \"resource_budget\": \"medium\",\n      \"class_condition\": \"普通美术教室，有投影设备\",\n      \"lesson_position\": \"unit_middle\",\n      \"material_conditions\": [\n     "
+    },
+    {
+      "parser_mode": "provider_error",
+      "latency_ms": null,
+      "provider_meta": {
+        "provider": null,
+        "model": null,
+        "base_url_host": "",
+        "credential_source": null,
+        "reasoning_split": false,
+        "latency_ms": null
+      },
+      "raw_response_prefix_redacted": ""
+    }
+  ],
+  "normalized_payload": null,
+  "classroom_unfolding_effectiveness": {
+    "resource_purpose_score": 0,
+    "attention_focus_score": 0,
+    "teacher_guidance_score": 0,
+    "student_response_prediction_score": 0,
+    "scaffold_quality_score": 0,
+    "collection_method_reasoning_score": 0,
+    "media_material_timing_score": 0,
+    "assessment_evidence_score": 0,
+    "transition_script_score": 0,
+    "time_feasibility_score": 0,
+    "age_appropriateness_score": 0,
+    "overall_effectiveness_score": 0,
+    "pass": false,
+    "blockers": [
+      "missing_lesson_unfolding_graph"
+    ],
+    "issues": [
+      "missing_lesson_unfolding_graph"
+    ]
+  },
+  "time_balance": {
+    "total_event_minutes": 0.0,
+    "target_minutes": 40.0,
+    "over_time_minutes": 0.0,
+    "under_time_minutes": 40.0,
+    "time_balance_pass": false,
+    "rebalance_candidates": []
+  },
+  "provider_called": true,
+  "model_called": true,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7-highspeed",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": false,
+    "latency_ms": 69779
+  }
+}

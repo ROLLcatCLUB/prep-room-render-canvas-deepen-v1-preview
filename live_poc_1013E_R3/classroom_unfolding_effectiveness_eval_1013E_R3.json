@@ -1,0 +1,177 @@
+[
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "resource_purpose_score": 0,
+    "attention_focus_score": 0,
+    "teacher_guidance_score": 0,
+    "student_response_prediction_score": 0,
+    "scaffold_quality_score": 0,
+    "collection_method_reasoning_score": 0,
+    "media_material_timing_score": 0,
+    "assessment_evidence_score": 0,
+    "transition_script_score": 0,
+    "time_feasibility_score": 0,
+    "age_appropriateness_score": 0,
+    "overall_effectiveness_score": 0,
+    "pass": false,
+    "blockers": [
+      "missing_lesson_unfolding_graph"
+    ],
+    "issues": [
+      "missing_lesson_unfolding_graph"
+    ]
+  },
+  {
+    "case_id": "standard_daily_art_music_dance_rhythm",
+    "resource_purpose_score": 0,
+    "attention_focus_score": 0,
+    "teacher_guidance_score": 0,
+    "student_response_prediction_score": 0,
+    "scaffold_quality_score": 0,
+    "collection_method_reasoning_score": 0,
+    "media_material_timing_score": 0,
+    "assessment_evidence_score": 0,
+    "transition_script_score": 0,
+    "time_feasibility_score": 0,
+    "age_appropriateness_score": 0,
+    "overall_effectiveness_score": 0,
+    "pass": false,
+    "blockers": [
+      "missing_lesson_unfolding_graph"
+    ],
+    "issues": [
+      "missing_lesson_unfolding_graph"
+    ]
+  },
+  {
+    "case_id": "quick_daily_basic_design",
+    "resource_purpose_score": 5,
+    "attention_focus_score": 5,
+    "teacher_guidance_score": 5,
+    "student_response_prediction_score": 5,
+    "scaffold_quality_score": 5,
+    "collection_method_reasoning_score": 5,
+    "media_material_timing_score": 5,
+    "assessment_evidence_score": 5,
+    "transition_script_score": 5,
+    "time_feasibility_score": 5,
+    "age_appropriateness_score": 5,
+    "overall_effectiveness_score": 5.0,
+    "pass": true,
+    "blockers": [],
+    "issues": [],
+    "time_balance": {
+      "total_event_minutes": 38.0,
+      "target_minutes": 40.0,
+      "over_time_minutes": 0.0,
+      "under_time_minutes": 2.0,
+      "time_balance_pass": true,
+      "rebalance_candidates": []
+    }
+  },
+  {
+    "case_id": "open_class_question_expression_evidence",
+    "resource_purpose_score": 0,
+    "attention_focus_score": 0,
+    "teacher_guidance_score": 0,
+    "student_response_prediction_score": 0,
+    "scaffold_quality_score": 0,
+    "collection_method_reasoning_score": 0,
+    "media_material_timing_score": 0,
+    "assessment_evidence_score": 0,
+    "transition_script_score": 0,
+    "time_feasibility_score": 0,
+    "age_appropriateness_score": 0,
+    "overall_effectiveness_score": 0,
+    "pass": false,
+    "blockers": [
+      "missing_lesson_unfolding_graph"
+    ],
+    "issues": [
+      "missing_lesson_unfolding_graph"
+    ]
+  },
+  {
+    "case_id": "research_lesson_color_feeling_transition",
+    "resource_purpose_score": 0,
+    "attention_focus_score": 0,
+    "teacher_guidance_score": 0,
+    "student_response_prediction_score": 0,
+    "scaffold_quality_score": 0,
+    "collection_method_reasoning_score": 0,
+    "media_material_timing_score": 0,
+    "assessment_evidence_score": 0,
+    "transition_script_score": 0,
+    "time_feasibility_score": 2,
+    "age_appropriateness_score": 5,
+    "overall_effectiveness_score": 0.64,
+    "pass": false,
+    "blockers": [],
+    "issues": [
+      "resource_purpose_score_low",
+      "attention_focus_score_low",
+      "teacher_guidance_score_low",
+      "student_response_prediction_score_low",
+      "scaffold_quality_score_low",
+      "collection_method_reasoning_score_low",
+      "media_material_timing_score_low",
+      "assessment_evidence_score_low",
+      "transition_script_score_low",
+      "time_feasibility_score_low"
+    ],
+    "time_balance": {
+      "total_event_minutes": 10.0,
+      "target_minutes": 40.0,
+      "over_time_minutes": 0.0,
+      "under_time_minutes": 30.0,
+      "time_balance_pass": false,
+      "rebalance_candidates": [
+        {
+          "action": "expand",
+          "target_event_id": "E2",
+          "reason": "当前总时长少约 30.0 分钟，可增加表达、展示或反馈证据。",
+          "impact_chain": [
+            "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "constrained_low_resource_no_video",
+    "resource_purpose_score": 5,
+    "attention_focus_score": 5,
+    "teacher_guidance_score": 5,
+    "student_response_prediction_score": 5,
+    "scaffold_quality_score": 5,
+    "collection_method_reasoning_score": 5,
+    "media_material_timing_score": 5,
+    "assessment_evidence_score": 5,
+    "transition_script_score": 5,
+    "time_feasibility_score": 2,
+    "age_appropriateness_score": 5,
+    "overall_effectiveness_score": 4.73,
+    "pass": true,
+    "blockers": [],
+    "issues": [
+      "time_feasibility_score_low"
+    ],
+    "time_balance": {
+      "total_event_minutes": 36.0,
+      "target_minutes": 40.0,
+      "over_time_minutes": 0.0,
+      "under_time_minutes": 4.0,
+      "time_balance_pass": false,
+      "rebalance_candidates": [
+        {
+          "action": "expand",
+          "target_event_id": "E3",
+          "reason": "当前总时长少约 4.0 分钟，可增加表达、展示或反馈证据。",
+          "impact_chain": [
+            "扩展时优先补学生表达和评价证据，不增加无目的活动。"
+          ]
+        }
+      ]
+    }
+  }
+]

@@ -185,3 +185,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - The targeted standard-daily probe can pass in isolation, but the final full benchmark still failed the main `standard_daily_cold_warm_more_visual` case, showing provider/prompt instability under multi-case conditions.
 - Conclusion: do not enter `1013F` UI binding yet. Next stage should be `1013E_R3_PROMPT_REPAIR`, focused on stabilizing the standard daily case and reducing empty provider responses before UI binding.
 - Boundary: provider was called; no database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, large ZIP, or main-project commit/push was performed.
+
+## 1013E_R3 Lesson Unfolding Graph Normalizer And Effectiveness Eval
+
+- `backend/xiaobei_ai/prep_room_lesson_reasoning_contract_1013E.py` now includes the R3 lesson-unfolding extensions: `lesson_unfolding_graph`, `classroom_event`, wide-output normalization, contract validation, time balance evaluation, and classroom-unfolding effectiveness scoring.
+- `scripts/run_prep_room_1013e_r3_unfolding_graph_eval.py` runs the 6-case R3 live POC.
+- Output directory: `live_poc_1013E_R3/`.
+- Required files were generated: `1013E_R3_result.json`, `1013E_R3_report.md`, `case_results_1013E_R3.json`, `standard_daily_repair_result_1013E_R3.json`, `dance_rhythm_case_result_1013E_R3.json`, `wide_to_unfolding_normalization_trace_1013E_R3.json`, `classroom_unfolding_effectiveness_eval_1013E_R3.json`, `time_rebalance_trace_1013E_R3.json`, `provider_metrics_1013E_R3.json`, `redacted_provider_trace_1013E_R3.json`, and `prompt_repair_1013E_R3.md`.
+- Final status: `FAIL_STANDARD_DAILY_REPAIR`.
+- Benchmark summary: 6 cases, 3 strict-or-wide parse successes, 3 normalization successes, 2 contract validation successes, 2 classroom effectiveness passes.
+- What worked: the schema, normalizer, evaluator, and time rebalancer ran end to end; `quick_daily_basic_design` and `constrained_low_resource_no_video` produced usable unfolding graph candidates.
+- What failed: the standard-daily main case and the teacher-provided dance/rhythm case did not produce parseable unfolding graph payloads in the final live POC.
+- Conclusion: do not enter `1013F` UI binding yet. Next stage should be `1013E_R4_MODEL_STRATEGY_ADJUSTMENT`, likely using a staged multi-call strategy instead of asking one call to generate the full unfolding graph.
+- Boundary: provider was called; no database write, memory write, Feishu write, formal apply, official export, official archive, UI binding, real knowledge-base retrieval, large ZIP, or main-project commit/push was performed.
