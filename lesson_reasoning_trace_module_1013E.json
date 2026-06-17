@@ -1,0 +1,78 @@
+{
+  "stage": "1013E_LESSON_REASONING_TRACE_MODULE",
+  "status": "LOCAL_TRACE_PREVIEW_READY",
+  "purpose": "Show a teacher-facing reasoning progress stream during Xiaobei lesson-design processing without exposing raw model reasoning.",
+  "teacher_visible_principles": [
+    "Show what Xiaobei is doing now.",
+    "Use teaching language, not engineering language.",
+    "Show progress and compact judgment, not raw chain-of-thought.",
+    "End with candidate location, impact range, and teacher confirmation."
+  ],
+  "trace_steps": [
+    {
+      "id": "mode_policy",
+      "teacher_label": "先判断备课程度",
+      "teacher_pending": "根据这节课准备到什么程度，决定要不要追问、资料用到多深。",
+      "teacher_done": "按当前备课程度处理：优先补齐可上课的教学判断，不写成长篇教案。",
+      "internal_mapping": [
+        "LessonModePolicy"
+      ]
+    },
+    {
+      "id": "student_blocker",
+      "teacher_label": "再看学生卡在哪里",
+      "teacher_pending": "判断孩子现在是不会概念，还是说不清感受，或者不会把感受用到作品里。",
+      "teacher_done": "学生可能停在“好看/不好看”的表层表达，需要更直观的分类和说明。",
+      "internal_mapping": [
+        "LessonReasoningRequest",
+        "LessonIntentClassifier"
+      ]
+    },
+    {
+      "id": "target_resolve",
+      "teacher_label": "定位要改的位置",
+      "teacher_pending": "把你的话落到具体段落、教学环节和材料位置。",
+      "teacher_done": "已定位到：学情分析、教学过程 · 探究环节、学习单与评价。",
+      "internal_mapping": [
+        "PatchTargetResolver"
+      ]
+    },
+    {
+      "id": "basis_and_impact",
+      "teacher_label": "检查依据和影响",
+      "teacher_pending": "同步检查教材、课标、资料室材料，以及大屏、学习单、评价证据会不会被带动。",
+      "teacher_done": "会影响三处：大屏要有对比图，学习单要有记录格，评价要看学生能否说出理由。",
+      "internal_mapping": [
+        "SourceBasisResolver",
+        "ImpactScopeResolver",
+        "QualityGateEvaluator"
+      ]
+    },
+    {
+      "id": "candidate_ready",
+      "teacher_label": "整理成候选",
+      "teacher_pending": "把修改收成候选，等待你确认，不直接写进正式结果。",
+      "teacher_done": "已整理为两处候选：探究环节加色卡分组，学习单加感受记录格。",
+      "internal_mapping": [
+        "ReasoningPatchCandidate",
+        "QuestionStrategy",
+        "ViewEditBindingHint"
+      ]
+    }
+  ],
+  "html_entrypoints": [
+    "prep_room_render_canvas_deepen_v1.html#prepNotebook",
+    "prep_room_render_canvas_deepen_v1.html#prepNotebookReasoning"
+  ],
+  "boundary": {
+    "provider_call": false,
+    "raw_chain_of_thought_visible": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "formal_export_created": false,
+    "official_archive_created": false
+  },
+  "next_stage": "1013E_MODEL_PROMPT_TO_REASONING_FIELD_PATCH_POC"
+}

@@ -120,3 +120,13 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - `xiaobei_question_strategy_1013D.json` defines how 小备 asks before generating candidates, with question limits by preparation depth.
 - The HTML prep notebook now includes a lightweight teacher-facing preparation-depth selector: 快速 / 标准 / 精磨 / 公开课, plus a design-judgment summary for the current real topic.
 - Boundary: 1013D is a local model and light preview pass only. It does not call a provider, write a database, write memory, write Feishu, export officially, archive officially, or generate a large ZIP.
+
+## 1013E Lesson Reasoning Trace Module
+
+- `lesson_reasoning_trace_module_1013E.md` defines the teacher-facing reasoning progress stream for the prep notebook.
+- `lesson_reasoning_trace_module_1013E.json` records the trace-step structure and its internal pipeline mapping.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook` now shows a lightweight streamed thinking process after the teacher sends an instruction to 小备.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebookReasoning` opens a review-ready state with the reasoning trace completed and the edit candidate located at `教学过程 · 探究环节`.
+- `prep_notebook_1013E_reasoning_trace_smoke.png` captures the completed reasoning-trace state.
+- The visible trace uses teacher language: judging preparation depth, checking student blocker, locating the section, checking basis and impact, and organizing candidates.
+- Boundary: this is a local static trace preview. It does not expose raw model reasoning, call a provider, write a database, write memory, write Feishu, formal apply, export officially, or archive officially.

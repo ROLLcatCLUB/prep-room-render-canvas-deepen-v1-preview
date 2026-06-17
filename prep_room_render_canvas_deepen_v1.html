@@ -1368,6 +1368,109 @@
       font-size: 12px;
     }
 
+    .nb-trace-card {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid rgba(69, 128, 104, 0.22);
+      border-radius: var(--radius-small);
+      background: linear-gradient(180deg, rgba(247, 250, 246, 0.96), rgba(255, 252, 247, 0.92));
+    }
+
+    .nb-trace-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .nb-trace-title {
+      display: grid;
+      gap: 4px;
+      line-height: 1.45;
+    }
+
+    .nb-trace-title strong {
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .nb-trace-title span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .nb-trace-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .nb-trace-step {
+      display: grid;
+      grid-template-columns: 20px minmax(0, 1fr);
+      gap: 8px;
+      align-items: start;
+      color: #47514c;
+      line-height: 1.55;
+    }
+
+    .nb-trace-dot {
+      width: 14px;
+      height: 14px;
+      margin-top: 4px;
+      border-radius: 999px;
+      border: 2px solid #c9d7cf;
+      background: #fff;
+    }
+
+    .nb-trace-step.done .nb-trace-dot {
+      border-color: var(--green);
+      background: var(--green);
+    }
+
+    .nb-trace-step.current .nb-trace-dot {
+      border-color: var(--amber);
+      background: var(--amber-soft);
+      box-shadow: 0 0 0 5px rgba(192, 122, 49, 0.12);
+      animation: tracePulse 1.2s ease-in-out infinite;
+    }
+
+    .nb-trace-copy {
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .nb-trace-copy strong {
+      font-size: 12px;
+      color: var(--ink);
+    }
+
+    .nb-trace-copy span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .nb-trace-step.done .nb-trace-copy span,
+    .nb-trace-step.current .nb-trace-copy span {
+      color: #34423d;
+    }
+
+    .nb-trace-result {
+      padding: 9px 10px;
+      border-radius: 8px;
+      background: rgba(69, 128, 104, 0.1);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 820;
+      line-height: 1.55;
+    }
+
+    @keyframes tracePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
     .nb-field-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3800,6 +3903,39 @@
             { id: "refined_lesson", label: "精磨", note: "想上得更稳" },
             { id: "open_class", label: "公开课", note: "展示或教研" }
           ],
+          reasoning_trace: {
+            status: "idle",
+            active_index: -1,
+            teacher_input: "",
+            result: "",
+            stages: [
+              {
+                title: "先判断备课程度",
+                pending: "根据这节课准备到什么程度，决定要不要追问、资料用到多深。",
+                done: "按当前备课程度处理：优先补齐可上课的教学判断，不写成长篇教案。"
+              },
+              {
+                title: "再看学生卡在哪里",
+                pending: "判断孩子现在是不会概念，还是说不清感受，或者不会把感受用到作品里。",
+                done: "学生可能停在“好看/不好看”的表层表达，需要更直观的分类和说明。"
+              },
+              {
+                title: "定位要改的位置",
+                pending: "把你的话落到具体段落、教学环节和材料位置。",
+                done: "已定位到：学情分析、教学过程 · 探究环节、学习单与评价。"
+              },
+              {
+                title: "检查依据和影响",
+                pending: "同步检查教材、课标、资料室材料，以及大屏、学习单、评价证据会不会被带动。",
+                done: "会影响三处：大屏要有对比图，学习单要有记录格，评价要看学生能否说出理由。"
+              },
+              {
+                title: "整理成候选",
+                pending: "把修改收成候选，等待你确认，不直接写进正式结果。",
+                done: "已整理为两处候选：探究环节加色卡分组，学习单加感受记录格。"
+              }
+            ]
+          },
           cover: {
             title: "三年级美术 · 2025学年第二学期",
             subtitle: "来源：正式课表 + 2025学年第二学期三年级美术教学工作计划",
@@ -4724,6 +4860,15 @@
         prepView.expanded_intent_steps = ["explore"];
         prepView.active_edit_target = { section_id: "teaching_process", step_id: "explore", label: "教学过程 · 探究环节" };
         model.initial_scroll_target = "nb-step-explore";
+      } else if (viewId === "prepNotebookReasoning" && prepView) {
+        model.active_view = "prepNotebook";
+        const trace = prepView.reasoning_trace || {};
+        trace.status = "done";
+        trace.active_index = (trace.stages || []).length - 1;
+        trace.teacher_input = "学生对冷暖色不太理解，要设计得更直观一点。";
+        trace.result = "我先整理成两处候选：探究环节加色卡分组，学习单加感受记录格。等你确认。";
+        prepView.reasoning_trace = trace;
+        applyPrepReasoningCandidate(prepView);
       } else {
         if (!model.views.some((view) => view.id === viewId)) return;
         model.active_view = viewId;
@@ -5138,6 +5283,41 @@
       `;
     }
 
+    function renderReasoningTrace(view) {
+      const trace = view.reasoning_trace || {};
+      if (!trace.status || trace.status === "idle") return "";
+      const stages = trace.stages || [];
+      const activeIndex = Number.isFinite(trace.active_index) ? trace.active_index : -1;
+      const isDone = trace.status === "done";
+      return `
+        <section class="nb-trace-card" aria-label="小备正在同步思考">
+          <div class="nb-trace-head">
+            <div class="nb-trace-title">
+              <strong>${isDone ? "小备已整理出候选" : "小备正在同步思考"}</strong>
+              <span>${html(trace.teacher_input ? `你刚才说：${trace.teacher_input}` : "我会把等待过程拆成几步给你看。")}</span>
+            </div>
+            <span class="quiet-tag">${isDone ? "待确认" : "处理中"}</span>
+          </div>
+          <div class="nb-trace-list">
+            ${stages.map((stage, index) => {
+              const state = isDone || index < activeIndex ? "done" : index === activeIndex ? "current" : "";
+              const copy = state === "done" ? stage.done : stage.pending;
+              return `
+                <div class="nb-trace-step ${state}">
+                  <span class="nb-trace-dot" aria-hidden="true"></span>
+                  <span class="nb-trace-copy">
+                    <strong>${html(stage.title)}</strong>
+                    <span>${html(copy)}</span>
+                  </span>
+                </div>
+              `;
+            }).join("")}
+          </div>
+          ${trace.result ? `<div class="nb-trace-result">${html(trace.result)}</div>` : ""}
+        </section>
+      `;
+    }
+
     function renderPrepNotebookRightPanel(view) {
       const mode = prepNotebookMode(view);
       const panels = view.right_panels?.[mode] || [];
@@ -5210,6 +5390,7 @@
               </div>
 
               ${renderLessonDesignMode(view)}
+              ${renderReasoningTrace(view)}
 
               <section>
                 <div class="nb-section-head"><span>本课状态</span><span class="quiet-tag">真实课题 · 候选预览</span></div>
@@ -5749,6 +5930,65 @@
       showToast(text);
     }
 
+    function prepNotebookView() {
+      return model.views.find((view) => view.id === "prepNotebook");
+    }
+
+    function clearReasoningTraceTimers() {
+      (model.reasoning_trace_timers || []).forEach((timer) => window.clearTimeout(timer));
+      model.reasoning_trace_timers = [];
+    }
+
+    function applyPrepReasoningCandidate(prepView) {
+      const lesson = prepView?.current_lesson;
+      if (!prepView || !lesson) return;
+      prepView.prep_notebook_mode = "edit";
+      prepView.active_edit_target = { section_id: "teaching_process", step_id: "explore", label: "教学过程 · 探究环节" };
+      prepView.expanded_intent_steps = Array.from(new Set([...(prepView.expanded_intent_steps || []), "explore"]));
+      const analysis = (lesson.sections || []).find((section) => section.id === "analysis");
+      if (analysis) {
+        analysis.candidate = "候选：增加一条学情判断，学生可能能分辨颜色冷暖，但还需要借助色卡和生活物品把感受说具体。";
+      }
+      const explore = (lesson.process_steps || []).find((step) => step.id === "explore");
+      if (explore) {
+        explore.candidate = "候选：探究环节加入色卡和生活物品分组，让学生先按感受分类，再选择一张色卡说出理由。";
+      }
+      lesson.status = "新增候选待确认";
+    }
+
+    function startPrepReasoningTrace(text) {
+      const prepView = prepNotebookView();
+      if (!prepView) return;
+      clearReasoningTraceTimers();
+      const trace = prepView.reasoning_trace || {};
+      trace.status = "running";
+      trace.active_index = 0;
+      trace.teacher_input = text;
+      trace.result = "";
+      prepView.reasoning_trace = trace;
+      model.active_view = "prepNotebook";
+      renderPrepRoomCanvas();
+      showToast("小备开始同步思考");
+      const stages = trace.stages || [];
+      stages.forEach((stage, index) => {
+        const timer = window.setTimeout(() => {
+          trace.active_index = index;
+          trace.status = "running";
+          renderPrepRoomCanvas();
+        }, index * 650);
+        model.reasoning_trace_timers.push(timer);
+      });
+      const doneTimer = window.setTimeout(() => {
+        trace.active_index = stages.length - 1;
+        trace.status = "done";
+        trace.result = "我先整理成两处候选：探究环节加色卡分组，学习单加感受记录格。等你确认。";
+        applyPrepReasoningCandidate(prepView);
+        addPendingChange(trace.result, "备课本编辑");
+        renderPrepRoomCanvas();
+      }, Math.max(1, stages.length) * 650 + 260);
+      model.reasoning_trace_timers.push(doneTimer);
+    }
+
     function renderFlowSteps() {
       return `
         <div class="flow-steps" aria-label="课包流转步骤">
@@ -5991,24 +6231,7 @@
       }
       model.negotiation.input_value = text;
       if (model.active_view === "prepNotebook") {
-        const prepView = model.views.find((view) => view.id === "prepNotebook");
-        const lesson = prepView?.current_lesson;
-        if (prepView && lesson) {
-          prepView.prep_notebook_mode = "edit";
-          prepView.active_edit_target = { section_id: "teaching_process", step_id: "explore", label: "教学过程 · 探究环节" };
-          prepView.expanded_intent_steps = Array.from(new Set([...(prepView.expanded_intent_steps || []), "explore"]));
-          const analysis = (lesson.sections || []).find((section) => section.id === "analysis");
-          if (analysis) {
-            analysis.candidate = "候选：增加一条学情判断，学生可能能分辨颜色冷暖，但还需要借助色卡和生活物品把感受说具体。";
-          }
-          const explore = (lesson.process_steps || []).find((step) => step.id === "explore");
-          if (explore) {
-            explore.candidate = "候选：探究环节加入色卡和生活物品分组，让学生先按感受分类，再选择一张色卡说出理由。";
-          }
-          lesson.status = "新增候选待确认";
-        }
-        addPendingChange("我先整理成两处候选：探究环节加色卡分组，学习单加感受记录格。等你确认。", "备课本编辑");
-        renderPrepRoomCanvas();
+        startPrepReasoningTrace(text);
       } else {
         addPendingChange(`小备已收到意图：「${text}」，正在生成影响范围预演。`, "小备意图入口");
       }
