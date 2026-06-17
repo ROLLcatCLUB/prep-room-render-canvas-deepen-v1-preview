@@ -1,0 +1,114 @@
+{
+  "case_id": "standard_daily_cold_warm_more_visual",
+  "lesson_design_mode": "standard_daily",
+  "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+  "strict_json_success": false,
+  "raw_json_parse_success": false,
+  "raw_contract_success": false,
+  "normalized_contract_success": false,
+  "schema_drift_count": 0,
+  "markdown_fence_count": 0,
+  "empty_content_count": 1,
+  "forbidden_side_effects": true,
+  "parser_mode": "json_parse_error",
+  "parser_meta": {
+    "parser_mode": "json_parse_error",
+    "parse_subcode": "invalid_json_output",
+    "parse_error_code": "json_parse_error",
+    "raw_prefix_type": null,
+    "provider_output_sanitized": false,
+    "extraction_required": false
+  },
+  "attempt_count": 2,
+  "attempt_parser_modes": [
+    "json_parse_error",
+    "json_parse_error"
+  ],
+  "raw_contract_errors": [
+    "parsed_result_not_object"
+  ],
+  "raw_coverage_errors": [
+    "payload_not_object"
+  ],
+  "normalized_contract_errors": [
+    "parsed_result_not_object"
+  ],
+  "normalized_coverage_errors": [
+    "payload_not_object"
+  ],
+  "visible_forbidden_term_hits": [],
+  "secret_scan_hits": [],
+  "provider_called": true,
+  "model_called": true,
+  "latency_ms": 26921,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7-highspeed",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": false,
+    "latency_ms": 26921
+  },
+  "parsed_json": null,
+  "normalized_json": null,
+  "teacher_visible_summary": "",
+  "benchmark_score": {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "strict_json_success": false,
+    "raw_json_parse_success": false,
+    "target_resolution_score": 5,
+    "teaching_reasoning_score": 1,
+    "impact_scope_score": 1,
+    "quality_gate_score": 2,
+    "quality_score": 0.0,
+    "age_appropriateness_score": 4,
+    "not_over_scope": true,
+    "not_too_generic": false,
+    "teacher_review_required": false,
+    "formal_apply_performed": false,
+    "overall_pass": false,
+    "raw_contract_success": false,
+    "normalized_contract_success": false,
+    "raw_contract_error_count": 1,
+    "raw_coverage_error_count": 1,
+    "normalized_contract_error_count": 1,
+    "normalized_coverage_error_count": 1,
+    "schema_drift_count": 0,
+    "markdown_fence_count": 0,
+    "empty_content": true,
+    "empty_content_count": 1,
+    "forbidden_side_effects": true,
+    "issues": [
+      "raw_contract_needs_normalization",
+      "payload_not_object",
+      "parse_error_json_parse_error",
+      "parsed_result_not_object",
+      "payload_not_object",
+      "empty_content",
+      "forbidden_side_effects",
+      "too_generic"
+    ],
+    "repair_suggestion": "继续压 prompt，要求必须引用课题、学生状态、材料和评价证据。"
+  },
+  "boundary_flags": {
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "official_archive_created": false
+  },
+  "redacted_attempts": [
+    {
+      "parser_mode": "json_parse_error",
+      "latency_ms": 30848,
+      "raw_response_prefix_redacted": "```json\n{\n  \"lesson_design_mode\": \"standard_daily\",\n  \"intent_summary\": \"设计直观活动让学生通过感受分类冷暖色\",\n  \"lesson_design_brief_compact\": {\n    \"core_learning_problem\": \"帮助学生从颜色喜好转向用温暖、清凉等感受分类并说明理由\",\n    \"student_baseline\": \"学生知道红、黄、蓝等颜色，也会说喜欢，但冷暖色理解停在表层\",\n    \"target_shift\": \"从颜色喜好到用感受分类并说明理由\",\n    \"teaching_route\": [\"触摸感知颜色温度\", \"生活图建立联系\", \"色卡分类并说明\"],\n    \"evidence_plan\": \"学生能否清晰表达分类理由\",\n    \"risk_points\": \"边界色学生可能混淆\",\n    \"basis_summary\": \"三年级认知水平、直观体验为主\"\n  },\n  \"target_resolution\": [\n    {\n      \"section_id\": \"teaching_process\",\n      \"step_id\": \"explore\",\n      \"target_field\": \"activity_innovation\",\n      \"reason\": \"增加触摸感知环节让冷暖色更直观\"\n    },\n    {\n      \"section_id\": \"teaching_process\",\n      \"step_id\": \"explore\",\n      \"target_field\": \"student_activity\",\n      \"reason\": \"加入色卡触摸体验，强化感受分类\"\n    }\n  ]"
+    },
+    {
+      "parser_mode": "json_parse_error",
+      "latency_ms": 26921,
+      "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"standard_daily\",\"intent_summary\":\"直观展示冷暖色感受，引导分类表达\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"从颜色喜好转向用感受描述分类\",\"student_baseline\":\"认识基本色，能表达喜好\",\"target_shift\":\"用感受词描述并分类颜色\",\"teaching_route\":[\"生活图导入\",\"触摸体验\",\"记录感受\"],\"evidence_plan\":[\"触摸记录卡\",\"分类展示\"],\"risk_points\":\"三年级认知限制\",\"basis_summary\":\"直观体验原则\"},\"target_resolution\":[{\"section_id\":\"analysis\",\"step_id\":\"\",\"target_field\":\"resource_reference\",\"reason\":\"色卡替换为生活图，更直观\"},{\"section_id\":\"teaching_process\",\"step_id\":\"explore\",\"target_field\":\"student_activity\",\"reason\":\"增加触摸体验，强化感受\"}],\"step_reasoning_updates\":[{\"step_id\":\"explore\",\"step_name\":\"探究\",\"student_state_before\":\"仅识别颜色名称\",\"student_state_after\":\"能用感受词描述并分类\",\"teacher_action\":\"引导触摸冷暖色卡并表达\",\"student_action\":\"触摸感知并记录感受词\",\"big_screen_state\":\"展示生活冷暖图\",\"learning_she"
+    }
+  ]
+}

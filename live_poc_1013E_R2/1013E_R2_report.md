@@ -1,53 +1,80 @@
-# 1013E_R2 Standard Daily Prompt Repair
+# 1013E_R2 Multi-Case Lesson Reasoning Benchmark
 
 ```text
-final_status=STANDARD_DAILY_REPAIR_FAILED
-next_stage=1013E_R3_PROMPT_REPAIR_OR_MODEL_STRATEGY_ADJUSTMENT
-strict_json_success=false
-validation_error_count=26
+final_status=DIAG_MULTI_CASE_REPAIR_REQUIRED
+next_stage=1013E_R3_CASE_BANK_AND_PROMPT_REPAIR
+r2_repair_baseline=STANDARD_DAILY_REPAIR_FAILED
+raw_json_parse_pass_count=6/12
+raw_contract_success_count=5/12
+normalized_contract_success_count=6/12
+overall_pass_count=5/12
+empty_content_count=6/12
+markdown_fence_count=0
+schema_drift_count=3
+forbidden_side_effects_count=6
+average_quality_score=2.48
+low_quality_case_count=6/12
+average_teaching_reasoning_score=2.83
+average_impact_scope_score=2.92
+average_age_appropriateness_score=4.17
 secret_scan_ok=true
 ```
 
-## Case
+## Reading The Result
 
-- mode: `standard_daily`
-- input: 学生对冷暖色不太理解，要设计得更直观一点。
+- raw_model_output_contract_result=FAIL
+- normalized_contract_result=FAIL
+- teaching_quality_result=NEED_REPAIR
+- `raw_json_parse_success` means raw model output passed strict JSON parsing.
+- `raw_contract_success` means raw model output already matched compact contract.
+- `normalized_contract_success` means local normalizer mapped output into compact contract.
+- `quality_score` is a normalized 0-5 quality score from 5 compact dimensions.
+- recommended_next_stage=1013E_R3_CASE_BANK_AND_PROMPT_REPAIR
+
+raw_model_output_contract_result=FAIL
+normalized_contract_result=FAIL
+teaching_quality_result=NEED_REPAIR
+recommended_next_stage=1013E_R3_CASE_BANK_AND_PROMPT_REPAIR
+
+| case_id | raw_json_parse | raw_contract | normalized_contract | quality_score | conclusion |
+| --- | --- | --- | --- | --- | --- |
+| `quick_daily_basic_ready` | false | false | false | 0.0 | raw_json_parse_failed |
+| `quick_daily_no_print` | true | true | true | 5.0 | pass |
+| `standard_daily_cold_warm_more_visual` | false | false | false | 0.0 | raw_json_parse_failed |
+| `standard_daily_task_too_easy` | false | false | false | 0.0 | raw_json_parse_failed |
+| `standard_daily_link_prior_work` | true | true | true | 5.0 | pass |
+| `refined_lesson_question_chain` | true | true | true | 4.8 | pass |
+| `refined_lesson_differentiated_assignment` | true | true | true | 5.0 | normalized_pass |
+| `open_class_student_expression` | false | false | false | 0.0 | raw_json_parse_failed |
+| `open_class_material_timing` | true | true | true | 5.0 | pass |
+| `research_lesson_evidence_chain` | false | false | false | 0.0 | raw_json_parse_failed |
+| `constrained_no_projector` | true | false | true | 5.0 | pass |
+| `constrained_30_minutes` | false | false | false | 0.0 | raw_json_parse_failed |
+
+## Case Results (legacy)
+
+用于回溯：以下保持与历史兼容。
+- `quick_daily_basic_ready` `quick_daily`: strict=false, raw_contract=false, normalized_contract=false, overall=false, teaching=0, impact=0, age=0, quality=0.0
+- `quick_daily_no_print` `quick_daily`: strict=true, raw_contract=true, normalized_contract=true, overall=true, teaching=5, impact=5, age=5, quality=5.0
+- `standard_daily_cold_warm_more_visual` `standard_daily`: strict=false, raw_contract=false, normalized_contract=false, overall=false, teaching=1, impact=1, age=4, quality=0.0
+- `standard_daily_task_too_easy` `standard_daily`: strict=false, raw_contract=false, normalized_contract=false, overall=false, teaching=1, impact=1, age=4, quality=0.0
+- `standard_daily_link_prior_work` `standard_daily`: strict=true, raw_contract=true, normalized_contract=true, overall=true, teaching=5, impact=5, age=5, quality=5.0
+- `refined_lesson_question_chain` `refined_lesson`: strict=true, raw_contract=true, normalized_contract=true, overall=true, teaching=4, impact=5, age=5, quality=4.8
+- `refined_lesson_differentiated_assignment` `refined_lesson`: strict=true, raw_contract=true, normalized_contract=true, overall=false, teaching=5, impact=5, age=5, quality=5.0
+- `open_class_student_expression` `open_class`: strict=false, raw_contract=false, normalized_contract=false, overall=false, teaching=1, impact=1, age=4, quality=0.0
+- `open_class_material_timing` `open_class`: strict=true, raw_contract=true, normalized_contract=true, overall=true, teaching=5, impact=5, age=5, quality=5.0
+- `research_lesson_evidence_chain` `research_lesson`: strict=false, raw_contract=false, normalized_contract=false, overall=false, teaching=1, impact=1, age=4, quality=0.0
+- `constrained_no_projector` `time_or_resource_constrained`: strict=true, raw_contract=false, normalized_contract=true, overall=true, teaching=5, impact=5, age=5, quality=5.0
+- `constrained_30_minutes` `time_or_resource_constrained`: strict=false, raw_contract=false, normalized_contract=false, overall=false, teaching=1, impact=1, age=4, quality=0.0
 
 ## Boundary
 
-- Provider called once for this repair run.
+- Provider was called for benchmark cases when credentials were available.
 - No database write.
 - No memory write.
 - No Feishu write.
 - No formal apply.
-- No formal export or archive.
-- Request and response are redacted.
-
-## Validation Errors
-
-- `target_0_not_object`
-- `target_1_not_object`
-- `patch_0_missing_target`
-- `patch_0_missing_target_field`
-- `patch_0_teacher_review_required_not_true`
-- `patch_0_formal_apply_not_false`
-- `patch_1_missing_target`
-- `patch_1_missing_target_field`
-- `patch_1_teacher_review_required_not_true`
-- `patch_1_formal_apply_not_false`
-- `step_reasoning_updates_missing_student_state_before`
-- `step_reasoning_updates_missing_student_state_after`
-- `impact_0_affected_object_invalid`
-- `impact_0_missing_summary`
-- `impact_0_confirmation_not_true`
-- `impact_1_affected_object_invalid`
-- `impact_1_missing_summary`
-- `impact_1_confirmation_not_true`
-- `impact_2_affected_object_invalid`
-- `impact_2_missing_summary`
-- `impact_2_confirmation_not_true`
-- `missing_impact_big_screen`
-- `missing_impact_handout`
-- `missing_impact_evidence_note`
-- `missing_analysis_patch`
-- `missing_explore_patch`
+- No formal export.
+- No official archive.
+- No real knowledge-base retrieval.
+- Requests and responses are redacted in the trace file.

@@ -174,3 +174,14 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - What still failed: the JSON did not satisfy the compact contract; key arrays were returned in looser shapes, so the validator correctly blocked UI binding readiness.
 - Conclusion: do not enter full `1013F` with `standard_daily` yet. Next stage should be `1013E_R3_PROMPT_REPAIR_OR_MODEL_STRATEGY_ADJUSTMENT`, likely adding a normalization step before UI binding.
 - Boundary: provider was called; no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.
+
+## 1013E_R2 Multi-Case Lesson Reasoning Benchmark
+
+- `scripts/run_prep_room_1013e_r2_multi_case_benchmark.py` runs the 12-case benchmark requested for lesson reasoning stability.
+- Output directory: `live_poc_1013E_R2/`.
+- Required files were generated: `1013E_R2_result.json`, `1013E_R2_report.md`, `lesson_reasoning_case_bank_1013E_R2.json`, `case_results_1013E_R2.json`, `benchmark_scores_1013E_R2.json`, `standard_daily_repair_result_1013E_R2.json`, `prompt_repair_1013E_R2.md`, `provider_metrics_1013E_R2.json`, and `redacted_provider_trace_1013E_R2.json`.
+- Final status: `FAIL_STANDARD_DAILY_REPAIR`.
+- Benchmark summary: 12 cases, 4 strict JSON successes, 2 raw contract successes, 4 normalized contract successes, 3 overall passes, 8 empty/failed content cases.
+- The targeted standard-daily probe can pass in isolation, but the final full benchmark still failed the main `standard_daily_cold_warm_more_visual` case, showing provider/prompt instability under multi-case conditions.
+- Conclusion: do not enter `1013F` UI binding yet. Next stage should be `1013E_R3_PROMPT_REPAIR`, focused on stabilizing the standard daily case and reducing empty provider responses before UI binding.
+- Boundary: provider was called; no database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, large ZIP, or main-project commit/push was performed.

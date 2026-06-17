@@ -1,8 +1,24 @@
 {
   "provider_called": true,
   "model_called": true,
-  "strict_json_success": false,
-  "latency_ms": 38920,
+  "case_count": 12,
+  "raw_json_parse_pass_count": 6,
+  "strict_json_success_count": 6,
+  "overall_pass_count": 5,
+  "raw_contract_success_count": 5,
+  "normalized_contract_success_count": 6,
+  "empty_content_count": 6,
+  "markdown_fence_count": 0,
+  "schema_drift_count": 3,
+  "forbidden_side_effects_count": 6,
+  "average_quality_score": 2.48,
+  "low_quality_case_count": 6,
+  "latency_summary": {
+    "count": 11,
+    "min_ms": 17839,
+    "max_ms": 28799,
+    "avg_ms": 23911
+  },
   "provider_status": {
     "provider_name": "openai_compatible",
     "credential_available": true,
