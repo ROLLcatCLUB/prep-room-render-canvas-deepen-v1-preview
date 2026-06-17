@@ -1,0 +1,23 @@
+{
+  "stage_id": "1013F_R2A_INFORMATION_HIERARCHY_AND_EDIT_SURFACE_REPAIR",
+  "created_at": "2026-06-17T14:12:09+00:00",
+  "side_note_not_inline_pass": true,
+  "side_note_block_count_pass": true,
+  "side_note_low_weight_source_pass": true,
+  "hover_lightweight_pass": true,
+  "edit_surface_not_table_pass": true,
+  "edit_surface_focused_pass": true,
+  "default_entry_changed": false,
+  "teacher_review_required": true,
+  "formal_apply_performed": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "screenshot_view_pass": true,
+  "screenshot_selected_note_pass": true,
+  "screenshot_edit_pass": true,
+  "final_status": "PASS_INFORMATION_HIERARCHY_AND_EDIT_SURFACE_REPAIR",
+  "next_stage": "1013F_R2_CLASSROOM_EVENT_DETAIL_POLISH"
+}

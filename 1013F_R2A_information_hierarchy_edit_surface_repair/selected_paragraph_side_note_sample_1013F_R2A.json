@@ -1,0 +1,29 @@
+{
+  "paragraph_id": "p-explore-1",
+  "surface": "paragraph_float_note",
+  "inserted_into_body_flow": false,
+  "blocks": [
+    {
+      "label": "小备判断",
+      "text": "学生对冷暖色不稳时，色卡分类能把抽象概念变成可操作活动。",
+      "max_lines": 2
+    },
+    {
+      "label": "学生可能卡在哪里",
+      "text": "学生可能按颜色名称或个人喜好分类，而不是按感受说明理由。",
+      "max_lines": 2
+    },
+    {
+      "label": "可以怎么支架",
+      "text": "先给一组示范，再让学生用“像____，所以我觉得____”补理由。",
+      "max_lines": 2
+    },
+    {
+      "label": "会影响什么",
+      "text": "大屏保留感受词；学习单增加一句理由记录；观察学生能否说出分类依据。",
+      "max_lines": 2
+    }
+  ],
+  "low_weight_source_available": true,
+  "low_weight_source_default_open": false
+}

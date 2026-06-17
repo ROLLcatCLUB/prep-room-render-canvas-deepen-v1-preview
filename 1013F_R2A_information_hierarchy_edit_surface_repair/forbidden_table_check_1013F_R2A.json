@@ -1,0 +1,11 @@
+{
+  "edit_panel_uses_four_blocks": true,
+  "selected_note_uses_float_panel": true,
+  "inline_note_body_empty": true,
+  "low_weight_fields_present": true,
+  "default_entry_not_changed": true,
+  "no_html_table_element": true,
+  "pass": true,
+  "strong_visible_term_hits": [],
+  "note": "Backend fields remain observable only through low-weight collapsed details; they are not removed from the system."
+}

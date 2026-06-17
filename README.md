@@ -234,3 +234,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_TEACHER_READABLE_INLINE_REASONING_SURFACE`.
 - Next stage: `1013F_R2_CLASSROOM_EVENT_DETAIL_POLISH`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.
+
+## 1013F_R2A Information Hierarchy And Edit Surface Repair
+
+- `scripts/run_prep_room_1013f_r2a_information_hierarchy_repair.py` runs the information-hierarchy and edit-surface repair check.
+- Output directory: `1013F_R2A_information_hierarchy_edit_surface_repair/`.
+- Required files were generated: `1013F_R2A_result.json`, `1013F_R2A_report.md`, `information_hierarchy_rules_1013F_R2A.json`, `selected_paragraph_side_note_sample_1013F_R2A.json`, `edit_surface_sample_1013F_R2A.json`, `forbidden_table_check_1013F_R2A.json`, `ui_smoke_screenshot_1013F_R2A_view.png`, `ui_smoke_screenshot_1013F_R2A_selected_note.png`, and `ui_smoke_screenshot_1013F_R2A_edit.png`.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2A` opens the repaired reading surface.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2ASelected` opens the selected paragraph floating-note state.
+- `prep_room_render_canvas_deepen_v1.html#prepNotebook1013FR2AEdit` opens the focused four-block edit surface.
+- R2A does not remove backend fields. It lowers their teacher-facing weight: source details are available in collapsed, muted, low-weight blocks, while the main page keeps classroom reading first.
+- Final status: `PASS_INFORMATION_HIERARCHY_AND_EDIT_SURFACE_REPAIR`.
+- Next stage: `1013F_R2_CLASSROOM_EVENT_DETAIL_POLISH`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.

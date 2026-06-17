@@ -1,0 +1,28 @@
+{
+  "current_target": "教学过程 · 探究环节",
+  "table_like": false,
+  "blocks": {
+    "current_paragraph": "进入探究时，学生分组拿到色卡和少量生活物品，把颜色贴到感受词下面。",
+    "xiaobei_suggestion": "加入色卡分类和理由表达，让学生把冷暖感受说清楚。",
+    "before_after": {
+      "before": "原来只是让学生观察冷暖色，学生可能仍停留在“颜色好看”。",
+      "after": "学生先按感受词给色卡分类，再选择一张色卡说出理由。"
+    },
+    "impact_and_actions": {
+      "impact": [
+        "大屏准备冷暖色对比图或黑板色块，并保留感受词。",
+        "学习单增加“我这样分类的理由”记录格，不做复杂表格。",
+        "评价时看学生是否能说出颜色与感受的关系。"
+      ],
+      "actions": [
+        "采纳到本段",
+        "继续精修",
+        "追问原因",
+        "暂不采用"
+      ]
+    }
+  },
+  "low_weight_source_available": true,
+  "formal_apply_performed": false,
+  "teacher_review_required": true
+}
