@@ -1,5 +1,5 @@
 # PREP_ROOM_RENDER_CANVAS_DEEPEN_V1
 
-Current stage: `1013I_R6N_R6_MATERIAL_PROMPT_FRONTLOADED_HORIZONTAL`
+Current stage: `1013I_R6O_PREP_MODE_AND_PERSONALIZED_GENERATION_HABIT_PLANNING`
 
-R6N_R6 frontloads the material supplementation prompt while keeping the R6N_R5 content and lesson-task chain.
+R6O records the prep-mode and personalized generation-habit planning line.

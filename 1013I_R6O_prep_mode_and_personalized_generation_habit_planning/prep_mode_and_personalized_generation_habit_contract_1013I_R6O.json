@@ -1,0 +1,69 @@
+{
+  "stage": "1013I_R6O_PREP_MODE_AND_PERSONALIZED_GENERATION_HABIT_PLANNING",
+  "product_line": "备课模式与个人化生成习惯",
+  "not_prompt_template_editor": true,
+  "modes": [
+    {
+      "key": "quick_draft",
+      "teacher_label": "快速出稿",
+      "default": false
+    },
+    {
+      "key": "complete_prep",
+      "teacher_label": "完整备课",
+      "default": true
+    },
+    {
+      "key": "deep_polish",
+      "teacher_label": "精备打磨",
+      "default": false
+    }
+  ],
+  "teacher_visible_terms": [
+    "本次想法",
+    "我的补充",
+    "这次备课要注意",
+    "小教已记下",
+    "保存为我的习惯"
+  ],
+  "forbidden_teacher_visible_terms": [
+    "系统提示词",
+    "schema",
+    "模板变量",
+    "prompt",
+    "registry"
+  ],
+  "memory_layers": [
+    "this_run_only",
+    "personal_preference",
+    "subject_group_template",
+    "school_template",
+    "system_default_template"
+  ],
+  "permission_layers": [
+    "teacher",
+    "subject_lead",
+    "school_admin",
+    "system_admin"
+  ],
+  "implementation_phases": [
+    "mode_selection_only",
+    "this_run_notes",
+    "save_as_my_habit_after_confirmation",
+    "template_application_with_approval",
+    "deep_template_governance"
+  ],
+  "boundary": {
+    "planning_only": true,
+    "ui_implementation_started": false,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "prompt_template_modified": false,
+    "memory_written": false,
+    "database_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false
+  }
+}
