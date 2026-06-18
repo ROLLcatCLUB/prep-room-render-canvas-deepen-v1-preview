@@ -6,8 +6,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE`.
-- Current product next stage: `1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE`.
+- Current completed product stage: `1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE`.
+- Current product next stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -555,3 +555,14 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE`.
 - Next stage: `1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE`.
 - Boundary: page fixture only; no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, official export/archive, or main-project commit/push.
+
+## 1013I_R5 Teacher Self Prep Alpha Smoke
+
+- `scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py` runs a fixture-only alpha smoke over the R4 page fixture.
+- Output directory: `1013I_R5_teacher_self_prep_alpha_smoke/`.
+- Required files were generated: `1013I_R5_result.json`, `1013I_R5_report.md`, `self_prep_alpha_smoke_trace_1013I_R5.json`, and `self_prep_alpha_smoke_state_snapshot_1013I_R5.json`.
+- Smoke path verified: teacher input summary, 3 review cards, 3 preview diff cards, 3 revision queue items, 3 rejected items, 3 revert actions, 3 revise actions, and 3 reject actions.
+- State clarity verified: `current_primary_state=accepted_to_preview_only`, `revision_and_reject_are_alternate_paths=true`, and `action_state_not_confusing=true`.
+- Final status: `PASS_1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE`.
+- Next stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA`.
+- Boundary: fixture-only alpha smoke; no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, official export/archive, real runtime connection, or main-project commit/push.
