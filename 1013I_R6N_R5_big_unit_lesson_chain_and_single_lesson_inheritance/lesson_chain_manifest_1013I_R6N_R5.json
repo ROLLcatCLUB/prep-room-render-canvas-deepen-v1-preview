@@ -1,0 +1,16 @@
+{
+  "stage": "1013I_R6N_R5_BIG_UNIT_LESSON_CHAIN_AND_SINGLE_LESSON_INHERITANCE",
+  "inherits_from": "1013I_R6N_R4_BIG_UNIT_DESIGN_CONTENT_REWRITE_FROM_RESEARCH",
+  "research_source": "big_unit_design_research_draft_20260619.md",
+  "boundary": {
+    "html_modified": false,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "main_project_pushed": false
+  }
+}
