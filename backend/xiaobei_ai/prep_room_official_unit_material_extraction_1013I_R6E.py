@@ -17,7 +17,15 @@ def _read_json(path: Path) -> Any:
 
 
 def _source_path(root: Path, relative_path: str) -> Path:
-    return root / relative_path
+    direct = root / relative_path
+    if direct.exists():
+        return direct
+    review_prefix = "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/"
+    if relative_path.startswith(review_prefix):
+        review_root_path = root / relative_path.removeprefix(review_prefix)
+        if review_root_path.exists():
+            return review_root_path
+    return direct
 
 
 def _load_sources(root: Path) -> dict[str, Any]:
