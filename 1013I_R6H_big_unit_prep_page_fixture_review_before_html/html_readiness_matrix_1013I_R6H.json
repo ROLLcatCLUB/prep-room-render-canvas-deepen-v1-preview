@@ -1,0 +1,56 @@
+{
+  "stage": "1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML",
+  "matrix_id": "html_readiness_matrix_1013I_R6H",
+  "html_fixture_allowed_after_review": true,
+  "html_ui_implementation_started": false,
+  "checks": [
+    {
+      "check_id": "decision_first_layout",
+      "passed": true,
+      "html_constraint": "First viewport must start with blocking reason and missing confirmations."
+    },
+    {
+      "check_id": "teacher_action_semantics",
+      "passed": true,
+      "html_constraint": "Use preview-only badges on confirmation actions."
+    },
+    {
+      "check_id": "degraded_draft_label",
+      "passed": true,
+      "html_constraint": "Temporary single-lesson continuation must show degraded draft label."
+    },
+    {
+      "check_id": "official_reference_collapsed",
+      "passed": true,
+      "html_constraint": "Readonly reference rail is collapsed by default."
+    },
+    {
+      "check_id": "big_unit_timeline_not_body",
+      "passed": true,
+      "html_constraint": "Render four light timeline nodes, not a generated unit design body."
+    },
+    {
+      "check_id": "lesson_position_teacher_labels",
+      "passed": true,
+      "html_constraint": "Teacher sees labels, backend role keys stay secondary or hidden."
+    }
+  ],
+  "fixture_review_created": true,
+  "html_body_modified": false,
+  "ui_implementation_started": false,
+  "r7_visual_review_entered": false,
+  "big_unit_generation_performed": false,
+  "single_lesson_generation_performed": false,
+  "normal_candidate_card_generation_allowed": false,
+  "writes_unit_package": false,
+  "writes_lesson_body": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "official_export_created": false,
+  "official_archive_created": false,
+  "main_project_pushed": false
+}

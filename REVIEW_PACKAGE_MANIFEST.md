@@ -49,6 +49,7 @@ The handoff is the preferred entry for a new session. It records:
 - backend readonly extraction fixture for official unit material field candidates before any big-unit page work.
 - big-unit prep page-structure proposal and user-review gate before any page fixture or UI work.
 - big-unit prep JSON page fixture after user approval, before any HTML/UI implementation.
+- fixture review before HTML translation, with action-label and degraded-draft constraints.
 
 ## Current Product Baseline
 
@@ -74,17 +75,18 @@ Accepted recent prep-notebook stages:
 1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
 1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
 1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
+1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
 ```
 
 Recommended next product stage:
 
 ```text
-1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
+1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL
 ```
 
-Curriculum standard is now defined as the upstream constraint layer for later big-unit and single-lesson work. R6D adds the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, `lesson_position_judgement`, and teacher confirmation must exist before normal candidate-card generation. R6E adds a backend readonly extraction adapter that turns local official unit field contracts into candidates for teacher review. R6F proposes page structure for user review only. R6G creates a JSON page fixture after user approval, applying decision-first layout, light timeline, and teacher-facing lesson-position labels. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, big-unit chains, or teacher confirmation.
+Curriculum standard is now defined as the upstream constraint layer for later big-unit and single-lesson work. R6D adds the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, `lesson_position_judgement`, and teacher confirmation must exist before normal candidate-card generation. R6E adds a backend readonly extraction adapter that turns local official unit field contracts into candidates for teacher review. R6F proposes page structure for user review only. R6G creates a JSON page fixture after user approval, applying decision-first layout, light timeline, and teacher-facing lesson-position labels. R6H reviews the fixture before HTML and allows only a future static HTML fixture under label constraints. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, big-unit chains, or teacher confirmation.
 
-R7 visual review remains paused. HTML/UI implementation is still not allowed; R6H should review the R6G fixture before any HTML translation.
+R7 visual review remains paused. Runtime/UI implementation is still not allowed; R6I may only translate the reviewed JSON fixture into a static HTML fixture.
 
 Do not enter:
 
@@ -152,6 +154,7 @@ do_not_omit_thinking=true
 1013I_R6E_official_unit_material_readonly_extraction_fixture/
 1013I_R6F_big_unit_prep_page_fixture_user_review_gate/
 1013I_R6G_big_unit_prep_page_fixture_after_user_approval/
+1013I_R6H_big_unit_prep_page_fixture_review_before_html/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -196,6 +199,7 @@ source_delta_1013I_R6D/
 source_delta_1013I_R6E/
 source_delta_1013I_R6F/
 source_delta_1013I_R6G/
+source_delta_1013I_R6H/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -301,6 +305,11 @@ scripts/validate_1013I_R6F_big_unit_prep_page_fixture_user_review_gate.py
 1013I_R6G_big_unit_prep_page_fixture_after_user_approval/big_unit_prep_page_action_state_1013I_R6G.json
 1013I_R6G_big_unit_prep_page_fixture_after_user_approval/big_unit_prep_page_fixture_review_summary_1013I_R6G.md
 scripts/validate_1013I_R6G_big_unit_prep_page_fixture_after_user_approval.py
+1013I_R6H_big_unit_prep_page_fixture_review_before_html/1013I_R6H_report.md
+1013I_R6H_big_unit_prep_page_fixture_review_before_html/1013I_R6H_result.json
+1013I_R6H_big_unit_prep_page_fixture_review_before_html/fixture_review_1013I_R6H.json
+1013I_R6H_big_unit_prep_page_fixture_review_before_html/html_readiness_matrix_1013I_R6H.json
+scripts/validate_1013I_R6H_big_unit_prep_page_fixture_review_before_html.py
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -386,6 +395,7 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - 1013I_R6F proposes big-unit prep page structure for user review only. It creates section proposals, a teacher review checklist, and risk notes; it does not create a page fixture, implement UI, or modify HTML.
 - 1013I_R6G creates a JSON page fixture after user approval. It applies the required constraints: decision-first layout, light timeline for the big-unit chain, and teacher-facing labels for lesson-position choices.
 - R6G still does not implement HTML/UI, enter R7 visual review, generate unit/lesson bodies, call provider/model, or write database/memory/Feishu.
-- R6H should review the R6G fixture before any HTML translation.
+- 1013I_R6H reviews the R6G fixture before HTML translation. It requires preview-only badges for confirmation actions, a visible degraded label for temporary single-lesson draft continuation, collapsed official references, and light timeline rendering.
+- R6I may create a static HTML fixture only; it still must not connect runtime, call provider/model, enter R7 visual review, or write database/memory/Feishu.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.

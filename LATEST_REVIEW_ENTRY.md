@@ -1,8 +1,8 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
-FINAL_STATUS=PASS_1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
+REVIEW_STAGE=1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
+FINAL_STATUS=PASS_1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
 LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 LATEST_COMPLETED_CONCEPT_NODE=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 LATEST_COMPLETED_REFERENCE_LAYER=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
@@ -12,18 +12,21 @@ LATEST_COMPLETED_TEXTBOOK_AND_UNIT_CHAIN=1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_
 LATEST_COMPLETED_BACKEND_EXTRACTION=1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
 LATEST_COMPLETED_PAGE_STRUCTURE_GATE=1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
 LATEST_COMPLETED_PAGE_FIXTURE=1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
+LATEST_COMPLETED_FIXTURE_REVIEW=1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
 USER_REVIEW_DECISION=APPROVE_WITH_CONSTRAINTS
-INHERITS_FROM=1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
+INHERITS_FROM=1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
+NEXT_RECOMMENDED_STAGE=1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
 PROVIDER_MODEL_CALL_ALLOWED=false
 MAIN_PROJECT_PUSHED=false
 PAGE_FIXTURE_CREATED=true
+HTML_FIXTURE_ALLOWED_AFTER_REVIEW=true
 UI_IMPLEMENTATION_STARTED=false
 HTML_UI_IMPLEMENTATION_ALLOWED=false
+HTML_BODY_MODIFIED=false
 ```
 
 ## Summary
@@ -51,6 +54,7 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
 -> 1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
 -> 1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
+-> 1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
 ```
 
 R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
@@ -77,11 +81,18 @@ R6F creates a page-structure proposal and user-review checklist for the future b
 
 R6G applies the user's approved constraints and creates a JSON page fixture only. It uses a decision-first first screen, keeps the big-unit chain as a light four-node timeline, translates lesson-position enum values into teacher-facing labels, and keeps official reference notes collapsed. It does not implement HTML or UI.
 
+R6H reviews the R6G JSON page fixture before HTML translation. It allows a future HTML fixture only with strict label constraints: confirmation-style actions must show preview-only state, degraded single-lesson continuation must show a degraded label, and the big-unit chain must remain a light timeline.
+
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
+1013I_R6H_big_unit_prep_page_fixture_review_before_html/1013I_R6H_report.md
+1013I_R6H_big_unit_prep_page_fixture_review_before_html/1013I_R6H_result.json
+1013I_R6H_big_unit_prep_page_fixture_review_before_html/fixture_review_1013I_R6H.json
+1013I_R6H_big_unit_prep_page_fixture_review_before_html/html_readiness_matrix_1013I_R6H.json
+scripts/validate_1013I_R6H_big_unit_prep_page_fixture_review_before_html.py
 1013I_R6G_big_unit_prep_page_fixture_after_user_approval/1013I_R6G_report.md
 1013I_R6G_big_unit_prep_page_fixture_after_user_approval/1013I_R6G_result.json
 1013I_R6G_big_unit_prep_page_fixture_after_user_approval/big_unit_prep_page_fixture_1013I_R6G.json
@@ -298,6 +309,24 @@ html_body_modified=false
 
 R6G applies the user's three constraints and creates only a JSON page fixture. It is ready for review before any HTML/UI implementation.
 
+## R6H Fixture Review Before HTML Result
+
+```text
+fixture_review_created=true
+decision_first_layout_review_pass=true
+teacher_action_semantics_review_pass=true
+preview_only_badges_required=true
+degraded_draft_label_review_pass=true
+official_reference_notes_collapsed_review_pass=true
+big_unit_timeline_not_full_unit_body=true
+lesson_position_labels_teacher_readable=true
+html_fixture_allowed_after_review=true
+html_body_modified=false
+ui_implementation_started=false
+```
+
+R6H allows only a future static HTML fixture under these label constraints. It does not write HTML itself.
+
 ## R5_R1 Review Repo Validator Path Fix
 
 ```text
@@ -369,10 +398,10 @@ fixture_only=true
 ## Next Recommended Stage
 
 ```text
-1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
+1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL
 ```
 
-Do not implement HTML or UI yet. The next stage should review the R6G page fixture and decide whether it is acceptable to translate into an HTML fixture.
+If opened, R6I may translate the reviewed JSON fixture into a static HTML fixture only. It must not connect runtime, call provider/model, write database/memory/Feishu, generate unit/lesson bodies, or perform formal UI implementation.
 
 ## Boundary
 
