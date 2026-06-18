@@ -6,8 +6,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
-- Current product next stage: `1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED`.
+- Current completed product stage: `1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED`.
+- Current product next stage: `1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -517,3 +517,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
 - Next stage: `1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, preview apply, or main-project commit/push.
+
+## 1013I_R2 Teacher Review Card Surface From Seed
+
+- `scripts/validate_1013I_R2_teacher_review_card_surface_from_seed.py` converts the R1 seed bundle into teacher-readable review-card surface data.
+- Output directory: `1013I_R2_teacher_review_card_surface_from_seed/`.
+- Required files were generated: `1013I_R2_result.json`, `1013I_R2_report.md`, `teacher_review_card_surface_1013I_R2.json`, `review_card_actions_1013I_R2.json`, and `teacher_review_card_surface_trace_1013I_R2.json`.
+- Review cards created: 3.
+- Each card includes card title, source teacher input, assistant suggestion, why-this-suggestion, risk note, and teacher action options.
+- Teacher action options: `accept_to_preview`, `revise_seed`, and `reject_seed`.
+- R2 only exposes `accept_to_preview`; it does not execute preview apply. Preview-chain state is deferred to R3.
+- Final status: `PASS_1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED`.
+- Next stage: `1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, preview-chain execution, or main-project commit/push.

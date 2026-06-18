@@ -1,0 +1,308 @@
+{
+  "surface_id": "teacher_review_card_surface_1013I_R2",
+  "stage": "1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED",
+  "source_bundle_id": "candidate_card_seed_bundle_1013I_R1",
+  "source_request_file": "teacher_self_prep_request_1013I_R0A1.json",
+  "source_request_id": "teacher_self_prep_request_1013I_R0A",
+  "original_request_id": "teacher_self_prep_request_1013I",
+  "request_id_trace_aligned": true,
+  "lesson_context": {
+    "grade_level": "三年级",
+    "subject": "美术",
+    "lesson_title": "色彩的感觉",
+    "lesson_count": 1,
+    "unit_or_textbook_context": "第一单元 多变的色彩",
+    "preferred_depth": "standard_daily"
+  },
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false,
+    "speaking_style": "calm_professional",
+    "assistant_tone": "teacher_work_partner",
+    "response_style": "concise_contextual"
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep",
+  "review_cards": [
+    {
+      "review_card_id": "review_card_01_candidate_seed_learning_problem_1013I_R1",
+      "source_seed_id": "candidate_seed_learning_problem_1013I_R1",
+      "source_request_id": "teacher_self_prep_request_1013I_R0A",
+      "source_request_file": "teacher_self_prep_request_1013I_R0A1.json",
+      "card_order": 1,
+      "card_type": "learning_problem_review_card",
+      "target_section": "本课先解决什么",
+      "card_title": "色彩的感觉：先把颜色感受说成理由",
+      "teacher_prompt": "学生这节课最先要解决的学习问题是什么？",
+      "assistant_display_name": "小教",
+      "assistant_suggestion": "围绕颜色带来的感受展开，让学生从说颜色名称和喜欢不喜欢，推进到能说出温暖、清凉、安静、热烈等感受，并给出一个理由。",
+      "why_this_suggestion": [
+        {
+          "source_field": "lesson_title",
+          "teacher_label": "课题",
+          "source_value": "色彩的感觉"
+        },
+        {
+          "source_field": "class_profile_hint",
+          "teacher_label": "班级情况",
+          "source_value": "学生能说出常见颜色和喜欢不喜欢，但把颜色感受说成理由还不稳定。"
+        },
+        {
+          "source_field": "teacher_ideas",
+          "teacher_label": "老师想法",
+          "source_value": "希望探究别太复杂，让学生能说出颜色带来的感受。"
+        }
+      ],
+      "risk_note": "避免把学习问题写成成人化概念解释；保持三年级学生能说、能试、能展示。",
+      "teacher_action_options": [
+        {
+          "action": "accept_to_preview",
+          "label": "采纳到预览",
+          "effect": "send_to_next_preview_chain_only",
+          "formal_apply_performed": false,
+          "lesson_body_modified": false
+        },
+        {
+          "action": "revise_seed",
+          "label": "再改一版",
+          "effect": "return_to_seed_revision_queue",
+          "formal_apply_performed": false,
+          "lesson_body_modified": false
+        },
+        {
+          "action": "reject_seed",
+          "label": "暂不采用",
+          "effect": "mark_card_rejected_for_this_preview",
+          "formal_apply_performed": false,
+          "lesson_body_modified": false
+        }
+      ],
+      "review_state": {
+        "status": "pending_teacher_review",
+        "accepted_to_preview": false,
+        "rejected": false,
+        "revision_requested": false,
+        "teacher_review_required": true
+      },
+      "boundary_flags": {
+        "review_surface_only": true,
+        "provider_called": false,
+        "model_called": false,
+        "formal_apply_performed": false,
+        "lesson_body_modified": false,
+        "html_body_modified": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false
+      },
+      "agent_role": "unified_teacher_agent",
+      "assistant_profile": {
+        "display_name": "小教",
+        "display_name_customizable": true,
+        "wake_name": "小教",
+        "voice_profile_id": null,
+        "tts_enabled": false,
+        "speaking_style": "calm_professional",
+        "assistant_tone": "teacher_work_partner",
+        "response_style": "concise_contextual"
+      },
+      "active_space": "prep_room",
+      "active_capability": "lesson_prep"
+    },
+    {
+      "review_card_id": "review_card_02_candidate_seed_material_scaffold_1013I_R1",
+      "source_seed_id": "candidate_seed_material_scaffold_1013I_R1",
+      "source_request_id": "teacher_self_prep_request_1013I_R0A",
+      "source_request_file": "teacher_self_prep_request_1013I_R0A1.json",
+      "card_order": 2,
+      "card_type": "material_scaffold_review_card",
+      "target_section": "材料与支架",
+      "card_title": "先轻材料，再加生活图例",
+      "teacher_prompt": "材料和支架怎样既轻又能帮学生说出理由？",
+      "assistant_display_name": "小教",
+      "assistant_suggestion": "先用色卡和感受词卡建立基础表达，再把生活图片作为小组加料材料；学习单只保留感受词、理由句和一个小观察。",
+      "why_this_suggestion": [
+        {
+          "source_field": "existing_materials",
+          "teacher_label": "已有材料",
+          "source_value": [
+            "色卡",
+            "生活图片",
+            "课堂学习单草稿"
+          ]
+        },
+        {
+          "source_field": "resource_preferences",
+          "teacher_label": "资源偏好",
+          "source_value": [
+            "轻学习单",
+            "大屏提示词",
+            "可撤回预览"
+          ]
+        },
+        {
+          "source_field": "classroom_constraints",
+          "teacher_label": "课堂限制",
+          "source_value": [
+            "40分钟常态课",
+            "不做公开课式复杂材料",
+            "展示评价控制在5分钟内"
+          ]
+        }
+      ],
+      "risk_note": "避免材料堆叠成公开课式复杂流程；常态课优先保证学生有时间观察、表达和调整。",
+      "teacher_action_options": [
+        {
+          "action": "accept_to_preview",
+          "label": "采纳到预览",
+          "effect": "send_to_next_preview_chain_only",
+          "formal_apply_performed": false,
+          "lesson_body_modified": false
+        },
+        {
+          "action": "revise_seed",
+          "label": "再改一版",
+          "effect": "return_to_seed_revision_queue",
+          "formal_apply_performed": false,
+          "lesson_body_modified": false
+        },
+        {
+          "action": "reject_seed",
+          "label": "暂不采用",
+          "effect": "mark_card_rejected_for_this_preview",
+          "formal_apply_performed": false,
+          "lesson_body_modified": false
+        }
+      ],
+      "review_state": {
+        "status": "pending_teacher_review",
+        "accepted_to_preview": false,
+        "rejected": false,
+        "revision_requested": false,
+        "teacher_review_required": true
+      },
+      "boundary_flags": {
+        "review_surface_only": true,
+        "provider_called": false,
+        "model_called": false,
+        "formal_apply_performed": false,
+        "lesson_body_modified": false,
+        "html_body_modified": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false
+      },
+      "agent_role": "unified_teacher_agent",
+      "assistant_profile": {
+        "display_name": "小教",
+        "display_name_customizable": true,
+        "wake_name": "小教",
+        "voice_profile_id": null,
+        "tts_enabled": false,
+        "speaking_style": "calm_professional",
+        "assistant_tone": "teacher_work_partner",
+        "response_style": "concise_contextual"
+      },
+      "active_space": "prep_room",
+      "active_capability": "lesson_prep"
+    },
+    {
+      "review_card_id": "review_card_03_candidate_seed_review_chain_1013I_R1",
+      "source_seed_id": "candidate_seed_review_chain_1013I_R1",
+      "source_request_id": "teacher_self_prep_request_1013I_R0A",
+      "source_request_file": "teacher_self_prep_request_1013I_R0A1.json",
+      "card_order": 3,
+      "card_type": "review_chain_review_card",
+      "target_section": "展示与评价",
+      "card_title": "展示评价控制在短链路",
+      "teacher_prompt": "展示评价怎样不拖长，同时留下学习证据？",
+      "assistant_display_name": "小教",
+      "assistant_suggestion": "展示评价控制在 5 分钟内，优先让学生说一种颜色感受和一个理由；教师只收集能证明学生从名称走向感受表达的证据。",
+      "why_this_suggestion": [
+        {
+          "source_field": "classroom_constraints",
+          "teacher_label": "课堂限制",
+          "source_value": [
+            "40分钟常态课",
+            "不做公开课式复杂材料",
+            "展示评价控制在5分钟内"
+          ]
+        },
+        {
+          "source_field": "preferred_depth",
+          "teacher_label": "备课深度",
+          "source_value": "standard_daily"
+        },
+        {
+          "source_field": "active_capability",
+          "teacher_label": "当前能力",
+          "source_value": "lesson_prep"
+        }
+      ],
+      "risk_note": "避免评价维度过多，导致课堂结尾变成泛泛夸奖或复杂量表。",
+      "teacher_action_options": [
+        {
+          "action": "accept_to_preview",
+          "label": "采纳到预览",
+          "effect": "send_to_next_preview_chain_only",
+          "formal_apply_performed": false,
+          "lesson_body_modified": false
+        },
+        {
+          "action": "revise_seed",
+          "label": "再改一版",
+          "effect": "return_to_seed_revision_queue",
+          "formal_apply_performed": false,
+          "lesson_body_modified": false
+        },
+        {
+          "action": "reject_seed",
+          "label": "暂不采用",
+          "effect": "mark_card_rejected_for_this_preview",
+          "formal_apply_performed": false,
+          "lesson_body_modified": false
+        }
+      ],
+      "review_state": {
+        "status": "pending_teacher_review",
+        "accepted_to_preview": false,
+        "rejected": false,
+        "revision_requested": false,
+        "teacher_review_required": true
+      },
+      "boundary_flags": {
+        "review_surface_only": true,
+        "provider_called": false,
+        "model_called": false,
+        "formal_apply_performed": false,
+        "lesson_body_modified": false,
+        "html_body_modified": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false
+      },
+      "agent_role": "unified_teacher_agent",
+      "assistant_profile": {
+        "display_name": "小教",
+        "display_name_customizable": true,
+        "wake_name": "小教",
+        "voice_profile_id": null,
+        "tts_enabled": false,
+        "speaking_style": "calm_professional",
+        "assistant_tone": "teacher_work_partner",
+        "response_style": "concise_contextual"
+      },
+      "active_space": "prep_room",
+      "active_capability": "lesson_prep"
+    }
+  ],
+  "review_card_count": 3,
+  "surface_state": "pending_teacher_review",
+  "teacher_review_required": true,
+  "preview_apply_allowed_next_stage_only": true,
+  "formal_apply_allowed": false
+}

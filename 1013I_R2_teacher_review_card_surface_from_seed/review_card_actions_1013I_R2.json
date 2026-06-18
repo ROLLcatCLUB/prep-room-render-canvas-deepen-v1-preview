@@ -1,0 +1,58 @@
+{
+  "actions_id": "review_card_actions_1013I_R2",
+  "stage": "1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED",
+  "available_actions": [
+    "accept_to_preview",
+    "revise_seed",
+    "reject_seed"
+  ],
+  "action_semantics": {
+    "accept_to_preview": {
+      "label": "采纳到预览",
+      "allowed_now": false,
+      "next_stage": "1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS",
+      "description": "R2 only exposes the action; R3 may simulate preview-chain state."
+    },
+    "revise_seed": {
+      "label": "再改一版",
+      "allowed_now": true,
+      "description": "Mark the card for seed revision without model/provider call."
+    },
+    "reject_seed": {
+      "label": "暂不采用",
+      "allowed_now": true,
+      "description": "Mark the card rejected for the current preview path."
+    }
+  },
+  "card_action_bindings": [
+    {
+      "review_card_id": "review_card_01_candidate_seed_learning_problem_1013I_R1",
+      "source_seed_id": "candidate_seed_learning_problem_1013I_R1",
+      "actions": [
+        "accept_to_preview",
+        "revise_seed",
+        "reject_seed"
+      ]
+    },
+    {
+      "review_card_id": "review_card_02_candidate_seed_material_scaffold_1013I_R1",
+      "source_seed_id": "candidate_seed_material_scaffold_1013I_R1",
+      "actions": [
+        "accept_to_preview",
+        "revise_seed",
+        "reject_seed"
+      ]
+    },
+    {
+      "review_card_id": "review_card_03_candidate_seed_review_chain_1013I_R1",
+      "source_seed_id": "candidate_seed_review_chain_1013I_R1",
+      "actions": [
+        "accept_to_preview",
+        "revise_seed",
+        "reject_seed"
+      ]
+    }
+  ],
+  "formal_apply_allowed": false,
+  "lesson_body_write_allowed": false
+}

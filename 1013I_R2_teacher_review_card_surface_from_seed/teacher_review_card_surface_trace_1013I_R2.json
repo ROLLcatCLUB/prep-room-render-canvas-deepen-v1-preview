@@ -1,0 +1,24 @@
+{
+  "trace_id": "teacher_review_card_surface_trace_1013I_R2",
+  "stage": "1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED",
+  "source_bundle_id": "candidate_card_seed_bundle_1013I_R1",
+  "source_request_id": "teacher_self_prep_request_1013I_R0A",
+  "review_card_count": 3,
+  "seed_to_card_mapping": [
+    {
+      "seed_id": "candidate_seed_learning_problem_1013I_R1",
+      "review_card_id": "review_card_01_candidate_seed_learning_problem_1013I_R1"
+    },
+    {
+      "seed_id": "candidate_seed_material_scaffold_1013I_R1",
+      "review_card_id": "review_card_02_candidate_seed_material_scaffold_1013I_R1"
+    },
+    {
+      "seed_id": "candidate_seed_review_chain_1013I_R1",
+      "review_card_id": "review_card_03_candidate_seed_review_chain_1013I_R1"
+    }
+  ],
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false
+}
