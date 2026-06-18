@@ -1,0 +1,63 @@
+{
+  "design_moves_id": "official_case_design_moves_1013I_R6B",
+  "stage": "1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION",
+  "context_intro_moves": [
+    "用校园、展览、邀请函或真实生活问题建立任务背景"
+  ],
+  "aesthetic_observation_moves": [
+    "观察自然、校园、经典作品或民间作品中的视觉特征"
+  ],
+  "concept_building_moves": [
+    "把颜色规律、纹样符号、秩序原理、故事视觉化等概念转成学生问题"
+  ],
+  "method_learning_moves": [
+    "通过教师示范、资料包、作品研习或任务单建立可操作方法"
+  ],
+  "skill_practice_moves": [
+    "短练习、学习单、草图、纹样练习、材料试验"
+  ],
+  "creative_production_moves": [
+    "长卷、剪纸故事、空间改造、折叠书或展演作品"
+  ],
+  "critique_revision_moves": [
+    "同伴建议、评价标准海报、小组评语、阶段性评价回应"
+  ],
+  "exhibition_reflection_moves": [
+    "创想会、艺术节、改造展、故事展演等公开展示任务"
+  ],
+  "transfer_extension_moves": [
+    "从形式规律迁移到生活应用，从故事插图迁移到展演"
+  ],
+  "assessment_evidence_moves": [
+    "学习单、草图、作品、演出计划、互评记录、单元评价表"
+  ],
+  "reference_only": true,
+  "readonly": true,
+  "big_unit_generation_performed": false,
+  "single_lesson_generation_performed": false,
+  "product_runtime_called": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "official_export_created": false,
+  "official_archive_created": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false,
+    "speaking_style": "calm_professional",
+    "assistant_tone": "teacher_work_partner",
+    "response_style": "concise_contextual"
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

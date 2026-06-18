@@ -8,8 +8,9 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
 - Current completed product stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA`.
 - Current completed concept node: `1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE`.
+- Current completed reference layer: `1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION`.
 - Current completed packaging fix: `1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX`.
-- Current product next stage: `1013I_R6B_OFFICIAL_BIG_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE`.
+- Current product next stage: `1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -47,6 +48,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - 1013I_R6 creates a teacher-readable render surface alpha from the R4/R5 fixture chain; it remains data-only and does not modify the main HTML body.
 - 1013I_R5B records the missing big-unit context node. Future self-prep must check the lesson's position in the larger unit before candidate card generation.
 - 1013I_R6A makes that node a required gate: normal single-lesson prep is blocked until big-unit context and lesson-position judgement are available or the teacher explicitly chooses degraded single-lesson draft mode.
+- 1013I_R6B deconstructs official teaching-design cases as reference samples only, to calibrate fields, prompt wording, and teacher-visible expression. Official cases are not curriculum standards.
 
 ## Reused Project Patterns
 
@@ -276,6 +278,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Next stage: `1013I_R6B_OFFICIAL_BIG_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE`.
 - Revised chain: `teacher_input -> big_unit_context_gate -> lesson_position_judgement -> teacher_confirm_unit_position -> self_prep_review_cards -> preview_only`.
 - Boundary: contract-only and fixture-only; no real official material parsing, no provider/model call, no formal apply, no lesson body/HTML/database/memory/Feishu/export/archive write.
+
+## 1013I_R6B Official Case Readonly Deconstruction
+
+- `scripts/validate_1013I_R6B_official_case_readonly_deconstruction.py` deconstructs 4 verified Grade 3 upper official teaching-design references as reference-only samples.
+- Output directory: `1013I_R6B_official_case_readonly_deconstruction/`.
+- Required files were generated: `official_case_source_index_1013I_R6B.json`, `official_case_deconstruction_matrix_1013I_R6B.json`, `official_case_design_moves_1013I_R6B.json`, `official_case_schema_calibration_suggestions_1013I_R6B.json`, `1013I_R6B_result.json`, and `1013I_R6B_report.md`.
+- Source-delta record: `source_delta_1013I_R6B/scripts/validate_1013I_R6B_official_case_readonly_deconstruction.py`.
+- Final status: `PASS_1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION`.
+- Next stage: `1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT`.
+- Boundary: read-only and reference-only; no big-unit generation, no single-lesson generation, no provider/model call, no formal apply, no lesson body/HTML/database/memory/Feishu/export/archive write.
 
 ## 1013M MiniMax M3 Connection
 

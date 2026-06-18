@@ -123,6 +123,7 @@ do_not_omit_thinking=true
 1013I_R5_R1_review_repo_validator_path_fix/
 1013I_R6_teacher_self_prep_render_surface_alpha/
 1013I_R6A_big_unit_context_required_gate/
+1013I_R6B_official_case_readonly_deconstruction/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -160,6 +161,7 @@ source_delta_1013I_R5/
 source_delta_1013I_R5_R1/
 source_delta_1013I_R6/
 source_delta_1013I_R6A/
+source_delta_1013I_R6B/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -214,6 +216,13 @@ scripts/validate_1013I_R6_teacher_self_prep_render_surface_alpha.py
 1013I_R6A_big_unit_context_required_gate/big_unit_context_gate_fixture_1013I_R6A.json
 1013I_R6A_big_unit_context_required_gate/big_unit_context_official_material_extraction_hook_1013I_R6A.json
 scripts/validate_1013I_R6A_big_unit_context_required_gate.py
+1013I_R6B_official_case_readonly_deconstruction/1013I_R6B_report.md
+1013I_R6B_official_case_readonly_deconstruction/1013I_R6B_result.json
+1013I_R6B_official_case_readonly_deconstruction/official_case_source_index_1013I_R6B.json
+1013I_R6B_official_case_readonly_deconstruction/official_case_deconstruction_matrix_1013I_R6B.json
+1013I_R6B_official_case_readonly_deconstruction/official_case_design_moves_1013I_R6B.json
+1013I_R6B_official_case_readonly_deconstruction/official_case_schema_calibration_suggestions_1013I_R6B.json
+scripts/validate_1013I_R6B_official_case_readonly_deconstruction.py
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -291,6 +300,7 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - 1013I_R6 creates a teacher-readable render surface alpha from the R4/R5 fixture and smoke outputs. It includes page title, teacher input summary, 3 review cards, 3 preview diff items, action area, revision queue, rejected items, and boundary notice.
 - R6 remains render-surface alpha only: no provider/model, no formal apply, no HTML body or lesson body write, no database/memory/Feishu/export/archive write.
 - 1013I_R6A upgrades big-unit context into a required gate. R7 visual review is paused; normal single-lesson prep is blocked until big-unit context and lesson-position judgement are available, unless the teacher explicitly chooses a degraded temporary single-lesson draft.
-- R6B should create a read-only official big-unit material extraction fixture before returning to render-surface visual review.
+- 1013I_R6B deconstructs official teaching-design cases as reference-only samples for schema and prompt calibration. Official cases are not treated as curriculum standards and do not generate big-unit or single-lesson plans.
+- R6C should define the curriculum-standard control layer before any return to render-surface visual review.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.

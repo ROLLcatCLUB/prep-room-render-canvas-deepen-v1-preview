@@ -1,14 +1,15 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
-FINAL_STATUS=PASS_1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
+REVIEW_STAGE=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
+FINAL_STATUS=PASS_1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
 LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 LATEST_COMPLETED_CONCEPT_NODE=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
+LATEST_COMPLETED_REFERENCE_LAYER=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
 LATEST_COMPLETED_PACKAGING_FIX=1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
-INHERITS_FROM=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
+INHERITS_FROM=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R6B_OFFICIAL_BIG_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
+NEXT_RECOMMENDED_STAGE=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
@@ -34,6 +35,7 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
 -> 1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 -> 1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
+-> 1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
 ```
 
 R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
@@ -45,6 +47,8 @@ R5_R1 does not change the R5 product payload. It fixes the GitHub review repo re
 R5B records a missing upstream concept node: teacher self-prep must not jump directly from single-lesson input to candidate cards. It must reserve a big-unit context check and lesson-position judgement before candidate-card generation.
 
 R6A upgrades the concept node into a required upstream gate. R7 visual review is paused. Normal single-lesson prep is blocked until `big_unit_context_gate` and `lesson_position_judgement` exist. If a teacher continues without big-unit context, the system may only enter a clearly labeled degraded single-lesson draft mode.
+
+R6B deconstructs official teaching-design cases as reference samples only. It does not treat cases as curriculum standards, does not generate a big-unit design, and does not generate a single-lesson plan. Its purpose is to calibrate schema, prompt wording, and teacher-visible expression.
 
 Start with:
 
@@ -62,6 +66,13 @@ scripts/validate_1013I_R5B_big_unit_context_node_record.py
 1013I_R6A_big_unit_context_required_gate/big_unit_context_gate_fixture_1013I_R6A.json
 1013I_R6A_big_unit_context_required_gate/big_unit_context_official_material_extraction_hook_1013I_R6A.json
 scripts/validate_1013I_R6A_big_unit_context_required_gate.py
+1013I_R6B_official_case_readonly_deconstruction/1013I_R6B_report.md
+1013I_R6B_official_case_readonly_deconstruction/1013I_R6B_result.json
+1013I_R6B_official_case_readonly_deconstruction/official_case_source_index_1013I_R6B.json
+1013I_R6B_official_case_readonly_deconstruction/official_case_deconstruction_matrix_1013I_R6B.json
+1013I_R6B_official_case_readonly_deconstruction/official_case_design_moves_1013I_R6B.json
+1013I_R6B_official_case_readonly_deconstruction/official_case_schema_calibration_suggestions_1013I_R6B.json
+scripts/validate_1013I_R6B_official_case_readonly_deconstruction.py
 1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_report.md
 1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_result.json
 1013I_R6_teacher_self_prep_render_surface_alpha/teacher_self_prep_render_surface_alpha_1013I_R6.json
@@ -115,6 +126,20 @@ teacher_confirm_unit_position_registered=true
 degraded_single_lesson_mode_defined=true
 official_material_extraction_hook_created=true
 actual_material_parsing_performed=false
+```
+
+## R6B Official Case Deconstruction Result
+
+```text
+official_case_sources_indexed=true
+official_case_count=4
+deconstruction_matrix_created=true
+design_moves_extracted=true
+schema_calibration_suggestions_created=true
+cases_treated_as_reference_only=true
+cases_not_treated_as_curriculum_standard=true
+big_unit_generation_performed=false
+single_lesson_generation_performed=false
 ```
 
 ## R5_R1 Review Repo Validator Path Fix
@@ -188,10 +213,10 @@ fixture_only=true
 ## Next Recommended Stage
 
 ```text
-1013I_R6B_OFFICIAL_BIG_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
+1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 ```
 
-If opened, the next stage should create a read-only extraction fixture for official big-unit materials. It should extract structure candidates only, not copy source text into lesson body and not generate a lesson plan.
+If opened, the next stage should define the curriculum-standard control layer as the upstream constraint layer. Official cases remain reference samples and must not override curriculum standards, textbook anchors, or teacher confirmation.
 
 ## Boundary
 
