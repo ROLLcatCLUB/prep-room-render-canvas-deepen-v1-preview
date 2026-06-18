@@ -1,0 +1,96 @@
+{
+  "actions_id": "minimal_self_prep_page_actions_1013I_R4",
+  "stage": "1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE",
+  "action_state_policy": {
+    "current_primary_state": "accepted_to_preview_only",
+    "revision_and_reject_are_alternate_paths": true,
+    "action_state_not_confusing": true
+  },
+  "actions": [
+    {
+      "action_id": "revert_preview_item_candidate_seed_learning_problem_1013I_R1",
+      "action": "revert_preview_item",
+      "label": "撤回预览",
+      "target_preview_item_id": "preview_item_candidate_seed_learning_problem_1013I_R1",
+      "available": true,
+      "formal_apply_performed": false,
+      "lesson_body_modified": false
+    },
+    {
+      "action_id": "revise_preview_item_candidate_seed_learning_problem_1013I_R1",
+      "action": "revise_preview_item",
+      "label": "再改一版",
+      "target_preview_item_id": "preview_item_candidate_seed_learning_problem_1013I_R1",
+      "available": true,
+      "provider_called": false,
+      "model_called": false
+    },
+    {
+      "action_id": "reject_preview_item_candidate_seed_learning_problem_1013I_R1",
+      "action": "reject_preview_item",
+      "label": "暂不采用",
+      "target_preview_item_id": "preview_item_candidate_seed_learning_problem_1013I_R1",
+      "available": true,
+      "formal_apply_performed": false,
+      "lesson_body_modified": false
+    },
+    {
+      "action_id": "revert_preview_item_candidate_seed_material_scaffold_1013I_R1",
+      "action": "revert_preview_item",
+      "label": "撤回预览",
+      "target_preview_item_id": "preview_item_candidate_seed_material_scaffold_1013I_R1",
+      "available": true,
+      "formal_apply_performed": false,
+      "lesson_body_modified": false
+    },
+    {
+      "action_id": "revise_preview_item_candidate_seed_material_scaffold_1013I_R1",
+      "action": "revise_preview_item",
+      "label": "再改一版",
+      "target_preview_item_id": "preview_item_candidate_seed_material_scaffold_1013I_R1",
+      "available": true,
+      "provider_called": false,
+      "model_called": false
+    },
+    {
+      "action_id": "reject_preview_item_candidate_seed_material_scaffold_1013I_R1",
+      "action": "reject_preview_item",
+      "label": "暂不采用",
+      "target_preview_item_id": "preview_item_candidate_seed_material_scaffold_1013I_R1",
+      "available": true,
+      "formal_apply_performed": false,
+      "lesson_body_modified": false
+    },
+    {
+      "action_id": "revert_preview_item_candidate_seed_review_chain_1013I_R1",
+      "action": "revert_preview_item",
+      "label": "撤回预览",
+      "target_preview_item_id": "preview_item_candidate_seed_review_chain_1013I_R1",
+      "available": true,
+      "formal_apply_performed": false,
+      "lesson_body_modified": false
+    },
+    {
+      "action_id": "revise_preview_item_candidate_seed_review_chain_1013I_R1",
+      "action": "revise_preview_item",
+      "label": "再改一版",
+      "target_preview_item_id": "preview_item_candidate_seed_review_chain_1013I_R1",
+      "available": true,
+      "provider_called": false,
+      "model_called": false
+    },
+    {
+      "action_id": "reject_preview_item_candidate_seed_review_chain_1013I_R1",
+      "action": "reject_preview_item",
+      "label": "暂不采用",
+      "target_preview_item_id": "preview_item_candidate_seed_review_chain_1013I_R1",
+      "available": true,
+      "formal_apply_performed": false,
+      "lesson_body_modified": false
+    }
+  ],
+  "revert_action_present": true,
+  "formal_apply_allowed": false,
+  "provider_call_allowed": false,
+  "model_call_allowed": false
+}

@@ -1,12 +1,12 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS
-FINAL_STATUS=PASS_1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS
-LATEST_COMPLETED_PRODUCT_STAGE=1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS
-INHERITS_FROM=1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED
+REVIEW_STAGE=1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
+FINAL_STATUS=PASS_1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
+LATEST_COMPLETED_PRODUCT_STAGE=1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
+INHERITS_FROM=1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
+NEXT_RECOMMENDED_STAGE=1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
@@ -16,7 +16,7 @@ MAIN_PROJECT_PUSHED=false
 
 ## Summary
 
-This entry updates the prep-room review package through preview-chain state from teacher review cards. The current chain is:
+This entry updates the prep-room review package through the minimal self-prep page fixture. The current chain is:
 
 ```text
 1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
@@ -26,56 +26,52 @@ This entry updates the prep-room review package through preview-chain state from
 -> 1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST
 -> 1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED
 -> 1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS
+-> 1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
 ```
 
-R3 simulates the three review-card actions into preview-chain data:
+R4 composes the teacher input summary, review cards, current preview diff cards, revision queue, rejected items, and revert actions into one minimal page fixture.
 
-```text
-accept_to_preview -> accepted_to_preview_only
-revise_seed -> revision_requested_simulated
-reject_seed -> rejected_for_current_preview_path_simulated
-```
-
-It creates preview-state data, preview diff cards, action trace, and a bridge to the minimal page fixture stage. It does not write lesson body or execute formal apply.
+R4 also resolves the R3 simulation ambiguity: the current primary state is `accepted_to_preview_only`; revision and reject are alternate paths, not simultaneous card states.
 
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
-1013I_R3_self_prep_preview_chain_from_review_cards/1013I_R3_report.md
-1013I_R3_self_prep_preview_chain_from_review_cards/1013I_R3_result.json
-1013I_R3_self_prep_preview_chain_from_review_cards/self_prep_preview_chain_state_1013I_R3.json
-1013I_R3_self_prep_preview_chain_from_review_cards/self_prep_preview_diff_cards_1013I_R3.json
+1013I_R4_minimal_self_prep_page_fixture/1013I_R4_report.md
+1013I_R4_minimal_self_prep_page_fixture/1013I_R4_result.json
+1013I_R4_minimal_self_prep_page_fixture/minimal_self_prep_page_fixture_1013I_R4.json
+1013I_R4_minimal_self_prep_page_fixture/minimal_self_prep_page_actions_1013I_R4.json
 ```
 
-## Preview Chain Result
+## Page Fixture Result
 
 ```text
-preview_chain_state_created=true
-source_review_card_surface=teacher_review_card_surface_1013I_R2.json
-review_cards_loaded=3
-accepted_preview_items_count=3
+minimal_page_fixture_created=true
+teacher_input_summary_present=true
+review_cards_section_present=true
+preview_diff_section_present=true
+revision_queue_section_present=true
+rejected_items_section_present=true
+revert_action_present=true
+action_state_not_confusing=true
+current_primary_state=accepted_to_preview_only
+revision_and_reject_are_alternate_paths=true
+review_card_count=3
+preview_diff_card_count=3
 revision_queue_count=3
 rejected_items_count=3
-preview_diff_cards_created=true
-preview_diff_card_count=3
-action_trace_created=true
-action_trace_count=9
-accept_to_preview_simulated=true
-revise_seed_simulated=true
-reject_seed_simulated=true
-revert_available=true
 preview_only=true
+fixture_only=true
 ```
 
 ## Next Recommended Stage
 
 ```text
-1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
+1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
 ```
 
-If opened, the next stage should compose the teacher input summary, review cards, preview diff cards, revision queue, rejected items, and revert action into a minimal page fixture. It should remain fixture-only and no-provider/no-model/no-formal-apply.
+If opened, the next stage should run a fixture-only alpha smoke over the complete self-prep flow: teacher input summary, review cards, accept-to-preview state, revert action, revise path, and reject path. It should remain no-provider/no-model/no-formal-apply.
 
 ## Boundary
 

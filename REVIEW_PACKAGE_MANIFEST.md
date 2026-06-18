@@ -38,6 +38,7 @@ The handoff is the preferred entry for a new session. It records:
 - candidate-card seed generation from aligned teacher self-prep request.
 - teacher-review card surface generation from candidate-card seeds.
 - preview-chain state simulation from teacher-review cards.
+- minimal self-prep page fixture that composes input summary, review cards, preview diff, revision queue, rejected items, and revert actions.
 
 ## Current Product Baseline
 
@@ -53,13 +54,13 @@ Accepted recent prep-notebook stages:
 1013G_TEACHER_REVIEW_PREP_ONLY
 1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
 1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
-1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS
+1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
 ```
 
 Recommended next product stage:
 
 ```text
-1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
+1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
 ```
 
 Do not enter:
@@ -115,6 +116,7 @@ do_not_omit_thinking=true
 1013I_R1_candidate_card_seed_from_self_prep_request/
 1013I_R2_teacher_review_card_surface_from_seed/
 1013I_R3_self_prep_preview_chain_from_review_cards/
+1013I_R4_minimal_self_prep_page_fixture/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -146,6 +148,7 @@ source_delta_1013I_R0A1/
 source_delta_1013I_R1/
 source_delta_1013I_R2/
 source_delta_1013I_R3/
+source_delta_1013I_R4/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -180,6 +183,7 @@ SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md
 1013I_R1_candidate_card_seed_from_self_prep_request/1013I_R1_report.md
 1013I_R2_teacher_review_card_surface_from_seed/1013I_R2_report.md
 1013I_R3_self_prep_preview_chain_from_review_cards/1013I_R3_report.md
+1013I_R4_minimal_self_prep_page_fixture/1013I_R4_report.md
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -246,5 +250,8 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - R2 exposes but does not execute `accept_to_preview`; R3 should create preview-chain state from the review cards.
 - 1013I_R3 simulates `accept_to_preview`, `revise_seed`, and `reject_seed` into preview-chain state, revision queue, rejected items, preview diff cards, and action trace. It remains preview-only and reversible.
 - R4 should read `1013I_R3_self_prep_preview_chain_from_review_cards/self_prep_preview_chain_state_1013I_R3.json`.
+- 1013I_R4 composes the teacher input summary, review cards, current preview diff cards, revision queue, rejected items, and revert actions into one minimal page fixture.
+- R4 resolves the R3 action-simulation ambiguity: current primary state is `accepted_to_preview_only`; revision and reject are alternate paths, not simultaneous states.
+- R5 should run a fixture-only teacher self-prep alpha smoke from the R4 page fixture.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.

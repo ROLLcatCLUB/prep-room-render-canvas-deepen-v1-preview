@@ -6,8 +6,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS`.
-- Current product next stage: `1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE`.
+- Current completed product stage: `1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE`.
+- Current product next stage: `1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -543,3 +543,15 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS`.
 - Next stage: `1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE`.
 - Boundary: preview-chain simulation only; no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, official export/archive, or main-project commit/push.
+
+## 1013I_R4 Minimal Self Prep Page Fixture
+
+- `scripts/validate_1013I_R4_minimal_self_prep_page_fixture.py` composes the R0A1 request, R2 review cards, and R3 preview chain into one minimal page fixture.
+- Output directory: `1013I_R4_minimal_self_prep_page_fixture/`.
+- Required files were generated: `1013I_R4_result.json`, `1013I_R4_report.md`, `minimal_self_prep_page_fixture_1013I_R4.json`, `minimal_self_prep_page_sections_1013I_R4.json`, and `minimal_self_prep_page_actions_1013I_R4.json`.
+- Page sections: teacher input summary, review cards, current preview diff, revision queue, rejected items, and revert actions.
+- R4 resolves the R3 action-simulation ambiguity: current primary state is `accepted_to_preview_only`; revision and reject are alternate paths, not simultaneous card states.
+- Revert action is present.
+- Final status: `PASS_1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE`.
+- Next stage: `1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE`.
+- Boundary: page fixture only; no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, official export/archive, or main-project commit/push.
