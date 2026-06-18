@@ -1,8 +1,8 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
-FINAL_STATUS=PASS_1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
+REVIEW_STAGE=1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
+FINAL_STATUS=PASS_1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
 LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 LATEST_COMPLETED_CONCEPT_NODE=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 LATEST_COMPLETED_REFERENCE_LAYER=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
@@ -10,16 +10,18 @@ LATEST_COMPLETED_PACKAGING_FIX=1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
 LATEST_COMPLETED_CONTROL_LAYER=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 LATEST_COMPLETED_TEXTBOOK_AND_UNIT_CHAIN=1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
 LATEST_COMPLETED_BACKEND_EXTRACTION=1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
-INHERITS_FROM=1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
+LATEST_COMPLETED_PAGE_STRUCTURE_GATE=1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
+INHERITS_FROM=1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
+NEXT_RECOMMENDED_STAGE=1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
 PROVIDER_MODEL_CALL_ALLOWED=false
 MAIN_PROJECT_PUSHED=false
 PAGE_WORK_STARTED=false
-PAGE_USER_GATE_REQUIRED_BEFORE_R6F=true
+UI_IMPLEMENTATION_STARTED=false
+USER_REVIEW_REQUIRED_BEFORE_PAGE_FIXTURE=true
 ```
 
 ## Summary
@@ -45,6 +47,7 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 -> 1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
 -> 1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
+-> 1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
 ```
 
 R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
@@ -67,11 +70,20 @@ R6D defines `lesson_textbook_map`, `unit_package`, and `lesson_position_judgemen
 
 R6E adds a backend readonly extraction adapter. It reads local official unit field contracts and R6D control fixtures, then emits textbook-anchor candidates, big-unit-chain candidates, lesson-position candidate status, and teacher-confirmation required items. It does not verify a textbook anchor, does not create a formal `unit_package`, does not generate unit or lesson content, and does not start page work.
 
+R6F creates a page-structure proposal and user-review checklist for the future big-unit prep page. It proposes what sections should exist, which information appears first, which reference notes stay collapsed, and what the user must approve before any page fixture or UI implementation starts. It does not create an HTML page or page fixture.
+
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/1013I_R6F_report.md
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/1013I_R6F_result.json
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/big_unit_prep_page_structure_proposal_1013I_R6F.json
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/big_unit_prep_page_sections_1013I_R6F.json
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/teacher_user_review_checklist_1013I_R6F.md
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/page_risk_notes_1013I_R6F.md
+scripts/validate_1013I_R6F_big_unit_prep_page_fixture_user_review_gate.py
 1013I_R6E_official_unit_material_readonly_extraction_fixture/1013I_R6E_report.md
 1013I_R6E_official_unit_material_readonly_extraction_fixture/1013I_R6E_result.json
 1013I_R6E_official_unit_material_readonly_extraction_fixture/official_unit_material_source_index_1013I_R6E.json
@@ -236,6 +248,25 @@ single_lesson_generation_performed=false
 
 R6E reads official unit field contracts as readonly references and produces candidates for teacher review only. It is the backend/data step before any big-unit page fixture.
 
+## R6F Page Structure User Review Gate Result
+
+```text
+page_structure_proposal_created=true
+page_sections_created=true
+teacher_user_review_checklist_created=true
+page_risk_notes_created=true
+textbook_anchor_candidates_visible=true
+big_unit_chain_candidates_visible=true
+lesson_position_candidate_visible=true
+teacher_confirmation_items_visible=true
+readonly_reference_notes_collapsed=true
+page_work_started=false
+ui_implementation_started=false
+user_review_required_before_page_fixture=true
+```
+
+R6F is only a page-structure proposal and user-review gate. It does not create a page fixture, does not implement UI, and does not modify HTML.
+
 ## R5_R1 Review Repo Validator Path Fix
 
 ```text
@@ -307,10 +338,10 @@ fixture_only=true
 ## Next Recommended Stage
 
 ```text
-1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
+1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
 ```
 
-If opened, the next stage must stop at a page user-review gate. The user must review the proposed big-unit prep page structure before any page fixture or UI implementation starts.
+Do not open the next stage until the user explicitly approves the R6F page structure proposal. If approved, R6G may create a page fixture, but still must not implement HTML or formal UI without another explicit instruction.
 
 ## Boundary
 

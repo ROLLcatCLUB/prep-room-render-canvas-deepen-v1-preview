@@ -47,6 +47,7 @@ The handoff is the preferred entry for a new session. It records:
 - curriculum-standard control layer contract before textbook anchor and big-unit design-chain work.
 - textbook anchor and big-unit design-chain contract before official unit material extraction.
 - backend readonly extraction fixture for official unit material field candidates before any big-unit page work.
+- big-unit prep page-structure proposal and user-review gate before any page fixture or UI work.
 
 ## Current Product Baseline
 
@@ -70,17 +71,18 @@ Accepted recent prep-notebook stages:
 1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
 1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
+1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
 ```
 
 Recommended next product stage:
 
 ```text
-1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
+1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
 ```
 
-Curriculum standard is now defined as the upstream constraint layer for later big-unit and single-lesson work. R6D adds the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, `lesson_position_judgement`, and teacher confirmation must exist before normal candidate-card generation. R6E adds a backend readonly extraction adapter that turns local official unit field contracts into candidates for teacher review. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, big-unit chains, or teacher confirmation.
+Curriculum standard is now defined as the upstream constraint layer for later big-unit and single-lesson work. R6D adds the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, `lesson_position_judgement`, and teacher confirmation must exist before normal candidate-card generation. R6E adds a backend readonly extraction adapter that turns local official unit field contracts into candidates for teacher review. R6F proposes page structure for user review only. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, big-unit chains, or teacher confirmation.
 
-R7 visual review remains paused. Big-unit prep page work has not started; R6F is a user-review gate for page structure before any page fixture or UI implementation.
+R7 visual review remains paused. Big-unit prep page work has not started; R6G may only open after explicit user approval of the R6F page structure.
 
 Do not enter:
 
@@ -146,6 +148,7 @@ do_not_omit_thinking=true
 1013I_R6C_curriculum_standard_control_layer_contract/
 1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/
 1013I_R6E_official_unit_material_readonly_extraction_fixture/
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -188,6 +191,7 @@ source_delta_1013I_R6B_R1/
 source_delta_1013I_R6C/
 source_delta_1013I_R6D/
 source_delta_1013I_R6E/
+source_delta_1013I_R6F/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -280,6 +284,13 @@ scripts/validate_1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract.py
 1013I_R6E_official_unit_material_readonly_extraction_fixture/teacher_confirmation_required_items_1013I_R6E.json
 backend/xiaobei_ai/prep_room_official_unit_material_extraction_1013I_R6E.py
 scripts/validate_1013I_R6E_official_unit_material_readonly_extraction_fixture.py
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/1013I_R6F_report.md
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/1013I_R6F_result.json
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/big_unit_prep_page_structure_proposal_1013I_R6F.json
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/big_unit_prep_page_sections_1013I_R6F.json
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/teacher_user_review_checklist_1013I_R6F.md
+1013I_R6F_big_unit_prep_page_fixture_user_review_gate/page_risk_notes_1013I_R6F.md
+scripts/validate_1013I_R6F_big_unit_prep_page_fixture_user_review_gate.py
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -362,6 +373,7 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - 1013I_R6C defines the curriculum-standard control layer as the upstream constraint layer. It keeps `lesson_standard_map` as a structured mapping card or missing-marker object, requires textbook anchor before normal lesson generation, keeps official cases reference-only, and pauses R7 visual review.
 - 1013I_R6D defines the textbook anchor and big-unit design-chain contract. It keeps `lesson_textbook_map` and `unit_package`, requires `lesson_position_judgement` and teacher confirmation, blocks normal candidate-card generation without anchor/position, and only allows visible degraded draft mode when those gates are missing.
 - 1013I_R6E performs backend readonly extraction from local official unit field contracts. It creates textbook-anchor candidates, big-unit-chain candidates, lesson-position candidate status, and teacher-confirmation required items only.
-- R6E does not start page work. R6F must be a user-review gate for the proposed big-unit prep page structure before any page fixture or UI implementation.
+- 1013I_R6F proposes big-unit prep page structure for user review only. It creates section proposals, a teacher review checklist, and risk notes; it does not create a page fixture, implement UI, or modify HTML.
+- R6G must not start unless the user explicitly approves the R6F page structure proposal.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.
