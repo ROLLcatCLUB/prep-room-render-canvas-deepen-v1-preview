@@ -1,0 +1,63 @@
+{
+  "fixture_id": "self_prep_preview_fixture_1013I",
+  "source_request_id": "teacher_self_prep_request_1013I_R0A",
+  "preview_mode": "fixture_only_no_provider",
+  "lesson_header": {
+    "grade_level": "三年级",
+    "subject": "美术",
+    "lesson_title": "色彩的感觉",
+    "lesson_count": 1,
+    "unit_or_textbook_context": "第一单元 多变的色彩",
+    "preferred_depth": "standard_daily"
+  },
+  "teacher_visible_summary": "小教已根据年级、课题、单元和老师已有想法整理出一份预览起点，后续仍需教师审阅。",
+  "preview_sections": [
+    {
+      "section_id": "learning_problem",
+      "title": "本课先解决什么",
+      "preview_text": "学生不只说颜色名称和喜欢不喜欢，而是能把颜色和温暖、清凉、安静、热烈等感受连起来，并说出一个理由。",
+      "source": "teacher_input_fixture"
+    },
+    {
+      "section_id": "material_plan",
+      "title": "材料先轻后加",
+      "preview_text": "先用色卡和感受词卡建立分类，再把生活物品作为已经能说出理由的小组加料材料。",
+      "source": "reuse_1013H_preview_pattern"
+    },
+    {
+      "section_id": "review_chain_ready",
+      "title": "后续可进入候选审阅",
+      "preview_text": "这份预览可继续生成候选卡，再进入教师审阅准备和 sandbox preview。",
+      "source": "preview_chain_bridge"
+    }
+  ],
+  "reuse_from_1013H": {
+    "preview_state_id": "1013H_SANDBOX_PREVIEW_STATE",
+    "accepted_preview_items_count": 3,
+    "preview_only_policy_kept": true
+  },
+  "boundary_flags": {
+    "fixture_only": true,
+    "provider_called": false,
+    "model_called": false,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false,
+    "html_body_modified": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false
+  },
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false,
+    "speaking_style": "calm_professional",
+    "assistant_tone": "teacher_work_partner",
+    "response_style": "concise_contextual"
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

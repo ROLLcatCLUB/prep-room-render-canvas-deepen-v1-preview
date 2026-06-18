@@ -1,0 +1,37 @@
+{
+  "scan_id": "visible_naming_and_profile_hotfix_scan_1013I_R0A",
+  "stage": "1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX",
+  "original_scan": {
+    "teacher_self_prep_input_fixture_1013I.json": [
+      {
+        "artifact": "teacher_self_prep_input_fixture_1013I.json",
+        "line": 5,
+        "deprecated_name": "小备",
+        "line_excerpt": "\"agent\": \"小备\","
+      }
+    ],
+    "teacher_self_prep_request_1013I.json": [
+      {
+        "artifact": "teacher_self_prep_request_1013I.json",
+        "line": 9,
+        "deprecated_name": "小备",
+        "line_excerpt": "\"agent\": \"小备\","
+      }
+    ],
+    "self_prep_preview_fixture_1013I.json": [
+      {
+        "artifact": "self_prep_preview_fixture_1013I.json",
+        "line": 13,
+        "deprecated_name": "小备",
+        "line_excerpt": "\"teacher_visible_summary\": \"小备已根据年级、课题、单元和老师已有想法整理出一份预览起点，后续仍需教师审阅。\","
+      }
+    ],
+    "legacy_agent_field_found": true
+  },
+  "fixed_scan": {
+    "teacher_self_prep_input_fixture_1013I_R0A.json": [],
+    "teacher_self_prep_request_1013I_R0A.json": [],
+    "self_prep_preview_fixture_1013I_R0A.json": [],
+    "legacy_agent_field_found": false
+  }
+}

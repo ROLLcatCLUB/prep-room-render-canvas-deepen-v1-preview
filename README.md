@@ -6,8 +6,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT`.
-- Current product next stage: `1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX`.
+- Current completed product stage: `1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX`.
+- Current product next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -476,3 +476,17 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT`.
 - Next stage: `1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, repo path rename, global search/replace, or main-project commit/push.
+
+## 1013I_R0A Visible Naming And Profile Hotfix
+
+- `scripts/validate_1013I_R0A_visible_naming_and_profile_hotfix.py` creates hotfixed successor artifacts from the current 1013I teacher self-prep request.
+- Output directory: `1013I_R0A_visible_naming_and_profile_hotfix/`.
+- Required files were generated: `1013I_R0A_result.json`, `1013I_R0A_report.md`, `teacher_self_prep_input_fixture_1013I_R0A.json`, `teacher_self_prep_request_1013I_R0A.json`, `self_prep_preview_fixture_1013I_R0A.json`, `visible_naming_and_profile_hotfix_scan_1013I_R0A.json`, and `visible_naming_and_profile_hotfix_manifest_1013I_R0A.json`.
+- Original current 1013I artifacts are preserved as historical input; R0A writes successor artifacts for the next stage.
+- Teacher-visible deprecated names after hotfix: zero.
+- Legacy `agent` field after hotfix: false.
+- Successor artifacts now use `agent_role=unified_teacher_agent`, `assistant_profile.display_name=小教`, `active_space=prep_room`, and `active_capability=lesson_prep`.
+- R1 should read `1013I_R0A_visible_naming_and_profile_hotfix/teacher_self_prep_request_1013I_R0A.json`.
+- Final status: `PASS_1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX`.
+- Next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, repo path rename, global search/replace, historical review-package rewrite, old validator rename, or main-project commit/push.

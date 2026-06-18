@@ -33,6 +33,7 @@ The handoff is the preferred entry for a new session. It records:
 - sandbox preview-state application for accepted candidate cards.
 - teacher self-prep input schema, request envelope, sufficiency assessment, and fixture preview.
 - unified teacher-agent profile and capability contract before candidate-card seeding.
+- visible naming and profile-shape hotfix for current 1013I successor artifacts.
 
 ## Current Product Baseline
 
@@ -48,13 +49,13 @@ Accepted recent prep-notebook stages:
 1013G_TEACHER_REVIEW_PREP_ONLY
 1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
 1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
-1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT
+1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX
 ```
 
 Recommended next product stage:
 
 ```text
-1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX
+1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST
 ```
 
 Do not enter:
@@ -105,6 +106,7 @@ do_not_omit_thinking=true
 1013I_teacher_self_prep_input_minimal_flow/
 1013I_R0_unified_teacher_agent_and_capability_boundary_contract/
 1013I_R0_unified_teacher_agent_profile_and_capability_contract/
+1013I_R0A_visible_naming_and_profile_hotfix/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -131,6 +133,7 @@ source_delta_1013H/
 source_delta_1013I/
 source_delta_1013I_R0/
 source_delta_1013I_R0_PROFILE/
+source_delta_1013I_R0A/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -160,6 +163,7 @@ SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md
 1013I_teacher_self_prep_input_minimal_flow/1013I_report.md
 1013I_R0_unified_teacher_agent_and_capability_boundary_contract/1013I_R0_report.md
 1013I_R0_unified_teacher_agent_profile_and_capability_contract/1013I_R0_profile_report.md
+1013I_R0A_visible_naming_and_profile_hotfix/1013I_R0A_report.md
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -216,5 +220,7 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - 1013I_R0 found current 1013I visible `小备` hits and defers them to a later visible naming/profile hotfix; it does not perform global search/replace or edit 1013I files.
 - 1013I_R0 profile contract supersedes the earlier R0 boundary contract: engineering core is `unified_teacher_agent`, `小教` is only `current_default_display_name`, and future customization is represented by `assistant_profile`.
 - 1013I_R0 profile contract requires new artifacts to use `agent_role`, `assistant_profile`, `active_space`, and `active_capability`; it defers the existing 1013I `小备`/`agent` shape to `1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX`.
+- 1013I_R0A creates hotfixed successor artifacts for the current 1013I request and preview. It removes teacher-visible `小备` hits, removes legacy `agent` field shape, and preserves original 1013I artifacts as historical input.
+- R1 should read `1013I_R0A_visible_naming_and_profile_hotfix/teacher_self_prep_request_1013I_R0A.json`.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.

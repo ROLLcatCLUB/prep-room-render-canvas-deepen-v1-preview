@@ -1,0 +1,22 @@
+{
+  "manifest_id": "visible_naming_and_profile_hotfix_manifest_1013I_R0A",
+  "stage": "1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX",
+  "source_stage": "1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW",
+  "profile_contract_stage": "1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT",
+  "hotfix_scope": [
+    "teacher-visible deprecated agent names in current 1013I artifacts",
+    "legacy agent field shape in current 1013I artifacts"
+  ],
+  "generated_successor_artifacts": [
+    "teacher_self_prep_input_fixture_1013I_R0A.json",
+    "teacher_self_prep_request_1013I_R0A.json",
+    "self_prep_preview_fixture_1013I_R0A.json"
+  ],
+  "original_1013I_artifacts_modified": false,
+  "original_deprecated_visible_hit_count": 3,
+  "fixed_deprecated_visible_hit_count": 0,
+  "global_search_replace_performed": false,
+  "repo_path_rename_performed": false,
+  "historical_review_package_modified": false,
+  "old_validator_renamed": false
+}
