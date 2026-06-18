@@ -6,8 +6,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW`.
-- Current product next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
+- Current completed product stage: `1013I_R0_UNIFIED_TEACHER_AGENT_AND_CAPABILITY_BOUNDARY_CONTRACT`.
+- Current product next stage: `1013I_R0A_VISIBLE_NAMING_HOTFIX`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -216,7 +216,7 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Required files were generated: `1013I_result.json`, `1013I_report.md`, `teacher_self_prep_input_schema_1013I.json`, `teacher_self_prep_input_fixture_1013I.json`, `input_sufficiency_assessment_1013I.json`, `teacher_self_prep_request_1013I.json`, `self_prep_preview_fixture_1013I.json`, and `preview_chain_bridge_1013I.json`.
 - Final status: `PASS_1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW`.
 - Required input fields are present; the fixture can generate a self-prep preview without provider/model calls.
-- Next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
+- Next stage: `1013I_R0_UNIFIED_TEACHER_AGENT_AND_CAPABILITY_BOUNDARY_CONTRACT` first, then `1013I_R0A_VISIBLE_NAMING_HOTFIX` before candidate-card seeding.
 - Boundary: input envelope and fixture preview only; no provider/model call, no formal apply, no lesson body write, no database/memory/Feishu write.
 
 ## 1013M MiniMax M3 Connection
@@ -444,3 +444,17 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_FEISHU_SNAPSHOT_SCHEDULE_REAL_TIME_BINDING_WITH_LIVE_CONFIG_CAVEAT`.
 - Next stage: `1013S_R1_FEISHU_LIVE_CREDENTIAL_BINDING_OR_1013F_R2D_CONTENT_REVIEW`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, official export, official archive, real knowledge-base retrieval, raw model output to frontend, default entry change, 1013G action entry, or main-project commit/push.
+
+## 1013I_R0 Unified Teacher Agent And Capability Boundary Contract
+
+- `scripts/validate_1013I_R0_unified_teacher_agent_and_capability_boundary_contract.py` generates the naming and capability-boundary contract before candidate-card seeding.
+- Output directory: `1013I_R0_unified_teacher_agent_and_capability_boundary_contract/`.
+- Required files were generated: `unified_teacher_agent_and_capability_boundary_contract.md`, `unified_teacher_agent_and_capability_boundary_contract.json`, `legacy_agent_deprecation_policy.json`, `visible_copy_naming_scan_1013I_R0.json`, `engineering_name_migration_map_1013I_R0.json`, `1013I_R0_result.json`, and `1013I_R0_report.md`.
+- Teacher-visible agent contract: canonical role is `unified_teacher_agent`; current display name is `小教`; public-beta rename remains allowed by contract.
+- Deprecated as teacher-visible front-stage agent names: `小备`, `小评`, `小管`, and `小美`.
+- Backend distinctions move behind capability keys such as `lesson_prep`, `classroom_companion`, `learning_evidence`, `assessment_review`, `assessment_summary`, `resource_retrieval`, `archive`, and `export_draft`.
+- The scan found current 1013I visible `小备` hits and records them as deferred to `1013I_R0A_VISIBLE_NAMING_HOTFIX`.
+- This stage does not perform global search/replace and does not rename historical paths, review packages, validators, or prior audit evidence.
+- Final status: `PASS_UNIFIED_TEACHER_AGENT_AND_CAPABILITY_BOUNDARY_CONTRACT`.
+- Next stage: `1013I_R0A_VISIBLE_NAMING_HOTFIX`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, repo path rename, global search/replace, or main-project commit/push.

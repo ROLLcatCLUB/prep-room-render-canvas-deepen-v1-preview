@@ -1,0 +1,38 @@
+{
+  "stage": "1013I_R0_UNIFIED_TEACHER_AGENT_AND_CAPABILITY_BOUNDARY_CONTRACT",
+  "generated_at": "2026-06-18T07:27:06+00:00",
+  "inherits_from": "1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW",
+  "final_status": "PASS_UNIFIED_TEACHER_AGENT_AND_CAPABILITY_BOUNDARY_CONTRACT",
+  "next_stage": "1013I_R0A_VISIBLE_NAMING_HOTFIX",
+  "canonical_agent_role": "unified_teacher_agent",
+  "current_display_name": "小教",
+  "teacher_visible_agent_names_allowed": [
+    "小教"
+  ],
+  "deprecated_teacher_visible_agent_names": [
+    "小备",
+    "小评",
+    "小管",
+    "小美"
+  ],
+  "lesson_prep_capability_key": "lesson_prep",
+  "xiaobei_legacy_status": "deprecated_internal_only",
+  "xiaoping_legacy_status": "deprecated_internal_only",
+  "teacher_visible_xiaobei_hits": [],
+  "teacher_visible_deprecated_agent_hits": [],
+  "current_1013I_visible_xiaobei_hits_found": true,
+  "current_1013I_visible_xiaobei_hits_deferred_to_R0A": true,
+  "legacy_xiaobei_entries_marked": true,
+  "legacy_alias_allowed_only_in_migration_map": true,
+  "repo_path_rename_required_now": false,
+  "global_search_replace_allowed": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

@@ -1,0 +1,59 @@
+{
+  "map_id": "engineering_name_migration_map_1013I_R0",
+  "stage": "1013I_R0_UNIFIED_TEACHER_AGENT_AND_CAPABILITY_BOUNDARY_CONTRACT",
+  "canonical_agent_role": "unified_teacher_agent",
+  "current_display_name": "小教",
+  "legacy_aliases": [
+    {
+      "legacy_name": "小备",
+      "legacy_engineering_aliases": [
+        "xiaobei",
+        "xiaobei_prep_assistant"
+      ],
+      "new_front_stage": "小教",
+      "new_backend_capability": "lesson_prep",
+      "status": "deprecated_internal_only",
+      "global_search_replace_allowed": false
+    },
+    {
+      "legacy_name": "小评",
+      "legacy_engineering_aliases": [
+        "xiaoping"
+      ],
+      "new_front_stage": "小教",
+      "new_backend_capability": "assessment_review",
+      "status": "deprecated_internal_only",
+      "global_search_replace_allowed": false
+    },
+    {
+      "legacy_name": "小管",
+      "legacy_engineering_aliases": [
+        "operations_agent"
+      ],
+      "new_front_stage": "小教",
+      "new_backend_capability": "archive",
+      "status": "deprecated_internal_only",
+      "global_search_replace_allowed": false
+    },
+    {
+      "legacy_name": "小美",
+      "legacy_engineering_aliases": [
+        "art_agent"
+      ],
+      "new_front_stage": "小教",
+      "new_backend_capability": "resource_retrieval",
+      "status": "deprecated_internal_only",
+      "global_search_replace_allowed": false
+    }
+  ],
+  "capability_keys": {
+    "lesson_prep": "备课能力",
+    "classroom_companion": "课堂伴随能力",
+    "learning_evidence": "学习证据能力",
+    "assessment_review": "评价能力",
+    "assessment_summary": "评价汇总能力",
+    "resource_retrieval": "资源检索能力",
+    "archive": "归档能力",
+    "export_draft": "导出草稿能力"
+  }
+}

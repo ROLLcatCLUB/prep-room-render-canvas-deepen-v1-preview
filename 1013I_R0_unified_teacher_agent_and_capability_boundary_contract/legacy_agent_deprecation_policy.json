@@ -1,0 +1,41 @@
+{
+  "policy_id": "legacy_agent_deprecation_policy_1013I_R0",
+  "stage": "1013I_R0_UNIFIED_TEACHER_AGENT_AND_CAPABILITY_BOUNDARY_CONTRACT",
+  "deprecated_teacher_visible_agent_names": [
+    "小备",
+    "小评",
+    "小管",
+    "小美"
+  ],
+  "replacement": {
+    "canonical_agent_role": "unified_teacher_agent",
+    "current_display_name": "小教"
+  },
+  "rules": [
+    {
+      "rule_id": "teacher_visible_copy",
+      "policy": "New teacher-visible surfaces must use the current unified teacher agent display name only.",
+      "allowed_names": [
+        "小教"
+      ],
+      "blocked_names": [
+        "小备",
+        "小评",
+        "小管",
+        "小美"
+      ]
+    },
+    {
+      "rule_id": "historical_audit_artifacts",
+      "policy": "Historical paths, review packages, stage names, and code module paths may preserve legacy names and must be marked as legacy rather than rewritten globally."
+    },
+    {
+      "rule_id": "backend_capability_boundary",
+      "policy": "Specialist roles move behind capability keys instead of appearing as separate teacher-facing agents."
+    },
+    {
+      "rule_id": "hotfix_scope",
+      "policy": "Current 1013I visible copy hits are acknowledged here and must be fixed in R0A, not by global replacement in R0."
+    }
+  ]
+}

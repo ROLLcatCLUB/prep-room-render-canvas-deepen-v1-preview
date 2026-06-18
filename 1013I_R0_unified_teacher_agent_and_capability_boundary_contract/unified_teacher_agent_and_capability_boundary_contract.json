@@ -1,0 +1,57 @@
+{
+  "contract_id": "unified_teacher_agent_and_capability_boundary_contract_1013I_R0",
+  "stage": "1013I_R0_UNIFIED_TEACHER_AGENT_AND_CAPABILITY_BOUNDARY_CONTRACT",
+  "generated_at": "2026-06-18T07:27:06+00:00",
+  "purpose": "Freeze teacher-visible agent naming and backend capability boundaries before candidate-card seeding continues.",
+  "canonical_agent_role": "unified_teacher_agent",
+  "current_display_name": "小教",
+  "display_name_status": "current_product_name",
+  "rename_allowed_before_public_beta": true,
+  "teacher_visible_agent_names_allowed": [
+    "小教"
+  ],
+  "deprecated_teacher_visible_agent_names": [
+    "小备",
+    "小评",
+    "小管",
+    "小美"
+  ],
+  "legacy_alias_policy": {
+    "xiaobei_legacy_status": "deprecated_internal_only",
+    "xiaoping_legacy_status": "deprecated_internal_only",
+    "legacy_alias_allowed_only_in_migration_map": true,
+    "repo_path_rename_required_now": false,
+    "global_search_replace_allowed": false,
+    "historical_review_package_names_preserved": true
+  },
+  "capability_boundary": {
+    "front_stage_agent": "unified_teacher_agent",
+    "front_stage_current_display_name": "小教",
+    "backend_capability_keys": [
+      "lesson_prep",
+      "classroom_companion",
+      "learning_evidence",
+      "assessment_review",
+      "assessment_summary",
+      "resource_retrieval",
+      "archive",
+      "export_draft"
+    ],
+    "lesson_prep_capability_key": "lesson_prep",
+    "specialist_agent_front_stage_allowed": false,
+    "specialist_capabilities_backend_only": true
+  },
+  "stage_boundary": {
+    "contract_only": true,
+    "visible_copy_hotfix_deferred_to": "1013I_R0A_VISIBLE_NAMING_HOTFIX",
+    "provider_call_allowed": false,
+    "model_call_allowed": false,
+    "formal_apply_allowed": false,
+    "lesson_body_write_allowed": false,
+    "html_body_write_allowed": false,
+    "database_write_allowed": false,
+    "memory_write_allowed": false,
+    "feishu_write_allowed": false,
+    "main_project_push_allowed": false
+  }
+}

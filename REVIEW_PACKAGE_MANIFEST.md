@@ -32,6 +32,7 @@ The handoff is the preferred entry for a new session. It records:
 - teacher-review preparation surface for sandbox-only candidate review.
 - sandbox preview-state application for accepted candidate cards.
 - teacher self-prep input schema, request envelope, sufficiency assessment, and fixture preview.
+- unified teacher-agent naming and capability-boundary contract before candidate-card seeding.
 
 ## Current Product Baseline
 
@@ -47,12 +48,13 @@ Accepted recent prep-notebook stages:
 1013G_TEACHER_REVIEW_PREP_ONLY
 1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
 1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
+1013I_R0_UNIFIED_TEACHER_AGENT_AND_CAPABILITY_BOUNDARY_CONTRACT
 ```
 
 Recommended next product stage:
 
 ```text
-1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST
+1013I_R0A_VISIBLE_NAMING_HOTFIX
 ```
 
 Do not enter:
@@ -101,6 +103,7 @@ do_not_omit_thinking=true
 1013G_teacher_review_prep_only/
 1013H_sandbox_apply_to_preview_only/
 1013I_teacher_self_prep_input_minimal_flow/
+1013I_R0_unified_teacher_agent_and_capability_boundary_contract/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -125,6 +128,7 @@ source_delta_1013G_PREP/
 source_delta_1013G_TEACHER_REVIEW_PREP_ONLY/
 source_delta_1013H/
 source_delta_1013I/
+source_delta_1013I_R0/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -152,6 +156,7 @@ SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md
 1013G_teacher_review_prep_only/1013G_teacher_review_prep_report.md
 1013H_sandbox_apply_to_preview_only/1013H_report.md
 1013I_teacher_self_prep_input_minimal_flow/1013I_report.md
+1013I_R0_unified_teacher_agent_and_capability_boundary_contract/1013I_R0_report.md
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -204,5 +209,7 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - `accept_to_preview_only` does not mean formal apply and does not write the lesson body.
 - 1013H simulates `accept_to_preview_only`, `reject`, and `revise`, and creates sandbox preview-state data plus preview diff cards. It remains reversible and preview-only.
 - 1013I creates the teacher self-prep input schema, request envelope, sufficiency assessment, and fixture preview without model/provider calls.
+- 1013I_R0 freezes the teacher-visible naming contract: front-stage assistant role is `unified_teacher_agent`, current display name is `小教`, and `小备`/`小评`/`小管`/`小美` are deprecated as teacher-visible agent names.
+- 1013I_R0 found current 1013I visible `小备` hits and defers them to `1013I_R0A_VISIBLE_NAMING_HOTFIX`; it does not perform global search/replace or edit 1013I files.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.
