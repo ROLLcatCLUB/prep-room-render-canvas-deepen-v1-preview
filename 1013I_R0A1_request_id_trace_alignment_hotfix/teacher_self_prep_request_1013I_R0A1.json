@@ -1,0 +1,83 @@
+{
+  "request_id": "teacher_self_prep_request_1013I_R0A",
+  "stage": "1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW",
+  "request_type": "teacher_self_prep_preview_request",
+  "teacher_input": {
+    "input_fixture_id": "teacher_self_prep_input_fixture_1013I",
+    "teacher_id": "local_preview_teacher",
+    "space": "备课室",
+    "grade_level": "三年级",
+    "subject": "美术",
+    "lesson_title": "色彩的感觉",
+    "lesson_count": 1,
+    "unit_or_textbook_context": "第一单元 多变的色彩",
+    "textbook_version": "本地 2025 第二学期三年级美术计划",
+    "class_profile_hint": "学生能说出常见颜色和喜欢不喜欢，但把颜色感受说成理由还不稳定。",
+    "existing_materials": [
+      "色卡",
+      "生活图片",
+      "课堂学习单草稿"
+    ],
+    "teacher_ideas": "希望探究别太复杂，让学生能说出颜色带来的感受。",
+    "classroom_constraints": [
+      "40分钟常态课",
+      "不做公开课式复杂材料",
+      "展示评价控制在5分钟内"
+    ],
+    "preferred_depth": "standard_daily",
+    "resource_preferences": [
+      "轻学习单",
+      "大屏提示词",
+      "可撤回预览"
+    ],
+    "agent_role": "unified_teacher_agent",
+    "assistant_profile": {
+      "display_name": "小教",
+      "display_name_customizable": true,
+      "wake_name": "小教",
+      "voice_profile_id": null,
+      "tts_enabled": false,
+      "speaking_style": "calm_professional",
+      "assistant_tone": "teacher_work_partner",
+      "response_style": "concise_contextual"
+    },
+    "active_space": "prep_room",
+    "active_capability": "lesson_prep"
+  },
+  "input_sufficiency": {
+    "required_fields_present": true,
+    "can_generate_preview_fixture": true,
+    "needs_follow_up_question": false
+  },
+  "requested_outputs": [
+    "self_prep_preview_fixture",
+    "candidate_card_seed",
+    "preview_chain_bridge"
+  ],
+  "provider_policy": {
+    "provider_call_allowed": false,
+    "model_call_allowed": false,
+    "reason": "1013I validates the teacher input envelope and preview fixture only."
+  },
+  "write_policy": {
+    "formal_apply_allowed": false,
+    "lesson_body_write_allowed": false,
+    "database_write_allowed": false,
+    "memory_write_allowed": false,
+    "feishu_write_allowed": false
+  },
+  "profile_contract": {
+    "stage": "1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT",
+    "agent_role": "unified_teacher_agent",
+    "current_default_display_name": "小教",
+    "active_space": "prep_room",
+    "active_capability": "lesson_prep"
+  },
+  "original_request_id": "teacher_self_prep_request_1013I",
+  "trace_alignment": {
+    "stage": "1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX",
+    "request_id_trace_aligned": true,
+    "aligned_request_id": "teacher_self_prep_request_1013I_R0A",
+    "source_request_id_expected_by_preview": "teacher_self_prep_request_1013I_R0A"
+  }
+}

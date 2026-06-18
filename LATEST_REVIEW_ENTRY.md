@@ -1,10 +1,10 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX
-FINAL_STATUS=PASS_1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX
-LATEST_COMPLETED_PRODUCT_STAGE=1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX
-INHERITS_FROM=1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT
+REVIEW_STAGE=1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX
+FINAL_STATUS=PASS_1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX
+LATEST_COMPLETED_PRODUCT_STAGE=1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX
+INHERITS_FROM=1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
 NEXT_RECOMMENDED_STAGE=1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
@@ -16,42 +16,35 @@ MAIN_PROJECT_PUSHED=false
 
 ## Summary
 
-This entry updates the prep-room review package through the visible naming and profile hotfix after the unified teacher-agent profile contract. The current chain is:
+This entry updates the prep-room review package with the small request-id trace alignment hotfix after R0A. The current chain is:
 
 ```text
 1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
 -> 1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT
 -> 1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX
+-> 1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX
 ```
 
-1013I_R0A fixes the current 1013I successor artifacts only. It removes teacher-visible `小备` from the successor artifacts and upgrades the old `agent` field shape into:
+R0A1 aligns the successor request trace:
 
-```json
-{
-  "agent_role": "unified_teacher_agent",
-  "assistant_profile": {
-    "display_name": "小教",
-    "display_name_customizable": true,
-    "wake_name": "小教",
-    "voice_profile_id": null,
-    "tts_enabled": false
-  },
-  "active_space": "prep_room",
-  "active_capability": "lesson_prep"
-}
+```text
+request_id=teacher_self_prep_request_1013I_R0A
+source_request_id=teacher_self_prep_request_1013I_R0A
+original_request_id=teacher_self_prep_request_1013I
+request_id_trace_aligned=true
 ```
 
-The original 1013I artifacts remain preserved as historical input. The R0A successor artifacts are the safe inputs for the next candidate-card seeding stage.
+It does not change original 1013I artifacts or original R0A artifacts. It creates aligned R0A1 successor artifacts for R1 to read.
 
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
-1013I_R0A_visible_naming_and_profile_hotfix/1013I_R0A_report.md
-1013I_R0A_visible_naming_and_profile_hotfix/1013I_R0A_result.json
-1013I_R0A_visible_naming_and_profile_hotfix/teacher_self_prep_request_1013I_R0A.json
-1013I_R0A_visible_naming_and_profile_hotfix/self_prep_preview_fixture_1013I_R0A.json
+1013I_R0A1_request_id_trace_alignment_hotfix/1013I_R0A1_report.md
+1013I_R0A1_request_id_trace_alignment_hotfix/1013I_R0A1_result.json
+1013I_R0A1_request_id_trace_alignment_hotfix/teacher_self_prep_request_1013I_R0A1.json
+1013I_R0A1_request_id_trace_alignment_hotfix/self_prep_preview_fixture_1013I_R0A1.json
 ```
 
 ## Accepted Product Baseline
@@ -65,21 +58,21 @@ REVIEW_PACKAGE_MANIFEST.md
 1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
 1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT
 1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX
+1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX
 ```
 
-## Hotfix Result
+## Trace Alignment Result
 
 ```text
-visible_naming_hotfix_created=true
-profile_shape_hotfix_created=true
+request_id_trace_alignment_hotfix_created=true
 successor_artifacts_created=true
-original_1013I_artifacts_modified=false
-deprecated_visible_hit_count_after_hotfix=0
+request_id_trace_aligned=true
+request_id=teacher_self_prep_request_1013I_R0A
+source_request_id=teacher_self_prep_request_1013I_R0A
+original_request_id=teacher_self_prep_request_1013I
+original_r0a_artifacts_modified=false
 legacy_agent_field_after_hotfix=false
-agent_role=unified_teacher_agent
-current_default_display_name=小教
-active_space=prep_room
-active_capability=lesson_prep
+teacher_visible_deprecated_agent_hits_after_hotfix=[]
 ```
 
 ## Next Recommended Stage
@@ -88,7 +81,13 @@ active_capability=lesson_prep
 1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST
 ```
 
-If opened, the next stage should read `1013I_R0A_visible_naming_and_profile_hotfix/teacher_self_prep_request_1013I_R0A.json` and seed candidate cards from the teacher self-prep request. It should preserve the no-provider/no-model/no-formal-apply boundary unless explicitly changed.
+If opened, the next stage should read:
+
+```text
+1013I_R0A1_request_id_trace_alignment_hotfix/teacher_self_prep_request_1013I_R0A1.json
+```
+
+R1 should seed candidate cards from the aligned teacher self-prep request. It should preserve the no-provider/no-model/no-formal-apply boundary unless explicitly changed.
 
 ## Boundary
 

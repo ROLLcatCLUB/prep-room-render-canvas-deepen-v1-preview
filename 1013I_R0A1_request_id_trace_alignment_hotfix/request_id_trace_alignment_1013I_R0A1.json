@@ -1,0 +1,16 @@
+{
+  "trace_id": "request_id_trace_alignment_1013I_R0A1",
+  "stage": "1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX",
+  "source_stage": "1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX",
+  "r0a_request_file": "1013I_R0A_visible_naming_and_profile_hotfix/teacher_self_prep_request_1013I_R0A.json",
+  "r0a_preview_file": "1013I_R0A_visible_naming_and_profile_hotfix/self_prep_preview_fixture_1013I_R0A.json",
+  "original_request_id": "teacher_self_prep_request_1013I",
+  "aligned_request_id": "teacher_self_prep_request_1013I_R0A",
+  "preview_source_request_id": "teacher_self_prep_request_1013I_R0A",
+  "request_id_trace_aligned": true,
+  "original_r0a_artifacts_modified": false,
+  "successor_artifacts_created": [
+    "teacher_self_prep_request_1013I_R0A1.json",
+    "self_prep_preview_fixture_1013I_R0A1.json"
+  ]
+}

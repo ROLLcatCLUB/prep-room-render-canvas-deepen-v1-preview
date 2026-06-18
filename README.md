@@ -6,7 +6,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX`.
+- Current completed product stage: `1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX`.
 - Current product next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
@@ -488,5 +488,18 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Successor artifacts now use `agent_role=unified_teacher_agent`, `assistant_profile.display_name=小教`, `active_space=prep_room`, and `active_capability=lesson_prep`.
 - R1 should read `1013I_R0A_visible_naming_and_profile_hotfix/teacher_self_prep_request_1013I_R0A.json`.
 - Final status: `PASS_1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX`.
+- Next stage: `1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, repo path rename, global search/replace, historical review-package rewrite, old validator rename, or main-project commit/push.
+
+## 1013I_R0A1 Request ID Trace Alignment Hotfix
+
+- `scripts/validate_1013I_R0A1_request_id_trace_alignment_hotfix.py` aligns the R0A successor request id with the preview fixture source request id.
+- Output directory: `1013I_R0A1_request_id_trace_alignment_hotfix/`.
+- Required files were generated: `1013I_R0A1_result.json`, `1013I_R0A1_report.md`, `teacher_self_prep_request_1013I_R0A1.json`, `self_prep_preview_fixture_1013I_R0A1.json`, `request_id_trace_alignment_1013I_R0A1.json`, and `request_id_trace_alignment_hotfix_manifest_1013I_R0A1.json`.
+- Trace alignment: `request_id=teacher_self_prep_request_1013I_R0A` and `source_request_id=teacher_self_prep_request_1013I_R0A`.
+- Original request id is preserved as `original_request_id=teacher_self_prep_request_1013I`.
+- Original 1013I and R0A artifacts are preserved; R0A1 writes aligned successor artifacts for the next stage.
+- R1 should read `1013I_R0A1_request_id_trace_alignment_hotfix/teacher_self_prep_request_1013I_R0A1.json`.
+- Final status: `PASS_1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX`.
 - Next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, repo path rename, global search/replace, historical review-package rewrite, old validator rename, or main-project commit/push.

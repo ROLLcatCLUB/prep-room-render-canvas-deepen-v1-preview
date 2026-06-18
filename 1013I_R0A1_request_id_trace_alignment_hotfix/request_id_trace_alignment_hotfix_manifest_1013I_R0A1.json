@@ -1,0 +1,13 @@
+{
+  "manifest_id": "request_id_trace_alignment_hotfix_manifest_1013I_R0A1",
+  "stage": "1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX",
+  "hotfix_scope": [
+    "align request.request_id with preview.source_request_id",
+    "preserve original_request_id for traceability"
+  ],
+  "r1_should_read": "1013I_R0A1_request_id_trace_alignment_hotfix/teacher_self_prep_request_1013I_R0A1.json",
+  "r1_preview_fixture": "1013I_R0A1_request_id_trace_alignment_hotfix/self_prep_preview_fixture_1013I_R0A1.json",
+  "global_search_replace_performed": false,
+  "repo_path_rename_performed": false,
+  "historical_review_package_modified": false
+}
