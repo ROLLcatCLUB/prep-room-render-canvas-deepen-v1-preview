@@ -1,0 +1,56 @@
+{
+  "schema_id": "assistant_profile_schema_1013I_R0",
+  "stage": "1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT",
+  "agent_role": "unified_teacher_agent",
+  "fields": {
+    "display_name": {
+      "type": "string",
+      "default": "小教",
+      "customizable": true
+    },
+    "wake_name": {
+      "type": "string",
+      "default": "小教",
+      "customizable": true
+    },
+    "voice_profile_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "default": null,
+      "customizable": true
+    },
+    "tts_enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "speaking_style": {
+      "type": "string",
+      "default": "calm_professional"
+    },
+    "assistant_tone": {
+      "type": "string",
+      "default": "teacher_work_partner"
+    },
+    "response_style": {
+      "type": "string",
+      "default": "concise_contextual"
+    }
+  },
+  "example": {
+    "agent_role": "unified_teacher_agent",
+    "assistant_profile": {
+      "display_name": "小教",
+      "display_name_customizable": true,
+      "wake_name": "小教",
+      "voice_profile_id": null,
+      "tts_enabled": false,
+      "speaking_style": "calm_professional",
+      "assistant_tone": "teacher_work_partner",
+      "response_style": "concise_contextual"
+    },
+    "active_space": "prep_room",
+    "active_capability": "lesson_prep"
+  }
+}

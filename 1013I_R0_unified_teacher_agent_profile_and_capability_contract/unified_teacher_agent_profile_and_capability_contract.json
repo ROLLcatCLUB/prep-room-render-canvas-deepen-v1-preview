@@ -1,0 +1,135 @@
+{
+  "contract_id": "unified_teacher_agent_profile_and_capability_contract_1013I_R0",
+  "stage": "1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT",
+  "generated_at": "2026-06-18T07:40:05+00:00",
+  "platform_brand": "师维",
+  "agent_role": "unified_teacher_agent",
+  "canonical_engineering_role": "unified_teacher_agent",
+  "current_default_display_name": "小教",
+  "display_name_status": "default_product_name",
+  "display_name_customizable": true,
+  "rename_allowed_before_public_beta": true,
+  "assistant_profile_contract": {
+    "display_name": {
+      "default": "小教",
+      "customizable": true,
+      "engineering_kernel": false
+    },
+    "wake_name": {
+      "default": "小教",
+      "customizable": true
+    },
+    "voice_profile_id": {
+      "default": null,
+      "customizable": true,
+      "required_now": false
+    },
+    "tts_enabled": {
+      "default": false,
+      "customizable_later": true
+    },
+    "speaking_style": {
+      "default": "calm_professional",
+      "customizable_later": true
+    },
+    "assistant_tone": {
+      "default": "teacher_work_partner",
+      "customizable_later": true
+    },
+    "response_style": {
+      "default": "concise_contextual",
+      "customizable_later": true
+    }
+  },
+  "teacher_visible_agent_names_allowed": [
+    "小教"
+  ],
+  "deprecated_teacher_visible_agent_names": [
+    "小备",
+    "小评",
+    "小管",
+    "小美"
+  ],
+  "new_artifact_agent_field_policy": {
+    "forbidden_pattern": {
+      "agent": "小教"
+    },
+    "required_shape": {
+      "agent_role": "unified_teacher_agent",
+      "assistant_profile": {
+        "display_name": "小教",
+        "display_name_customizable": true,
+        "wake_name": "小教",
+        "voice_profile_id": null,
+        "tts_enabled": false
+      },
+      "active_space": "prep_room",
+      "active_capability": "lesson_prep"
+    }
+  },
+  "capabilities": [
+    {
+      "capability_key": "lesson_prep",
+      "display_name": "备课能力"
+    },
+    {
+      "capability_key": "classroom_companion",
+      "display_name": "课堂伴随能力"
+    },
+    {
+      "capability_key": "learning_evidence",
+      "display_name": "学习证据能力"
+    },
+    {
+      "capability_key": "assessment_review",
+      "display_name": "评价能力"
+    },
+    {
+      "capability_key": "assessment_summary",
+      "display_name": "评价汇总能力"
+    },
+    {
+      "capability_key": "resource_retrieval",
+      "display_name": "资料能力"
+    },
+    {
+      "capability_key": "archive",
+      "display_name": "归档能力"
+    },
+    {
+      "capability_key": "export_draft",
+      "display_name": "导出草稿能力"
+    }
+  ],
+  "capability_boundary_policy": {
+    "function_defined_by": "capability_key",
+    "identity_defined_by": "agent_role",
+    "name_defined_by": "assistant_profile.display_name",
+    "specialist_front_stage_agents_allowed": false
+  },
+  "legacy_alias_policy": {
+    "xiaobei_legacy_status": "deprecated_internal_only",
+    "xiaoping_legacy_status": "deprecated_internal_only",
+    "legacy_alias_allowed_only_in": [
+      "legacy_path",
+      "historical_audit_package",
+      "migration_map",
+      "compatibility_alias"
+    ],
+    "repo_path_rename_required_now": false,
+    "global_search_replace_allowed": false
+  },
+  "stage_boundary": {
+    "contract_only": true,
+    "visible_copy_hotfix_deferred_to": "1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX",
+    "provider_call_allowed": false,
+    "model_call_allowed": false,
+    "formal_apply_allowed": false,
+    "lesson_body_write_allowed": false,
+    "html_body_write_allowed": false,
+    "database_write_allowed": false,
+    "memory_write_allowed": false,
+    "feishu_write_allowed": false,
+    "main_project_push_allowed": false
+  }
+}

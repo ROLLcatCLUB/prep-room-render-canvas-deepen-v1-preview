@@ -1,0 +1,66 @@
+{
+  "policy_id": "legacy_agent_alias_deprecation_policy_1013I_R0_PROFILE",
+  "stage": "1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT",
+  "legacy_aliases": [
+    {
+      "legacy_name": "小备",
+      "legacy_key": "xiaobei",
+      "status": "deprecated",
+      "teacher_visible_allowed": false,
+      "new_artifact_allowed": false,
+      "allowed_only_in": [
+        "legacy_path",
+        "historical_audit_package",
+        "migration_map",
+        "compatibility_alias"
+      ],
+      "replacement_role": "unified_teacher_agent",
+      "replacement_capability": "lesson_prep"
+    },
+    {
+      "legacy_name": "小评",
+      "legacy_key": "xiaoping",
+      "status": "deprecated",
+      "teacher_visible_allowed": false,
+      "new_artifact_allowed": false,
+      "allowed_only_in": [
+        "legacy_path",
+        "historical_audit_package",
+        "migration_map",
+        "compatibility_alias"
+      ],
+      "replacement_role": "unified_teacher_agent",
+      "replacement_capability": "assessment_review"
+    },
+    {
+      "legacy_name": "小管",
+      "legacy_key": "xiaoguan",
+      "status": "deprecated",
+      "teacher_visible_allowed": false,
+      "new_artifact_allowed": false,
+      "allowed_only_in": [
+        "legacy_path",
+        "historical_audit_package",
+        "migration_map",
+        "compatibility_alias"
+      ],
+      "replacement_role": "unified_teacher_agent",
+      "replacement_capability": "archive"
+    },
+    {
+      "legacy_name": "小美",
+      "legacy_key": "xiaomei",
+      "status": "deprecated",
+      "teacher_visible_allowed": false,
+      "new_artifact_allowed": false,
+      "allowed_only_in": [
+        "legacy_path",
+        "historical_audit_package",
+        "migration_map",
+        "compatibility_alias"
+      ],
+      "replacement_role": "unified_teacher_agent",
+      "replacement_capability": "resource_retrieval"
+    }
+  ]
+}

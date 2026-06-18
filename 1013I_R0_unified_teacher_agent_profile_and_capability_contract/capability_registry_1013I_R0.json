@@ -1,0 +1,34 @@
+[
+  {
+    "capability_key": "lesson_prep",
+    "display_name": "备课能力"
+  },
+  {
+    "capability_key": "classroom_companion",
+    "display_name": "课堂伴随能力"
+  },
+  {
+    "capability_key": "learning_evidence",
+    "display_name": "学习证据能力"
+  },
+  {
+    "capability_key": "assessment_review",
+    "display_name": "评价能力"
+  },
+  {
+    "capability_key": "assessment_summary",
+    "display_name": "评价汇总能力"
+  },
+  {
+    "capability_key": "resource_retrieval",
+    "display_name": "资料能力"
+  },
+  {
+    "capability_key": "archive",
+    "display_name": "归档能力"
+  },
+  {
+    "capability_key": "export_draft",
+    "display_name": "导出草稿能力"
+  }
+]
