@@ -1,36 +1,20 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6N_BIG_UNIT_DESIGN_TEXT_READING_PATCH_FOR_REVIEW
-FINAL_STATUS=PASS_1013I_R6N_BIG_UNIT_DESIGN_TEXT_READING_PATCH_FOR_REVIEW
-LATEST_COMPLETED_BIG_UNIT_DESIGN_STATIC_PATCH=1013I_R6M_BIG_UNIT_DESIGN_TEACHER_READABLE_STATIC_PATCH_FOR_REVIEW
-LATEST_COMPLETED_BIG_UNIT_TEXT_READING_PATCH=1013I_R6N_BIG_UNIT_DESIGN_TEXT_READING_PATCH_FOR_REVIEW
-INHERITS_FROM=1013I_R6M_BIG_UNIT_DESIGN_TEACHER_READABLE_STATIC_PATCH_FOR_REVIEW
+REVIEW_STAGE=1013I_R6N_R1_CENTERED_NUMBERED_TEXT_READING_PATCH
+FINAL_STATUS=PASS_1013I_R6N_R1_CENTERED_NUMBERED_TEXT_READING_PATCH
+INHERITS_FROM=1013I_R6N_BIG_UNIT_DESIGN_TEXT_READING_PATCH_FOR_REVIEW
 NEXT_RECOMMENDED_STAGE=USER_REVIEW_BIG_UNIT_TEXT_READING_PAGE
+CENTERED_READING_DOC=true
+NUMBERED_SECTIONS_PRESENT=true
+SECTION_TITLES_CORRECTED=true
+OLD_EXPLANATION_NOT_SECTION_TITLE=true
+CARD_LAYOUT_REMOVED_FROM_PRIMARY_SURFACE=true
 FORMAL_APPLY_ALLOWED=false
 PROVIDER_MODEL_CALL_ALLOWED=false
 MAIN_PROJECT_PUSHED=false
-TEXT_READING_PAGE_CREATED=true
-CARD_LAYOUT_REMOVED_FROM_PRIMARY_SURFACE=true
-DUPLICATE_UNIT_TITLE_REMOVED=true
-UNIT_DIRECTION_PROMINENT=true
-FIELD_LABELS_MOVED_TO_HOVER_NOTES=true
-MAIN_SURFACE_RAW_ENGINEERING_FIELD_HITS=[]
-RUNTIME_CONNECTED=false
-HTML_MODIFIED=false
 ```
 
 ## Summary
 
-R6N fixes the R6M reading problem. It removes the card-like primary surface, removes the duplicate unit-title intro block, makes `单元方向` the lead, and moves field explanations into hover notes. The default surface now reads as continuous generated teacher-facing text.
-
-## Start Here
-
-```text
-1013I_R6N_big_unit_design_text_reading_patch_for_review/1013I_R6N_report.md
-1013I_R6N_big_unit_design_text_reading_patch_for_review/1013I_R6N_result.json
-1013I_R6N_big_unit_design_text_reading_patch_for_review/prep_room_render_canvas_deepen_v1_R6N_big_unit_design_text_reading.html
-1013I_R6N_big_unit_design_text_reading_patch_for_review/ui_smoke_screenshot_1013I_R6N_desktop.png
-1013I_R6N_big_unit_design_text_reading_patch_for_review/ui_smoke_screenshot_1013I_R6N_mobile.png
-scripts/validate_1013I_R6N_big_unit_design_text_reading_patch_for_review.py
-```
+R6N_R1 centers the text-reading page and turns the body into numbered sections. `单元方向` and `学生起点` are the section names; `这个单元想带学生走向哪里` is only a hover explanation, not a visible section title.

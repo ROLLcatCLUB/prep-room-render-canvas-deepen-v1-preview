@@ -1,0 +1,15 @@
+{
+  "stage": "1013I_R6N_R1_CENTERED_NUMBERED_TEXT_READING_PATCH",
+  "inherits_from": "1013I_R6N_BIG_UNIT_DESIGN_TEXT_READING_PATCH_FOR_REVIEW",
+  "boundary": {
+    "html_modified": false,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "main_project_pushed": false
+  }
+}
