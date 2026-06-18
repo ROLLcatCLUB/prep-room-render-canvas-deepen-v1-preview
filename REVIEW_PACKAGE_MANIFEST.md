@@ -122,6 +122,7 @@ do_not_omit_thinking=true
 1013I_R5_teacher_self_prep_alpha_smoke/
 1013I_R5_R1_review_repo_validator_path_fix/
 1013I_R6_teacher_self_prep_render_surface_alpha/
+1013I_R6A_big_unit_context_required_gate/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -158,6 +159,7 @@ source_delta_1013I_R5B/
 source_delta_1013I_R5/
 source_delta_1013I_R5_R1/
 source_delta_1013I_R6/
+source_delta_1013I_R6A/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -206,6 +208,12 @@ scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
 1013I_R6_teacher_self_prep_render_surface_alpha/teacher_self_prep_render_surface_alpha_1013I_R6.json
 1013I_R6_teacher_self_prep_render_surface_alpha/teacher_self_prep_render_surface_snapshot_1013I_R6.json
 scripts/validate_1013I_R6_teacher_self_prep_render_surface_alpha.py
+1013I_R6A_big_unit_context_required_gate/1013I_R6A_report.md
+1013I_R6A_big_unit_context_required_gate/1013I_R6A_result.json
+1013I_R6A_big_unit_context_required_gate/big_unit_context_gate_contract_1013I_R6A.json
+1013I_R6A_big_unit_context_required_gate/big_unit_context_gate_fixture_1013I_R6A.json
+1013I_R6A_big_unit_context_required_gate/big_unit_context_official_material_extraction_hook_1013I_R6A.json
+scripts/validate_1013I_R6A_big_unit_context_required_gate.py
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -282,6 +290,7 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - The R5 validator now supports both local workspace layout and GitHub review repo root layout. Fresh clone review commands can run from the review repo root.
 - 1013I_R6 creates a teacher-readable render surface alpha from the R4/R5 fixture and smoke outputs. It includes page title, teacher input summary, 3 review cards, 3 preview diff items, action area, revision queue, rejected items, and boundary notice.
 - R6 remains render-surface alpha only: no provider/model, no formal apply, no HTML body or lesson body write, no database/memory/Feishu/export/archive write.
-- After R5B, the next R6 revision should include a visible big-unit position placeholder before visual review or broader UI implementation.
+- 1013I_R6A upgrades big-unit context into a required gate. R7 visual review is paused; normal single-lesson prep is blocked until big-unit context and lesson-position judgement are available, unless the teacher explicitly chooses a degraded temporary single-lesson draft.
+- R6B should create a read-only official big-unit material extraction fixture before returning to render-surface visual review.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.
