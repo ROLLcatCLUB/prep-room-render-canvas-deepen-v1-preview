@@ -1,0 +1,31 @@
+{
+  "stage": "1013F_R2D2_REVIEW_GATE_BEFORE_1013G",
+  "generated_at": "2026-06-18T04:11:22+00:00",
+  "inherits_from": "1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION",
+  "final_status": "PASS_R2D2_REVIEW_GATE_BEFORE_1013G",
+  "next_stage": "1013G_PREP_CANDIDATE_REVIEW_SANDBOX",
+  "allow_enter_1013G_now": false,
+  "allow_formal_apply": false,
+  "approved_candidate_ids": [
+    "r2d2_patch_explore",
+    "r2d2_patch_make",
+    "r2d2_patch_share"
+  ],
+  "rejected_candidate_ids": [],
+  "patch_candidate_only_schema_pass": true,
+  "registry_schema_pass": true,
+  "teaching_moves_trace_schema_pass": true,
+  "case_reference_direct_copy_hits_clear": true,
+  "html_body_modified": false,
+  "r2b2_layout_baseline_kept": true,
+  "r2c_process_focus_kept": true,
+  "formal_apply_performed": false,
+  "entered_1013G": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false,
+  "approved_candidate_count": 3,
+  "rejected_candidate_count": 0,
+  "all_approved_candidates_still_require_teacher_review": true
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "patch_id": "r2d2_patch_explore",
+    "target": "教学过程 · 探究",
+    "decision": "approved_for_1013G_prep_candidate",
+    "candidate_text": "探究先只发色卡和感受词卡。每组把色卡放到“温暖、清凉、安静、热烈”四个词旁边，再选一张最有把握的色卡说理由。已经能说出理由的小组，再领取一件生活物品做加料比较；记录单只写一行“我这样分是因为……”。",
+    "source_move_ids": [
+      "r2d2_move_explore_material_gate"
+    ],
+    "pass_reasons": [
+      "keeps_explore_material_light_and_reason_visible"
+    ],
+    "risk_notes": [],
+    "teacher_review_required": true,
+    "formal_apply_allowed": false,
+    "enter_1013G_now": false
+  },
+  {
+    "patch_id": "r2d2_patch_make",
+    "target": "教学过程 · 表现",
+    "decision": "approved_for_1013G_prep_candidate",
+    "candidate_text": "表现环节先让全班完成同一个基础任务：用2到3种颜色表现一种感受。提前完成的学生再打开加层：可以加一个小场景，或补一句“我这样配色是因为……”。",
+    "source_move_ids": [
+      "r2d2_move_make_default_entry"
+    ],
+    "pass_reasons": [
+      "keeps_default_entry_before_extension"
+    ],
+    "risk_notes": [],
+    "teacher_review_required": true,
+    "formal_apply_allowed": false,
+    "enter_1013G_now": false
+  },
+  {
+    "patch_id": "r2d2_patch_share",
+    "target": "教学过程 · 交流展示",
+    "decision": "approved_for_1013G_prep_candidate",
+    "candidate_text": "交流展示固定两件作品：一件“颜色和感受关系清楚”，一件“还可以调整”。每件只问一个问题：“你从哪一种颜色读到了这种感觉？”教师最后只收束到颜色、感受和理由。",
+    "source_move_ids": [
+      "r2d2_move_share_observable_evidence"
+    ],
+    "pass_reasons": [
+      "keeps_assessment_observable_and_time_bounded"
+    ],
+    "risk_notes": [],
+    "teacher_review_required": true,
+    "formal_apply_allowed": false,
+    "enter_1013G_now": false
+  }
+]

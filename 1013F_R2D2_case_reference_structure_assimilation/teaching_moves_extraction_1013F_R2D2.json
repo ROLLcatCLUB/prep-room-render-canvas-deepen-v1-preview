@@ -1,0 +1,151 @@
+[
+  {
+    "move_id": "r2d2_move_explore_material_gate",
+    "source_ref": [
+      "r2d2_ref_01",
+      "r2d2_ref_02",
+      "r2d2_ref_03"
+    ],
+    "target_event": "教学过程 · 探究",
+    "move_type": "material_timing_and_question_chain",
+    "current_part": "教学过程 · 探究",
+    "r2d_issue_type": "time_and_material_flow",
+    "source_basis": [
+      "official_calibration",
+      "local_structure_reference"
+    ],
+    "extracted_structure": {
+      "teaching_move": "先用单一主材料建立分类动作，再把扩展材料作为加料选项。",
+      "question_chain": [
+        "这张色卡给你的第一感觉是什么？",
+        "你把它放在这里，是因为它像什么，还是让你想到什么？",
+        "如果小组意见不同，哪一种理由更能说服别人？"
+      ],
+      "material_timing": [
+        "第1分钟只发色卡和感受词卡。",
+        "第4分钟后只给能说出理由的小组补生活物品。",
+        "记录单只保留一行理由，不增加表格负担。"
+      ],
+      "evidence_design": [
+        "色卡是否被放入感受词旁边。",
+        "学生是否能说出颜色、感受和理由。",
+        "教师记录一条典型低水平回答和一次追问结果。"
+      ],
+      "risk_handling": "如果学生只按红黄蓝绿分类，先示范一张色卡的理由，再让小组保留一张有争议色卡说明两种理由。"
+    },
+    "reason_for_assimilation": "R2D 已判定探究环节材料和记录单同时进入会挤压理由表达；本动作把结构收束为先分类再说理由。",
+    "risk_note": "生活物品只能后置加料；过早进入会让学生注意力转向物品而不是色彩感受。",
+    "why_grade3_fit": "三年级适合先分类、再说理由；材料少一点，语言表达才有课堂时间。",
+    "direct_copy_allowed": false
+  },
+  {
+    "move_id": "r2d2_move_make_default_entry",
+    "source_ref": [
+      "r2d2_ref_03",
+      "r2d2_ref_04"
+    ],
+    "target_event": "教学过程 · 表现",
+    "move_type": "task_entry_and_layering",
+    "current_part": "教学过程 · 表现",
+    "r2d_issue_type": "task_load",
+    "source_basis": [
+      "official_calibration",
+      "local_structure_reference"
+    ],
+    "extracted_structure": {
+      "teaching_move": "把三层任务改成先统一起步，再给提前完成学生打开加层。",
+      "question_chain": [
+        "你今天先想表现哪一种感觉？",
+        "你准备用哪两三种颜色让别人看出这种感觉？",
+        "如果已经完成，可以加一个小场景或补一句理由。"
+      ],
+      "material_timing": [
+        "先发同一张小练习纸。",
+        "大屏先只显示基础任务。",
+        "进阶和挑战作为提前完成后的追加提示出现。"
+      ],
+      "evidence_design": [
+        "每个学生至少完成一种感受的2到3色表达。",
+        "提前完成者能补一个小场景或一句配色理由。"
+      ],
+      "risk_handling": "如果学生只想涂满画面，教师把问题收回到一种感受和两三种颜色的选择。"
+    },
+    "reason_for_assimilation": "R2D 已判定三层任务同时说明会增加起步负担；本动作保留分层但把进阶延后打开。",
+    "risk_note": "如果提前展示进阶和挑战，部分学生会先听复杂，基础任务开始变慢。",
+    "why_grade3_fit": "先让全班有共同起点，能降低等待和听不懂三层标准的风险。",
+    "direct_copy_allowed": false
+  },
+  {
+    "move_id": "r2d2_move_share_observable_evidence",
+    "source_ref": [
+      "r2d2_ref_01",
+      "r2d2_ref_04"
+    ],
+    "target_event": "教学过程 · 交流展示",
+    "move_type": "assessment_evidence_and_time_control",
+    "current_part": "教学过程 · 交流展示",
+    "r2d_issue_type": "time_risk",
+    "source_basis": [
+      "local_structure_reference",
+      "unit_structure_and_risk_check"
+    ],
+    "extracted_structure": {
+      "teaching_move": "展示固定为一件清楚和一件可调整，用同一个问题收束评价证据。",
+      "question_chain": [
+        "你从哪一种颜色读到了这种感觉？",
+        "这件作品还可以调整哪一种颜色，让感觉更清楚？"
+      ],
+      "material_timing": [
+        "展示前先拍两件作品或直接举起。",
+        "每件作品只问一个问题。",
+        "教师最后只归纳颜色、感受、理由三件事。"
+      ],
+      "evidence_design": [
+        "一件作品颜色和感受关系清楚。",
+        "一件作品能说出可调整方向。",
+        "同伴反馈指向具体颜色，而不是只说好看。"
+      ],
+      "risk_handling": "如果时间不足，只展示一件清楚作品，第二件改为教师口头说明下节课继续调整。"
+    },
+    "reason_for_assimilation": "R2D 已判定 5 分钟展示容易超时；本动作把展示收束成两类样本和一个证据问题。",
+    "risk_note": "如果继续做完整同伴互评，展示和教师归纳会挤占下课收束时间。",
+    "why_grade3_fit": "评价问题少，学生更容易说到具体颜色，教师也能在5分钟内收束。",
+    "direct_copy_allowed": false
+  },
+  {
+    "move_id": "r2d2_move_teacher_language_shortening",
+    "source_ref": [
+      "r2d2_ref_02",
+      "r2d2_ref_03"
+    ],
+    "target_event": "全课话术",
+    "move_type": "teacher_language_shortening",
+    "current_part": "全课话术",
+    "r2d_issue_type": "ai_like_complete_sentence",
+    "source_basis": [
+      "official_calibration",
+      "local_structure_reference"
+    ],
+    "extracted_structure": {
+      "teaching_move": "把完整判断句拆成教师短句、追问和旁注。",
+      "question_chain": [
+        "先说第一眼感觉。",
+        "你从哪里看出来？",
+        "换一种颜色，感觉会不会变？"
+      ],
+      "material_timing": [
+        "理论判断不在口头一次讲完。",
+        "只在学生回答后补一句旁注式总结。"
+      ],
+      "evidence_design": [
+        "学生能从好看不好看转为一个感受词。",
+        "学生能补一条颜色依据。"
+      ],
+      "risk_handling": "如果回答停在好看，教师提供二选一感受词，而不是直接给标准答案。"
+    },
+    "reason_for_assimilation": "R2D 已判定部分总结句偏书面；本动作把理论判断拆成课堂短句和追问。",
+    "risk_note": "如果教师一次说完理论判断，学生可能只听到结论，接不上理由表达。",
+    "why_grade3_fit": "短句和追问比完整教案句更接近真实课堂，也更容易让学生接话。",
+    "direct_copy_allowed": false
+  }
+]

@@ -6,10 +6,11 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current product next stage: `1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION`.
+- Current completed product stage: `1013G_TEACHER_REVIEW_PREP_ONLY`.
+- Current product next stage: `1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
-- Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no 1013G unless explicitly requested.
+- Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
 
 ## Files
 
@@ -36,6 +37,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - No model/provider call.
 - No database, memory, Feishu, export, or formal apply.
 - Teacher review is required for every pending change.
+- R2D2 / 1013G PREP outputs are review-package data only; they do not write candidate text into the HTML body.
+- 1013G teacher-review prep exposes `accept_to_preview_only`, `reject`, and `revise` options, but none of them perform formal apply.
 
 ## Reused Project Patterns
 
@@ -158,6 +161,41 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_CONTENT_REVIEW_WITH_CASE_REFERENCE_STRUCTURE_ONLY`.
 - Next stage: `1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION`.
 - Boundary: no provider/model call, no Feishu/database/memory write, no formal apply, no 1013G, and no copied case text was inserted into the lesson.
+
+## 1013F_R2D2 Case Reference Structure Assimilation
+
+- `scripts/validate_1013F_R2D2_case_reference_structure_assimilation.py` converts R2D case references into structure-only candidate teaching moves.
+- Output directory: `1013F_R2D2_case_reference_structure_assimilation/`.
+- Required files were generated: `1013F_R2D2_result.json`, `1013F_R2D2_report.md`, `case_reference_registry_1013F_R2D2.json`, `teaching_moves_extraction_1013F_R2D2.json`, and `assimilation_candidate_patch_1013F_R2D2.json`.
+- Final status: `PASS_CASE_REFERENCE_STRUCTURE_ASSIMILATION`.
+- Boundary: no HTML body write, no direct case text copy, no formal apply, no database/memory/Feishu write, no formal 1013G, and no main-project push.
+
+## 1013F_R2D2 Review Gate Before 1013G
+
+- `scripts/validate_1013F_R2D2_review_gate_before_1013G.py` reviews R2D2 candidates before any teacher-review stage.
+- Output directory: `1013F_R2D2_review_gate_before_1013G/`.
+- Required files were generated: `R2D2_review_gate_result.json`, `R2D2_review_gate_report.md`, `approved_candidate_moves.json`, and `rejected_candidate_moves.json`.
+- Final status: `PASS_R2D2_REVIEW_GATE_BEFORE_1013G`.
+- Approved candidates: 3. Rejected candidates: 0.
+- Boundary: approved means approved for sandbox preview only, not formal apply or teacher confirmation.
+
+## 1013G_PREP Candidate Review Sandbox
+
+- `scripts/validate_1013G_prep_candidate_review_sandbox.py` loads the approved R2D2 candidates into sandbox preview cards.
+- Output directory: `1013G_PREP_candidate_review_sandbox/`.
+- Required files were generated: `1013G_PREP_result.json`, `1013G_PREP_report.md`, and `candidate_review_surface_1013G_PREP.json`.
+- Final status: `PASS_1013G_PREP_CANDIDATE_REVIEW_SANDBOX`.
+- Boundary: preview data only; no lesson body write, no formal apply, no database/memory/Feishu write, and no formal 1013G.
+
+## 1013G Teacher Review Prep Only
+
+- `scripts/validate_1013G_teacher_review_prep_only.py` turns sandbox preview cards into teacher-review preparation cards.
+- Output directory: `1013G_teacher_review_prep_only/`.
+- Required files were generated: `1013G_teacher_review_prep_result.json`, `1013G_teacher_review_prep_report.md`, and `teacher_review_prep_surface_1013G.json`.
+- Final status: `PASS_1013G_TEACHER_REVIEW_PREP_ONLY`.
+- Teacher actions prepared: `accept_to_preview_only`, `reject`, and `revise`.
+- Next stage: `1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY`.
+- Boundary: `accept_to_preview_only` remains sandbox-only; no formal apply, no formal 1013G, and no lesson body write.
 
 ## 1013M MiniMax M3 Connection
 

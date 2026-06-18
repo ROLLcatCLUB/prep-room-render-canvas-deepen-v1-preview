@@ -1,0 +1,22 @@
+{
+  "stage": "1013G_TEACHER_REVIEW_PREP_ONLY",
+  "generated_at": "2026-06-18T04:14:38+00:00",
+  "inherits_from": "1013G_PREP_CANDIDATE_REVIEW_SANDBOX",
+  "final_status": "PASS_1013G_TEACHER_REVIEW_PREP_ONLY",
+  "next_stage": "1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY",
+  "teacher_review_prep_surface_created": true,
+  "candidate_cards_loaded": 3,
+  "teacher_action_options_present": true,
+  "accept_to_preview_only": true,
+  "reject_option_present": true,
+  "revise_option_present": true,
+  "formal_apply_performed": false,
+  "entered_formal_1013G": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false,
+  "allow_formal_apply": false
+}

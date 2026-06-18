@@ -28,6 +28,8 @@ The handoff is the preferred entry for a new session. It records:
 - Feishu schedule caveat;
 - next suggested stage;
 - strict no-write/no-formal-apply boundaries.
+- R2D2 case-reference structure assimilation;
+- teacher-review preparation surface for sandbox-only candidate review.
 
 ## Current Product Baseline
 
@@ -37,18 +39,23 @@ Accepted recent prep-notebook stages:
 1013F_R2B2_LAYOUT_CLEANUP
 1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH
 1013F_R2D_CONTENT_REVIEW_THEN_CASE_REFERENCE_ASSIMILATION
+1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION
+1013F_R2D2_REVIEW_GATE_BEFORE_1013G
+1013G_PREP_CANDIDATE_REVIEW_SANDBOX
+1013G_TEACHER_REVIEW_PREP_ONLY
 ```
 
 Recommended next product stage:
 
 ```text
-1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION
+1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
 ```
 
 Do not enter:
 
 ```text
-1013G_TEACHER_REVIEW_ACTIONS
+FORMAL_1013G_TEACHER_REVIEW_ACTIONS
+FORMAL_APPLY
 ```
 
 unless the user explicitly asks.
@@ -83,7 +90,11 @@ do_not_omit_thinking=true
 1013F_R2B2_layout_cleanup/
 1013F_R2C_classroom_event_detail_polish/
 1013F_R2D_content_review_then_case_reference_assimilation/
+1013F_R2D2_case_reference_structure_assimilation/
+1013F_R2D2_review_gate_before_1013G/
 1013F_view_edit_ui_binding/
+1013G_PREP_candidate_review_sandbox/
+1013G_teacher_review_prep_only/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -102,6 +113,10 @@ source_delta_1013F_R2B1/
 source_delta_1013F_R2B2/
 source_delta_1013F_R2C/
 source_delta_1013F_R2D/
+source_delta_1013F_R2D2/
+source_delta_1013F_R2D2_REVIEW_GATE/
+source_delta_1013G_PREP/
+source_delta_1013G_TEACHER_REVIEW_PREP_ONLY/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -123,6 +138,10 @@ SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md
 
 ```text
 1013F_R2D_content_review_then_case_reference_assimilation/1013F_R2D_report.md
+1013F_R2D2_case_reference_structure_assimilation/1013F_R2D2_report.md
+1013F_R2D2_review_gate_before_1013G/R2D2_review_gate_report.md
+1013G_PREP_candidate_review_sandbox/1013G_PREP_report.md
+1013G_teacher_review_prep_only/1013G_teacher_review_prep_report.md
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -136,12 +155,14 @@ SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md
 ```text
 review_package_only=true
 formal_apply_performed=false
+entered_formal_1013G=false
+lesson_body_modified=false
+html_body_modified=false
 database_written=false
 memory_written=false
 feishu_written=false
 official_export_created=false
 official_archive_created=false
-entered_1013G=false
 main_project_committed=false
 main_project_pushed=false
 ```
@@ -164,5 +185,9 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - R2D found no mature same-topic local case for `1-2《色彩的感觉》`.
 - Official Grade 3 resources may be used for calibration.
 - Local `渐变的魅力` and `走进青绿山水` are AI-generated or AI-assisted references, useful only for structure-level comparison.
+- R2D2 converted case references into candidate teaching moves only; direct copy hits remain empty.
+- R2D2 review gate approved 3 candidates for sandbox preview only and rejected 0.
+- 1013G PREP and 1013G teacher-review prep generated teacher-readable review cards with actions `accept_to_preview_only`, `reject`, and `revise`.
+- `accept_to_preview_only` does not mean formal apply and does not write the lesson body.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.
