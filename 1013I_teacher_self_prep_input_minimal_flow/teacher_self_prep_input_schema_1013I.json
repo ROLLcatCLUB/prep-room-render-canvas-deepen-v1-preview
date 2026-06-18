@@ -1,0 +1,96 @@
+{
+  "schema_id": "teacher_self_prep_input_schema_1013I",
+  "stage": "1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW",
+  "purpose": "Capture the minimum teacher input needed to start a lesson-prep preview request without calling a provider or writing formal lesson content.",
+  "required_fields": [
+    "grade_level",
+    "subject",
+    "lesson_title",
+    "lesson_count",
+    "unit_or_textbook_context"
+  ],
+  "optional_fields": [
+    "textbook_version",
+    "class_profile_hint",
+    "existing_materials",
+    "teacher_ideas",
+    "classroom_constraints",
+    "preferred_depth",
+    "resource_preferences"
+  ],
+  "field_definitions": {
+    "grade_level": {
+      "type": "string",
+      "example": "三年级",
+      "teacher_label": "年级"
+    },
+    "subject": {
+      "type": "string",
+      "example": "美术",
+      "teacher_label": "学科"
+    },
+    "lesson_title": {
+      "type": "string",
+      "example": "色彩的感觉",
+      "teacher_label": "课题"
+    },
+    "lesson_count": {
+      "type": "integer",
+      "example": 1,
+      "teacher_label": "课时数"
+    },
+    "unit_or_textbook_context": {
+      "type": "string",
+      "example": "第一单元 多变的色彩",
+      "teacher_label": "单元/教材位置"
+    },
+    "textbook_version": {
+      "type": "string",
+      "example": "校本/人美版等",
+      "teacher_label": "教材版本"
+    },
+    "class_profile_hint": {
+      "type": "string",
+      "example": "学生能说颜色名称，但说理由弱",
+      "teacher_label": "班级情况"
+    },
+    "existing_materials": {
+      "type": "array",
+      "items": "string",
+      "teacher_label": "已有材料"
+    },
+    "teacher_ideas": {
+      "type": "string",
+      "teacher_label": "老师已有想法"
+    },
+    "classroom_constraints": {
+      "type": "array",
+      "items": "string",
+      "teacher_label": "课堂限制"
+    },
+    "preferred_depth": {
+      "type": "enum",
+      "values": [
+        "quick_daily",
+        "standard_daily",
+        "polish",
+        "open_class"
+      ],
+      "teacher_label": "备课深度"
+    },
+    "resource_preferences": {
+      "type": "array",
+      "items": "string",
+      "teacher_label": "资源偏好"
+    }
+  },
+  "forbidden_behavior": [
+    "provider_call",
+    "model_call",
+    "formal_apply",
+    "lesson_body_write",
+    "database_write",
+    "memory_write",
+    "feishu_write"
+  ]
+}

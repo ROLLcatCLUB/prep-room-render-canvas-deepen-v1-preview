@@ -1,0 +1,20 @@
+{
+  "assessment_id": "input_sufficiency_assessment_1013I",
+  "required_fields_present": true,
+  "missing_required_fields": [],
+  "available_optional_fields": [
+    "textbook_version",
+    "class_profile_hint",
+    "existing_materials",
+    "teacher_ideas",
+    "classroom_constraints",
+    "preferred_depth",
+    "resource_preferences"
+  ],
+  "can_generate_request_envelope": true,
+  "can_generate_preview_fixture": true,
+  "needs_follow_up_question": false,
+  "follow_up_questions": [],
+  "safe_to_call_provider": false,
+  "reason": "Required lesson-start fields are present, so a preview fixture can be built without model/provider calls."
+}

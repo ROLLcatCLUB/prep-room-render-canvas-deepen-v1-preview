@@ -1,21 +1,21 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
-FINAL_STATUS=PASS_1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
-LATEST_COMPLETED_PRODUCT_STAGE=1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
+REVIEW_STAGE=1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
+FINAL_STATUS=PASS_1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
+LATEST_COMPLETED_PRODUCT_STAGE=1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
+NEXT_RECOMMENDED_STAGE=1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
-ENTERED_FORMAL_1013G=false
+PROVIDER_MODEL_CALL_ALLOWED=false
 MAIN_PROJECT_PUSHED=false
 ```
 
 ## Summary
 
-This entry updates the prep-room review package through the sandbox preview-state line. The current chain is:
+This entry updates the prep-room review package through the teacher self-prep input minimal flow. The current chain is:
 
 ```text
 1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION
@@ -23,78 +23,60 @@ This entry updates the prep-room review package through the sandbox preview-stat
 -> 1013G_PREP_CANDIDATE_REVIEW_SANDBOX
 -> 1013G_TEACHER_REVIEW_PREP_ONLY
 -> 1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
+-> 1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
 ```
 
-The work remains preview/review-package only. It does not enter formal 1013G, does not apply candidate text to the lesson body, and does not write database, memory, or Feishu.
+1013I turns the workflow from reviewing an existing prep notebook into a teacher-started prep request envelope. It creates a self-prep input schema, a fixed teacher input fixture, input sufficiency assessment, request envelope, preview fixture, and a bridge back to the candidate-review / preview-state chain.
+
+It does not call a provider/model, does not generate formal lesson body text, and does not write database, memory, or Feishu.
 
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
-1013H_sandbox_apply_to_preview_only/1013H_report.md
-1013H_sandbox_apply_to_preview_only/1013H_result.json
+1013I_teacher_self_prep_input_minimal_flow/1013I_report.md
+1013I_teacher_self_prep_input_minimal_flow/1013I_result.json
 ```
 
 ## Accepted Product Baseline
 
 ```text
-1013F_R2B2_LAYOUT_CLEANUP
-1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH
-1013F_R2D_CONTENT_REVIEW_THEN_CASE_REFERENCE_ASSIMILATION
 1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION
 1013F_R2D2_REVIEW_GATE_BEFORE_1013G
 1013G_PREP_CANDIDATE_REVIEW_SANDBOX
 1013G_TEACHER_REVIEW_PREP_ONLY
 1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
+1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
 ```
 
-## Current Preview State
+## Current Teacher Self-Prep State
 
 ```text
-preview_state_created=true
-accepted_preview_items_count=3
-preview_diff_cards_created=true
-accept_to_preview_only_simulated=true
-reject_simulated=true
-revise_simulated=true
-revert_available=true
-candidate_preview_only=true
+teacher_input_schema_created=true
+teacher_input_fixture_created=true
+request_envelope_created=true
+input_sufficiency_assessment_created=true
+self_prep_preview_fixture_created=true
+preview_chain_bridge_created=true
+required_fields_present=true
+can_generate_preview_fixture=true
 ```
-
-`accept_to_preview_only` creates sandbox preview-state items and preview diff cards. It does not mean teacher confirmation, formal apply, or lesson-body merge.
 
 ## Next Recommended Stage
 
 ```text
-1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
+1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST
 ```
 
-## MiniMax Model Baseline
-
-Completed model stages:
-
-```text
-1013M_MINIMAX_M3_CONNECTION
-1013N_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON
-1013O_MINIMAX_M3_VS_M27_HIGHSPEED_MULTI_ROUND_BENCHMARK
-1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-```
-
-Current recommendation:
-
-```text
-default=MiniMax-M3 + thinking disabled
-deep_reasoning=MiniMax-M3 + thinking adaptive
-do_not_use=thinking.type enabled
-do_not_omit_thinking=true
-```
+If opened, the next stage should convert the self-prep request envelope into candidate-card seed data while preserving provider/model and no-write boundaries unless explicitly changed.
 
 ## Boundary
 
 ```text
+provider_called=false
+model_called=false
 formal_apply_performed=false
-entered_formal_1013G=false
 lesson_body_modified=false
 html_body_modified=false
 database_written=false

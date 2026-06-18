@@ -1,0 +1,17 @@
+{
+  "bridge_id": "preview_chain_bridge_1013I",
+  "source_request_id": "teacher_self_prep_request_1013I",
+  "source_fixture_id": "self_prep_preview_fixture_1013I",
+  "next_chain_candidates": [
+    "candidate_card_seed",
+    "teacher_review_prep_surface",
+    "sandbox_preview_state"
+  ],
+  "can_enter_candidate_review_later": true,
+  "must_pass_teacher_review_before_preview_apply": true,
+  "formal_apply_allowed": false,
+  "notes": [
+    "1013I creates the teacher-start envelope and a fixture preview only.",
+    "A later stage may generate candidates from this envelope, but must keep provider/model and write boundaries explicit."
+  ]
+}

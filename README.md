@@ -6,8 +6,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY`.
-- Current product next stage: `1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW`.
+- Current completed product stage: `1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW`.
+- Current product next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -40,6 +40,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - R2D2 / 1013G PREP outputs are review-package data only; they do not write candidate text into the HTML body.
 - 1013G teacher-review prep exposes `accept_to_preview_only`, `reject`, and `revise` options, but none of them perform formal apply.
 - 1013H creates sandbox preview-state items and preview diff cards only; it remains reversible and does not write the formal lesson body.
+- 1013I creates a teacher self-prep input schema, request envelope, sufficiency assessment, and fixture preview only; it does not call a provider/model.
 
 ## Reused Project Patterns
 
@@ -207,6 +208,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Simulated actions: `accept_to_preview_only`, `reject`, and `revise`.
 - Next stage: `1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW`.
 - Boundary: preview-state only; no formal apply, no formal 1013G, no lesson body write, no database/memory/Feishu write.
+
+## 1013I Teacher Self Prep Input Minimal Flow
+
+- `scripts/validate_1013I_teacher_self_prep_input_minimal_flow.py` creates the minimum teacher self-prep input workflow.
+- Output directory: `1013I_teacher_self_prep_input_minimal_flow/`.
+- Required files were generated: `1013I_result.json`, `1013I_report.md`, `teacher_self_prep_input_schema_1013I.json`, `teacher_self_prep_input_fixture_1013I.json`, `input_sufficiency_assessment_1013I.json`, `teacher_self_prep_request_1013I.json`, `self_prep_preview_fixture_1013I.json`, and `preview_chain_bridge_1013I.json`.
+- Final status: `PASS_1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW`.
+- Required input fields are present; the fixture can generate a self-prep preview without provider/model calls.
+- Next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
+- Boundary: input envelope and fixture preview only; no provider/model call, no formal apply, no lesson body write, no database/memory/Feishu write.
 
 ## 1013M MiniMax M3 Connection
 
