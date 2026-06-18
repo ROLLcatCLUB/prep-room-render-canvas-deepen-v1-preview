@@ -1,0 +1,36 @@
+{
+  "stage": "1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE",
+  "teacher_confirmation_required": true,
+  "items": [
+    {
+      "item_id": "confirm_textbook_version",
+      "label": "确认教材版本",
+      "why_required": "缺教材版本时不能把候选锚点视为正式教材锚点。",
+      "blocks_normal_generation": true
+    },
+    {
+      "item_id": "confirm_unit_title",
+      "label": "确认本课所在单元",
+      "why_required": "当前存在单元标题候选，必须由教师确认本课归属。",
+      "blocks_normal_generation": true
+    },
+    {
+      "item_id": "confirm_lesson_code_and_activity_ref",
+      "label": "确认课题编号和教材活动落点",
+      "why_required": "缺课题编号或活动页/活动任务时，不能进入正常单课候选生成。",
+      "blocks_normal_generation": true
+    },
+    {
+      "item_id": "confirm_unit_task_chain",
+      "label": "确认单元任务链",
+      "why_required": "候选链只来自字段抽取，不等于已确认的大单元设计。",
+      "blocks_normal_generation": true
+    },
+    {
+      "item_id": "confirm_lesson_position",
+      "label": "确认本课在单元中的位置",
+      "why_required": "本课是导入、探究、表现、展示评价还是综合推进，会改变候选卡范围。",
+      "blocks_normal_generation": true
+    }
+  ]
+}

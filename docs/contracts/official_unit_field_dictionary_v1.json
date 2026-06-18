@@ -1,0 +1,484 @@
+{
+  "contract_id": "official_unit_field_dictionary_v1",
+  "version": "1.0",
+  "source_scope": "三年级美术上册官方单元设计参考 8 个单元",
+  "field_count": 22,
+  "fields": [
+    {
+      "official_field_name": "学情分析",
+      "teacher_friendly_name": "学生现在什么基础",
+      "field_explanation": "写学生已有经验、兴趣点、常见困难和本单元需要特别照顾的学习起点。不写班级管理流水账，也不写空泛的学生都很积极。",
+      "xiaobei_prompt": "这批学生在这个主题上已有怎样的经验？他们容易感兴趣的点是什么？可能遇到的困难是什么？",
+      "good_example": {
+        "source_unit": "第三单元 会说话的手",
+        "example_text": "三年级上学期的学生，正处于具象思维向抽象思维过渡的时期。手作为最熟悉的身体符号，既能激发他们的具象联想，又能成为很好的绘画观察对象进行表现。本单元通过深入观察、引导探索，为孩子提供优秀原创作品",
+        "example_type": "official_excerpt_or_close_paraphrase"
+      },
+      "common_mistakes": [
+        "只写学生年龄特点，没有写和本单元主题相关的基础。",
+        "只写学生兴趣高，没有指出可能困难。",
+        "把学情分析写成教学目标。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第三单元 会说话的手"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "单元主题",
+      "teacher_friendly_name": "这个单元围绕什么学",
+      "field_explanation": "写单元的核心学习主题，通常能概括作品、材料、方法或美术语言。不写单节课活动名。",
+      "xiaobei_prompt": "这个单元最核心的学习主题是什么？请用一个短语或一句话概括。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "第二单元 色彩的碰撞",
+        "example_type": "official_excerpt_or_close_paraphrase"
+      },
+      "common_mistakes": [
+        "写成过长的教学说明。",
+        "把单元主题写成学习目标。",
+        "只写教材页码或课名。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "大观念",
+      "teacher_friendly_name": "这个单元最终想让学生明白什么",
+      "field_explanation": "写单元背后的核心美术理解，通常是一句能迁移到其他作品或情境的美术道理。不是活动名称，不是知识点堆叠。",
+      "xiaobei_prompt": "请用一句话写出这个单元最终想让学生理解的美术道理。不要写成活动安排，也不要写成知识点列表。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "色彩是美术表现的重要语言。",
+        "example_type": "official_concept_paraphrase"
+      },
+      "common_mistakes": [
+        "把大观念写成制作步骤。",
+        "堆多个知识点，如三原色、间色、复色。",
+        "写成口号，不能指导活动和评价。"
+      ],
+      "focus_explanation": "大观念是单元级理解，回答学生学完后对美术有什么更深认识。",
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "基本问题",
+      "teacher_friendly_name": "用什么大问题带着学生学",
+      "field_explanation": "写贯穿整个单元的驱动问题，能引出观察、讨论、创作和表达。不等于每节课的小问题。",
+      "xiaobei_prompt": "请写一个能贯穿整个单元的大问题。这个问题应该能引出学生观察、讨论、创作和表达。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "如何运用色彩表达我们的内心感受？",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "写成知识问答题。",
+        "问题太小，只适合一节课。",
+        "问题不能引出创作任务。"
+      ],
+      "focus_explanation": "基本问题是单元问题链的源头，小问题是每个阶段的分解问题。",
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "单元学习目标",
+      "teacher_friendly_name": "学完学生会什么、懂什么、能表达什么",
+      "field_explanation": "写学生学完本单元后在观察、方法、创作、表达、审美等方面的变化。不写教师要讲什么。",
+      "xiaobei_prompt": "学完这个单元，学生能看懂什么、会做什么、能用作品或语言表达什么？",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "学生能观察并说出青绿色彩的冷暖、深浅和层次变化，尝试运用青绿色完成一幅有前后关系的小山水作品，并能用简单语言说明自己的色彩选择。",
+        "example_type": "teacher_friendly_paraphrase_062C2"
+      },
+      "common_mistakes": [
+        "用教师行为表述，如讲授、引导。",
+        "目标太多太散。",
+        "没有可观察的学习结果。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第六单元 秩序之美"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "单元评价方案",
+      "teacher_friendly_name": "这个单元怎么持续看学生学得怎么样",
+      "field_explanation": "写评价安排，包括过程观察、作品证据、表达交流、自评互评等。不写正式分数或成绩。",
+      "xiaobei_prompt": "这个单元中，老师准备通过哪些证据了解学生是否达成目标？过程、作品和表达分别看什么？",
+      "good_example": {
+        "source_unit": "第三单元 会说话的手",
+        "example_text": "明确本单元的学习任务以及评价标准",
+        "example_type": "official_excerpt_or_close_paraphrase"
+      },
+      "common_mistakes": [
+        "只写完成作品即达标。",
+        "写成正式评分表。",
+        "只评价结果，不看过程。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第三单元 会说话的手"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "单元表现性任务",
+      "teacher_friendly_name": "学生最后要完成什么作品 / 展示 / 项目",
+      "field_explanation": "写学生最终要完成的真实任务，可以是作品、展览、剧场、活动或项目，要能承载目标和评价。不要只写完成练习。",
+      "xiaobei_prompt": "请写学生最终要完成的作品、展示或项目。这个任务要能体现单元学习目标，并能被评价。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "举办“红、黄、蓝”色彩创想会。",
+        "example_type": "official_task_paraphrase"
+      },
+      "common_mistakes": [
+        "写成做一张画，缺少真实情境。",
+        "任务不能覆盖单元目标。",
+        "任务太大，课时内无法完成。"
+      ],
+      "focus_explanation": "表现性任务是单元终点，评价要围绕它收集证据。",
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "单元任务评估要点",
+      "teacher_friendly_name": "怎么判断学生完成得好不好",
+      "field_explanation": "写学生完成表现性任务时要看的关键维度，如观察是否充分、方法是否合适、表达是否清楚。不写分数和等级。",
+      "xiaobei_prompt": "学生完成最终任务时，老师主要看哪几件事？请写成可观察的要点。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "关注学生是否能在作品中运用青绿颜色形成层次，是否能保留观察记录，是否能用一句话说明色彩选择理由，是否能在展示交流中听取同伴建议。",
+        "example_type": "teacher_friendly_paraphrase_062C2"
+      },
+      "common_mistakes": [
+        "写成分数标准。",
+        "只看作品漂亮不漂亮。",
+        "评价要点和任务目标不对应。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "单元结构设计",
+      "teacher_friendly_name": "这个单元分几步推进",
+      "field_explanation": "写单元从导入、探索、创作到展示评价的整体推进结构。不写每分钟课堂流程。",
+      "xiaobei_prompt": "这个单元可以分成哪几个学习阶段？每个阶段学生主要完成什么？",
+      "good_example": {
+        "source_unit": "第四单元 红红的剪纸",
+        "example_text": "从认识剪纸情境，到尝试方法，再到创作与展示，形成递进式单元结构。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "写成单节课过程。",
+        "阶段之间没有递进。",
+        "只列活动，不说明学习推进。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第四单元 红红的剪纸"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "学习阶段",
+      "teacher_friendly_name": "单元推进到哪一步",
+      "field_explanation": "写单元内部的阶段名称，如发现、探究、创作、展示。它是组织学习任务的层级。",
+      "xiaobei_prompt": "这一阶段处在单元的哪一步？可以用发现、探究、创作、展示等词命名。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "发现色彩、玩转色彩、表达色彩。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "阶段名过于抽象。",
+        "把学习阶段写成课堂活动。",
+        "阶段之间没有顺序。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "学习任务",
+      "teacher_friendly_name": "每一步学生要完成什么",
+      "field_explanation": "写某阶段学生要完成的目标性任务，比学习活动更上位。它回答这一阶段学生要完成什么。",
+      "xiaobei_prompt": "这一阶段学生要完成什么任务？请写成学生能理解的任务目标，不要写成具体步骤堆叠。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "通过观察与尝试发现三原色混合产生的新色彩。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "把学习任务写成教师讲解内容。",
+        "和学习活动混成一串动作。",
+        "没有对应学习证据。"
+      ],
+      "focus_explanation": "学习任务是阶段目标；学习活动是完成任务的具体课堂动作。",
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "小问题",
+      "teacher_friendly_name": "这一阶段用什么问题引导学生思考",
+      "field_explanation": "写服务于某一学习阶段的小问题，用来推动观察、比较、讨论或创作。不替代基本问题。",
+      "xiaobei_prompt": "这一阶段可以用什么问题引导学生观察或思考？问题要能引出下一步活动。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "红、黄、蓝相遇后会发生什么变化？",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "问题太封闭，只能回答是或不是。",
+        "问题太大，和当前阶段不匹配。",
+        "问题不能引出学生操作。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "学习活动",
+      "teacher_friendly_name": "课堂上具体做什么",
+      "field_explanation": "写学生在课堂上具体做的事情，应有动作、材料和过程，尽量用观察、讨论、尝试、创作、展示等动词开头。",
+      "xiaobei_prompt": "请写学生在课堂上具体要做什么，尽量用观察、讨论、尝试、创作、展示等动词开头。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "小组借助工具材料揭秘色彩的产生，通过玩转三原色发现间色、复色。",
+        "example_type": "official_activity_paraphrase"
+      },
+      "common_mistakes": [
+        "只写教师讲授。",
+        "动作不清楚，学生不知道做什么。",
+        "没有材料或过程支架。"
+      ],
+      "focus_explanation": "学习活动是课堂动作层，必须能落到学生行为。",
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "学习评价",
+      "teacher_friendly_name": "这一阶段怎么看学生学得怎么样",
+      "field_explanation": "写这一阶段如何观察学生是否完成任务，可以看过程表现、作品表现、表达交流和记录证据。不生成分数。",
+      "xiaobei_prompt": "这一阶段学生完成得怎么样，老师看什么证据？可以从过程、作品、表达、记录四个角度写。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "观察学生是否能说出颜色变化，并在作品或记录单中体现尝试过程。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "写成打分。",
+        "评价和学习任务不对应。",
+        "只评价作品，不看交流和过程。"
+      ],
+      "focus_explanation": "学习评价回答怎么看是否完成学习任务，不等于正式评分。",
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "单元教学过程摘要",
+      "teacher_friendly_name": "单元怎么大致上下来",
+      "field_explanation": "写单元教学过程的摘要版，帮助老师快速了解单元推进。不展开成完整课时教案。",
+      "xiaobei_prompt": "请用简短段落概括这个单元从导入到展示评价的大致过程，不要展开每节课细节。",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "本单元先通过作品观察引导学生感受青绿色彩的层次，再通过颜色卡片比较和小练习探索色彩组合，随后完成青绿小山水创作，最后通过展示交流梳理色彩表达经验。",
+        "example_type": "teacher_friendly_paraphrase_062C2"
+      },
+      "common_mistakes": [
+        "写得过细，变成教案。",
+        "只列课题，没有过程。",
+        "没有体现阶段递进。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第五单元 有趣的纸印"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "情境支架",
+      "teacher_friendly_name": "用什么情境把学生带进去",
+      "field_explanation": "写能激发学生进入学习任务的情境，如展览、故事、校园活动、问题情境等。不是装饰性导语。",
+      "xiaobei_prompt": "这个单元可以用什么真实或有趣的情境把学生带入任务？",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "以色彩创想会作为情境，引导学生用红、黄、蓝进行观察、实验和表达。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "情境和最终任务无关。",
+        "只是热闹导入，不能推动学习。",
+        "情境过复杂，抢走美术学习重点。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "任务支架",
+      "teacher_friendly_name": "帮学生把任务做清楚的步骤",
+      "field_explanation": "写帮助学生理解和完成任务的步骤、提示、模板或检查点。",
+      "xiaobei_prompt": "学生完成这个任务可能卡在哪里？老师可以给哪些步骤、提示或模板？",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "提供观察、调色、记录、表达四步任务提示，帮助学生完成色彩探索。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "支架太多，替学生完成思考。",
+        "只有材料清单，没有任务帮助。",
+        "支架和评价无关。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "资源支架",
+      "teacher_friendly_name": "给学生哪些图像、材料或工具帮助",
+      "field_explanation": "写支持学习的图片、材料、工具、范例或数字资源。不写成杂乱资源堆。",
+      "xiaobei_prompt": "学生完成任务需要哪些图片、材料、工具或范例？哪些是必备，哪些是可选？",
+      "good_example": {
+        "source_unit": "第四单元 红红的剪纸",
+        "example_text": "提供剪纸作品图、红纸、剪刀、折叠示意和安全提示，支持学生尝试剪纸纹样。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "资源过多，没有使用目的。",
+        "只列工具，不说明怎么帮助学习。",
+        "把资源支架写成课堂活动。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第四单元 红红的剪纸"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "策略支架",
+      "teacher_friendly_name": "老师教学生用什么方法解决困难",
+      "field_explanation": "写帮助学生观察、比较、创作、表达的方法策略，如先观察再尝试、两两比较、词语提示等。",
+      "xiaobei_prompt": "学生遇到困难时，老师准备给什么方法提示？例如观察顺序、比较方法、表达词语。",
+      "good_example": {
+        "source_unit": "第六单元 秩序之美",
+        "example_text": "用寻找重复、比较排列、尝试变化的方法帮助学生理解秩序美。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "写成教师要求。",
+        "策略太抽象，学生不会用。",
+        "没有针对学习难点。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第六单元 秩序之美"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "学习单",
+      "teacher_friendly_name": "学生边学边记录的单子",
+      "field_explanation": "写学生用于观察、记录、选择、说明的学习单内容。它应服务于任务和评价证据。",
+      "xiaobei_prompt": "这节或这个阶段学生需要记录什么？学习单上要有什么观察项、选择项或说明句？",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "记录三原色混合后的颜色变化，并写一句自己的发现。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "学习单像教师教案。",
+        "只让学生抄概念。",
+        "记录内容不能形成评价证据。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "评价支架",
+      "teacher_friendly_name": "帮助学生知道怎么改、怎么看作品",
+      "field_explanation": "写评价时给学生的观察维度、表达句式、自评互评提示。不生成正式分数。",
+      "xiaobei_prompt": "学生评价自己或同伴作品时，可以看哪些方面？老师可以给哪些句式或观察提示？",
+      "good_example": {
+        "source_unit": "第三单元 会说话的手",
+        "example_text": "引导学生说一说手势表达了什么情绪，作品中哪里最能说明故事。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "变成打分表。",
+        "评价语言成人化。",
+        "评价维度和学习目标脱节。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第三单元 会说话的手"
+      ],
+      "workbench_layer": "unit_planning"
+    },
+    {
+      "official_field_name": "学评一致",
+      "teacher_friendly_name": "学什么就看什么",
+      "field_explanation": "说明学习目标、学习任务、学习活动和学习评价之间是否对齐。不是单独写漂亮口号。",
+      "xiaobei_prompt": "请检查：目标里要求学生学会的内容，是否在任务中完成、在活动中练习、在评价中被看见？",
+      "good_example": {
+        "source_unit": "第二单元 色彩的碰撞",
+        "example_text": "目标关注色彩表达，活动安排色彩实验，评价看学生的色彩选择和表达理由。",
+        "example_type": "teacher_friendly_paraphrase"
+      },
+      "common_mistakes": [
+        "目标、活动、评价各写各的。",
+        "评价只看作品效果，没看目标。",
+        "任务无法产生评价证据。"
+      ],
+      "source_basis": [
+        "三年级美术上册官方单元设计参考",
+        "第二单元 色彩的碰撞"
+      ],
+      "workbench_layer": "unit_planning"
+    }
+  ],
+  "safety_boundaries": {
+    "generate_full_lesson_plan": false,
+    "database_write": false,
+    "feishu_write": false,
+    "formal_scoring": false,
+    "classroom_app_connect": false,
+    "real_doc_export": false
+  }
+}

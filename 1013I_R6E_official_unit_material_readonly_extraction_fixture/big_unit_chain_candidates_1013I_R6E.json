@@ -1,0 +1,335 @@
+{
+  "stage": "1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE",
+  "candidate_type": "big_unit_chain_candidates",
+  "readonly_extraction_only": true,
+  "unit_package_created": false,
+  "big_unit_body_generated": false,
+  "teacher_confirmation_required": true,
+  "unit_package_candidate": {
+    "unit_package_id": "unit_package_candidate_1013I_R6E_color_feeling",
+    "unit_title_candidates": [
+      "多变的色彩",
+      "色彩的碰撞"
+    ],
+    "unit_task_chain_candidates": [
+      {
+        "stage_id": "unit_foundation",
+        "stage_name": "先定单元骨架",
+        "ask_order": 1,
+        "stage_goal": "让老师先说清楚学生基础、单元主题、核心理解和贯穿问题。",
+        "field_candidates": [
+          {
+            "official_field_name": "单元主题",
+            "teacher_friendly_name": "这个单元围绕什么学",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "写成过长的教学说明。",
+              "把单元主题写成学习目标。",
+              "只写教材页码或课名。"
+            ]
+          },
+          {
+            "official_field_name": "学情分析",
+            "teacher_friendly_name": "学生现在什么基础",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第三单元 会说话的手"
+            ],
+            "common_mistakes": [
+              "只写学生年龄特点，没有写和本单元主题相关的基础。",
+              "只写学生兴趣高，没有指出可能困难。",
+              "把学情分析写成教学目标。"
+            ]
+          },
+          {
+            "official_field_name": "大观念",
+            "teacher_friendly_name": "这个单元最终想让学生明白什么",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "把大观念写成制作步骤。",
+              "堆多个知识点，如三原色、间色、复色。",
+              "写成口号，不能指导活动和评价。"
+            ]
+          },
+          {
+            "official_field_name": "基本问题",
+            "teacher_friendly_name": "用什么大问题带着学生学",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "写成知识问答题。",
+              "问题太小，只适合一节课。",
+              "问题不能引出创作任务。"
+            ]
+          }
+        ],
+        "teacher_confirmation_status": "pending_teacher_confirm"
+      },
+      {
+        "stage_id": "task_goal_evidence",
+        "stage_name": "再定任务、目标和证据",
+        "ask_order": 2,
+        "stage_goal": "把学生最终要完成的任务、学完后的表现和可观察证据对齐。",
+        "field_candidates": [
+          {
+            "official_field_name": "单元表现性任务",
+            "teacher_friendly_name": "学生最后要完成什么作品 / 展示 / 项目",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "写成做一张画，缺少真实情境。",
+              "任务不能覆盖单元目标。",
+              "任务太大，课时内无法完成。"
+            ]
+          },
+          {
+            "official_field_name": "单元学习目标",
+            "teacher_friendly_name": "学完学生会什么、懂什么、能表达什么",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第六单元 秩序之美"
+            ],
+            "common_mistakes": [
+              "用教师行为表述，如讲授、引导。",
+              "目标太多太散。",
+              "没有可观察的学习结果。"
+            ]
+          },
+          {
+            "official_field_name": "单元任务评估要点",
+            "teacher_friendly_name": "怎么判断学生完成得好不好",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "写成分数标准。",
+              "只看作品漂亮不漂亮。",
+              "评价要点和任务目标不对应。"
+            ]
+          }
+        ],
+        "teacher_confirmation_status": "pending_teacher_confirm"
+      },
+      {
+        "stage_id": "learning_sequence",
+        "stage_name": "再排学习推进",
+        "ask_order": 3,
+        "stage_goal": "把单元拆成几个学习阶段，并为每个阶段配置任务、问题、活动和评价。",
+        "field_candidates": [
+          {
+            "official_field_name": "学习阶段",
+            "teacher_friendly_name": "单元推进到哪一步",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "阶段名过于抽象。",
+              "把学习阶段写成课堂活动。",
+              "阶段之间没有顺序。"
+            ]
+          },
+          {
+            "official_field_name": "学习任务",
+            "teacher_friendly_name": "每一步学生要完成什么",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "把学习任务写成教师讲解内容。",
+              "和学习活动混成一串动作。",
+              "没有对应学习证据。"
+            ]
+          },
+          {
+            "official_field_name": "小问题",
+            "teacher_friendly_name": "这一阶段用什么问题引导学生思考",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "问题太封闭，只能回答是或不是。",
+              "问题太大，和当前阶段不匹配。",
+              "问题不能引出学生操作。"
+            ]
+          },
+          {
+            "official_field_name": "学习活动",
+            "teacher_friendly_name": "课堂上具体做什么",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "只写教师讲授。",
+              "动作不清楚，学生不知道做什么。",
+              "没有材料或过程支架。"
+            ]
+          },
+          {
+            "official_field_name": "学习评价",
+            "teacher_friendly_name": "这一阶段怎么看学生学得怎么样",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "写成打分。",
+              "评价和学习任务不对应。",
+              "只评价作品，不看交流和过程。"
+            ]
+          },
+          {
+            "official_field_name": "单元教学过程摘要",
+            "teacher_friendly_name": "单元怎么大致上下来",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第五单元 有趣的纸印"
+            ],
+            "common_mistakes": [
+              "写得过细，变成教案。",
+              "只列课题，没有过程。",
+              "没有体现阶段递进。"
+            ]
+          }
+        ],
+        "teacher_confirmation_status": "pending_teacher_confirm"
+      },
+      {
+        "stage_id": "support_and_alignment",
+        "stage_name": "最后补支架和对齐",
+        "ask_order": 4,
+        "stage_goal": "补充情境、任务、资源、策略、学习单和评价支架，并检查学评一致。",
+        "field_candidates": [
+          {
+            "official_field_name": "情境支架",
+            "teacher_friendly_name": "用什么情境把学生带进去",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "情境和最终任务无关。",
+              "只是热闹导入，不能推动学习。",
+              "情境过复杂，抢走美术学习重点。"
+            ]
+          },
+          {
+            "official_field_name": "任务支架",
+            "teacher_friendly_name": "帮学生把任务做清楚的步骤",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "支架太多，替学生完成思考。",
+              "只有材料清单，没有任务帮助。",
+              "支架和评价无关。"
+            ]
+          },
+          {
+            "official_field_name": "资源支架",
+            "teacher_friendly_name": "给学生哪些图像、材料或工具帮助",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第四单元 红红的剪纸"
+            ],
+            "common_mistakes": [
+              "资源过多，没有使用目的。",
+              "只列工具，不说明怎么帮助学习。",
+              "把资源支架写成课堂活动。"
+            ]
+          },
+          {
+            "official_field_name": "策略支架",
+            "teacher_friendly_name": "老师教学生用什么方法解决困难",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第六单元 秩序之美"
+            ],
+            "common_mistakes": [
+              "写成教师要求。",
+              "策略太抽象，学生不会用。",
+              "没有针对学习难点。"
+            ]
+          },
+          {
+            "official_field_name": "学习单",
+            "teacher_friendly_name": "学生边学边记录的单子",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "学习单像教师教案。",
+              "只让学生抄概念。",
+              "记录内容不能形成评价证据。"
+            ]
+          },
+          {
+            "official_field_name": "评价支架",
+            "teacher_friendly_name": "帮助学生知道怎么改、怎么看作品",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第三单元 会说话的手"
+            ],
+            "common_mistakes": [
+              "变成打分表。",
+              "评价语言成人化。",
+              "评价维度和学习目标脱节。"
+            ]
+          },
+          {
+            "official_field_name": "学评一致",
+            "teacher_friendly_name": "学什么就看什么",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "目标、活动、评价各写各的。",
+              "评价只看作品效果，没看目标。",
+              "任务无法产生评价证据。"
+            ]
+          }
+        ],
+        "teacher_confirmation_status": "pending_teacher_confirm"
+      }
+    ],
+    "chain_status": "candidate_chain_from_official_material",
+    "teacher_confirmation_status": "pending_teacher_confirm"
+  }
+}

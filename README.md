@@ -12,7 +12,9 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - Current completed packaging fix: `1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT`.
 - Current completed control layer: `1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT`.
 - Current completed textbook/unit chain: `1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT`.
-- Current product next stage: `1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE`.
+- Current completed backend extraction: `1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE`.
+- Current product next stage: `1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE`.
+- Page work status: not started; user review is required before any big-unit prep page fixture or UI implementation.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -54,6 +56,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - 1013I_R6B_R1 aligns the review manifest only: R6/R6A/R6B are now listed in the current baseline, the next layer is R6C curriculum-standard control, and R7 visual review remains paused.
 - 1013I_R6C defines the curriculum-standard control layer as upstream constraint: `lesson_standard_map` stores structured mapping cards or missing markers, official cases stay reference-only, textbook anchors are required before normal lesson generation, and R7 visual review remains paused.
 - 1013I_R6D defines the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, and `lesson_position_judgement` must exist before normal candidate-card generation; missing anchor or lesson position only allows visible degraded draft mode.
+- 1013I_R6E adds a backend readonly extraction adapter for official unit field contracts. It creates textbook-anchor candidates, big-unit-chain candidates, lesson-position candidate status, and teacher-confirmation required items only; it does not start page work.
 
 ## Reused Project Patterns
 

@@ -1,0 +1,385 @@
+{
+  "contract_id": "official_unit_field_question_flow_v1",
+  "version": "1.0",
+  "source_contracts": [
+    "official_unit_field_dictionary_v1",
+    "official_unit_field_prompt_standard_v1"
+  ],
+  "source_reports": [
+    "xiaobei_official_unit_field_dictionary_062C2_source_restore_and_example_patch_report.md"
+  ],
+  "usage_scope": "小备按阶段追问老师、生成字段候选、映射回官方单元字段；不用于一次性展开课时教案。",
+  "state_model": [
+    "not_started",
+    "asking",
+    "teacher_answered",
+    "ai_candidate_generated",
+    "teacher_confirmed",
+    "skipped",
+    "skipped_with_fallback"
+  ],
+  "global_rules": [
+    "先问老师能回答的话，再映射到官方字段。",
+    "每轮优先处理当前阶段和当前字段，不要求老师一次填完所有字段。",
+    "小备可以生成候选，但必须保持待确认状态。",
+    "评价只写观察证据、作品证据、表达证据和过程证据，不生成分数、成绩或正式打分。",
+    "支架类字段放在最后或按需补充，不把支架误写成教学过程。"
+  ],
+  "flow_stages": [
+    {
+      "stage_id": "unit_foundation",
+      "stage_name": "先定单元骨架",
+      "ask_order": 1,
+      "stage_goal": "让老师先说清楚学生基础、单元主题、核心理解和贯穿问题。",
+      "fields": [
+        "单元主题",
+        "学情分析",
+        "大观念",
+        "基本问题"
+      ]
+    },
+    {
+      "stage_id": "task_goal_evidence",
+      "stage_name": "再定任务、目标和证据",
+      "ask_order": 2,
+      "stage_goal": "把学生最终要完成的任务、学完后的表现和可观察证据对齐。",
+      "fields": [
+        "单元表现性任务",
+        "单元学习目标",
+        "单元任务评估要点"
+      ]
+    },
+    {
+      "stage_id": "learning_sequence",
+      "stage_name": "再排学习推进",
+      "ask_order": 3,
+      "stage_goal": "把单元拆成几个学习阶段，并为每个阶段配置任务、问题、活动和评价。",
+      "fields": [
+        "学习阶段",
+        "学习任务",
+        "小问题",
+        "学习活动",
+        "学习评价",
+        "单元教学过程摘要"
+      ]
+    },
+    {
+      "stage_id": "support_and_alignment",
+      "stage_name": "最后补支架和对齐",
+      "ask_order": 4,
+      "stage_goal": "补充情境、任务、资源、策略、学习单和评价支架，并检查学评一致。",
+      "fields": [
+        "情境支架",
+        "任务支架",
+        "资源支架",
+        "策略支架",
+        "学习单",
+        "评价支架",
+        "学评一致"
+      ]
+    }
+  ],
+  "field_questions": [
+    {
+      "official_field_name": "单元主题",
+      "teacher_friendly_name": "这个单元围绕什么学",
+      "flow_stage": "unit_foundation",
+      "ask_order": 1,
+      "xiaobei_question": "这个单元最想带孩子围绕什么来学？可以先说一个短语，比如颜色变化、手势表达、纸印纹理。",
+      "why_ask_this": "先定主题，后面的目标、任务和活动才不会散。",
+      "answer_hint": "用一个短语或一句话说清核心内容，不写成单节课活动。",
+      "example_answer": "围绕青绿色彩的层次变化和小山水表达来学习。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "单元主题",
+      "workbench_card": "unit_foundation_card"
+    },
+    {
+      "official_field_name": "学情分析",
+      "teacher_friendly_name": "学生现在什么基础",
+      "flow_stage": "unit_foundation",
+      "ask_order": 2,
+      "xiaobei_question": "这批孩子对这个主题已经见过或做过什么？他们最可能喜欢哪里，又可能卡在哪里？",
+      "why_ask_this": "学情决定追问难度、材料支架和活动节奏。",
+      "answer_hint": "写已有经验、兴趣点和可能困难，各写一两句即可。",
+      "example_answer": "学生见过山水画和自然风景，喜欢颜色实验，但容易把青绿只理解成单一绿色，画面前后层次需要支架。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "学情分析",
+      "workbench_card": "unit_foundation_card"
+    },
+    {
+      "official_field_name": "大观念",
+      "teacher_friendly_name": "这个单元最终想让学生明白什么",
+      "flow_stage": "unit_foundation",
+      "ask_order": 3,
+      "xiaobei_question": "学完这个单元，你希望孩子带走一个什么美术道理？一句能迁移到别的作品里的话就行。",
+      "why_ask_this": "大观念帮助小备把活动从做手工、画作品提升到美术理解。",
+      "answer_hint": "写成一句理解，不写成步骤或知识点清单。",
+      "example_answer": "色彩的冷暖、深浅和层次能帮助我们表现空间和情绪。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "大观念",
+      "workbench_card": "unit_foundation_card"
+    },
+    {
+      "official_field_name": "基本问题",
+      "teacher_friendly_name": "用什么大问题带着学生学",
+      "flow_stage": "unit_foundation",
+      "ask_order": 4,
+      "xiaobei_question": "你想用哪个大问题带着孩子一路观察、讨论和创作？",
+      "why_ask_this": "基本问题把单元主题变成学生能持续探究的问题。",
+      "answer_hint": "问题要能引出观察、尝试、创作和表达，不只是知识问答。",
+      "example_answer": "怎样用青绿色彩表现一片有远近层次的山水？",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "基本问题",
+      "workbench_card": "unit_foundation_card"
+    },
+    {
+      "official_field_name": "单元表现性任务",
+      "teacher_friendly_name": "学生最后要完成什么作品 / 展示 / 项目",
+      "flow_stage": "task_goal_evidence",
+      "ask_order": 5,
+      "xiaobei_question": "单元最后，孩子要拿出什么作品、展示或小项目来证明自己学会了？",
+      "why_ask_this": "表现性任务是单元终点，目标和评价都要围绕它。",
+      "answer_hint": "写学生最终可呈现的成果，不只写完成练习。",
+      "example_answer": "完成一幅青绿小山水，并在展示时说明自己怎样安排颜色层次。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "单元表现性任务",
+      "workbench_card": "task_goal_evidence_card"
+    },
+    {
+      "official_field_name": "单元学习目标",
+      "teacher_friendly_name": "学完学生会什么、懂什么、能表达什么",
+      "flow_stage": "task_goal_evidence",
+      "ask_order": 6,
+      "xiaobei_question": "学完这个单元，孩子能看懂什么、会做什么、能用作品或语言说明什么？",
+      "why_ask_this": "学习目标把最终任务转成可观察的学生变化。",
+      "answer_hint": "从观察、方法、创作、表达中选两三点写，不写教师要讲什么。",
+      "example_answer": "学生能观察并说出青绿色彩的冷暖、深浅和层次变化，尝试运用青绿色完成一幅有前后关系的小山水作品，并能用简单语言说明自己的色彩选择。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "单元学习目标",
+      "workbench_card": "task_goal_evidence_card"
+    },
+    {
+      "official_field_name": "单元任务评估要点",
+      "teacher_friendly_name": "怎么判断学生完成得好不好",
+      "flow_stage": "task_goal_evidence",
+      "ask_order": 7,
+      "xiaobei_question": "看孩子最终任务时，你主要想看哪几件事？比如作品、过程记录、表达说明或交流表现。",
+      "why_ask_this": "评价要点让小备知道哪些证据能说明学生达成目标。",
+      "answer_hint": "写可观察证据，不写分数、成绩、等级。",
+      "example_answer": "关注学生是否能在作品中运用青绿颜色形成层次，是否能保留观察记录，是否能用一句话说明色彩选择理由，是否能在展示交流中听取同伴建议。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "单元任务评估要点",
+      "workbench_card": "task_goal_evidence_card"
+    },
+    {
+      "official_field_name": "学习阶段",
+      "teacher_friendly_name": "单元推进到哪一步",
+      "flow_stage": "learning_sequence",
+      "ask_order": 8,
+      "xiaobei_question": "这个单元准备分成哪几步推进？每一步可以用发现、尝试、创作、展示这样的短词命名。",
+      "why_ask_this": "学习阶段决定右侧工作卡后续如何分块呈现。",
+      "answer_hint": "写三到四个阶段名即可，先不展开细节。",
+      "example_answer": "观察青绿、试配青绿、创作山水、展示交流。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "学习阶段",
+      "workbench_card": "learning_sequence_card"
+    },
+    {
+      "official_field_name": "学习任务",
+      "teacher_friendly_name": "每一步学生要完成什么",
+      "flow_stage": "learning_sequence",
+      "ask_order": 9,
+      "xiaobei_question": "在当前阶段，学生要完成什么小任务？",
+      "why_ask_this": "学习任务回答学生要完成什么，比活动步骤更上位。",
+      "answer_hint": "写阶段目标，不要堆具体操作。",
+      "example_answer": "通过观察和比较发现青绿色彩能形成远近和层次。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "学习任务",
+      "workbench_card": "learning_sequence_card"
+    },
+    {
+      "official_field_name": "小问题",
+      "teacher_friendly_name": "这一阶段用什么问题引导学生思考",
+      "flow_stage": "learning_sequence",
+      "ask_order": 10,
+      "xiaobei_question": "这一阶段可以用哪个小问题把孩子带进观察或操作？",
+      "why_ask_this": "小问题把阶段任务变成课堂上可以推动学生思考的入口。",
+      "answer_hint": "问题要具体，能引出下一步活动。",
+      "example_answer": "同样是绿色，为什么有的地方像远山，有的地方像近处的树？",
+      "skip_allowed": true,
+      "required_for_generation": false,
+      "maps_to": "小问题",
+      "workbench_card": "learning_sequence_card"
+    },
+    {
+      "official_field_name": "学习活动",
+      "teacher_friendly_name": "课堂上具体做什么",
+      "flow_stage": "learning_sequence",
+      "ask_order": 11,
+      "xiaobei_question": "这一阶段课堂上学生具体做哪些事？可以从观察、讨论、尝试、创作、展示里选。",
+      "why_ask_this": "学习活动把任务落到学生真实动作，但不展开成详案。",
+      "answer_hint": "写学生动作、材料和简要过程，保持一两句。",
+      "example_answer": "学生观察青绿山水作品，挑出深浅不同的颜色卡片，再用小练习尝试叠加出远近层次。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "学习活动",
+      "workbench_card": "learning_sequence_card"
+    },
+    {
+      "official_field_name": "学习评价",
+      "teacher_friendly_name": "这一阶段怎么看学生学得怎么样",
+      "flow_stage": "learning_sequence",
+      "ask_order": 12,
+      "xiaobei_question": "这一阶段你准备用哪些证据看孩子完成得怎么样？",
+      "why_ask_this": "学习评价让阶段任务和学生证据对应起来。",
+      "answer_hint": "可以看过程记录、作品尝试、口头说明或同伴交流，不写打分。",
+      "example_answer": "看学生是否能找出两种以上青绿色变化，是否能在练习纸上留下尝试记录，并说出一种颜色选择理由。",
+      "skip_allowed": false,
+      "required_for_generation": true,
+      "maps_to": "学习评价",
+      "workbench_card": "learning_sequence_card"
+    },
+    {
+      "official_field_name": "单元教学过程摘要",
+      "teacher_friendly_name": "单元怎么大致上下来",
+      "flow_stage": "learning_sequence",
+      "ask_order": 13,
+      "xiaobei_question": "把刚才几步合起来，用一小段话概括这个单元从观察到展示怎么推进，可以吗？",
+      "why_ask_this": "过程摘要帮助老师总览单元推进，但不替代课时教案。",
+      "answer_hint": "用先、再、随后、最后这样的顺序词写摘要。",
+      "example_answer": "本单元先通过作品观察引导学生感受青绿色彩的层次，再通过颜色卡片比较和小练习探索色彩组合，随后完成青绿小山水创作，最后通过展示交流梳理色彩表达经验。",
+      "skip_allowed": true,
+      "required_for_generation": false,
+      "maps_to": "单元教学过程摘要",
+      "workbench_card": "learning_sequence_card"
+    },
+    {
+      "official_field_name": "情境支架",
+      "teacher_friendly_name": "这节课用什么情境把学生带进去",
+      "flow_stage": "support_and_alignment",
+      "ask_order": 14,
+      "xiaobei_question": "你想用什么真实情境或故事，把学生带入这个单元？比如展览、任务挑战、角色扮演、校园活动，或者和学生生活有关的场景。",
+      "why_ask_this": "情境支架负责把学生带入任务，不替代后面的学习活动。",
+      "answer_hint": "可以写一个课堂情境，不需要很长。比如“举办色彩创想会”“为校园足球节设计作品”“做一场小小美术展”。",
+      "example_answer": "举办一场“青绿小山水展”，请学生用颜色表现自己心里的山水风景。",
+      "skip_allowed": true,
+      "required_for_generation": false,
+      "fallback_if_skipped": "小备会先使用一个简洁课堂情境，后续你可以再替换。",
+      "maps_to": "情境支架",
+      "workbench_card": "support_alignment_card"
+    },
+    {
+      "official_field_name": "任务支架",
+      "teacher_friendly_name": "学生完成任务时需要哪些步骤提示",
+      "flow_stage": "support_and_alignment",
+      "ask_order": 15,
+      "xiaobei_question": "学生完成这个任务时，最需要哪几步提示？你可以告诉小备：先看什么、再试什么、最后完成什么。",
+      "why_ask_this": "任务支架帮助学生知道完成任务的顺序，避免把最终任务听成一句空要求。",
+      "answer_hint": "写 2-4 个步骤即可。",
+      "example_answer": "先观察青绿山水里的深浅变化，再试配两到三种青绿色，最后完成一幅有远近层次的小山水。",
+      "skip_allowed": true,
+      "required_for_generation": false,
+      "fallback_if_skipped": "小备会按“观察—尝试—创作—表达”生成基础步骤。",
+      "maps_to": "任务支架",
+      "workbench_card": "support_alignment_card"
+    },
+    {
+      "official_field_name": "资源支架",
+      "teacher_friendly_name": "学生需要看什么、用什么材料或资源",
+      "flow_stage": "support_and_alignment",
+      "ask_order": 16,
+      "xiaobei_question": "这个单元里，学生需要哪些图片、材料、示范、工具或参考作品帮助他们完成任务？",
+      "why_ask_this": "资源支架让小备知道要准备哪些可见、可用的材料，不把资源误写成教学过程。",
+      "answer_hint": "可以写图片、材料、工具、范例、视频、学习单等。",
+      "example_answer": "准备青绿山水作品图、青绿色卡片、水彩或彩铅、调色小纸和学生作品范例。",
+      "skip_allowed": true,
+      "required_for_generation": false,
+      "fallback_if_skipped": "小备会根据课题先列出常用资源和材料清单。",
+      "maps_to": "资源支架",
+      "workbench_card": "support_alignment_card"
+    },
+    {
+      "official_field_name": "策略支架",
+      "teacher_friendly_name": "学生遇到困难时，老师给什么方法",
+      "flow_stage": "support_and_alignment",
+      "ask_order": 17,
+      "xiaobei_question": "学生可能在哪一步卡住？你希望给他们什么方法或小技巧？比如观察方法、比较方法、构图方法、表达句式。",
+      "why_ask_this": "策略支架帮助学生解决具体困难，不等于再安排一段课堂流程。",
+      "answer_hint": "写学生可能困难 + 老师给的方法。",
+      "example_answer": "学生容易把颜色涂平，可以提示他们先比较深浅，再用近处深、远处浅的方法表现层次。",
+      "skip_allowed": true,
+      "required_for_generation": false,
+      "fallback_if_skipped": "小备会先根据学情生成常见困难和对应提示。",
+      "maps_to": "策略支架",
+      "workbench_card": "support_alignment_card"
+    },
+    {
+      "official_field_name": "学习单",
+      "teacher_friendly_name": "学生需要填写或记录什么",
+      "flow_stage": "support_and_alignment",
+      "ask_order": 18,
+      "xiaobei_question": "这节课需要学生留下什么记录吗？比如观察表、颜色记录、草图、选择理由、创作说明。",
+      "why_ask_this": "学习单帮助学生留下学习证据，但这里先只确定记录内容，不生成正式表格。",
+      "answer_hint": "写学生要记录的内容，不需要设计完整表格。",
+      "example_answer": "记录两组青绿色的深浅变化，圈出最想使用的一组，并写一句选择理由。",
+      "skip_allowed": true,
+      "required_for_generation": false,
+      "fallback_if_skipped": "小备会先生成一份简洁学习单草稿。",
+      "maps_to": "学习单",
+      "workbench_card": "support_alignment_card"
+    },
+    {
+      "official_field_name": "评价支架",
+      "teacher_friendly_name": "学生怎么知道自己做得怎么样",
+      "flow_stage": "support_and_alignment",
+      "ask_order": 19,
+      "xiaobei_question": "学生完成作品后，你希望他们从哪些方面看自己的作品？比如是否完成任务、是否有创意、是否能说清楚想法。",
+      "why_ask_this": "评价支架帮助学生自评和互评，只给观察方向，不做量化判断。",
+      "answer_hint": "写 2-3 个评价关注点即可，用观察性语言表达。",
+      "example_answer": "看作品是否用了青绿色层次，是否表现出远近关系，是否能说清楚自己的颜色选择。",
+      "skip_allowed": true,
+      "required_for_generation": false,
+      "fallback_if_skipped": "小备会先生成非量化评价提示。",
+      "maps_to": "评价支架",
+      "workbench_card": "support_alignment_card"
+    },
+    {
+      "official_field_name": "学评一致",
+      "teacher_friendly_name": "学什么就看什么",
+      "flow_stage": "support_and_alignment",
+      "ask_order": 20,
+      "xiaobei_question": "我们最后检查一下：目标里说要学会的内容，任务里做到了吗？活动里练到了吗？评价里看得见吗？",
+      "why_ask_this": "这个检查能减少目标、活动、评价各写各的。",
+      "answer_hint": "指出已对齐的地方和还要补的一处即可。",
+      "example_answer": "目标关注青绿色彩层次，任务要求完成青绿小山水，活动安排观察和调色练习，评价看作品层次、观察记录和表达说明，基本对齐。",
+      "skip_allowed": true,
+      "required_for_generation": false,
+      "maps_to": "学评一致",
+      "workbench_card": "support_alignment_card"
+    }
+  ],
+  "workbench_card_schema": {
+    "card_id": "string",
+    "stage_id": "string",
+    "card_title": "string",
+    "field_items": [
+      {
+        "official_field_name": "string",
+        "teacher_friendly_name": "string",
+        "status": "not_started | asking | teacher_answered | ai_candidate_generated | teacher_confirmed | skipped | skipped_with_fallback",
+        "teacher_answer": "string",
+        "ai_candidate": "string",
+        "teacher_confirmed_value": "string"
+      }
+    ]
+  }
+}

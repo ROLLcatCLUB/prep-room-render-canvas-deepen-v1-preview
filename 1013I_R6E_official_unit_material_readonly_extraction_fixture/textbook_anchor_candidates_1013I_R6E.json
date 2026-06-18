@@ -1,0 +1,56 @@
+{
+  "stage": "1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE",
+  "candidate_type": "textbook_anchor_candidates",
+  "readonly_extraction_only": true,
+  "verified_textbook_anchor_created": false,
+  "teacher_confirmation_required": true,
+  "candidates": [
+    {
+      "candidate_id": "textbook_anchor_candidate_color_unit_1013I_R6E",
+      "source_request_lesson": {
+        "subject": "美术",
+        "grade": "三年级",
+        "semester": "上册",
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉"
+      },
+      "candidate_anchor": {
+        "textbook_version": null,
+        "unit_title_candidates": [
+          "多变的色彩",
+          "色彩的碰撞"
+        ],
+        "lesson_title_candidate": "色彩的感觉",
+        "textbook_catalog_ref": "pending_textbook_catalog_ref",
+        "anchor_status": "candidate_anchor_from_official_material",
+        "teacher_confirmation_status": "pending_teacher_confirm"
+      },
+      "evidence_refs": [
+        {
+          "source_id": "r6d_textbook_anchor_fixture",
+          "field": "lesson_textbook_map",
+          "usage": "inherit teacher request and missing-anchor status"
+        },
+        {
+          "source_id": "official_unit_field_dictionary_v1",
+          "field_ref": {
+            "official_field_name": "单元主题",
+            "teacher_friendly_name": "这个单元围绕什么学",
+            "workbench_layer": "unit_planning",
+            "source_basis": [
+              "三年级美术上册官方单元设计参考",
+              "第二单元 色彩的碰撞"
+            ],
+            "common_mistakes": [
+              "写成过长的教学说明。",
+              "把单元主题写成学习目标。",
+              "只写教材页码或课名。"
+            ]
+          },
+          "usage": "extract unit theme field shape only"
+        }
+      ],
+      "risk_note": "Unit title candidates are not a verified textbook anchor. Teacher must confirm textbook version, unit, lesson code, and activity/page reference."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "stage": "1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE",
+  "source_policy": "readonly_reference_only",
+  "official_claim_created": false,
+  "sources": [
+    {
+      "source_id": "official_unit_field_dictionary_v1",
+      "relative_path": "docs/contracts/official_unit_field_dictionary_v1.json",
+      "source_type": "official_unit_field_contract",
+      "readonly": true,
+      "may_extract": [
+        "field_names",
+        "teacher_friendly_names",
+        "workbench_layers",
+        "source_basis_labels",
+        "common_mistake_warnings"
+      ],
+      "may_not_extract": [
+        "authoritative_curriculum_claim",
+        "final_unit_body",
+        "single_lesson_plan_body"
+      ]
+    },
+    {
+      "source_id": "official_unit_field_prompt_standard_v1",
+      "relative_path": "docs/contracts/official_unit_field_prompt_standard_v1.json",
+      "source_type": "prompt_wording_contract",
+      "readonly": true,
+      "may_extract": [
+        "question_wording_rules",
+        "avoid_rules",
+        "field_prompt_shape"
+      ],
+      "may_not_extract": [
+        "provider_prompt_runtime_call",
+        "model_generated_content"
+      ]
+    },
+    {
+      "source_id": "official_unit_field_question_flow_v1",
+      "relative_path": "docs/contracts/official_unit_field_question_flow_v1.json",
+      "source_type": "teacher_question_flow_contract",
+      "readonly": true,
+      "may_extract": [
+        "flow_stages",
+        "required_fields",
+        "teacher_confirmation_states"
+      ],
+      "may_not_extract": [
+        "teacher_answer",
+        "confirmed_unit_design"
+      ]
+    },
+    {
+      "source_id": "r6d_textbook_anchor_and_big_unit_contract",
+      "relative_path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/textbook_anchor_and_big_unit_design_chain_contract_1013I_R6D.json",
+      "source_type": "upstream_control_contract",
+      "readonly": true,
+      "may_extract": [
+        "lesson_textbook_map_required_fields",
+        "unit_package_required_fields",
+        "lesson_position_required_fields"
+      ],
+      "may_not_extract": [
+        "formal_apply_permission",
+        "runtime_write_permission"
+      ]
+    }
+  ]
+}
