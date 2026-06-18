@@ -1,0 +1,15 @@
+{
+  "stage": "1013I_R6N_R3_BIG_UNIT_DESIGN_READING_SURFACE_MINIMAL_COPY",
+  "inherits_from": "1013I_R6N_R2_CENTERED_PAGE_LEFT_ALIGNED_TEXT_PATCH",
+  "boundary": {
+    "html_modified": false,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "main_project_pushed": false
+  }
+}
