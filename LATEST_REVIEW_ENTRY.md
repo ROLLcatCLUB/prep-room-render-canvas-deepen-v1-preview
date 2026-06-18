@@ -1,9 +1,12 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-FINAL_STATUS=PASS_MINIMAX_M3_THINKING_MODES_BENCHMARK
-DEFAULT_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
+REVIEW_STAGE=SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT
+FINAL_STATUS=PASS_HANDOFF_AND_REVIEW_MATERIALS_READY
+LATEST_COMPLETED_PRODUCT_STAGE=1013F_R2D_CONTENT_REVIEW_THEN_CASE_REFERENCE_ASSIMILATION
+LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
+NEXT_RECOMMENDED_STAGE=1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION
+DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
 MAIN_PROJECT_PUSHED=false
@@ -11,81 +14,111 @@ MAIN_PROJECT_PUSHED=false
 
 ## Summary
 
-This stage compares `MiniMax-M3` with different `thinking` settings.
+This entry is the transfer point for the next session. It consolidates the recent prep-notebook product baseline, Feishu schedule preview caveat, and MiniMax M3 benchmark line into one reviewable handoff.
 
-MiniMax OpenAI-compatible API behavior observed in this environment:
+Start with:
 
 ```text
-thinking.type=disabled -> accepted
-thinking.type=adaptive -> accepted
-thinking omitted -> thinking is on by default
-thinking.type=enabled -> rejected by live API
+SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md
+REVIEW_PACKAGE_MANIFEST.md
+README.md
 ```
 
-The live API rejection for `enabled` returned:
+## Accepted Product Baseline
 
 ```text
-invalid params, invalid thinking.type: "enabled" (allowed: adaptive, disabled)
+1013F_R2B2_LAYOUT_CLEANUP
+1013F_R2C_CLASSROOM_EVENT_DETAIL_POLISH
+1013F_R2D_CONTENT_REVIEW_THEN_CASE_REFERENCE_ASSIMILATION
 ```
 
-So for the current OpenAI-compatible path, the usable explicit modes are:
+R2D conclusion:
+
+- the current classroom-event content is suitable as a baseline for Grade 3 art review;
+- no mature same-topic local case was found for `1-2《色彩的感觉》`;
+- official Grade 3 material can be used for calibration;
+- local `渐变的魅力` and `走进青绿山水` should be treated as AI-generated or AI-assisted references, useful only for structure-level comparison.
+
+Recommended next product stage:
 
 ```text
-disabled
-adaptive
+1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION
 ```
 
-## Lesson Patch Case
-
-The most relevant case is `lesson_patch_reasoning`.
+## Feishu Schedule Caveat
 
 ```text
-disabled:
-  avg_latency = 18110.5ms
-  pass_rate = 1.0
-  avg_quality_score = 3
-  reasoning_content = none
-
-adaptive:
-  avg_latency = 18661.5ms
-  pass_rate = 1.0
-  avg_quality_score = 4
-  avg_reasoning_content_length = 735.5
-
-omitted_default_on:
-  avg_latency = 24569.5ms
-  pass_rate = 1.0
-  avg_quality_score = 4
-  avg_reasoning_content_length = 1235
+1013S_FEISHU_SCHEDULE_REAL_TIME_BINDING
+FINAL_STATUS=PASS_FEISHU_SNAPSHOT_SCHEDULE_REAL_TIME_BINDING_WITH_LIVE_CONFIG_CAVEAT
 ```
 
-Speed difference on the lesson-patch case:
+Live Feishu was checked first, but local credentials were not configured. The current preview uses the local full-dump schedule snapshot plus local school-period time mapping. Do not treat it as formal live Feishu provider integration.
+
+## MiniMax Model Baseline
+
+Completed stages:
 
 ```text
+1013M_MINIMAX_M3_CONNECTION
+1013N_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON
+1013O_MINIMAX_M3_VS_M27_HIGHSPEED_MULTI_ROUND_BENCHMARK
+1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
+```
+
+Current recommendation:
+
+```text
+default=MiniMax-M3 + thinking disabled
+deep_reasoning=MiniMax-M3 + thinking adaptive
+do_not_use=thinking.type enabled
+do_not_omit_thinking=true
+```
+
+Key measured result from 1013O:
+
+```text
+MiniMax-M3 average latency = 7544.4ms
+MiniMax-M2.7-highspeed average latency = 16669.4ms
+M3 faster by = 9125.0ms average
+M2.7-highspeed / M3 latency ratio = 2.21x
+M3 latency reduction vs M2.7-highspeed = 54.7%
+```
+
+Key measured result from 1013P on the lesson-patch case:
+
+```text
+disabled avg latency = 18110.5ms
+adaptive avg latency = 18661.5ms
+omitted default-on avg latency = 24569.5ms
 adaptive vs disabled = +551.0ms / +3.0%
 omitted default-on vs disabled = +6459.0ms / +35.7%
 ```
 
-## Recommendation
+The live OpenAI-compatible API accepted:
 
-Use `MiniMax-M3` with:
-
-```json
-{"thinking":{"type":"disabled"}}
+```text
+thinking.type=disabled
+thinking.type=adaptive
 ```
 
-for current prep-room structured JSON, field patches, UI candidates, and teacher-facing suggestions.
+and rejected:
 
-Use:
-
-```json
-{"thinking":{"type":"adaptive"}}
+```text
+thinking.type=enabled
 ```
-
-only when a stage explicitly needs deeper reasoning and can tolerate extra reasoning tokens and latency.
-
-Do not send `thinking.type=enabled` on the current OpenAI-compatible API path. Do not omit the `thinking` field accidentally, because omission turns thinking on by default and was slower in this sample.
 
 ## Boundary
 
-Provider/model calls were made only for benchmark comparison. No lesson text was formally applied. No database, memory, or Feishu write was performed. The main project was not committed or pushed.
+```text
+formal_apply_performed=false
+database_written=false
+memory_written=false
+feishu_written=false
+official_export_created=false
+official_archive_created=false
+entered_1013G=false
+main_project_committed=false
+main_project_pushed=false
+```
+
+Provider/model calls were made only for model benchmark comparison. No lesson text was formally applied. No database, memory, or Feishu write was performed. The main project was not committed or pushed.

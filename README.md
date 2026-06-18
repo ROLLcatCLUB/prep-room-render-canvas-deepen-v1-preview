@@ -2,12 +2,22 @@
 
 This package turns the v5 prep-room static preview into a render-canvas preview.
 
+## 2026-06-18 New Session Entry
+
+- Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
+- Current review entry: `LATEST_REVIEW_ENTRY.md`.
+- Current product next stage: `1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION`.
+- Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
+- Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
+- Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no 1013G unless explicitly requested.
+
 ## Files
 
 - `prep_room_render_canvas_deepen_v1.html`
 - `GPT_REVIEW_PROMPT.md`
 - `REVIEW_PACKAGE_MANIFEST.md`
 - `SESSION_HANDOFF_20260616_PREP_ROOM_RENDER_CANVAS.md`
+- `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`
 - `shiwei_concept_archive_v0.md`
 - `prep_notebook_design_v0.md`
 - `prep_notebook_right_drawer_source_inventory_v0.md`
