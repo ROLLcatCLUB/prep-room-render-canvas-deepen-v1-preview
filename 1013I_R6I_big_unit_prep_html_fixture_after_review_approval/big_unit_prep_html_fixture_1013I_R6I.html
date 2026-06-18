@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>大单元位置确认 · R6I 静态样张</title>
+  <style>
+    :root {
+      --ink: #20252b;
+      --muted: #66717d;
+      --line: #d9e0e2;
+      --paper: #f7f8f5;
+      --panel: #ffffff;
+      --green: #315f52;
+      --blue: #315d8c;
+      --amber: #9b6a20;
+      --red: #9b3c35;
+      --mint: #e7f2ed;
+      --sky: #e8f0f7;
+      --warn: #fff4d8;
+    }
+    * { box-sizing: border-box; }
+    html { overflow-x: hidden; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      letter-spacing: 0;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, p, li, span, strong, button, summary, div {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .page {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(240px, 300px) minmax(0, 1fr) minmax(220px, 280px);
+      gap: 16px;
+      padding: 18px;
+    }
+    .page > *, .panel, .main, .summary-tile, .timeline-node, .position-option, .action-button {
+      min-width: 0;
+    }
+    .header {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+    .header h1 { margin: 0; font-size: 22px; font-weight: 700; }
+    .header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .panel h2 { margin: 0 0 10px; font-size: 16px; }
+    .main {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+    .decision-banner {
+      border-left: 5px solid var(--amber);
+      background: var(--warn);
+      padding: 14px;
+      border-radius: 8px;
+    }
+    .decision-banner strong { display: block; font-size: 18px; margin-bottom: 6px; }
+    .decision-banner p { margin: 0; color: #5e4a21; line-height: 1.6; }
+    .check-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+    .check-item { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; }
+    .check-dot {
+      width: 22px; height: 22px; border-radius: 50%;
+      display: inline-grid; place-items: center;
+      background: var(--amber); color: #fff; font-weight: 700; font-size: 12px;
+    }
+    .check-item p { margin: 3px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .summary-tile { border: 1px solid var(--line); border-radius: 8px; padding: 12px; background: #fbfcfb; }
+    .tile-label { color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      min-height: 22px; padding: 2px 7px; border-radius: 999px;
+      font-size: 12px; margin-top: 8px; border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .badge-warn { background: #fff4d8; color: var(--amber); border-color: #ead49c; }
+    .badge-preview { background: var(--sky); color: var(--blue); border-color: #c9d8ea; }
+    .badge-danger { background: #fde9e7; color: var(--red); border-color: #efc1bc; }
+    .badge-neutral { background: #eef1f0; color: var(--muted); border-color: #d8dddc; }
+    .timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .timeline-node {
+      display: grid; grid-template-columns: 28px 1fr; gap: 10px;
+      border: 1px solid var(--line); border-radius: 8px; padding: 10px; background: #fbfcfb;
+    }
+    .node-index {
+      width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+      color: #fff; background: var(--green); font-size: 13px; font-weight: 700;
+    }
+    .timeline-node p { margin: 4px 0 6px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .field-preview { display: block; max-width: 100%; color: var(--blue); font-size: 12px; }
+    .position-grid { display: grid; gap: 8px; }
+    .position-option, .action-button {
+      width: 100%; min-height: 40px; border: 1px solid var(--line); border-radius: 8px;
+      background: #fff; color: var(--ink); display: flex; justify-content: space-between;
+      align-items: center; gap: 10px; padding: 8px 10px; text-align: left; font: inherit;
+    }
+    .action-button { background: #fbfcfb; }
+    .reference details { border: 1px solid var(--line); border-radius: 8px; padding: 10px; background: #fbfcfb; }
+    .reference summary { cursor: default; font-weight: 700; }
+    .reference p { color: var(--muted); line-height: 1.6; font-size: 13px; }
+    .anchor-meta { display: grid; gap: 8px; font-size: 13px; }
+    .anchor-meta span { color: var(--muted); }
+    @media (max-width: 960px) {
+      .page { display: block; width: 100%; max-width: 100vw; padding: 12px; }
+      .page > * { margin-bottom: 12px; }
+      .header { align-items: flex-start; flex-direction: column; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .timeline-node, .check-item { grid-template-columns: 1fr; }
+      .node-index, .check-dot { margin-bottom: 2px; }
+      .field-preview, .timeline-node p, .check-item p, .decision-banner p {
+        word-break: break-all;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" data-stage="1013I_R6I" data-static-html-only="true">
+    <header class="header">
+      <div>
+        <h1>大单元位置确认</h1>
+        <p>静态 HTML 样张 · 不接运行时 · 不写正文 · 不生成大单元</p>
+      </div>
+      <div>
+        <span class="badge badge-preview">静态样张</span>
+        <span class="badge badge-danger">不允许正式应用</span>
+      </div>
+    </header>
+
+    <aside class="panel">
+      <h2>大单元推进链</h2>
+      <ol class="timeline" aria-label="四个阶段候选轻时间线">
+        
+        <li class="timeline-node">
+          <span class="node-index">1</span>
+          <div>
+            <strong>先定单元骨架</strong>
+            <p>让老师先说清楚学生基础、单元主题、核心理解和贯穿问题。</p>
+            <span class="field-preview">这个单元围绕什么学 / 学生现在什么基础 / 这个单元最终想让学生明白什么</span>
+          </div>
+        </li>
+        
+
+        <li class="timeline-node">
+          <span class="node-index">2</span>
+          <div>
+            <strong>再定任务、目标和证据</strong>
+            <p>把学生最终要完成的任务、学完后的表现和可观察证据对齐。</p>
+            <span class="field-preview">学生最后要完成什么作品 / 展示 / 项目 / 学完学生会什么、懂什么、能表达什么 / 怎么判断学生完成得好不好</span>
+          </div>
+        </li>
+        
+
+        <li class="timeline-node">
+          <span class="node-index">3</span>
+          <div>
+            <strong>再排学习推进</strong>
+            <p>把单元拆成几个学习阶段，并为每个阶段配置任务、问题、活动和评价。</p>
+            <span class="field-preview">单元推进到哪一步 / 每一步学生要完成什么 / 这一阶段用什么问题引导学生思考</span>
+          </div>
+        </li>
+        
+
+        <li class="timeline-node">
+          <span class="node-index">4</span>
+          <div>
+            <strong>最后补支架和对齐</strong>
+            <p>补充情境、任务、资源、策略、学习单和评价支架，并检查学评一致。</p>
+            <span class="field-preview">用什么情境把学生带进去 / 帮学生把任务做清楚的步骤 / 给学生哪些图像、材料或工具帮助</span>
+          </div>
+        </li>
+        
+      </ol>
+    </aside>
+
+    <section class="main">
+      <div class="decision-banner">
+        <strong>为什么现在还不能直接生成单课</strong>
+        <p>现在还不能直接生成单课备课，需要先确认教材锚点、大单元推进链和这节课承担的任务。</p>
+      </div>
+
+      <section class="panel">
+        <h2>还差这些确认</h2>
+        <ul class="check-list">
+          
+        <li class="check-item">
+          <span class="check-dot">!</span>
+          <div>
+            <strong>确认教材版本</strong>
+            <p>缺教材版本时不能把候选锚点视为正式教材锚点。</p>
+          </div>
+        </li>
+        
+
+        <li class="check-item">
+          <span class="check-dot">!</span>
+          <div>
+            <strong>确认本课所在单元</strong>
+            <p>当前存在单元标题候选，必须由教师确认本课归属。</p>
+          </div>
+        </li>
+        
+
+        <li class="check-item">
+          <span class="check-dot">!</span>
+          <div>
+            <strong>确认课题编号和教材活动落点</strong>
+            <p>缺课题编号或活动页/活动任务时，不能进入正常单课候选生成。</p>
+          </div>
+        </li>
+        
+
+        <li class="check-item">
+          <span class="check-dot">!</span>
+          <div>
+            <strong>确认单元任务链</strong>
+            <p>候选链只来自字段抽取，不等于已确认的大单元设计。</p>
+          </div>
+        </li>
+        
+
+        <li class="check-item">
+          <span class="check-dot">!</span>
+          <div>
+            <strong>确认本课在单元中的位置</strong>
+            <p>本课是导入、探究、表现、展示评价还是综合推进，会改变候选卡范围。</p>
+          </div>
+        </li>
+        
+        </ul>
+      </section>
+
+      <section class="summary-grid" aria-label="候选摘要">
+        
+        <article class="summary-tile">
+          <div class="tile-label">教材锚点</div>
+          <strong>三年级 美术《色彩的感觉》</strong>
+          <span class="badge badge-warn">待教师确认</span>
+        </article>
+        
+
+        <article class="summary-tile">
+          <div class="tile-label">本课位置</div>
+          <strong>待老师选择这节课在单元中承担什么任务</strong>
+          <span class="badge badge-warn">待教师确认</span>
+        </article>
+        
+
+        <article class="summary-tile">
+          <div class="tile-label">大单元链</div>
+          <strong>4 个阶段候选，先轻量查看</strong>
+          <span class="badge badge-warn">待教师确认</span>
+        </article>
+        
+      </section>
+
+      <section class="panel">
+        <h2>本课承担什么任务</h2>
+        <div class="position-grid">
+          
+        <button class="position-option" type="button">
+          <span>单元开头：先激发兴趣、建立问题</span>
+          <span class="badge badge-neutral">待选</span>
+        </button>
+        
+
+        <button class="position-option" type="button">
+          <span>概念建立：先让学生弄清楚一个关键概念</span>
+          <span class="badge badge-neutral">待选</span>
+        </button>
+        
+
+        <button class="position-option" type="button">
+          <span>方法学习：重点学一种观察/表现方法</span>
+          <span class="badge badge-neutral">待选</span>
+        </button>
+        
+
+        <button class="position-option" type="button">
+          <span>创作表现：主要完成一件作品</span>
+          <span class="badge badge-neutral">待选</span>
+        </button>
+        
+
+        <button class="position-option" type="button">
+          <span>交流修改：主要展示、评价、调整作品</span>
+          <span class="badge badge-neutral">待选</span>
+        </button>
+        
+
+        <button class="position-option" type="button">
+          <span>展示反思：主要呈现成果、回看学习过程</span>
+          <span class="badge badge-neutral">待选</span>
+        </button>
+        
+
+        <button class="position-option" type="button">
+          <span>暂不确定：需要老师补充单元材料</span>
+          <span class="badge badge-neutral">待选</span>
+        </button>
+        
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>教师动作</h2>
+        <div class="position-grid">
+          
+        <button class="action-button" type="button">
+          <span>确认这个教材锚点</span>
+          <span class="badge badge-preview">仅预览确认</span>
+        </button>
+        
+
+        <button class="action-button" type="button">
+          <span>选择这节课承担的任务</span>
+          <span class="badge badge-preview">仅预览确认</span>
+        </button>
+        
+
+        <button class="action-button" type="button">
+          <span>这个单元链大方向可以</span>
+          <span class="badge badge-preview">仅预览确认</span>
+        </button>
+        
+
+        <button class="action-button" type="button">
+          <span>我还要补教材/单元材料</span>
+          <span class="badge badge-preview">仅预览确认</span>
+        </button>
+        
+
+        <button class="action-button" type="button">
+          <span>先按临时单课草稿继续</span>
+          <span class="badge badge-danger">降级草稿</span>
+        </button>
+        
+        </div>
+      </section>
+    </section>
+
+    <aside class="panel reference">
+      <h2>教材锚点候选</h2>
+      <div class="anchor-meta">
+        <strong>三年级 美术《色彩的感觉》</strong>
+        <span>候选单元：多变的色彩 / 色彩的碰撞</span>
+        <span>状态：待教师确认，不是正式教材锚点</span>
+      </div>
+      <hr />
+      <details>
+        <summary>只读依据和风险提醒</summary>
+        <p>官方材料只作为字段和表达参考，不覆盖课标、教材锚点、大单元链或教师确认。确认类动作只进入预览确认，不写正式数据。</p>
+      </details>
+    </aside>
+  </main>
+</body>
+</html>
