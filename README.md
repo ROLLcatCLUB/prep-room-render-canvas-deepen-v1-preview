@@ -1,5 +1,5 @@
 # PREP_ROOM_RENDER_CANVAS_DEEPEN_V1
 
-Current stage: `1013I_R6N_R5_BIG_UNIT_LESSON_CHAIN_AND_SINGLE_LESSON_INHERITANCE`
+Current stage: `1013I_R6N_R6_MATERIAL_PROMPT_FRONTLOADED_HORIZONTAL`
 
-R6N_R5 adds the lesson-task chain and single-lesson inheritance layer on top of the accepted R6N_R4 big-unit design content.
+R6N_R6 frontloads the material supplementation prompt while keeping the R6N_R5 content and lesson-task chain.
