@@ -1,0 +1,30 @@
+{
+  "stage": "1013N_MINIMAX_M3_VS_M27_HIGHSPEED_SPEED_NOTE",
+  "source": "1013N_result.json",
+  "final_status": "RECORDED_M3_VS_M27_HIGHSPEED_SPEED_DIFFERENCE",
+  "rows": [
+    {
+      "case_id": "json_probe",
+      "minimax_m3_latency_ms": 1012,
+      "minimax_m27_highspeed_latency_ms": 3893,
+      "m3_faster_by_ms": 2881,
+      "m27_highspeed_is_x_of_m3": 3.85,
+      "m3_latency_reduction_vs_m27_percent": 74.0,
+      "m27_slower_than_m3_percent": 284.7
+    },
+    {
+      "case_id": "lesson_reasoning_standard_daily",
+      "minimax_m3_latency_ms": 34776,
+      "minimax_m27_highspeed_latency_ms": 62293,
+      "m3_faster_by_ms": 27517,
+      "m27_highspeed_is_x_of_m3": 1.79,
+      "m3_latency_reduction_vs_m27_percent": 44.2,
+      "m27_slower_than_m3_percent": 79.1
+    }
+  ],
+  "plain_summary": [
+    "simple_json: M3 1012ms, M2.7-highspeed 3893ms; M3 faster by 2881ms, latency reduced by 74.0% versus M2.7-highspeed.",
+    "lesson_reasoning: M3 34776ms, M2.7-highspeed 62293ms; M3 faster by 27517ms, latency reduced by 44.2% versus M2.7-highspeed."
+  ],
+  "recommendation": "In this measured sample, M3 is faster and contract-stabler; keep M3 as the default prep-room reasoning model."
+}
