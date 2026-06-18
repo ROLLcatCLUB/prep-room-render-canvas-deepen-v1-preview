@@ -180,6 +180,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Overall speed delta: M3 was faster by `9125.0ms` on average; M2.7-highspeed took `2.21x` the M3 latency.
 - Final status: `PASS_MINIMAX_M3_VS_M27_HIGHSPEED_MULTI_ROUND_BENCHMARK`.
 - Recommendation remains: use `MiniMax-M3` as the default prep-room reasoning model; keep M2.7-highspeed as configurable fallback only.
+
+## 1013P MiniMax M3 Thinking Modes Benchmark
+
+- `scripts/run_minimax_m3_thinking_modes_benchmark.py` compares M3 `thinking` modes on simple JSON and compact lesson-patch calls.
+- Tested modes: `disabled`, `adaptive`, omitted default-on, and `enabled_probe`.
+- Current MiniMax OpenAI-compatible API accepted `disabled` and `adaptive`; it rejected `enabled_probe` with invalid params and allowed values `adaptive, disabled`.
+- On the lesson-patch case: `disabled=18110.5ms`, `adaptive=18661.5ms`, omitted default-on `24569.5ms`.
+- Adaptive added about `551ms` / `3.0%` latency versus disabled on the lesson-patch case, and produced more reasoning content with slightly higher heuristic quality.
+- Omitted default-on was slower and less explicit, so the system should not rely on omission.
+- Recommendation: default `thinking: {"type":"disabled"}` for structured JSON and teacher-facing suggestions; use `adaptive` only for explicit deep reasoning stages.
 - What failed: `standard_daily` started producing the expected structure but did not return parseable complete JSON; `open_class` and `research_lesson` timed out.
 - Conclusion: the model path is plausible, but the prompt is too heavy for stable four-case output. Next stage should be `1013E_R1_PROMPT_REPAIR`, with shorter schema, smaller source context, and mode-specific prompt compression.
 - Boundary: no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.

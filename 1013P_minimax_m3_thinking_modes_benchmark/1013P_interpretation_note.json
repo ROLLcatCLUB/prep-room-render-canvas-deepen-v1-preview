@@ -1,0 +1,39 @@
+{
+  "stage": "1013P_MINIMAX_M3_THINKING_MODES_INTERPRETATION_NOTE",
+  "official_openai_compatible_supported_thinking_types": [
+    "disabled",
+    "adaptive"
+  ],
+  "omitted_behavior": "thinking on by default on MiniMax OpenAI-compatible API",
+  "enabled_probe_result": "invalid_params; live API rejects thinking.type=enabled and says allowed values are adaptive, disabled",
+  "usable_modes_summary": {
+    "disabled": {
+      "lesson_patch_avg_latency_ms": 18110.5,
+      "lesson_patch_pass_rate": 1.0,
+      "lesson_patch_avg_quality_score": 3,
+      "reasoning_content": "none",
+      "best_for": "compact JSON, teacher-facing suggestions, low-latency UI response"
+    },
+    "adaptive": {
+      "lesson_patch_avg_latency_ms": 18661.5,
+      "lesson_patch_pass_rate": 1.0,
+      "lesson_patch_avg_quality_score": 4,
+      "avg_reasoning_content_length": 735.5,
+      "best_for": "harder classroom reasoning where extra reasoning trace is useful and small latency increase is acceptable"
+    },
+    "omitted_default_on": {
+      "lesson_patch_avg_latency_ms": 24569.5,
+      "lesson_patch_pass_rate": 1.0,
+      "lesson_patch_avg_quality_score": 4,
+      "avg_reasoning_content_length": 1235,
+      "risk": "slower and one simple-json timeout in this sample; avoid implicit default because behavior is less explicit"
+    }
+  },
+  "speed_delta_on_lesson_patch": {
+    "adaptive_minus_disabled_ms": 551.0,
+    "adaptive_vs_disabled_percent": 3.0,
+    "omitted_minus_disabled_ms": 6459.0,
+    "omitted_vs_disabled_percent": 35.7
+  },
+  "recommendation": "Default to disabled for current prep-room structured JSON. Use adaptive only for explicit deep reasoning stages. Do not send enabled on the current OpenAI-compatible API path. Do not omit thinking accidentally."
+}

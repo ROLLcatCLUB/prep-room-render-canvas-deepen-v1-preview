@@ -1,74 +1,90 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013O_MINIMAX_M3_VS_M27_HIGHSPEED_MULTI_ROUND_BENCHMARK
-FINAL_STATUS=PASS_MINIMAX_M3_VS_M27_HIGHSPEED_MULTI_ROUND_BENCHMARK
-WINNER_BY_AVERAGE_LATENCY=MiniMax-M3
-WINNER_BY_PASS_RATE=MiniMax-M3
+REVIEW_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
+FINAL_STATUS=PASS_MINIMAX_M3_THINKING_MODES_BENCHMARK
+DEFAULT_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
+DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
 MAIN_PROJECT_PUSHED=false
 ```
 
 ## Summary
 
-This stage reruns the MiniMax model comparison with multiple rounds and different task types, because the earlier two-case test was too small to fully trust.
+This stage compares `MiniMax-M3` with different `thinking` settings.
 
-Benchmark shape:
-
-- Models: `MiniMax-M3` vs `MiniMax-M2.7-highspeed`
-- Cases: exact JSON, short teacher suggestion, compact lesson patch
-- Repeats: 3 rounds per model per case
-- Total live model calls: 18
-
-## Overall Result
+MiniMax OpenAI-compatible API behavior observed in this environment:
 
 ```text
-MiniMax-M3 average latency = 7544.4ms
-MiniMax-M2.7-highspeed average latency = 16669.4ms
-M3 faster by = 9125.0ms average
-M2.7-highspeed / M3 latency ratio = 2.21x
-M3 latency reduction vs M2.7-highspeed = 54.7%
+thinking.type=disabled -> accepted
+thinking.type=adaptive -> accepted
+thinking omitted -> thinking is on by default
+thinking.type=enabled -> rejected by live API
 ```
 
-Both models passed all validation checks in this benchmark:
+The live API rejection for `enabled` returned:
 
 ```text
-MiniMax-M3 pass_rate = 1.0
-MiniMax-M2.7-highspeed pass_rate = 1.0
+invalid params, invalid thinking.type: "enabled" (allowed: adaptive, disabled)
 ```
 
-M3 still had a higher average teacher-quality score:
+So for the current OpenAI-compatible path, the usable explicit modes are:
 
 ```text
-MiniMax-M3 avg_quality_score = 2.44
-MiniMax-M2.7-highspeed avg_quality_score = 1.78
+disabled
+adaptive
 ```
 
-## By Case
+## Lesson Patch Case
+
+The most relevant case is `lesson_patch_reasoning`.
 
 ```text
-simple_json_exact:
-  M3 avg = 1216.7ms
-  M2.7-highspeed avg = 9647.0ms
-  M3 faster by 8430.3ms
-  M2.7-highspeed is 7.93x M3 latency
+disabled:
+  avg_latency = 18110.5ms
+  pass_rate = 1.0
+  avg_quality_score = 3
+  reasoning_content = none
 
-teacher_note_micro:
-  M3 avg = 7937.7ms
-  M2.7-highspeed avg = 15311.0ms
-  M3 faster by 7373.3ms
-  M2.7-highspeed is 1.93x M3 latency
+adaptive:
+  avg_latency = 18661.5ms
+  pass_rate = 1.0
+  avg_quality_score = 4
+  avg_reasoning_content_length = 735.5
 
-lesson_patch_micro:
-  M3 avg = 13479.0ms
-  M2.7-highspeed avg = 25050.3ms
-  M3 faster by 11571.3ms
-  M2.7-highspeed is 1.86x M3 latency
+omitted_default_on:
+  avg_latency = 24569.5ms
+  pass_rate = 1.0
+  avg_quality_score = 4
+  avg_reasoning_content_length = 1235
+```
+
+Speed difference on the lesson-patch case:
+
+```text
+adaptive vs disabled = +551.0ms / +3.0%
+omitted default-on vs disabled = +6459.0ms / +35.7%
 ```
 
 ## Recommendation
 
-Use `MiniMax-M3` as the default prep-room reasoning model. Keep `MiniMax-M2.7-highspeed` as a configurable fallback only, especially for future cost/availability routing.
+Use `MiniMax-M3` with:
+
+```json
+{"thinking":{"type":"disabled"}}
+```
+
+for current prep-room structured JSON, field patches, UI candidates, and teacher-facing suggestions.
+
+Use:
+
+```json
+{"thinking":{"type":"adaptive"}}
+```
+
+only when a stage explicitly needs deeper reasoning and can tolerate extra reasoning tokens and latency.
+
+Do not send `thinking.type=enabled` on the current OpenAI-compatible API path. Do not omit the `thinking` field accidentally, because omission turns thinking on by default and was slower in this sample.
 
 ## Boundary
 

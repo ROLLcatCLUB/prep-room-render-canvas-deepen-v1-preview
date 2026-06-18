@@ -1,0 +1,144 @@
+{
+  "by_mode": {
+    "disabled": {
+      "count": 4,
+      "avg_latency_ms": 10151.2,
+      "median_latency_ms": 10198.0,
+      "min_latency_ms": 1513,
+      "max_latency_ms": 18696,
+      "pass_rate": 0.75,
+      "avg_quality_score": 1.5,
+      "avg_reasoning_content_length": 0,
+      "avg_completion_tokens": 245.2
+    },
+    "adaptive": {
+      "count": 4,
+      "avg_latency_ms": 9899,
+      "median_latency_ms": 8559.0,
+      "min_latency_ms": 258,
+      "max_latency_ms": 22220,
+      "pass_rate": 0.75,
+      "avg_quality_score": 2,
+      "avg_reasoning_content_length": 389.8,
+      "avg_completion_tokens": 285.2
+    },
+    "omitted_default_on": {
+      "count": 4,
+      "avg_latency_ms": 42446.2,
+      "median_latency_ms": 24569.5,
+      "min_latency_ms": 631,
+      "max_latency_ms": 120015,
+      "pass_rate": 0.5,
+      "avg_quality_score": 2,
+      "avg_reasoning_content_length": 617.5,
+      "avg_completion_tokens": 381.8
+    },
+    "enabled_probe": {
+      "count": 4,
+      "avg_latency_ms": 1286.5,
+      "median_latency_ms": 473.5,
+      "min_latency_ms": 144,
+      "max_latency_ms": 4055,
+      "pass_rate": 0.0,
+      "avg_quality_score": 0,
+      "avg_reasoning_content_length": 0,
+      "avg_completion_tokens": 0
+    }
+  },
+  "by_case": {
+    "lesson_patch_reasoning": {
+      "disabled": {
+        "count": 2,
+        "avg_latency_ms": 18110.5,
+        "median_latency_ms": 18110.5,
+        "min_latency_ms": 17525,
+        "max_latency_ms": 18696,
+        "pass_rate": 1.0,
+        "avg_quality_score": 3,
+        "avg_reasoning_content_length": 0,
+        "avg_completion_tokens": 482.5
+      },
+      "adaptive": {
+        "count": 2,
+        "avg_latency_ms": 18661.5,
+        "median_latency_ms": 18661.5,
+        "min_latency_ms": 15103,
+        "max_latency_ms": 22220,
+        "pass_rate": 1.0,
+        "avg_quality_score": 4,
+        "avg_reasoning_content_length": 735.5,
+        "avg_completion_tokens": 553.5
+      },
+      "omitted_default_on": {
+        "count": 2,
+        "avg_latency_ms": 24569.5,
+        "median_latency_ms": 24569.5,
+        "min_latency_ms": 24285,
+        "max_latency_ms": 24854,
+        "pass_rate": 1.0,
+        "avg_quality_score": 4,
+        "avg_reasoning_content_length": 1235,
+        "avg_completion_tokens": 763.5
+      },
+      "enabled_probe": {
+        "count": 2,
+        "avg_latency_ms": 2099.5,
+        "median_latency_ms": 2099.5,
+        "min_latency_ms": 144,
+        "max_latency_ms": 4055,
+        "pass_rate": 0.0,
+        "avg_quality_score": 0,
+        "avg_reasoning_content_length": 0,
+        "avg_completion_tokens": 0
+      }
+    },
+    "simple_json": {
+      "disabled": {
+        "count": 2,
+        "avg_latency_ms": 2192,
+        "median_latency_ms": 2192.0,
+        "min_latency_ms": 1513,
+        "max_latency_ms": 2871,
+        "pass_rate": 0.5,
+        "avg_quality_score": 0,
+        "avg_reasoning_content_length": 0,
+        "avg_completion_tokens": 8
+      },
+      "adaptive": {
+        "count": 2,
+        "avg_latency_ms": 1136.5,
+        "median_latency_ms": 1136.5,
+        "min_latency_ms": 258,
+        "max_latency_ms": 2015,
+        "pass_rate": 0.5,
+        "avg_quality_score": 0,
+        "avg_reasoning_content_length": 44,
+        "avg_completion_tokens": 17
+      },
+      "omitted_default_on": {
+        "count": 2,
+        "avg_latency_ms": 60323,
+        "median_latency_ms": 60323.0,
+        "min_latency_ms": 631,
+        "max_latency_ms": 120015,
+        "pass_rate": 0.0,
+        "avg_quality_score": 0,
+        "avg_reasoning_content_length": 0,
+        "avg_completion_tokens": 0
+      },
+      "enabled_probe": {
+        "count": 2,
+        "avg_latency_ms": 473.5,
+        "median_latency_ms": 473.5,
+        "min_latency_ms": 189,
+        "max_latency_ms": 758,
+        "pass_rate": 0.0,
+        "avg_quality_score": 0,
+        "avg_reasoning_content_length": 0,
+        "avg_completion_tokens": 0
+      }
+    }
+  },
+  "fastest_mode": "enabled_probe",
+  "best_quality_mode": "adaptive"
+}

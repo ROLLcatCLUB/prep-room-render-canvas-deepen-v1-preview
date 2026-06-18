@@ -1,0 +1,660 @@
+[
+  {
+    "ok": false,
+    "round": 1,
+    "case_id": "simple_json",
+    "mode_id": "disabled",
+    "thinking_sent": {
+      "type": "disabled"
+    },
+    "latency_ms": 2871,
+    "finish_reason": null,
+    "content_length": 0,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {},
+    "evaluation": {
+      "pass": false,
+      "errors": [
+        "HTTPError",
+        "HTTP Error 529: Unknown Status Code"
+      ],
+      "quality_score": 0
+    },
+    "content_prefix": "",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": true,
+    "round": 1,
+    "case_id": "simple_json",
+    "mode_id": "adaptive",
+    "thinking_sent": {
+      "type": "adaptive"
+    },
+    "latency_ms": 2015,
+    "finish_reason": "stop",
+    "content_length": 50,
+    "reasoning_content_length": 88,
+    "reasoning_details_count": 1,
+    "usage": {
+      "total_tokens": 236,
+      "total_characters": 0,
+      "prompt_tokens": 202,
+      "completion_tokens": 34,
+      "prompt_tokens_details": {
+        "cached_tokens": 114
+      }
+    },
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "quality_score": 0,
+      "parsed": {
+        "ok": true,
+        "case": "simple_json",
+        "mode_check": "m3"
+      }
+    },
+    "content_prefix": "{\"ok\":true,\"case\":\"simple_json\",\"mode_check\":\"m3\"}",
+    "reasoning_prefix": "The user wants exactly a specific JSON string returned, with no markdown or explanation."
+  },
+  {
+    "ok": false,
+    "round": 1,
+    "case_id": "simple_json",
+    "mode_id": "omitted_default_on",
+    "thinking_sent": null,
+    "latency_ms": 120015,
+    "finish_reason": null,
+    "content_length": 0,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {},
+    "evaluation": {
+      "pass": false,
+      "errors": [
+        "URLError",
+        "<urlopen error _ssl.c:1063: The handshake operation timed out>"
+      ],
+      "quality_score": 0
+    },
+    "content_prefix": "",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": false,
+    "round": 1,
+    "case_id": "simple_json",
+    "mode_id": "enabled_probe",
+    "thinking_sent": {
+      "type": "enabled"
+    },
+    "latency_ms": 189,
+    "finish_reason": null,
+    "content_length": 0,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {},
+    "evaluation": {
+      "pass": false,
+      "errors": [
+        "ProviderError",
+        "Provider business error 2013: invalid params, invalid thinking.type: \"enabled\" (allowed: adaptive, disabled)"
+      ],
+      "quality_score": 0
+    },
+    "content_prefix": "",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": true,
+    "round": 1,
+    "case_id": "lesson_patch_reasoning",
+    "mode_id": "disabled",
+    "thinking_sent": {
+      "type": "disabled"
+    },
+    "latency_ms": 17525,
+    "finish_reason": "stop",
+    "content_length": 965,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {
+      "total_tokens": 881,
+      "total_characters": 0,
+      "prompt_tokens": 397,
+      "completion_tokens": 484,
+      "prompt_tokens_details": {
+        "cached_tokens": 114
+      }
+    },
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "quality_score": 3,
+      "parsed": {
+        "judgement": "学生对冷暖色辨析存在认知模糊，抽象讲解难以建立直觉，需要把抽象概念转化为可感知的身体与情境体验。",
+        "student_blocker": "无法将颜色与温度/情绪建立稳定联结，容易将冷暖色当作纯记忆任务而非感知判断。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "三年级学生对色彩有日常经验，但冷暖色仍停留在名词层面；通过生活物品（冰块/火焰图片）和体温联想（冷到手抖/暖到脸红）切入，符合具象到抽象的认知顺序。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "分三步：(1) 摸一摸——闭眼触摸冷水袋与暖水袋各10秒后立即看同一张橙色卡，说出第一感受；(2) 分一分——把8张色卡(红橙黄/蓝绿紫)按'想靠近'和'想后退'分成两堆并贴到黑板冷暖区；(3) 找一找——在教室和校服中找出冷暖色各3个，说说为什么。全程不出现'冷色/暖色'定义名词，先建立感受再命名。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "将抽象色环替换为左右分屏情境图：左屏火焰/夕阳/辣椒，右屏冰川/海水/薄荷；中部留空供学生拖拽色卡归类。"
+          },
+          {
+            "object": "handout",
+            "impact": "改为'我的冷暖色口袋书'：封面画身体轮廓(红/蓝两区)，内页4格记录'我摸到的温度'+对应色卡贴纸。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生分组归类的正确率与典型错例(如把绿色归入暖色),作为后续'中性色'教学的起点。"
+          }
+        ],
+        "risk_and_adjustment": "若学生在摸水袋环节后仍无法将感受迁移到颜色，立即切换为'看图选色'游戏:出示火焰图与冰山图各1张,提供6色色卡让学生直接选出'更像哪张图的伙伴',把语言通道转为图像匹配。",
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      }
+    },
+    "content_prefix": "{\"judgement\":\"学生对冷暖色辨析存在认知模糊，抽象讲解难以建立直觉，需要把抽象概念转化为可感知的身体与情境体验。\",\"student_blocker\":\"无法将颜色与温度/情绪建立稳定联结，容易将冷暖色当作纯记忆任务而非感知判断。\",\"patches\":[{\"target\":\"学情分析\",\"candidate\":\"三年级学生对色彩有日常经验，但冷暖色仍停留在名词层面；通过生活物品（冰块/火焰图片）和体温联想（冷到手抖/暖到脸红）切入，符合具象到抽象的认知顺序。\"},{\"target\":\"教学过程 · 探究环节\",\"candidate\":\"分三步：(1) 摸一摸——闭眼触摸冷水袋与暖水袋各10秒后立即看同一张橙色卡，说出第一感受；(2) 分一分——把8张色卡(红橙黄/蓝绿紫)按'想靠近'和'想后退'分成两堆并贴到黑板冷暖区；(3) 找一找——在教室和校服中找出冷暖色各3个，说说为什么。全程不出现'冷色/暖色'定义名词，先建立感受再命名。\"}],\"impact_scope\":[{\"object\":\"big_screen\",\"impact\":\"将抽象色环替换为左右分屏情境图：左屏火焰/夕阳/辣椒，右屏冰川/海水/薄荷；中部留空供学生拖拽色卡归类。\"},{\"object\":\"handout\",\"impact\":\"改为'我的冷暖色口袋书'：封面画身体轮廓(红/蓝两区)，内页4格记录'我摸到的温度'+对应色卡贴纸。\"},{\"object\":\"evidence_note\",\"impact\":\"记录学生分组归类的正确率与典型错例(如把绿色归入暖色),作为后续'中性色'教学的起点。\"}],\"risk_and_adjustment\":\"若学生在摸水袋环节后仍无法将感受迁移到颜色，立即切换为'看图选色'游戏:出示火焰图与冰山图各1张,提供6色色卡让学生直接选出'更像哪张图的伙伴',把语言通道转为图像匹配。\",\"boundary_flags\":{\"teacher_review_required\":true,\"formal_apply_performed\":false,\"database_written\":false,\"memory_written\":false,\"feishu_written\":false}}",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": true,
+    "round": 1,
+    "case_id": "lesson_patch_reasoning",
+    "mode_id": "adaptive",
+    "thinking_sent": {
+      "type": "adaptive"
+    },
+    "latency_ms": 15103,
+    "finish_reason": "stop",
+    "content_length": 778,
+    "reasoning_content_length": 565,
+    "reasoning_details_count": 1,
+    "usage": {
+      "total_tokens": 883,
+      "total_characters": 0,
+      "prompt_tokens": 410,
+      "completion_tokens": 473,
+      "prompt_tokens_details": {
+        "cached_tokens": 114
+      }
+    },
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "quality_score": 4,
+      "parsed": {
+        "judgement": "冷暖色概念对三年级偏抽象，需用具体感受切入而非定义先行。",
+        "student_blocker": "学生把冷暖色当成‘颜色名称’记忆，缺乏与身体感受的联结。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "学生对色彩有日常经验，但冷暖色停留在‘红黄是暖、蓝绿是冷’的记忆层面，缺少与温度、情绪、身体反应的对应体验。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "改为三步直观探究：①摸冰块与暖手宝，说出身体感受；②同时看冷暖两组色卡，问‘哪个更像冰块，哪个像阳光’，连线匹配；③播放火焰与海浪视频片段各30秒，快速抢答冷暖并说明理由。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "准备冰块/暖手宝实物特写镜头与火焰、海浪短视频切换，配合色卡对比画面。"
+          },
+          {
+            "object": "handout",
+            "impact": "改为左列冷色图片（冰、湖水、森林）、右列暖色图片（太阳、火焰、秋叶），中间留连线区，附一句话感受记录框。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生能否用身体感受词（如冷/热/凉/烫）描述颜色，而非仅说出颜色名称。"
+          }
+        ],
+        "risk_and_adjustment": "实物准备需提前到位；若视频播放卡顿，改为教师口述+手势模拟温度差异。",
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      }
+    },
+    "content_prefix": "{\"judgement\":\"冷暖色概念对三年级偏抽象，需用具体感受切入而非定义先行。\",\"student_blocker\":\"学生把冷暖色当成‘颜色名称’记忆，缺乏与身体感受的联结。\",\"patches\":[{\"target\":\"学情分析\",\"candidate\":\"学生对色彩有日常经验，但冷暖色停留在‘红黄是暖、蓝绿是冷’的记忆层面，缺少与温度、情绪、身体反应的对应体验。\"},{\"target\":\"教学过程 · 探究环节\",\"candidate\":\"改为三步直观探究：①摸冰块与暖手宝，说出身体感受；②同时看冷暖两组色卡，问‘哪个更像冰块，哪个像阳光’，连线匹配；③播放火焰与海浪视频片段各30秒，快速抢答冷暖并说明理由。\"}],\"impact_scope\":[{\"object\":\"big_screen\",\"impact\":\"准备冰块/暖手宝实物特写镜头与火焰、海浪短视频切换，配合色卡对比画面。\"},{\"object\":\"handout\",\"impact\":\"改为左列冷色图片（冰、湖水、森林）、右列暖色图片（太阳、火焰、秋叶），中间留连线区，附一句话感受记录框。\"},{\"object\":\"evidence_note\",\"impact\":\"记录学生能否用身体感受词（如冷/热/凉/烫）描述颜色，而非仅说出颜色名称。\"}],\"risk_and_adjustment\":\"实物准备需提前到位；若视频播放卡顿，改为教师口述+手势模拟温度差异。\",\"boundary_flags\":{\"teacher_review_required\":true,\"formal_apply_performed\":false,\"database_written\":false,\"memory_written\":false,\"feishu_written\":false}}",
+    "reasoning_prefix": "The user wants me to create compact patch candidates for a Grade 3 art lesson on \"色彩的感觉\" (Color feelings - warm/cool colors), 40 minutes. The teacher's input indicates students don't understand warm/cool colors well and needs more intuitive design.\n\nI need to return strict JSON with:\n- judgement\n- student_blocker\n- patches array (with 学情分析 and 探究环节 targets)\n- impact_scope (big_screen, handout, evidence_note)\n- risk_and_adjustment\n- boundary_flags\n\nRules:\n- No markdown\n- Short, teacher-readable s"
+  },
+  {
+    "ok": true,
+    "round": 1,
+    "case_id": "lesson_patch_reasoning",
+    "mode_id": "omitted_default_on",
+    "thinking_sent": null,
+    "latency_ms": 24285,
+    "finish_reason": "stop",
+    "content_length": 794,
+    "reasoning_content_length": 1243,
+    "reasoning_details_count": 1,
+    "usage": {
+      "total_tokens": 1189,
+      "total_characters": 0,
+      "prompt_tokens": 410,
+      "completion_tokens": 779,
+      "prompt_tokens_details": {
+        "cached_tokens": 396
+      }
+    },
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "quality_score": 3,
+      "parsed": {
+        "judgement": "冷暖色概念偏抽象,缺生活化锚点,需要从体感切入",
+        "student_blocker": "学生难把\"温度\"和\"颜色\"建立直觉联结,易停留在字面",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "三年级学生色彩经验以辨识为主,冷暖色仅听过名称,未建立身体感受与色彩的对应,需借助触觉和季节场景做具象支撑"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "改为\"摸一摸再分一分\"三步:①闭眼摸冰块和暖水袋,说出身体感觉;②睁开眼看蓝卡和红卡,把感受对应到颜色;③小组把教室图片(海水/火焰/草地/辣椒)按\"像摸到冷还是暖\"贴到色卡墙上,说理由"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "投屏展示冰块、火焰、海水、辣椒四张对比图,配\"凉/暖\"体感词提示"
+          },
+          {
+            "object": "handout",
+            "impact": "印发\"色彩温度任务单\",上半页印冷暖色块,下半页留空给学生贴物品贴纸并画表情"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生在贴图环节的归类正确率,以及能否用\"因为像……所以冷/暖\"完整表达"
+          }
+        ],
+        "risk_and_adjustment": "若仍有学生把蓝色归为暖色,补一个\"穿衣服\"情境:夏天穿浅蓝白、冬天穿红橙,作为第二次锚定,不再增加新概念",
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      }
+    },
+    "content_prefix": "{\"judgement\":\"冷暖色概念偏抽象,缺生活化锚点,需要从体感切入\",\"student_blocker\":\"学生难把\\\"温度\\\"和\\\"颜色\\\"建立直觉联结,易停留在字面\",\"patches\":[{\"target\":\"学情分析\",\"candidate\":\"三年级学生色彩经验以辨识为主,冷暖色仅听过名称,未建立身体感受与色彩的对应,需借助触觉和季节场景做具象支撑\"},{\"target\":\"教学过程 · 探究环节\",\"candidate\":\"改为\\\"摸一摸再分一分\\\"三步:①闭眼摸冰块和暖水袋,说出身体感觉;②睁开眼看蓝卡和红卡,把感受对应到颜色;③小组把教室图片(海水/火焰/草地/辣椒)按\\\"像摸到冷还是暖\\\"贴到色卡墙上,说理由\"}],\"impact_scope\":[{\"object\":\"big_screen\",\"impact\":\"投屏展示冰块、火焰、海水、辣椒四张对比图,配\\\"凉/暖\\\"体感词提示\"},{\"object\":\"handout\",\"impact\":\"印发\\\"色彩温度任务单\\\",上半页印冷暖色块,下半页留空给学生贴物品贴纸并画表情\"},{\"object\":\"evidence_note\",\"impact\":\"记录学生在贴图环节的归类正确率,以及能否用\\\"因为像……所以冷/暖\\\"完整表达\"}],\"risk_and_adjustment\":\"若仍有学生把蓝色归为暖色,补一个\\\"穿衣服\\\"情境:夏天穿浅蓝白、冬天穿红橙,作为第二次锚定,不再增加新概念\",\"boundary_flags\":{\"teacher_review_required\":true,\"formal_apply_performed\":false,\"database_written\":false,\"memory_written\":false,\"feishu_written\":false}}",
+    "reasoning_prefix": "The user wants me to return strict JSON only, with no markdown formatting. The task is to create compact patch candidates for a Grade 3 art lesson about color temperature (冷暖色) feeling, 40 minutes. The teacher notes that students don't understand warm/cool colors well, so the design needs to be more intuitive.\n\nLet me construct the JSON with:\n- judgement: brief assessment\n- student_blocker: the main blocker\n- patches: array with two items (学情分析 and 教学过程·探究环节)\n- impact_scope: impact on big_screen"
+  },
+  {
+    "ok": false,
+    "round": 1,
+    "case_id": "lesson_patch_reasoning",
+    "mode_id": "enabled_probe",
+    "thinking_sent": {
+      "type": "enabled"
+    },
+    "latency_ms": 4055,
+    "finish_reason": null,
+    "content_length": 0,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {},
+    "evaluation": {
+      "pass": false,
+      "errors": [
+        "ProviderError",
+        "Provider business error 2013: invalid params, invalid thinking.type: \"enabled\" (allowed: adaptive, disabled)"
+      ],
+      "quality_score": 0
+    },
+    "content_prefix": "",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": true,
+    "round": 2,
+    "case_id": "simple_json",
+    "mode_id": "disabled",
+    "thinking_sent": {
+      "type": "disabled"
+    },
+    "latency_ms": 1513,
+    "finish_reason": "stop",
+    "content_length": 50,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {
+      "total_tokens": 205,
+      "total_characters": 0,
+      "prompt_tokens": 189,
+      "completion_tokens": 16,
+      "prompt_tokens_details": {
+        "cached_tokens": 114
+      }
+    },
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "quality_score": 0,
+      "parsed": {
+        "ok": true,
+        "case": "simple_json",
+        "mode_check": "m3"
+      }
+    },
+    "content_prefix": "{\"ok\":true,\"case\":\"simple_json\",\"mode_check\":\"m3\"}",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": false,
+    "round": 2,
+    "case_id": "simple_json",
+    "mode_id": "adaptive",
+    "thinking_sent": {
+      "type": "adaptive"
+    },
+    "latency_ms": 258,
+    "finish_reason": null,
+    "content_length": 0,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {},
+    "evaluation": {
+      "pass": false,
+      "errors": [
+        "HTTPError",
+        "HTTP Error 529: Unknown Status Code"
+      ],
+      "quality_score": 0
+    },
+    "content_prefix": "",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": false,
+    "round": 2,
+    "case_id": "simple_json",
+    "mode_id": "omitted_default_on",
+    "thinking_sent": null,
+    "latency_ms": 631,
+    "finish_reason": null,
+    "content_length": 0,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {},
+    "evaluation": {
+      "pass": false,
+      "errors": [
+        "HTTPError",
+        "HTTP Error 529: Unknown Status Code"
+      ],
+      "quality_score": 0
+    },
+    "content_prefix": "",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": false,
+    "round": 2,
+    "case_id": "simple_json",
+    "mode_id": "enabled_probe",
+    "thinking_sent": {
+      "type": "enabled"
+    },
+    "latency_ms": 758,
+    "finish_reason": null,
+    "content_length": 0,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {},
+    "evaluation": {
+      "pass": false,
+      "errors": [
+        "ProviderError",
+        "Provider business error 2013: invalid params, invalid thinking.type: \"enabled\" (allowed: adaptive, disabled)"
+      ],
+      "quality_score": 0
+    },
+    "content_prefix": "",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": true,
+    "round": 2,
+    "case_id": "lesson_patch_reasoning",
+    "mode_id": "disabled",
+    "thinking_sent": {
+      "type": "disabled"
+    },
+    "latency_ms": 18696,
+    "finish_reason": "stop",
+    "content_length": 987,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {
+      "total_tokens": 878,
+      "total_characters": 0,
+      "prompt_tokens": 397,
+      "completion_tokens": 481,
+      "prompt_tokens_details": {
+        "cached_tokens": 383
+      }
+    },
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "quality_score": 3,
+      "parsed": {
+        "judgement": "学生对冷暖色的概念停留在抽象层面，需要通过具体感知经验建立色彩温度感。",
+        "student_blocker": "缺乏将色彩与身体感受（冷/暖）建立联结的直觉经验，对温度感的联想较薄弱。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "三年级学生以具象思维为主，能辨认红、蓝、绿等颜色，但对冷暖色的感知停留在记忆背诵阶段；约三分之一学生无法主动用'冷''暖'形容颜色。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "1) 生活导入：出示冰块与暖手宝图片，问'摸到哪个会让你觉得冷/暖'；2) 颜色分拣游戏：给每组发红橙黄蓝绿紫卡纸，让学生在30秒内分到'冷组'和'暖组'并说明理由（如'红色像太阳'）；3) 身体感知对比：让学生在红色卡纸和蓝色卡纸前闭眼30秒，说出哪个让自己更想靠近火堆、哪个像泳池；4) 出示冬天雪景与夏天沙滩图各一张，提问'哪张让你想加衣服，哪张想喝冰水'，引导学生发现同一物体在不同主色下的温度联想不同。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "循环展示冰块/暖手宝、冬景/夏景两组对比图，每张停留不少于40秒保证观察时间。"
+          },
+          {
+            "object": "handout",
+            "impact": "增加'颜色温度贴纸表'，学生在冷色/暖色格中贴上对应图卡，并在底部画出让自己觉得'最冷'和'最暖'的一种颜色。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生分拣准确率与举例质量，标注仍用'好看/不好看'而非'冷/暖'形容颜色的学生名单。"
+          }
+        ],
+        "risk_and_adjustment": "若30秒闭眼感知环节学生注意力分散，可改为'摸一摸'彩色卡纸（常温但视觉诱导），降低对专注力的依赖；若冷暖色分拣分歧大，先不纠错，让持不同意见的学生互说理由再归纳。",
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      }
+    },
+    "content_prefix": "{\"judgement\":\"学生对冷暖色的概念停留在抽象层面，需要通过具体感知经验建立色彩温度感。\",\"student_blocker\":\"缺乏将色彩与身体感受（冷/暖）建立联结的直觉经验，对温度感的联想较薄弱。\",\"patches\":[{\"target\":\"学情分析\",\"candidate\":\"三年级学生以具象思维为主，能辨认红、蓝、绿等颜色，但对冷暖色的感知停留在记忆背诵阶段；约三分之一学生无法主动用'冷''暖'形容颜色。\"},{\"target\":\"教学过程 · 探究环节\",\"candidate\":\"1) 生活导入：出示冰块与暖手宝图片，问'摸到哪个会让你觉得冷/暖'；2) 颜色分拣游戏：给每组发红橙黄蓝绿紫卡纸，让学生在30秒内分到'冷组'和'暖组'并说明理由（如'红色像太阳'）；3) 身体感知对比：让学生在红色卡纸和蓝色卡纸前闭眼30秒，说出哪个让自己更想靠近火堆、哪个像泳池；4) 出示冬天雪景与夏天沙滩图各一张，提问'哪张让你想加衣服，哪张想喝冰水'，引导学生发现同一物体在不同主色下的温度联想不同。\"}],\"impact_scope\":[{\"object\":\"big_screen\",\"impact\":\"循环展示冰块/暖手宝、冬景/夏景两组对比图，每张停留不少于40秒保证观察时间。\"},{\"object\":\"handout\",\"impact\":\"增加'颜色温度贴纸表'，学生在冷色/暖色格中贴上对应图卡，并在底部画出让自己觉得'最冷'和'最暖'的一种颜色。\"},{\"object\":\"evidence_note\",\"impact\":\"记录学生分拣准确率与举例质量，标注仍用'好看/不好看'而非'冷/暖'形容颜色的学生名单。\"}],\"risk_and_adjustment\":\"若30秒闭眼感知环节学生注意力分散，可改为'摸一摸'彩色卡纸（常温但视觉诱导），降低对专注力的依赖；若冷暖色分拣分歧大，先不纠错，让持不同意见的学生互说理由再归纳。\",\"boundary_flags\":{\"teacher_review_required\":true,\"formal_apply_performed\":false,\"database_written\":false,\"memory_written\":false,\"feishu_written\":false}}",
+    "reasoning_prefix": ""
+  },
+  {
+    "ok": true,
+    "round": 2,
+    "case_id": "lesson_patch_reasoning",
+    "mode_id": "adaptive",
+    "thinking_sent": {
+      "type": "adaptive"
+    },
+    "latency_ms": 22220,
+    "finish_reason": "stop",
+    "content_length": 874,
+    "reasoning_content_length": 906,
+    "reasoning_details_count": 1,
+    "usage": {
+      "total_tokens": 1044,
+      "total_characters": 0,
+      "prompt_tokens": 410,
+      "completion_tokens": 634,
+      "prompt_tokens_details": {
+        "cached_tokens": 396
+      }
+    },
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "quality_score": 4,
+      "parsed": {
+        "judgement": "学生卡在对'冷暖'的抽象联想上，需要先把色彩翻译成身体能直接感知的冷热。",
+        "student_blocker": "把'冷暖色'当成背名词，没和自身体感挂钩。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "三年级以具象思维为主，'冷暖色'对他们是抽象标签；多数学生会把红橙只联想到火焰、黄只联想到香蕉，未形成温度通感。需补一条'生活冷热场景→色相'的桥梁经验。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "改成三步感官探究：①摸冰块与暖手包 30 秒，说身体感觉；②同时看红橙卡与蓝紫卡，请学生挑一个'更像手里那个'的颜色并贴到黑板两侧；③只露色块、藏色名，问'哪边像刚喝了冰水/哪边像刚晒太阳'，引出冷暖词。理论讲解压缩到 5 分钟内。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "投屏主图为并排两组生活照（冰西瓜/热汤面、雪山/篝火），点击切换色卡覆盖，强化'色—场景—体感'对应。"
+          },
+          {
+            "object": "handout",
+            "impact": "学习单上半页印冰块和暖炉两幅简图，下方各留一行贴冷/暖色块（提供红橙黄蓝紫剪贴条），降低书写门槛。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生贴色准确率与口述理由（如'这个像冬天'），作为'能否区分冷暖'的课堂证据。"
+          }
+        ],
+        "risk_and_adjustment": "部分学生会认为绿、紫不属于任何一边，准备'中性色'兜底页，避免被强行归类；贴色环节若两极分化明显，改为同桌互检再展示。",
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      }
+    },
+    "content_prefix": "{\"judgement\":\"学生卡在对'冷暖'的抽象联想上，需要先把色彩翻译成身体能直接感知的冷热。\",\"student_blocker\":\"把'冷暖色'当成背名词，没和自身体感挂钩。\",\"patches\":[{\"target\":\"学情分析\",\"candidate\":\"三年级以具象思维为主，'冷暖色'对他们是抽象标签；多数学生会把红橙只联想到火焰、黄只联想到香蕉，未形成温度通感。需补一条'生活冷热场景→色相'的桥梁经验。\"},{\"target\":\"教学过程 · 探究环节\",\"candidate\":\"改成三步感官探究：①摸冰块与暖手包 30 秒，说身体感觉；②同时看红橙卡与蓝紫卡，请学生挑一个'更像手里那个'的颜色并贴到黑板两侧；③只露色块、藏色名，问'哪边像刚喝了冰水/哪边像刚晒太阳'，引出冷暖词。理论讲解压缩到 5 分钟内。\"}],\"impact_scope\":[{\"object\":\"big_screen\",\"impact\":\"投屏主图为并排两组生活照（冰西瓜/热汤面、雪山/篝火），点击切换色卡覆盖，强化'色—场景—体感'对应。\"},{\"object\":\"handout\",\"impact\":\"学习单上半页印冰块和暖炉两幅简图，下方各留一行贴冷/暖色块（提供红橙黄蓝紫剪贴条），降低书写门槛。\"},{\"object\":\"evidence_note\",\"impact\":\"记录学生贴色准确率与口述理由（如'这个像冬天'），作为'能否区分冷暖'的课堂证据。\"}],\"risk_and_adjustment\":\"部分学生会认为绿、紫不属于任何一边，准备'中性色'兜底页，避免被强行归类；贴色环节若两极分化明显，改为同桌互检再展示。\",\"boundary_flags\":{\"teacher_review_required\":true,\"formal_apply_performed\":false,\"database_written\":false,\"memory_written\":false,\"feishu_written\":false}}",
+    "reasoning_prefix": "The user wants compact patch candidates for a Grade 3 art lesson about color temperature (warm/cool colors). The teacher notes that students don't understand warm/cool colors well, so the design needs to be more intuitive.\n\nI need to return strict JSON only, no markdown. The output must include 学情分析 and 探究环节.\n\nLet me craft concise, teacher-readable patches:\n\n- judgement: brief assessment\n- student_blocker: what's blocking students\n- patches: two entries for 学情分析 and 教学过程·探究环节\n- impact_scope: thr"
+  },
+  {
+    "ok": true,
+    "round": 2,
+    "case_id": "lesson_patch_reasoning",
+    "mode_id": "omitted_default_on",
+    "thinking_sent": null,
+    "latency_ms": 24854,
+    "finish_reason": "stop",
+    "content_length": 786,
+    "reasoning_content_length": 1227,
+    "reasoning_details_count": 1,
+    "usage": {
+      "total_tokens": 1158,
+      "total_characters": 0,
+      "prompt_tokens": 410,
+      "completion_tokens": 748,
+      "prompt_tokens_details": {
+        "cached_tokens": 396
+      }
+    },
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "quality_score": 5,
+      "parsed": {
+        "judgement": "学生对冷暖色的理解仍停留在字面，缺乏与生活温度感受的直接联结，探究环节的直观性不足。",
+        "student_blocker": "三年级学生抽象概念迁移弱，难以将'冷/暖'字面义转化为色彩感受的具象判断。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "多数学生对冷暖色仅停留在词语层面，未建立色彩与身体温度感受的联结；需要以可触摸、可观看的生活物品作为理解起点。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "用'冷热摸一摸'导入：先让学生闭眼触摸冰袋和暖手宝，说出感受；再出示红橙黄蓝绿五张色卡，请学生把刚才的感觉'贴'到对应色卡上，最后出示火焰/海水图片验证。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "主屏改为左右对比画面：左暖色+火焰夕阳，右冷色+冰雪海水，弱化抽象色轮。"
+          },
+          {
+            "object": "handout",
+            "impact": "色卡配对练习改为生活物品连线题，如烤红薯—橙、雪花—浅蓝，贴合生活经验。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生在摸一摸环节的色卡选择与口头理由，作为冷暖色理解的初始证据。"
+          }
+        ],
+        "risk_and_adjustment": "若摸一摸后仍有混淆，可临时加入'冬天穿什么颜色衣服'作二次锚点，不超出 40 分钟总时长。",
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      }
+    },
+    "content_prefix": "{\"judgement\":\"学生对冷暖色的理解仍停留在字面，缺乏与生活温度感受的直接联结，探究环节的直观性不足。\",\"student_blocker\":\"三年级学生抽象概念迁移弱，难以将'冷/暖'字面义转化为色彩感受的具象判断。\",\"patches\":[{\"target\":\"学情分析\",\"candidate\":\"多数学生对冷暖色仅停留在词语层面，未建立色彩与身体温度感受的联结；需要以可触摸、可观看的生活物品作为理解起点。\"},{\"target\":\"教学过程 · 探究环节\",\"candidate\":\"用'冷热摸一摸'导入：先让学生闭眼触摸冰袋和暖手宝，说出感受；再出示红橙黄蓝绿五张色卡，请学生把刚才的感觉'贴'到对应色卡上，最后出示火焰/海水图片验证。\"}],\"impact_scope\":[{\"object\":\"big_screen\",\"impact\":\"主屏改为左右对比画面：左暖色+火焰夕阳，右冷色+冰雪海水，弱化抽象色轮。\"},{\"object\":\"handout\",\"impact\":\"色卡配对练习改为生活物品连线题，如烤红薯—橙、雪花—浅蓝，贴合生活经验。\"},{\"object\":\"evidence_note\",\"impact\":\"记录学生在摸一摸环节的色卡选择与口头理由，作为冷暖色理解的初始证据。\"}],\"risk_and_adjustment\":\"若摸一摸后仍有混淆，可临时加入'冬天穿什么颜色衣服'作二次锚点，不超出 40 分钟总时长。\",\"boundary_flags\":{\"teacher_review_required\":true,\"formal_apply_performed\":false,\"database_written\":false,\"memory_written\":false,\"feishu_written\":false}}",
+    "reasoning_prefix": "The user wants me to create compact patch candidates for a Grade 3 art lesson on \"色彩的感觉\" (Color feelings), 40 minutes. The teacher's input indicates students don't understand warm/cool colors well and need something more intuitive.\n\nThe output must be strict JSON, no markdown, following the return_shape provided. I need to fill in:\n- judgement\n- student_blocker\n- patches (with target and candidate for each)\n- impact_scope (for big_screen, handout, evidence_note)\n- risk_and_adjustment\n- boundary_"
+  },
+  {
+    "ok": false,
+    "round": 2,
+    "case_id": "lesson_patch_reasoning",
+    "mode_id": "enabled_probe",
+    "thinking_sent": {
+      "type": "enabled"
+    },
+    "latency_ms": 144,
+    "finish_reason": null,
+    "content_length": 0,
+    "reasoning_content_length": 0,
+    "reasoning_details_count": 0,
+    "usage": {},
+    "evaluation": {
+      "pass": false,
+      "errors": [
+        "ProviderError",
+        "Provider business error 2013: invalid params, invalid thinking.type: \"enabled\" (allowed: adaptive, disabled)"
+      ],
+      "quality_score": 0
+    },
+    "content_prefix": "",
+    "reasoning_prefix": ""
+  }
+]
