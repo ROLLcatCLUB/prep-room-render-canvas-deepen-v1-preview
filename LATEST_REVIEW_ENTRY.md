@@ -1,8 +1,8 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE
-FINAL_STATUS=PASS_1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE
+REVIEW_STAGE=1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
+FINAL_STATUS=PASS_1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
 LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 LATEST_COMPLETED_CONCEPT_NODE=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 LATEST_COMPLETED_REFERENCE_LAYER=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
@@ -15,10 +15,11 @@ LATEST_COMPLETED_PAGE_FIXTURE=1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_AP
 LATEST_COMPLETED_FIXTURE_REVIEW=1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
 LATEST_COMPLETED_HTML_FIXTURE=1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL
 LATEST_COMPLETED_ORIGINAL_PAGE_INTEGRATION_REVIEW=1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE
+LATEST_COMPLETED_ORIGINAL_PAGE_STATIC_INTEGRATION=1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
 USER_REVIEW_DECISION=APPROVE_WITH_CONSTRAINTS
-INHERITS_FROM=1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL
+INHERITS_FROM=1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_FIXTURE_AFTER_REVIEW_GATE
+NEXT_RECOMMENDED_STAGE=1013I_R6L_BIG_UNIT_PREP_STATIC_INTEGRATION_PATCH_IF_NEEDED
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
@@ -33,6 +34,10 @@ ORIGINAL_PAGE_STYLE_ALIGNMENT_PASS=true
 BIG_UNIT_ENTRY_PLACED_INSIDE_PREP_ROOM=true
 TOP_LEVEL_NAV_NOT_MODIFIED=true
 WRITEBACK_PREVIEW_ONLY=true
+ORIGINAL_PAGE_STATIC_COPY_CREATED=true
+BIG_UNIT_SURFACE_INTEGRATED_INSIDE_PREP_ROOM=true
+UNIT_TITLE_CLICK_ENTRY_CREATED=true
+LESSON_BUTTONS_RETURN_TO_SINGLE_LESSON=true
 RUNTIME_CONNECTED=false
 UI_IMPLEMENTATION_STARTED=false
 HTML_UI_IMPLEMENTATION_ALLOWED=false
@@ -67,6 +72,7 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
 -> 1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL
 -> 1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE
+-> 1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
 ```
 
 R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
@@ -99,6 +105,8 @@ R6I translates the reviewed JSON fixture into a static HTML fixture only. It ren
 
 R6J upgrades the review from a standalone visual check to an original-page integration review gate. It reviews the existing `prep_room_render_canvas_deepen_v1.html` shell and concludes that the big-unit position confirmation surface must be placed inside the prep-room flow, not as a new top-level space or unrelated page. It defines style-alignment, entry placement, main-area insertion, and preview/writeback semantics for the next static integration fixture.
 
+R6K directly creates an original-page static integration copy. In the prep notebook directory, unit titles such as `第一单元 多变的色彩` become big-unit entry buttons, while lesson rows such as `1-2 色彩的感觉` remain single-lesson prep entries. The integrated surface keeps the original prep-room shell, bottom 小教 input, preview-layer status, and right-side readonly reference area.
+
 Start with:
 
 ```text
@@ -119,6 +127,14 @@ scripts/validate_1013I_R6I_big_unit_prep_html_fixture_after_review_approval.py
 1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/main_area_insertion_plan_1013I_R6J.json
 1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/writeback_preview_semantics_1013I_R6J.json
 scripts/validate_1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate.py
+1013I_R6K_big_unit_prep_original_page_static_integration_run/1013I_R6K_report.md
+1013I_R6K_big_unit_prep_original_page_static_integration_run/1013I_R6K_result.json
+1013I_R6K_big_unit_prep_original_page_static_integration_run/prep_room_render_canvas_deepen_v1_R6K_integrated_static.html
+1013I_R6K_big_unit_prep_original_page_static_integration_run/integration_manifest_1013I_R6K.json
+1013I_R6K_big_unit_prep_original_page_static_integration_run/visual_smoke_1013I_R6K.json
+1013I_R6K_big_unit_prep_original_page_static_integration_run/ui_smoke_screenshot_1013I_R6K_desktop.png
+1013I_R6K_big_unit_prep_original_page_static_integration_run/ui_smoke_screenshot_1013I_R6K_mobile.png
+scripts/validate_1013I_R6K_big_unit_prep_original_page_static_integration_run.py
 1013I_R6H_big_unit_prep_page_fixture_review_before_html/1013I_R6H_report.md
 1013I_R6H_big_unit_prep_page_fixture_review_before_html/1013I_R6H_result.json
 1013I_R6H_big_unit_prep_page_fixture_review_before_html/fixture_review_1013I_R6H.json
@@ -398,6 +414,33 @@ runtime_connected=false
 
 R6J concludes that the big-unit confirmation surface should be inserted as a prep-room internal upstream confirmation layer. It must not become a top-level navigation item beside `教 / 备 / 观 / 作 / 知 / 档`, and confirmation actions must remain preview/writeback semantics only.
 
+## R6K Original Page Static Integration Result
+
+```text
+original_page_static_copy_created=true
+big_unit_surface_integrated_inside_prep_room=true
+unit_title_click_entry_created=true
+lesson_buttons_return_to_single_lesson=true
+top_level_nav_not_modified=true
+decision_first_layout_visible=true
+blocking_reason_visible=true
+missing_confirmations_visible=true
+preview_only_badges_visible=true
+degraded_draft_label_visible=true
+big_unit_chain_rendered_as_light_timeline=true
+lesson_position_teacher_labels_visible=true
+right_reference_area_collapsed_or_low_weight=true
+runtime_connected=false
+provider_called=false
+model_called=false
+formal_apply_performed=false
+database_written=false
+memory_written=false
+feishu_written=false
+```
+
+R6K is the first original-page static integration run. It creates a copy named `prep_room_render_canvas_deepen_v1_R6K_integrated_static.html`; the formal original page remains unchanged.
+
 ## R5_R1 Review Repo Validator Path Fix
 
 ```text
@@ -469,10 +512,10 @@ fixture_only=true
 ## Next Recommended Stage
 
 ```text
-1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_FIXTURE_AFTER_REVIEW_GATE
+1013I_R6L_BIG_UNIT_PREP_STATIC_INTEGRATION_PATCH_IF_NEEDED
 ```
 
-If opened, R6K may create only a static original-page integration fixture after this gate. It must reuse the original prep-room shell, keep the big-unit entry inside the prep-room flow, avoid top-level navigation changes, and preserve preview/writeback semantics. It must not connect runtime, call provider/model, write database/memory/Feishu, generate unit/lesson bodies, or perform formal UI implementation.
+If opened, R6L should only patch obvious static integration issues found in R6K screenshots or user review. It must not add new conceptual gates, connect runtime, call provider/model, write database/memory/Feishu, generate unit/lesson bodies, or perform formal UI implementation.
 
 ## Boundary
 

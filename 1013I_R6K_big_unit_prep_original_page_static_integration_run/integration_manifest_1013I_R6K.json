@@ -1,0 +1,28 @@
+{
+  "stage": "1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN",
+  "html": "prep_room_render_canvas_deepen_v1_R6K_integrated_static.html",
+  "source_page": "prep_room_render_canvas_deepen_v1.html",
+  "static_copy_only": true,
+  "entry": "unit_title_click_inside_prep_notebook_tree",
+  "recommended_default_open_unit": "nb-unit-color",
+  "visual_smoke": {
+    "screenshot_smoke_pass": true,
+    "screenshot_error": null,
+    "screenshots": [
+      {
+        "viewport": "desktop",
+        "path": "ui_smoke_screenshot_1013I_R6K_desktop.png",
+        "width": 1440,
+        "height": 1100,
+        "bytes": 524093
+      },
+      {
+        "viewport": "mobile",
+        "path": "ui_smoke_screenshot_1013I_R6K_mobile.png",
+        "width": 390,
+        "height": 1100,
+        "bytes": 166498
+      }
+    ]
+  }
+}

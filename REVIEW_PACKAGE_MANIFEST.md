@@ -52,6 +52,7 @@ The handoff is the preferred entry for a new session. It records:
 - fixture review before HTML translation, with action-label and degraded-draft constraints.
 - static HTML fixture from the reviewed JSON page fixture, with desktop/mobile screenshot smoke before visual review.
 - original prep-room page integration review gate for the big-unit HTML fixture.
+- original prep-room static integration run with the big-unit entry connected inside the prep notebook directory.
 
 ## Current Product Baseline
 
@@ -80,17 +81,18 @@ Accepted recent prep-notebook stages:
 1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
 1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL
 1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE
+1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
 ```
 
 Recommended next product stage:
 
 ```text
-1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_FIXTURE_AFTER_REVIEW_GATE
+1013I_R6L_BIG_UNIT_PREP_STATIC_INTEGRATION_PATCH_IF_NEEDED
 ```
 
-Curriculum standard is now defined as the upstream constraint layer for later big-unit and single-lesson work. R6D adds the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, `lesson_position_judgement`, and teacher confirmation must exist before normal candidate-card generation. R6E adds a backend readonly extraction adapter that turns local official unit field contracts into candidates for teacher review. R6F proposes page structure for user review only. R6G creates a JSON page fixture after user approval, applying decision-first layout, light timeline, and teacher-facing lesson-position labels. R6H reviews the fixture before HTML and allows only a static HTML fixture under label constraints. R6I translates that reviewed JSON fixture into a static HTML review artifact with decision-first layout, preview-only badges, degraded-draft label, collapsed references, and a light big-unit timeline. R6J reviews that fixture against the original prep-room page and requires the big-unit entry to stay inside the prep-room flow, not in the top-level navigation. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, big-unit chains, or teacher confirmation.
+Curriculum standard is now defined as the upstream constraint layer for later big-unit and single-lesson work. R6D adds the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, `lesson_position_judgement`, and teacher confirmation must exist before normal candidate-card generation. R6E adds a backend readonly extraction adapter that turns local official unit field contracts into candidates for teacher review. R6F proposes page structure for user review only. R6G creates a JSON page fixture after user approval, applying decision-first layout, light timeline, and teacher-facing lesson-position labels. R6H reviews the fixture before HTML and allows only a static HTML fixture under label constraints. R6I translates that reviewed JSON fixture into a static HTML review artifact with decision-first layout, preview-only badges, degraded-draft label, collapsed references, and a light big-unit timeline. R6J reviews that fixture against the original prep-room page and requires the big-unit entry to stay inside the prep-room flow, not in the top-level navigation. R6K directly creates an original-page static integration copy: unit titles in the prep notebook directory become big-unit entry buttons, while lesson rows remain single-lesson prep entries. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, big-unit chains, or teacher confirmation.
 
-R7 visual review remains paused. Runtime/UI implementation is still not allowed; R6K may only create a static original-page integration fixture after the R6J gate.
+R7 visual review remains paused. Runtime/UI implementation is still not allowed; R6L may only patch obvious static integration issues if needed.
 
 Do not enter:
 
@@ -161,6 +163,7 @@ do_not_omit_thinking=true
 1013I_R6H_big_unit_prep_page_fixture_review_before_html/
 1013I_R6I_big_unit_prep_html_fixture_after_review_approval/
 1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/
+1013I_R6K_big_unit_prep_original_page_static_integration_run/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -208,6 +211,7 @@ source_delta_1013I_R6G/
 source_delta_1013I_R6H/
 source_delta_1013I_R6I/
 source_delta_1013I_R6J/
+source_delta_1013I_R6K/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -333,6 +337,14 @@ scripts/validate_1013I_R6I_big_unit_prep_html_fixture_after_review_approval.py
 1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/main_area_insertion_plan_1013I_R6J.json
 1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/writeback_preview_semantics_1013I_R6J.json
 scripts/validate_1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate.py
+1013I_R6K_big_unit_prep_original_page_static_integration_run/1013I_R6K_report.md
+1013I_R6K_big_unit_prep_original_page_static_integration_run/1013I_R6K_result.json
+1013I_R6K_big_unit_prep_original_page_static_integration_run/prep_room_render_canvas_deepen_v1_R6K_integrated_static.html
+1013I_R6K_big_unit_prep_original_page_static_integration_run/integration_manifest_1013I_R6K.json
+1013I_R6K_big_unit_prep_original_page_static_integration_run/visual_smoke_1013I_R6K.json
+1013I_R6K_big_unit_prep_original_page_static_integration_run/ui_smoke_screenshot_1013I_R6K_desktop.png
+1013I_R6K_big_unit_prep_original_page_static_integration_run/ui_smoke_screenshot_1013I_R6K_mobile.png
+scripts/validate_1013I_R6K_big_unit_prep_original_page_static_integration_run.py
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -421,6 +433,7 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - 1013I_R6H reviews the R6G fixture before HTML translation. It requires preview-only badges for confirmation actions, a visible degraded label for temporary single-lesson draft continuation, collapsed official references, and light timeline rendering.
 - 1013I_R6I creates a static HTML fixture only. It does not modify `prep_room_render_canvas_deepen_v1.html`, connect runtime, enter R7, generate unit/lesson bodies, or write database/memory/Feishu.
 - 1013I_R6J reviews R6I against the original prep-room page. It upgrades the next gate from ordinary visual review to original-page integration review: top-level navigation stays unchanged, the big-unit entry belongs inside the prep-room flow, main-area insertion is planned, and writeback remains preview-only.
-- R6K should create only a static original-page integration fixture after this review gate; it must not connect runtime, implement formal UI, write lesson/unit bodies, or perform formal apply.
+- 1013I_R6K creates the static original-page integration copy. `第一单元 多变的色彩` and other unit titles become internal big-unit entries; `1-1/1-2/1-3` lesson rows remain single-lesson prep entries. The formal original page is not modified.
+- R6L should only patch obvious R6K static integration issues if needed; it must not add another conceptual gate, connect runtime, implement formal UI, write lesson/unit bodies, or perform formal apply.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.

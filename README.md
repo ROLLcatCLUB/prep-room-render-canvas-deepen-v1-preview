@@ -18,8 +18,9 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - Current completed fixture review: `1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML`.
 - Current completed HTML fixture: `1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL`.
 - Current completed original-page integration review: `1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE`.
-- Current product next stage: `1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_FIXTURE_AFTER_REVIEW_GATE`.
-- Page fixture status: static HTML fixture reviewed against the original prep-room page; runtime/UI implementation is still not allowed.
+- Current completed original-page static integration: `1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN`.
+- Current product next stage: `1013I_R6L_BIG_UNIT_PREP_STATIC_INTEGRATION_PATCH_IF_NEEDED`.
+- Page fixture status: original prep-room static copy created with big-unit entry integrated into the prep notebook directory; runtime/UI implementation is still not allowed.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -67,6 +68,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - 1013I_R6H reviews the JSON page fixture before HTML translation. It allows a future static HTML fixture only with preview-only action labels, degraded draft labeling, collapsed references, and light timeline constraints.
 - 1013I_R6I creates a static HTML fixture from the reviewed JSON fixture. It includes desktop/mobile smoke screenshots and does not modify the main prep-room HTML or connect runtime.
 - 1013I_R6J reviews the R6I static fixture against the original prep-room page. It requires the big-unit entry to stay inside the prep-room flow, keeps top-level navigation unchanged, and preserves preview/writeback-only semantics before any static integration fixture.
+- 1013I_R6K directly creates the original-page static integration copy. Unit titles in the prep notebook directory become big-unit entry buttons, while lesson rows remain single-lesson prep entries. The formal original page remains unchanged.
 
 ## Reused Project Patterns
 
