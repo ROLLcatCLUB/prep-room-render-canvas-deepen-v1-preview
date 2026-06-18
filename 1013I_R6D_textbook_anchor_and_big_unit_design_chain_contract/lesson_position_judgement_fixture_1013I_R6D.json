@@ -1,0 +1,61 @@
+{
+  "fixture_id": "lesson_position_judgement_fixture_1013I_R6D",
+  "stage": "1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT",
+  "lesson_position_judgement": {
+    "lesson_id": "lesson_color_feeling_pending",
+    "lesson_title": "色彩的感觉",
+    "lesson_position_in_unit": "pending_teacher_confirm",
+    "current_lesson_role": "unknown_pending_teacher_confirm",
+    "prior_lesson_connection": "pending_big_unit_chain",
+    "next_lesson_connection": "pending_big_unit_chain",
+    "current_lesson_unit_task": null,
+    "current_lesson_evidence": [],
+    "allowed_candidate_scope": [
+      "ask_for_textbook_anchor",
+      "ask_for_big_unit_position",
+      "build_preview_only_question_cards"
+    ],
+    "blocked_candidate_scope": [
+      "generate_full_lesson_plan",
+      "generate_big_unit_design_body",
+      "formal_apply_to_lesson_body",
+      "treat_official_case_as_textbook_anchor"
+    ],
+    "position_status": "missing_lesson_position",
+    "teacher_confirmation_status": "pending_teacher_confirm"
+  },
+  "teacher_confirm_unit_position_required": true,
+  "candidate_cards_blocked_until_confirmation": true,
+  "single_lesson_generation_performed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false,
+    "speaking_style": "calm_professional",
+    "assistant_tone": "teacher_work_partner",
+    "response_style": "concise_contextual"
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep",
+  "contract_only": true,
+  "fixture_only": true,
+  "preview_only": true,
+  "actual_textbook_parsing_performed": false,
+  "actual_big_unit_material_parsing_performed": false,
+  "big_unit_generation_performed": false,
+  "product_runtime_called": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "official_export_created": false,
+  "official_archive_created": false,
+  "main_project_pushed": false
+}

@@ -1,16 +1,17 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
-FINAL_STATUS=PASS_1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
+REVIEW_STAGE=1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
+FINAL_STATUS=PASS_1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
 LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 LATEST_COMPLETED_CONCEPT_NODE=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 LATEST_COMPLETED_REFERENCE_LAYER=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
 LATEST_COMPLETED_PACKAGING_FIX=1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
 LATEST_COMPLETED_CONTROL_LAYER=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
-INHERITS_FROM=1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
+LATEST_COMPLETED_TEXTBOOK_AND_UNIT_CHAIN=1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
+INHERITS_FROM=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
+NEXT_RECOMMENDED_STAGE=1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
@@ -39,6 +40,7 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
 -> 1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
 -> 1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
+-> 1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
 ```
 
 R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
@@ -57,11 +59,21 @@ R6B_R1 does not change R6B product semantics. It aligns `REVIEW_PACKAGE_MANIFEST
 
 R6C defines `curriculum_standard_control_layer` as the upstream constraint layer. It keeps the formal object name `lesson_standard_map`, requires structured mapping cards or explicit missing markers, and blocks normal self-prep when structured standard references are missing. It does not parse real curriculum-standard full text and does not create official curriculum claims.
 
+R6D defines `lesson_textbook_map`, `unit_package`, and `lesson_position_judgement` as the control chain after curriculum-standard mapping. It requires a textbook anchor, big-unit design-chain context, lesson-position judgement, and teacher confirmation before normal candidate-card generation. Missing anchor or missing lesson position can only enter a clearly labeled degraded draft mode. R6D does not parse real textbook or big-unit materials and does not generate a big-unit body or single-lesson plan.
+
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
+1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/1013I_R6D_report.md
+1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/1013I_R6D_result.json
+1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/textbook_anchor_and_big_unit_design_chain_contract_1013I_R6D.md
+1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/textbook_anchor_and_big_unit_design_chain_contract_1013I_R6D.json
+1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/textbook_anchor_fixture_1013I_R6D.json
+1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/big_unit_design_chain_fixture_1013I_R6D.json
+1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/lesson_position_judgement_fixture_1013I_R6D.json
+scripts/validate_1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract.py
 1013I_R6C_curriculum_standard_control_layer_contract/1013I_R6C_report.md
 1013I_R6C_curriculum_standard_control_layer_contract/1013I_R6C_result.json
 1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_layer_contract_1013I_R6C.md
@@ -159,6 +171,36 @@ big_unit_generation_performed=false
 single_lesson_generation_performed=false
 ```
 
+## R6D Textbook Anchor And Big Unit Chain Result
+
+```text
+textbook_anchor_required=true
+lesson_textbook_map_object_kept=true
+unit_package_object_kept=true
+big_unit_design_chain_defined=true
+lesson_position_judgement_required=true
+teacher_confirm_unit_position_required=true
+single_lesson_generation_blocked_without_textbook_anchor=true
+single_lesson_generation_blocked_without_lesson_position=true
+official_cases_remain_reference_only=true
+r7_visual_review_paused=true
+big_unit_generation_performed=false
+single_lesson_generation_performed=false
+```
+
+Revised control chain:
+
+```text
+teacher_input
+-> curriculum_standard_control_layer
+-> textbook_anchor_check
+-> big_unit_design_chain_check
+-> lesson_position_judgement
+-> teacher_confirm_unit_position
+-> self_prep_review_cards
+-> preview_only
+```
+
 ## R5_R1 Review Repo Validator Path Fix
 
 ```text
@@ -230,10 +272,10 @@ fixture_only=true
 ## Next Recommended Stage
 
 ```text
-1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
+1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
 ```
 
-If opened, the next stage should define the curriculum-standard control layer as the upstream constraint layer. Official cases remain reference samples and must not override curriculum standards, textbook anchors, or teacher confirmation.
+If opened, the next stage should read official unit materials as extraction fixtures only. It may extract textbook-anchor and big-unit-chain field candidates for teacher review, but must not generate a big-unit body, single-lesson plan, official curriculum claim, runtime payload, or render-surface visual review.
 
 ## Boundary
 

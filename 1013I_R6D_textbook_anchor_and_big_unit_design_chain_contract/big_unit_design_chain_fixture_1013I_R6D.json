@@ -1,0 +1,69 @@
+{
+  "fixture_id": "big_unit_design_chain_fixture_1013I_R6D",
+  "stage": "1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT",
+  "unit_package": {
+    "unit_package_id": "unit_package_1013I_R6D_color_pending",
+    "unit_title": "多变的色彩",
+    "unit_big_idea": null,
+    "unit_essential_question": null,
+    "unit_learning_goals": [],
+    "unit_performance_task": null,
+    "unit_task_chain": [],
+    "unit_assessment_focus": [],
+    "unit_learning_evidence_chain": [],
+    "lesson_sequence": [
+      {
+        "lesson_code": "1-1",
+        "lesson_title": "渐变的魅力",
+        "role": "unknown_pending_teacher_confirm"
+      },
+      {
+        "lesson_code": "1-2",
+        "lesson_title": "色彩的感觉",
+        "role": "unknown_pending_teacher_confirm"
+      },
+      {
+        "lesson_code": "1-3",
+        "lesson_title": "渐变的节奏",
+        "role": "unknown_pending_teacher_confirm"
+      }
+    ],
+    "source_material_refs": [],
+    "chain_status": "missing_big_unit_chain",
+    "teacher_confirmation_status": "pending_teacher_confirm"
+  },
+  "big_unit_design_chain_defined": true,
+  "big_unit_generation_performed": false,
+  "teacher_visible_message": "当前只定义大单元链对象和缺失状态，不生成大单元设计正文。后续需要读取官方单元资料或教师输入后再形成候选链。",
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false,
+    "speaking_style": "calm_professional",
+    "assistant_tone": "teacher_work_partner",
+    "response_style": "concise_contextual"
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep",
+  "contract_only": true,
+  "fixture_only": true,
+  "preview_only": true,
+  "actual_textbook_parsing_performed": false,
+  "actual_big_unit_material_parsing_performed": false,
+  "single_lesson_generation_performed": false,
+  "product_runtime_called": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "official_export_created": false,
+  "official_archive_created": false,
+  "main_project_pushed": false
+}
