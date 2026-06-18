@@ -7,8 +7,9 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
 - Current completed product stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA`.
+- Current completed concept node: `1013I_R5B_BIG_UNIT_CONTEXT_NODE_RECORD`.
 - Current completed packaging fix: `1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX`.
-- Current product next stage: `1013I_R7_TEACHER_SELF_PREP_RENDER_SURFACE_VISUAL_REVIEW`.
+- Current product next stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA_WITH_BIG_UNIT_PLACEHOLDER`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -44,6 +45,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - 1013I creates a teacher self-prep input schema, request envelope, sufficiency assessment, and fixture preview only; it does not call a provider/model.
 - 1013I_R5_R1 only fixes the GitHub review repo validator path and fresh-clone reproducibility entrypoint; it does not change R5 business semantics.
 - 1013I_R6 creates a teacher-readable render surface alpha from the R4/R5 fixture chain; it remains data-only and does not modify the main HTML body.
+- 1013I_R5B records the missing big-unit context node. Future self-prep must check the lesson's position in the larger unit before candidate card generation.
 
 ## Reused Project Patterns
 
@@ -241,6 +243,17 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Next stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA`.
 - Boundary: review-package reproducibility fix only; R5 business semantics unchanged, no provider/model call, no formal apply, no lesson body/HTML/database/memory/Feishu/export/archive write.
 
+## 1013I_R5B Big Unit Context Node Record
+
+- `scripts/validate_1013I_R5B_big_unit_context_node_record.py` records the upstream big-unit context node for teacher self-prep.
+- Output directory: `1013I_R5B_big_unit_context_node_record/`.
+- Required files were generated: `big_unit_context_contract_1013I_R5B.json`, `big_unit_context_fixture_1013I_R5B.json`, `1013I_R5B_result.json`, and `big_unit_context_node_report_1013I_R5B.md`.
+- Source-delta record: `source_delta_1013I_R5B/scripts/validate_1013I_R5B_big_unit_context_node_record.py`.
+- Final status: `PASS_1013I_R5B_BIG_UNIT_CONTEXT_NODE_RECORD`.
+- Next stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA_WITH_BIG_UNIT_PLACEHOLDER`.
+- Revised self-prep chain: `teacher_input -> big_unit_context_check -> lesson_position_judgement -> review_cards -> preview_only`.
+- Boundary: contract-only and fixture-only; no real official material parsing, no provider/model call, no formal apply, no lesson body/HTML/database/memory/Feishu/export/archive write.
+
 ## 1013I_R6 Teacher Self Prep Render Surface Alpha
 
 - `scripts/validate_1013I_R6_teacher_self_prep_render_surface_alpha.py` turns the R4 page fixture and R5 smoke outputs into a teacher-readable render surface alpha.
@@ -248,7 +261,7 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Required files were generated: `teacher_self_prep_render_surface_alpha_1013I_R6.json`, `teacher_self_prep_render_surface_snapshot_1013I_R6.json`, `1013I_R6_result.json`, and `1013I_R6_report.md`.
 - Source-delta record: `source_delta_1013I_R6/scripts/validate_1013I_R6_teacher_self_prep_render_surface_alpha.py`.
 - Final status: `PASS_1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA`.
-- Next stage: `1013I_R7_TEACHER_SELF_PREP_RENDER_SURFACE_VISUAL_REVIEW`.
+- Next stage is superseded by the R5B concept correction: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA_WITH_BIG_UNIT_PLACEHOLDER`.
 - Render surface includes page title, teacher input summary, 3 review cards, 3 current preview diff items, action area, revision queue, rejected items, and boundary notice.
 - Boundary: render-surface alpha only; no provider/model call, no formal apply, no lesson body/HTML/database/memory/Feishu/export/archive write.
 

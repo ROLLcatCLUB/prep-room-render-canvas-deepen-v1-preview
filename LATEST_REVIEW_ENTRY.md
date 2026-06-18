@@ -1,13 +1,14 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
-FINAL_STATUS=PASS_1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
+REVIEW_STAGE=1013I_R5B_BIG_UNIT_CONTEXT_NODE_RECORD
+FINAL_STATUS=PASS_1013I_R5B_BIG_UNIT_CONTEXT_NODE_RECORD
 LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
+LATEST_COMPLETED_CONCEPT_NODE=1013I_R5B_BIG_UNIT_CONTEXT_NODE_RECORD
 LATEST_COMPLETED_PACKAGING_FIX=1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
 INHERITS_FROM=1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R7_TEACHER_SELF_PREP_RENDER_SURFACE_VISUAL_REVIEW
+NEXT_RECOMMENDED_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA_WITH_BIG_UNIT_PLACEHOLDER
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
@@ -29,6 +30,7 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS
 -> 1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
 -> 1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
+-> 1013I_R5B_BIG_UNIT_CONTEXT_NODE_RECORD
 -> 1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
 -> 1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 ```
@@ -39,13 +41,20 @@ R5 proves the page state is not confusing: `current_primary_state=accepted_to_pr
 
 R5_R1 does not change the R5 product payload. It fixes the GitHub review repo reproducibility entrypoint by adding the expected top-level validator path and making the validator support both local workspace and review-repo root layouts.
 
-R6 turns the R4/R5 fixture and smoke outputs into a teacher-readable render surface alpha. It is still fixture-only and preview-only: it does not execute actions, call a provider/model, modify HTML, write lesson body, or enter formal apply.
+R5B records a missing upstream concept node: teacher self-prep must not jump directly from single-lesson input to candidate cards. It must reserve a big-unit context check and lesson-position judgement before candidate-card generation.
+
+The already-created R6 render surface remains a valid fixture-only render-surface alpha, but the next recommended stage is now a conservative R6 revision with a big-unit placeholder. That revision should expose `大单元位置：待确认 / 已识别 / 暂按单课处理` instead of pretending the unit-context node does not exist.
 
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
+1013I_R5B_big_unit_context_node_record/big_unit_context_node_report_1013I_R5B.md
+1013I_R5B_big_unit_context_node_record/1013I_R5B_result.json
+1013I_R5B_big_unit_context_node_record/big_unit_context_contract_1013I_R5B.json
+1013I_R5B_big_unit_context_node_record/big_unit_context_fixture_1013I_R5B.json
+scripts/validate_1013I_R5B_big_unit_context_node_record.py
 1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_report.md
 1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_result.json
 1013I_R6_teacher_self_prep_render_surface_alpha/teacher_self_prep_render_surface_alpha_1013I_R6.json
@@ -58,6 +67,32 @@ scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
 1013I_R5_teacher_self_prep_alpha_smoke/1013I_R5_result.json
 1013I_R5_teacher_self_prep_alpha_smoke/self_prep_alpha_smoke_trace_1013I_R5.json
 1013I_R5_teacher_self_prep_alpha_smoke/self_prep_alpha_smoke_state_snapshot_1013I_R5.json
+```
+
+## R5B Big Unit Context Node Result
+
+```text
+big_unit_context_contract_created=true
+big_unit_context_fixture_created=true
+required_fields_present=true
+current_lesson_role_enum_present=true
+chain_revision_present=true
+future_official_unit_material_extraction_hook=true
+actual_material_parsing_performed=false
+r6_requires_big_unit_placeholder=true
+contract_only=true
+fixture_only=true
+preview_only=true
+```
+
+Revised self-prep chain:
+
+```text
+teacher_input
+-> big_unit_context_check
+-> lesson_position_judgement
+-> review_cards
+-> preview_only
 ```
 
 ## R5_R1 Review Repo Validator Path Fix
@@ -131,10 +166,10 @@ fixture_only=true
 ## Next Recommended Stage
 
 ```text
-1013I_R7_TEACHER_SELF_PREP_RENDER_SURFACE_VISUAL_REVIEW
+1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA_WITH_BIG_UNIT_PLACEHOLDER
 ```
 
-If opened, the next stage should visually review the R6 render surface alpha before any broader UI implementation. It should remain no-provider/no-model/no-formal-apply unless explicitly changed.
+If opened, the next stage should revise the render surface alpha to include a visible big-unit position placeholder before any broader UI implementation. It should remain no-provider/no-model/no-formal-apply unless explicitly changed.
 
 ## Boundary
 

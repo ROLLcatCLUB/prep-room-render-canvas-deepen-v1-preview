@@ -118,6 +118,7 @@ do_not_omit_thinking=true
 1013I_R2_teacher_review_card_surface_from_seed/
 1013I_R3_self_prep_preview_chain_from_review_cards/
 1013I_R4_minimal_self_prep_page_fixture/
+1013I_R5B_big_unit_context_node_record/
 1013I_R5_teacher_self_prep_alpha_smoke/
 1013I_R5_R1_review_repo_validator_path_fix/
 1013I_R6_teacher_self_prep_render_surface_alpha/
@@ -153,6 +154,7 @@ source_delta_1013I_R1/
 source_delta_1013I_R2/
 source_delta_1013I_R3/
 source_delta_1013I_R4/
+source_delta_1013I_R5B/
 source_delta_1013I_R5/
 source_delta_1013I_R5_R1/
 source_delta_1013I_R6/
@@ -191,6 +193,11 @@ SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md
 1013I_R2_teacher_review_card_surface_from_seed/1013I_R2_report.md
 1013I_R3_self_prep_preview_chain_from_review_cards/1013I_R3_report.md
 1013I_R4_minimal_self_prep_page_fixture/1013I_R4_report.md
+1013I_R5B_big_unit_context_node_record/big_unit_context_node_report_1013I_R5B.md
+1013I_R5B_big_unit_context_node_record/1013I_R5B_result.json
+1013I_R5B_big_unit_context_node_record/big_unit_context_contract_1013I_R5B.json
+1013I_R5B_big_unit_context_node_record/big_unit_context_fixture_1013I_R5B.json
+scripts/validate_1013I_R5B_big_unit_context_node_record.py
 1013I_R5_teacher_self_prep_alpha_smoke/1013I_R5_report.md
 1013I_R5_R1_review_repo_validator_path_fix/1013I_R5_R1_report.md
 scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
@@ -268,11 +275,13 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - 1013I_R4 composes the teacher input summary, review cards, current preview diff cards, revision queue, rejected items, and revert actions into one minimal page fixture.
 - R4 resolves the R3 action-simulation ambiguity: current primary state is `accepted_to_preview_only`; revision and reject are alternate paths, not simultaneous states.
 - R5 should run a fixture-only teacher self-prep alpha smoke from the R4 page fixture.
+- 1013I_R5B records a missing upstream big-unit context node: future self-prep should run `teacher_input -> big_unit_context_check -> lesson_position_judgement -> review_cards -> preview_only`.
+- R5B does not parse real official materials. It only records a future read-only official big-unit material extraction hook and the required big-unit context fields.
 - 1013I_R5 verifies the fixture-only path: teacher input summary, 3 review cards, 3 preview diff cards, 3 revision items, 3 rejected items, 3 revert actions, 3 revise actions, and 3 reject actions. It proves `action_state_not_confusing=true`.
 - 1013I_R5_R1 fixes review repo reproducibility only: the R5 validator is available at top-level `scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py`, while the source-delta copy remains preserved.
 - The R5 validator now supports both local workspace layout and GitHub review repo root layout. Fresh clone review commands can run from the review repo root.
 - 1013I_R6 creates a teacher-readable render surface alpha from the R4/R5 fixture and smoke outputs. It includes page title, teacher input summary, 3 review cards, 3 preview diff items, action area, revision queue, rejected items, and boundary notice.
 - R6 remains render-surface alpha only: no provider/model, no formal apply, no HTML body or lesson body write, no database/memory/Feishu/export/archive write.
-- R7 should visually review the R6 render surface alpha before any broader UI implementation, still without provider/model or formal apply unless explicitly changed.
+- After R5B, the next R6 revision should include a visible big-unit position placeholder before visual review or broader UI implementation.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.
