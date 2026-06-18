@@ -1,0 +1,102 @@
+{
+  "fixture_id": "curriculum_standard_control_fixture_1013I_R6C",
+  "stage": "1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT",
+  "lesson_context": {
+    "subject": "美术",
+    "grade": "三年级",
+    "semester": "上册",
+    "lesson_title": "色彩的感觉",
+    "active_space": "prep_room",
+    "active_capability": "lesson_prep"
+  },
+  "curriculum_standard_control_layer": {
+    "status": "missing_structured_standard_ref",
+    "normal_self_prep_allowed": false,
+    "candidate_questioning_allowed": true,
+    "degraded_single_lesson_draft_allowed_after_teacher_choice": true,
+    "standard_version_label": null,
+    "standard_ref_ids": [],
+    "core_literacy_tags": {
+      "status": "candidate_tags_pending_structured_ref",
+      "candidate_tags": [
+        "审美感知",
+        "艺术表现",
+        "创意实践",
+        "文化理解"
+      ],
+      "official_quote": false
+    },
+    "learning_task_direction": null,
+    "assessment_requirement": null,
+    "academic_quality_or_performance_evidence": null,
+    "content_scope_boundary": null,
+    "prohibited_overreach": null,
+    "teacher_visible_message": "缺少结构化课标依据，不能直接进入完整单课备课。可以先补课标依据，或由教师选择临时单课草案模式。"
+  },
+  "textbook_anchor_check": {
+    "required": true,
+    "status": "pending_textbook_anchor",
+    "teacher_visible_message": "请确认本课在教材和单元中的位置，再进入候选卡生成。"
+  },
+  "big_unit_context_gate": {
+    "required": true,
+    "status": "pending_big_unit_context",
+    "inherits_required_fields_from": "big_unit_context_gate_contract_1013I_R6A"
+  },
+  "official_case_reference_policy": {
+    "cases_are_reference_only": true,
+    "may_show_as": "参考案例启发",
+    "may_override_standard": false,
+    "may_override_textbook_anchor": false,
+    "direct_copy_allowed": false
+  },
+  "teacher_action_options": [
+    {
+      "action": "补充课标依据",
+      "effect": "continue_to_standard_mapping",
+      "formal_apply_performed": false
+    },
+    {
+      "action": "确认教材与单元位置",
+      "effect": "continue_to_textbook_anchor_check",
+      "formal_apply_performed": false
+    },
+    {
+      "action": "临时单课草案",
+      "effect": "degraded_single_lesson_draft_only",
+      "formal_apply_performed": false
+    }
+  ],
+  "contract_only": true,
+  "fixture_only": true,
+  "preview_only": true,
+  "real_curriculum_standard_full_text_parsed": false,
+  "official_curriculum_claim_created": false,
+  "big_unit_generation_performed": false,
+  "single_lesson_generation_performed": false,
+  "product_runtime_called": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "official_export_created": false,
+  "official_archive_created": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false,
+    "speaking_style": "calm_professional",
+    "assistant_tone": "teacher_work_partner",
+    "response_style": "concise_contextual"
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

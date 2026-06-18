@@ -1,0 +1,108 @@
+{
+  "matrix_id": "curriculum_standard_priority_matrix_1013I_R6C",
+  "stage": "1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT",
+  "priority_rows": [
+    {
+      "rank": 1,
+      "layer": "curriculum_standard_control_layer",
+      "authority": "upstream_constraint",
+      "may_override_lower_layers": true,
+      "may_be_overridden_by_official_case": false,
+      "role": "Sets learning direction, competency focus, assessment evidence, and scope boundaries."
+    },
+    {
+      "rank": 2,
+      "layer": "textbook_anchor",
+      "authority": "required_content_landing",
+      "may_override_lower_layers": true,
+      "may_override_curriculum_standard": false,
+      "role": "Locates the specific lesson content, unit sequence, materials, and textbook position."
+    },
+    {
+      "rank": 3,
+      "layer": "big_unit_context_gate_and_lesson_position",
+      "authority": "unit_structure_control",
+      "may_override_official_case_reference": true,
+      "may_override_curriculum_standard": false,
+      "role": "Judges what this lesson is supposed to do inside the larger unit."
+    },
+    {
+      "rank": 4,
+      "layer": "teacher_confirmation_gate",
+      "authority": "classroom_judgement_inside_required_bounds",
+      "may_request_revision": true,
+      "may_remove_required_standard_check": false,
+      "role": "Confirms or revises mappings and chooses whether to continue, revise, or use degraded draft mode."
+    },
+    {
+      "rank": 5,
+      "layer": "official_case_reference",
+      "authority": "reference_only",
+      "may_override_curriculum_standard": false,
+      "may_override_textbook_anchor": false,
+      "role": "Offers reusable design moves, field patterns, and wording inspiration only."
+    },
+    {
+      "rank": 6,
+      "layer": "provider_or_model_candidate",
+      "authority": "candidate_only_when_enabled_later",
+      "may_override_any_control_layer": false,
+      "role": "Later model output must become reviewable candidates, not direct lesson body."
+    }
+  ],
+  "conflict_rules": [
+    {
+      "conflict": "official_case_reference_vs_curriculum_standard",
+      "resolution": "use_curriculum_standard_control_layer_and_mark_case_as_reference_only"
+    },
+    {
+      "conflict": "teacher_input_missing_standard_ref",
+      "resolution": "ask_for_standard_ref_or_enter_visible_degraded_draft_mode"
+    },
+    {
+      "conflict": "textbook_anchor_missing",
+      "resolution": "hold_normal_lesson_generation_until_textbook_anchor_is_confirmed"
+    },
+    {
+      "conflict": "candidate_activity_exceeds_grade_or_scope",
+      "resolution": "reject_or_revise_candidate_before_teacher_review_cards"
+    }
+  ],
+  "curriculum_standard_outranks_official_case_reference": true,
+  "textbook_anchor_required_before_lesson_generation": true,
+  "teacher_confirmation_required": true,
+  "official_cases_reference_only": true,
+  "r7_visual_review_paused": true,
+  "contract_only": true,
+  "fixture_only": true,
+  "preview_only": true,
+  "real_curriculum_standard_full_text_parsed": false,
+  "official_curriculum_claim_created": false,
+  "big_unit_generation_performed": false,
+  "single_lesson_generation_performed": false,
+  "product_runtime_called": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "official_export_created": false,
+  "official_archive_created": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false,
+    "speaking_style": "calm_professional",
+    "assistant_tone": "teacher_work_partner",
+    "response_style": "concise_contextual"
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

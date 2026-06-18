@@ -1,0 +1,176 @@
+{
+  "contract_id": "curriculum_standard_control_layer_contract_1013I_R6C",
+  "stage": "1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT",
+  "inherits_from": "1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT",
+  "layer_key": "curriculum_standard_control_layer",
+  "layer_role": "upstream_constraint_layer",
+  "object_name": "lesson_standard_map",
+  "object_policy": "Store structured mapping cards and missing markers. Do not store or invent full curriculum-standard text.",
+  "authority_rule": {
+    "curriculum_standard_outranks_official_case_reference": true,
+    "official_case_reference_may_override_curriculum_standard": false,
+    "official_case_reference_may_override_textbook_anchor": false,
+    "teacher_confirmation_required": true,
+    "teacher_confirmation_cannot_remove_required_standard_check": true,
+    "textbook_anchor_required_before_lesson_generation": true
+  },
+  "required_control_fields": [
+    {
+      "field": "standard_version_label",
+      "required": true,
+      "mode": "structured_ref_or_missing"
+    },
+    {
+      "field": "subject",
+      "required": true,
+      "mode": "teacher_input_or_textbook_context"
+    },
+    {
+      "field": "school_stage",
+      "required": true,
+      "mode": "teacher_input_or_structured_ref"
+    },
+    {
+      "field": "grade_band",
+      "required": true,
+      "mode": "teacher_input_or_structured_ref"
+    },
+    {
+      "field": "art_domain_or_learning_domain",
+      "required": true,
+      "mode": "structured_ref_or_teacher_confirm"
+    },
+    {
+      "field": "core_literacy_tags",
+      "required": true,
+      "mode": "structured_ref_or_candidate_with_teacher_confirm"
+    },
+    {
+      "field": "learning_task_direction",
+      "required": true,
+      "mode": "structured_ref_or_missing"
+    },
+    {
+      "field": "assessment_requirement",
+      "required": true,
+      "mode": "structured_ref_or_missing"
+    },
+    {
+      "field": "academic_quality_or_performance_evidence",
+      "required": true,
+      "mode": "structured_ref_or_missing"
+    },
+    {
+      "field": "content_scope_boundary",
+      "required": true,
+      "mode": "structured_ref_or_missing"
+    },
+    {
+      "field": "prohibited_overreach",
+      "required": true,
+      "mode": "structured_ref_or_missing"
+    },
+    {
+      "field": "standard_ref_ids",
+      "required": true,
+      "mode": "source_ref_or_missing"
+    },
+    {
+      "field": "interpretation_status",
+      "required": true,
+      "mode": "enum"
+    },
+    {
+      "field": "teacher_confirmation_status",
+      "required": true,
+      "mode": "enum"
+    }
+  ],
+  "interpretation_status_enum": [
+    "missing_structured_standard_ref",
+    "candidate_interpretation_pending_teacher_review",
+    "structured_standard_ref_available",
+    "teacher_confirmed_standard_mapping"
+  ],
+  "teacher_confirmation_status_enum": [
+    "not_requested",
+    "pending_teacher_confirm",
+    "teacher_confirmed",
+    "teacher_rejected_or_needs_revision"
+  ],
+  "relation_to_big_unit_context_gate": {
+    "required_before_big_unit_candidate_generation": true,
+    "required_before_lesson_position_judgement": true,
+    "feeds_fields": [
+      "unit_learning_goals",
+      "core_competency_focus",
+      "evidence_to_collect",
+      "assessment_focus",
+      "teacher_attention_points"
+    ],
+    "missing_standard_action": "hold_normal_self_prep_and_request_standard_or_allow_labeled_degraded_draft"
+  },
+  "relation_to_textbook_anchor": {
+    "textbook_anchor_required": true,
+    "curriculum_standard_sets_direction": true,
+    "textbook_anchor_sets_lesson_content_landing": true,
+    "missing_textbook_anchor_action": "hold_lesson_generation_or_ask_teacher_to_confirm_textbook_position"
+  },
+  "relation_to_official_case_reference": {
+    "official_cases_are_reference_only": true,
+    "can_borrow_schema_or_prompt_patterns": true,
+    "can_copy_case_text_directly": false,
+    "can_be_treated_as_curriculum_standard": false,
+    "case_conflict_action": "prefer_curriculum_standard_and_textbook_anchor_then_request_teacher_review"
+  },
+  "relation_to_teacher_confirmation": {
+    "teacher_confirmation_required_before_candidate_cards": true,
+    "teacher_can_select_degraded_single_lesson_draft": true,
+    "degraded_mode_must_be_visible": true,
+    "teacher_confirmation_is_final_classroom_judgement_within_standard_bounds": true
+  },
+  "revised_chain": [
+    "teacher_input",
+    "curriculum_standard_control_layer",
+    "textbook_anchor_check",
+    "big_unit_context_gate",
+    "lesson_position_judgement",
+    "teacher_confirm_unit_position",
+    "self_prep_review_cards",
+    "preview_only"
+  ],
+  "r7_visual_review_paused": true,
+  "next_stage": "1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT",
+  "contract_only": true,
+  "fixture_only": true,
+  "preview_only": true,
+  "real_curriculum_standard_full_text_parsed": false,
+  "official_curriculum_claim_created": false,
+  "big_unit_generation_performed": false,
+  "single_lesson_generation_performed": false,
+  "product_runtime_called": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "official_export_created": false,
+  "official_archive_created": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false,
+    "speaking_style": "calm_professional",
+    "assistant_tone": "teacher_work_partner",
+    "response_style": "concise_contextual"
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

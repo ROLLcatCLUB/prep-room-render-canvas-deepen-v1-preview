@@ -44,6 +44,7 @@ The handoff is the preferred entry for a new session. It records:
 - big-unit context required gate before single-lesson candidate-card generation.
 - official teaching-design case readonly deconstruction for schema calibration.
 - manifest alignment fix that keeps R6B product semantics unchanged and points the next conceptual layer to curriculum-standard control.
+- curriculum-standard control layer contract before textbook anchor and big-unit design-chain work.
 
 ## Current Product Baseline
 
@@ -63,17 +64,19 @@ Accepted recent prep-notebook stages:
 1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
+1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
+1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 ```
 
 Recommended next product stage:
 
 ```text
-1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
+1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
 ```
 
-Curriculum standard is the upstream constraint layer for later big-unit and single-lesson work. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, or teacher confirmation.
+Curriculum standard is now defined as the upstream constraint layer for later big-unit and single-lesson work. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, or teacher confirmation.
 
-R7 visual review remains paused until the standard control layer, curriculum interpretation layer, textbook anchor layer, and big-unit design chain are filled.
+R7 visual review remains paused until the curriculum interpretation layer, textbook anchor layer, and big-unit design chain are filled.
 
 Do not enter:
 
@@ -136,6 +139,7 @@ do_not_omit_thinking=true
 1013I_R6A_big_unit_context_required_gate/
 1013I_R6B_official_case_readonly_deconstruction/
 1013I_R6B_R1_review_manifest_alignment/
+1013I_R6C_curriculum_standard_control_layer_contract/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -175,6 +179,7 @@ source_delta_1013I_R6/
 source_delta_1013I_R6A/
 source_delta_1013I_R6B/
 source_delta_1013I_R6B_R1/
+source_delta_1013I_R6C/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -239,6 +244,13 @@ scripts/validate_1013I_R6B_official_case_readonly_deconstruction.py
 1013I_R6B_R1_review_manifest_alignment/1013I_R6B_R1_report.md
 1013I_R6B_R1_review_manifest_alignment/1013I_R6B_R1_result.json
 scripts/validate_1013I_R6B_R1_review_manifest_alignment.py
+1013I_R6C_curriculum_standard_control_layer_contract/1013I_R6C_report.md
+1013I_R6C_curriculum_standard_control_layer_contract/1013I_R6C_result.json
+1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_layer_contract_1013I_R6C.md
+1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_layer_contract_1013I_R6C.json
+1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_fixture_1013I_R6C.json
+1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_priority_matrix_1013I_R6C.json
+scripts/validate_1013I_R6C_curriculum_standard_control_layer_contract.py
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -318,6 +330,7 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - 1013I_R6A upgrades big-unit context into a required gate. R7 visual review is paused; normal single-lesson prep is blocked until big-unit context and lesson-position judgement are available, unless the teacher explicitly chooses a degraded temporary single-lesson draft.
 - 1013I_R6B deconstructs official teaching-design cases as reference-only samples for schema and prompt calibration. Official cases are not treated as curriculum standards and do not generate big-unit or single-lesson plans.
 - 1013I_R6B_R1 aligns the review package manifest only. It does not change R6B product semantics, source deconstruction, official-case status, or any runtime/product payload.
-- R6C should define the curriculum-standard control layer before any return to render-surface visual review.
+- 1013I_R6C defines the curriculum-standard control layer as the upstream constraint layer. It keeps `lesson_standard_map` as a structured mapping card or missing-marker object, requires textbook anchor before normal lesson generation, keeps official cases reference-only, and pauses R7 visual review.
+- R6D should define the textbook anchor and big-unit design-chain contract before any return to render-surface visual review.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.

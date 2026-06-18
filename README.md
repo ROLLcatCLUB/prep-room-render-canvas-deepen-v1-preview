@@ -10,7 +10,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - Current completed concept node: `1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE`.
 - Current completed reference layer: `1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION`.
 - Current completed packaging fix: `1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT`.
-- Current product next stage: `1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT`.
+- Current completed control layer: `1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT`.
+- Current product next stage: `1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -50,6 +51,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - 1013I_R6A makes that node a required gate: normal single-lesson prep is blocked until big-unit context and lesson-position judgement are available or the teacher explicitly chooses degraded single-lesson draft mode.
 - 1013I_R6B deconstructs official teaching-design cases as reference samples only, to calibrate fields, prompt wording, and teacher-visible expression. Official cases are not curriculum standards.
 - 1013I_R6B_R1 aligns the review manifest only: R6/R6A/R6B are now listed in the current baseline, the next layer is R6C curriculum-standard control, and R7 visual review remains paused.
+- 1013I_R6C defines the curriculum-standard control layer as upstream constraint: `lesson_standard_map` stores structured mapping cards or missing markers, official cases stay reference-only, textbook anchors are required before normal lesson generation, and R7 visual review remains paused.
 
 ## Reused Project Patterns
 

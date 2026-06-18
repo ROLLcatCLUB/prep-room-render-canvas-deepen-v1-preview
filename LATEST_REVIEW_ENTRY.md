@@ -1,15 +1,16 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
-FINAL_STATUS=PASS_1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
+REVIEW_STAGE=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
+FINAL_STATUS=PASS_1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 LATEST_COMPLETED_CONCEPT_NODE=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 LATEST_COMPLETED_REFERENCE_LAYER=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
 LATEST_COMPLETED_PACKAGING_FIX=1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
-INHERITS_FROM=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
+LATEST_COMPLETED_CONTROL_LAYER=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
+INHERITS_FROM=1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
+NEXT_RECOMMENDED_STAGE=1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
@@ -37,6 +38,7 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 -> 1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
 -> 1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
+-> 1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 ```
 
 R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
@@ -53,11 +55,20 @@ R6B deconstructs official teaching-design cases as reference samples only. It do
 
 R6B_R1 does not change R6B product semantics. It aligns `REVIEW_PACKAGE_MANIFEST.md` so the current baseline includes R6/R6A/R6B and the recommended next layer is `1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT`.
 
+R6C defines `curriculum_standard_control_layer` as the upstream constraint layer. It keeps the formal object name `lesson_standard_map`, requires structured mapping cards or explicit missing markers, and blocks normal self-prep when structured standard references are missing. It does not parse real curriculum-standard full text and does not create official curriculum claims.
+
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
+1013I_R6C_curriculum_standard_control_layer_contract/1013I_R6C_report.md
+1013I_R6C_curriculum_standard_control_layer_contract/1013I_R6C_result.json
+1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_layer_contract_1013I_R6C.md
+1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_layer_contract_1013I_R6C.json
+1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_fixture_1013I_R6C.json
+1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_priority_matrix_1013I_R6C.json
+scripts/validate_1013I_R6C_curriculum_standard_control_layer_contract.py
 1013I_R5B_big_unit_context_node_record/big_unit_context_node_report_1013I_R5B.md
 1013I_R5B_big_unit_context_node_record/1013I_R5B_result.json
 1013I_R5B_big_unit_context_node_record/big_unit_context_contract_1013I_R5B.json
