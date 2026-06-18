@@ -1,13 +1,13 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
-FINAL_STATUS=PASS_1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
+REVIEW_STAGE=1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
+FINAL_STATUS=PASS_1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
 LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 LATEST_COMPLETED_CONCEPT_NODE=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 LATEST_COMPLETED_REFERENCE_LAYER=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
-LATEST_COMPLETED_PACKAGING_FIX=1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
-INHERITS_FROM=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
+LATEST_COMPLETED_PACKAGING_FIX=1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
+INHERITS_FROM=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
 NEXT_RECOMMENDED_STAGE=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
@@ -36,6 +36,7 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 -> 1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
 -> 1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
+-> 1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
 ```
 
 R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
@@ -49,6 +50,8 @@ R5B records a missing upstream concept node: teacher self-prep must not jump dir
 R6A upgrades the concept node into a required upstream gate. R7 visual review is paused. Normal single-lesson prep is blocked until `big_unit_context_gate` and `lesson_position_judgement` exist. If a teacher continues without big-unit context, the system may only enter a clearly labeled degraded single-lesson draft mode.
 
 R6B deconstructs official teaching-design cases as reference samples only. It does not treat cases as curriculum standards, does not generate a big-unit design, and does not generate a single-lesson plan. Its purpose is to calibrate schema, prompt wording, and teacher-visible expression.
+
+R6B_R1 does not change R6B product semantics. It aligns `REVIEW_PACKAGE_MANIFEST.md` so the current baseline includes R6/R6A/R6B and the recommended next layer is `1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT`.
 
 Start with:
 
@@ -73,6 +76,9 @@ scripts/validate_1013I_R6A_big_unit_context_required_gate.py
 1013I_R6B_official_case_readonly_deconstruction/official_case_design_moves_1013I_R6B.json
 1013I_R6B_official_case_readonly_deconstruction/official_case_schema_calibration_suggestions_1013I_R6B.json
 scripts/validate_1013I_R6B_official_case_readonly_deconstruction.py
+1013I_R6B_R1_review_manifest_alignment/1013I_R6B_R1_report.md
+1013I_R6B_R1_review_manifest_alignment/1013I_R6B_R1_result.json
+scripts/validate_1013I_R6B_R1_review_manifest_alignment.py
 1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_report.md
 1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_result.json
 1013I_R6_teacher_self_prep_render_surface_alpha/teacher_self_prep_render_surface_alpha_1013I_R6.json

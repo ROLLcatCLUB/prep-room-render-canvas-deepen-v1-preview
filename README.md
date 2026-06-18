@@ -9,7 +9,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - Current completed product stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA`.
 - Current completed concept node: `1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE`.
 - Current completed reference layer: `1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION`.
-- Current completed packaging fix: `1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX`.
+- Current completed packaging fix: `1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT`.
 - Current product next stage: `1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
@@ -49,6 +49,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - 1013I_R5B records the missing big-unit context node. Future self-prep must check the lesson's position in the larger unit before candidate card generation.
 - 1013I_R6A makes that node a required gate: normal single-lesson prep is blocked until big-unit context and lesson-position judgement are available or the teacher explicitly chooses degraded single-lesson draft mode.
 - 1013I_R6B deconstructs official teaching-design cases as reference samples only, to calibrate fields, prompt wording, and teacher-visible expression. Official cases are not curriculum standards.
+- 1013I_R6B_R1 aligns the review manifest only: R6/R6A/R6B are now listed in the current baseline, the next layer is R6C curriculum-standard control, and R7 visual review remains paused.
 
 ## Reused Project Patterns
 
