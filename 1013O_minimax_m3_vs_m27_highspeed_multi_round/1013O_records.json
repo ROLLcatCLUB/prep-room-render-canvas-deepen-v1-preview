@@ -1,0 +1,734 @@
+[
+  {
+    "ok": true,
+    "case_id": "simple_json_exact",
+    "round": 1,
+    "model": "MiniMax-M3",
+    "latency_ms": 805,
+    "raw_length": 48,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "ok": true,
+        "case": "simple_json_exact",
+        "value": 3
+      }
+    },
+    "raw_text_redacted_prefix": "{\"ok\":true,\"case\":\"simple_json_exact\",\"value\":3}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M3",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "simple_json_exact",
+    "round": 1,
+    "model": "MiniMax-M2.7-highspeed",
+    "latency_ms": 5294,
+    "raw_length": 48,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "ok": true,
+        "case": "simple_json_exact",
+        "value": 3
+      }
+    },
+    "raw_text_redacted_prefix": "{\"ok\":true,\"case\":\"simple_json_exact\",\"value\":3}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "teacher_note_micro",
+    "round": 1,
+    "model": "MiniMax-M3",
+    "latency_ms": 7451,
+    "raw_length": 499,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "judgement": "学生对“冷暖色”概念理解停留在名词层面，缺乏与身体感受的连接。",
+        "suggested_change": "在导入环节增加一个“身体温度实验”：准备一杯温水（暖）和一杯冰水（冷），让学生先触摸、后观察同色系图片，强化“颜色=感觉”的直觉映射。",
+        "student_blocker": "抽象色彩术语与学生生活经验脱节，无法用已有感知解释新概念。",
+        "teacher_move": "教师先不解释“冷暖色”定义，而是组织学生分小组触摸实物（冰块/暖手宝），再展示对应色调图片让学生匹配，最后用彩色卡纸拼贴“冷色小岛”和“暖色太阳”作品。",
+        "impact_scope": [
+          "big_screen",
+          "handout",
+          "evidence_note"
+        ],
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 3
+    },
+    "raw_text_redacted_prefix": "{\"judgement\":\"学生对“冷暖色”概念理解停留在名词层面，缺乏与身体感受的连接。\", \"suggested_change\":\"在导入环节增加一个“身体温度实验”：准备一杯温水（暖）和一杯冰水（冷），让学生先触摸、后观察同色系图片，强化“颜色=感觉”的直觉映射。\", \"student_blocker\":\"抽象色彩术语与学生生活经验脱节，无法用已有感知解释新概念。\", \"teacher_move\":\"教师先不解释“冷暖色”定义，而是组织学生分小组触摸实物（冰块/暖手宝），再展示对应色调图片让学生匹配，最后用彩色卡纸拼贴“冷色小岛”和“暖色太阳”作品。\", \"impact_scope\":[\"big_screen\", \"handout\", \"evidence_note\"], \"boundary_flags\":{\"teacher_review_required\":true, \"formal_apply_performed\":false, \"database_written\":false, \"memory_written\":false, \"feishu_written\":false}}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M3",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "teacher_note_micro",
+    "round": 1,
+    "model": "MiniMax-M2.7-highspeed",
+    "latency_ms": 12331,
+    "raw_length": 518,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "judgement": "学生对冷暖色的抽象概念理解困难，需要通过具体视觉体验建立直观认知。",
+        "suggested_change": "增加实物对比活动：将红黄蓝等暖色卡片与蓝绿紫等冷色卡片分两组展示，让学生触摸冰块与暖宝宝后进行颜色分类，建立色彩与温度感受的直接关联。",
+        "student_blocker": "冷暖色概念抽象，缺乏真实情境联系。",
+        "teacher_move": "准备冰块、暖宝宝等实物教具，配合大屏幕展示自然场景（火焰/大海）进行对比，引导学生用手触摸感受后再进行色彩归类。",
+        "impact_scope": [
+          "big_screen",
+          "handout",
+          "evidence_note"
+        ],
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 4
+    },
+    "raw_text_redacted_prefix": "{\n  \"judgement\": \"学生对冷暖色的抽象概念理解困难，需要通过具体视觉体验建立直观认知。\",\n  \"suggested_change\": \"增加实物对比活动：将红黄蓝等暖色卡片与蓝绿紫等冷色卡片分两组展示，让学生触摸冰块与暖宝宝后进行颜色分类，建立色彩与温度感受的直接关联。\",\n  \"student_blocker\": \"冷暖色概念抽象，缺乏真实情境联系。\",\n  \"teacher_move\": \"准备冰块、暖宝宝等实物教具，配合大屏幕展示自然场景（火焰/大海）进行对比，引导学生用手触摸感受后再进行色彩归类。\",\n  \"impact_scope\": [\"big_screen\", \"handout\", \"evidence_note\"],\n  \"boundary_flags\": {\n    \"teacher_review_required\": true,\n    \"formal_apply_performed\": false,\n    \"database_written\": false,\n    \"memory_written\": false,\n    \"feishu_written\": false\n  }\n}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "lesson_patch_micro",
+    "round": 1,
+    "model": "MiniMax-M3",
+    "latency_ms": 16977,
+    "raw_length": 1001,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "intent_summary": "针对三年级学生对冷暖色理解困难，用更直观的对比和生活化情境替代抽象概念讲解。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "学生能辨认红、黄、蓝等颜色，但对'冷色让人想到冰、雪，暖色让人想到太阳、火'的感受联想较弱，需要借助具体物品图片和身体感受来建立联系。",
+            "reason": "把抽象的冷暖色定义替换为可感知的联想，降低理解门槛，为后续探究铺垫。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "环节一：看图分类。出示冰块、火焰、雪山、辣椒四张图，请学生把它们拖入'冷色筐'或'暖色筐'，教师即时反馈。环节二：身体感受。两组色卡贴上黑板，学生闭眼摸冰块或暖水袋，同时看对应颜色，体会'看着冷/看着暖'。环节三：快速抢答。出示一组混色卡（绿、紫），引导学生说出'既不太冷也不太暖'，理解中间色。",
+            "reason": "用实物对比和触觉联动替代单纯讲解，'冷'与'暖'由可触摸的感受承载，符合三年级具象思维特点。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "新增冰块/火焰/雪山/辣椒四张实物图、暖冷色对比卡、中间色抢答题各1组，界面由'概念文字'改为'图片+选项筐'。"
+          },
+          {
+            "object": "handout",
+            "impact": "学习单增加'把冷色圈出来、暖色涂一涂'一栏，配4个小图（冰棒、太阳、树叶、葡萄），便于课后巩固。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "课堂观察点改为'学生能否将4张图正确归类'和'闭眼体验后能否说出冷暖感受'，两项可即时记录。"
+          }
+        ],
+        "quality_gate": {
+          "pass": true,
+          "risk": "闭眼触觉环节需注意课堂纪律与学生安全，避免暖水袋温度过高。"
+        },
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 5
+    },
+    "raw_text_redacted_prefix": "{\"intent_summary\": \"针对三年级学生对冷暖色理解困难，用更直观的对比和生活化情境替代抽象概念讲解。\", \"patches\": [{\"target\": \"学情分析\", \"candidate\": \"学生能辨认红、黄、蓝等颜色，但对'冷色让人想到冰、雪，暖色让人想到太阳、火'的感受联想较弱，需要借助具体物品图片和身体感受来建立联系。\", \"reason\": \"把抽象的冷暖色定义替换为可感知的联想，降低理解门槛，为后续探究铺垫。\"}, {\"target\": \"教学过程 · 探究环节\", \"candidate\": \"环节一：看图分类。出示冰块、火焰、雪山、辣椒四张图，请学生把它们拖入'冷色筐'或'暖色筐'，教师即时反馈。环节二：身体感受。两组色卡贴上黑板，学生闭眼摸冰块或暖水袋，同时看对应颜色，体会'看着冷/看着暖'。环节三：快速抢答。出示一组混色卡（绿、紫），引导学生说出'既不太冷也不太暖'，理解中间色。\", \"reason\": \"用实物对比和触觉联动替代单纯讲解，'冷'与'暖'由可触摸的感受承载，符合三年级具象思维特点。\"}], \"impact_scope\": [{\"object\": \"big_screen\", \"impact\": \"新增冰块/火焰/雪山/辣椒四张实物图、暖冷色对比卡、中间色抢答题各1组，界面由'概念文字'改为'图片+选项筐'。\"}, {\"object\": \"handout\", \"impact\": \"学习单增加'把冷色圈出来、暖色涂一涂'一栏，配4个小图（冰棒、太阳、树叶、葡萄），便于课后巩固。\"}, {\"object\": \"evidence_note\", \"impact\": \"课堂观察点改为'学生能否将4张图正确归类'和'闭眼体验后能否说出冷暖感受'，两项可即时记录。\"}], \"quality_gate\": {\"pass\": true, \"risk\": \"闭眼触觉环节需注意课堂纪律与学生安全，避免暖水袋温度过高。\"}, \"boundary_flags\": {\"teacher_review_required\": true, \"formal_apply_performed\": false, \"database_written\": false, \"memory_written\": false, \"feishu_written\": false}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M3",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "lesson_patch_micro",
+    "round": 1,
+    "model": "MiniMax-M2.7-highspeed",
+    "latency_ms": 18917,
+    "raw_length": 849,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "intent_summary": "增强冷暖色的直观感知，通过实物联想和情绪匹配活动加深理解",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "学生能识别红、黄、橙、蓝等基本色，但冷暖色的情感联想较弱，常混淆相近色系",
+            "reason": "需在探究环节加入具象化引导，避免纯概念讲授"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "①发放红/蓝即时贴，让学生贴在想对应的情绪卡上（兴奋/平静）②出示冰淇淋、太阳、火焰、海洋四张图，让学生连线色彩并说明原因",
+            "reason": "通过触感联想和情绪匹配，双通道强化冷暖色的感知记忆"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "需新增冰淇淋、太阳、火焰、海洋四张实物图"
+          },
+          {
+            "object": "handout",
+            "impact": "需新增情绪匹配连线图（红/蓝两组）"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生连线正确率作学情反馈"
+          }
+        ],
+        "quality_gate": {
+          "pass": true,
+          "risk": "低——材料易备，环节时长可控"
+        },
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 2
+    },
+    "raw_text_redacted_prefix": "{\n  \"intent_summary\": \"增强冷暖色的直观感知，通过实物联想和情绪匹配活动加深理解\",\n  \"patches\": [\n    {\n      \"target\": \"学情分析\",\n      \"candidate\": \"学生能识别红、黄、橙、蓝等基本色，但冷暖色的情感联想较弱，常混淆相近色系\",\n      \"reason\": \"需在探究环节加入具象化引导，避免纯概念讲授\"\n    },\n    {\n      \"target\": \"教学过程 · 探究环节\",\n      \"candidate\": \"①发放红/蓝即时贴，让学生贴在想对应的情绪卡上（兴奋/平静）②出示冰淇淋、太阳、火焰、海洋四张图，让学生连线色彩并说明原因\",\n      \"reason\": \"通过触感联想和情绪匹配，双通道强化冷暖色的感知记忆\"\n    }\n  ],\n  \"impact_scope\": [\n    {\"object\": \"big_screen\", \"impact\": \"需新增冰淇淋、太阳、火焰、海洋四张实物图\"},\n    {\"object\": \"handout\", \"impact\": \"需新增情绪匹配连线图（红/蓝两组）\"},\n    {\"object\": \"evidence_note\", \"impact\": \"记录学生连线正确率作学情反馈\"}\n  ],\n  \"quality_gate\": {\n    \"pass\": true,\n    \"risk\": \"低——材料易备，环节时长可控\"\n  },\n  \"boundary_flags\": {\n    \"teacher_review_required\": true,\n    \"formal_apply_performed\": false,\n    \"database_written\": false,\n    \"memory_written\": false,\n    \"feishu_written\": false\n  }\n}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "simple_json_exact",
+    "round": 2,
+    "model": "MiniMax-M3",
+    "latency_ms": 1831,
+    "raw_length": 48,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "ok": true,
+        "case": "simple_json_exact",
+        "value": 3
+      }
+    },
+    "raw_text_redacted_prefix": "{\"ok\":true,\"case\":\"simple_json_exact\",\"value\":3}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M3",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "simple_json_exact",
+    "round": 2,
+    "model": "MiniMax-M2.7-highspeed",
+    "latency_ms": 16356,
+    "raw_length": 48,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "ok": true,
+        "case": "simple_json_exact",
+        "value": 3
+      }
+    },
+    "raw_text_redacted_prefix": "{\"ok\":true,\"case\":\"simple_json_exact\",\"value\":3}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "teacher_note_micro",
+    "round": 2,
+    "model": "MiniMax-M3",
+    "latency_ms": 9023,
+    "raw_length": 601,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "judgement": "学生对冷暖色理解停留在抽象层面，缺少具身感知经验，导致概念无法落地。",
+        "suggested_change": "在讲解环节增加'温度触摸'实物对比环节：准备一碗冰水（蓝紫色块卡片贴杯壁）、一碗温水（红橙色块卡片贴杯壁），让学生双手分别触摸后描述身体感受，再对应颜色。",
+        "student_blocker": "冷暖色概念与温度感受之间缺少直接联结通道，单纯视觉识别无法激活身体经验。",
+        "teacher_move": "1. 课前准备蓝紫/红橙色卡各2-3张（塑封防湿）、冰水与温水各1碗、毛巾；2. 分组进行30秒触摸对比；3. 邀请学生用'像……一样'句式描述颜色感受；4. 将描述关键词板书在黑板对应色块旁，形成'感受-颜色'对照表；5. 后续绘画环节要求学生只能使用让自己'感觉温暖'或'感觉凉爽'的色卡。",
+        "impact_scope": [
+          "big_screen",
+          "handout",
+          "evidence_note"
+        ],
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 3
+    },
+    "raw_text_redacted_prefix": "{\"judgement\": \"学生对冷暖色理解停留在抽象层面，缺少具身感知经验，导致概念无法落地。\", \"suggested_change\": \"在讲解环节增加'温度触摸'实物对比环节：准备一碗冰水（蓝紫色块卡片贴杯壁）、一碗温水（红橙色块卡片贴杯壁），让学生双手分别触摸后描述身体感受，再对应颜色。\", \"student_blocker\": \"冷暖色概念与温度感受之间缺少直接联结通道，单纯视觉识别无法激活身体经验。\", \"teacher_move\": \"1. 课前准备蓝紫/红橙色卡各2-3张（塑封防湿）、冰水与温水各1碗、毛巾；2. 分组进行30秒触摸对比；3. 邀请学生用'像……一样'句式描述颜色感受；4. 将描述关键词板书在黑板对应色块旁，形成'感受-颜色'对照表；5. 后续绘画环节要求学生只能使用让自己'感觉温暖'或'感觉凉爽'的色卡。\", \"impact_scope\": [\"big_screen\", \"handout\", \"evidence_note\"], \"boundary_flags\": {\"teacher_review_required\": true, \"formal_apply_performed\": false, \"database_written\": false, \"memory_written\": false, \"feishu_written\": false}}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M3",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "teacher_note_micro",
+    "round": 2,
+    "model": "MiniMax-M2.7-highspeed",
+    "latency_ms": 19282,
+    "raw_length": 536,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "judgement": "学生对冷暖色的感知停留在抽象概念层面，缺乏具体视觉参照，难以在真实情境中区分应用。",
+        "suggested_change": "使用冷暖色对比色卡实物展示，配合真实图片（冰淇淋/火焰、海洋/夕阳）进行分类练习，让色彩区别可见可触。",
+        "student_blocker": "无法将'冷'、'暖'的文字概念与具体色彩建立对应关系，需要多感官、直观的视觉刺激。",
+        "teacher_move": "准备冷暖色色卡组各10张以上，课前布置教室两侧分别张贴冷暖色示例图，课堂通过颜色配对游戏让学生在互动中建立直观感受。",
+        "impact_scope": [
+          "big_screen",
+          "handout",
+          "evidence_note"
+        ],
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 3
+    },
+    "raw_text_redacted_prefix": "{\n  \"judgement\": \"学生对冷暖色的感知停留在抽象概念层面，缺乏具体视觉参照，难以在真实情境中区分应用。\",\n  \"suggested_change\": \"使用冷暖色对比色卡实物展示，配合真实图片（冰淇淋/火焰、海洋/夕阳）进行分类练习，让色彩区别可见可触。\",\n  \"student_blocker\": \"无法将'冷'、'暖'的文字概念与具体色彩建立对应关系，需要多感官、直观的视觉刺激。\",\n  \"teacher_move\": \"准备冷暖色色卡组各10张以上，课前布置教室两侧分别张贴冷暖色示例图，课堂通过颜色配对游戏让学生在互动中建立直观感受。\",\n  \"impact_scope\": [\"big_screen\", \"handout\", \"evidence_note\"],\n  \"boundary_flags\": {\n    \"teacher_review_required\": true,\n    \"formal_apply_performed\": false,\n    \"database_written\": false,\n    \"memory_written\": false,\n    \"feishu_written\": false\n  }\n}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "lesson_patch_micro",
+    "round": 2,
+    "model": "MiniMax-M3",
+    "latency_ms": 12725,
+    "raw_length": 846,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "intent_summary": "为三年级《色彩的感觉》生成冷暖色直观化教学补丁，重点解决学生对冷暖色理解困难的问题。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "学生对'冷色'与'暖色'仅停留在名称层面，缺乏与生活感受的真实联结，易混淆蓝绿与红橙的体感差异。",
+            "reason": "锚定学生对冷暖色'不理解'的具体表现——无体感联结，为后续直观设计提供依据。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "增设'温度体验站'：1)出示冰块与暖手宝图片，学生闭眼想象触碰，说出身体反应；2)将冰块/暖手宝主色（蓝、橙）对应贴入'冷色盘'与'暖色盘'；3)对比同一朵花用蓝橙两色表现时的视觉温度感受，完成'色彩温度计'记录单。",
+            "reason": "用真实冷暖物品建立色彩与体感的直觉映射，再迁移到画面，降低抽象概念的认知台阶。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "新增'冷暖物品图卡'与'色彩温度计'互动页板，供全班投票归类。"
+          },
+          {
+            "object": "handout",
+            "impact": "附'色彩温度计'记录单，含冰块/暖手宝连线与三组对比色涂色格。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生在归类环节的正确率与典型错例（如把绿色归入暖色），用于二次讲解。"
+          }
+        ],
+        "quality_gate": {
+          "pass": true,
+          "risk": "低风险，仅在探究环节插入体验活动，不改变原有教学结构。"
+        },
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 4
+    },
+    "raw_text_redacted_prefix": "{\"intent_summary\":\"为三年级《色彩的感觉》生成冷暖色直观化教学补丁，重点解决学生对冷暖色理解困难的问题。\",\"patches\":[{\"target\":\"学情分析\",\"candidate\":\"学生对'冷色'与'暖色'仅停留在名称层面，缺乏与生活感受的真实联结，易混淆蓝绿与红橙的体感差异。\",\"reason\":\"锚定学生对冷暖色'不理解'的具体表现——无体感联结，为后续直观设计提供依据。\"},{\"target\":\"教学过程 · 探究环节\",\"candidate\":\"增设'温度体验站'：1)出示冰块与暖手宝图片，学生闭眼想象触碰，说出身体反应；2)将冰块/暖手宝主色（蓝、橙）对应贴入'冷色盘'与'暖色盘'；3)对比同一朵花用蓝橙两色表现时的视觉温度感受，完成'色彩温度计'记录单。\",\"reason\":\"用真实冷暖物品建立色彩与体感的直觉映射，再迁移到画面，降低抽象概念的认知台阶。\"}],\"impact_scope\":[{\"object\":\"big_screen\",\"impact\":\"新增'冷暖物品图卡'与'色彩温度计'互动页板，供全班投票归类。\"},{\"object\":\"handout\",\"impact\":\"附'色彩温度计'记录单，含冰块/暖手宝连线与三组对比色涂色格。\"},{\"object\":\"evidence_note\",\"impact\":\"记录学生在归类环节的正确率与典型错例（如把绿色归入暖色），用于二次讲解。\"}],\"quality_gate\":{\"pass\":true,\"risk\":\"低风险，仅在探究环节插入体验活动，不改变原有教学结构。\"},\"boundary_flags\":{\"teacher_review_required\":true,\"formal_apply_performed\":false,\"database_written\":false,\"memory_written\":false,\"feishu_written\":false}}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M3",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "lesson_patch_micro",
+    "round": 2,
+    "model": "MiniMax-M2.7-highspeed",
+    "latency_ms": 32626,
+    "raw_length": 807,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "intent_summary": "让冷暖色更直观，提升学生辨识与应用。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "加入日常图片投票，快速了解学生对冷暖色的误解。",
+            "reason": "真实情境帮助定位误区。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "色块配对游戏+同一场景不同配色对比，让学生体验情感差异。",
+            "reason": "互动强化记忆，对比加深理解。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "展示色块和对比图，提升可视化。"
+          },
+          {
+            "object": "handout",
+            "impact": "发放冷暖色特征卡片，便于复习。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录配对正确率，评估理解。"
+          }
+        ],
+        "quality_gate": {
+          "pass": true,
+          "risk": "low"
+        },
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 2
+    },
+    "raw_text_redacted_prefix": "{\n  \"intent_summary\": \"让冷暖色更直观，提升学生辨识与应用。\",\n  \"patches\": [\n    {\n      \"target\": \"学情分析\",\n      \"candidate\": \"加入日常图片投票，快速了解学生对冷暖色的误解。\",\n      \"reason\": \"真实情境帮助定位误区。\"\n    },\n    {\n      \"target\": \"教学过程 · 探究环节\",\n      \"candidate\": \"色块配对游戏+同一场景不同配色对比，让学生体验情感差异。\",\n      \"reason\": \"互动强化记忆，对比加深理解。\"\n    }\n  ],\n  \"impact_scope\": [\n    {\n      \"object\": \"big_screen\",\n      \"impact\": \"展示色块和对比图，提升可视化。\"\n    },\n    {\n      \"object\": \"handout\",\n      \"impact\": \"发放冷暖色特征卡片，便于复习。\"\n    },\n    {\n      \"object\": \"evidence_note\",\n      \"impact\": \"记录配对正确率，评估理解。\"\n    }\n  ],\n  \"quality_gate\": {\n    \"pass\": true,\n    \"risk\": \"low\"\n  },\n  \"boundary_flags\": {\n    \"teacher_review_required\": true,\n    \"formal_apply_performed\": false,\n    \"database_written\": false,\n    \"memory_written\": false,\n    \"feishu_written\": false\n  }\n}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "simple_json_exact",
+    "round": 3,
+    "model": "MiniMax-M3",
+    "latency_ms": 1014,
+    "raw_length": 48,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "ok": true,
+        "case": "simple_json_exact",
+        "value": 3
+      }
+    },
+    "raw_text_redacted_prefix": "{\"ok\":true,\"case\":\"simple_json_exact\",\"value\":3}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M3",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "simple_json_exact",
+    "round": 3,
+    "model": "MiniMax-M2.7-highspeed",
+    "latency_ms": 7291,
+    "raw_length": 48,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "ok": true,
+        "case": "simple_json_exact",
+        "value": 3
+      }
+    },
+    "raw_text_redacted_prefix": "{\"ok\":true,\"case\":\"simple_json_exact\",\"value\":3}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "teacher_note_micro",
+    "round": 3,
+    "model": "MiniMax-M3",
+    "latency_ms": 7339,
+    "raw_length": 475,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "judgement": "学生需要更直观的体验来理解冷暖色，而当前教学可能偏抽象讲解。",
+        "suggested_change": "将冷暖色概念与生活情境和身体感受直接关联，加入'温度联想'互动环节。",
+        "student_blocker": "抽象的颜色分类难以与实际感受建立联系，学生缺乏直观参照。",
+        "teacher_move": "1. 准备红/蓝两杯温水（视觉上区分冷暖），让学生触摸后选色卡连线；2. 展示火焰、冰雪、太阳、海洋等生活图片，分组贴上暖色或冷色标签；3. 用彩色纸布置'暖色房间'和'冷色房间'，讨论不同感受。",
+        "impact_scope": [
+          "big_screen",
+          "handout",
+          "evidence_note"
+        ],
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 3
+    },
+    "raw_text_redacted_prefix": "{\"judgement\":\"学生需要更直观的体验来理解冷暖色，而当前教学可能偏抽象讲解。\",\"suggested_change\":\"将冷暖色概念与生活情境和身体感受直接关联，加入'温度联想'互动环节。\",\"student_blocker\":\"抽象的颜色分类难以与实际感受建立联系，学生缺乏直观参照。\",\"teacher_move\":\"1. 准备红/蓝两杯温水（视觉上区分冷暖），让学生触摸后选色卡连线；2. 展示火焰、冰雪、太阳、海洋等生活图片，分组贴上暖色或冷色标签；3. 用彩色纸布置'暖色房间'和'冷色房间'，讨论不同感受。\",\"impact_scope\":[\"big_screen\",\"handout\",\"evidence_note\"],\"boundary_flags\":{\"teacher_review_required\":true,\"formal_apply_performed\":false,\"database_written\":false,\"memory_written\":false,\"feishu_written\":false}}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M3",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "teacher_note_micro",
+    "round": 3,
+    "model": "MiniMax-M2.7-highspeed",
+    "latency_ms": 14320,
+    "raw_length": 514,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "judgement": "学生对冷暖色的抽象概念缺乏直观认知，难以将颜色与温度感觉建立联系。",
+        "suggested_change": "准备冷暖色实物对比图卡（如冰块与火焰、夏日与冬景），在屏幕展示并分发图卡，让学生通过真实场景直观感受冷暖色的情感差异。",
+        "student_blocker": "抽象的颜色温度概念与学生日常生活经验脱节，无法形成有效的视觉记忆。",
+        "teacher_move": "收集整理冷暖色对应的生活实照，课堂上引导学生观察对比，并让学生尝试用冷暖色描绘简单场景。",
+        "impact_scope": [
+          "big_screen",
+          "handout",
+          "evidence_note"
+        ],
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 2
+    },
+    "raw_text_redacted_prefix": "{\n  \"judgement\": \"学生对冷暖色的抽象概念缺乏直观认知，难以将颜色与温度感觉建立联系。\",\n  \"suggested_change\": \"准备冷暖色实物对比图卡（如冰块与火焰、夏日与冬景），在屏幕展示并分发图卡，让学生通过真实场景直观感受冷暖色的情感差异。\",\n  \"student_blocker\": \"抽象的颜色温度概念与学生日常生活经验脱节，无法形成有效的视觉记忆。\",\n  \"teacher_move\": \"收集整理冷暖色对应的生活实照，课堂上引导学生观察对比，并让学生尝试用冷暖色描绘简单场景。\",\n  \"impact_scope\": [\"big_screen\", \"handout\", \"evidence_note\"],\n  \"boundary_flags\": {\n    \"teacher_review_required\": true,\n    \"formal_apply_performed\": false,\n    \"database_written\": false,\n    \"memory_written\": false,\n    \"feishu_written\": false\n  }\n}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "lesson_patch_micro",
+    "round": 3,
+    "model": "MiniMax-M3",
+    "latency_ms": 10735,
+    "raw_length": 782,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "intent_summary": "为三年级《色彩的感觉》添加直观体验环节，帮助学生理解冷暖色。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "学生对冷暖色理解较浅，倾向凭直觉判断，缺乏温度与色彩的关联体验。",
+            "reason": "明确认知起点，为直观设计提供依据。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "“温度瓶”小实验：教师出示两杯温水（红杯）与冰水（蓝杯），学生触摸后观察杯身颜色，再将红色与黄色卡纸贴在太阳贴纸旁，蓝色与紫色卡纸贴在雪花贴纸旁，直观建立色彩与冷暖感受的联结。",
+            "reason": "通过触觉与视觉联动，将抽象的冷暖色转化为可感知的身体经验。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "新增“温度瓶”对比图与红/蓝卡纸分组示意图。"
+          },
+          {
+            "object": "handout",
+            "impact": "增加冷暖色配对贴纸任务：学生将颜色块贴到太阳或雪花轮廓内。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生在配对贴纸中选对冷暖色的比例与典型错例。"
+          }
+        ],
+        "quality_gate": {
+          "pass": true,
+          "risk": "低；冷暖判断具主观性，需教师引导避免绝对化。"
+        },
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 4
+    },
+    "raw_text_redacted_prefix": "{\"intent_summary\": \"为三年级《色彩的感觉》添加直观体验环节，帮助学生理解冷暖色。\", \"patches\": [{\"target\": \"学情分析\", \"candidate\": \"学生对冷暖色理解较浅，倾向凭直觉判断，缺乏温度与色彩的关联体验。\", \"reason\": \"明确认知起点，为直观设计提供依据。\"}, {\"target\": \"教学过程 · 探究环节\", \"candidate\": \"“温度瓶”小实验：教师出示两杯温水（红杯）与冰水（蓝杯），学生触摸后观察杯身颜色，再将红色与黄色卡纸贴在太阳贴纸旁，蓝色与紫色卡纸贴在雪花贴纸旁，直观建立色彩与冷暖感受的联结。\", \"reason\": \"通过触觉与视觉联动，将抽象的冷暖色转化为可感知的身体经验。\"}], \"impact_scope\": [{\"object\": \"big_screen\", \"impact\": \"新增“温度瓶”对比图与红/蓝卡纸分组示意图。\"}, {\"object\": \"handout\", \"impact\": \"增加冷暖色配对贴纸任务：学生将颜色块贴到太阳或雪花轮廓内。\"}, {\"object\": \"evidence_note\", \"impact\": \"记录学生在配对贴纸中选对冷暖色的比例与典型错例。\"}], \"quality_gate\": {\"pass\": true, \"risk\": \"低；冷暖判断具主观性，需教师引导避免绝对化。\"}, \"boundary_flags\": {\"teacher_review_required\": true, \"formal_apply_performed\": false, \"database_written\": false, \"memory_written\": false, \"feishu_written\": false}}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M3",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  },
+  {
+    "ok": true,
+    "case_id": "lesson_patch_micro",
+    "round": 3,
+    "model": "MiniMax-M2.7-highspeed",
+    "latency_ms": 23608,
+    "raw_length": 920,
+    "evaluation": {
+      "pass": true,
+      "errors": [],
+      "parsed": {
+        "intent_summary": "简化冷暖色概念，用直观视觉与互动体验帮助三年级学生快速辨识。",
+        "patches": [
+          {
+            "target": "学情分析",
+            "candidate": "通过快速颜色分类游戏，发现学生对红、橙、黄属于暖色，蓝、绿、紫属于冷色的认知模糊。",
+            "reason": "用游戏快速捕捉误解，针对性设计直观环节。"
+          },
+          {
+            "target": "教学过程 · 探究环节",
+            "candidate": "①展示四季景图（春夏暖、秋冬冷）②发放红/蓝卡，学生举卡辨认暖/冷色并贴于大白板；③学生分组用彩笔在纸上快速涂出“温暖”与“凉爽”场景。",
+            "reason": "多感官、图像化、游戏化，使学生直观感受冷暖色差异。"
+          }
+        ],
+        "impact_scope": [
+          {
+            "object": "big_screen",
+            "impact": "投影四季对比图，视觉冲击强化暖冷色印象。"
+          },
+          {
+            "object": "handout",
+            "impact": "提供简化的暖冷色标签卡，学生可在课堂外继续练习。"
+          },
+          {
+            "object": "evidence_note",
+            "impact": "记录学生举卡正确率和涂色表现，形成后续教学反馈。"
+          }
+        ],
+        "quality_gate": {
+          "pass": true,
+          "risk": "低"
+        },
+        "boundary_flags": {
+          "teacher_review_required": true,
+          "formal_apply_performed": false,
+          "database_written": false,
+          "memory_written": false,
+          "feishu_written": false
+        }
+      },
+      "quality_score": 3
+    },
+    "raw_text_redacted_prefix": "{\n  \"intent_summary\": \"简化冷暖色概念，用直观视觉与互动体验帮助三年级学生快速辨识。\",\n  \"patches\": [\n    {\n      \"target\": \"学情分析\",\n      \"candidate\": \"通过快速颜色分类游戏，发现学生对红、橙、黄属于暖色，蓝、绿、紫属于冷色的认知模糊。\",\n      \"reason\": \"用游戏快速捕捉误解，针对性设计直观环节。\"\n    },\n    {\n      \"target\": \"教学过程 · 探究环节\",\n      \"candidate\": \"①展示四季景图（春夏暖、秋冬冷）②发放红/蓝卡，学生举卡辨认暖/冷色并贴于大白板；③学生分组用彩笔在纸上快速涂出“温暖”与“凉爽”场景。\",\n      \"reason\": \"多感官、图像化、游戏化，使学生直观感受冷暖色差异。\"\n    }\n  ],\n  \"impact_scope\": [\n    {\n      \"object\": \"big_screen\",\n      \"impact\": \"投影四季对比图，视觉冲击强化暖冷色印象。\"\n    },\n    {\n      \"object\": \"handout\",\n      \"impact\": \"提供简化的暖冷色标签卡，学生可在课堂外继续练习。\"\n    },\n    {\n      \"object\": \"evidence_note\",\n      \"impact\": \"记录学生举卡正确率和涂色表现，形成后续教学反馈。\"\n    }\n  ],\n  \"quality_gate\": {\n    \"pass\": true,\n    \"risk\": \"低\"\n  },\n  \"boundary_flags\": {\n    \"teacher_review_required\": true,\n    \"formal_apply_performed\": false,\n    \"database_written\": false,\n    \"memory_written\": false,\n    \"feishu_written\": false\n  }\n}",
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "credential_source": "env",
+      "reasoning_split": false
+    }
+  }
+]

@@ -1,48 +1,75 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013N_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON
-FINAL_STATUS=PASS_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON
-WINNER=MiniMax-M3
+REVIEW_STAGE=1013O_MINIMAX_M3_VS_M27_HIGHSPEED_MULTI_ROUND_BENCHMARK
+FINAL_STATUS=PASS_MINIMAX_M3_VS_M27_HIGHSPEED_MULTI_ROUND_BENCHMARK
+WINNER_BY_AVERAGE_LATENCY=MiniMax-M3
+WINNER_BY_PASS_RATE=MiniMax-M3
 FORMAL_APPLY_ALLOWED=false
 MAIN_PROJECT_PUSHED=false
 ```
 
 ## Summary
 
-This stage compares `MiniMax-M3` and `MiniMax-M2.7-highspeed` on two live, read-only calls:
+This stage reruns the MiniMax model comparison with multiple rounds and different task types, because the earlier two-case test was too small to fully trust.
 
-1. Minimal strict JSON probe.
-2. Standard daily prep-room reasoning for Grade 3 art 1-2 `色彩的感觉`.
+Benchmark shape:
 
-## Result
+- Models: `MiniMax-M3` vs `MiniMax-M2.7-highspeed`
+- Cases: exact JSON, short teacher suggestion, compact lesson patch
+- Repeats: 3 rounds per model per case
+- Total live model calls: 18
 
-Measured scores:
+## Overall Result
 
 ```text
-MiniMax-M3=12
-MiniMax-M2.7-highspeed=9
+MiniMax-M3 average latency = 7544.4ms
+MiniMax-M2.7-highspeed average latency = 16669.4ms
+M3 faster by = 9125.0ms average
+M2.7-highspeed / M3 latency ratio = 2.21x
+M3 latency reduction vs M2.7-highspeed = 54.7%
 ```
 
-The minimal JSON probe passed on both models.
+Both models passed all validation checks in this benchmark:
 
-For the prep-room reasoning case:
+```text
+MiniMax-M3 pass_rate = 1.0
+MiniMax-M2.7-highspeed pass_rate = 1.0
+```
 
-- `MiniMax-M3` returned strict JSON and passed the compact lesson-reasoning contract.
-- `MiniMax-M2.7-highspeed` returned strict JSON, but failed contract coverage because the required exploration-step patch/update was not consistently recognized by the validator.
+M3 still had a higher average teacher-quality score:
+
+```text
+MiniMax-M3 avg_quality_score = 2.44
+MiniMax-M2.7-highspeed avg_quality_score = 1.78
+```
+
+## By Case
+
+```text
+simple_json_exact:
+  M3 avg = 1216.7ms
+  M2.7-highspeed avg = 9647.0ms
+  M3 faster by 8430.3ms
+  M2.7-highspeed is 7.93x M3 latency
+
+teacher_note_micro:
+  M3 avg = 7937.7ms
+  M2.7-highspeed avg = 15311.0ms
+  M3 faster by 7373.3ms
+  M2.7-highspeed is 1.93x M3 latency
+
+lesson_patch_micro:
+  M3 avg = 13479.0ms
+  M2.7-highspeed avg = 25050.3ms
+  M3 faster by 11571.3ms
+  M2.7-highspeed is 1.86x M3 latency
+```
 
 ## Recommendation
 
-Use `MiniMax-M3` as the default for structured prep-room reasoning, especially when the system needs:
-
-- stable compact JSON;
-- field patch candidates;
-- impact scope;
-- step reasoning updates;
-- teacher-review boundaries.
-
-Keep `MiniMax-M2.7-highspeed` as a fallback for simpler, shorter, or cost/speed-sensitive calls after separate validation.
+Use `MiniMax-M3` as the default prep-room reasoning model. Keep `MiniMax-M2.7-highspeed` as a configurable fallback only, especially for future cost/availability routing.
 
 ## Boundary
 
-Provider/model calls were made only for comparison. No lesson text was formally applied. No database, memory, or Feishu write was performed. The main project was not committed or pushed.
+Provider/model calls were made only for benchmark comparison. No lesson text was formally applied. No database, memory, or Feishu write was performed. The main project was not committed or pushed.

@@ -1,0 +1,122 @@
+{
+  "by_model": {
+    "MiniMax-M3": {
+      "count": 9,
+      "avg_latency_ms": 7544.4,
+      "median_latency_ms": 7451,
+      "min_latency_ms": 805,
+      "max_latency_ms": 16977,
+      "pass_count": 9,
+      "pass_rate": 1.0,
+      "avg_quality_score": 2.44
+    },
+    "MiniMax-M2.7-highspeed": {
+      "count": 9,
+      "avg_latency_ms": 16669.4,
+      "median_latency_ms": 16356,
+      "min_latency_ms": 5294,
+      "max_latency_ms": 32626,
+      "pass_count": 9,
+      "pass_rate": 1.0,
+      "avg_quality_score": 1.78
+    }
+  },
+  "by_case": {
+    "lesson_patch_micro": {
+      "MiniMax-M3": {
+        "count": 3,
+        "avg_latency_ms": 13479,
+        "median_latency_ms": 12725,
+        "min_latency_ms": 10735,
+        "max_latency_ms": 16977,
+        "pass_count": 3,
+        "pass_rate": 1.0,
+        "avg_quality_score": 4.33
+      },
+      "MiniMax-M2.7-highspeed": {
+        "count": 3,
+        "avg_latency_ms": 25050.3,
+        "median_latency_ms": 23608,
+        "min_latency_ms": 18917,
+        "max_latency_ms": 32626,
+        "pass_count": 3,
+        "pass_rate": 1.0,
+        "avg_quality_score": 2.33
+      },
+      "speed_delta": {
+        "m3_latency_ms": 13479,
+        "m27_highspeed_latency_ms": 25050.3,
+        "m3_faster_by_ms": 11571.3,
+        "m27_highspeed_is_x_of_m3": 1.86,
+        "m3_latency_reduction_vs_m27_percent": 46.2
+      }
+    },
+    "simple_json_exact": {
+      "MiniMax-M3": {
+        "count": 3,
+        "avg_latency_ms": 1216.7,
+        "median_latency_ms": 1014,
+        "min_latency_ms": 805,
+        "max_latency_ms": 1831,
+        "pass_count": 3,
+        "pass_rate": 1.0,
+        "avg_quality_score": 0
+      },
+      "MiniMax-M2.7-highspeed": {
+        "count": 3,
+        "avg_latency_ms": 9647,
+        "median_latency_ms": 7291,
+        "min_latency_ms": 5294,
+        "max_latency_ms": 16356,
+        "pass_count": 3,
+        "pass_rate": 1.0,
+        "avg_quality_score": 0
+      },
+      "speed_delta": {
+        "m3_latency_ms": 1216.7,
+        "m27_highspeed_latency_ms": 9647,
+        "m3_faster_by_ms": 8430.3,
+        "m27_highspeed_is_x_of_m3": 7.93,
+        "m3_latency_reduction_vs_m27_percent": 87.4
+      }
+    },
+    "teacher_note_micro": {
+      "MiniMax-M3": {
+        "count": 3,
+        "avg_latency_ms": 7937.7,
+        "median_latency_ms": 7451,
+        "min_latency_ms": 7339,
+        "max_latency_ms": 9023,
+        "pass_count": 3,
+        "pass_rate": 1.0,
+        "avg_quality_score": 3
+      },
+      "MiniMax-M2.7-highspeed": {
+        "count": 3,
+        "avg_latency_ms": 15311,
+        "median_latency_ms": 14320,
+        "min_latency_ms": 12331,
+        "max_latency_ms": 19282,
+        "pass_count": 3,
+        "pass_rate": 1.0,
+        "avg_quality_score": 3
+      },
+      "speed_delta": {
+        "m3_latency_ms": 7937.7,
+        "m27_highspeed_latency_ms": 15311,
+        "m3_faster_by_ms": 7373.3,
+        "m27_highspeed_is_x_of_m3": 1.93,
+        "m3_latency_reduction_vs_m27_percent": 48.2
+      }
+    }
+  },
+  "overall_speed_delta": {
+    "m3_latency_ms": 7544.4,
+    "m27_highspeed_latency_ms": 16669.4,
+    "m3_faster_by_ms": 9125.0,
+    "m27_highspeed_is_x_of_m3": 2.21,
+    "m3_latency_reduction_vs_m27_percent": 54.7
+  },
+  "winner_by_average_latency": "MiniMax-M3",
+  "winner_by_pass_rate": "MiniMax-M3"
+}

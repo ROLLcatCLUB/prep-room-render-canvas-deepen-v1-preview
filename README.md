@@ -169,6 +169,17 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Output directory: `1013N_minimax_m3_vs_m27_highspeed_comparison/`.
 - Final status: `PASS_MINIMAX_M3_VS_M27_HIGHSPEED_COMPARISON`.
 - Recommendation: use `MiniMax-M3` as default for structured prep-room reasoning; keep `MiniMax-M2.7-highspeed` only as fallback for simpler/shorter calls.
+
+## 1013O MiniMax M3 Vs M2.7-highspeed Multi-Round Benchmark
+
+- `scripts/run_minimax_m3_vs_m27_highspeed_multi_round_benchmark.py` repeats the comparison across 3 cases and 3 rounds per model.
+- Total live calls: 18.
+- Cases: exact JSON, short teacher suggestion, compact lesson patch.
+- Both models passed all cases in this benchmark.
+- Overall average latency: `MiniMax-M3=7544.4ms`, `MiniMax-M2.7-highspeed=16669.4ms`.
+- Overall speed delta: M3 was faster by `9125.0ms` on average; M2.7-highspeed took `2.21x` the M3 latency.
+- Final status: `PASS_MINIMAX_M3_VS_M27_HIGHSPEED_MULTI_ROUND_BENCHMARK`.
+- Recommendation remains: use `MiniMax-M3` as the default prep-room reasoning model; keep M2.7-highspeed as configurable fallback only.
 - What failed: `standard_daily` started producing the expected structure but did not return parseable complete JSON; `open_class` and `research_lesson` timed out.
 - Conclusion: the model path is plausible, but the prompt is too heavy for stable four-case output. Next stage should be `1013E_R1_PROMPT_REPAIR`, with shorter schema, smaller source context, and mode-specific prompt compression.
 - Boundary: no database write, memory write, Feishu write, formal apply, official export, or official archive was performed.
