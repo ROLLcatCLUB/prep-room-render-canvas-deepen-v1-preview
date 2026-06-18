@@ -1,0 +1,45 @@
+{
+  "stage": "1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE",
+  "preview_layer_semantics_kept": true,
+  "writeback_preview_only": true,
+  "action_semantics": [
+    {
+      "visible_action": "确认教材锚点",
+      "means": "进入 preview_state",
+      "does_not_mean": "写入正式教材锚点"
+    },
+    {
+      "visible_action": "选择本课位置",
+      "means": "进入 teacher_confirmed_candidate",
+      "does_not_mean": "写入正式单元设计"
+    },
+    {
+      "visible_action": "大单元链大方向可以",
+      "means": "允许进入后续候选链",
+      "does_not_mean": "生成正式大单元"
+    },
+    {
+      "visible_action": "先按临时单课草稿继续",
+      "means": "degraded draft preview only",
+      "does_not_mean": "正常单课候选生成或 formal apply"
+    }
+  ],
+  "write_layers": [
+    {
+      "layer": "preview_state",
+      "allowed_now": true,
+      "description": "教师临时确认，页面可见，不写正式数据。"
+    },
+    {
+      "layer": "teacher_confirmed_candidate",
+      "allowed_now": "review_semantics_only",
+      "description": "教师明确确认后进入候选链，但仍不是 formal apply。"
+    },
+    {
+      "layer": "formal_apply",
+      "allowed_now": false,
+      "description": "未来单独阶段，当前禁止。"
+    }
+  ],
+  "formal_apply_performed": false
+}

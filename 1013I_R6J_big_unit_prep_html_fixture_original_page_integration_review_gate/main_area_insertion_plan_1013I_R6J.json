@@ -1,0 +1,34 @@
+{
+  "stage": "1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE",
+  "plan_type": "main_area_insertion_plan",
+  "main_area_insertion_plan_created": true,
+  "layout": [
+    {
+      "zone": "main_area_top",
+      "content": "大单元位置确认条 / 阻断原因 / 待确认项",
+      "purpose": "先说明为什么不能直接生成单课。",
+      "writes_lesson_body": false
+    },
+    {
+      "zone": "main_area_middle",
+      "content": "教材锚点候选 + 本课位置选择 + 轻时间线",
+      "purpose": "让教师做进入单课备课前的结构判断。",
+      "writes_unit_package": false
+    },
+    {
+      "zone": "main_area_lower",
+      "content": "确认后才显示可以进入单课备课候选",
+      "purpose": "把候选卡生成放在确认之后。",
+      "normal_candidate_card_generation_allowed": false
+    },
+    {
+      "zone": "right_assistant_area",
+      "content": "只读依据、风险提醒、来源字段",
+      "purpose": "保留依据但不抢主线，不制造官方结论错觉。",
+      "readonly_reference_only": true
+    }
+  ],
+  "right_assistant_area_usage_reviewed": true,
+  "must_not_cover_existing_lesson_body": true,
+  "must_not_create_formal_big_unit_editor": true
+}
