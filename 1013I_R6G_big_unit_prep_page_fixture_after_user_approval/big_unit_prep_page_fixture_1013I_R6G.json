@@ -1,0 +1,370 @@
+{
+  "stage": "1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL",
+  "fixture_id": "big_unit_prep_page_fixture_1013I_R6G",
+  "inherits_from": "1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE",
+  "user_review_decision": "APPROVE_WITH_CONSTRAINTS",
+  "approval_constraints_applied": [
+    "decision_first_layout",
+    "big_unit_chain_as_light_timeline",
+    "lesson_position_teacher_labels_present"
+  ],
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep",
+  "capability_keys": [
+    "lesson_prep",
+    "big_unit_context",
+    "curriculum_control"
+  ],
+  "teacher_visible_title": "大单元位置确认",
+  "page_purpose": "help_teacher_make_required_decisions_before_single_lesson_prep",
+  "layout_mode": "decision_first",
+  "decision_first_layout": true,
+  "first_screen": {
+    "top": {
+      "component_type": "blocking_reason_banner",
+      "teacher_copy": "现在还不能直接生成单课备课，需要先确认教材锚点、大单元推进链和这节课承担的任务。",
+      "blocking_state_visible": true,
+      "normal_candidate_card_generation_allowed": false
+    },
+    "middle": {
+      "component_type": "confirmation_missing_list",
+      "teacher_copy": "还差这些确认",
+      "items": [
+        {
+          "item_id": "confirm_textbook_version",
+          "label": "确认教材版本",
+          "why_required": "缺教材版本时不能把候选锚点视为正式教材锚点。",
+          "blocks_normal_generation": true
+        },
+        {
+          "item_id": "confirm_unit_title",
+          "label": "确认本课所在单元",
+          "why_required": "当前存在单元标题候选，必须由教师确认本课归属。",
+          "blocks_normal_generation": true
+        },
+        {
+          "item_id": "confirm_lesson_code_and_activity_ref",
+          "label": "确认课题编号和教材活动落点",
+          "why_required": "缺课题编号或活动页/活动任务时，不能进入正常单课候选生成。",
+          "blocks_normal_generation": true
+        },
+        {
+          "item_id": "confirm_unit_task_chain",
+          "label": "确认单元任务链",
+          "why_required": "候选链只来自字段抽取，不等于已确认的大单元设计。",
+          "blocks_normal_generation": true
+        },
+        {
+          "item_id": "confirm_lesson_position",
+          "label": "确认本课在单元中的位置",
+          "why_required": "本课是导入、探究、表现、展示评价还是综合推进，会改变候选卡范围。",
+          "blocks_normal_generation": true
+        }
+      ],
+      "default_state": "expanded"
+    },
+    "lower": {
+      "component_type": "candidate_summary_three_column",
+      "columns": [
+        {
+          "column_id": "textbook_anchor_summary",
+          "teacher_label": "教材锚点",
+          "summary": "三年级 美术《色彩的感觉》",
+          "candidate_status": "pending_teacher_confirm"
+        },
+        {
+          "column_id": "lesson_position_summary",
+          "teacher_label": "本课位置",
+          "summary": "待老师选择这节课在单元中承担什么任务",
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "column_id": "big_unit_chain_summary",
+          "teacher_label": "大单元链",
+          "summary": "4 个阶段候选，先轻量查看",
+          "candidate_status": "pending_teacher_review"
+        }
+      ]
+    },
+    "right": {
+      "component_type": "readonly_reference_rail",
+      "teacher_label": "只读依据",
+      "default_state": "collapsed",
+      "official_reference_notes_collapsed": true
+    }
+  },
+  "sections": [
+    {
+      "section_id": "decision_status",
+      "teacher_label": "为什么现在不能直接生成单课",
+      "default_state": "expanded",
+      "priority": 1,
+      "blocking_state_visible": true,
+      "normal_candidate_card_generation_allowed": false
+    },
+    {
+      "section_id": "teacher_confirmation_items",
+      "teacher_label": "还差哪几项教师确认",
+      "default_state": "expanded",
+      "priority": 2,
+      "items": [
+        {
+          "item_id": "confirm_textbook_version",
+          "label": "确认教材版本",
+          "why_required": "缺教材版本时不能把候选锚点视为正式教材锚点。",
+          "blocks_normal_generation": true
+        },
+        {
+          "item_id": "confirm_unit_title",
+          "label": "确认本课所在单元",
+          "why_required": "当前存在单元标题候选，必须由教师确认本课归属。",
+          "blocks_normal_generation": true
+        },
+        {
+          "item_id": "confirm_lesson_code_and_activity_ref",
+          "label": "确认课题编号和教材活动落点",
+          "why_required": "缺课题编号或活动页/活动任务时，不能进入正常单课候选生成。",
+          "blocks_normal_generation": true
+        },
+        {
+          "item_id": "confirm_unit_task_chain",
+          "label": "确认单元任务链",
+          "why_required": "候选链只来自字段抽取，不等于已确认的大单元设计。",
+          "blocks_normal_generation": true
+        },
+        {
+          "item_id": "confirm_lesson_position",
+          "label": "确认本课在单元中的位置",
+          "why_required": "本课是导入、探究、表现、展示评价还是综合推进，会改变候选卡范围。",
+          "blocks_normal_generation": true
+        }
+      ],
+      "candidate_fields_marked_pending_teacher_review": true
+    },
+    {
+      "section_id": "textbook_anchor_candidates",
+      "teacher_label": "教材锚点候选",
+      "default_state": "summary",
+      "priority": 3,
+      "candidate": {
+        "candidate_id": "textbook_anchor_candidate_color_unit_1013I_R6E",
+        "source_request_lesson": {
+          "subject": "美术",
+          "grade": "三年级",
+          "semester": "上册",
+          "lesson_code": "1-2",
+          "lesson_title": "色彩的感觉"
+        },
+        "candidate_anchor": {
+          "textbook_version": null,
+          "unit_title_candidates": [
+            "多变的色彩",
+            "色彩的碰撞"
+          ],
+          "lesson_title_candidate": "色彩的感觉",
+          "textbook_catalog_ref": "pending_textbook_catalog_ref",
+          "anchor_status": "candidate_anchor_from_official_material",
+          "teacher_confirmation_status": "pending_teacher_confirm"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "r6d_textbook_anchor_fixture",
+            "field": "lesson_textbook_map",
+            "usage": "inherit teacher request and missing-anchor status"
+          },
+          {
+            "source_id": "official_unit_field_dictionary_v1",
+            "field_ref": {
+              "official_field_name": "单元主题",
+              "teacher_friendly_name": "这个单元围绕什么学",
+              "workbench_layer": "unit_planning",
+              "source_basis": [
+                "三年级美术上册官方单元设计参考",
+                "第二单元 色彩的碰撞"
+              ],
+              "common_mistakes": [
+                "写成过长的教学说明。",
+                "把单元主题写成学习目标。",
+                "只写教材页码或课名。"
+              ]
+            },
+            "usage": "extract unit theme field shape only"
+          }
+        ],
+        "risk_note": "Unit title candidates are not a verified textbook anchor. Teacher must confirm textbook version, unit, lesson code, and activity/page reference."
+      },
+      "candidate_fields_marked_pending_teacher_review": true,
+      "verified_textbook_anchor_created": false
+    },
+    {
+      "section_id": "lesson_position_candidate",
+      "teacher_label": "本课承担什么任务",
+      "default_state": "summary",
+      "priority": 4,
+      "options": [
+        {
+          "role_key": "unit_entry",
+          "teacher_label": "单元开头：先激发兴趣、建立问题",
+          "visible_to_teacher": true,
+          "selected": false,
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "role_key": "concept_building",
+          "teacher_label": "概念建立：先让学生弄清楚一个关键概念",
+          "visible_to_teacher": true,
+          "selected": false,
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "role_key": "method_learning",
+          "teacher_label": "方法学习：重点学一种观察/表现方法",
+          "visible_to_teacher": true,
+          "selected": false,
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "role_key": "creative_production",
+          "teacher_label": "创作表现：主要完成一件作品",
+          "visible_to_teacher": true,
+          "selected": false,
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "role_key": "critique_and_revision",
+          "teacher_label": "交流修改：主要展示、评价、调整作品",
+          "visible_to_teacher": true,
+          "selected": false,
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "role_key": "exhibition_or_reflection",
+          "teacher_label": "展示反思：主要呈现成果、回看学习过程",
+          "visible_to_teacher": true,
+          "selected": false,
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "role_key": "unknown_pending_teacher_confirm",
+          "teacher_label": "暂不确定：需要老师补充单元材料",
+          "visible_to_teacher": true,
+          "selected": false,
+          "candidate_status": "pending_teacher_review"
+        }
+      ],
+      "lesson_position_teacher_labels_present": true,
+      "engineering_enum_visible_as_primary_copy": false,
+      "candidate_fields_marked_pending_teacher_review": true
+    },
+    {
+      "section_id": "big_unit_chain_light_timeline",
+      "teacher_label": "大单元推进链",
+      "default_state": "summary",
+      "priority": 5,
+      "timeline": [
+        {
+          "timeline_node_id": "timeline_unit_foundation",
+          "stage_id": "unit_foundation",
+          "teacher_title": "先定单元骨架",
+          "one_sentence_purpose": "让老师先说清楚学生基础、单元主题、核心理解和贯穿问题。",
+          "field_count": 4,
+          "field_label_preview": [
+            "这个单元围绕什么学",
+            "学生现在什么基础",
+            "这个单元最终想让学生明白什么"
+          ],
+          "expanded_by_default": false,
+          "writes_unit_package": false,
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "timeline_node_id": "timeline_task_goal_evidence",
+          "stage_id": "task_goal_evidence",
+          "teacher_title": "再定任务、目标和证据",
+          "one_sentence_purpose": "把学生最终要完成的任务、学完后的表现和可观察证据对齐。",
+          "field_count": 3,
+          "field_label_preview": [
+            "学生最后要完成什么作品 / 展示 / 项目",
+            "学完学生会什么、懂什么、能表达什么",
+            "怎么判断学生完成得好不好"
+          ],
+          "expanded_by_default": false,
+          "writes_unit_package": false,
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "timeline_node_id": "timeline_learning_sequence",
+          "stage_id": "learning_sequence",
+          "teacher_title": "再排学习推进",
+          "one_sentence_purpose": "把单元拆成几个学习阶段，并为每个阶段配置任务、问题、活动和评价。",
+          "field_count": 6,
+          "field_label_preview": [
+            "单元推进到哪一步",
+            "每一步学生要完成什么",
+            "这一阶段用什么问题引导学生思考"
+          ],
+          "expanded_by_default": false,
+          "writes_unit_package": false,
+          "candidate_status": "pending_teacher_review"
+        },
+        {
+          "timeline_node_id": "timeline_support_and_alignment",
+          "stage_id": "support_and_alignment",
+          "teacher_title": "最后补支架和对齐",
+          "one_sentence_purpose": "补充情境、任务、资源、策略、学习单和评价支架，并检查学评一致。",
+          "field_count": 7,
+          "field_label_preview": [
+            "用什么情境把学生带进去",
+            "帮学生把任务做清楚的步骤",
+            "给学生哪些图像、材料或工具帮助"
+          ],
+          "expanded_by_default": false,
+          "writes_unit_package": false,
+          "candidate_status": "pending_teacher_review"
+        }
+      ],
+      "big_unit_chain_as_light_timeline": true,
+      "full_big_unit_body_visible": false,
+      "writes_unit_package": false
+    },
+    {
+      "section_id": "readonly_reference_notes",
+      "teacher_label": "只读依据和风险提醒",
+      "default_state": "collapsed",
+      "priority": 6,
+      "official_reference_notes_collapsed": true,
+      "official_claim_created": false
+    }
+  ],
+  "page_fixture_created": true,
+  "fixture_only": true,
+  "ui_implementation_started": false,
+  "html_ui_implementation_allowed": false,
+  "html_body_modified": false,
+  "lesson_body_modified": false,
+  "normal_candidate_card_generation_allowed": false,
+  "writes_unit_package": false,
+  "writes_lesson_body": false,
+  "verified_textbook_anchor_created": false,
+  "official_claim_created": false,
+  "big_unit_generation_performed": false,
+  "single_lesson_generation_performed": false,
+  "r7_visual_review_entered": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "official_export_created": false,
+  "official_archive_created": false,
+  "main_project_pushed": false
+}

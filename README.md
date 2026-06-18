@@ -14,8 +14,9 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - Current completed textbook/unit chain: `1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT`.
 - Current completed backend extraction: `1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE`.
 - Current completed page-structure gate: `1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE`.
-- Current product next stage: `1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL`.
-- Page work status: not started; user approval is required before any big-unit prep page fixture or UI implementation.
+- Current completed page fixture: `1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL`.
+- Current product next stage: `1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML`.
+- Page fixture status: JSON fixture created after user approval; HTML/UI implementation is still not allowed.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -59,6 +60,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - 1013I_R6D defines the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, and `lesson_position_judgement` must exist before normal candidate-card generation; missing anchor or lesson position only allows visible degraded draft mode.
 - 1013I_R6E adds a backend readonly extraction adapter for official unit field contracts. It creates textbook-anchor candidates, big-unit-chain candidates, lesson-position candidate status, and teacher-confirmation required items only; it does not start page work.
 - 1013I_R6F creates a big-unit prep page-structure proposal and user-review checklist only. It does not create a page fixture, implement UI, or modify HTML.
+- 1013I_R6G creates a JSON page fixture after user approval. It applies decision-first layout, light timeline for the big-unit chain, and teacher-facing lesson-position labels; it still does not implement HTML or UI.
 
 ## Reused Project Patterns
 

@@ -48,6 +48,7 @@ The handoff is the preferred entry for a new session. It records:
 - textbook anchor and big-unit design-chain contract before official unit material extraction.
 - backend readonly extraction fixture for official unit material field candidates before any big-unit page work.
 - big-unit prep page-structure proposal and user-review gate before any page fixture or UI work.
+- big-unit prep JSON page fixture after user approval, before any HTML/UI implementation.
 
 ## Current Product Baseline
 
@@ -72,17 +73,18 @@ Accepted recent prep-notebook stages:
 1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
 1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
 1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
+1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
 ```
 
 Recommended next product stage:
 
 ```text
-1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
+1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
 ```
 
-Curriculum standard is now defined as the upstream constraint layer for later big-unit and single-lesson work. R6D adds the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, `lesson_position_judgement`, and teacher confirmation must exist before normal candidate-card generation. R6E adds a backend readonly extraction adapter that turns local official unit field contracts into candidates for teacher review. R6F proposes page structure for user review only. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, big-unit chains, or teacher confirmation.
+Curriculum standard is now defined as the upstream constraint layer for later big-unit and single-lesson work. R6D adds the textbook anchor and big-unit design-chain contract: `lesson_textbook_map`, `unit_package`, `lesson_position_judgement`, and teacher confirmation must exist before normal candidate-card generation. R6E adds a backend readonly extraction adapter that turns local official unit field contracts into candidates for teacher review. R6F proposes page structure for user review only. R6G creates a JSON page fixture after user approval, applying decision-first layout, light timeline, and teacher-facing lesson-position labels. Official cases are reference-only samples for schema, prompt wording, and teacher-visible expression. Official cases must not override curriculum standards, textbook anchors, big-unit chains, or teacher confirmation.
 
-R7 visual review remains paused. Big-unit prep page work has not started; R6G may only open after explicit user approval of the R6F page structure.
+R7 visual review remains paused. HTML/UI implementation is still not allowed; R6H should review the R6G fixture before any HTML translation.
 
 Do not enter:
 
@@ -149,6 +151,7 @@ do_not_omit_thinking=true
 1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/
 1013I_R6E_official_unit_material_readonly_extraction_fixture/
 1013I_R6F_big_unit_prep_page_fixture_user_review_gate/
+1013I_R6G_big_unit_prep_page_fixture_after_user_approval/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -192,6 +195,7 @@ source_delta_1013I_R6C/
 source_delta_1013I_R6D/
 source_delta_1013I_R6E/
 source_delta_1013I_R6F/
+source_delta_1013I_R6G/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -291,6 +295,12 @@ scripts/validate_1013I_R6E_official_unit_material_readonly_extraction_fixture.py
 1013I_R6F_big_unit_prep_page_fixture_user_review_gate/teacher_user_review_checklist_1013I_R6F.md
 1013I_R6F_big_unit_prep_page_fixture_user_review_gate/page_risk_notes_1013I_R6F.md
 scripts/validate_1013I_R6F_big_unit_prep_page_fixture_user_review_gate.py
+1013I_R6G_big_unit_prep_page_fixture_after_user_approval/1013I_R6G_report.md
+1013I_R6G_big_unit_prep_page_fixture_after_user_approval/1013I_R6G_result.json
+1013I_R6G_big_unit_prep_page_fixture_after_user_approval/big_unit_prep_page_fixture_1013I_R6G.json
+1013I_R6G_big_unit_prep_page_fixture_after_user_approval/big_unit_prep_page_action_state_1013I_R6G.json
+1013I_R6G_big_unit_prep_page_fixture_after_user_approval/big_unit_prep_page_fixture_review_summary_1013I_R6G.md
+scripts/validate_1013I_R6G_big_unit_prep_page_fixture_after_user_approval.py
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -374,6 +384,8 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - 1013I_R6D defines the textbook anchor and big-unit design-chain contract. It keeps `lesson_textbook_map` and `unit_package`, requires `lesson_position_judgement` and teacher confirmation, blocks normal candidate-card generation without anchor/position, and only allows visible degraded draft mode when those gates are missing.
 - 1013I_R6E performs backend readonly extraction from local official unit field contracts. It creates textbook-anchor candidates, big-unit-chain candidates, lesson-position candidate status, and teacher-confirmation required items only.
 - 1013I_R6F proposes big-unit prep page structure for user review only. It creates section proposals, a teacher review checklist, and risk notes; it does not create a page fixture, implement UI, or modify HTML.
-- R6G must not start unless the user explicitly approves the R6F page structure proposal.
+- 1013I_R6G creates a JSON page fixture after user approval. It applies the required constraints: decision-first layout, light timeline for the big-unit chain, and teacher-facing labels for lesson-position choices.
+- R6G still does not implement HTML/UI, enter R7 visual review, generate unit/lesson bodies, call provider/model, or write database/memory/Feishu.
+- R6H should review the R6G fixture before any HTML translation.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.
