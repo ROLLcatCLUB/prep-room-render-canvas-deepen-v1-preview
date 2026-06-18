@@ -1,43 +1,25 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
-FINAL_STATUS=PASS_1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
-LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
-LATEST_COMPLETED_CONCEPT_NODE=1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
-LATEST_COMPLETED_REFERENCE_LAYER=1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
-LATEST_COMPLETED_PACKAGING_FIX=1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
-LATEST_COMPLETED_CONTROL_LAYER=1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
-LATEST_COMPLETED_TEXTBOOK_AND_UNIT_CHAIN=1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
-LATEST_COMPLETED_BACKEND_EXTRACTION=1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
-LATEST_COMPLETED_PAGE_STRUCTURE_GATE=1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
-LATEST_COMPLETED_PAGE_FIXTURE=1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
-LATEST_COMPLETED_FIXTURE_REVIEW=1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
-LATEST_COMPLETED_HTML_FIXTURE=1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL
-LATEST_COMPLETED_ORIGINAL_PAGE_INTEGRATION_REVIEW=1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE
+REVIEW_STAGE=1013I_R6L_TEACHER_ACTION_GUIDANCE_COPY_PATCH_FOR_BIG_UNIT_STATIC_INTEGRATION
+FINAL_STATUS=PASS_1013I_R6L_TEACHER_ACTION_GUIDANCE_COPY_PATCH_FOR_BIG_UNIT_STATIC_INTEGRATION
 LATEST_COMPLETED_ORIGINAL_PAGE_STATIC_INTEGRATION=1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
-USER_REVIEW_DECISION=APPROVE_WITH_CONSTRAINTS
-INHERITS_FROM=1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE
-LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R6L_BIG_UNIT_PREP_STATIC_INTEGRATION_PATCH_IF_NEEDED
-DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
-DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
+LATEST_COMPLETED_TEACHER_GUIDANCE_COPY_PATCH=1013I_R6L_TEACHER_ACTION_GUIDANCE_COPY_PATCH_FOR_BIG_UNIT_STATIC_INTEGRATION
+USER_REVIEW_DECISION=REQUEST_TEACHER_ACTION_GUIDANCE_COPY_PATCH
+INHERITS_FROM=1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
+NEXT_RECOMMENDED_STAGE=1013I_R6M_BIG_UNIT_STATIC_INTEGRATION_USER_REVIEW_OR_RUNTIME_HOLD
 FORMAL_APPLY_ALLOWED=false
 PROVIDER_MODEL_CALL_ALLOWED=false
 MAIN_PROJECT_PUSHED=false
-PAGE_FIXTURE_CREATED=true
-HTML_FIXTURE_ALLOWED_AFTER_REVIEW=true
-HTML_FIXTURE_CREATED=true
-STATIC_HTML_ONLY=true
-ORIGINAL_PAGE_REVIEWED=true
-ORIGINAL_PAGE_STYLE_ALIGNMENT_PASS=true
-BIG_UNIT_ENTRY_PLACED_INSIDE_PREP_ROOM=true
-TOP_LEVEL_NAV_NOT_MODIFIED=true
-WRITEBACK_PREVIEW_ONLY=true
-ORIGINAL_PAGE_STATIC_COPY_CREATED=true
-BIG_UNIT_SURFACE_INTEGRATED_INSIDE_PREP_ROOM=true
-UNIT_TITLE_CLICK_ENTRY_CREATED=true
-LESSON_BUTTONS_RETURN_TO_SINGLE_LESSON=true
+TEACHER_ACTION_GUIDANCE_SURFACE_CREATED=true
+ENGINEERING_FIELD_PRIMARY_SURFACE_HITS=[]
+RAW_FIELD_KEYS_ONLY_IN_COLLAPSED_REFERENCE=true
+MISSING_DATA_EXPRESSED_AS_TEACHER_ACTIONS=true
+UPLOAD_MATERIAL_ENTRY_PRESENT=true
+PASTE_UNIT_GOAL_ENTRY_PRESENT=true
+TEMPORARY_PREVIEW_ENTRY_PRESENT=true
+BIG_UNIT_ENTRY_POSITION_KEPT=true
+SINGLE_LESSON_ENTRIES_KEPT=true
 RUNTIME_CONNECTED=false
 UI_IMPLEMENTATION_STARTED=false
 HTML_UI_IMPLEMENTATION_ALLOWED=false
@@ -46,490 +28,31 @@ MAIN_HTML_BODY_MODIFIED=false
 
 ## Summary
 
-This entry updates the prep-room review package through the fixture-only teacher self-prep alpha smoke. The current chain is:
+R6L patches the R6K original-page static integration copy. The insertion position stays the same: unit titles in the prep notebook directory, such as `第一单元 多变的色彩`, remain the big-unit entry, and `1-1 / 1-2 / 1-3` remain single-lesson entries.
+
+The patch changes the teacher-visible main surface from engineering diagnostics into action guidance:
 
 ```text
-1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
--> 1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT
--> 1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX
--> 1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX
--> 1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST
--> 1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED
--> 1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS
--> 1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
--> 1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
--> 1013I_R5B_BIG_UNIT_CONTEXT_NODE_RECORD
--> 1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
--> 1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
--> 1013I_R6A_BIG_UNIT_CONTEXT_REQUIRED_GATE
--> 1013I_R6B_OFFICIAL_CASE_READONLY_DECONSTRUCTION_FOR_SCHEMA_CALIBRATION
--> 1013I_R6B_R1_REVIEW_MANIFEST_ALIGNMENT
--> 1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT
--> 1013I_R6D_TEXTBOOK_ANCHOR_AND_BIG_UNIT_DESIGN_CHAIN_CONTRACT
--> 1013I_R6E_OFFICIAL_UNIT_MATERIAL_READONLY_EXTRACTION_FIXTURE
--> 1013I_R6F_BIG_UNIT_PREP_PAGE_FIXTURE_USER_REVIEW_GATE
--> 1013I_R6G_BIG_UNIT_PREP_PAGE_FIXTURE_AFTER_USER_APPROVAL
--> 1013I_R6H_BIG_UNIT_PREP_PAGE_FIXTURE_REVIEW_BEFORE_HTML
--> 1013I_R6I_BIG_UNIT_PREP_HTML_FIXTURE_AFTER_REVIEW_APPROVAL
--> 1013I_R6J_BIG_UNIT_PREP_HTML_FIXTURE_ORIGINAL_PAGE_INTEGRATION_REVIEW_GATE
--> 1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN
+先确认这节课站在哪
+小教的临时判断
+你现在只需要确认三件事
+需要你补充的资料
+确认后会发生什么
 ```
 
-R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
+The main reading area no longer exposes raw field keys such as `textbook_anchor_candidate`, `big_unit_chain_candidate`, `lesson_position_candidate`, or `teacher_confirmation_required`. Those keys are retained only in the right-side collapsed readonly reference area for audit traceability.
 
-R5 proves the page state is not confusing: `current_primary_state=accepted_to_preview_only`, while revision and reject remain alternate paths.
+R6L remains static preview only. It does not connect runtime, call a provider/model, generate a formal big-unit design, write a lesson body, write database/memory/Feishu, export/archive officially, or push the main project tree.
 
-R5_R1 does not change the R5 product payload. It fixes the GitHub review repo reproducibility entrypoint by adding the expected top-level validator path and making the validator support both local workspace and review-repo root layouts.
-
-R5B records a missing upstream concept node: teacher self-prep must not jump directly from single-lesson input to candidate cards. It must reserve a big-unit context check and lesson-position judgement before candidate-card generation.
-
-R6A upgrades the concept node into a required upstream gate. R7 visual review is paused. Normal single-lesson prep is blocked until `big_unit_context_gate` and `lesson_position_judgement` exist. If a teacher continues without big-unit context, the system may only enter a clearly labeled degraded single-lesson draft mode.
-
-R6B deconstructs official teaching-design cases as reference samples only. It does not treat cases as curriculum standards, does not generate a big-unit design, and does not generate a single-lesson plan. Its purpose is to calibrate schema, prompt wording, and teacher-visible expression.
-
-R6B_R1 does not change R6B product semantics. It aligns `REVIEW_PACKAGE_MANIFEST.md` so the current baseline includes R6/R6A/R6B and the recommended next layer is `1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT`.
-
-R6C defines `curriculum_standard_control_layer` as the upstream constraint layer. It keeps the formal object name `lesson_standard_map`, requires structured mapping cards or explicit missing markers, and blocks normal self-prep when structured standard references are missing. It does not parse real curriculum-standard full text and does not create official curriculum claims.
-
-R6D defines `lesson_textbook_map`, `unit_package`, and `lesson_position_judgement` as the control chain after curriculum-standard mapping. It requires a textbook anchor, big-unit design-chain context, lesson-position judgement, and teacher confirmation before normal candidate-card generation. Missing anchor or missing lesson position can only enter a clearly labeled degraded draft mode. R6D does not parse real textbook or big-unit materials and does not generate a big-unit body or single-lesson plan.
-
-R6E adds a backend readonly extraction adapter. It reads local official unit field contracts and R6D control fixtures, then emits textbook-anchor candidates, big-unit-chain candidates, lesson-position candidate status, and teacher-confirmation required items. It does not verify a textbook anchor, does not create a formal `unit_package`, does not generate unit or lesson content, and does not start page work.
-
-R6F creates a page-structure proposal and user-review checklist for the future big-unit prep page. It proposes what sections should exist, which information appears first, which reference notes stay collapsed, and what the user must approve before any page fixture or UI implementation starts. It does not create an HTML page or page fixture.
-
-R6G applies the user's approved constraints and creates a JSON page fixture only. It uses a decision-first first screen, keeps the big-unit chain as a light four-node timeline, translates lesson-position enum values into teacher-facing labels, and keeps official reference notes collapsed. It does not implement HTML or UI.
-
-R6H reviews the R6G JSON page fixture before HTML translation. It allows a future HTML fixture only with strict label constraints: confirmation-style actions must show preview-only state, degraded single-lesson continuation must show a degraded label, and the big-unit chain must remain a light timeline.
-
-R6I translates the reviewed JSON fixture into a static HTML fixture only. It renders decision-first layout, missing confirmations, preview-only badges, degraded-draft label, collapsed readonly reference notes, four light timeline nodes, and teacher-facing lesson-position labels. It does not connect runtime, does not modify the main prep-room HTML, and does not implement formal UI.
-
-R6J upgrades the review from a standalone visual check to an original-page integration review gate. It reviews the existing `prep_room_render_canvas_deepen_v1.html` shell and concludes that the big-unit position confirmation surface must be placed inside the prep-room flow, not as a new top-level space or unrelated page. It defines style-alignment, entry placement, main-area insertion, and preview/writeback semantics for the next static integration fixture.
-
-R6K directly creates an original-page static integration copy. In the prep notebook directory, unit titles such as `第一单元 多变的色彩` become big-unit entry buttons, while lesson rows such as `1-2 色彩的感觉` remain single-lesson prep entries. The integrated surface keeps the original prep-room shell, bottom 小教 input, preview-layer status, and right-side readonly reference area.
-
-Start with:
+## Start Here
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
-1013I_R6I_big_unit_prep_html_fixture_after_review_approval/1013I_R6I_report.md
-1013I_R6I_big_unit_prep_html_fixture_after_review_approval/1013I_R6I_result.json
-1013I_R6I_big_unit_prep_html_fixture_after_review_approval/big_unit_prep_html_fixture_1013I_R6I.html
-1013I_R6I_big_unit_prep_html_fixture_after_review_approval/html_fixture_manifest_1013I_R6I.json
-1013I_R6I_big_unit_prep_html_fixture_after_review_approval/visual_smoke_1013I_R6I.json
-1013I_R6I_big_unit_prep_html_fixture_after_review_approval/ui_smoke_screenshot_1013I_R6I_desktop.png
-1013I_R6I_big_unit_prep_html_fixture_after_review_approval/ui_smoke_screenshot_1013I_R6I_mobile.png
-scripts/validate_1013I_R6I_big_unit_prep_html_fixture_after_review_approval.py
-1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/1013I_R6J_original_page_integration_review_report.md
-1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/1013I_R6J_result.json
-1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/original_page_style_alignment_matrix_1013I_R6J.json
-1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/big_unit_entry_placement_map_1013I_R6J.json
-1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/main_area_insertion_plan_1013I_R6J.json
-1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate/writeback_preview_semantics_1013I_R6J.json
-scripts/validate_1013I_R6J_big_unit_prep_html_fixture_original_page_integration_review_gate.py
-1013I_R6K_big_unit_prep_original_page_static_integration_run/1013I_R6K_report.md
-1013I_R6K_big_unit_prep_original_page_static_integration_run/1013I_R6K_result.json
-1013I_R6K_big_unit_prep_original_page_static_integration_run/prep_room_render_canvas_deepen_v1_R6K_integrated_static.html
-1013I_R6K_big_unit_prep_original_page_static_integration_run/integration_manifest_1013I_R6K.json
-1013I_R6K_big_unit_prep_original_page_static_integration_run/visual_smoke_1013I_R6K.json
-1013I_R6K_big_unit_prep_original_page_static_integration_run/ui_smoke_screenshot_1013I_R6K_desktop.png
-1013I_R6K_big_unit_prep_original_page_static_integration_run/ui_smoke_screenshot_1013I_R6K_mobile.png
-scripts/validate_1013I_R6K_big_unit_prep_original_page_static_integration_run.py
-1013I_R6H_big_unit_prep_page_fixture_review_before_html/1013I_R6H_report.md
-1013I_R6H_big_unit_prep_page_fixture_review_before_html/1013I_R6H_result.json
-1013I_R6H_big_unit_prep_page_fixture_review_before_html/fixture_review_1013I_R6H.json
-1013I_R6H_big_unit_prep_page_fixture_review_before_html/html_readiness_matrix_1013I_R6H.json
-scripts/validate_1013I_R6H_big_unit_prep_page_fixture_review_before_html.py
-1013I_R6G_big_unit_prep_page_fixture_after_user_approval/1013I_R6G_report.md
-1013I_R6G_big_unit_prep_page_fixture_after_user_approval/1013I_R6G_result.json
-1013I_R6G_big_unit_prep_page_fixture_after_user_approval/big_unit_prep_page_fixture_1013I_R6G.json
-1013I_R6G_big_unit_prep_page_fixture_after_user_approval/big_unit_prep_page_action_state_1013I_R6G.json
-1013I_R6G_big_unit_prep_page_fixture_after_user_approval/big_unit_prep_page_fixture_review_summary_1013I_R6G.md
-scripts/validate_1013I_R6G_big_unit_prep_page_fixture_after_user_approval.py
-1013I_R6F_big_unit_prep_page_fixture_user_review_gate/1013I_R6F_report.md
-1013I_R6F_big_unit_prep_page_fixture_user_review_gate/1013I_R6F_result.json
-1013I_R6F_big_unit_prep_page_fixture_user_review_gate/big_unit_prep_page_structure_proposal_1013I_R6F.json
-1013I_R6F_big_unit_prep_page_fixture_user_review_gate/big_unit_prep_page_sections_1013I_R6F.json
-1013I_R6F_big_unit_prep_page_fixture_user_review_gate/teacher_user_review_checklist_1013I_R6F.md
-1013I_R6F_big_unit_prep_page_fixture_user_review_gate/page_risk_notes_1013I_R6F.md
-scripts/validate_1013I_R6F_big_unit_prep_page_fixture_user_review_gate.py
-1013I_R6E_official_unit_material_readonly_extraction_fixture/1013I_R6E_report.md
-1013I_R6E_official_unit_material_readonly_extraction_fixture/1013I_R6E_result.json
-1013I_R6E_official_unit_material_readonly_extraction_fixture/official_unit_material_source_index_1013I_R6E.json
-1013I_R6E_official_unit_material_readonly_extraction_fixture/official_unit_material_extraction_fixture_1013I_R6E.json
-1013I_R6E_official_unit_material_readonly_extraction_fixture/textbook_anchor_candidates_1013I_R6E.json
-1013I_R6E_official_unit_material_readonly_extraction_fixture/big_unit_chain_candidates_1013I_R6E.json
-1013I_R6E_official_unit_material_readonly_extraction_fixture/teacher_confirmation_required_items_1013I_R6E.json
-backend/xiaobei_ai/prep_room_official_unit_material_extraction_1013I_R6E.py
-scripts/validate_1013I_R6E_official_unit_material_readonly_extraction_fixture.py
-1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/1013I_R6D_report.md
-1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/1013I_R6D_result.json
-1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/textbook_anchor_and_big_unit_design_chain_contract_1013I_R6D.md
-1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/textbook_anchor_and_big_unit_design_chain_contract_1013I_R6D.json
-1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/textbook_anchor_fixture_1013I_R6D.json
-1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/big_unit_design_chain_fixture_1013I_R6D.json
-1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract/lesson_position_judgement_fixture_1013I_R6D.json
-scripts/validate_1013I_R6D_textbook_anchor_and_big_unit_design_chain_contract.py
-1013I_R6C_curriculum_standard_control_layer_contract/1013I_R6C_report.md
-1013I_R6C_curriculum_standard_control_layer_contract/1013I_R6C_result.json
-1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_layer_contract_1013I_R6C.md
-1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_layer_contract_1013I_R6C.json
-1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_control_fixture_1013I_R6C.json
-1013I_R6C_curriculum_standard_control_layer_contract/curriculum_standard_priority_matrix_1013I_R6C.json
-scripts/validate_1013I_R6C_curriculum_standard_control_layer_contract.py
-1013I_R5B_big_unit_context_node_record/big_unit_context_node_report_1013I_R5B.md
-1013I_R5B_big_unit_context_node_record/1013I_R5B_result.json
-1013I_R5B_big_unit_context_node_record/big_unit_context_contract_1013I_R5B.json
-1013I_R5B_big_unit_context_node_record/big_unit_context_fixture_1013I_R5B.json
-scripts/validate_1013I_R5B_big_unit_context_node_record.py
-1013I_R6A_big_unit_context_required_gate/1013I_R6A_report.md
-1013I_R6A_big_unit_context_required_gate/1013I_R6A_result.json
-1013I_R6A_big_unit_context_required_gate/big_unit_context_gate_contract_1013I_R6A.json
-1013I_R6A_big_unit_context_required_gate/big_unit_context_gate_fixture_1013I_R6A.json
-1013I_R6A_big_unit_context_required_gate/big_unit_context_official_material_extraction_hook_1013I_R6A.json
-scripts/validate_1013I_R6A_big_unit_context_required_gate.py
-1013I_R6B_official_case_readonly_deconstruction/1013I_R6B_report.md
-1013I_R6B_official_case_readonly_deconstruction/1013I_R6B_result.json
-1013I_R6B_official_case_readonly_deconstruction/official_case_source_index_1013I_R6B.json
-1013I_R6B_official_case_readonly_deconstruction/official_case_deconstruction_matrix_1013I_R6B.json
-1013I_R6B_official_case_readonly_deconstruction/official_case_design_moves_1013I_R6B.json
-1013I_R6B_official_case_readonly_deconstruction/official_case_schema_calibration_suggestions_1013I_R6B.json
-scripts/validate_1013I_R6B_official_case_readonly_deconstruction.py
-1013I_R6B_R1_review_manifest_alignment/1013I_R6B_R1_report.md
-1013I_R6B_R1_review_manifest_alignment/1013I_R6B_R1_result.json
-scripts/validate_1013I_R6B_R1_review_manifest_alignment.py
-1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_report.md
-1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_result.json
-1013I_R6_teacher_self_prep_render_surface_alpha/teacher_self_prep_render_surface_alpha_1013I_R6.json
-1013I_R6_teacher_self_prep_render_surface_alpha/teacher_self_prep_render_surface_snapshot_1013I_R6.json
-scripts/validate_1013I_R6_teacher_self_prep_render_surface_alpha.py
-1013I_R5_R1_review_repo_validator_path_fix/1013I_R5_R1_report.md
-1013I_R5_R1_review_repo_validator_path_fix/1013I_R5_R1_result.json
-scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
-1013I_R5_teacher_self_prep_alpha_smoke/1013I_R5_report.md
-1013I_R5_teacher_self_prep_alpha_smoke/1013I_R5_result.json
-1013I_R5_teacher_self_prep_alpha_smoke/self_prep_alpha_smoke_trace_1013I_R5.json
-1013I_R5_teacher_self_prep_alpha_smoke/self_prep_alpha_smoke_state_snapshot_1013I_R5.json
-```
-
-## R5B Big Unit Context Node Result
-
-```text
-big_unit_context_contract_created=true
-big_unit_context_fixture_created=true
-required_fields_present=true
-current_lesson_role_enum_present=true
-chain_revision_present=true
-future_official_unit_material_extraction_hook=true
-actual_material_parsing_performed=false
-r6_requires_big_unit_placeholder=true
-contract_only=true
-fixture_only=true
-preview_only=true
-```
-
-Revised self-prep chain:
-
-```text
-teacher_input
--> big_unit_context_gate
--> lesson_position_judgement
--> teacher_confirm_unit_position
--> self_prep_review_cards
--> preview_only
-```
-
-## R6A Required Gate Result
-
-```text
-r6_product_semantics_changed=false
-r7_visual_review_paused=true
-big_unit_context_gate_created=true
-required_before_single_lesson_prep=true
-lesson_position_judgement_registered=true
-teacher_confirm_unit_position_registered=true
-degraded_single_lesson_mode_defined=true
-official_material_extraction_hook_created=true
-actual_material_parsing_performed=false
-```
-
-## R6B Official Case Deconstruction Result
-
-```text
-official_case_sources_indexed=true
-official_case_count=4
-deconstruction_matrix_created=true
-design_moves_extracted=true
-schema_calibration_suggestions_created=true
-cases_treated_as_reference_only=true
-cases_not_treated_as_curriculum_standard=true
-big_unit_generation_performed=false
-single_lesson_generation_performed=false
-```
-
-## R6D Textbook Anchor And Big Unit Chain Result
-
-```text
-textbook_anchor_required=true
-lesson_textbook_map_object_kept=true
-unit_package_object_kept=true
-big_unit_design_chain_defined=true
-lesson_position_judgement_required=true
-teacher_confirm_unit_position_required=true
-single_lesson_generation_blocked_without_textbook_anchor=true
-single_lesson_generation_blocked_without_lesson_position=true
-official_cases_remain_reference_only=true
-r7_visual_review_paused=true
-big_unit_generation_performed=false
-single_lesson_generation_performed=false
-```
-
-Revised control chain:
-
-```text
-teacher_input
--> curriculum_standard_control_layer
--> textbook_anchor_check
--> big_unit_design_chain_check
--> lesson_position_judgement
--> teacher_confirm_unit_position
--> self_prep_review_cards
--> preview_only
-```
-
-## R6E Backend Readonly Extraction Result
-
-```text
-backend_adapter_created=true
-source_contracts_loaded=true
-official_dictionary_field_count>=20
-question_flow_stage_count>=4
-textbook_anchor_candidates_created=true
-big_unit_chain_candidates_created=true
-lesson_position_candidate_created=true
-teacher_confirmation_required_items_created=true
-normal_candidate_card_generation_allowed=false
-page_work_started=false
-page_user_gate_required_before_r6f=true
-big_unit_generation_performed=false
-single_lesson_generation_performed=false
-```
-
-R6E reads official unit field contracts as readonly references and produces candidates for teacher review only. It is the backend/data step before any big-unit page fixture.
-
-## R6F Page Structure User Review Gate Result
-
-```text
-page_structure_proposal_created=true
-page_sections_created=true
-teacher_user_review_checklist_created=true
-page_risk_notes_created=true
-textbook_anchor_candidates_visible=true
-big_unit_chain_candidates_visible=true
-lesson_position_candidate_visible=true
-teacher_confirmation_items_visible=true
-readonly_reference_notes_collapsed=true
-page_work_started=false
-ui_implementation_started=false
-user_review_required_before_page_fixture=true
-```
-
-R6F is only a page-structure proposal and user-review gate. It does not create a page fixture, does not implement UI, and does not modify HTML.
-
-## R6G Big Unit Prep Page Fixture Result
-
-```text
-page_fixture_created=true
-decision_first_layout=true
-blocking_state_visible=true
-official_reference_notes_collapsed=true
-big_unit_chain_as_light_timeline=true
-light_timeline_node_count=4
-lesson_position_teacher_labels_present=true
-candidate_fields_marked_pending_teacher_review=true
-writes_unit_package=false
-writes_lesson_body=false
-normal_candidate_card_generation_allowed=false
-ui_implementation_started=false
-html_body_modified=false
-```
-
-R6G applies the user's three constraints and creates only a JSON page fixture. It is ready for review before any HTML/UI implementation.
-
-## R6H Fixture Review Before HTML Result
-
-```text
-fixture_review_created=true
-decision_first_layout_review_pass=true
-teacher_action_semantics_review_pass=true
-preview_only_badges_required=true
-degraded_draft_label_review_pass=true
-official_reference_notes_collapsed_review_pass=true
-big_unit_timeline_not_full_unit_body=true
-lesson_position_labels_teacher_readable=true
-html_fixture_allowed_after_review=true
-html_body_modified=false
-ui_implementation_started=false
-```
-
-R6H allows only a future static HTML fixture under these label constraints. It does not write HTML itself.
-
-## R6I Static HTML Fixture Result
-
-```text
-html_fixture_created=true
-static_html_only=true
-runtime_connected=false
-decision_first_layout_visible=true
-blocking_reason_visible=true
-missing_confirmations_visible=true
-preview_only_badges_visible=true
-degraded_draft_label_visible=true
-official_reference_collapsed_by_default=true
-big_unit_chain_rendered_as_light_timeline=true
-light_timeline_node_count=4
-lesson_position_teacher_labels_visible=true
-backend_role_keys_hidden_or_low_weight=true
-screenshot_smoke_pass=true
-```
-
-R6I is a static HTML fixture for review. It does not modify the main `prep_room_render_canvas_deepen_v1.html`.
-
-## R6J Original Page Integration Review Result
-
-```text
-original_page_reviewed=true
-original_page_style_alignment_pass=true
-top_level_nav_not_modified=true
-big_unit_entry_placed_inside_prep_room=true
-big_unit_not_new_global_space=true
-main_area_insertion_plan_created=true
-right_assistant_area_usage_reviewed=true
-preview_layer_semantics_kept=true
-writeback_preview_only=true
-html_body_modified=false
-main_prep_room_html_modified=false
-runtime_connected=false
-```
-
-R6J concludes that the big-unit confirmation surface should be inserted as a prep-room internal upstream confirmation layer. It must not become a top-level navigation item beside `教 / 备 / 观 / 作 / 知 / 档`, and confirmation actions must remain preview/writeback semantics only.
-
-## R6K Original Page Static Integration Result
-
-```text
-original_page_static_copy_created=true
-big_unit_surface_integrated_inside_prep_room=true
-unit_title_click_entry_created=true
-lesson_buttons_return_to_single_lesson=true
-top_level_nav_not_modified=true
-decision_first_layout_visible=true
-blocking_reason_visible=true
-missing_confirmations_visible=true
-preview_only_badges_visible=true
-degraded_draft_label_visible=true
-big_unit_chain_rendered_as_light_timeline=true
-lesson_position_teacher_labels_visible=true
-right_reference_area_collapsed_or_low_weight=true
-runtime_connected=false
-provider_called=false
-model_called=false
-formal_apply_performed=false
-database_written=false
-memory_written=false
-feishu_written=false
-```
-
-R6K is the first original-page static integration run. It creates a copy named `prep_room_render_canvas_deepen_v1_R6K_integrated_static.html`; the formal original page remains unchanged.
-
-## R5_R1 Review Repo Validator Path Fix
-
-```text
-top_level_validator_present=true
-source_delta_validator_preserved=true
-review_repo_root_layout_supported=true
-local_workspace_layout_supported=true
-standard_py_compile_passed=true
-standard_validator_direct_passed=true
-standard_validator_root_passed=true
-review_repo_fresh_clone_simulation_passed=true
-business_semantics_changed=false
-r5_core_result_changed=false
-```
-
-Fresh clone review commands:
-
-```text
-python -m py_compile scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
-python scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
-python scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py --root <repo-root>
-```
-
-## R6 Render Surface Alpha Result
-
-```text
-teacher_input_summary_section_present=true
-review_cards_section_present=true
-review_card_count=3
-preview_diff_section_present=true
-preview_diff_card_count=3
-revision_queue_section_present=true
-revision_queue_count=3
-rejected_items_section_present=true
-rejected_items_count=3
-action_area_present=true
-revert_action_count=3
-revise_action_count=3
-reject_action_count=3
-current_primary_state=accepted_to_preview_only
-revision_and_reject_are_alternate_paths=true
-action_state_not_confusing=true
-render_surface_alpha_only=true
-preview_only=true
-fixture_only=true
-```
-
-## Alpha Smoke Result
-
-```text
-alpha_smoke_trace_created=true
-alpha_smoke_state_snapshot_created=true
-alpha_smoke_steps_passed=true
-teacher_input_summary_present=true
-review_card_count=3
-preview_diff_card_count=3
-revision_queue_count=3
-rejected_items_count=3
-revert_action_count=3
-revise_action_count=3
-reject_action_count=3
-current_primary_state=accepted_to_preview_only
-revision_and_reject_are_alternate_paths=true
-action_state_not_confusing=true
-preview_only=true
-fixture_only=true
-```
-
-## Next Recommended Stage
-
-```text
-1013I_R6L_BIG_UNIT_PREP_STATIC_INTEGRATION_PATCH_IF_NEEDED
-```
-
-If opened, R6L should only patch obvious static integration issues found in R6K screenshots or user review. It must not add new conceptual gates, connect runtime, call provider/model, write database/memory/Feishu, generate unit/lesson bodies, or perform formal UI implementation.
-
-## Boundary
-
-```text
-provider_called=false
-model_called=false
-formal_apply_performed=false
-lesson_body_modified=false
-html_body_modified=false
-database_written=false
-memory_written=false
-feishu_written=false
-official_export_created=false
-official_archive_created=false
-main_project_committed=false
-main_project_pushed=false
+1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/1013I_R6L_report.md
+1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/1013I_R6L_result.json
+1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/prep_room_render_canvas_deepen_v1_R6L_teacher_guidance_patch.html
+1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/ui_smoke_screenshot_1013I_R6L_desktop.png
+1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/ui_smoke_screenshot_1013I_R6L_mobile.png
+scripts/validate_1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration.py
 ```
