@@ -6,8 +6,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED`.
-- Current product next stage: `1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS`.
+- Current completed product stage: `1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS`.
+- Current product next stage: `1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -530,3 +530,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED`.
 - Next stage: `1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, preview-chain execution, or main-project commit/push.
+
+## 1013I_R3 Self Prep Preview Chain From Review Cards
+
+- `scripts/validate_1013I_R3_self_prep_preview_chain_from_review_cards.py` simulates review-card actions into preview-chain state.
+- Output directory: `1013I_R3_self_prep_preview_chain_from_review_cards/`.
+- Required files were generated: `1013I_R3_result.json`, `1013I_R3_report.md`, `self_prep_preview_chain_state_1013I_R3.json`, `self_prep_preview_diff_cards_1013I_R3.json`, `self_prep_review_card_action_trace_1013I_R3.json`, and `self_prep_preview_chain_to_minimal_page_fixture_bridge_1013I_R3.json`.
+- Simulated actions: `accept_to_preview`, `revise_seed`, and `reject_seed`.
+- Preview data created: 3 accepted preview items, 3 revision queue items, 3 rejected items, and 3 preview diff cards.
+- Action trace count: 9.
+- Revert is available; formal apply remains forbidden.
+- Final status: `PASS_1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS`.
+- Next stage: `1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE`.
+- Boundary: preview-chain simulation only; no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, official export/archive, or main-project commit/push.

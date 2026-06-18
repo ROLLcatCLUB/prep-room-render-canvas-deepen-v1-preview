@@ -1,0 +1,38 @@
+[
+  {
+    "diff_card_id": "preview_diff_candidate_seed_learning_problem_1013I_R1",
+    "review_card_id": "review_card_01_candidate_seed_learning_problem_1013I_R1",
+    "target_section": "本课先解决什么",
+    "before_state": "teacher_review_card_pending",
+    "after_state": "preview_only_candidate_visible",
+    "after_preview_text": "围绕颜色带来的感受展开，让学生从说颜色名称和喜欢不喜欢，推进到能说出温暖、清凉、安静、热烈等感受，并给出一个理由。",
+    "display_badge": "预览中",
+    "can_revert": true,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false
+  },
+  {
+    "diff_card_id": "preview_diff_candidate_seed_material_scaffold_1013I_R1",
+    "review_card_id": "review_card_02_candidate_seed_material_scaffold_1013I_R1",
+    "target_section": "材料与支架",
+    "before_state": "teacher_review_card_pending",
+    "after_state": "preview_only_candidate_visible",
+    "after_preview_text": "先用色卡和感受词卡建立基础表达，再把生活图片作为小组加料材料；学习单只保留感受词、理由句和一个小观察。",
+    "display_badge": "预览中",
+    "can_revert": true,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false
+  },
+  {
+    "diff_card_id": "preview_diff_candidate_seed_review_chain_1013I_R1",
+    "review_card_id": "review_card_03_candidate_seed_review_chain_1013I_R1",
+    "target_section": "展示与评价",
+    "before_state": "teacher_review_card_pending",
+    "after_state": "preview_only_candidate_visible",
+    "after_preview_text": "展示评价控制在 5 分钟内，优先让学生说一种颜色感受和一个理由；教师只收集能证明学生从名称走向感受表达的证据。",
+    "display_badge": "预览中",
+    "can_revert": true,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false
+  }
+]
