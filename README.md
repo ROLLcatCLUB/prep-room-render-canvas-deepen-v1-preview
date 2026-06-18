@@ -6,8 +6,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX`.
-- Current product next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
+- Current completed product stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
+- Current product next stage: `1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -503,3 +503,17 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Final status: `PASS_1013I_R0A1_REQUEST_ID_TRACE_ALIGNMENT_HOTFIX`.
 - Next stage: `1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
 - Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, repo path rename, global search/replace, historical review-package rewrite, old validator rename, or main-project commit/push.
+
+## 1013I_R1 Candidate Card Seed From Self Prep Request
+
+- `scripts/validate_1013I_R1_candidate_card_seed_from_self_prep_request.py` creates candidate-card seed data from the aligned R0A1 teacher self-prep request.
+- Output directory: `1013I_R1_candidate_card_seed_from_self_prep_request/`.
+- Required files were generated: `1013I_R1_result.json`, `1013I_R1_report.md`, `candidate_card_seed_1013I_R1.json`, `candidate_card_seed_bundle_1013I_R1.json`, `candidate_card_seed_trace_1013I_R1.json`, and `candidate_seed_to_teacher_review_surface_bridge_1013I_R1.json`.
+- Source request: `1013I_R0A1_request_id_trace_alignment_hotfix/teacher_self_prep_request_1013I_R0A1.json`.
+- Source request id: `teacher_self_prep_request_1013I_R0A`.
+- Candidate seeds created: learning problem, material scaffold, and review chain.
+- Each seed includes source teacher input, a draft seed, seed basis, risk note, and teacher action options.
+- This stage is seed-only and teacher-review-required; it does not create lesson body text, preview apply state, or formal apply output.
+- Final status: `PASS_1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST`.
+- Next stage: `1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED`.
+- Boundary: no provider/model call, database write, memory write, Feishu write, formal apply, lesson body/html write, preview apply, or main-project commit/push.

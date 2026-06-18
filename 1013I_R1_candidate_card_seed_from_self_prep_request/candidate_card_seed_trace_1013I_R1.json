@@ -1,0 +1,42 @@
+{
+  "trace_id": "candidate_card_seed_trace_1013I_R1",
+  "stage": "1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST",
+  "source_request_file": "teacher_self_prep_request_1013I_R0A1.json",
+  "source_request_id": "teacher_self_prep_request_1013I_R0A",
+  "original_request_id": "teacher_self_prep_request_1013I",
+  "seed_count": 3,
+  "seed_ids": [
+    "candidate_seed_learning_problem_1013I_R1",
+    "candidate_seed_material_scaffold_1013I_R1",
+    "candidate_seed_review_chain_1013I_R1"
+  ],
+  "field_to_seed_mapping": [
+    {
+      "field": "class_profile_hint",
+      "seed_id": "candidate_seed_learning_problem_1013I_R1"
+    },
+    {
+      "field": "teacher_ideas",
+      "seed_id": "candidate_seed_learning_problem_1013I_R1"
+    },
+    {
+      "field": "existing_materials",
+      "seed_id": "candidate_seed_material_scaffold_1013I_R1"
+    },
+    {
+      "field": "resource_preferences",
+      "seed_id": "candidate_seed_material_scaffold_1013I_R1"
+    },
+    {
+      "field": "classroom_constraints",
+      "seed_id": "candidate_seed_review_chain_1013I_R1"
+    },
+    {
+      "field": "preferred_depth",
+      "seed_id": "candidate_seed_review_chain_1013I_R1"
+    }
+  ],
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false
+}

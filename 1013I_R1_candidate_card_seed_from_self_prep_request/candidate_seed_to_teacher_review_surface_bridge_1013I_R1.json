@@ -1,0 +1,22 @@
+{
+  "bridge_id": "candidate_seed_to_teacher_review_surface_bridge_1013I_R1",
+  "stage": "1013I_R1_CANDIDATE_CARD_SEED_FROM_SELF_PREP_REQUEST",
+  "source_bundle_id": "candidate_card_seed_bundle_1013I_R1",
+  "next_stage": "1013I_R2_TEACHER_REVIEW_CARD_SURFACE_FROM_SEED",
+  "cards_ready_for_review_surface": true,
+  "review_surface_should_show": [
+    "source teacher input",
+    "candidate seed title",
+    "draft seed",
+    "seed basis",
+    "risk note",
+    "teacher action options"
+  ],
+  "teacher_action_options": [
+    "accept_to_review_surface",
+    "revise_seed",
+    "reject_seed"
+  ],
+  "preview_apply_allowed": false,
+  "formal_apply_allowed": false
+}
