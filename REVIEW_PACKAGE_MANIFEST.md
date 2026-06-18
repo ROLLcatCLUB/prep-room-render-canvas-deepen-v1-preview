@@ -2,35 +2,34 @@
 
 ```text
 package_line=PREP_ROOM_RENDER_CANVAS_DEEPEN_V1
-current_review_entry=LATEST_REVIEW_ENTRY.md
-current_stage=1013I_R6L_TEACHER_ACTION_GUIDANCE_COPY_PATCH_FOR_BIG_UNIT_STATIC_INTEGRATION
-final_status=PASS_1013I_R6L_TEACHER_ACTION_GUIDANCE_COPY_PATCH_FOR_BIG_UNIT_STATIC_INTEGRATION
+current_stage=1013I_R6M_BIG_UNIT_DESIGN_TEACHER_READABLE_STATIC_PATCH_FOR_REVIEW
+final_status=PASS_1013I_R6M_BIG_UNIT_DESIGN_TEACHER_READABLE_STATIC_PATCH_FOR_REVIEW
 main_project_committed=false
 main_project_pushed=false
 ```
 
 ## Current Product Baseline
 
-R6L is a teacher-visible copy patch on top of R6K. It does not change the R6K insertion position or page structure. It keeps the big-unit entry inside the prep-room notebook directory and keeps lesson rows as single-lesson entries.
+R6M is a static review patch based on R6L. It changes the big-unit entry from single-lesson position confirmation to a teacher-readable big-unit design page. It does not modify the original `prep_room_render_canvas_deepen_v1.html` entry and does not connect runtime.
 
 Recommended next product stage:
 
 ```text
-1013I_R6M_BIG_UNIT_STATIC_INTEGRATION_USER_REVIEW_OR_RUNTIME_HOLD
+USER_REVIEW_BIG_UNIT_DESIGN_PAGE
 ```
 
 ## Included Stage Directories
 
 ```text
-1013I_R6K_big_unit_prep_original_page_static_integration_run/
 1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/
 ```
 
 ## Included Source Delta Directories
 
 ```text
-source_delta_1013I_R6K/
 source_delta_1013I_R6L/
+source_delta_1013I_R6M/
 ```
 
 ## Key Files
@@ -39,24 +38,13 @@ source_delta_1013I_R6L/
 README.md
 LATEST_REVIEW_ENTRY.md
 REVIEW_PACKAGE_MANIFEST.md
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/prep_room_render_canvas_deepen_v1_R6L_teacher_guidance_patch.html
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/1013I_R6L_result.json
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/1013I_R6L_report.md
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/teacher_guidance_patch_manifest_1013I_R6L.json
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/visual_smoke_1013I_R6L.json
-scripts/validate_1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration.py
-source_delta_1013I_R6L/scripts/validate_1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration.py
-```
-
-## Boundary
-
-```text
-runtime_connected=false
-provider_called=false
-model_called=false
-formal_apply_performed=false
-database_written=false
-memory_written=false
-feishu_written=false
-main_project_pushed=false
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/prep_room_render_canvas_deepen_v1_R6M_big_unit_design_teacher_readable_static.html
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/1013I_R6M_result.json
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/1013I_R6M_report.md
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/big_unit_design_chinese_label_map_1013I_R6M.json
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/big_unit_design_field_to_schema_mapping_1013I_R6M.json
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/ui_smoke_screenshot_1013I_R6M_desktop.png
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/ui_smoke_screenshot_1013I_R6M_mobile.png
+scripts/validate_1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review.py
+source_delta_1013I_R6M/scripts/validate_1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review.py
 ```

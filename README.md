@@ -1,41 +1,33 @@
 # PREP_ROOM_RENDER_CANVAS_DEEPEN_V1
 
-This review package tracks the prep-room render-canvas line.
-
 ## Current Entry
 
-- Current stage: `1013I_R6L_TEACHER_ACTION_GUIDANCE_COPY_PATCH_FOR_BIG_UNIT_STATIC_INTEGRATION`
-- Final status: `PASS_1013I_R6L_TEACHER_ACTION_GUIDANCE_COPY_PATCH_FOR_BIG_UNIT_STATIC_INTEGRATION`
-- Inherits from: `1013I_R6K_BIG_UNIT_PREP_ORIGINAL_PAGE_STATIC_INTEGRATION_RUN`
-- Next recommended stage: `1013I_R6M_BIG_UNIT_STATIC_INTEGRATION_USER_REVIEW_OR_RUNTIME_HOLD`
-- Boundary: static preview only; no runtime, provider/model, formal apply, database, memory, Feishu, export, archive, or main-project push.
+- Current stage: `1013I_R6M_BIG_UNIT_DESIGN_TEACHER_READABLE_STATIC_PATCH_FOR_REVIEW`
+- Final status: `PASS_1013I_R6M_BIG_UNIT_DESIGN_TEACHER_READABLE_STATIC_PATCH_FOR_REVIEW`
+- Next stage: `USER_REVIEW_BIG_UNIT_DESIGN_PAGE`
+- Boundary: static fixture only; no runtime, provider/model, formal apply, database, memory, Feishu, export, archive, or main-project push.
 
-## What R6L Changes
+## What R6M Changes
 
-R6K placed the big-unit confirmation surface in the right location. R6L keeps that structure and fixes the teacher-visible wording.
-
-The main surface now reads as a teacher action flow:
+R6M keeps the R6L static-copy structure but replaces the main big-unit surface with a teacher-readable design page:
 
 ```text
-先确认这节课站在哪
-你现在只需要确认三件事
-小教的临时判断
-这节课可能承担的任务
-需要你补充的资料
-确认后会发生什么
+第一单元 · 多变的色彩
+大单元设计本
+先把这个单元的学习路线搭起来，再进入每一课的具体备课。
 ```
 
-Raw engineering fields are not used as the primary teacher copy. They remain only in the collapsed right-side reference area.
+The page is organized around teacher reading and action, then maps back to schema fields in `big_unit_design_field_to_schema_mapping_1013I_R6M.json`.
 
-## Files
+## Key Files
 
 ```text
-LATEST_REVIEW_ENTRY.md
-REVIEW_PACKAGE_MANIFEST.md
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/prep_room_render_canvas_deepen_v1_R6L_teacher_guidance_patch.html
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/1013I_R6L_result.json
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/1013I_R6L_report.md
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/teacher_guidance_patch_manifest_1013I_R6L.json
-1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration/visual_smoke_1013I_R6L.json
-scripts/validate_1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration.py
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/prep_room_render_canvas_deepen_v1_R6M_big_unit_design_teacher_readable_static.html
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/1013I_R6M_result.json
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/1013I_R6M_report.md
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/big_unit_design_chinese_label_map_1013I_R6M.json
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/big_unit_design_field_to_schema_mapping_1013I_R6M.json
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/ui_smoke_screenshot_1013I_R6M_desktop.png
+1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review/ui_smoke_screenshot_1013I_R6M_mobile.png
+scripts/validate_1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review.py
 ```

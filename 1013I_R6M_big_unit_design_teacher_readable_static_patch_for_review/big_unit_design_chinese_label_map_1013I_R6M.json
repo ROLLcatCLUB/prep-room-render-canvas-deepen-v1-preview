@@ -1,0 +1,122 @@
+{
+  "这个单元想带学生走向哪里": [
+    {
+      "teacher_label": "这个单元围绕什么学",
+      "source_label": "单元主题",
+      "schema_key": "unit_theme"
+    },
+    {
+      "teacher_label": "这个单元最终想让学生明白什么",
+      "source_label": "大观念",
+      "schema_key": "big_idea"
+    },
+    {
+      "teacher_label": "用什么大问题带着学生学",
+      "source_label": "基本问题",
+      "schema_key": "essential_question"
+    }
+  ],
+  "学生现在在哪里": [
+    {
+      "teacher_label": "学生已有基础",
+      "source_label": "学情分析",
+      "schema_key": "student_context"
+    },
+    {
+      "teacher_label": "学生可能卡住的地方",
+      "source_label": "学情分析",
+      "schema_key": "student_possible_blockers"
+    },
+    {
+      "teacher_label": "和本单元有关的生活经验",
+      "source_label": "学情分析",
+      "schema_key": "student_life_experience"
+    }
+  ],
+  "学生最后要完成什么": [
+    {
+      "teacher_label": "最后完成什么作品 / 展示 / 项目",
+      "source_label": "单元表现性任务",
+      "schema_key": "performance_task"
+    },
+    {
+      "teacher_label": "学完能看出什么",
+      "source_label": "单元学习目标",
+      "schema_key": "unit_learning_goals"
+    },
+    {
+      "teacher_label": "怎么判断完成得好不好",
+      "source_label": "单元任务评估要点",
+      "schema_key": "assessment_criteria"
+    }
+  ],
+  "单元怎么一步步推进": [
+    {
+      "teacher_label": "学习阶段",
+      "source_label": "学习阶段",
+      "schema_key": "learning_stages"
+    },
+    {
+      "teacher_label": "每一步学生要完成什么",
+      "source_label": "学习任务",
+      "schema_key": "stage_tasks"
+    },
+    {
+      "teacher_label": "用什么小问题引导",
+      "source_label": "小问题",
+      "schema_key": "stage_questions"
+    },
+    {
+      "teacher_label": "课堂上具体做什么",
+      "source_label": "学习活动",
+      "schema_key": "learning_activities"
+    },
+    {
+      "teacher_label": "这一阶段怎么看学生学得怎么样",
+      "source_label": "学习评价",
+      "schema_key": "stage_assessment"
+    },
+    {
+      "teacher_label": "单元怎么大致上下来",
+      "source_label": "单元教学过程摘要",
+      "schema_key": "unit_process_summary"
+    }
+  ],
+  "老师需要准备哪些支架": [
+    {
+      "teacher_label": "用什么情境带入",
+      "source_label": "情境支架",
+      "schema_key": "context_scaffold"
+    },
+    {
+      "teacher_label": "任务怎么拆清楚",
+      "source_label": "任务支架",
+      "schema_key": "task_scaffold"
+    },
+    {
+      "teacher_label": "需要哪些图片或材料",
+      "source_label": "资源支架",
+      "schema_key": "resource_scaffold"
+    },
+    {
+      "teacher_label": "卡住时怎么支架",
+      "source_label": "策略支架",
+      "schema_key": "strategy_scaffold"
+    },
+    {
+      "teacher_label": "学习单怎么帮助学生记录",
+      "source_label": "学习单",
+      "schema_key": "worksheet_support"
+    },
+    {
+      "teacher_label": "评价时怎么帮助学生修改",
+      "source_label": "评价支架",
+      "schema_key": "assessment_scaffold"
+    },
+    {
+      "teacher_label": "学什么就看什么",
+      "source_label": "学评一致",
+      "schema_key": "learning_assessment_alignment"
+    }
+  ]
+}
