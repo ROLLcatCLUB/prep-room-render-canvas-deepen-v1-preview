@@ -1,13 +1,13 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
-FINAL_STATUS=PASS_1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
-LATEST_COMPLETED_PRODUCT_STAGE=1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
+REVIEW_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
+FINAL_STATUS=PASS_1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
+LATEST_COMPLETED_PRODUCT_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 LATEST_COMPLETED_PACKAGING_FIX=1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
 INHERITS_FROM=1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
+NEXT_RECOMMENDED_STAGE=1013I_R7_TEACHER_SELF_PREP_RENDER_SURFACE_VISUAL_REVIEW
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
@@ -30,6 +30,7 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
 -> 1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
 -> 1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
+-> 1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 ```
 
 R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
@@ -38,11 +39,18 @@ R5 proves the page state is not confusing: `current_primary_state=accepted_to_pr
 
 R5_R1 does not change the R5 product payload. It fixes the GitHub review repo reproducibility entrypoint by adding the expected top-level validator path and making the validator support both local workspace and review-repo root layouts.
 
+R6 turns the R4/R5 fixture and smoke outputs into a teacher-readable render surface alpha. It is still fixture-only and preview-only: it does not execute actions, call a provider/model, modify HTML, write lesson body, or enter formal apply.
+
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
+1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_report.md
+1013I_R6_teacher_self_prep_render_surface_alpha/1013I_R6_result.json
+1013I_R6_teacher_self_prep_render_surface_alpha/teacher_self_prep_render_surface_alpha_1013I_R6.json
+1013I_R6_teacher_self_prep_render_surface_alpha/teacher_self_prep_render_surface_snapshot_1013I_R6.json
+scripts/validate_1013I_R6_teacher_self_prep_render_surface_alpha.py
 1013I_R5_R1_review_repo_validator_path_fix/1013I_R5_R1_report.md
 1013I_R5_R1_review_repo_validator_path_fix/1013I_R5_R1_result.json
 scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
@@ -75,6 +83,30 @@ python scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
 python scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py --root <repo-root>
 ```
 
+## R6 Render Surface Alpha Result
+
+```text
+teacher_input_summary_section_present=true
+review_cards_section_present=true
+review_card_count=3
+preview_diff_section_present=true
+preview_diff_card_count=3
+revision_queue_section_present=true
+revision_queue_count=3
+rejected_items_section_present=true
+rejected_items_count=3
+action_area_present=true
+revert_action_count=3
+revise_action_count=3
+reject_action_count=3
+current_primary_state=accepted_to_preview_only
+revision_and_reject_are_alternate_paths=true
+action_state_not_confusing=true
+render_surface_alpha_only=true
+preview_only=true
+fixture_only=true
+```
+
 ## Alpha Smoke Result
 
 ```text
@@ -99,10 +131,10 @@ fixture_only=true
 ## Next Recommended Stage
 
 ```text
-1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
+1013I_R7_TEACHER_SELF_PREP_RENDER_SURFACE_VISUAL_REVIEW
 ```
 
-If opened, the next stage should create a render-surface alpha from the R5 fixture and smoke outputs. It should remain no-provider/no-model/no-formal-apply unless explicitly changed.
+If opened, the next stage should visually review the R6 render surface alpha before any broader UI implementation. It should remain no-provider/no-model/no-formal-apply unless explicitly changed.
 
 ## Boundary
 

@@ -1,0 +1,381 @@
+{
+  "render_surface_id": "teacher_self_prep_render_surface_alpha_1013I_R6",
+  "stage": "1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA",
+  "source_page_fixture": "minimal_self_prep_page_fixture_1013I_R4.json",
+  "source_alpha_smoke_snapshot": "self_prep_alpha_smoke_state_snapshot_1013I_R5.json",
+  "render_surface_alpha_only": true,
+  "page_title_section": {
+    "current_space_label": "备课室",
+    "current_capability_label": "自助备课",
+    "assistant_display_name": "小教",
+    "status_badge": "预览中 / 未正式应用",
+    "primary_state": "accepted_to_preview_only"
+  },
+  "teacher_input_summary_section": {
+    "title": "小教理解的备课需求",
+    "intent_summary": "三年级 美术《色彩的感觉》，1课时，第一单元 多变的色彩。",
+    "subject": "美术",
+    "grade_level": "三年级",
+    "lesson_title": "色彩的感觉",
+    "target_output": "生成可审阅的备课预览候选",
+    "class_profile_hint": "学生能说出常见颜色和喜欢不喜欢，但把颜色感受说成理由还不稳定。",
+    "teacher_ideas": "希望探究别太复杂，让学生能说出颜色带来的感受。",
+    "existing_materials": [
+      "色卡",
+      "生活图片",
+      "课堂学习单草稿"
+    ],
+    "classroom_constraints": [
+      "40分钟常态课",
+      "不做公开课式复杂材料",
+      "展示评价控制在5分钟内"
+    ],
+    "information_sufficiency_hint": "信息足够生成预览候选；缺少细化材料时只能继续停留在预览态。",
+    "missing_information_hint": "可后续补充班级作品样例、教材页图片、评价标准；本轮不自动追问模型。"
+  },
+  "review_cards_section": {
+    "title": "3 个建议先给老师看",
+    "state_hint": "当前主状态已经采纳到预览；再改和暂不采用只作为旁路动作保留。",
+    "cards": [
+      {
+        "review_card_id": "review_card_01_candidate_seed_learning_problem_1013I_R1",
+        "display_order": 1,
+        "title": "色彩的感觉：先把颜色感受说成理由",
+        "target_section": "本课先解决什么",
+        "assistant_suggestion": "围绕颜色带来的感受展开，让学生从说颜色名称和喜欢不喜欢，推进到能说出温暖、清凉、安静、热烈等感受，并给出一个理由。",
+        "reason_summary": [
+          "课题: 色彩的感觉",
+          "班级情况: 学生能说出常见颜色和喜欢不喜欢，但把颜色感受说成理由还不稳定。",
+          "老师想法: 希望探究别太复杂，让学生能说出颜色带来的感受。"
+        ],
+        "risk_note": "避免把学习问题写成成人化概念解释；保持三年级学生能说、能试、能展示。",
+        "current_status": "accepted_to_preview_only",
+        "status_badge": "已进入预览",
+        "not_current_states": [
+          "revision_requested_simulated",
+          "rejected_for_current_preview_path_simulated"
+        ],
+        "state_conflict": false
+      },
+      {
+        "review_card_id": "review_card_02_candidate_seed_material_scaffold_1013I_R1",
+        "display_order": 2,
+        "title": "先轻材料，再加生活图例",
+        "target_section": "材料与支架",
+        "assistant_suggestion": "先用色卡和感受词卡建立基础表达，再把生活图片作为小组加料材料；学习单只保留感受词、理由句和一个小观察。",
+        "reason_summary": [
+          "已有材料: 色卡、生活图片、课堂学习单草稿",
+          "资源偏好: 轻学习单、大屏提示词、可撤回预览",
+          "课堂限制: 40分钟常态课、不做公开课式复杂材料、展示评价控制在5分钟内"
+        ],
+        "risk_note": "避免材料堆叠成公开课式复杂流程；常态课优先保证学生有时间观察、表达和调整。",
+        "current_status": "accepted_to_preview_only",
+        "status_badge": "已进入预览",
+        "not_current_states": [
+          "revision_requested_simulated",
+          "rejected_for_current_preview_path_simulated"
+        ],
+        "state_conflict": false
+      },
+      {
+        "review_card_id": "review_card_03_candidate_seed_review_chain_1013I_R1",
+        "display_order": 3,
+        "title": "展示评价控制在短链路",
+        "target_section": "展示与评价",
+        "assistant_suggestion": "展示评价控制在 5 分钟内，优先让学生说一种颜色感受和一个理由；教师只收集能证明学生从名称走向感受表达的证据。",
+        "reason_summary": [
+          "课堂限制: 40分钟常态课、不做公开课式复杂材料、展示评价控制在5分钟内",
+          "备课深度: standard_daily",
+          "当前能力: lesson_prep"
+        ],
+        "risk_note": "避免评价维度过多，导致课堂结尾变成泛泛夸奖或复杂量表。",
+        "current_status": "accepted_to_preview_only",
+        "status_badge": "已进入预览",
+        "not_current_states": [
+          "revision_requested_simulated",
+          "rejected_for_current_preview_path_simulated"
+        ],
+        "state_conflict": false
+      }
+    ]
+  },
+  "preview_diff_section": {
+    "title": "当前预览中会出现的调整",
+    "state_hint": "仅预览，未写入备课正文。",
+    "current_preview_mode": "accepted_to_preview_only",
+    "items": [
+      {
+        "preview_item_id": "preview_item_candidate_seed_learning_problem_1013I_R1",
+        "review_card_id": "review_card_01_candidate_seed_learning_problem_1013I_R1",
+        "target_section": "本课先解决什么",
+        "status_badge": "预览中",
+        "preview_text": "围绕颜色带来的感受展开，让学生从说颜色名称和喜欢不喜欢，推进到能说出温暖、清凉、安静、热烈等感受，并给出一个理由。",
+        "before_state": "teacher_review_card_pending",
+        "after_state": "preview_only_candidate_visible",
+        "preview_only_note": "仅预览，未写入备课正文",
+        "can_revert": true,
+        "can_revise": true,
+        "can_formal_apply": false,
+        "lesson_body_modified": false,
+        "formal_apply_performed": false
+      },
+      {
+        "preview_item_id": "preview_item_candidate_seed_material_scaffold_1013I_R1",
+        "review_card_id": "review_card_02_candidate_seed_material_scaffold_1013I_R1",
+        "target_section": "材料与支架",
+        "status_badge": "预览中",
+        "preview_text": "先用色卡和感受词卡建立基础表达，再把生活图片作为小组加料材料；学习单只保留感受词、理由句和一个小观察。",
+        "before_state": "teacher_review_card_pending",
+        "after_state": "preview_only_candidate_visible",
+        "preview_only_note": "仅预览，未写入备课正文",
+        "can_revert": true,
+        "can_revise": true,
+        "can_formal_apply": false,
+        "lesson_body_modified": false,
+        "formal_apply_performed": false
+      },
+      {
+        "preview_item_id": "preview_item_candidate_seed_review_chain_1013I_R1",
+        "review_card_id": "review_card_03_candidate_seed_review_chain_1013I_R1",
+        "target_section": "展示与评价",
+        "status_badge": "预览中",
+        "preview_text": "展示评价控制在 5 分钟内，优先让学生说一种颜色感受和一个理由；教师只收集能证明学生从名称走向感受表达的证据。",
+        "before_state": "teacher_review_card_pending",
+        "after_state": "preview_only_candidate_visible",
+        "preview_only_note": "仅预览，未写入备课正文",
+        "can_revert": true,
+        "can_revise": true,
+        "can_formal_apply": false,
+        "lesson_body_modified": false,
+        "formal_apply_performed": false
+      }
+    ]
+  },
+  "action_area": {
+    "title": "可操作但不正式写入",
+    "actions_by_preview_item": [
+      {
+        "preview_item_id": "preview_item_candidate_seed_learning_problem_1013I_R1",
+        "target_section": "本课先解决什么",
+        "actions": [
+          {
+            "action_id": "revert_preview_item_candidate_seed_learning_problem_1013I_R1",
+            "action": "revert_preview_item",
+            "label": "撤回预览",
+            "available": true,
+            "fixture_only": true,
+            "provider_called": false,
+            "model_called": false,
+            "formal_apply_performed": false,
+            "lesson_body_modified": false
+          },
+          {
+            "action_id": "revise_preview_item_candidate_seed_learning_problem_1013I_R1",
+            "action": "revise_preview_item",
+            "label": "再改一版",
+            "available": true,
+            "fixture_only": true,
+            "provider_called": false,
+            "model_called": false,
+            "formal_apply_performed": false,
+            "lesson_body_modified": false
+          },
+          {
+            "action_id": "reject_preview_item_candidate_seed_learning_problem_1013I_R1",
+            "action": "reject_preview_item",
+            "label": "暂不采用",
+            "available": true,
+            "fixture_only": true,
+            "provider_called": false,
+            "model_called": false,
+            "formal_apply_performed": false,
+            "lesson_body_modified": false
+          }
+        ]
+      },
+      {
+        "preview_item_id": "preview_item_candidate_seed_material_scaffold_1013I_R1",
+        "target_section": "材料与支架",
+        "actions": [
+          {
+            "action_id": "revert_preview_item_candidate_seed_material_scaffold_1013I_R1",
+            "action": "revert_preview_item",
+            "label": "撤回预览",
+            "available": true,
+            "fixture_only": true,
+            "provider_called": false,
+            "model_called": false,
+            "formal_apply_performed": false,
+            "lesson_body_modified": false
+          },
+          {
+            "action_id": "revise_preview_item_candidate_seed_material_scaffold_1013I_R1",
+            "action": "revise_preview_item",
+            "label": "再改一版",
+            "available": true,
+            "fixture_only": true,
+            "provider_called": false,
+            "model_called": false,
+            "formal_apply_performed": false,
+            "lesson_body_modified": false
+          },
+          {
+            "action_id": "reject_preview_item_candidate_seed_material_scaffold_1013I_R1",
+            "action": "reject_preview_item",
+            "label": "暂不采用",
+            "available": true,
+            "fixture_only": true,
+            "provider_called": false,
+            "model_called": false,
+            "formal_apply_performed": false,
+            "lesson_body_modified": false
+          }
+        ]
+      },
+      {
+        "preview_item_id": "preview_item_candidate_seed_review_chain_1013I_R1",
+        "target_section": "展示与评价",
+        "actions": [
+          {
+            "action_id": "revert_preview_item_candidate_seed_review_chain_1013I_R1",
+            "action": "revert_preview_item",
+            "label": "撤回预览",
+            "available": true,
+            "fixture_only": true,
+            "provider_called": false,
+            "model_called": false,
+            "formal_apply_performed": false,
+            "lesson_body_modified": false
+          },
+          {
+            "action_id": "revise_preview_item_candidate_seed_review_chain_1013I_R1",
+            "action": "revise_preview_item",
+            "label": "再改一版",
+            "available": true,
+            "fixture_only": true,
+            "provider_called": false,
+            "model_called": false,
+            "formal_apply_performed": false,
+            "lesson_body_modified": false
+          },
+          {
+            "action_id": "reject_preview_item_candidate_seed_review_chain_1013I_R1",
+            "action": "reject_preview_item",
+            "label": "暂不采用",
+            "available": true,
+            "fixture_only": true,
+            "provider_called": false,
+            "model_called": false,
+            "formal_apply_performed": false,
+            "lesson_body_modified": false
+          }
+        ]
+      }
+    ]
+  },
+  "revision_queue_section": {
+    "title": "再改一版",
+    "visual_weight": "secondary",
+    "alternate_path": true,
+    "state_hint": "这是 smoke 验证过的旁路状态，不是当前主状态。",
+    "items": [
+      {
+        "revision_item_id": "revision_item_candidate_seed_learning_problem_1013I_R1",
+        "review_card_id": "review_card_01_candidate_seed_learning_problem_1013I_R1",
+        "title": "色彩的感觉：先把颜色感受说成理由",
+        "status": "revision_requested_simulated",
+        "reason": "Teacher may request a clearer or lighter version before preview.",
+        "provider_called": false,
+        "model_called": false
+      },
+      {
+        "revision_item_id": "revision_item_candidate_seed_material_scaffold_1013I_R1",
+        "review_card_id": "review_card_02_candidate_seed_material_scaffold_1013I_R1",
+        "title": "先轻材料，再加生活图例",
+        "status": "revision_requested_simulated",
+        "reason": "Teacher may request a clearer or lighter version before preview.",
+        "provider_called": false,
+        "model_called": false
+      },
+      {
+        "revision_item_id": "revision_item_candidate_seed_review_chain_1013I_R1",
+        "review_card_id": "review_card_03_candidate_seed_review_chain_1013I_R1",
+        "title": "展示评价控制在短链路",
+        "status": "revision_requested_simulated",
+        "reason": "Teacher may request a clearer or lighter version before preview.",
+        "provider_called": false,
+        "model_called": false
+      }
+    ]
+  },
+  "rejected_items_section": {
+    "title": "暂不采用",
+    "visual_weight": "secondary",
+    "alternate_path": true,
+    "state_hint": "这是 smoke 验证过的旁路状态，不是当前主状态。",
+    "items": [
+      {
+        "rejected_item_id": "rejected_item_candidate_seed_learning_problem_1013I_R1",
+        "review_card_id": "review_card_01_candidate_seed_learning_problem_1013I_R1",
+        "title": "色彩的感觉：先把颜色感受说成理由",
+        "status": "rejected_for_current_preview_path_simulated",
+        "can_restore": true,
+        "lesson_body_modified": false,
+        "formal_apply_performed": false
+      },
+      {
+        "rejected_item_id": "rejected_item_candidate_seed_material_scaffold_1013I_R1",
+        "review_card_id": "review_card_02_candidate_seed_material_scaffold_1013I_R1",
+        "title": "先轻材料，再加生活图例",
+        "status": "rejected_for_current_preview_path_simulated",
+        "can_restore": true,
+        "lesson_body_modified": false,
+        "formal_apply_performed": false
+      },
+      {
+        "rejected_item_id": "rejected_item_candidate_seed_review_chain_1013I_R1",
+        "review_card_id": "review_card_03_candidate_seed_review_chain_1013I_R1",
+        "title": "展示评价控制在短链路",
+        "status": "rejected_for_current_preview_path_simulated",
+        "can_restore": true,
+        "lesson_body_modified": false,
+        "formal_apply_performed": false
+      }
+    ]
+  },
+  "boundary_notice_section": {
+    "title": "本轮边界",
+    "preview_only": true,
+    "fixture_only": true,
+    "render_surface_alpha_only": true,
+    "formal_apply_allowed": false,
+    "provider_model_call_allowed": false,
+    "provider_called": false,
+    "model_called": false,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false,
+    "html_body_modified": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "official_export_created": false,
+    "official_archive_created": false,
+    "main_project_pushed": false
+  },
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false,
+    "speaking_style": "calm_professional",
+    "assistant_tone": "teacher_work_partner",
+    "response_style": "concise_contextual"
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep",
+  "current_primary_state": "accepted_to_preview_only",
+  "revision_and_reject_are_alternate_paths": true,
+  "action_state_not_confusing": true
+}
