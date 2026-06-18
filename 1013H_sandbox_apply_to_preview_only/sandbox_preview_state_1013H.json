@@ -1,0 +1,79 @@
+{
+  "preview_state_id": "1013H_SANDBOX_PREVIEW_STATE",
+  "source_stage": "1013G_TEACHER_REVIEW_PREP_ONLY",
+  "preview_state_created": true,
+  "accepted_preview_items": [
+    {
+      "preview_item_id": "1013h_preview_card_01",
+      "source_review_card_id": "1013g_teacher_review_prep_card_01",
+      "target_section": "教学过程 · 探究",
+      "current_text": "先用生活图片唤起感受，再通过色卡分类帮助学生建立冷暖体验，最后把感受转化为自己的色彩表达。",
+      "preview_text": "探究先只发色卡和感受词卡。每组把色卡放到“温暖、清凉、安静、热烈”四个词旁边，再选一张最有把握的色卡说理由。已经能说出理由的小组，再领取一件生活物品做加料比较；记录单只写一行“我这样分是因为……”。",
+      "preview_status": "accepted_to_preview_only",
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "lesson_body_modified": false
+    },
+    {
+      "preview_item_id": "1013h_preview_card_02",
+      "source_review_card_id": "1013g_teacher_review_prep_card_02",
+      "target_section": "教学过程 · 表现",
+      "current_text": "学生围绕“我心中的一种感受”进行色彩小练习，自选基础、进阶或挑战任务，用颜色表达一种心情、天气、场景或小故事。",
+      "preview_text": "表现环节先让全班完成同一个基础任务：用2到3种颜色表现一种感受。提前完成的学生再打开加层：可以加一个小场景，或补一句“我这样配色是因为……”。",
+      "preview_status": "accepted_to_preview_only",
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "lesson_body_modified": false
+    },
+    {
+      "preview_item_id": "1013h_preview_card_03",
+      "source_review_card_id": "1013g_teacher_review_prep_card_03",
+      "target_section": "教学过程 · 交流展示",
+      "current_text": "选择几件作品展示，学生用一句话说明自己的色彩选择，同伴说出自己读到的感受，教师归纳色彩和情绪表达的关系。",
+      "preview_text": "交流展示固定两件作品：一件“颜色和感受关系清楚”，一件“还可以调整”。每件只问一个问题：“你从哪一种颜色读到了这种感觉？”教师最后只收束到颜色、感受和理由。",
+      "preview_status": "accepted_to_preview_only",
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "lesson_body_modified": false
+    }
+  ],
+  "waiting_teacher_choice_items": [
+    {
+      "source_review_card_id": "1013g_teacher_review_prep_card_01",
+      "target_section": "教学过程 · 探究",
+      "available_actions": [
+        "accept_to_preview_only",
+        "reject",
+        "revise"
+      ],
+      "default_action": "waiting_teacher_choice"
+    },
+    {
+      "source_review_card_id": "1013g_teacher_review_prep_card_02",
+      "target_section": "教学过程 · 表现",
+      "available_actions": [
+        "accept_to_preview_only",
+        "reject",
+        "revise"
+      ],
+      "default_action": "waiting_teacher_choice"
+    },
+    {
+      "source_review_card_id": "1013g_teacher_review_prep_card_03",
+      "target_section": "教学过程 · 交流展示",
+      "available_actions": [
+        "accept_to_preview_only",
+        "reject",
+        "revise"
+      ],
+      "default_action": "waiting_teacher_choice"
+    }
+  ],
+  "preview_only": true,
+  "formal_apply_allowed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false
+}

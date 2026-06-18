@@ -6,8 +6,8 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
-- Current completed product stage: `1013G_TEACHER_REVIEW_PREP_ONLY`.
-- Current product next stage: `1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY`.
+- Current completed product stage: `1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY`.
+- Current product next stage: `1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
 - Current boundary: no formal apply, no database write, no memory write, no Feishu write, no official archive/export, no formal 1013G. `accept_to_preview_only` remains sandbox-only.
@@ -39,6 +39,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - Teacher review is required for every pending change.
 - R2D2 / 1013G PREP outputs are review-package data only; they do not write candidate text into the HTML body.
 - 1013G teacher-review prep exposes `accept_to_preview_only`, `reject`, and `revise` options, but none of them perform formal apply.
+- 1013H creates sandbox preview-state items and preview diff cards only; it remains reversible and does not write the formal lesson body.
 
 ## Reused Project Patterns
 
@@ -196,6 +197,16 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Teacher actions prepared: `accept_to_preview_only`, `reject`, and `revise`.
 - Next stage: `1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY`.
 - Boundary: `accept_to_preview_only` remains sandbox-only; no formal apply, no formal 1013G, and no lesson body write.
+
+## 1013H Sandbox Apply To Preview Only
+
+- `scripts/validate_1013H_sandbox_apply_to_preview_only.py` simulates teacher actions from `1013G_TEACHER_REVIEW_PREP_ONLY` into sandbox preview state.
+- Output directory: `1013H_sandbox_apply_to_preview_only/`.
+- Required files were generated: `1013H_result.json`, `1013H_report.md`, `sandbox_preview_state_1013H.json`, `preview_diff_cards_1013H.json`, and `teacher_action_trace_1013H.json`.
+- Final status: `PASS_1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY`.
+- Simulated actions: `accept_to_preview_only`, `reject`, and `revise`.
+- Next stage: `1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW`.
+- Boundary: preview-state only; no formal apply, no formal 1013G, no lesson body write, no database/memory/Feishu write.
 
 ## 1013M MiniMax M3 Connection
 

@@ -1,11 +1,11 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013G_TEACHER_REVIEW_PREP_ONLY
-FINAL_STATUS=PASS_1013G_TEACHER_REVIEW_PREP_ONLY
-LATEST_COMPLETED_PRODUCT_STAGE=1013G_TEACHER_REVIEW_PREP_ONLY
+REVIEW_STAGE=1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
+FINAL_STATUS=PASS_1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
+LATEST_COMPLETED_PRODUCT_STAGE=1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
-NEXT_RECOMMENDED_STAGE=1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
+NEXT_RECOMMENDED_STAGE=1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
 DEEP_REASONING_OPTION=MiniMax-M3_WITH_THINKING_ADAPTIVE
 FORMAL_APPLY_ALLOWED=false
@@ -15,26 +15,25 @@ MAIN_PROJECT_PUSHED=false
 
 ## Summary
 
-This entry updates the prep-room review package through the R2D2 structure-assimilation line and the teacher-review preparation surface.
-
-The current chain is:
+This entry updates the prep-room review package through the sandbox preview-state line. The current chain is:
 
 ```text
 1013F_R2D2_CASE_REFERENCE_STRUCTURE_ASSIMILATION
 -> 1013F_R2D2_REVIEW_GATE_BEFORE_1013G
 -> 1013G_PREP_CANDIDATE_REVIEW_SANDBOX
 -> 1013G_TEACHER_REVIEW_PREP_ONLY
+-> 1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
 ```
 
-The work remains review-package only. It does not enter formal 1013G, does not apply candidate text to the lesson body, and does not write database, memory, or Feishu.
+The work remains preview/review-package only. It does not enter formal 1013G, does not apply candidate text to the lesson body, and does not write database, memory, or Feishu.
 
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
-1013G_teacher_review_prep_only/1013G_teacher_review_prep_report.md
-1013G_teacher_review_prep_only/1013G_teacher_review_prep_result.json
+1013H_sandbox_apply_to_preview_only/1013H_report.md
+1013H_sandbox_apply_to_preview_only/1013H_result.json
 ```
 
 ## Accepted Product Baseline
@@ -47,29 +46,29 @@ REVIEW_PACKAGE_MANIFEST.md
 1013F_R2D2_REVIEW_GATE_BEFORE_1013G
 1013G_PREP_CANDIDATE_REVIEW_SANDBOX
 1013G_TEACHER_REVIEW_PREP_ONLY
+1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
 ```
 
-## Current Candidate State
+## Current Preview State
 
 ```text
-approved_candidate_count=3
-rejected_candidate_count=0
-candidate_cards_loaded=3
-teacher_action_options_present=true
-accept_to_preview_only=true
-reject_option_present=true
-revise_option_present=true
+preview_state_created=true
+accepted_preview_items_count=3
+preview_diff_cards_created=true
+accept_to_preview_only_simulated=true
+reject_simulated=true
+revise_simulated=true
+revert_available=true
+candidate_preview_only=true
 ```
 
-Approved means approved for sandbox/preview review only. It does not mean teacher confirmation, formal apply, or lesson-body merge.
+`accept_to_preview_only` creates sandbox preview-state items and preview diff cards. It does not mean teacher confirmation, formal apply, or lesson-body merge.
 
 ## Next Recommended Stage
 
 ```text
-1013H_SANDBOX_APPLY_TO_PREVIEW_ONLY
+1013I_TEACHER_SELF_PREP_INPUT_MINIMAL_FLOW
 ```
-
-This next stage, if opened, must remain sandbox-only. It may prepare preview-state behavior for accepted teacher-review choices, but it must not write the formal lesson body.
 
 ## MiniMax Model Baseline
 
@@ -90,15 +89,6 @@ deep_reasoning=MiniMax-M3 + thinking adaptive
 do_not_use=thinking.type enabled
 do_not_omit_thinking=true
 ```
-
-## Feishu Schedule Caveat
-
-```text
-1013S_FEISHU_SCHEDULE_REAL_TIME_BINDING
-FINAL_STATUS=PASS_FEISHU_SNAPSHOT_SCHEDULE_REAL_TIME_BINDING_WITH_LIVE_CONFIG_CAVEAT
-```
-
-Live Feishu credentials were not configured in this environment. The preview uses local full-dump snapshot data plus local school-period time mapping. Do not treat it as formal live Feishu provider integration.
 
 ## Boundary
 
