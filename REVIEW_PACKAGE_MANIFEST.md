@@ -119,6 +119,7 @@ do_not_omit_thinking=true
 1013I_R3_self_prep_preview_chain_from_review_cards/
 1013I_R4_minimal_self_prep_page_fixture/
 1013I_R5_teacher_self_prep_alpha_smoke/
+1013I_R5_R1_review_repo_validator_path_fix/
 1013S_feishu_schedule_real_time_binding/
 1013M_minimax_m3_connection/
 1013N_minimax_m3_vs_m27_highspeed_comparison/
@@ -152,6 +153,7 @@ source_delta_1013I_R2/
 source_delta_1013I_R3/
 source_delta_1013I_R4/
 source_delta_1013I_R5/
+source_delta_1013I_R5_R1/
 source_delta_1013S/
 source_delta_1013M/
 source_delta_1013N/
@@ -188,6 +190,8 @@ SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md
 1013I_R3_self_prep_preview_chain_from_review_cards/1013I_R3_report.md
 1013I_R4_minimal_self_prep_page_fixture/1013I_R4_report.md
 1013I_R5_teacher_self_prep_alpha_smoke/1013I_R5_report.md
+1013I_R5_R1_review_repo_validator_path_fix/1013I_R5_R1_report.md
+scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
 1013S_feishu_schedule_real_time_binding/1013S_report.md
 1013M_minimax_m3_connection/1013M_report.md
 1013N_minimax_m3_vs_m27_highspeed_comparison/1013N_report.md
@@ -258,6 +262,8 @@ Provider traces are redacted before upload. Configuration examples may contain p
 - R4 resolves the R3 action-simulation ambiguity: current primary state is `accepted_to_preview_only`; revision and reject are alternate paths, not simultaneous states.
 - R5 should run a fixture-only teacher self-prep alpha smoke from the R4 page fixture.
 - 1013I_R5 verifies the fixture-only path: teacher input summary, 3 review cards, 3 preview diff cards, 3 revision items, 3 rejected items, 3 revert actions, 3 revise actions, and 3 reject actions. It proves `action_state_not_confusing=true`.
+- 1013I_R5_R1 fixes review repo reproducibility only: the R5 validator is available at top-level `scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py`, while the source-delta copy remains preserved.
+- The R5 validator now supports both local workspace layout and GitHub review repo root layout. Fresh clone review commands can run from the review repo root.
 - R6 should create a render-surface alpha from the R5 fixture/smoke outputs, still without provider/model or formal apply unless explicitly changed.
 - Feishu live schedule was checked, but local credentials were not configured; the preview uses a local full-dump snapshot plus local school-period time mapping.
 - MiniMax M3 is now the recommended default because the multi-round benchmark showed lower latency and at least comparable structured-output quality versus M2.7-highspeed.

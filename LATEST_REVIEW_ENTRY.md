@@ -1,10 +1,11 @@
 # Latest Review Entry
 
 ```text
-REVIEW_STAGE=1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
-FINAL_STATUS=PASS_1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
+REVIEW_STAGE=1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
+FINAL_STATUS=PASS_1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
 LATEST_COMPLETED_PRODUCT_STAGE=1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
-INHERITS_FROM=1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
+LATEST_COMPLETED_PACKAGING_FIX=1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
+INHERITS_FROM=1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
 LATEST_COMPLETED_MODEL_STAGE=1013P_MINIMAX_M3_THINKING_MODES_BENCHMARK
 NEXT_RECOMMENDED_STAGE=1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA
 DEFAULT_MODEL_RECOMMENDATION=MiniMax-M3_WITH_THINKING_DISABLED
@@ -28,21 +29,50 @@ This entry updates the prep-room review package through the fixture-only teacher
 -> 1013I_R3_SELF_PREP_PREVIEW_CHAIN_FROM_REVIEW_CARDS
 -> 1013I_R4_MINIMAL_SELF_PREP_PAGE_FIXTURE
 -> 1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE
+-> 1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX
 ```
 
 R5 runs a fixture-only alpha smoke over the complete page fixture path: teacher input summary, review cards, accepted preview items, preview diff cards, revision queue, rejected items, revert actions, revise actions, and reject actions.
 
 R5 proves the page state is not confusing: `current_primary_state=accepted_to_preview_only`, while revision and reject remain alternate paths.
 
+R5_R1 does not change the R5 product payload. It fixes the GitHub review repo reproducibility entrypoint by adding the expected top-level validator path and making the validator support both local workspace and review-repo root layouts.
+
 Start with:
 
 ```text
 README.md
 REVIEW_PACKAGE_MANIFEST.md
+1013I_R5_R1_review_repo_validator_path_fix/1013I_R5_R1_report.md
+1013I_R5_R1_review_repo_validator_path_fix/1013I_R5_R1_result.json
+scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
 1013I_R5_teacher_self_prep_alpha_smoke/1013I_R5_report.md
 1013I_R5_teacher_self_prep_alpha_smoke/1013I_R5_result.json
 1013I_R5_teacher_self_prep_alpha_smoke/self_prep_alpha_smoke_trace_1013I_R5.json
 1013I_R5_teacher_self_prep_alpha_smoke/self_prep_alpha_smoke_state_snapshot_1013I_R5.json
+```
+
+## R5_R1 Review Repo Validator Path Fix
+
+```text
+top_level_validator_present=true
+source_delta_validator_preserved=true
+review_repo_root_layout_supported=true
+local_workspace_layout_supported=true
+standard_py_compile_passed=true
+standard_validator_direct_passed=true
+standard_validator_root_passed=true
+review_repo_fresh_clone_simulation_passed=true
+business_semantics_changed=false
+r5_core_result_changed=false
+```
+
+Fresh clone review commands:
+
+```text
+python -m py_compile scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
+python scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py
+python scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py --root <repo-root>
 ```
 
 ## Alpha Smoke Result

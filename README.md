@@ -7,6 +7,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - Start with `SESSION_HANDOFF_20260618_PREP_ROOM_M3_AND_R2D_NEXT.md`.
 - Current review entry: `LATEST_REVIEW_ENTRY.md`.
 - Current completed product stage: `1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE`.
+- Current completed packaging fix: `1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX`.
 - Current product next stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA`.
 - Current model default: `MiniMax-M3` with `thinking: {"type":"disabled"}`.
 - Deep reasoning option: `MiniMax-M3` with `thinking: {"type":"adaptive"}`.
@@ -41,6 +42,7 @@ This package turns the v5 prep-room static preview into a render-canvas preview.
 - 1013G teacher-review prep exposes `accept_to_preview_only`, `reject`, and `revise` options, but none of them perform formal apply.
 - 1013H creates sandbox preview-state items and preview diff cards only; it remains reversible and does not write the formal lesson body.
 - 1013I creates a teacher self-prep input schema, request envelope, sufficiency assessment, and fixture preview only; it does not call a provider/model.
+- 1013I_R5_R1 only fixes the GitHub review repo validator path and fresh-clone reproducibility entrypoint; it does not change R5 business semantics.
 
 ## Reused Project Patterns
 
@@ -218,6 +220,25 @@ Current V1 keeps the composer implicit inside the static fixture and exposes the
 - Required input fields are present; the fixture can generate a self-prep preview without provider/model calls.
 - Next stage: `1013I_R0_UNIFIED_TEACHER_AGENT_PROFILE_AND_CAPABILITY_CONTRACT` first, then `1013I_R0A_VISIBLE_NAMING_AND_PROFILE_HOTFIX` before candidate-card seeding.
 - Boundary: input envelope and fixture preview only; no provider/model call, no formal apply, no lesson body write, no database/memory/Feishu write.
+
+## 1013I_R5 Teacher Self Prep Alpha Smoke
+
+- `scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py` verifies the fixture-only teacher self-prep alpha path from the R4 page fixture.
+- Output directory: `1013I_R5_teacher_self_prep_alpha_smoke/`.
+- Required files were generated: `1013I_R5_result.json`, `1013I_R5_report.md`, `self_prep_alpha_smoke_trace_1013I_R5.json`, and `self_prep_alpha_smoke_state_snapshot_1013I_R5.json`.
+- Final status: `PASS_1013I_R5_TEACHER_SELF_PREP_ALPHA_SMOKE`.
+- Boundary: fixture-only preview smoke; no provider/model call, no formal apply, no lesson body/HTML/database/memory/Feishu/export/archive write.
+
+## 1013I_R5_R1 Review Repo Validator Path Fix
+
+- `scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py` is now included at the GitHub review repo top-level `scripts/` path.
+- The validator supports both local workspace layout (`outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/`) and GitHub review repo root layout.
+- Output directory: `1013I_R5_R1_review_repo_validator_path_fix/`.
+- Required files were generated: `1013I_R5_R1_result.json` and `1013I_R5_R1_report.md`.
+- Source-delta record: `source_delta_1013I_R5_R1/scripts/validate_1013I_R5_teacher_self_prep_alpha_smoke.py`.
+- Final status: `PASS_1013I_R5_R1_REVIEW_REPO_VALIDATOR_PATH_FIX`.
+- Next stage: `1013I_R6_TEACHER_SELF_PREP_RENDER_SURFACE_ALPHA`.
+- Boundary: review-package reproducibility fix only; R5 business semantics unchanged, no provider/model call, no formal apply, no lesson body/HTML/database/memory/Feishu/export/archive write.
 
 ## 1013M MiniMax M3 Connection
 
