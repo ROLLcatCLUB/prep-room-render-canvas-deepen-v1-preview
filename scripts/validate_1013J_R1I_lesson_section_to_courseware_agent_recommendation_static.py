@@ -193,6 +193,10 @@ def main() -> None:
     checks["screenshot_smoke_pass"] = screenshot(stage, html_path)["screenshot_smoke_pass"]
     failed = [k for k, v in checks.items() if k not in BOUNDARY and k not in {"javascript_syntax_files"} and v is not True] + [k for k in BOUNDARY if checks.get(k) is not False]
     result = {"stage": STAGE_ID, "final_status": FINAL_STATUS if not failed else "FAIL_" + STAGE_ID, "inherits_from": INHERITS_FROM, "next_stage": "WAITING_FOR_R1H_OR_READY_FOR_R1J_IF_BOTH_PASS", "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), **checks, "failed_checks": failed}
+    result["auto_continue_allowed"] = not failed
+    result["next_recommended"] = "1013J_R1J_COURSEWARE_TEMPLATE_AND_AGENT_RECOMMENDATION_MERGE_STATIC" if not failed else "NONE"
+    if not failed:
+        result["next_stage"] = "1013J_R1J_COURSEWARE_TEMPLATE_AND_AGENT_RECOMMENDATION_MERGE_STATIC"
     write_json(stage / "1013J_R1I_result.json", result)
     write(stage / "1013J_R1I_report.md", f"# 1013J_R1I\n\nFINAL_STATUS={result['final_status']}\n\nLesson section to courseware recommendation static surface only.\n\nFailed checks: {failed}\n")
     write(out / "LATEST_REVIEW_ENTRY.md", f"# Latest Review Entry\n\nSTAGE={STAGE_ID}\nFINAL_STATUS={result['final_status']}\nNEXT_STAGE={result['next_stage']}\n\nR1I adds selected lesson section, Xiaojiao recommendations, accept preview state, and custom screen backlink suggestion.\n")
