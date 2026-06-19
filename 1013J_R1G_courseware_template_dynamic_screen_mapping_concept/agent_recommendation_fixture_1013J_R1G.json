@@ -1,0 +1,34 @@
+{
+  "stage": "1013J_R1G_COURSEWARE_TEMPLATE_DYNAMIC_SCREEN_MAPPING_CONCEPT",
+  "agent_recommendation_role": "recommend_templates_generate_screen_text_material_slots_and_lesson_mapping",
+  "source_lesson_section": "比较变化",
+  "agent_recommendation": {
+    "recommended_template": "two_image_comparison",
+    "recommended_screen_title": "哪一组颜色更安静？",
+    "recommended_question": "你从哪些颜色看出来？",
+    "material_slots": [
+      "热闹的色彩组合图",
+      "安静的色彩组合图"
+    ],
+    "reason": "这一段需要学生通过比较说出色彩感受，两图对比比单纯文字更适合大屏呈现。",
+    "teacher_actions": [
+      "采纳为课件页",
+      "换成三图比较",
+      "只保留文字问题",
+      "暂不生成"
+    ]
+  },
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

@@ -1,0 +1,58 @@
+{
+  "stage": "1013J_R1G_COURSEWARE_TEMPLATE_DYNAMIC_SCREEN_MAPPING_CONCEPT",
+  "teacher_visible_mapping_only": true,
+  "mappings": [
+    {
+      "lesson_section_label": "学生起点",
+      "courseware_screens": [
+        {
+          "screen_id": "screen_01",
+          "screen_title": "色彩的感觉",
+          "template_id": "cover_title",
+          "mapping_reason": "这一屏用于唤醒学生已有色彩感受"
+        }
+      ],
+      "can_return_to_lesson_plan": true,
+      "return_note": "如果老师新增经验唤醒页，小教可提示是否同步补入导入环节。"
+    },
+    {
+      "lesson_section_label": "比较变化",
+      "courseware_screens": [
+        {
+          "screen_id": "screen_03",
+          "screen_title": "哪一组颜色更安静？",
+          "template_id": "two_image_comparison",
+          "mapping_reason": "这一屏用于支持学生比较两组色彩并说出具体感受"
+        }
+      ],
+      "can_return_to_lesson_plan": true,
+      "return_note": "如果老师改成三图比较，小教可提示是否同步调整教学过程。"
+    },
+    {
+      "lesson_section_label": "材料与支架",
+      "courseware_screens": [
+        {
+          "screen_id": "screen_06",
+          "screen_title": "试一组颜色",
+          "template_id": "whiteboard_interaction",
+          "mapping_reason": "这一屏用于支持色卡操作和现场试色"
+        }
+      ],
+      "can_return_to_lesson_plan": true,
+      "return_note": "如果老师添加色卡整理页，小教可提示是否同步到材料准备。"
+    }
+  ],
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

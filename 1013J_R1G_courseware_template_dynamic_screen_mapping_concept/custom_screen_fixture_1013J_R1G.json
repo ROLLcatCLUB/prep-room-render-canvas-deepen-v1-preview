@@ -1,0 +1,36 @@
+{
+  "stage": "1013J_R1G_COURSEWARE_TEMPLATE_DYNAMIC_SCREEN_MAPPING_CONCEPT",
+  "custom_screens": [
+    {
+      "screen_id": "custom_01",
+      "screen_title": "课前提醒",
+      "template_id": "custom_blank",
+      "generation_source": "teacher_added",
+      "linked_to_lesson": false,
+      "teacher_note": "老师临时加入，不进入教学设计正文"
+    },
+    {
+      "screen_id": "custom_02",
+      "screen_title": "色卡整理提醒",
+      "template_id": "task_release",
+      "generation_source": "teacher_added",
+      "linked_to_lesson": false,
+      "agent_can_suggest_lesson_link": true,
+      "suggested_lesson_section": "材料准备",
+      "suggestion_text": "这一页可以作为材料准备提醒，是否加入教学过程？"
+    }
+  ],
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

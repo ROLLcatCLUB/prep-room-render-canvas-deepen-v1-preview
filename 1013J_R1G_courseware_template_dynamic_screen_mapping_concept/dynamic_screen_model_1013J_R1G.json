@@ -1,0 +1,143 @@
+{
+  "stage": "1013J_R1G_COURSEWARE_TEMPLATE_DYNAMIC_SCREEN_MAPPING_CONCEPT",
+  "screen_count_not_fixed": true,
+  "sample_8_screens_fixture_only": true,
+  "teacher_can_add_custom_screen": true,
+  "teacher_can_delete_or_reorder": true,
+  "screens_can_be_linked_or_unlinked_to_lesson": true,
+  "screens": [
+    {
+      "screen_id": "screen_01",
+      "screen_order": 1,
+      "screen_title": "色彩的感觉",
+      "template_id": "cover_title",
+      "generation_source": "agent_recommended",
+      "linked_to_lesson": true,
+      "linked_lesson_section": "导入问题",
+      "linked_teaching_activity": "从色彩图片和课题进入，唤醒学生的直观感受",
+      "display_intent": "让学生先进入色彩感受，而不是先听概念",
+      "screen_text": {
+        "main_question": "颜色为什么会让人产生不同感觉？",
+        "teacher_prompt": "先说第一感觉。"
+      },
+      "material_slots": [
+        {
+          "slot_id": "background",
+          "slot_type": "image",
+          "teacher_label": "课题背景图",
+          "status": "可后补"
+        }
+      ],
+      "teacher_editable_later": true
+    },
+    {
+      "screen_id": "screen_02",
+      "screen_order": 2,
+      "screen_title": "这些颜色给你什么感觉？",
+      "template_id": "three_image_comparison",
+      "generation_source": "agent_recommended",
+      "linked_to_lesson": true,
+      "linked_lesson_section": "观察感受",
+      "linked_teaching_activity": "看多组生活色彩图片，先说直观感受",
+      "display_intent": "用图像打开经验，让学生先说感受",
+      "screen_text": {
+        "main_question": "这些颜色给你什么感觉？",
+        "teacher_prompt": "不急着判断对错。"
+      },
+      "material_slots": [
+        {
+          "slot_id": "image_a",
+          "slot_type": "image",
+          "teacher_label": "生活色彩图片 A",
+          "status": "待补图"
+        },
+        {
+          "slot_id": "image_b",
+          "slot_type": "image",
+          "teacher_label": "生活色彩图片 B",
+          "status": "待补图"
+        },
+        {
+          "slot_id": "image_c",
+          "slot_type": "image",
+          "teacher_label": "生活色彩图片 C",
+          "status": "待补图"
+        }
+      ],
+      "teacher_editable_later": true
+    },
+    {
+      "screen_id": "screen_03",
+      "screen_order": 3,
+      "screen_title": "哪一组颜色更安静？",
+      "template_id": "two_image_comparison",
+      "generation_source": "agent_recommended",
+      "linked_to_lesson": true,
+      "linked_lesson_section": "比较变化",
+      "linked_teaching_activity": "通过两组色彩比较，帮助学生说出色彩带来的不同感觉",
+      "display_intent": "帮助学生从“好看”转向说出具体色彩感受",
+      "screen_text": {
+        "main_question": "哪一组颜色更安静？",
+        "teacher_prompt": "你从哪些颜色看出来？"
+      },
+      "material_slots": [
+        {
+          "slot_id": "image_a",
+          "slot_type": "image",
+          "teacher_label": "热闹的色彩组合图",
+          "status": "待补图"
+        },
+        {
+          "slot_id": "image_b",
+          "slot_type": "image",
+          "teacher_label": "安静的色彩组合图",
+          "status": "待补图"
+        }
+      ],
+      "teacher_editable_later": true
+    },
+    {
+      "screen_id": "screen_06",
+      "screen_order": 6,
+      "screen_title": "试一组颜色",
+      "template_id": "whiteboard_interaction",
+      "generation_source": "agent_recommended",
+      "linked_to_lesson": true,
+      "linked_lesson_section": "色卡试验",
+      "linked_teaching_activity": "让学生拖动色卡，观察组合变化",
+      "display_intent": "让学生看见色彩组合变化",
+      "screen_text": {
+        "main_question": "试一组颜色",
+        "teacher_prompt": "拖一拖色卡。"
+      },
+      "material_slots": [
+        {
+          "slot_id": "board",
+          "slot_type": "whiteboard",
+          "teacher_label": "色卡拖拽区",
+          "status": "可白板"
+        },
+        {
+          "slot_id": "prompt",
+          "slot_type": "text",
+          "teacher_label": "操作提示",
+          "status": "已有文字"
+        }
+      ],
+      "teacher_editable_later": true
+    }
+  ],
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

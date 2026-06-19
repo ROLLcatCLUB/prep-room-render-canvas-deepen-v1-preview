@@ -1,0 +1,384 @@
+{
+  "stage": "1013J_R1G_COURSEWARE_TEMPLATE_DYNAMIC_SCREEN_MAPPING_CONCEPT",
+  "template_count": 14,
+  "templates": [
+    {
+      "template_id": "cover_title",
+      "teacher_label": "课题封面",
+      "classroom_use": "呈现课题、单元和本课核心问题",
+      "recommended_for": [
+        "导入",
+        "课题呈现"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "title",
+          "slot_type": "text",
+          "teacher_label": "课题",
+          "placeholder_text": "放本课课题"
+        },
+        {
+          "slot_id": "background",
+          "slot_type": "image",
+          "teacher_label": "背景图",
+          "placeholder_text": "放一张轻背景图"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "one_image_observation",
+      "teacher_label": "一图观察",
+      "classroom_use": "围绕一张图片进行观察、描述和追问",
+      "recommended_for": [
+        "图像观察",
+        "经验唤醒"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "image",
+          "slot_type": "image",
+          "teacher_label": "观察图片",
+          "placeholder_text": "放一张用于观察的图片"
+        },
+        {
+          "slot_id": "question",
+          "slot_type": "text",
+          "teacher_label": "课堂问题",
+          "placeholder_text": "你看到了什么？"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "two_image_comparison",
+      "teacher_label": "两图对比",
+      "classroom_use": "帮助学生比较两组图像、色彩或方法的差异",
+      "recommended_for": [
+        "比较观察",
+        "方法发现",
+        "审美判断"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "image_a",
+          "slot_type": "image",
+          "teacher_label": "素材 A",
+          "placeholder_text": "放一张用于比较的图片"
+        },
+        {
+          "slot_id": "image_b",
+          "slot_type": "image",
+          "teacher_label": "素材 B",
+          "placeholder_text": "放另一张用于比较的图片"
+        },
+        {
+          "slot_id": "question",
+          "slot_type": "text",
+          "teacher_label": "课堂问题",
+          "placeholder_text": "你发现它们有什么不同？"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "three_image_comparison",
+      "teacher_label": "三图比较",
+      "classroom_use": "让学生在多组图像之间寻找规律或差异",
+      "recommended_for": [
+        "归纳发现",
+        "作品比较"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "image_a",
+          "slot_type": "image",
+          "teacher_label": "素材 A",
+          "placeholder_text": "第一张图片"
+        },
+        {
+          "slot_id": "image_b",
+          "slot_type": "image",
+          "teacher_label": "素材 B",
+          "placeholder_text": "第二张图片"
+        },
+        {
+          "slot_id": "image_c",
+          "slot_type": "image",
+          "teacher_label": "素材 C",
+          "placeholder_text": "第三张图片"
+        },
+        {
+          "slot_id": "question",
+          "slot_type": "text",
+          "teacher_label": "课堂问题",
+          "placeholder_text": "它们有什么共同点？"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "image_with_question",
+      "teacher_label": "图像提问",
+      "classroom_use": "图片为主，配一个轻问题",
+      "recommended_for": [
+        "导入",
+        "追问"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "image",
+          "slot_type": "image",
+          "teacher_label": "主图",
+          "placeholder_text": "放主观察图"
+        },
+        {
+          "slot_id": "question",
+          "slot_type": "text",
+          "teacher_label": "问题",
+          "placeholder_text": "你注意到了什么？"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "image_annotation",
+      "teacher_label": "图像标注",
+      "classroom_use": "在图片上圈画、标记或提示观察位置",
+      "recommended_for": [
+        "观察支架",
+        "局部分析"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "image",
+          "slot_type": "image",
+          "teacher_label": "标注图片",
+          "placeholder_text": "放需要圈画的图片"
+        },
+        {
+          "slot_id": "annotation_hint",
+          "slot_type": "text",
+          "teacher_label": "标注提示",
+          "placeholder_text": "圈出你判断的依据"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": true
+    },
+    {
+      "template_id": "word_card",
+      "teacher_label": "词卡",
+      "classroom_use": "给学生提供可选择、可替换的表达词",
+      "recommended_for": [
+        "表达支架",
+        "关键词回收"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "words",
+          "slot_type": "text_list",
+          "teacher_label": "词卡",
+          "placeholder_text": "热烈 / 安静 / 柔和"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "task_release",
+      "teacher_label": "任务发布",
+      "classroom_use": "把学生要完成的任务投到大屏",
+      "recommended_for": [
+        "任务说明",
+        "操作提示"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "task",
+          "slot_type": "text",
+          "teacher_label": "任务",
+          "placeholder_text": "用 3-4 种颜色表达一种感觉"
+        },
+        {
+          "slot_id": "requirement",
+          "slot_type": "text",
+          "teacher_label": "要求",
+          "placeholder_text": "说出你的选择理由"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "step_demo",
+      "teacher_label": "步骤示范",
+      "classroom_use": "用少量步骤说明操作过程",
+      "recommended_for": [
+        "方法学习",
+        "教师示范"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "step_1",
+          "slot_type": "text",
+          "teacher_label": "第一步",
+          "placeholder_text": "先观察"
+        },
+        {
+          "slot_id": "step_2",
+          "slot_type": "text",
+          "teacher_label": "第二步",
+          "placeholder_text": "再尝试"
+        },
+        {
+          "slot_id": "demo_image",
+          "slot_type": "image",
+          "teacher_label": "示范图",
+          "placeholder_text": "放示范图"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "whiteboard_interaction",
+      "teacher_label": "白板互动",
+      "classroom_use": "保留一块可圈画、拖拽或现场记录的区域",
+      "recommended_for": [
+        "色卡试验",
+        "现场标注",
+        "学生互动"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "board",
+          "slot_type": "whiteboard",
+          "teacher_label": "白板区",
+          "placeholder_text": "保留可操作区域"
+        },
+        {
+          "slot_id": "prompt",
+          "slot_type": "text",
+          "teacher_label": "操作提示",
+          "placeholder_text": "拖一拖色卡"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": true
+    },
+    {
+      "template_id": "student_work_wall",
+      "teacher_label": "作品展示",
+      "classroom_use": "展示学生作品、示例或对比作品",
+      "recommended_for": [
+        "展示交流",
+        "同伴评价"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "work_1",
+          "slot_type": "image",
+          "teacher_label": "作品 A",
+          "placeholder_text": "放学生作品"
+        },
+        {
+          "slot_id": "work_2",
+          "slot_type": "image",
+          "teacher_label": "作品 B",
+          "placeholder_text": "放学生作品"
+        },
+        {
+          "slot_id": "talk_prompt",
+          "slot_type": "text",
+          "teacher_label": "交流提示",
+          "placeholder_text": "你用了哪些颜色？"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "evaluation_prompt",
+      "teacher_label": "评价提示",
+      "classroom_use": "显示评价点、修改建议或同伴反馈句式",
+      "recommended_for": [
+        "展示评价",
+        "修改反馈"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "criteria",
+          "slot_type": "text_list",
+          "teacher_label": "评价点",
+          "placeholder_text": "颜色选择和感觉是否有关"
+        },
+        {
+          "slot_id": "revision",
+          "slot_type": "text",
+          "teacher_label": "修改提示",
+          "placeholder_text": "你想调整哪里？"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "summary_review",
+      "teacher_label": "总结回看",
+      "classroom_use": "收束本课路径和学生收获",
+      "recommended_for": [
+        "课堂总结",
+        "回顾"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "summary",
+          "slot_type": "text",
+          "teacher_label": "总结",
+          "placeholder_text": "看色彩、说感觉、比变化、做表达"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    },
+    {
+      "template_id": "custom_blank",
+      "teacher_label": "自由页",
+      "classroom_use": "老师临时添加，不必立即关联教学设计",
+      "recommended_for": [
+        "临时提醒",
+        "过渡页",
+        "课堂管理"
+      ],
+      "default_slots": [
+        {
+          "slot_id": "free_content",
+          "slot_type": "mixed",
+          "teacher_label": "自由内容",
+          "placeholder_text": "放文字、图片或提醒"
+        }
+      ],
+      "editable_later": true,
+      "whiteboard_required": false
+    }
+  ],
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}
