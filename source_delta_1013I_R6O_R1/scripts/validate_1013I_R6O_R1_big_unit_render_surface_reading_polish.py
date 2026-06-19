@@ -76,10 +76,9 @@ def polish_css() -> str:
 
     /* 1013I_R6O_R1: reading polish, remove card wall and make state row match single-lesson tone */
     [data-r6o-r1-reading-polish] .nb-state-bar {
-      margin: 4px 0 10px;
-      padding: 8px 0;
+      margin: 0 0 8px;
+      padding: 4px 0 6px;
       border: 0;
-      border-top: 1px solid rgba(36, 84, 70, .12);
       border-bottom: 1px solid rgba(36, 84, 70, .12);
       background: transparent !important;
       box-shadow: none !important;
@@ -94,6 +93,17 @@ def polish_css() -> str:
     [data-r6o-r1-reading-polish] .nb-hero {
       padding-bottom: 6px !important;
       margin-bottom: 0 !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-mode-toggle {
+      padding: 2px !important;
+      gap: 4px !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-mode-btn {
+      min-height: 24px !important;
+      padding: 0 9px !important;
+      font-size: 12px !important;
     }
 
     [data-r6o-r1-reading-polish] .r6o-r1-status-pill {
