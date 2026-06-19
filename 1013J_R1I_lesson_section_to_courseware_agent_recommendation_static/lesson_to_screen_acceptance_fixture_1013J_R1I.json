@@ -1,0 +1,18 @@
+{
+  "stage": "1013J_R1I_LESSON_SECTION_TO_COURSEWARE_AGENT_RECOMMENDATION_STATIC",
+  "accepted_preview": true,
+  "linked_lesson_section": "比较变化",
+  "formal_apply_performed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "main_project_pushed": false
+}
