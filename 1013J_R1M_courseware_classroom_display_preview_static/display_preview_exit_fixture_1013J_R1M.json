@@ -1,6 +1,8 @@
 {
   "stage": "1013J_R1M_COURSEWARE_CLASSROOM_DISPLAY_PREVIEW_STATIC",
   "exit_target": "课件制作区",
+  "exit_href": "?mode=edit#coursewareExpanded",
+  "clears_preview_query": true,
   "runtime_connected": false,
   "provider_called": false,
   "model_called": false,

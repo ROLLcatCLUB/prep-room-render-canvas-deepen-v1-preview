@@ -115,7 +115,7 @@ def js() -> str:
           <span class="r1m-ratio"><span class="${!isFourThree ? "active" : ""}">16:9</span><span class="${isFourThree ? "active" : ""}">4:3</span></span>
           <a class="r1m-control" href="?preview=display&screen=${selected}&ratio=16_9#coursewareExpanded">16:9</a>
           <a class="r1m-control" href="?preview=display&screen=${selected}&ratio=4_3#coursewareExpanded">4:3</a>
-          <a class="r1m-control primary" href="#coursewareExpanded">退出预览</a>
+          <a class="r1m-control primary" href="?mode=edit#coursewareExpanded">退出预览</a>
         </nav>
       </div>`;
     }
@@ -209,6 +209,7 @@ def validate(html: str) -> dict[str, Any]:
         "screen_06_preview_created": "06 · 样例草稿" in preview_source and "试一组颜色" in preview_source and "课堂互动区" in preview_source,
         "previous_next_controls_present": "上一屏" in text and "下一屏" in text,
         "exit_preview_action_present": "退出预览" in text,
+        "exit_preview_clears_preview_query": "?mode=edit#coursewareExpanded" in preview_source,
         "screen_ratio_16_9_present": "16:9" in text,
         "screen_ratio_4_3_present": "4:3" in text,
         "screen_ratio_visual_difference_present": "ratio-4-3" in preview_source and "aspect-ratio:4/3" in html and "aspect-ratio:16/9" in html,
@@ -231,7 +232,7 @@ def main() -> None:
     write_json(stage / "classroom_display_preview_state_1013J_R1M.json", {"stage": STAGE_ID, "preview_screen": "03", "ratio": "16:9", **BOUNDARY})
     write_json(stage / "display_preview_navigation_fixture_1013J_R1M.json", {"stage": STAGE_ID, "controls": ["上一屏", "下一屏", "退出预览"], **BOUNDARY})
     write_json(stage / "display_preview_screen_ratio_fixture_1013J_R1M.json", {"stage": STAGE_ID, "ratios": ["16:9", "4:3"], "visual_difference_present": True, **BOUNDARY})
-    write_json(stage / "display_preview_exit_fixture_1013J_R1M.json", {"stage": STAGE_ID, "exit_target": "课件制作区", **BOUNDARY})
+    write_json(stage / "display_preview_exit_fixture_1013J_R1M.json", {"stage": STAGE_ID, "exit_target": "课件制作区", "exit_href": "?mode=edit#coursewareExpanded", "clears_preview_query": True, **BOUNDARY})
     checks = validate(html)
     checks.update(js_check(stage, html))
     shot = screenshot(stage, html_path)
@@ -241,7 +242,7 @@ def main() -> None:
     write_json(stage / "1013J_R1M_result.json", result)
     write(stage / "1013J_R1M_report.md", f"# 1013J_R1M\n\nFINAL_STATUS={result['final_status']}\n\nStatic classroom display preview mode. This is the visible workflow queue endpoint and must stop for user review. No runtime, display websocket, student client, whiteboard, upload, search, material library, export, provider/model, or storage integration.\n\nFailed checks: {failed}\n")
     write(out / "LATEST_REVIEW_ENTRY.md", f"# Latest Review Entry\n\nSTAGE={STAGE_ID}\nFINAL_STATUS={result['final_status']}\nNEXT_STAGE={result['next_stage']}\nAUTO_CONTINUE_ALLOWED=false\nNEEDS_USER_REVIEW=true\n\nR1M creates a static classroom display preview mode and closes the current visible workflow queue for user review.\n")
-    write(out / "README.md", f"# Prep Room Review Package\n\nLatest stage: `{STAGE_ID}`\n\nOpen `{STAGE_DIR_NAME}/{HTML_NAME}?preview=display&screen=03#coursewareExpanded`.\n")
+    write(out / "README.md", f"# Prep Room Review Package\n\nLatest stage: `{STAGE_ID}`\n\nProduction/editing surface: `{STAGE_DIR_NAME}/{HTML_NAME}#coursewareExpanded`.\n\nDisplay preview: `{STAGE_DIR_NAME}/{HTML_NAME}?preview=display&screen=03#coursewareExpanded`.\n")
     write(out / "REVIEW_PACKAGE_MANIFEST.md", f"# Review Package Manifest\n\nLatest stage: `{STAGE_ID}`\n\nIncludes `{STAGE_DIR_NAME}` and `scripts/{VALIDATOR_NAME}`.\n\nQueue endpoint: auto-continue is false; user review required. Boundaries: static fixture only; no classroom runtime/student client/display websocket/whiteboard/upload/search/material-library/PPT export/provider/model/database/memory/Feishu integration; main project not pushed.\n")
     delta = out / "source_delta_1013J_R1M" / "scripts" / VALIDATOR_NAME
     delta.parent.mkdir(parents=True, exist_ok=True)
