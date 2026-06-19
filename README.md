@@ -1,14 +1,14 @@
 # Prep Room Render Canvas Deepen V1 Review Package
 
-Latest stage: `1013I_R6R_BIG_UNIT_SECTION_CANDIDATE_GENERATOR_ADAPTER_FIXTURE`
+Latest stage: `1013I_R6S_BIG_UNIT_SECTION_CANDIDATE_RETURN_TO_EDIT_MODAL_PREVIEW`
 
 Open:
-- `1013I_R6R_big_unit_section_candidate_generator_adapter_fixture/big_unit_section_candidate_pack_1013I_R6R.json`
-- `1013I_R6R_big_unit_section_candidate_generator_adapter_fixture/1013I_R6R_result.json`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/prep_room_render_canvas_deepen_v1_R6S_candidate_return_to_edit_modal_preview.html`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/1013I_R6S_result.json`
 
 Run:
 
 ```bash
-python scripts/validate_1013I_R6R_big_unit_section_candidate_generator_adapter_fixture.py
-python scripts/validate_1013I_R6R_big_unit_section_candidate_generator_adapter_fixture.py --root <repo-root>
+python scripts/validate_1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview.py
+python scripts/validate_1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview.py --root <repo-root>
 ```

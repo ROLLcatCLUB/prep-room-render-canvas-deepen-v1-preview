@@ -1,17 +1,19 @@
 # Review Package Manifest
 
-Latest stage: `1013I_R6R_BIG_UNIT_SECTION_CANDIDATE_GENERATOR_ADAPTER_FIXTURE`
+Latest stage: `1013I_R6S_BIG_UNIT_SECTION_CANDIDATE_RETURN_TO_EDIT_MODAL_PREVIEW`
 
 Files:
 - `LATEST_REVIEW_ENTRY.md`
 - `README.md`
 - `REVIEW_PACKAGE_MANIFEST.md`
-- `1013I_R6R_big_unit_section_candidate_generator_adapter_fixture/big_unit_section_candidate_adapter_fixture_1013I_R6R.json`
-- `1013I_R6R_big_unit_section_candidate_generator_adapter_fixture/big_unit_section_candidate_pack_1013I_R6R.json`
-- `1013I_R6R_big_unit_section_candidate_generator_adapter_fixture/big_unit_section_candidate_trace_1013I_R6R.json`
-- `1013I_R6R_big_unit_section_candidate_generator_adapter_fixture/big_unit_section_candidate_policy_check_1013I_R6R.json`
-- `1013I_R6R_big_unit_section_candidate_generator_adapter_fixture/1013I_R6R_result.json`
-- `1013I_R6R_big_unit_section_candidate_generator_adapter_fixture/1013I_R6R_report.md`
-- `scripts/validate_1013I_R6R_big_unit_section_candidate_generator_adapter_fixture.py`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/prep_room_render_canvas_deepen_v1_R6S_candidate_return_to_edit_modal_preview.html`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/big_unit_section_candidate_modal_return_fixture_1013I_R6S.json`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/big_unit_section_candidate_modal_preview_state_1013I_R6S.json`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/big_unit_section_candidate_modal_action_trace_1013I_R6S.json`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/1013I_R6S_result.json`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/1013I_R6S_report.md`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/ui_smoke_screenshot_1013I_R6S_desktop.png`
+- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/ui_smoke_screenshot_1013I_R6S_mobile.png`
+- `scripts/validate_1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview.py`
 
-Boundary: static fixture candidate generation only. No runtime, provider/model, formal apply, database, memory, Feishu, or main-project push.
+Boundary: static candidate return to edit-modal preview only. No runtime, provider/model, formal apply, database, memory, Feishu, or main-project push.

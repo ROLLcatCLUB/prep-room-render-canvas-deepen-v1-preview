@@ -1,0 +1,61 @@
+{
+  "stage": "1013I_R6S_BIG_UNIT_SECTION_CANDIDATE_RETURN_TO_EDIT_MODAL_PREVIEW",
+  "state_type": "section_edit_modal_candidate_preview_state",
+  "items": [
+    {
+      "section_id": "curriculum_basis",
+      "candidate_id": "candidate_curriculum_basis_1013I_R6R",
+      "teacher_label": "课标依据",
+      "state": "candidate_visible_in_edit_modal",
+      "destination": "section_preview_only",
+      "can_accept_to_section_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false
+    },
+    {
+      "section_id": "core_literacy",
+      "candidate_id": "candidate_core_literacy_1013I_R6R",
+      "teacher_label": "核心素养",
+      "state": "candidate_visible_in_edit_modal",
+      "destination": "section_preview_only",
+      "can_accept_to_section_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false
+    },
+    {
+      "section_id": "performance_task",
+      "candidate_id": "candidate_performance_task_1013I_R6R",
+      "teacher_label": "表现任务",
+      "state": "candidate_visible_in_edit_modal",
+      "destination": "section_preview_only",
+      "can_accept_to_section_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false
+    },
+    {
+      "section_id": "lesson_chain",
+      "candidate_id": "candidate_lesson_chain_1013I_R6R",
+      "teacher_label": "课时任务链",
+      "state": "candidate_visible_in_edit_modal",
+      "destination": "section_preview_only",
+      "can_accept_to_section_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false
+    }
+  ],
+  "preview_only": true,
+  "preview_only_actions": true,
+  "formal_apply_performed": false,
+  "formal_apply_allowed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}
