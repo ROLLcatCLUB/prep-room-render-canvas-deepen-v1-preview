@@ -1,0 +1,30 @@
+{
+  "stage": "1013I_R6R_BIG_UNIT_SECTION_CANDIDATE_GENERATOR_ADAPTER_FIXTURE",
+  "inherits_from": "1013I_R6Q_BIG_UNIT_SECTION_GENERATION_REQUEST_ENVELOPE",
+  "adapter_type": "static_fixture_candidate_generator",
+  "description": "Converts R6Q request-envelope targets into static preview-only candidate texts for later edit-modal return.",
+  "source_files": {
+    "request_envelope": "1013I_R6Q_big_unit_section_generation_request_envelope/big_unit_section_generation_request_envelope_1013I_R6Q.json",
+    "context_pack": "1013I_R6Q_big_unit_section_generation_request_envelope/big_unit_section_generation_context_pack_1013I_R6Q.json",
+    "generation_policy": "1013I_R6Q_big_unit_section_generation_request_envelope/big_unit_section_generation_policy_1013I_R6Q.json",
+    "dry_run_trace": "1013I_R6Q_big_unit_section_generation_request_envelope/big_unit_section_generation_dry_run_trace_1013I_R6Q.json"
+  },
+  "target_sections": [
+    "课标依据",
+    "核心素养",
+    "表现任务",
+    "课时任务链"
+  ],
+  "candidate_generation_mode": "static_fixture_only_no_provider",
+  "candidate_destination": "section_preview_only",
+  "preview_only": true,
+  "formal_apply_allowed": false,
+  "provider_model_call_allowed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

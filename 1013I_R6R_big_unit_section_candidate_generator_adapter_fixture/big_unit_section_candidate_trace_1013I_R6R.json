@@ -1,0 +1,52 @@
+{
+  "stage": "1013I_R6R_BIG_UNIT_SECTION_CANDIDATE_GENERATOR_ADAPTER_FIXTURE",
+  "inherits_from": "1013I_R6Q_BIG_UNIT_SECTION_GENERATION_REQUEST_ENVELOPE",
+  "trace_type": "static_candidate_fixture_trace",
+  "steps": [
+    {
+      "step": "load_r6q_request_envelope",
+      "status": "done"
+    },
+    {
+      "step": "load_r6q_context_pack",
+      "status": "done"
+    },
+    {
+      "step": "load_r6q_generation_policy",
+      "status": "done"
+    },
+    {
+      "step": "load_r6q_dry_run_trace",
+      "status": "done"
+    },
+    {
+      "step": "create_static_candidate_adapter_fixture",
+      "status": "done"
+    },
+    {
+      "step": "create_four_preview_only_candidates",
+      "status": "done"
+    },
+    {
+      "step": "stop_before_runtime_or_provider",
+      "status": "done"
+    }
+  ],
+  "candidate_ids": [
+    "candidate_curriculum_basis_1013I_R6R",
+    "candidate_core_literacy_1013I_R6R",
+    "candidate_performance_task_1013I_R6R",
+    "candidate_lesson_chain_1013I_R6R"
+  ],
+  "next_stage": "1013I_R6S_BIG_UNIT_SECTION_CANDIDATE_RETURN_TO_EDIT_MODAL_PREVIEW",
+  "preview_only": true,
+  "formal_apply_allowed": false,
+  "provider_model_call_allowed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

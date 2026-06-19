@@ -1,0 +1,103 @@
+{
+  "stage": "1013I_R6R_BIG_UNIT_SECTION_CANDIDATE_GENERATOR_ADAPTER_FIXTURE",
+  "inherits_from": "1013I_R6Q_BIG_UNIT_SECTION_GENERATION_REQUEST_ENVELOPE",
+  "pack_type": "big_unit_section_candidate_pack",
+  "candidate_count": 4,
+  "candidate_destination_all_section_preview_only": true,
+  "candidates": [
+    {
+      "candidate_id": "candidate_curriculum_basis_1013I_R6R",
+      "teacher_label": "课标依据",
+      "teacher_intent": "再具体一点。",
+      "current_text": "本单元主要指向审美感知、艺术表现、创意实践，文化理解作轻量渗透。",
+      "candidate_text": "本单元主要围绕审美感知、艺术表现和创意实践展开，文化理解作轻量渗透。学生通过观察、比较、尝试和表达，理解色彩组合会改变画面感觉，并能用色彩表达一种较明确的情绪或氛围。",
+      "xiaojiao_suggestion": "可以把课标方向写得更接近教师能直接判断的单元学习方向，同时不摘抄或伪造课标原文。",
+      "why_this_change": "当前表述方向正确，但偏概括；补入观察、比较、尝试和表达后，更能说明学生如何在本单元中发展色彩感受与表达。",
+      "risk_note": "具体课标原文仍需教材或资料确认，本段只作为课标方向预览。",
+      "affected_parts": [
+        "课标依据",
+        "核心素养",
+        "表现任务",
+        "评价证据"
+      ],
+      "destination": "section_preview_only",
+      "preview_only": true,
+      "formal_apply_allowed": false,
+      "provider_called": false,
+      "model_called": false
+    },
+    {
+      "candidate_id": "candidate_core_literacy_1013I_R6R",
+      "teacher_label": "核心素养",
+      "teacher_intent": "减少口号感。",
+      "current_text": "审美感知、艺术表现、创意实践和文化理解都转成学生可观察的行为。",
+      "candidate_text": "审美感知：能感受不同色彩组合带来的冷暖、轻重、热烈、安静等视觉意味。\n\n艺术表现：能选择一组颜色表达明确感觉，并说明自己的选色理由。\n\n创意实践：能在比较、试验和反馈中调整色彩搭配。\n\n文化理解：能发现色彩感受与生活场景、作品情境有关。",
+      "xiaojiao_suggestion": "把四个素养方向落到学生能说、能选、能调、能联系生活的行为上，会比口号式表述更适合教师审阅。",
+      "why_this_change": "大单元设计需要保留核心素养，但教师更需要看到可观察的学生表现；这版把素养转成课堂中能被看见的行为。",
+      "risk_note": "文化理解在三年级阶段应轻量渗透，不宜写成过重的文化阐释。",
+      "affected_parts": [
+        "核心素养",
+        "学生起点",
+        "学习推进",
+        "评价证据"
+      ],
+      "destination": "section_preview_only",
+      "preview_only": true,
+      "formal_apply_allowed": false,
+      "provider_called": false,
+      "model_called": false
+    },
+    {
+      "candidate_id": "candidate_performance_task_1013I_R6R",
+      "teacher_label": "表现任务",
+      "teacher_intent": "更贴合三年级。",
+      "current_text": "学生完成一件“色彩感觉”小作品，并说明自己的色彩选择。",
+      "candidate_text": "学生完成一件“色彩感觉”小作品，并用一句到几句话说明：\n\n我用了哪些颜色；\n我想表达什么感觉；\n我为什么这样搭配。\n\n如果时间允许，再根据同伴或教师反馈调整一处颜色，并说明为什么改。",
+      "xiaojiao_suggestion": "表现任务可以保留小作品，但把说明要求拆成三句学生能说的话，更贴近三年级课堂。",
+      "why_this_change": "当前任务能说明结果，但还不够具体；补入选色、感受和理由，有助于把作品产出与评价证据连起来。",
+      "risk_note": "任务应控制在常态课可完成范围内，不扩展成大型展览或复杂项目。",
+      "affected_parts": [
+        "表现任务",
+        "学习推进",
+        "评价证据",
+        "材料与支架"
+      ],
+      "destination": "section_preview_only",
+      "preview_only": true,
+      "formal_apply_allowed": false,
+      "provider_called": false,
+      "model_called": false
+    },
+    {
+      "candidate_id": "candidate_lesson_chain_1013I_R6R",
+      "teacher_label": "课时任务链",
+      "teacher_intent": "让课时之间更连贯。",
+      "current_text": "1-1 打开感受；1-2 比较方法；1-3 完成表达。",
+      "candidate_text": "1-1 色彩初体验  \n打开感受，建立感受语言。学生通过图片、作品或色卡说出颜色带来的直观感觉，为后续比较打基础。\n\n1-2 色彩的感觉  \n比较方法，发现色彩组合会改变画面意味。学生比较不同色彩搭配，尝试说明为什么会产生热闹、安静、强烈或柔和等感受。\n\n1-3 色彩表达  \n完成表达，展示并修订。学生选择一组颜色表达明确感觉，完成小作品，并根据交流反馈调整一处颜色。",
+      "xiaojiao_suggestion": "课时链可以从目录标签变成任务承接，让老师一眼看出每课怎样铺垫、推进和收束。",
+      "why_this_change": "当前链条过短，只能看出阶段名称；补入每课任务和承接关系后，后续单课备课能继承大单元方向。",
+      "risk_note": "课时链只说明每课承担的任务，不直接生成单课教案。",
+      "affected_parts": [
+        "课时任务链",
+        "单课继承提示",
+        "学习推进",
+        "评价证据"
+      ],
+      "destination": "section_preview_only",
+      "preview_only": true,
+      "formal_apply_allowed": false,
+      "provider_called": false,
+      "model_called": false
+    }
+  ],
+  "preview_only": true,
+  "formal_apply_allowed": false,
+  "provider_model_call_allowed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

@@ -1,0 +1,28 @@
+{
+  "stage": "1013I_R6R_BIG_UNIT_SECTION_CANDIDATE_GENERATOR_ADAPTER_FIXTURE",
+  "policy_check_type": "big_unit_section_candidate_policy_check",
+  "candidate_count": 4,
+  "labels_present": [
+    "课标依据",
+    "核心素养",
+    "表现任务",
+    "课时任务链"
+  ],
+  "destination_all_section_preview_only": true,
+  "preview_only_all": true,
+  "formal_apply_allowed_all_false": true,
+  "provider_called_all_false": true,
+  "model_called_all_false": true,
+  "forbidden_text_hits": [],
+  "teacher_visible_fields_complete": true,
+  "preview_only": true,
+  "formal_apply_allowed": false,
+  "provider_model_call_allowed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}
