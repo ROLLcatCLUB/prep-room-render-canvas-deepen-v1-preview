@@ -1,0 +1,19 @@
+{
+  "stage": "1013I_R6O_R1_BIG_UNIT_RENDER_SURFACE_READING_POLISH",
+  "inherits_from": "1013I_R6O_BIG_UNIT_FIELD_MODEL_TO_PAGE_RENDER_FIXTURE",
+  "html": "prep_room_render_canvas_deepen_v1_R6O_R1_big_unit_reading_polish.html",
+  "top_status_row_matches_single_lesson_style": true,
+  "section_outer_cards_removed": true,
+  "duplicate_material_request_removed": true,
+  "material_request_kept_as_top_or_side_light_entry": true,
+  "reading_polish_only": true,
+  "edit_surface_created": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

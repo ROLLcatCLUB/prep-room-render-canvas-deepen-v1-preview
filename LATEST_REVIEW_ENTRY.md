@@ -1,15 +1,14 @@
 # Latest Review Entry
 
-STAGE=1013I_R6O_BIG_UNIT_FIELD_MODEL_TO_PAGE_RENDER_FIXTURE
-FINAL_STATUS=PASS_1013I_R6O_BIG_UNIT_FIELD_MODEL_TO_PAGE_RENDER_FIXTURE
-INHERITS_FROM=1013I_R6N_R9A_FIELD_LABEL_DISAMBIGUATION_BEFORE_RUNTIME_SCHEMA
-NEXT_STAGE=USER_REVIEW_BIG_UNIT_FIELD_RENDERED_PAGE
+STAGE=1013I_R6O_R1_BIG_UNIT_RENDER_SURFACE_READING_POLISH
+FINAL_STATUS=PASS_1013I_R6O_R1_BIG_UNIT_RENDER_SURFACE_READING_POLISH
+INHERITS_FROM=1013I_R6O_BIG_UNIT_FIELD_MODEL_TO_PAGE_RENDER_FIXTURE
+NEXT_STAGE=USER_REVIEW_BIG_UNIT_READING_POLISH_BEFORE_EDIT_SURFACE
 
-R6O renders the R9/R9A big-unit teacher-visible field model back into a standalone static page fixture.
+R6O_R1 is a reading-surface polish patch only. It does not create the edit page.
 
 Boundaries:
-- single_lesson_work_paused=true
-- runtime_schema_applied=false
+- edit_surface_created=false
 - runtime_connected=false
 - provider_called=false
 - model_called=false
