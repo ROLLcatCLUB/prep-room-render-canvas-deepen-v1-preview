@@ -1,20 +1,19 @@
 # Latest Review Entry
 
-```text
-REVIEW_STAGE=1013I_R6P_SINGLE_LESSON_READING_SURFACE_INHERITS_BIG_UNIT_STATIC_UPGRADE
-REQUESTED_STAGE_ALIAS=1013I_R6O_SINGLE_LESSON_READING_SURFACE_INHERITS_BIG_UNIT_STATIC_UPGRADE
-FINAL_STATUS=PASS_1013I_R6P_SINGLE_LESSON_READING_SURFACE_INHERITS_BIG_UNIT_STATIC_UPGRADE
+STAGE=1013I_R6N_R8_BIG_UNIT_DESIGN_RESTYLED_AS_LESSON_NOTEBOOK_UI
+FINAL_STATUS=PASS_1013I_R6N_R8_BIG_UNIT_DESIGN_RESTYLED_AS_LESSON_NOTEBOOK_UI
 INHERITS_FROM=1013I_R6N_R7_BIG_UNIT_PAGE_USER_REVIEW_AND_CONTENT_POLISH
-NEXT_RECOMMENDED_STAGE=USER_REVIEW_SINGLE_LESSON_INHERITANCE_SURFACE
-SINGLE_LESSON_SURFACE_CREATED=true
-BIG_UNIT_INHERITANCE_LIGHTWEIGHT=true
-LESSON_1_2_OPENS_SINGLE_LESSON_SURFACE=true
-MAIN_SURFACE_NOT_OVERLOADED_BY_BIG_UNIT=true
-FORMAL_APPLY_ALLOWED=false
-PROVIDER_MODEL_CALL_ALLOWED=false
-MAIN_PROJECT_PUSHED=false
-```
+NEXT_STAGE=USER_REVIEW_BIG_UNIT_NOTEBOOK_UI_STYLE
 
-## Summary
+R6N_R8 creates a standalone static big-unit design sample restyled to match the polished `1-2 色彩的感觉` lesson notebook UI. It is not integrated into the prep-room directory and does not modify the main system.
 
-R6P continues the prep-room static upgrade branch and implements the requested R6O single-lesson inheritance surface without touching the main system. Clicking `1-2 色彩的感觉` opens a lightweight single-lesson reading surface that inherits the big-unit direction.
+Boundaries:
+- runtime_connected=false
+- provider_called=false
+- model_called=false
+- formal_apply_performed=false
+- lesson_body_written=false
+- database_written=false
+- memory_written=false
+- feishu_written=false
+- main_project_pushed=false

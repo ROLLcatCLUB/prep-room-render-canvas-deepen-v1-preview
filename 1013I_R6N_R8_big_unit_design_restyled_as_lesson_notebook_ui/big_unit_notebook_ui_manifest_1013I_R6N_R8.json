@@ -1,0 +1,21 @@
+{
+  "stage": "1013I_R6N_R8_BIG_UNIT_DESIGN_RESTYLED_AS_LESSON_NOTEBOOK_UI",
+  "inherits_from": "1013I_R6N_R7_BIG_UNIT_PAGE_USER_REVIEW_AND_CONTENT_POLISH",
+  "html": "prep_room_render_canvas_deepen_v1_R6N_R8_big_unit_design_lesson_notebook_ui.html",
+  "result": "1013I_R6N_R8_result.json",
+  "report": "1013I_R6N_R8_report.md",
+  "validator": "scripts/validate_1013I_R6N_R8_big_unit_design_restyled_as_lesson_notebook_ui.py",
+  "boundary": {
+    "standalone_static_sample": true,
+    "not_integrated_into_directory": true,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "formal_apply_performed": false,
+    "lesson_body_written": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "main_project_pushed": false
+  }
+}

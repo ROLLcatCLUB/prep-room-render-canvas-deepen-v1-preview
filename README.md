@@ -1,5 +1,9 @@
-# PREP_ROOM_RENDER_CANVAS_DEEPEN_V1
+# Prep Room Render Canvas Deepen V1 Review Package
 
-Current stage: `1013I_R6P_SINGLE_LESSON_READING_SURFACE_INHERITS_BIG_UNIT_STATIC_UPGRADE`
+Latest stage: `1013I_R6N_R8_BIG_UNIT_DESIGN_RESTYLED_AS_LESSON_NOTEBOOK_UI`
 
-R6P implements the requested single-lesson reading surface that inherits the big-unit direction, as a static upgrade sample only.
+Open:
+- `1013I_R6N_R8_big_unit_design_restyled_as_lesson_notebook_ui/prep_room_render_canvas_deepen_v1_R6N_R8_big_unit_design_lesson_notebook_ui.html`
+
+Run:
+- `python scripts/validate_1013I_R6N_R8_big_unit_design_restyled_as_lesson_notebook_ui.py`
