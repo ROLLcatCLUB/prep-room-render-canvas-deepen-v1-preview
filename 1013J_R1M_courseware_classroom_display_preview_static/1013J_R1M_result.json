@@ -6,9 +6,14 @@
   "auto_continue_allowed": false,
   "needs_user_review": true,
   "next_recommended": "USER_REVIEW_COURSEWARE_VISIBLE_WORKFLOW",
-  "created_at": "2026-06-19T21:02:24+00:00",
+  "created_at": "2026-06-19T21:15:04+00:00",
   "classroom_display_preview_created": true,
   "display_preview_entry_present": true,
+  "courseware_edit_surface_restored": true,
+  "simplified_entry_shell_removed": true,
+  "edit_surface_inherits_material_flow": true,
+  "courseware_expanded_hash_route_present": true,
+  "courseware_expanded_late_route_force_present": true,
   "editing_panels_hidden_in_preview": true,
   "main_display_screen_visible": true,
   "screen_03_preview_created": true,
@@ -45,6 +50,13 @@
   ],
   "screenshot_smoke_pass": true,
   "screenshots": [
+    {
+      "case": "edit_surface_restored",
+      "path": "ui_smoke_screenshot_1013J_R1M_edit_surface_restored.png",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 427968
+    },
     {
       "case": "preview_screen_03",
       "path": "ui_smoke_screenshot_1013J_R1M_preview_screen_03.png",

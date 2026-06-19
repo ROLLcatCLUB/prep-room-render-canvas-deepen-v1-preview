@@ -4839,32 +4839,59 @@
         </nav>
       </div>`;
     }
-    function renderCoursewareExpandedWorkspace1013JR1(view) {
+    const renderCoursewareExpandedWorkspace1013JR1BeforeR1M = renderCoursewareExpandedWorkspace1013JR1;
+    renderCoursewareExpandedWorkspace1013JR1 = function(view) {
       const params = new URLSearchParams(window.location.search || "");
       if (params.get("preview") === "display") return renderDisplayPreview1013JR1M();
-      return `
-      <div class="r1j-merge-shell" data-1013j-r1m-entry="true" data-1013j-r1g-responsive-full="true" aria-label="课件制作区">
-        <div class="r1j-workspace">
-          <aside class="r1j-panel" aria-label="课件草稿">
-            <div class="r1j-panel-title">大屏草稿</div>
-            <button class="node-action primary" type="button">＋ 添加页面</button>
-            <div class="r1j-screen-list">
-              <button class="r1j-screen-item active" type="button"><span>03</span><strong>哪一组颜色更安静？</strong><div class="r1j-ops"><span class="r1j-chip">待补图</span></div></button>
-              <button class="r1j-screen-item" type="button"><span>06</span><strong>白板试色</strong><div class="r1j-ops"><span class="r1j-chip">可白板</span></div></button>
-            </div>
-          </aside>
-          <main class="r1j-main" aria-label="制作区入口">
-            <section class="r1l-stage">
-              <div class="r1m-entry-note"><strong>大屏预览</strong><p>课件制作区用于编辑；大屏预览用于课堂投屏前查看。</p><a class="node-action primary" href="?preview=display&screen=03#coursewareExpanded">进入大屏预览</a></div>
-            </section>
-          </main>
-          <aside class="r1j-panel" aria-label="预览说明">
-            <div class="r1j-panel-title">预览控制</div>
-            <div class="r1m-entry-note"><p>预览态只显示课堂大屏画面，并保留上一屏、下一屏、退出预览和比例切换。</p></div>
-          </aside>
-        </div>
-      </div>`;
+      const restored = renderCoursewareExpandedWorkspace1013JR1BeforeR1M(view);
+      return restored
+        .replace(/<button class="node-action primary" type="button" data-pending="">进入大屏预览<\/button>/g, '<a class="node-action primary" href="?preview=display&screen=03#coursewareExpanded">进入大屏预览</a>')
+        .replace(/<button class="node-action primary" type="button">大屏预览<\/button>/g, '<a class="node-action primary" href="?preview=display&screen=03#coursewareExpanded">大屏预览</a>')
+        .replace(/<button class="node-action primary" type="button" data-pending="静态样张：不导出 PPT。">进入大屏预览<\/button>/g, '<a class="node-action primary" href="?preview=display&screen=03#coursewareExpanded">进入大屏预览</a>');
+    };
+    const applyInitialViewFromHashBeforeR1M = applyInitialViewFromHash;
+    applyInitialViewFromHash = function() {
+      applyInitialViewFromHashBeforeR1M();
+      const viewId = decodeURIComponent((window.location.hash || "").replace(/^#/, ""));
+      const params = new URLSearchParams(window.location.search || "");
+      if (viewId === "coursewareExpanded") {
+        const prepView = model.views.find((view) => view.id === "prepNotebook");
+        if (prepView) {
+          model.active_view = "prepNotebook";
+          prepView.courseware_workspace_expanded = true;
+          prepView.prep_start_surface = false;
+          prepView.active_big_unit_id = "";
+          prepView.prep_notebook_mode = "view";
+          model.initial_scroll_target = "";
+        }
+      }
+      if (params.get("preview") === "display") {
+        const prepView = model.views.find((view) => view.id === "prepNotebook");
+        if (prepView) {
+          model.active_view = "prepNotebook";
+          prepView.courseware_workspace_expanded = true;
+          prepView.prep_start_surface = false;
+          prepView.active_big_unit_id = "";
+        }
+      }
+    };
+    function forceCoursewareExpandedRoute1013JR1M() {
+      const viewId = decodeURIComponent((window.location.hash || "").replace(/^#/, ""));
+      const params = new URLSearchParams(window.location.search || "");
+      if (viewId !== "coursewareExpanded" && params.get("preview") !== "display") return;
+      const prepView = model.views.find((view) => view.id === "prepNotebook");
+      if (!prepView) return;
+      model.active_view = "prepNotebook";
+      model.selected_node_id = prepView.nodes?.[0]?.id || model.selected_node_id;
+      prepView.courseware_workspace_expanded = true;
+      prepView.prep_start_surface = false;
+      prepView.active_big_unit_id = "";
+      prepView.prep_notebook_mode = "view";
+      model.initial_scroll_target = "";
+      renderPrepRoomCanvas({ animate: false });
     }
     
     initPrepRoomRenderCanvas();
+    setTimeout(forceCoursewareExpandedRoute1013JR1M, 0);
+    setTimeout(forceCoursewareExpandedRoute1013JR1M, 250);
   

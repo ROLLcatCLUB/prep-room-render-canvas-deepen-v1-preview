@@ -119,31 +119,56 @@ def js() -> str:
         </nav>
       </div>`;
     }
-    function renderCoursewareExpandedWorkspace1013JR1(view) {
+    const renderCoursewareExpandedWorkspace1013JR1BeforeR1M = renderCoursewareExpandedWorkspace1013JR1;
+    renderCoursewareExpandedWorkspace1013JR1 = function(view) {
       const params = new URLSearchParams(window.location.search || "");
       if (params.get("preview") === "display") return renderDisplayPreview1013JR1M();
-      return `
-      <div class="r1j-merge-shell" data-1013j-r1m-entry="true" data-1013j-r1g-responsive-full="true" aria-label="课件制作区">
-        <div class="r1j-workspace">
-          <aside class="r1j-panel" aria-label="课件草稿">
-            <div class="r1j-panel-title">大屏草稿</div>
-            <button class="node-action primary" type="button">＋ 添加页面</button>
-            <div class="r1j-screen-list">
-              <button class="r1j-screen-item active" type="button"><span>03</span><strong>哪一组颜色更安静？</strong><div class="r1j-ops"><span class="r1j-chip">待补图</span></div></button>
-              <button class="r1j-screen-item" type="button"><span>06</span><strong>白板试色</strong><div class="r1j-ops"><span class="r1j-chip">可白板</span></div></button>
-            </div>
-          </aside>
-          <main class="r1j-main" aria-label="制作区入口">
-            <section class="r1l-stage">
-              <div class="r1m-entry-note"><strong>大屏预览</strong><p>课件制作区用于编辑；大屏预览用于课堂投屏前查看。</p><a class="node-action primary" href="?preview=display&screen=03#coursewareExpanded">进入大屏预览</a></div>
-            </section>
-          </main>
-          <aside class="r1j-panel" aria-label="预览说明">
-            <div class="r1j-panel-title">预览控制</div>
-            <div class="r1m-entry-note"><p>预览态只显示课堂大屏画面，并保留上一屏、下一屏、退出预览和比例切换。</p></div>
-          </aside>
-        </div>
-      </div>`;
+      const restored = renderCoursewareExpandedWorkspace1013JR1BeforeR1M(view);
+      return restored
+        .replace(/<button class="node-action primary" type="button" data-pending="">进入大屏预览<\\/button>/g, '<a class="node-action primary" href="?preview=display&screen=03#coursewareExpanded">进入大屏预览</a>')
+        .replace(/<button class="node-action primary" type="button">大屏预览<\\/button>/g, '<a class="node-action primary" href="?preview=display&screen=03#coursewareExpanded">大屏预览</a>')
+        .replace(/<button class="node-action primary" type="button" data-pending="静态样张：不导出 PPT。">进入大屏预览<\\/button>/g, '<a class="node-action primary" href="?preview=display&screen=03#coursewareExpanded">进入大屏预览</a>');
+    };
+    const applyInitialViewFromHashBeforeR1M = applyInitialViewFromHash;
+    applyInitialViewFromHash = function() {
+      applyInitialViewFromHashBeforeR1M();
+      const viewId = decodeURIComponent((window.location.hash || "").replace(/^#/, ""));
+      const params = new URLSearchParams(window.location.search || "");
+      if (viewId === "coursewareExpanded") {
+        const prepView = model.views.find((view) => view.id === "prepNotebook");
+        if (prepView) {
+          model.active_view = "prepNotebook";
+          prepView.courseware_workspace_expanded = true;
+          prepView.prep_start_surface = false;
+          prepView.active_big_unit_id = "";
+          prepView.prep_notebook_mode = "view";
+          model.initial_scroll_target = "";
+        }
+      }
+      if (params.get("preview") === "display") {
+        const prepView = model.views.find((view) => view.id === "prepNotebook");
+        if (prepView) {
+          model.active_view = "prepNotebook";
+          prepView.courseware_workspace_expanded = true;
+          prepView.prep_start_surface = false;
+          prepView.active_big_unit_id = "";
+        }
+      }
+    };
+    function forceCoursewareExpandedRoute1013JR1M() {
+      const viewId = decodeURIComponent((window.location.hash || "").replace(/^#/, ""));
+      const params = new URLSearchParams(window.location.search || "");
+      if (viewId !== "coursewareExpanded" && params.get("preview") !== "display") return;
+      const prepView = model.views.find((view) => view.id === "prepNotebook");
+      if (!prepView) return;
+      model.active_view = "prepNotebook";
+      model.selected_node_id = prepView.nodes?.[0]?.id || model.selected_node_id;
+      prepView.courseware_workspace_expanded = true;
+      prepView.prep_start_surface = false;
+      prepView.active_big_unit_id = "";
+      prepView.prep_notebook_mode = "view";
+      model.initial_scroll_target = "";
+      renderPrepRoomCanvas({ animate: false });
     }
     """
 
@@ -152,7 +177,7 @@ def patch_html(out: Path) -> str:
     html = (out / BASE_DIR_NAME / BASE_HTML_NAME).read_text(encoding="utf-8")
     html = html.replace("1013J_R1L 素材占位状态流转", "1013J_R1M 大屏预览静态样张")
     html = html.replace("</style>", css() + "\n</style>", 1)
-    html = html.replace("    initPrepRoomRenderCanvas();", js() + "\n    initPrepRoomRenderCanvas();", 1)
+    html = html.replace("    initPrepRoomRenderCanvas();", js() + "\n    initPrepRoomRenderCanvas();\n    setTimeout(forceCoursewareExpandedRoute1013JR1M, 0);\n    setTimeout(forceCoursewareExpandedRoute1013JR1M, 250);", 1)
     return html
 
 
@@ -177,6 +202,7 @@ def screenshot(stage: Path, html_path: Path) -> dict[str, Any]:
     if not b:
         return {"screenshot_smoke_pass": False, "screenshots": shots}
     cases = [
+        ("edit_surface_restored", "#coursewareExpanded"),
         ("preview_screen_03", "?preview=display&screen=03#coursewareExpanded"),
         ("preview_screen_06", "?preview=display&screen=06#coursewareExpanded"),
         ("preview_ratio_16_9", "?preview=display&screen=03&ratio=16_9#coursewareExpanded"),
@@ -192,17 +218,22 @@ def screenshot(stage: Path, html_path: Path) -> dict[str, Any]:
 
 def validate(html: str) -> dict[str, Any]:
     preview_start = html.find("function renderDisplayPreview1013JR1M")
-    preview_end = html.find("function renderCoursewareExpandedWorkspace1013JR1", preview_start)
+    preview_end = html.find("const renderCoursewareExpandedWorkspace1013JR1BeforeR1M", preview_start)
     preview_source = html[preview_start:preview_end] if preview_start >= 0 and preview_end > preview_start else html
     start = html.rfind('data-1013j-r1m-display-preview="true"')
-    entry_start = html.rfind('data-1013j-r1m-entry="true"')
+    entry_start = html.rfind('data-1013j-r1l-material-flow="true"')
     text = html[start : start + 9000] if start >= 0 else html
-    entry_text = html[entry_start : entry_start + 3000] if entry_start >= 0 else html
+    entry_text = html[entry_start : entry_start + 9000] if entry_start >= 0 else html
     visible = re.sub(r"<!--.*?-->", "", preview_source + entry_text, flags=re.S)
     banned = ["schema", "payload", "provider", "model", "database", "runtime", "validator", "mapping_json", "field key", "formal apply", "writeback", "mock", "websocket", "backend"]
     return {
         "classroom_display_preview_created": "data-1013j-r1m-display-preview" in html,
-        "display_preview_entry_present": "进入大屏预览" in entry_text,
+        "display_preview_entry_present": "?preview=display&screen=03#coursewareExpanded" in html,
+        "courseware_edit_surface_restored": 'data-1013j-r1l-material-flow="true"' in html and "素材占位状态流转样张" in html,
+        "simplified_entry_shell_removed": 'data-1013j-r1m-entry="true"' not in html,
+        "edit_surface_inherits_material_flow": "04 感觉词卡｜已有文字" in entry_text and "06 白板试色｜可白板" in entry_text and "07 学生作品展示｜待学生作品" in entry_text,
+        "courseware_expanded_hash_route_present": "applyInitialViewFromHashBeforeR1M" in html and 'viewId === "coursewareExpanded"' in html and "courseware_workspace_expanded = true" in html,
+        "courseware_expanded_late_route_force_present": "forceCoursewareExpandedRoute1013JR1M" in html and "setTimeout(forceCoursewareExpandedRoute1013JR1M, 250)" in html,
         "editing_panels_hidden_in_preview": "r1j-panel" not in preview_source and "模板选择器" not in preview_source and "小教推荐" not in preview_source,
         "main_display_screen_visible": "r1m-screen" in text and "大屏预览" in text,
         "screen_03_preview_created": "03 · 样例草稿" in preview_source and "哪一组颜色更安静？" in preview_source and "热闹的色彩组合" in preview_source,
