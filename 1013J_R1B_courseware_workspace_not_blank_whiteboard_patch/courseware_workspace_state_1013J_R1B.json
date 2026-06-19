@@ -1,0 +1,22 @@
+{
+  "stage": "1013J_R1B_COURSEWARE_WORKSPACE_NOT_BLANK_WHITEBOARD_PATCH",
+  "normal_state": "right_rail_big_screen_draft_outline",
+  "expanded_state": "courseware_screen_editing_workspace_not_blank_whiteboard",
+  "expanded_workspace_not_blank_canvas": true,
+  "current_screen_preview_created": true,
+  "whiteboard_as_block_not_workspace": true,
+  "main_lesson_notebook_reference_kept": true,
+  "courseware_screen_directory_visible": true,
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}
