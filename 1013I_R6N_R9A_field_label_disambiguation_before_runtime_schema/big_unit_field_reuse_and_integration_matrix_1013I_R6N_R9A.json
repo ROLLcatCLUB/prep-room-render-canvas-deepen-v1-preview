@@ -1,0 +1,71 @@
+{
+  "stage": "1013I_R6N_R9_BIG_UNIT_DESIGN_FIELD_MODEL",
+  "reuse_matrix": [
+    {
+      "existing_artifact": "1013I_R6C_curriculum_standard_control_layer_contract",
+      "reuse_for": [
+        "curriculum_basis",
+        "core_literacy_goals",
+        "knowledge_and_skills"
+      ],
+      "reuse_type": "upstream_constraint",
+      "integration_rule": "课标控制层只约束方向，不生成官方课标结论；右侧依据可显示待确认状态。"
+    },
+    {
+      "existing_artifact": "1013I_R6D.big_unit_design_chain_fixture.unit_package",
+      "reuse_for": [
+        "unit_basic_info",
+        "core_literacy_goals",
+        "unit_questions",
+        "performance_task",
+        "learning_progression",
+        "lesson_task_chain",
+        "assessment_evidence"
+      ],
+      "reuse_type": "backend_container",
+      "integration_rule": "作为候选字段容器复用；当前不写正式 unit_package。"
+    },
+    {
+      "existing_artifact": "1013I_R6D.lesson_position_judgement_fixture",
+      "reuse_for": [
+        "lesson_task_chain",
+        "single_lesson_inheritance"
+      ],
+      "reuse_type": "single_lesson_bridge",
+      "integration_rule": "用于把大单元课时任务链传给单课页顶部轻继承提示和右侧依据。"
+    },
+    {
+      "existing_artifact": "1013I_R6E.official_unit_material_extraction_fixture",
+      "reuse_for": [
+        "unit_basic_info",
+        "material_requests"
+      ],
+      "reuse_type": "readonly_source_candidate",
+      "integration_rule": "只作为资料来源和缺资料动作依据；不当作官方教材锚点。"
+    },
+    {
+      "existing_artifact": "1013I_R6E.big_unit_chain_candidates",
+      "reuse_for": [
+        "learning_progression",
+        "lesson_task_chain",
+        "assessment_evidence",
+        "materials_and_scaffolds"
+      ],
+      "reuse_type": "field_candidate_source",
+      "integration_rule": "官方字段名转为教师可见栏目；工程字段不进主阅读面。"
+    },
+    {
+      "existing_artifact": "1013F_R2C single lesson notebook UI",
+      "reuse_for": [
+        "render_layer",
+        "single_lesson_inheritance_target"
+      ],
+      "reuse_type": "frontend_style_and_inheritance_reference",
+      "integration_rule": "只复用正文阅读、状态胶囊、右侧阅读辅助的 UI 语言；当前不改单课页。"
+    }
+  ],
+  "label_disambiguation": {
+    "knowledge_and_skills": "本单元的美术语言和技能目标。",
+    "materials_and_scaffolds": "教师准备的材料、学习单、示例和支架。"
+  }
+}
