@@ -1,0 +1,20 @@
+{
+  "stage": "1013I_R6P_R1_EDIT_SURFACE_MODAL_AND_RIGHT_RAIL_RESOURCE_TOOLBAR_PATCH",
+  "right_rail_role": "resource_library_and_toolbar",
+  "tools": [
+    "教材资料",
+    "课标依据",
+    "学习单",
+    "评价句式"
+  ],
+  "right_rail_not_edit_surface": true,
+  "preview_only_actions": true,
+  "formal_apply_performed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

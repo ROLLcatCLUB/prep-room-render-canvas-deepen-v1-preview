@@ -1,0 +1,16 @@
+{
+  "stage": "1013I_R6P_R1_EDIT_SURFACE_MODAL_AND_RIGHT_RAIL_RESOURCE_TOOLBAR_PATCH",
+  "edit_surface": "modal",
+  "view_surface": "modal",
+  "main_reading_flow_kept": true,
+  "right_rail_resource_toolbar_restored": true,
+  "preview_only_actions": true,
+  "formal_apply_performed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}
