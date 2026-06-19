@@ -1,0 +1,47 @@
+{
+  "stage": "1013J_R1J_COURSEWARE_TEMPLATE_AND_AGENT_RECOMMENDATION_MERGE_STATIC",
+  "templates": [
+    "封面页",
+    "一图观察",
+    "两图对比",
+    "三图比较",
+    "图片 + 问题",
+    "图片 + 标注",
+    "词卡页",
+    "任务发布",
+    "白板互动",
+    "学生作品墙",
+    "评价提示",
+    "自定义空白页"
+  ],
+  "recommendations": [
+    {
+      "template": "两图对比",
+      "title": "哪一组颜色更安静？",
+      "section": "比较变化",
+      "slots": "热闹色彩组合图 / 安静色彩组合图",
+      "reason": "这一段适合用两组图片帮助学生比较色彩感受。"
+    },
+    {
+      "template": "词卡页",
+      "title": "把“好看”说得更具体",
+      "section": "比较变化",
+      "slots": "感觉词卡",
+      "reason": "学生需要表达支架，把直观感受说具体。"
+    }
+  ],
+  "screen_count_dynamic": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false,
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false
+}

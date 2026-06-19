@@ -1,19 +1,30 @@
 {
   "stage": "1013J_R1J_COURSEWARE_TEMPLATE_AND_AGENT_RECOMMENDATION_MERGE_STATIC",
   "final_status": "PASS_1013J_R1J_COURSEWARE_TEMPLATE_AND_AGENT_RECOMMENDATION_MERGE_STATIC",
-  "inherits_from": [
+  "inherits_from": "1013J_R1G_R1_COURSEWARE_RESPONSIVE_FULL_WIDTH_PATCH",
+  "reference_stages": [
     "1013J_R1H_COURSEWARE_TEMPLATE_PICKER_AND_SCREEN_OPERATIONS_STATIC",
     "1013J_R1I_LESSON_SECTION_TO_COURSEWARE_AGENT_RECOMMENDATION_STATIC"
   ],
-  "next_stage": "USER_REVIEW_1013J_R1J_COURSEWARE_VISIBLE_WORKFLOW_MERGE_STATIC",
-  "created_at": "2026-06-19T20:30:33+00:00",
+  "next_stage": "1013J_R1K_COURSEWARE_LESSON_SCREEN_BIDIRECTIONAL_LINK_STATIC",
+  "auto_continue_allowed": true,
+  "next_recommended": "1013J_R1K_COURSEWARE_LESSON_SCREEN_BIDIRECTIONAL_LINK_STATIC",
+  "created_at": "2026-06-19T20:38:25+00:00",
+  "r1h_integrated": true,
+  "r1i_integrated": true,
   "template_picker_integrated": true,
   "agent_recommendation_integrated": true,
   "add_screen_and_agent_recommendation_coexist": true,
+  "template_picker_created": true,
+  "agent_recommendation_panel_created": true,
+  "accept_as_courseware_screen_action_present": true,
+  "accept_preview_state_created": true,
   "lesson_to_screen_mapping_integrated": true,
   "custom_screen_backlink_integrated": true,
+  "linked_screen_and_unlinked_screen_visible": true,
   "screen_count_dynamic": true,
   "fixed_8_screen_rule_absent": true,
+  "sample_8_screens_not_treated_as_rule": true,
   "route_isolation_inherited": true,
   "teacher_visible_engineering_terms_absent": true,
   "runtime_connected": false,
@@ -39,8 +50,29 @@
   "screenshot_smoke_pass": true,
   "screenshots": [
     {
-      "case": "merge",
-      "path": "ui_smoke_screenshot_1013J_R1J_merge.png",
+      "case": "template_picker",
+      "path": "ui_smoke_screenshot_1013J_R1J_template_picker.png",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 454820
+    },
+    {
+      "case": "agent_recommendation",
+      "path": "ui_smoke_screenshot_1013J_R1J_agent_recommendation.png",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 454820
+    },
+    {
+      "case": "accept_to_outline",
+      "path": "ui_smoke_screenshot_1013J_R1J_accept_to_outline.png",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 454820
+    },
+    {
+      "case": "custom_backlink",
+      "path": "ui_smoke_screenshot_1013J_R1J_custom_backlink.png",
       "width": 1440,
       "height": 1100,
       "bytes": 454820

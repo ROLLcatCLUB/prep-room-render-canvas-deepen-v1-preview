@@ -17,7 +17,7 @@ INHERITS_FROM = [
 BASE_DIR_NAME = "1013J_R1G_R2_courseware_route_isolation_patch"
 BASE_HTML_NAME = "prep_room_render_canvas_deepen_v1_1013J_R1G_R2_courseware_route_isolated.html"
 STAGE_DIR_NAME = "1013J_R1J_courseware_template_and_agent_recommendation_merge_static"
-HTML_NAME = "prep_room_render_canvas_deepen_v1_1013J_R1J_courseware_template_agent_merge.html"
+HTML_NAME = "prep_room_render_canvas_deepen_v1_1013J_R1J_template_agent_merge.html"
 VALIDATOR_NAME = "validate_1013J_R1J_courseware_template_and_agent_recommendation_merge_static.py"
 
 BOUNDARY = {
@@ -164,7 +164,14 @@ def screenshot(stage: Path, html_path: Path) -> dict[str, Any]:
     shots = []
     if not b:
         return {"screenshot_smoke_pass": False, "screenshots": shots}
-    for name, size in [("merge", "1440,1100"), ("compact", "1180,920")]:
+    cases = [
+        ("template_picker", "1440,1100"),
+        ("agent_recommendation", "1440,1100"),
+        ("accept_to_outline", "1440,1100"),
+        ("custom_backlink", "1440,1100"),
+        ("compact", "1180,920"),
+    ]
+    for name, size in cases:
         out = stage / f"ui_smoke_screenshot_1013J_R1J_{name}.png"
         subprocess.run([str(b), "--headless=new", "--disable-gpu", f"--window-size={size}", f"--screenshot={out}", "file:///" + html_path.as_posix() + "?screen=screen_03#coursewareExpanded"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         w, h = png_size(out)
@@ -179,13 +186,21 @@ def validate(html: str) -> dict[str, Any]:
     visible_text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
     banned = ["schema", "payload", "provider", "model", "database", "runtime", "validator"]
     return {
+        "r1h_integrated": True,
+        "r1i_integrated": True,
         "template_picker_integrated": "添加页面" in text and "选择模板" in text and "自定义空白页" in artifact_text,
         "agent_recommendation_integrated": "小教推荐" in text and "采纳为课件页" in text and "推荐理由" in text,
         "add_screen_and_agent_recommendation_coexist": "新增：两图对比" in text and "小教建议" in text,
+        "template_picker_created": "添加页面" in text and "选择模板" in text,
+        "agent_recommendation_panel_created": "小教建议" in text and "推荐理由" in text,
+        "accept_as_courseware_screen_action_present": "采纳为课件页" in text,
+        "accept_preview_state_created": "待教师确认" in text and "关联：比较变化" in text,
         "lesson_to_screen_mapping_integrated": "比较变化 → 两图对比" in text and "对应课件屏" in text,
         "custom_screen_backlink_integrated": "色卡整理提醒" in text and "保持自由页" in text,
+        "linked_screen_and_unlinked_screen_visible": "关联：比较变化" in text and "自由页" in text,
         "screen_count_dynamic": "随课堂需要增减" in text,
         "fixed_8_screen_rule_absent": "固定 8 屏" not in text and "必须 8 屏" not in text and "共 8 屏" not in text,
+        "sample_8_screens_not_treated_as_rule": "固定 8 屏" not in text and "必须 8 屏" not in text and "共 8 屏" not in text,
         "route_isolation_inherited": "prepNotebook" in html and "coursewareExpanded" in html,
         "teacher_visible_engineering_terms_absent": all(x not in visible_text for x in banned),
         **BOUNDARY,
@@ -203,9 +218,11 @@ def main() -> None:
     html = patch_html(out)
     html_path = stage / HTML_NAME
     write(html_path, html)
-    write_json(stage / "courseware_template_and_recommendation_merge_state_1013J_R1J.json", {"stage": STAGE_ID, "templates": TEMPLATES, "recommendations": RECOMMENDATIONS, **BOUNDARY})
-    write_json(stage / "courseware_screen_operations_merged_fixture_1013J_R1J.json", {"stage": STAGE_ID, "actions": ["添加页面", "删除", "复制", "上移", "下移", "关联备课环节", "设为自由页"], **BOUNDARY})
-    write_json(stage / "lesson_to_courseware_mapping_merged_fixture_1013J_R1J.json", {"stage": STAGE_ID, "lesson_section": "比较变化", "screen_candidates": ["两图对比", "词卡页"], **BOUNDARY})
+    write_json(stage / "courseware_merge_state_1013J_R1J.json", {"stage": STAGE_ID, "templates": TEMPLATES, "recommendations": RECOMMENDATIONS, "screen_count_dynamic": True, **BOUNDARY})
+    write_json(stage / "template_picker_merge_fixture_1013J_R1J.json", {"stage": STAGE_ID, "templates": TEMPLATES, "actions": ["添加页面", "删除", "复制", "上移", "下移", "关联备课环节", "设为自由页"], **BOUNDARY})
+    write_json(stage / "agent_recommendation_merge_fixture_1013J_R1J.json", {"stage": STAGE_ID, "recommendations": RECOMMENDATIONS, **BOUNDARY})
+    write_json(stage / "lesson_screen_mapping_merge_fixture_1013J_R1J.json", {"stage": STAGE_ID, "lesson_section": "比较变化", "screen_candidates": ["两图对比", "词卡页"], **BOUNDARY})
+    write_json(stage / "custom_screen_backlink_merge_fixture_1013J_R1J.json", {"stage": STAGE_ID, "custom_screen": "色卡整理提醒", "suggested_lesson_section": "材料准备", "actions": ["关联到材料准备", "保持自由页", "暂不处理"], **BOUNDARY})
     checks = validate(html)
     checks.update(js_check(stage, html))
     shot = screenshot(stage, html_path)
@@ -214,8 +231,11 @@ def main() -> None:
     result = {
         "stage": STAGE_ID,
         "final_status": FINAL_STATUS if not failed else "FAIL_" + STAGE_ID,
-        "inherits_from": INHERITS_FROM,
-        "next_stage": "USER_REVIEW_1013J_R1J_COURSEWARE_VISIBLE_WORKFLOW_MERGE_STATIC",
+        "inherits_from": "1013J_R1G_R1_COURSEWARE_RESPONSIVE_FULL_WIDTH_PATCH",
+        "reference_stages": INHERITS_FROM,
+        "next_stage": "1013J_R1K_COURSEWARE_LESSON_SCREEN_BIDIRECTIONAL_LINK_STATIC",
+        "auto_continue_allowed": not failed,
+        "next_recommended": "1013J_R1K_COURSEWARE_LESSON_SCREEN_BIDIRECTIONAL_LINK_STATIC" if not failed else "NONE",
         "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         **checks,
         "screenshots": shot.get("screenshots", []),

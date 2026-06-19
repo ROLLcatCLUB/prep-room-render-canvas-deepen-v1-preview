@@ -1,0 +1,23 @@
+{
+  "stage": "1013J_R1J_COURSEWARE_TEMPLATE_AND_AGENT_RECOMMENDATION_MERGE_STATIC",
+  "custom_screen": "色卡整理提醒",
+  "suggested_lesson_section": "材料准备",
+  "actions": [
+    "关联到材料准备",
+    "保持自由页",
+    "暂不处理"
+  ],
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false,
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false
+}
