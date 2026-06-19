@@ -1,0 +1,32 @@
+{
+  "stage": "1013J_R1F_COURSEWARE_SCREEN_CLICK_THROUGH_STATIC_INTERACTION",
+  "interaction": "click_left_screen_list_updates_main_screen_and_right_panel",
+  "updates": [
+    "main_screen_title",
+    "main_screen_classroom_text",
+    "material_placeholders",
+    "lesson_to_screen_mapping",
+    "right_panel_purpose",
+    "right_panel_materials",
+    "xiaojiao_suggestion",
+    "static_actions"
+  ],
+  "screenshot_cases": [
+    "screen_01",
+    "screen_03",
+    "screen_06",
+    "screen_07"
+  ],
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}
