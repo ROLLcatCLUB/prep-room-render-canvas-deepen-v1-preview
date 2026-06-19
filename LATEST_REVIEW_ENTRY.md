@@ -1,7 +1,9 @@
 # Latest Review Entry
 
-STAGE=1013J_R1L_COURSEWARE_MATERIAL_PLACEHOLDER_STATE_FLOW_STATIC
-FINAL_STATUS=PASS_1013J_R1L_COURSEWARE_MATERIAL_PLACEHOLDER_STATE_FLOW_STATIC
-NEXT_STAGE=1013J_R1M_COURSEWARE_CLASSROOM_DISPLAY_PREVIEW_STATIC
+STAGE=1013J_R1M_COURSEWARE_CLASSROOM_DISPLAY_PREVIEW_STATIC
+FINAL_STATUS=PASS_1013J_R1M_COURSEWARE_CLASSROOM_DISPLAY_PREVIEW_STATIC
+NEXT_STAGE=USER_REVIEW_COURSEWARE_VISIBLE_WORKFLOW
+AUTO_CONTINUE_ALLOWED=false
+NEEDS_USER_REVIEW=true
 
-R1L makes courseware material placeholder states visible: pending image, inserted material, text-ready, whiteboard, student work, and teacher-confirmation states.
+R1M creates a static classroom display preview mode and closes the current visible workflow queue for user review.
