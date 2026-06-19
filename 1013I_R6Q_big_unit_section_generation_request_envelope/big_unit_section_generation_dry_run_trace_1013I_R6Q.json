@@ -1,0 +1,37 @@
+{
+  "stage": "1013I_R6Q_BIG_UNIT_SECTION_GENERATION_REQUEST_ENVELOPE",
+  "dry_run": true,
+  "provider_called": false,
+  "model_called": false,
+  "request_built": true,
+  "context_pack_built": true,
+  "policy_attached": true,
+  "candidate_generated": false,
+  "next_stage": "1013I_R6R_BIG_UNIT_SECTION_CANDIDATE_GENERATOR_ADAPTER_FIXTURE",
+  "steps": [
+    {
+      "step": "load_r6p_r2_edit_modal_boundary",
+      "status": "done"
+    },
+    {
+      "step": "load_r6n_r9a_field_archive",
+      "status": "done"
+    },
+    {
+      "step": "build_request_envelope",
+      "status": "done"
+    },
+    {
+      "step": "attach_context_pack",
+      "status": "done"
+    },
+    {
+      "step": "attach_generation_policy",
+      "status": "done"
+    },
+    {
+      "step": "stop_before_provider_or_candidate_generation",
+      "status": "done"
+    }
+  ]
+}

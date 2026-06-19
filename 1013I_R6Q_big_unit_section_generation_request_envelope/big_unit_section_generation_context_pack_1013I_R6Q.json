@@ -1,0 +1,35 @@
+{
+  "stage": "1013I_R6Q_BIG_UNIT_SECTION_GENERATION_REQUEST_ENVELOPE",
+  "context_pack_type": "big_unit_section_generation_context",
+  "target_unit": {
+    "unit_title": "第一单元 · 多变的色彩",
+    "grade": "三年级",
+    "subject": "美术",
+    "estimated_lessons": 3
+  },
+  "teacher_visible_context": {
+    "大单元基本信息": "第一单元 · 多变的色彩；三年级美术；预计 3 课时。",
+    "课标方向": "审美感知、艺术表现、创意实践为主，文化理解轻量渗透。",
+    "核心素养目标": "学生能感受、选择、说明和调整色彩搭配。",
+    "学生起点": "学生能说直观感受，但容易停留在好看、鲜艳、漂亮。",
+    "表现任务": "完成一件色彩感觉小作品，并说明选色理由。",
+    "学习推进": "感受、比较、表现、修订。",
+    "课时任务链": "1-1 打开感受；1-2 比较方法；1-3 完成表达。",
+    "评价证据": "能说出感觉、说明理由、留下记录、形成作品并调整。",
+    "材料与支架": "生活色彩图片、作品图像、色卡组合、学习单、展示评价句式。",
+    "资料补充状态": "教材目录、单元页或课时安排仍待补充。"
+  },
+  "backend_reference_context": {
+    "not_teacher_visible": true,
+    "source_field_model_file": "1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema/big_unit_teacher_visible_field_model_1013I_R6N_R9A.json",
+    "source_backend_mapping_file": "1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema/big_unit_backend_field_mapping_1013I_R6N_R9A.json",
+    "field_model_summary": {
+      "available": true,
+      "field_count_hint": 12
+    },
+    "backend_mapping_summary": {
+      "available": true,
+      "mapping_kind": "archive_only_not_runtime_schema"
+    }
+  }
+}

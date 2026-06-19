@@ -1,0 +1,34 @@
+{
+  "stage": "1013I_R6Q_BIG_UNIT_SECTION_GENERATION_REQUEST_ENVELOPE",
+  "policy_type": "big_unit_section_generation_policy",
+  "must_not": [
+    "不伪造课标原文",
+    "不生成正式大单元正文",
+    "不写正式备课本",
+    "不生成单课教案",
+    "不调用 provider/model",
+    "不写 database/memory/Feishu",
+    "候选只进入 preview",
+    "教师确认前不生效"
+  ],
+  "output_style": [
+    "教师可读",
+    "少系统说明",
+    "少口号",
+    "学生行为可观察",
+    "符合三年级美术常态课",
+    "保留技能训练和艺术语言",
+    "评价证据可观察"
+  ],
+  "preview_only": true,
+  "formal_apply_allowed": false,
+  "provider_model_call_allowed": false,
+  "candidate_generated": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

@@ -1,0 +1,135 @@
+{
+  "stage": "1013I_R6Q_BIG_UNIT_SECTION_GENERATION_REQUEST_ENVELOPE",
+  "request_type": "big_unit_section_refine_candidate",
+  "preview_only": true,
+  "formal_apply_allowed": false,
+  "provider_model_call_allowed": false,
+  "candidate_generated": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep",
+  "document_type": "big_unit_design",
+  "target_unit": {
+    "unit_title": "第一单元 · 多变的色彩",
+    "grade": "三年级",
+    "subject": "美术",
+    "estimated_lessons": 3
+  },
+  "target_section": {
+    "teacher_label": "课标依据",
+    "section_role": "curriculum_basis",
+    "current_text": "本单元主要指向审美感知、艺术表现、创意实践，文化理解作轻量渗透。",
+    "teacher_intent": "再具体一点",
+    "teacher_visible_instruction": "把课标方向说得更像老师能直接判断的单元方向，但不要伪造课标原文。",
+    "reference_needs": [
+      "课标方向",
+      "核心素养目标",
+      "表现任务",
+      "评价证据"
+    ],
+    "must_not_do": [
+      "不伪造课标原文",
+      "不生成正式大单元正文",
+      "不写正式备课本"
+    ],
+    "candidate_destination": "section_preview_only"
+  },
+  "target_section_examples": [
+    {
+      "teacher_label": "课标依据",
+      "section_role": "curriculum_basis",
+      "current_text": "本单元主要指向审美感知、艺术表现、创意实践，文化理解作轻量渗透。",
+      "teacher_intent": "再具体一点",
+      "teacher_visible_instruction": "把课标方向说得更像老师能直接判断的单元方向，但不要伪造课标原文。",
+      "reference_needs": [
+        "课标方向",
+        "核心素养目标",
+        "表现任务",
+        "评价证据"
+      ],
+      "must_not_do": [
+        "不伪造课标原文",
+        "不生成正式大单元正文",
+        "不写正式备课本"
+      ],
+      "candidate_destination": "section_preview_only"
+    },
+    {
+      "teacher_label": "核心素养",
+      "section_role": "core_literacy",
+      "current_text": "审美感知、艺术表现、创意实践和文化理解都转成学生可观察的行为。",
+      "teacher_intent": "减少口号感",
+      "teacher_visible_instruction": "把核心素养写成学生能做出来、老师能观察到的表现。",
+      "reference_needs": [
+        "课标方向",
+        "学生起点",
+        "学习推进",
+        "评价证据"
+      ],
+      "must_not_do": [
+        "不写空泛口号",
+        "不拔高到超过三年级",
+        "不生成单课教案"
+      ],
+      "candidate_destination": "section_preview_only"
+    },
+    {
+      "teacher_label": "表现任务",
+      "section_role": "performance_task",
+      "current_text": "学生完成一件“色彩感觉”小作品，并说明自己的色彩选择。",
+      "teacher_intent": "更贴合三年级",
+      "teacher_visible_instruction": "把任务控制在常态课可完成范围里，不扩成大型项目。",
+      "reference_needs": [
+        "学生起点",
+        "材料与支架",
+        "学习推进",
+        "评价证据"
+      ],
+      "must_not_do": [
+        "不写大型展览策划",
+        "不增加过重作品要求",
+        "不写正式备课本"
+      ],
+      "candidate_destination": "section_preview_only"
+    },
+    {
+      "teacher_label": "课时任务链",
+      "section_role": "lesson_chain",
+      "current_text": "1-1 打开感受；1-2 比较方法；1-3 完成表达。",
+      "teacher_intent": "让课时之间更连贯",
+      "teacher_visible_instruction": "说明每一课承接什么、推进什么、留下什么证据。",
+      "reference_needs": [
+        "单元问题",
+        "表现任务",
+        "学习推进",
+        "评价证据"
+      ],
+      "must_not_do": [
+        "不只写课时目录",
+        "不直接生成单课教案",
+        "不进入正式写入"
+      ],
+      "candidate_destination": "section_preview_only"
+    }
+  ],
+  "generation_boundaries": {
+    "write_to_preview_only": true,
+    "write_to_formal_lesson_book": false,
+    "write_to_database": false,
+    "write_to_memory": false,
+    "write_to_feishu": false
+  }
+}

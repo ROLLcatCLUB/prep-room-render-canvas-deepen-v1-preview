@@ -1,14 +1,14 @@
 # Prep Room Render Canvas Deepen V1 Review Package
 
-Latest stage: `1013I_R6P_R2_SECTION_EDIT_MODAL_LESSON_NOTEBOOK_STYLE_PATCH`
+Latest stage: `1013I_R6Q_BIG_UNIT_SECTION_GENERATION_REQUEST_ENVELOPE`
 
 Open:
-- `1013I_R6P_R2_section_edit_modal_lesson_notebook_style_patch/prep_room_render_canvas_deepen_v1_R6P_R2_section_edit_modal_lesson_notebook_style.html`
-- `1013I_R6P_R2_section_edit_modal_lesson_notebook_style_patch/1013I_R6P_R2_result.json`
+- `1013I_R6Q_big_unit_section_generation_request_envelope/big_unit_section_generation_request_envelope_1013I_R6Q.json`
+- `1013I_R6Q_big_unit_section_generation_request_envelope/1013I_R6Q_result.json`
 
 Run:
 
 ```bash
-python scripts/validate_1013I_R6P_R2_section_edit_modal_lesson_notebook_style_patch.py
-python scripts/validate_1013I_R6P_R2_section_edit_modal_lesson_notebook_style_patch.py --root <repo-root>
+python scripts/validate_1013I_R6Q_big_unit_section_generation_request_envelope.py
+python scripts/validate_1013I_R6Q_big_unit_section_generation_request_envelope.py --root <repo-root>
 ```
