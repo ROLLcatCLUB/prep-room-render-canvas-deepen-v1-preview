@@ -1,5 +1,5 @@
 # Prep Room Review Package
 
-Latest stage: `1013J_R1J_COURSEWARE_TEMPLATE_AND_AGENT_RECOMMENDATION_MERGE_STATIC`
+Latest stage: `1013J_R1K_COURSEWARE_LESSON_SCREEN_BIDIRECTIONAL_LINK_STATIC`
 
-Open `1013J_R1J_courseware_template_and_agent_recommendation_merge_static/prep_room_render_canvas_deepen_v1_1013J_R1J_template_agent_merge.html`.
+Open `1013J_R1K_courseware_lesson_screen_bidirectional_link_static/prep_room_render_canvas_deepen_v1_1013J_R1K_lesson_screen_bidirectional_link.html`.

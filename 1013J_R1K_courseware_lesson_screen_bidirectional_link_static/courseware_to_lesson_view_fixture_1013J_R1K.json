@@ -1,0 +1,19 @@
+{
+  "stage": "1013J_R1K_COURSEWARE_LESSON_SCREEN_BIDIRECTIONAL_LINK_STATIC",
+  "screen": "03 哪一组颜色更安静？",
+  "linked_lesson_section": "比较变化",
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false,
+  "real_sync_performed": false
+}
