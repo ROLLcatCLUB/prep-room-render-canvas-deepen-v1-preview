@@ -1,14 +1,14 @@
 # Prep Room Render Canvas Deepen V1 Review Package
 
-Latest stage: `1013I_R6S_BIG_UNIT_SECTION_CANDIDATE_RETURN_TO_EDIT_MODAL_PREVIEW`
+Latest stage: `1013I_R6S_R1_CHAT_AND_BIG_UNIT_VISUAL_ALIGNMENT_PATCH`
 
 Open:
-- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/prep_room_render_canvas_deepen_v1_R6S_candidate_return_to_edit_modal_preview.html`
-- `1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview/1013I_R6S_result.json`
+- `1013I_R6S_R1_chat_and_big_unit_visual_alignment_patch/prep_room_render_canvas_deepen_v1_R6S_R1_chat_and_big_unit_visual_alignment.html`
+- `1013I_R6S_R1_chat_and_big_unit_visual_alignment_patch/1013I_R6S_R1_result.json`
 
 Run:
 
 ```bash
-python scripts/validate_1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview.py
-python scripts/validate_1013I_R6S_big_unit_section_candidate_return_to_edit_modal_preview.py --root <repo-root>
+python scripts/validate_1013I_R6S_R1_chat_and_big_unit_visual_alignment_patch.py
+python scripts/validate_1013I_R6S_R1_chat_and_big_unit_visual_alignment_patch.py --root <repo-root>
 ```

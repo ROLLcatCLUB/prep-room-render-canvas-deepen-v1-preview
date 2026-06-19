@@ -1,0 +1,23 @@
+{
+  "stage": "1013I_R6S_R1_CHAT_AND_BIG_UNIT_VISUAL_ALIGNMENT_PATCH",
+  "chat_changes": [
+    "avatar_inside_input_shell",
+    "upload_right_of_avatar",
+    "voice_left_of_send",
+    "composer_taller_and_shorter",
+    "composer_tint_aligned_with_lesson_paper"
+  ],
+  "big_unit_changes": [
+    "paper_tint_aligned_with_single_lesson",
+    "title_region_alignment_patch_present"
+  ],
+  "static_html_only": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}
