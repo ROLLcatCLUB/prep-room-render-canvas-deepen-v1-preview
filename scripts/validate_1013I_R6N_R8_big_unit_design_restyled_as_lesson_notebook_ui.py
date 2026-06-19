@@ -82,6 +82,9 @@ def r6n_r8_css() -> str:
     /* 1013I_R6N_R8: big-unit page restyled as the polished single-lesson notebook UI */
     [data-r6n-r8-notebook-ui] .nb-workspace {
       padding-left: 34px;
+      background:
+        linear-gradient(90deg, rgba(204, 223, 212, 0.34) 0 1px, transparent 1px) 30px 0 / 100% 100% no-repeat,
+        linear-gradient(135deg, rgba(247, 250, 240, 0.98), rgba(237, 245, 233, 0.95));
     }
 
     [data-r6n-r8-notebook-ui] .nb-hero {
@@ -93,11 +96,18 @@ def r6n_r8_css() -> str:
     [data-r6n-r8-notebook-ui] .nb-doc-body-surface {
       max-width: 880px;
       margin: 0 auto;
+      background:
+        radial-gradient(circle at 14px 14px, rgba(53, 93, 74, 0.035) 1px, transparent 1.5px),
+        linear-gradient(135deg, rgba(249, 250, 241, 0.8), rgba(236, 244, 232, 0.64));
+      background-size: 18px 18px, auto;
+      border-radius: 10px;
+      padding: 8px;
     }
 
     [data-r6n-r8-notebook-ui] .nb-doc-section {
       border-radius: 8px;
-      background: rgba(255, 255, 252, .72);
+      background:
+        linear-gradient(135deg, rgba(251, 249, 235, .86), rgba(235, 245, 232, .78));
       box-shadow: inset 0 0 0 1px rgba(38, 94, 76, .08);
     }
 
