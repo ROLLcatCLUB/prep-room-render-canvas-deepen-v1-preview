@@ -1,0 +1,94 @@
+{
+  "stage": "1013J_R1D_COURSEWARE_WORKSPACE_VISUAL_FIRST_COPY_POLISH",
+  "screen_count": 8,
+  "screens": [
+    {
+      "id": "screen_01_cover",
+      "index": "01",
+      "title": "课题导入",
+      "screen_title": "色彩的感觉",
+      "classroom_text": "颜色为什么会让人产生不同感觉？",
+      "lesson_link": "导入问题",
+      "placeholder": "课题背景图",
+      "status": "已有文字",
+      "tool": "封面"
+    },
+    {
+      "id": "screen_02_observe",
+      "index": "02",
+      "title": "看色彩图片",
+      "screen_title": "这些颜色给你什么感觉？",
+      "classroom_text": "先说第一感觉，不急着判断对错。",
+      "lesson_link": "看一看",
+      "placeholder": "生活色彩图片 3 张",
+      "status": "待补图",
+      "tool": "图片观察"
+    },
+    {
+      "id": "screen_03_compare",
+      "index": "03",
+      "title": "比较两组颜色",
+      "screen_title": "哪一组颜色更安静？",
+      "classroom_text": "你从哪些颜色看出来？",
+      "lesson_link": "比较变化",
+      "placeholder": "两组色彩对比图",
+      "status": "待补图 / 可白板",
+      "tool": "对比观察"
+    },
+    {
+      "id": "screen_04_words",
+      "index": "04",
+      "title": "感觉词卡",
+      "screen_title": "把“好看”说得更具体",
+      "classroom_text": "热烈 / 安静 / 柔和 / 强烈 / 明亮 / 沉稳",
+      "lesson_link": "说一说",
+      "placeholder": "感觉词卡",
+      "status": "已有文字",
+      "tool": "问题引导"
+    },
+    {
+      "id": "screen_05_task",
+      "index": "05",
+      "title": "色彩实验任务",
+      "screen_title": "用 3-4 种颜色表达一种感觉",
+      "classroom_text": "选一组颜色，说说你想表达什么感觉。",
+      "lesson_link": "任务发布",
+      "placeholder": "任务说明",
+      "status": "待教师确认",
+      "tool": "任务发布"
+    },
+    {
+      "id": "screen_06_whiteboard",
+      "index": "06",
+      "title": "白板试色",
+      "screen_title": "试一组颜色",
+      "classroom_text": "拖一拖色卡，看看画面感觉有什么变化。",
+      "lesson_link": "试一试",
+      "placeholder": "白板区域",
+      "status": "可白板",
+      "tool": "白板操作"
+    },
+    {
+      "id": "screen_07_show",
+      "index": "07",
+      "title": "学生作品展示",
+      "screen_title": "说说你的色彩选择",
+      "classroom_text": "我用了哪些颜色？我想表达什么感觉？",
+      "lesson_link": "展一展",
+      "placeholder": "学生作品展示位",
+      "status": "待学生作品",
+      "tool": "作品展示"
+    },
+    {
+      "id": "screen_08_summary",
+      "index": "08",
+      "title": "总结回看",
+      "screen_title": "颜色会改变画面的感觉",
+      "classroom_text": "看色彩、说感觉、比变化、做表达、会修改。",
+      "lesson_link": "改一改",
+      "placeholder": "总结页",
+      "status": "已有文字",
+      "tool": "评价提示"
+    }
+  ]
+}
