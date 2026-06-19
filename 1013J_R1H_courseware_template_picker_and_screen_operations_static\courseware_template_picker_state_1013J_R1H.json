@@ -1,0 +1,116 @@
+{
+  "stage": "1013J_R1H_COURSEWARE_TEMPLATE_PICKER_AND_SCREEN_OPERATIONS_STATIC",
+  "templates": [
+    {
+      "template_id": "cover_title",
+      "teacher_label": "封面页",
+      "use": "课题呈现",
+      "slots": "课题、背景图",
+      "whiteboard": false
+    },
+    {
+      "template_id": "one_image_observation",
+      "teacher_label": "一图观察",
+      "use": "图像观察 / 经验唤醒",
+      "slots": "图片、课堂问题",
+      "whiteboard": false
+    },
+    {
+      "template_id": "two_image_comparison",
+      "teacher_label": "两图对比",
+      "use": "比较观察 / 方法发现 / 审美判断",
+      "slots": "图片 A、图片 B、课堂问题",
+      "whiteboard": false
+    },
+    {
+      "template_id": "three_image_comparison",
+      "teacher_label": "三图比较",
+      "use": "归纳发现 / 作品比较",
+      "slots": "图片 A、图片 B、图片 C、课堂问题",
+      "whiteboard": false
+    },
+    {
+      "template_id": "image_with_question",
+      "teacher_label": "图片 + 问题",
+      "use": "图像导入 / 追问",
+      "slots": "主图、问题",
+      "whiteboard": false
+    },
+    {
+      "template_id": "image_annotation",
+      "teacher_label": "图片 + 标注",
+      "use": "观察支架 / 局部分析",
+      "slots": "图片、标注提示",
+      "whiteboard": true
+    },
+    {
+      "template_id": "word_card",
+      "teacher_label": "词卡页",
+      "use": "表达支架 / 关键词回收",
+      "slots": "词卡",
+      "whiteboard": false
+    },
+    {
+      "template_id": "task_release",
+      "teacher_label": "任务发布",
+      "use": "任务说明 / 操作提示",
+      "slots": "任务、要求",
+      "whiteboard": false
+    },
+    {
+      "template_id": "step_demo",
+      "teacher_label": "步骤示范",
+      "use": "方法学习 / 教师示范",
+      "slots": "步骤、示范图",
+      "whiteboard": false
+    },
+    {
+      "template_id": "whiteboard_interaction",
+      "teacher_label": "白板互动",
+      "use": "色卡试验 / 现场标注",
+      "slots": "白板区、操作提示",
+      "whiteboard": true
+    },
+    {
+      "template_id": "student_work_wall",
+      "teacher_label": "学生作品墙",
+      "use": "展示交流 / 同伴评价",
+      "slots": "作品位、交流提示",
+      "whiteboard": false
+    },
+    {
+      "template_id": "evaluation_prompt",
+      "teacher_label": "评价提示",
+      "use": "展示评价 / 修改反馈",
+      "slots": "评价点、修改提示",
+      "whiteboard": false
+    },
+    {
+      "template_id": "summary_review",
+      "teacher_label": "总结回看",
+      "use": "课堂总结 / 回顾",
+      "slots": "总结文字",
+      "whiteboard": false
+    },
+    {
+      "template_id": "custom_blank",
+      "teacher_label": "自定义空白页",
+      "use": "临时提醒 / 过渡页",
+      "slots": "自由内容",
+      "whiteboard": false
+    }
+  ],
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

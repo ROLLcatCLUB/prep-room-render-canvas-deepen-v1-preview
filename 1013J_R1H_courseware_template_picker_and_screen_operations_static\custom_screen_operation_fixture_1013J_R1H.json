@@ -1,0 +1,18 @@
+{
+  "stage": "1013J_R1H_COURSEWARE_TEMPLATE_PICKER_AND_SCREEN_OPERATIONS_STATIC",
+  "custom_blank_screen_addable": true,
+  "linked_to_lesson": false,
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}
