@@ -5627,8 +5627,8 @@
 
     /* 1013I_R6O_R1: reading polish, remove card wall and make state row match single-lesson tone */
     [data-r6o-r1-reading-polish] .nb-state-bar {
-      margin: 8px 0 16px;
-      padding: 7px 0;
+      margin: 4px 0 10px;
+      padding: 8px 0;
       border: 0;
       border-top: 1px solid rgba(36, 84, 70, .12);
       border-bottom: 1px solid rgba(36, 84, 70, .12);
@@ -5637,15 +5637,49 @@
     }
 
     [data-r6o-r1-reading-polish] .nb-state-main {
-      gap: 8px;
+      gap: 7px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    [data-r6o-r1-reading-polish] .r6o-r1-status-copy {
+    [data-r6o-r1-reading-polish] .nb-hero {
+      padding-bottom: 6px !important;
+      margin-bottom: 0 !important;
+    }
+
+    [data-r6o-r1-reading-polish] .r6o-r1-status-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 23px;
+      padding: 2px 9px;
+      border: 1px solid rgba(43, 112, 92, .18);
+      border-radius: 999px;
+      background: rgba(239, 248, 243, .72);
+      color: rgba(29, 96, 78, .9);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    [data-r6o-r1-reading-polish] .r6o-r1-status-light {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       color: rgba(32, 75, 65, .72);
       font-size: 12px;
-      line-height: 1.6;
+      line-height: 1.4;
       letter-spacing: 0;
     }
+
+    [data-r6o-r1-reading-polish] .r6o-r1-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      box-shadow: 0 0 0 3px rgba(43, 112, 92, .06);
+    }
+
+    [data-r6o-r1-reading-polish] .r6o-r1-dot.green { background: #2b7c6a; }
+    [data-r6o-r1-reading-polish] .r6o-r1-dot.amber { background: #d59748; }
+    [data-r6o-r1-reading-polish] .r6o-r1-dot.red { background: #b6544d; }
 
     [data-r6o-r1-reading-polish] .state-tag,
     [data-r6o-r1-reading-polish] .quiet-tag {
@@ -5664,7 +5698,7 @@
     }
 
     [data-r6o-r1-reading-polish] .nb-doc-section {
-      padding: 24px 0;
+      padding: 15px 0;
       margin: 0;
       border-radius: 0 !important;
       border: 0 !important;
@@ -5674,7 +5708,7 @@
     }
 
     [data-r6o-r1-reading-polish] .nb-doc-section:first-child {
-      padding-top: 14px;
+      padding-top: 12px;
     }
 
     [data-r6o-r1-reading-polish] .nb-doc-section-head {
@@ -5688,6 +5722,44 @@
 
     [data-r6o-r1-reading-polish] .nb-doc-section:hover .node-action {
       opacity: 1;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-doc-section p,
+    [data-r6o-r1-reading-polish] .nb-doc-section li {
+      line-height: 1.56 !important;
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-doc-section ul {
+      margin-top: 8px !important;
+      margin-bottom: 8px !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-prompt {
+      margin: 8px 0 10px !important;
+      padding: 10px 14px !important;
+      gap: 10px !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-title {
+      margin-bottom: 2px !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-note {
+      margin: 2px 0 0 !important;
+      line-height: 1.38 !important;
+      max-width: 500px;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-actions {
+      gap: 6px !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-actions .node-action {
+      min-height: 26px;
+      padding-top: 3px;
+      padding-bottom: 3px;
     }
 
   </style>
@@ -7406,6 +7478,20 @@
                 </div>
               </div>
 
+              <div class="nb-state-bar">
+                <div class="nb-state-main">
+                  <span class="r6o-r1-status-pill">查看状态</span>
+                  <span class="r6o-r1-status-pill">可预览</span>
+                  <span class="r6o-r1-status-light"><span class="r6o-r1-dot amber"></span>资料待补充</span>
+                  <span class="r6o-r1-status-light"><span class="r6o-r1-dot green"></span>大单元预览</span>
+                  <span class="r6o-r1-status-light" title="当前内容仅为预览候选，教师确认前不写入正式备课本。"><span class="r6o-r1-dot red"></span>教师确认前不生效</span>
+                </div>
+                <div class="nb-mode-toggle" aria-label="大单元状态">
+                  <button class="nb-mode-btn active" type="button">查看</button>
+                  <button class="nb-mode-btn" type="button" data-pending="大单元编辑暂不接入，只做静态样张。">编辑</button>
+                </div>
+              </div>
+
               <section class="nb-material-front-prompt" aria-label="资料补充提示">
                 <div class="nb-material-front-copy">
                   <div class="nb-material-front-title"><span class="nb-material-icon">!</span><span>还缺教材材料</span></div>
@@ -7415,16 +7501,6 @@
                   ${materialActions.map(([label, note]) => `<button class="node-action secondary" type="button" data-pending="${html(note)}">${html(label)}</button>`).join("")}
                 </div>
               </section>
-
-              <div class="nb-state-bar">
-                <div class="nb-state-main">
-                  <span class="r6o-r1-status-copy" title="当前内容仅为预览候选，教师确认前不写入正式备课本。">查看状态｜可预览｜资料待补充｜大单元预览｜教师确认前不生效</span>
-                </div>
-                <div class="nb-mode-toggle" aria-label="大单元状态">
-                  <button class="nb-mode-btn active" type="button">查看</button>
-                  <button class="nb-mode-btn" type="button" data-pending="大单元编辑暂不接入，只做静态样张。">编辑</button>
-                </div>
-              </div>
 
               <div class="nb-doc" data-r6o-field-render-doc="true">
                 <div class="nb-doc-body-surface">

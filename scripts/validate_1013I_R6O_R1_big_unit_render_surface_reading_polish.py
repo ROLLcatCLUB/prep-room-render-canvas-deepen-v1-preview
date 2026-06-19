@@ -76,8 +76,8 @@ def polish_css() -> str:
 
     /* 1013I_R6O_R1: reading polish, remove card wall and make state row match single-lesson tone */
     [data-r6o-r1-reading-polish] .nb-state-bar {
-      margin: 8px 0 16px;
-      padding: 7px 0;
+      margin: 4px 0 10px;
+      padding: 8px 0;
       border: 0;
       border-top: 1px solid rgba(36, 84, 70, .12);
       border-bottom: 1px solid rgba(36, 84, 70, .12);
@@ -86,15 +86,49 @@ def polish_css() -> str:
     }
 
     [data-r6o-r1-reading-polish] .nb-state-main {
-      gap: 8px;
+      gap: 7px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    [data-r6o-r1-reading-polish] .r6o-r1-status-copy {
+    [data-r6o-r1-reading-polish] .nb-hero {
+      padding-bottom: 6px !important;
+      margin-bottom: 0 !important;
+    }
+
+    [data-r6o-r1-reading-polish] .r6o-r1-status-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 23px;
+      padding: 2px 9px;
+      border: 1px solid rgba(43, 112, 92, .18);
+      border-radius: 999px;
+      background: rgba(239, 248, 243, .72);
+      color: rgba(29, 96, 78, .9);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    [data-r6o-r1-reading-polish] .r6o-r1-status-light {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       color: rgba(32, 75, 65, .72);
       font-size: 12px;
-      line-height: 1.6;
+      line-height: 1.4;
       letter-spacing: 0;
     }
+
+    [data-r6o-r1-reading-polish] .r6o-r1-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      box-shadow: 0 0 0 3px rgba(43, 112, 92, .06);
+    }
+
+    [data-r6o-r1-reading-polish] .r6o-r1-dot.green { background: #2b7c6a; }
+    [data-r6o-r1-reading-polish] .r6o-r1-dot.amber { background: #d59748; }
+    [data-r6o-r1-reading-polish] .r6o-r1-dot.red { background: #b6544d; }
 
     [data-r6o-r1-reading-polish] .state-tag,
     [data-r6o-r1-reading-polish] .quiet-tag {
@@ -113,7 +147,7 @@ def polish_css() -> str:
     }
 
     [data-r6o-r1-reading-polish] .nb-doc-section {
-      padding: 24px 0;
+      padding: 15px 0;
       margin: 0;
       border-radius: 0 !important;
       border: 0 !important;
@@ -123,7 +157,7 @@ def polish_css() -> str:
     }
 
     [data-r6o-r1-reading-polish] .nb-doc-section:first-child {
-      padding-top: 14px;
+      padding-top: 12px;
     }
 
     [data-r6o-r1-reading-polish] .nb-doc-section-head {
@@ -138,6 +172,44 @@ def polish_css() -> str:
     [data-r6o-r1-reading-polish] .nb-doc-section:hover .node-action {
       opacity: 1;
     }
+
+    [data-r6o-r1-reading-polish] .nb-doc-section p,
+    [data-r6o-r1-reading-polish] .nb-doc-section li {
+      line-height: 1.56 !important;
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-doc-section ul {
+      margin-top: 8px !important;
+      margin-bottom: 8px !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-prompt {
+      margin: 8px 0 10px !important;
+      padding: 10px 14px !important;
+      gap: 10px !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-title {
+      margin-bottom: 2px !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-note {
+      margin: 2px 0 0 !important;
+      line-height: 1.38 !important;
+      max-width: 500px;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-actions {
+      gap: 6px !important;
+    }
+
+    [data-r6o-r1-reading-polish] .nb-material-front-actions .node-action {
+      min-height: 26px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
 """
 
 
@@ -149,6 +221,24 @@ def remove_duplicate_material_section(source: str) -> str:
     section_start = source.rfind('<section class="nb-doc-section">', 0, title_index)
     section_end = source.index('                  </section>', title_index) + len('                  </section>\n')
     return source[:section_start] + source[section_end:]
+
+
+def move_status_above_material_prompt(source: str) -> str:
+    material_marker = '              <section class="nb-material-front-prompt" aria-label="资料补充提示">'
+    state_marker = '              <div class="nb-state-bar">'
+    material_start = source.find(material_marker)
+    if material_start < 0:
+        return source
+    state_start = source.find(state_marker, material_start)
+    if state_start < 0:
+        return source
+    material_end = source.find('              </section>', material_start) + len('              </section>\n')
+    state_end = source.find('              </div>\n\n              <div class="nb-doc"', state_start)
+    if material_end <= material_start or state_end < 0:
+        return source
+    state_block = source[state_start:state_end + len('              </div>\n')]
+    material_block = source[material_start:material_end]
+    return source[:material_start] + state_block + "\n" + material_block + source[state_end + len('              </div>\n'):]
 
 
 def build_html(output_root: Path) -> str:
@@ -174,7 +264,11 @@ def build_html(output_root: Path) -> str:
               </div>"""
     new_status = """<div class="nb-state-bar">
                 <div class="nb-state-main">
-                  <span class="r6o-r1-status-copy" title="当前内容仅为预览候选，教师确认前不写入正式备课本。">查看状态｜可预览｜资料待补充｜大单元预览｜教师确认前不生效</span>
+                  <span class="r6o-r1-status-pill">查看状态</span>
+                  <span class="r6o-r1-status-pill">可预览</span>
+                  <span class="r6o-r1-status-light"><span class="r6o-r1-dot amber"></span>资料待补充</span>
+                  <span class="r6o-r1-status-light"><span class="r6o-r1-dot green"></span>大单元预览</span>
+                  <span class="r6o-r1-status-light" title="当前内容仅为预览候选，教师确认前不写入正式备课本。"><span class="r6o-r1-dot red"></span>教师确认前不生效</span>
                 </div>
                 <div class="nb-mode-toggle" aria-label="大单元状态">
                   <button class="nb-mode-btn active" type="button">查看</button>
@@ -182,6 +276,7 @@ def build_html(output_root: Path) -> str:
                 </div>
               </div>"""
     source = source.replace(old_status, new_status, 1)
+    source = move_status_above_material_prompt(source)
     return remove_duplicate_material_section(source)
 
 
@@ -235,7 +330,7 @@ def validate_html(html_text: str) -> dict[str, Any]:
     main = main_doc_text(html_text)
     raw_hits = [key for key in RAW_KEYS if key in main]
     return {
-        "top_status_row_matches_single_lesson_style": "查看状态｜可预览｜资料待补充｜大单元预览｜教师确认前不生效" in html_text,
+        "top_status_row_matches_single_lesson_style": all(text in html_text for text in ["r6o-r1-status-pill", "r6o-r1-dot amber", "r6o-r1-dot green", "r6o-r1-dot red"]),
         "section_outer_cards_removed": "border-radius: 0 !important" in html_text and "box-shadow: none !important" in html_text,
         "main_reading_flow_continuous": 'data-r6o-r1-reading-polish="true"' in html_text and "border-bottom: 1px solid" in html_text,
         "duplicate_material_request_removed": "十二、资料补充" not in main,
