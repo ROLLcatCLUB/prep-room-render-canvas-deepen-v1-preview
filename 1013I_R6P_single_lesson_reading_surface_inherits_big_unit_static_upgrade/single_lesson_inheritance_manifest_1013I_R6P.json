@@ -1,0 +1,16 @@
+{
+  "stage": "1013I_R6P_SINGLE_LESSON_READING_SURFACE_INHERITS_BIG_UNIT_STATIC_UPGRADE",
+  "requested_stage_alias": "1013I_R6O_SINGLE_LESSON_READING_SURFACE_INHERITS_BIG_UNIT_STATIC_UPGRADE",
+  "inherits_from": "1013I_R6N_R7_BIG_UNIT_PAGE_USER_REVIEW_AND_CONTENT_POLISH",
+  "boundary": {
+    "static_upgrade_only": true,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "main_project_pushed": false
+  }
+}
