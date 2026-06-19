@@ -1,10 +1,9 @@
 # Prep Room Render Canvas Deepen V1 Review Package
 
-Latest stage: `1013I_R6N_R9A_FIELD_LABEL_DISAMBIGUATION_BEFORE_RUNTIME_SCHEMA`
+Latest stage: `1013I_R6O_BIG_UNIT_FIELD_MODEL_TO_PAGE_RENDER_FIXTURE`
 
 Open:
-- `1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema/big_unit_teacher_visible_field_model_1013I_R6N_R9A.json`
-- `1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema/big_unit_backend_field_mapping_1013I_R6N_R9A.json`
+- `1013I_R6O_big_unit_field_model_to_page_render_fixture/prep_room_render_canvas_deepen_v1_R6O_big_unit_field_model_render.html`
 
 Run:
-- `python scripts/validate_1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema.py`
+- `python scripts/validate_1013I_R6O_big_unit_field_model_to_page_render_fixture.py`

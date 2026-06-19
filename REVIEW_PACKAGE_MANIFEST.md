@@ -1,13 +1,15 @@
 # Review Package Manifest
 
-Latest stage: `1013I_R6N_R9A_FIELD_LABEL_DISAMBIGUATION_BEFORE_RUNTIME_SCHEMA`
+Latest stage: `1013I_R6O_BIG_UNIT_FIELD_MODEL_TO_PAGE_RENDER_FIXTURE`
 
 Files:
-- `1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema/big_unit_teacher_visible_field_model_1013I_R6N_R9A.json`
-- `1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema/big_unit_backend_field_mapping_1013I_R6N_R9A.json`
-- `1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema/big_unit_field_reuse_and_integration_matrix_1013I_R6N_R9A.json`
-- `1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema/1013I_R6N_R9A_result.json`
-- `1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema/1013I_R6N_R9A_report.md`
-- `scripts/validate_1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema.py`
+- `1013I_R6O_big_unit_field_model_to_page_render_fixture/prep_room_render_canvas_deepen_v1_R6O_big_unit_field_model_render.html`
+- `1013I_R6O_big_unit_field_model_to_page_render_fixture/big_unit_field_render_manifest_1013I_R6O.json`
+- `1013I_R6O_big_unit_field_model_to_page_render_fixture/big_unit_page_rendered_fields_1013I_R6O.json`
+- `1013I_R6O_big_unit_field_model_to_page_render_fixture/1013I_R6O_result.json`
+- `1013I_R6O_big_unit_field_model_to_page_render_fixture/1013I_R6O_report.md`
+- `1013I_R6O_big_unit_field_model_to_page_render_fixture/ui_smoke_screenshot_1013I_R6O_desktop.png`
+- `1013I_R6O_big_unit_field_model_to_page_render_fixture/ui_smoke_screenshot_1013I_R6O_mobile.png`
+- `scripts/validate_1013I_R6O_big_unit_field_model_to_page_render_fixture.py`
 
-Boundary: label fix only; no runtime schema/database/memory/Feishu/provider/model/formal apply.
+Boundary: page render fixture only; no runtime schema/database/memory/Feishu/provider/model/formal apply.

@@ -1,0 +1,19 @@
+{
+  "screenshot_smoke_pass": true,
+  "screenshots": [
+    {
+      "viewport": "desktop",
+      "path": "ui_smoke_screenshot_1013I_R6O_desktop.png",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 694245
+    },
+    {
+      "viewport": "mobile",
+      "path": "ui_smoke_screenshot_1013I_R6O_mobile.png",
+      "width": 390,
+      "height": 1100,
+      "bytes": 168217
+    }
+  ]
+}
