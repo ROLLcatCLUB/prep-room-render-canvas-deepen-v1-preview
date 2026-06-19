@@ -1,0 +1,22 @@
+{
+  "stage": "1013J_R1L_COURSEWARE_MATERIAL_PLACEHOLDER_STATE_FLOW_STATIC",
+  "source_preview": "当前为示例占位，后续可替换为真实图片。",
+  "real_upload_performed": false,
+  "real_search_performed": false,
+  "real_material_library_connected": false,
+  "real_image_generation_performed": false,
+  "real_whiteboard_connected": false,
+  "upload_implemented": false,
+  "search_implemented": false,
+  "whiteboard_library_connected": false,
+  "ppt_export_implemented": false,
+  "drag_edit_implemented": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

@@ -1,5 +1,5 @@
 # Prep Room Review Package
 
-Latest stage: `1013J_R1K_COURSEWARE_LESSON_SCREEN_BIDIRECTIONAL_LINK_STATIC`
+Latest stage: `1013J_R1L_COURSEWARE_MATERIAL_PLACEHOLDER_STATE_FLOW_STATIC`
 
-Open `1013J_R1K_courseware_lesson_screen_bidirectional_link_static/prep_room_render_canvas_deepen_v1_1013J_R1K_lesson_screen_bidirectional_link.html`.
+Open `1013J_R1L_courseware_material_placeholder_state_flow_static/prep_room_render_canvas_deepen_v1_1013J_R1L_material_placeholder_state_flow.html`.

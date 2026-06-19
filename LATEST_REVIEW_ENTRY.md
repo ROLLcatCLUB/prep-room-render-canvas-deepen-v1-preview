@@ -1,7 +1,7 @@
 # Latest Review Entry
 
-STAGE=1013J_R1K_COURSEWARE_LESSON_SCREEN_BIDIRECTIONAL_LINK_STATIC
-FINAL_STATUS=PASS_1013J_R1K_COURSEWARE_LESSON_SCREEN_BIDIRECTIONAL_LINK_STATIC
-NEXT_STAGE=1013J_R1L_COURSEWARE_MATERIAL_PLACEHOLDER_STATE_FLOW_STATIC
+STAGE=1013J_R1L_COURSEWARE_MATERIAL_PLACEHOLDER_STATE_FLOW_STATIC
+FINAL_STATUS=PASS_1013J_R1L_COURSEWARE_MATERIAL_PLACEHOLDER_STATE_FLOW_STATIC
+NEXT_STAGE=1013J_R1M_COURSEWARE_CLASSROOM_DISPLAY_PREVIEW_STATIC
 
-R1K makes the lesson-section to courseware-screen relationship visible in both directions, with preview-only sync prompts.
+R1L makes courseware material placeholder states visible: pending image, inserted material, text-ready, whiteboard, student work, and teacher-confirmation states.
