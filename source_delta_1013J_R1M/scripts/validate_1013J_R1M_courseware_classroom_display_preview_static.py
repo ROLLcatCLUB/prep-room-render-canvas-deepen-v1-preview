@@ -65,25 +65,25 @@ def png_size(path: Path) -> tuple[int, int]:
 def css() -> str:
     return """
     .r1m-entry-note{border:1px solid rgba(43,124,106,.18);border-radius:14px;background:rgba(255,255,250,.76);padding:12px;display:grid;gap:8px;font-size:12px;line-height:1.45}
-    .r1m-preview-shell{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at 50% 0%,rgba(235,249,243,.95),#f8fbf7 46%,#e7f3ee 100%);display:grid;grid-template-rows:1fr auto;align-items:center;justify-items:center;padding:24px;color:var(--ink)}
-    .r1m-screen-wrap{width:min(92vw,1420px);display:grid;gap:12px;justify-items:center}
-    .r1m-screen{width:100%;aspect-ratio:16/9;border:1px solid rgba(43,124,106,.22);border-radius:22px;background:linear-gradient(145deg,#fffef8,#f4fbf5);box-shadow:0 26px 70px rgba(16,61,53,.18);padding:42px;display:grid;grid-template-rows:auto 1fr auto;gap:24px}
-    .r1m-screen.ratio-4-3{width:min(76vw,1080px);aspect-ratio:4/3}
+    .r1m-preview-shell{position:fixed;inset:0;z-index:9999;background:#102f2a;display:grid;grid-template-rows:minmax(0,1fr) auto;color:var(--ink);overflow:hidden}
+    .r1m-screen-wrap{width:100vw;height:100%;display:grid;place-items:center;padding:0}
+    .r1m-screen{width:100vw;height:calc(100vh - 72px);max-width:none;aspect-ratio:auto;border:0;border-radius:0;background:linear-gradient(145deg,#fffef8,#f4fbf5);box-shadow:none;padding:clamp(22px,3vw,46px);display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:clamp(14px,2vw,26px)}
+    .r1m-screen.ratio-4-3{width:min(calc((100vh - 72px) * 4 / 3),100vw);height:calc(100vh - 72px);aspect-ratio:auto;margin:auto;box-shadow:0 0 0 9999px #102f2a}
     .r1m-kicker{font-size:18px;color:var(--green);font-weight:900}
-    .r1m-title{font-size:42px;line-height:1.12;font-weight:950;color:var(--ink);letter-spacing:0}
-    .r1m-question{font-size:20px;color:var(--muted);font-weight:760}
-    .r1m-images{display:grid;grid-template-columns:1fr 1fr;gap:26px;min-height:0}
-    .r1m-image{border:1px dashed rgba(43,124,106,.30);border-radius:20px;background:linear-gradient(135deg,rgba(255,244,226,.82),rgba(232,246,240,.88));display:grid;place-items:center;text-align:center;color:rgba(43,124,106,.82);font-size:28px;font-weight:900}
-    .r1m-board{border:1px dashed rgba(43,124,106,.32);border-radius:20px;background:rgba(235,248,243,.9);display:grid;place-items:center;min-height:0;color:rgba(43,124,106,.86);font-size:30px;font-weight:950}
+    .r1m-title{font-size:clamp(20px,2.4vw,34px);line-height:1.12;font-weight:900;color:var(--ink);letter-spacing:0}
+    .r1m-question{font-size:clamp(13px,1.2vw,18px);color:var(--muted);font-weight:720}
+    .r1m-images{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.4vw,36px);min-height:0;height:100%}
+    .r1m-image{border:1px dashed rgba(43,124,106,.30);border-radius:20px;background:linear-gradient(135deg,rgba(255,244,226,.82),rgba(232,246,240,.88));display:grid;place-items:center;text-align:center;color:rgba(43,124,106,.82);font-size:clamp(24px,3.2vw,52px);font-weight:900;min-height:0}
+    .r1m-board{border:1px dashed rgba(43,124,106,.32);border-radius:20px;background:rgba(235,248,243,.9);display:grid;place-items:center;min-height:0;color:rgba(43,124,106,.86);font-size:clamp(26px,4vw,58px);font-weight:950}
     .r1m-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
     .r1m-chip{border:1px solid rgba(43,124,106,.18);border-radius:999px;background:rgba(255,255,250,.78);padding:6px 12px;color:var(--green);font-size:13px;font-weight:850}
-    .r1m-controls{width:min(92vw,1420px);display:flex;justify-content:center;align-items:center;gap:10px;border:1px solid rgba(43,124,106,.18);border-radius:999px;background:rgba(255,255,250,.76);box-shadow:0 14px 36px rgba(16,61,53,.10);padding:10px 14px}
+    .r1m-controls{height:72px;width:100vw;display:flex;justify-content:center;align-items:center;gap:10px;border-top:1px solid rgba(255,255,255,.18);background:rgba(16,47,42,.92);box-shadow:0 -14px 36px rgba(16,61,53,.20);padding:10px 18px}
     .r1m-control{border:1px solid rgba(43,124,106,.2);background:rgba(240,250,246,.8);color:var(--green);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:900;text-decoration:none}
     .r1m-control.primary{background:var(--green);color:white;border-color:var(--green)}
     .r1m-ratio{display:inline-flex;border:1px solid rgba(43,124,106,.20);border-radius:999px;overflow:hidden;background:white}
-    .r1m-ratio span{padding:8px 12px;font-size:13px;font-weight:900;color:var(--green)}
+    .r1m-ratio span,.r1m-ratio a{padding:8px 12px;font-size:13px;font-weight:900;color:var(--green);text-decoration:none}
     .r1m-ratio .active{background:var(--green);color:white}
-    @media(max-width:900px){.r1m-title{font-size:30px}.r1m-question{font-size:16px}.r1m-screen{padding:24px}.r1m-image,.r1m-board{font-size:20px}.r1m-controls{border-radius:24px;flex-wrap:wrap}}
+    @media(max-width:900px){.r1m-screen{height:calc(100vh - 92px);padding:18px}.r1m-screen.ratio-4-3{height:calc(100vh - 92px);width:min(calc((100vh - 92px) * 4 / 3),100vw)}.r1m-images{grid-template-columns:1fr;gap:14px}.r1m-controls{height:92px;flex-wrap:wrap}.r1m-image,.r1m-board{font-size:20px}}
     """
 
 
@@ -112,9 +112,10 @@ def js() -> str:
           <a class="r1m-control" href="?preview=display&screen=03#coursewareExpanded">上一屏</a>
           <span class="r1m-chip">当前屏 ${selected} / 样例草稿</span>
           <a class="r1m-control" href="?preview=display&screen=06#coursewareExpanded">下一屏</a>
-          <span class="r1m-ratio"><span class="${!isFourThree ? "active" : ""}">16:9</span><span class="${isFourThree ? "active" : ""}">4:3</span></span>
-          <a class="r1m-control" href="?preview=display&screen=${selected}&ratio=16_9#coursewareExpanded">16:9</a>
-          <a class="r1m-control" href="?preview=display&screen=${selected}&ratio=4_3#coursewareExpanded">4:3</a>
+          <span class="r1m-ratio">
+            <a class="${!isFourThree ? "active" : ""}" href="?preview=display&screen=${selected}&ratio=16_9#coursewareExpanded">16:9</a>
+            <a class="${isFourThree ? "active" : ""}" href="?preview=display&screen=${selected}&ratio=4_3#coursewareExpanded">4:3</a>
+          </span>
           <a class="r1m-control primary" href="?mode=edit#coursewareExpanded">退出预览</a>
         </nav>
       </div>`;
@@ -158,7 +159,12 @@ def js() -> str:
     function forceCoursewareExpandedRoute1013JR1M() {
       const viewId = decodeURIComponent((window.location.hash || "").replace(/^#/, ""));
       const params = new URLSearchParams(window.location.search || "");
-      if (viewId !== "coursewareExpanded" && params.get("preview") !== "display") return;
+      if (params.get("preview") === "display") {
+        document.body.className = "r1m-display-preview-body";
+        document.body.innerHTML = renderDisplayPreview1013JR1M();
+        return;
+      }
+      if (viewId !== "coursewareExpanded") return;
       const prepView = model.views.find((view) => view.id === "prepNotebook");
       if (!prepView) return;
       model.active_view = "prepNotebook";
@@ -236,6 +242,9 @@ def validate(html: str) -> dict[str, Any]:
         "courseware_expanded_late_route_force_present": "forceCoursewareExpandedRoute1013JR1M" in html and "setTimeout(forceCoursewareExpandedRoute1013JR1M, 250)" in html,
         "editing_panels_hidden_in_preview": "r1j-panel" not in preview_source and "模板选择器" not in preview_source and "小教推荐" not in preview_source,
         "main_display_screen_visible": "r1m-screen" in text and "大屏预览" in text,
+        "display_preview_fullscreen_overlay": "z-index:9999" in html and "width:100vw" in html and "height:calc(100vh - 72px)" in html,
+        "display_preview_controls_at_bottom": "grid-template-rows:minmax(0,1fr) auto" in html and "border-top:1px solid" in html,
+        "display_preview_uses_body_level_overlay": "document.body.innerHTML = renderDisplayPreview1013JR1M()" in html and "r1m-display-preview-body" in html,
         "screen_03_preview_created": "03 · 样例草稿" in preview_source and "哪一组颜色更安静？" in preview_source and "热闹的色彩组合" in preview_source,
         "screen_06_preview_created": "06 · 样例草稿" in preview_source and "试一组颜色" in preview_source and "课堂互动区" in preview_source,
         "previous_next_controls_present": "上一屏" in text and "下一屏" in text,
@@ -243,7 +252,7 @@ def validate(html: str) -> dict[str, Any]:
         "exit_preview_clears_preview_query": "?mode=edit#coursewareExpanded" in preview_source,
         "screen_ratio_16_9_present": "16:9" in text,
         "screen_ratio_4_3_present": "4:3" in text,
-        "screen_ratio_visual_difference_present": "ratio-4-3" in preview_source and "aspect-ratio:4/3" in html and "aspect-ratio:16/9" in html,
+        "screen_ratio_visual_difference_present": "ratio-4-3" in preview_source and "width:min(calc((100vh - 72px) * 4 / 3),100vw)" in html and "width:100vw" in html,
         "teacher_visible_engineering_terms_absent": all(x not in visible for x in banned),
         **BOUNDARY,
     }

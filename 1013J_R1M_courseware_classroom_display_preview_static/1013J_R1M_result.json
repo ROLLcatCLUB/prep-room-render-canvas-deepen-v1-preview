@@ -6,7 +6,7 @@
   "auto_continue_allowed": false,
   "needs_user_review": true,
   "next_recommended": "USER_REVIEW_COURSEWARE_VISIBLE_WORKFLOW",
-  "created_at": "2026-06-19T21:15:04+00:00",
+  "created_at": "2026-06-19T21:24:37+00:00",
   "classroom_display_preview_created": true,
   "display_preview_entry_present": true,
   "courseware_edit_surface_restored": true,
@@ -16,6 +16,9 @@
   "courseware_expanded_late_route_force_present": true,
   "editing_panels_hidden_in_preview": true,
   "main_display_screen_visible": true,
+  "display_preview_fullscreen_overlay": true,
+  "display_preview_controls_at_bottom": true,
+  "display_preview_uses_body_level_overlay": true,
   "screen_03_preview_created": true,
   "screen_06_preview_created": true,
   "previous_next_controls_present": true,
@@ -62,28 +65,28 @@
       "path": "ui_smoke_screenshot_1013J_R1M_preview_screen_03.png",
       "width": 1440,
       "height": 1100,
-      "bytes": 447768
+      "bytes": 389800
     },
     {
       "case": "preview_screen_06",
       "path": "ui_smoke_screenshot_1013J_R1M_preview_screen_06.png",
       "width": 1440,
       "height": 1100,
-      "bytes": 247189
+      "bytes": 136806
     },
     {
       "case": "preview_ratio_16_9",
       "path": "ui_smoke_screenshot_1013J_R1M_preview_ratio_16_9.png",
       "width": 1440,
       "height": 1100,
-      "bytes": 447768
+      "bytes": 389800
     },
     {
       "case": "preview_ratio_4_3",
       "path": "ui_smoke_screenshot_1013J_R1M_preview_ratio_4_3.png",
       "width": 1440,
       "height": 1100,
-      "bytes": 467609
+      "bytes": 426122
     }
   ],
   "failed_checks": []

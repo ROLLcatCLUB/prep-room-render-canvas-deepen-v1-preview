@@ -4832,9 +4832,10 @@
           <a class="r1m-control" href="?preview=display&screen=03#coursewareExpanded">上一屏</a>
           <span class="r1m-chip">当前屏 ${selected} / 样例草稿</span>
           <a class="r1m-control" href="?preview=display&screen=06#coursewareExpanded">下一屏</a>
-          <span class="r1m-ratio"><span class="${!isFourThree ? "active" : ""}">16:9</span><span class="${isFourThree ? "active" : ""}">4:3</span></span>
-          <a class="r1m-control" href="?preview=display&screen=${selected}&ratio=16_9#coursewareExpanded">16:9</a>
-          <a class="r1m-control" href="?preview=display&screen=${selected}&ratio=4_3#coursewareExpanded">4:3</a>
+          <span class="r1m-ratio">
+            <a class="${!isFourThree ? "active" : ""}" href="?preview=display&screen=${selected}&ratio=16_9#coursewareExpanded">16:9</a>
+            <a class="${isFourThree ? "active" : ""}" href="?preview=display&screen=${selected}&ratio=4_3#coursewareExpanded">4:3</a>
+          </span>
           <a class="r1m-control primary" href="?mode=edit#coursewareExpanded">退出预览</a>
         </nav>
       </div>`;
@@ -4878,7 +4879,12 @@
     function forceCoursewareExpandedRoute1013JR1M() {
       const viewId = decodeURIComponent((window.location.hash || "").replace(/^#/, ""));
       const params = new URLSearchParams(window.location.search || "");
-      if (viewId !== "coursewareExpanded" && params.get("preview") !== "display") return;
+      if (params.get("preview") === "display") {
+        document.body.className = "r1m-display-preview-body";
+        document.body.innerHTML = renderDisplayPreview1013JR1M();
+        return;
+      }
+      if (viewId !== "coursewareExpanded") return;
       const prepView = model.views.find((view) => view.id === "prepNotebook");
       if (!prepView) return;
       model.active_view = "prepNotebook";
