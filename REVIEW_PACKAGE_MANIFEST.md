@@ -1,14 +1,19 @@
 # Review Package Manifest
 
-Latest stage: `1013I_R6O_R1_BIG_UNIT_RENDER_SURFACE_READING_POLISH`
+Latest stage: `1013I_R6P_BIG_UNIT_SECTION_VIEW_EDIT_SURFACE`
 
 Files:
-- `1013I_R6O_R1_big_unit_render_surface_reading_polish/prep_room_render_canvas_deepen_v1_R6O_R1_big_unit_reading_polish.html`
-- `1013I_R6O_R1_big_unit_render_surface_reading_polish/big_unit_reading_polish_manifest_1013I_R6O_R1.json`
-- `1013I_R6O_R1_big_unit_render_surface_reading_polish/1013I_R6O_R1_result.json`
-- `1013I_R6O_R1_big_unit_render_surface_reading_polish/1013I_R6O_R1_report.md`
-- `1013I_R6O_R1_big_unit_render_surface_reading_polish/ui_smoke_screenshot_1013I_R6O_R1_desktop.png`
-- `1013I_R6O_R1_big_unit_render_surface_reading_polish/ui_smoke_screenshot_1013I_R6O_R1_mobile.png`
-- `scripts/validate_1013I_R6O_R1_big_unit_render_surface_reading_polish.py`
+- `LATEST_REVIEW_ENTRY.md`
+- `README.md`
+- `REVIEW_PACKAGE_MANIFEST.md`
+- `1013I_R6P_big_unit_section_view_edit_surface/prep_room_render_canvas_deepen_v1_R6P_big_unit_section_view_edit_surface.html`
+- `1013I_R6P_big_unit_section_view_edit_surface/big_unit_section_edit_surface_1013I_R6P.json`
+- `1013I_R6P_big_unit_section_view_edit_surface/big_unit_section_edit_candidates_1013I_R6P.json`
+- `1013I_R6P_big_unit_section_view_edit_surface/big_unit_section_edit_action_trace_1013I_R6P.json`
+- `1013I_R6P_big_unit_section_view_edit_surface/1013I_R6P_result.json`
+- `1013I_R6P_big_unit_section_view_edit_surface/1013I_R6P_report.md`
+- `1013I_R6P_big_unit_section_view_edit_surface/ui_smoke_screenshot_1013I_R6P_desktop.png`
+- `1013I_R6P_big_unit_section_view_edit_surface/ui_smoke_screenshot_1013I_R6P_mobile.png`
+- `scripts/validate_1013I_R6P_big_unit_section_view_edit_surface.py`
 
-Boundary: reading polish only; edit page deferred to R6P.
+Boundary: static review fixture only. No runtime, provider/model, database, memory, Feishu, formal apply, or main-project push.

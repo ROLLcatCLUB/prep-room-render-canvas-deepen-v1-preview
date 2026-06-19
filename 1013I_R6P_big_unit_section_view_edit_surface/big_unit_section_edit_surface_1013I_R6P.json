@@ -1,0 +1,72 @@
+{
+  "stage": "1013I_R6P_BIG_UNIT_SECTION_VIEW_EDIT_SURFACE",
+  "inherits_from": "1013I_R6O_R1_BIG_UNIT_RENDER_SURFACE_READING_POLISH",
+  "editable_sections": [
+    {
+      "id": "unit_info",
+      "title": "单元信息",
+      "view_note": "这里说明本单元的基本归属，帮助老师确认是不是在正确单元里继续备课。"
+    },
+    {
+      "id": "curriculum_basis",
+      "title": "课标依据",
+      "view_note": "这里不放大段课标原文，只说明本单元主要受哪些课标方向约束。"
+    },
+    {
+      "id": "core_literacy",
+      "title": "核心素养",
+      "view_note": "这里用学生做得到、看得见的行为表达核心素养。"
+    },
+    {
+      "id": "student_start",
+      "title": "学生起点",
+      "view_note": "这里帮助老师判断学生从哪里出发，不是给学生贴标签。"
+    },
+    {
+      "id": "unit_questions",
+      "title": "单元问题",
+      "view_note": "这里不是知识点问答，而是贯穿几课的学习问题。"
+    },
+    {
+      "id": "knowledge_skills",
+      "title": "知识与技能",
+      "view_note": "这里回答本单元不能丢掉哪些美术语言和基本技能。"
+    },
+    {
+      "id": "performance_task",
+      "title": "表现任务",
+      "view_note": "这里说明学生最后拿什么来证明自己学到了。"
+    },
+    {
+      "id": "learning_progression",
+      "title": "学习推进",
+      "view_note": "这里把单元学习过程压成老师容易扫读的路线。"
+    },
+    {
+      "id": "lesson_chain",
+      "title": "课时任务链",
+      "view_note": "这里不是课时目录，而是看每一课在单元里承担什么任务。"
+    },
+    {
+      "id": "assessment_evidence",
+      "title": "评价证据",
+      "view_note": "这里帮助老师看到学生学到了没有，不只看最后作品。"
+    },
+    {
+      "id": "materials_scaffolds",
+      "title": "材料与支架",
+      "view_note": "这里回答老师要准备什么，学生才做得出来。"
+    }
+  ],
+  "edit_surface_location": "right_assistant_area",
+  "edit_surface_not_inline_body": true,
+  "preview_only_actions": true,
+  "formal_apply_performed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "main_project_pushed": false
+}

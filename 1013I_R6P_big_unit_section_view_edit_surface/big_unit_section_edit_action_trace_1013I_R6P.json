@@ -1,0 +1,391 @@
+{
+  "stage": "1013I_R6P_BIG_UNIT_SECTION_VIEW_EDIT_SURFACE",
+  "trace_count": 55,
+  "actions": [
+    {
+      "section_id": "unit_info",
+      "section_title": "单元信息",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "unit_info",
+      "section_title": "单元信息",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "unit_info",
+      "section_title": "单元信息",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "unit_info",
+      "section_title": "单元信息",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "unit_info",
+      "section_title": "单元信息",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "curriculum_basis",
+      "section_title": "课标依据",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "curriculum_basis",
+      "section_title": "课标依据",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "curriculum_basis",
+      "section_title": "课标依据",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "curriculum_basis",
+      "section_title": "课标依据",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "curriculum_basis",
+      "section_title": "课标依据",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "core_literacy",
+      "section_title": "核心素养",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "core_literacy",
+      "section_title": "核心素养",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "core_literacy",
+      "section_title": "核心素养",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "core_literacy",
+      "section_title": "核心素养",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "core_literacy",
+      "section_title": "核心素养",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "student_start",
+      "section_title": "学生起点",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "student_start",
+      "section_title": "学生起点",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "student_start",
+      "section_title": "学生起点",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "student_start",
+      "section_title": "学生起点",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "student_start",
+      "section_title": "学生起点",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "unit_questions",
+      "section_title": "单元问题",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "unit_questions",
+      "section_title": "单元问题",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "unit_questions",
+      "section_title": "单元问题",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "unit_questions",
+      "section_title": "单元问题",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "unit_questions",
+      "section_title": "单元问题",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "knowledge_skills",
+      "section_title": "知识与技能",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "knowledge_skills",
+      "section_title": "知识与技能",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "knowledge_skills",
+      "section_title": "知识与技能",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "knowledge_skills",
+      "section_title": "知识与技能",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "knowledge_skills",
+      "section_title": "知识与技能",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "performance_task",
+      "section_title": "表现任务",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "performance_task",
+      "section_title": "表现任务",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "performance_task",
+      "section_title": "表现任务",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "performance_task",
+      "section_title": "表现任务",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "performance_task",
+      "section_title": "表现任务",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "learning_progression",
+      "section_title": "学习推进",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "learning_progression",
+      "section_title": "学习推进",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "learning_progression",
+      "section_title": "学习推进",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "learning_progression",
+      "section_title": "学习推进",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "learning_progression",
+      "section_title": "学习推进",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "lesson_chain",
+      "section_title": "课时任务链",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "lesson_chain",
+      "section_title": "课时任务链",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "lesson_chain",
+      "section_title": "课时任务链",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "lesson_chain",
+      "section_title": "课时任务链",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "lesson_chain",
+      "section_title": "课时任务链",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "assessment_evidence",
+      "section_title": "评价证据",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "assessment_evidence",
+      "section_title": "评价证据",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "assessment_evidence",
+      "section_title": "评价证据",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "assessment_evidence",
+      "section_title": "评价证据",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "assessment_evidence",
+      "section_title": "评价证据",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "materials_scaffolds",
+      "section_title": "材料与支架",
+      "action": "view_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "materials_scaffolds",
+      "section_title": "材料与支架",
+      "action": "edit_section",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "materials_scaffolds",
+      "section_title": "材料与支架",
+      "action": "accept_to_preview",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "materials_scaffolds",
+      "section_title": "材料与支架",
+      "action": "revise_once",
+      "preview_only": true,
+      "formal_apply_performed": false
+    },
+    {
+      "section_id": "materials_scaffolds",
+      "section_title": "材料与支架",
+      "action": "reject_for_now",
+      "preview_only": true,
+      "formal_apply_performed": false
+    }
+  ]
+}

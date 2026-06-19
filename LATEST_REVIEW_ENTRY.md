@@ -1,19 +1,18 @@
 # Latest Review Entry
 
-STAGE=1013I_R6O_R1_BIG_UNIT_RENDER_SURFACE_READING_POLISH
-FINAL_STATUS=PASS_1013I_R6O_R1_BIG_UNIT_RENDER_SURFACE_READING_POLISH
-INHERITS_FROM=1013I_R6O_BIG_UNIT_FIELD_MODEL_TO_PAGE_RENDER_FIXTURE
-NEXT_STAGE=USER_REVIEW_BIG_UNIT_READING_POLISH_BEFORE_EDIT_SURFACE
+STAGE=1013I_R6P_BIG_UNIT_SECTION_VIEW_EDIT_SURFACE
+FINAL_STATUS=PASS_1013I_R6P_BIG_UNIT_SECTION_VIEW_EDIT_SURFACE
+INHERITS_FROM=1013I_R6O_R1_BIG_UNIT_RENDER_SURFACE_READING_POLISH
+NEXT_STAGE=USER_REVIEW_BIG_UNIT_SECTION_EDIT_SURFACE
 
-R6O_R1 is a reading-surface polish patch only. It does not create the edit page.
+R6P creates a static big-unit section view/edit surface on top of R6O_R1. The edit surface is side-panel only and does not enter the main reading flow.
 
-Boundaries:
-- edit_surface_created=false
-- runtime_connected=false
-- provider_called=false
-- model_called=false
-- formal_apply_performed=false
-- database_written=false
-- memory_written=false
-- feishu_written=false
-- main_project_pushed=false
+Key flags:
+- SECTION_VIEW_EDIT_SURFACE_CREATED=true
+- MAIN_READING_FLOW_KEPT=true
+- EDIT_SURFACE_NOT_INLINE_BODY=true
+- PREVIEW_ONLY_ACTIONS=true
+- FORMAL_APPLY_PERFORMED=false
+- PROVIDER_CALLED=false
+- MODEL_CALLED=false
+- MAIN_PROJECT_PUSHED=false
