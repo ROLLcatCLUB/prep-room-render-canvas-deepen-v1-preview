@@ -1,0 +1,125 @@
+{
+  "schema_id": "curriculum_standard_slice_schema_1013K_R0",
+  "stage": "1013K_R0_CURRICULUM_STANDARD_DERIVATION_BACKEND_CONTRACT",
+  "inherits_from": "1013I_R6C_CURRICULUM_STANDARD_CONTROL_LAYER_CONTRACT",
+  "schema_role": "store_small_structured_standard_slices_for_derivation_control",
+  "source_policy": {
+    "full_standard_text_stored": false,
+    "full_standard_text_dumped_to_prompt": false,
+    "structured_refs_required": true,
+    "teacher_supplied_ref_allowed": true,
+    "official_claim_created": false
+  },
+  "required_fields": [
+    "slice_id",
+    "standard_version_label",
+    "subject",
+    "school_stage",
+    "grade_band",
+    "learning_domain",
+    "core_literacy_tags",
+    "learning_task_direction",
+    "assessment_evidence_direction",
+    "content_scope_boundary",
+    "prohibited_overreach",
+    "source_ref_ids",
+    "source_quote_policy",
+    "confidence",
+    "status"
+  ],
+  "status_enum": [
+    "missing_structured_ref",
+    "candidate_from_known_control_profile",
+    "teacher_confirmed_ref_mapping",
+    "needs_manual_standard_review"
+  ],
+  "slice_examples": [
+    {
+      "slice_id": "art_g3_4_color_expression_direction_candidate",
+      "standard_version_label": "义务教育艺术课程标准方向候选",
+      "subject": "美术",
+      "school_stage": "小学",
+      "grade_band": "3-4",
+      "learning_domain": "造型表现 / 欣赏评述 / 综合探索",
+      "core_literacy_tags": [
+        "审美感知",
+        "艺术表现",
+        "创意实践",
+        "文化理解"
+      ],
+      "learning_task_direction": [
+        "观察",
+        "比较",
+        "表现",
+        "交流",
+        "修订"
+      ],
+      "assessment_evidence_direction": [
+        "能说出色彩带来的感受",
+        "能说明选色理由",
+        "作品呈现较明确视觉意味",
+        "能根据反馈调整一处颜色"
+      ],
+      "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+      "prohibited_overreach": [
+        "不得要求三年级学生掌握成人化色彩理论术语",
+        "不得把官方案例样本文字当成课标原文",
+        "不得在缺教材锚点时生成正式单课正文"
+      ],
+      "source_ref_ids": [
+        "curriculum_standard_control_layer_1013I_R6C"
+      ],
+      "source_quote_policy": "no_full_text_quote",
+      "confidence": "candidate_pending_teacher_or_standard_ref",
+      "status": "candidate_from_known_control_profile"
+    }
+  ],
+  "linked_r6c_required_control_fields": [
+    "standard_version_label",
+    "subject",
+    "school_stage",
+    "grade_band",
+    "art_domain_or_learning_domain",
+    "core_literacy_tags",
+    "learning_task_direction",
+    "assessment_requirement",
+    "academic_quality_or_performance_evidence",
+    "content_scope_boundary",
+    "prohibited_overreach",
+    "standard_ref_ids",
+    "interpretation_status",
+    "teacher_confirmation_status"
+  ],
+  "backend_contract_only": true,
+  "backend_adapter_fixture_only": true,
+  "preview_only": true,
+  "runtime_schema_applied": false,
+  "real_curriculum_standard_full_text_parsed": false,
+  "full_standard_text_stored": false,
+  "full_standard_text_dumped_to_prompt": false,
+  "official_curriculum_claim_created": false,
+  "textbook_anchor_verified": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "product_runtime_called": false,
+  "provider_called": false,
+  "model_called": false,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "official_export_created": false,
+  "official_archive_created": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}
