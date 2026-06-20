@@ -1,0 +1,138 @@
+{
+  "target_map_id": "curriculum_derivation_target_map_1013K_R1",
+  "stage": "1013K_R1_CURRICULUM_DERIVATION_PROFILE_RUNTIME_DRY_RUN",
+  "source_decision_id": "curriculum_derivation_gate_decision_1013K_R1",
+  "target_count": 10,
+  "targets": [
+    {
+      "target_key": "curriculum_basis",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "target_key": "core_literacy_goals",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "target_key": "student_starting_point",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "target_key": "unit_questions",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "target_key": "knowledge_and_skills",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "target_key": "performance_task",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "target_key": "learning_progression",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "target_key": "lesson_task_chain",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "target_key": "assessment_evidence",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "target_key": "materials_and_scaffolds",
+      "target_status": "ready_as_preview_candidate_target",
+      "source_control": "curriculum_control_profile_color_feeling_1013K_R1",
+      "requires_teacher_review_before_generation": true,
+      "normal_generation_allowed_now": false,
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    }
+  ],
+  "blocked_targets_before_confirmation": [
+    "formal_unit_package",
+    "formal_single_lesson_body",
+    "database_record",
+    "memory_record",
+    "feishu_writeback",
+    "official_export"
+  ],
+  "runtime_dry_run_only": true,
+  "in_memory_only": true,
+  "readonly_sources_only": true,
+  "preview_only": true,
+  "side_effects_performed": false,
+  "runtime_schema_applied": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "unit_package_written": false,
+  "textbook_anchor_verified": false,
+  "official_curriculum_claim_created": false,
+  "full_standard_text_stored": false,
+  "full_standard_text_dumped_to_prompt": false,
+  "big_unit_body_generated": false,
+  "single_lesson_body_generated": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

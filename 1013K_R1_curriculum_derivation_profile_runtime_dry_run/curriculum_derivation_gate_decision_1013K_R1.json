@@ -1,0 +1,67 @@
+{
+  "decision_id": "curriculum_derivation_gate_decision_1013K_R1",
+  "stage": "1013K_R1_CURRICULUM_DERIVATION_PROFILE_RUNTIME_DRY_RUN",
+  "source_state_id": "curriculum_derivation_runtime_state_1013K_R1",
+  "gates": [
+    {
+      "gate_id": "curriculum_control_profile_gate",
+      "pass": true,
+      "reason": "Control profile was built in memory from structured R0 slice and trace.",
+      "blocks_normal_generation": false
+    },
+    {
+      "gate_id": "textbook_anchor_gate",
+      "pass": false,
+      "reason": "Textbook anchor remains candidate-only and not teacher-confirmed.",
+      "blocks_normal_generation": true
+    },
+    {
+      "gate_id": "big_unit_chain_gate",
+      "pass": false,
+      "reason": "Big-unit chain remains candidate-only and no unit_package is written.",
+      "blocks_normal_generation": true
+    },
+    {
+      "gate_id": "teacher_confirmation_gate",
+      "pass": false,
+      "reason": "Teacher confirmation items from R6E are still pending.",
+      "blocks_normal_generation": true
+    }
+  ],
+  "normal_candidate_generation_allowed": false,
+  "degraded_preview_allowed": true,
+  "degraded_preview_label_required": true,
+  "next_safe_action": "build_preview_candidate_envelope_after_teacher_review_or_degraded_choice",
+  "runtime_dry_run_only": true,
+  "in_memory_only": true,
+  "readonly_sources_only": true,
+  "preview_only": true,
+  "side_effects_performed": false,
+  "runtime_schema_applied": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "unit_package_written": false,
+  "textbook_anchor_verified": false,
+  "official_curriculum_claim_created": false,
+  "full_standard_text_stored": false,
+  "full_standard_text_dumped_to_prompt": false,
+  "big_unit_body_generated": false,
+  "single_lesson_body_generated": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

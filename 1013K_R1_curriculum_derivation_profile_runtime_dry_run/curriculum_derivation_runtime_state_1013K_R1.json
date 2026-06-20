@@ -1,0 +1,170 @@
+{
+  "state_id": "curriculum_derivation_runtime_state_1013K_R1",
+  "stage": "1013K_R1_CURRICULUM_DERIVATION_PROFILE_RUNTIME_DRY_RUN",
+  "request_id": "curriculum_derivation_runtime_dry_run_request_1013K_R1",
+  "runtime_state_kind": "in_memory_dry_run_state",
+  "selected_curriculum_standard_slice": {
+    "slice_id": "art_g3_4_color_expression_direction_candidate",
+    "standard_version_label": "义务教育艺术课程标准方向候选",
+    "subject": "美术",
+    "school_stage": "小学",
+    "grade_band": "3-4",
+    "learning_domain": "造型表现 / 欣赏评述 / 综合探索",
+    "core_literacy_tags": [
+      "审美感知",
+      "艺术表现",
+      "创意实践",
+      "文化理解"
+    ],
+    "learning_task_direction": [
+      "观察",
+      "比较",
+      "表现",
+      "交流",
+      "修订"
+    ],
+    "assessment_evidence_direction": [
+      "能说出色彩带来的感受",
+      "能说明选色理由",
+      "作品呈现较明确视觉意味",
+      "能根据反馈调整一处颜色"
+    ],
+    "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+    "prohibited_overreach": [
+      "不得要求三年级学生掌握成人化色彩理论术语",
+      "不得把官方案例样本文字当成课标原文",
+      "不得在缺教材锚点时生成正式单课正文"
+    ],
+    "source_ref_ids": [
+      "curriculum_standard_control_layer_1013I_R6C"
+    ],
+    "source_quote_policy": "no_full_text_quote",
+    "confidence": "candidate_pending_teacher_or_standard_ref",
+    "status": "candidate_from_known_control_profile"
+  },
+  "curriculum_control_profile": {
+    "profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+    "source_profile_id": "curriculum_control_profile_color_feeling_1013K_R0",
+    "subject": "美术",
+    "school_stage": "小学",
+    "grade_band": "3-4",
+    "learning_domain": "造型表现 / 欣赏评述 / 综合探索",
+    "core_literacy_focus": [
+      "审美感知",
+      "艺术表现",
+      "创意实践",
+      "文化理解"
+    ],
+    "learning_task_direction": [
+      "观察",
+      "比较",
+      "表现",
+      "交流",
+      "修订"
+    ],
+    "assessment_evidence_direction": [
+      "能说出色彩带来的感受",
+      "能说明选色理由",
+      "作品呈现较明确视觉意味",
+      "能根据反馈调整一处颜色"
+    ],
+    "allowed_generation_scope": [
+      "大单元设计候选",
+      "课时任务链候选",
+      "单课继承提示候选",
+      "教师审阅卡候选"
+    ],
+    "blocked_generation_scope": [
+      "正式大单元正文写入",
+      "正式单课正文写入",
+      "数据库保存",
+      "记忆写入",
+      "飞书写回"
+    ],
+    "teacher_confirmation_required_items": [
+      {
+        "item_id": "confirm_textbook_version",
+        "label": "确认教材版本",
+        "blocks_normal_generation": true
+      },
+      {
+        "item_id": "confirm_unit_title",
+        "label": "确认本课所在单元",
+        "blocks_normal_generation": true
+      },
+      {
+        "item_id": "confirm_lesson_code_and_activity_ref",
+        "label": "确认课题编号和教材活动落点",
+        "blocks_normal_generation": true
+      },
+      {
+        "item_id": "confirm_unit_task_chain",
+        "label": "确认单元任务链",
+        "blocks_normal_generation": true
+      },
+      {
+        "item_id": "confirm_lesson_position",
+        "label": "确认本课在单元中的位置",
+        "blocks_normal_generation": true
+      }
+    ],
+    "degraded_preview_policy": "allowed_only_with_visible_degraded_label",
+    "source_refs": [
+      "curriculum_standard_slice_schema_1013K_R0.slice_examples[0]",
+      "textbook_anchor_candidates_1013I_R6E",
+      "big_unit_chain_candidates_1013I_R6E"
+    ],
+    "status": "profile_built_in_memory_dry_run"
+  },
+  "textbook_anchor_gate_input": {
+    "candidate_count": 1,
+    "candidate_statuses": [
+      "pending_teacher_confirm"
+    ],
+    "verified_textbook_anchor_created": false
+  },
+  "big_unit_chain_gate_input": {
+    "candidate_chain_status": "candidate_chain_from_official_material",
+    "teacher_confirmation_status": "pending_teacher_confirm",
+    "unit_package_created": false
+  },
+  "side_effect_assertion": {
+    "state_persisted": false,
+    "unit_package_written": false,
+    "lesson_body_written": false,
+    "provider_called": false,
+    "model_called": false
+  },
+  "runtime_dry_run_only": true,
+  "in_memory_only": true,
+  "readonly_sources_only": true,
+  "preview_only": true,
+  "side_effects_performed": false,
+  "runtime_schema_applied": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "unit_package_written": false,
+  "textbook_anchor_verified": false,
+  "official_curriculum_claim_created": false,
+  "full_standard_text_stored": false,
+  "full_standard_text_dumped_to_prompt": false,
+  "big_unit_body_generated": false,
+  "single_lesson_body_generated": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

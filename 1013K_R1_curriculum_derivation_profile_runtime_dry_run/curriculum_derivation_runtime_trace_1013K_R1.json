@@ -1,0 +1,67 @@
+{
+  "trace_id": "curriculum_derivation_runtime_trace_1013K_R1",
+  "stage": "1013K_R1_CURRICULUM_DERIVATION_PROFILE_RUNTIME_DRY_RUN",
+  "events": [
+    {
+      "event_id": "r1_event_01_request_loaded",
+      "event_type": "readonly_request_intake",
+      "output_ref": "curriculum_derivation_runtime_dry_run_request_1013K_R1",
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r1_event_02_state_built",
+      "event_type": "in_memory_state_build",
+      "output_ref": "curriculum_derivation_runtime_state_1013K_R1",
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r1_event_03_gates_evaluated",
+      "event_type": "gate_decision",
+      "output_ref": "curriculum_derivation_gate_decision_1013K_R1",
+      "normal_candidate_generation_allowed": false,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r1_event_04_targets_mapped",
+      "event_type": "target_map",
+      "output_ref": "curriculum_derivation_target_map_1013K_R1",
+      "target_count": 10,
+      "side_effects_performed": false
+    }
+  ],
+  "side_effects_performed": false,
+  "normal_candidate_generation_allowed": false,
+  "degraded_preview_allowed": true,
+  "runtime_state_written": false,
+  "runtime_dry_run_only": true,
+  "in_memory_only": true,
+  "readonly_sources_only": true,
+  "preview_only": true,
+  "runtime_schema_applied": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "unit_package_written": false,
+  "textbook_anchor_verified": false,
+  "official_curriculum_claim_created": false,
+  "full_standard_text_stored": false,
+  "full_standard_text_dumped_to_prompt": false,
+  "big_unit_body_generated": false,
+  "single_lesson_body_generated": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}
