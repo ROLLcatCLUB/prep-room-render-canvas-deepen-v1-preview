@@ -1,0 +1,36 @@
+{
+  "stage": "1013K_R19_ISOLATED_STATIC_BINDING_READING_SURFACE_POLISH",
+  "generated_at": "2026-06-21T04:12:00Z",
+  "inherits_from": "1013K_R18_ISOLATED_STATIC_BINDING_POLISH_OR_FRONTEND_BINDING_HOLD_DECISION",
+  "source_html": "../1013K_R15_isolated_static_frontend_readonly_binding_fixture/isolated_static_frontend_readonly_binding_fixture_1013K_R15.html",
+  "polished_html": "isolated_static_binding_reading_surface_polish_1013K_R19.html",
+  "polish_scope": [
+    "reading_surface_style",
+    "lightweight_material_prompt",
+    "continuous_reading_flow",
+    "low_weight_section_actions",
+    "responsive_isolated_fixture_shell"
+  ],
+  "preserved_contracts": {
+    "isolated_static_fixture": true,
+    "chunk_mount_ids_preserved": true,
+    "chunk_count": 10,
+    "frontend_formal_mount_allowed": false,
+    "formal_frontend_page_modified": false,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false
+  },
+  "teacher_visible_changes": {
+    "material_prompt_lightweight": true,
+    "status_row_lightweight": true,
+    "section_outer_cards_restored": false,
+    "continuous_reading_flow": true,
+    "raw_engineering_fields_primary_surface": false
+  },
+  "next_stage": "1013K_R20_ISOLATED_STATIC_BINDING_POLISH_VISUAL_SMOKE"
+}

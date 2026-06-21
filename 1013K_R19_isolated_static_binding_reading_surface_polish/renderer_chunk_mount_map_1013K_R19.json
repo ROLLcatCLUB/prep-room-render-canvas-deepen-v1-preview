@@ -1,0 +1,25 @@
+{
+  "stage": "1013K_R19_ISOLATED_STATIC_BINDING_READING_SURFACE_POLISH",
+  "inherits_from": "1013K_R15_ISOLATED_STATIC_FRONTEND_READONLY_BINDING_FIXTURE",
+  "binding_mode": "isolated_static_fixture",
+  "chunk_count": 10,
+  "chunks": [
+    "render_chunk_curriculum_basis_1013K_R3",
+    "render_chunk_core_literacy_goals_1013K_R3",
+    "render_chunk_student_starting_point_1013K_R3",
+    "render_chunk_unit_questions_1013K_R3",
+    "render_chunk_knowledge_and_skills_1013K_R3",
+    "render_chunk_performance_task_1013K_R3",
+    "render_chunk_learning_progression_1013K_R3",
+    "render_chunk_lesson_task_chain_1013K_R3",
+    "render_chunk_assessment_evidence_1013K_R3",
+    "render_chunk_materials_and_scaffolds_1013K_R3"
+  ],
+  "mount_semantics": {
+    "readonly_render_chunks": true,
+    "section_preview_only": true,
+    "formal_apply_performed": false,
+    "writes_unit_package": false,
+    "writes_lesson_body": false
+  }
+}
