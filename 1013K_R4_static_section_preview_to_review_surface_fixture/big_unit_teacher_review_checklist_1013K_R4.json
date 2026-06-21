@@ -1,0 +1,76 @@
+{
+  "checklist_id": "big_unit_static_section_teacher_review_checklist_1013K_R4",
+  "stage": "1013K_R4_STATIC_SECTION_PREVIEW_TO_REVIEW_SURFACE_FIXTURE",
+  "teacher_confirmation_required": true,
+  "items": [
+    {
+      "item_id": "confirm_textbook_version",
+      "teacher_label": "确认教材版本",
+      "why_it_matters": "缺教材版本时不能把候选锚点视为正式教材锚点。",
+      "blocks_normal_generation": true,
+      "status": "pending_teacher_confirm"
+    },
+    {
+      "item_id": "confirm_unit_title",
+      "teacher_label": "确认本课所在单元",
+      "why_it_matters": "当前存在单元标题候选，必须由教师确认本课归属。",
+      "blocks_normal_generation": true,
+      "status": "pending_teacher_confirm"
+    },
+    {
+      "item_id": "confirm_lesson_code_and_activity_ref",
+      "teacher_label": "确认课题编号和教材活动落点",
+      "why_it_matters": "缺课题编号或活动页/活动任务时，不能进入正常单课候选生成。",
+      "blocks_normal_generation": true,
+      "status": "pending_teacher_confirm"
+    },
+    {
+      "item_id": "confirm_unit_task_chain",
+      "teacher_label": "确认单元任务链",
+      "why_it_matters": "候选链只来自字段抽取，不等于已确认的大单元设计。",
+      "blocks_normal_generation": true,
+      "status": "pending_teacher_confirm"
+    },
+    {
+      "item_id": "confirm_lesson_position",
+      "teacher_label": "确认本课在单元中的位置",
+      "why_it_matters": "本课是导入、探究、表现、展示评价还是综合推进，会改变候选卡范围。",
+      "blocks_normal_generation": true,
+      "status": "pending_teacher_confirm"
+    }
+  ],
+  "review_before_next_generation": [
+    "课标依据是否贴合本单元",
+    "核心素养是否转成学生可观察行为",
+    "课时任务链是否符合真实教材安排",
+    "评价证据是否能在课堂中看见",
+    "材料与支架是否符合学校条件"
+  ],
+  "review_surface_fixture_only": true,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

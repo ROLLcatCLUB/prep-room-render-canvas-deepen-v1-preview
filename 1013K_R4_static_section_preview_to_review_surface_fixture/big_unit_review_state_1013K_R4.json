@@ -1,0 +1,136 @@
+{
+  "review_state_id": "big_unit_static_section_review_state_1013K_R4",
+  "stage": "1013K_R4_STATIC_SECTION_PREVIEW_TO_REVIEW_SURFACE_FIXTURE",
+  "source_review_surface_id": "big_unit_static_section_review_surface_1013K_R4",
+  "section_states": [
+    {
+      "review_section_id": "review_section_curriculum_basis_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    },
+    {
+      "review_section_id": "review_section_core_literacy_goals_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    },
+    {
+      "review_section_id": "review_section_student_starting_point_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    },
+    {
+      "review_section_id": "review_section_unit_questions_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    },
+    {
+      "review_section_id": "review_section_knowledge_and_skills_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    },
+    {
+      "review_section_id": "review_section_performance_task_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    },
+    {
+      "review_section_id": "review_section_learning_progression_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    },
+    {
+      "review_section_id": "review_section_lesson_task_chain_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    },
+    {
+      "review_section_id": "review_section_assessment_evidence_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    },
+    {
+      "review_section_id": "review_section_materials_and_scaffolds_1013K_R3",
+      "state": "pending_teacher_review",
+      "can_accept_to_preview": true,
+      "can_revise": true,
+      "can_reject": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": false,
+      "formal_apply_performed": false
+    }
+  ],
+  "all_sections_pending_teacher_review": true,
+  "any_formal_apply_allowed": false,
+  "review_surface_fixture_only": true,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

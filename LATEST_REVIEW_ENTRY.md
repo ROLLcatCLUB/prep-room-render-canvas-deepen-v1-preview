@@ -1,14 +1,47 @@
 # Latest Review Entry
 
-STAGE=1013K_R1_CURRICULUM_DERIVATION_PROFILE_RUNTIME_DRY_RUN
-FINAL_STATUS=PASS_1013K_R1_CURRICULUM_DERIVATION_PROFILE_RUNTIME_DRY_RUN
-NEXT_STAGE=1013K_R2_CURRICULUM_PROFILE_TO_BIG_UNIT_CANDIDATE_ENVELOPE
-RUNTIME_DRY_RUN_ONLY=true
-IN_MEMORY_ONLY=true
-RUNTIME_SCHEMA_APPLIED=false
+STAGE=1013K_M2_BIG_UNIT_RENDER_VIEWMODEL_BACKEND_MILESTONE_PACKAGE
+FINAL_STATUS=PASS_1013K_M2_BIG_UNIT_RENDER_VIEWMODEL_BACKEND_MILESTONE_PACKAGE
+NEXT_STAGE=1013K_R9_BIG_UNIT_READONLY_ENDPOINT_DRY_RUN_WITHOUT_ROUTE_REGISTRATION
+MILESTONE_PACKAGE_CREATED=true
+GITHUB_UPLOAD_READY=true
+GITHUB_UPLOADED=false
 PROVIDER_MODEL_CALL_ALLOWED=false
 FORMAL_APPLY_ALLOWED=false
 DATABASE_WRITE_ALLOWED=false
 MEMORY_WRITE_ALLOWED=false
 
-1013K_R1 runs an in-memory dry-run of the curriculum derivation profile from R0. It builds runtime state, evaluates gates, maps derivation targets, and records a trace without side effects. Normal candidate generation remains blocked until textbook anchor, big-unit chain, and teacher confirmation are ready.
+1013K_M2 archives the backend derivation line from curriculum-standard control to chunked big-unit render ViewModel and future readonly endpoint contract.
+
+Review chain:
+
+```text
+1013K_R0_CURRICULUM_STANDARD_DERIVATION_BACKEND_CONTRACT
+-> 1013K_R1_CURRICULUM_DERIVATION_PROFILE_RUNTIME_DRY_RUN
+-> 1013K_R2_CURRICULUM_PROFILE_TO_BIG_UNIT_CANDIDATE_ENVELOPE
+-> 1013K_R3_BIG_UNIT_CANDIDATE_ENVELOPE_TO_STATIC_SECTION_PREVIEW
+-> 1013K_R4_STATIC_SECTION_PREVIEW_TO_REVIEW_SURFACE_FIXTURE
+-> 1013K_M1_CURRICULUM_TO_BIG_UNIT_REVIEW_MILESTONE_PACKAGE
+-> 1013K_R5_BIG_UNIT_REVIEW_ACTION_STATE_DRY_RUN
+-> 1013K_R6_BIG_UNIT_REVIEW_ACTION_STATE_TO_PREVIEW_SURFACE_FIXTURE
+-> 1013K_R7_BIG_UNIT_PREVIEW_SURFACE_TO_RENDER_VIEWMODEL_CONTRACT
+-> 1013K_R8_BIG_UNIT_RENDER_VIEWMODEL_READONLY_ENDPOINT_CONTRACT
+-> 1013K_M2_BIG_UNIT_RENDER_VIEWMODEL_BACKEND_MILESTONE_PACKAGE
+```
+
+Key result:
+
+```text
+section_chunks_renderable_independently=true
+whole_document_blob_required=false
+route_registered=false
+runtime_connected=false
+provider_called=false
+model_called=false
+database_written=false
+memory_written=false
+feishu_written=false
+formal_apply_performed=false
+```
+
+This package is for GPT review. It does not push or modify the main project runtime.

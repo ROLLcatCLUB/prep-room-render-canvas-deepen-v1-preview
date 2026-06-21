@@ -1,0 +1,60 @@
+{
+  "preview_surface_trace_id": "big_unit_preview_surface_trace_1013K_R6",
+  "stage": "1013K_R6_BIG_UNIT_REVIEW_ACTION_STATE_TO_PREVIEW_SURFACE_FIXTURE",
+  "event_count": 4,
+  "events": [
+    {
+      "event_id": "r6_event_01_action_state_loaded",
+      "event_type": "load_r5_action_state",
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r6_event_02_preview_surface_created",
+      "event_type": "create_renderable_preview_surface_fixture",
+      "preview_surface_id": "big_unit_preview_surface_fixture_1013K_R6",
+      "section_count": 10,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r6_event_03_navigation_created",
+      "event_type": "create_preview_navigation",
+      "navigation_id": "big_unit_preview_surface_navigation_1013K_R6",
+      "item_count": 10,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r6_event_04_status_created",
+      "event_type": "create_preview_status",
+      "preview_status_id": "big_unit_preview_surface_status_1013K_R6",
+      "side_effects_performed": false
+    }
+  ],
+  "side_effects_performed": false,
+  "preview_surface_fixture_only": true,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

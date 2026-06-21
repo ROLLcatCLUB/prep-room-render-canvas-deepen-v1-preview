@@ -1,0 +1,58 @@
+{
+  "trace_id": "curriculum_profile_to_big_unit_candidate_envelope_trace_1013K_R2",
+  "stage": "1013K_R2_CURRICULUM_PROFILE_TO_BIG_UNIT_CANDIDATE_ENVELOPE",
+  "events": [
+    {
+      "event_id": "r2_event_01_policy_loaded",
+      "event_type": "policy_from_r1_gate_decision",
+      "output_ref": "curriculum_profile_candidate_generation_policy_1013K_R2",
+      "normal_candidate_generation_allowed": false,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r2_event_02_context_pack_built",
+      "event_type": "safe_prompt_context_pack",
+      "output_ref": "curriculum_profile_prompt_context_pack_1013K_R2",
+      "future_model_call_allowed": false,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r2_event_03_envelopes_created",
+      "event_type": "candidate_envelope_bundle",
+      "output_ref": "curriculum_profile_to_big_unit_candidate_envelope_bundle_1013K_R2",
+      "envelope_count": 10,
+      "candidate_text_generated": false,
+      "side_effects_performed": false
+    }
+  ],
+  "side_effects_performed": false,
+  "candidate_text_generated": false,
+  "provider_called": false,
+  "model_called": false,
+  "candidate_envelope_only": true,
+  "prompt_envelope_only": true,
+  "degraded_preview_only": true,
+  "preview_only": true,
+  "normal_candidate_generation_allowed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "runtime_schema_applied": false,
+  "full_standard_text_dumped_to_prompt": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

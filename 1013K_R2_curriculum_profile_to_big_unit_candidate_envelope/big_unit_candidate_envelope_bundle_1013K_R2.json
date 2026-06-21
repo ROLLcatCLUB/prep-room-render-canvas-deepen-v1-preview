@@ -1,0 +1,700 @@
+{
+  "bundle_id": "curriculum_profile_to_big_unit_candidate_envelope_bundle_1013K_R2",
+  "stage": "1013K_R2_CURRICULUM_PROFILE_TO_BIG_UNIT_CANDIDATE_ENVELOPE",
+  "source_state_id": "curriculum_derivation_runtime_state_1013K_R1",
+  "source_target_map_id": "curriculum_derivation_target_map_1013K_R1",
+  "envelope_count": 10,
+  "envelopes": [
+    {
+      "envelope_id": "big_unit_candidate_envelope_curriculum_basis_1013K_R2",
+      "order": 1,
+      "target_key": "curriculum_basis",
+      "teacher_label": "课标依据",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "把课标方向转成教师可读的单元依据，不引用或伪造课标全文。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "envelope_id": "big_unit_candidate_envelope_core_literacy_goals_1013K_R2",
+      "order": 2,
+      "target_key": "core_literacy_goals",
+      "teacher_label": "核心素养",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "把审美感知、艺术表现、创意实践、文化理解转成学生可观察行为。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "envelope_id": "big_unit_candidate_envelope_student_starting_point_1013K_R2",
+      "order": 3,
+      "target_key": "student_starting_point",
+      "teacher_label": "学生起点",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "说明三年级学生在色彩表达上的已有经验和可能困难。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "envelope_id": "big_unit_candidate_envelope_unit_questions_1013K_R2",
+      "order": 4,
+      "target_key": "unit_questions",
+      "teacher_label": "单元问题",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "形成能带动观察、比较、表现和修订的单元问题。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "envelope_id": "big_unit_candidate_envelope_knowledge_and_skills_1013K_R2",
+      "order": 5,
+      "target_key": "knowledge_and_skills",
+      "teacher_label": "知识与技能",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "保留本单元不能丢的美术语言和基本技能。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "envelope_id": "big_unit_candidate_envelope_performance_task_1013K_R2",
+      "order": 6,
+      "target_key": "performance_task",
+      "teacher_label": "表现任务",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "明确学生最后完成什么作品或表达，并能留下评价证据。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "envelope_id": "big_unit_candidate_envelope_learning_progression_1013K_R2",
+      "order": 7,
+      "target_key": "learning_progression",
+      "teacher_label": "学习推进",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "按感受、比较、表现、修订组织学习推进。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "envelope_id": "big_unit_candidate_envelope_lesson_task_chain_1013K_R2",
+      "order": 8,
+      "target_key": "lesson_task_chain",
+      "teacher_label": "课时任务链",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "说明 1-1、1-2、1-3 各课承担的单元任务和证据。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "envelope_id": "big_unit_candidate_envelope_assessment_evidence_1013K_R2",
+      "order": 9,
+      "target_key": "assessment_evidence",
+      "teacher_label": "评价证据",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "列出过程、作品、表达和修订中的可观察证据。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    },
+    {
+      "envelope_id": "big_unit_candidate_envelope_materials_and_scaffolds_1013K_R2",
+      "order": 10,
+      "target_key": "materials_and_scaffolds",
+      "teacher_label": "材料与支架",
+      "candidate_role": "big_unit_section_preview_candidate_request",
+      "generation_mode": "degraded_preview_candidate_envelope",
+      "normal_generation_allowed_now": false,
+      "candidate_text_generated": false,
+      "teacher_review_required": true,
+      "degraded_preview_label_required": true,
+      "source_control_profile_id": "curriculum_control_profile_color_feeling_1013K_R1",
+      "source_intent": "列出图片、色卡、学习单、示例和评价句式等支架。",
+      "control_inputs": {
+        "core_literacy_focus": [
+          "审美感知",
+          "艺术表现",
+          "创意实践",
+          "文化理解"
+        ],
+        "learning_task_direction": [
+          "观察",
+          "比较",
+          "表现",
+          "交流",
+          "修订"
+        ],
+        "assessment_evidence_direction": [
+          "能说出色彩带来的感受",
+          "能说明选色理由",
+          "作品呈现较明确视觉意味",
+          "能根据反馈调整一处颜色"
+        ],
+        "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+        "prohibited_overreach": [
+          "不得要求三年级学生掌握成人化色彩理论术语",
+          "不得把官方案例样本文字当成课标原文",
+          "不得在缺教材锚点时生成正式单课正文"
+        ]
+      },
+      "source_refs": [
+        "curriculum_derivation_runtime_state_1013K_R1.json",
+        "curriculum_derivation_gate_decision_1013K_R1.json",
+        "curriculum_derivation_target_map_1013K_R1.json"
+      ],
+      "blocked_write_targets": [
+        "unit_package",
+        "lesson_body",
+        "database",
+        "memory",
+        "feishu",
+        "formal_apply"
+      ],
+      "allowed_output_shape": {
+        "candidate_summary": "string_future",
+        "candidate_body_preview": "string_future",
+        "risk_note": "string_future",
+        "teacher_action_options": [
+          "采纳到预览",
+          "再改一版",
+          "暂不采用"
+        ]
+      },
+      "writes_unit_package": false,
+      "writes_lesson_body": false
+    }
+  ],
+  "normal_candidate_generation_allowed": false,
+  "degraded_preview_allowed": true,
+  "policy_ref": "curriculum_profile_candidate_generation_policy_1013K_R2",
+  "candidate_envelope_only": true,
+  "prompt_envelope_only": true,
+  "degraded_preview_only": true,
+  "preview_only": true,
+  "provider_called": false,
+  "model_called": false,
+  "candidate_text_generated": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "runtime_schema_applied": false,
+  "full_standard_text_dumped_to_prompt": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

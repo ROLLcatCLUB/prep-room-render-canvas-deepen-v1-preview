@@ -1,0 +1,62 @@
+{
+  "stage": "1013K_M2_BIG_UNIT_RENDER_VIEWMODEL_BACKEND_MILESTONE_PACKAGE",
+  "boundary_type": "local_milestone_review_package_only",
+  "small_package_policy": "R5-R8 remained local-only; M2 is upload-ready but not uploaded.",
+  "route_registered": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "main_project_pushed": false,
+  "section_chunks_renderable_independently": true,
+  "whole_document_blob_required": false,
+  "stage_boundary_snapshot": [
+    {
+      "stage": "1013K_R5_BIG_UNIT_REVIEW_ACTION_STATE_DRY_RUN",
+      "validator_pass": true,
+      "provider_called": false,
+      "model_called": false,
+      "database_written": false,
+      "memory_written": false,
+      "formal_apply_performed": false,
+      "route_registered": false
+    },
+    {
+      "stage": "1013K_R6_BIG_UNIT_REVIEW_ACTION_STATE_TO_PREVIEW_SURFACE_FIXTURE",
+      "validator_pass": true,
+      "provider_called": false,
+      "model_called": false,
+      "database_written": false,
+      "memory_written": false,
+      "formal_apply_performed": false,
+      "route_registered": false
+    },
+    {
+      "stage": "1013K_R7_BIG_UNIT_PREVIEW_SURFACE_TO_RENDER_VIEWMODEL_CONTRACT",
+      "validator_pass": true,
+      "provider_called": false,
+      "model_called": false,
+      "database_written": false,
+      "memory_written": false,
+      "formal_apply_performed": false,
+      "route_registered": false
+    },
+    {
+      "stage": "1013K_R8_BIG_UNIT_RENDER_VIEWMODEL_READONLY_ENDPOINT_CONTRACT",
+      "validator_pass": true,
+      "provider_called": false,
+      "model_called": false,
+      "database_written": false,
+      "memory_written": false,
+      "formal_apply_performed": false,
+      "route_registered": false
+    }
+  ]
+}

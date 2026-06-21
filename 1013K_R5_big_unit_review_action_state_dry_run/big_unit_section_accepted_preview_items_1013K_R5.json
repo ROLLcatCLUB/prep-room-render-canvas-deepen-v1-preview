@@ -1,0 +1,521 @@
+{
+  "accepted_preview_items_id": "big_unit_section_accepted_preview_items_1013K_R5",
+  "stage": "1013K_R5_BIG_UNIT_REVIEW_ACTION_STATE_DRY_RUN",
+  "source_review_surface_id": "big_unit_static_section_review_surface_1013K_R4",
+  "item_count": 10,
+  "items": [
+    {
+      "source_review_section_id": "review_section_curriculum_basis_1013K_R3",
+      "source_section_preview_id": "static_section_preview_curriculum_basis_1013K_R3",
+      "order": 1,
+      "teacher_label": "课标依据",
+      "main_reading_content": {
+        "summary": "本单元先按艺术课程方向生成预览：通过观察、比较、尝试和表达，让学生理解色彩组合会改变画面感觉，并尝试用色彩表达一种较明确的情绪或氛围。",
+        "paragraphs": [
+          "本单元先按艺术课程方向生成预览：通过观察、比较、尝试和表达，让学生理解色彩组合会改变画面感觉，并尝试用色彩表达一种较明确的情绪或氛围。",
+          "具体课标来源和教材锚点仍需教师补充或确认；确认前，这一段只作为大单元预览内容。"
+        ]
+      },
+      "side_note": {
+        "risk_note": "课标依据仍需教师补充来源或确认，当前不得视为正式课标引用。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_curriculum_basis_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    },
+    {
+      "source_review_section_id": "review_section_core_literacy_goals_1013K_R3",
+      "source_section_preview_id": "static_section_preview_core_literacy_goals_1013K_R3",
+      "order": 2,
+      "teacher_label": "核心素养",
+      "main_reading_content": {
+        "summary": "审美感知：能感受不同色彩组合带来的冷暖、轻重、热烈、安静等视觉意味。",
+        "paragraphs": [
+          "审美感知：能感受不同色彩组合带来的冷暖、轻重、热烈、安静等视觉意味。",
+          "艺术表现：能选择一组颜色表达明确感觉，并说明自己的选色理由。",
+          "创意实践：能在比较、试验和反馈中调整色彩搭配。",
+          "文化理解：能发现色彩感受与生活场景、作品情境有关。"
+        ]
+      },
+      "side_note": {
+        "risk_note": "核心素养表述要保持可观察，避免写成口号。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_core_literacy_goals_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    },
+    {
+      "source_review_section_id": "review_section_student_starting_point_1013K_R3",
+      "source_section_preview_id": "static_section_preview_student_starting_point_1013K_R3",
+      "order": 3,
+      "teacher_label": "学生起点",
+      "main_reading_content": {
+        "summary": "三年级学生通常能说出“红色热闹、蓝色安静”这样的直观感受，但容易停留在“好看、鲜艳、漂亮”等笼统判断。",
+        "paragraphs": [
+          "三年级学生通常能说出“红色热闹、蓝色安静”这样的直观感受，但容易停留在“好看、鲜艳、漂亮”等笼统判断。",
+          "本单元重点帮助学生从“我觉得”走向“我能说明为什么”。"
+        ]
+      },
+      "side_note": {
+        "risk_note": "学情为常见三年级判断，真实班级差异需教师补充。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_student_starting_point_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    },
+    {
+      "source_review_section_id": "review_section_unit_questions_1013K_R3",
+      "source_section_preview_id": "static_section_preview_unit_questions_1013K_R3",
+      "order": 4,
+      "teacher_label": "单元问题",
+      "main_reading_content": {
+        "summary": "颜色为什么会让人产生不同感觉？",
+        "paragraphs": [
+          "颜色为什么会让人产生不同感觉？",
+          "我们怎样用颜色把一种感觉表达出来？",
+          "改动一处颜色，画面的意味为什么会变化？"
+        ]
+      },
+      "side_note": {
+        "risk_note": "单元问题应带动连续学习，不应退回知识问答。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_unit_questions_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    },
+    {
+      "source_review_section_id": "review_section_knowledge_and_skills_1013K_R3",
+      "source_section_preview_id": "static_section_preview_knowledge_and_skills_1013K_R3",
+      "order": 5,
+      "teacher_label": "知识与技能",
+      "main_reading_content": {
+        "summary": "认识色彩组合带来的视觉差异，能用冷暖、强弱、明暗、轻重等词语描述色彩感觉。",
+        "paragraphs": [
+          "认识色彩组合带来的视觉差异，能用冷暖、强弱、明暗、轻重等词语描述色彩感觉。",
+          "能在观察和比较中发现颜色搭配的变化，并用 3 到 4 种颜色完成一次小型色彩表达。"
+        ]
+      },
+      "side_note": {
+        "risk_note": "避免越级进入复杂色彩理论。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_knowledge_and_skills_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    },
+    {
+      "source_review_section_id": "review_section_performance_task_1013K_R3",
+      "source_section_preview_id": "static_section_preview_performance_task_1013K_R3",
+      "order": 6,
+      "teacher_label": "表现任务",
+      "main_reading_content": {
+        "summary": "学生完成一件“色彩感觉”小作品，并用一句到几句话说明：我用了哪些颜色、想表达什么感觉、为什么这样搭配。",
+        "paragraphs": [
+          "学生完成一件“色彩感觉”小作品，并用一句到几句话说明：我用了哪些颜色、想表达什么感觉、为什么这样搭配。",
+          "如果时间允许，再根据同伴或教师反馈调整一处颜色，并说明为什么改。"
+        ]
+      },
+      "side_note": {
+        "risk_note": "任务要适合常态课时长，不能变成过重公开课项目。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_performance_task_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    },
+    {
+      "source_review_section_id": "review_section_learning_progression_1013K_R3",
+      "source_section_preview_id": "static_section_preview_learning_progression_1013K_R3",
+      "order": 7,
+      "teacher_label": "学习推进",
+      "main_reading_content": {
+        "summary": "感受：看生活图片、作品、色卡或真实物件，先说直观感受。",
+        "paragraphs": [
+          "感受：看生活图片、作品、色卡或真实物件，先说直观感受。",
+          "比较：比较不同色彩组合，发现搭配变化会改变画面感觉。",
+          "表现：围绕一种感觉完成色彩实验或小作品。",
+          "修订：展示作品，说出理由，根据反馈调整一处颜色。"
+        ]
+      },
+      "side_note": {
+        "risk_note": "学习推进仍需结合真实课时数量调整。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_learning_progression_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    },
+    {
+      "source_review_section_id": "review_section_lesson_task_chain_1013K_R3",
+      "source_section_preview_id": "static_section_preview_lesson_task_chain_1013K_R3",
+      "order": 8,
+      "teacher_label": "课时任务链",
+      "main_reading_content": {
+        "summary": "1-1 色彩初体验：打开经验，建立感受语言，让学生说出颜色带来的直观感觉。",
+        "paragraphs": [
+          "1-1 色彩初体验：打开经验，建立感受语言，让学生说出颜色带来的直观感觉。",
+          "1-2 色彩的感觉：比较变化，发现色彩组合会改变画面意味。",
+          "1-3 色彩表达：完成表达，展示并修订，用色彩表达一种明确感受。"
+        ]
+      },
+      "side_note": {
+        "risk_note": "课时安排未确认前，只能作为 3 课时临时预览。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_lesson_task_chain_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    },
+    {
+      "source_review_section_id": "review_section_assessment_evidence_1013K_R3",
+      "source_section_preview_id": "static_section_preview_assessment_evidence_1013K_R3",
+      "order": 9,
+      "teacher_label": "评价证据",
+      "main_reading_content": {
+        "summary": "能说出色彩带来的感觉；能说明自己的选色理由；学习单留下观察和选择记录。",
+        "paragraphs": [
+          "能说出色彩带来的感觉；能说明自己的选色理由；学习单留下观察和选择记录。",
+          "作品呈现较明确的视觉意味；学生能根据反馈做出一次可见调整。"
+        ]
+      },
+      "side_note": {
+        "risk_note": "评价证据应服务观察和修改，不是正式评分表。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_assessment_evidence_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    },
+    {
+      "source_review_section_id": "review_section_materials_and_scaffolds_1013K_R3",
+      "source_section_preview_id": "static_section_preview_materials_and_scaffolds_1013K_R3",
+      "order": 10,
+      "teacher_label": "材料与支架",
+      "main_reading_content": {
+        "summary": "建议准备生活色彩图片、艺术作品图像、不同色卡组合、学生作品正反例、简短学习单和展示评价句式。",
+        "paragraphs": [
+          "建议准备生活色彩图片、艺术作品图像、不同色卡组合、学生作品正反例、简短学习单和展示评价句式。",
+          "学习单可以很轻：我看到的颜色；我感受到的画面；我为什么这样选；我还想改哪里。"
+        ]
+      },
+      "side_note": {
+        "risk_note": "材料清单需随教材页、教参和课堂条件修正。",
+        "source_context": {
+          "unit_theme": "多变的色彩",
+          "lesson_title": "色彩的感觉",
+          "core_literacy_focus": [
+            "审美感知",
+            "艺术表现",
+            "创意实践",
+            "文化理解"
+          ],
+          "learning_task_direction": [
+            "观察",
+            "比较",
+            "表现",
+            "交流",
+            "修订"
+          ]
+        },
+        "default_collapsed": true
+      },
+      "preview_item_id": "accepted_preview_item_materials_and_scaffolds_1013K_R3",
+      "action": "accept_to_preview",
+      "state": "accepted_to_preview_only",
+      "status_badges": [
+        "已进入预览",
+        "教师确认前不生效"
+      ],
+      "can_revert": true,
+      "can_revise": true,
+      "can_formal_apply": false,
+      "accepted_to_preview": true,
+      "writes_unit_package": false,
+      "writes_lesson_body": false,
+      "formal_apply_performed": false
+    }
+  ],
+  "action_state_dry_run_only": true,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

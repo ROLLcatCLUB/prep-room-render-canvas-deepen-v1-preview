@@ -1,0 +1,84 @@
+{
+  "context_pack_id": "curriculum_profile_prompt_context_pack_1013K_R2",
+  "stage": "1013K_R2_CURRICULUM_PROFILE_TO_BIG_UNIT_CANDIDATE_ENVELOPE",
+  "context_pack_role": "safe_context_for_future_candidate_generation_without_calling_model",
+  "teacher_visible_context": {
+    "subject": "美术",
+    "grade_band": "3-4",
+    "unit_theme": "多变的色彩",
+    "lesson_title": "色彩的感觉",
+    "core_literacy_focus": [
+      "审美感知",
+      "艺术表现",
+      "创意实践",
+      "文化理解"
+    ],
+    "learning_task_direction": [
+      "观察",
+      "比较",
+      "表现",
+      "交流",
+      "修订"
+    ],
+    "assessment_evidence_direction": [
+      "能说出色彩带来的感受",
+      "能说明选色理由",
+      "作品呈现较明确视觉意味",
+      "能根据反馈调整一处颜色"
+    ]
+  },
+  "hidden_control_context": {
+    "content_scope_boundary": "三年级色彩感受与表达，避免越级进入复杂色彩理论。",
+    "prohibited_overreach": [
+      "不得要求三年级学生掌握成人化色彩理论术语",
+      "不得把官方案例样本文字当成课标原文",
+      "不得在缺教材锚点时生成正式单课正文"
+    ],
+    "source_quote_policy": "no_full_text_quote",
+    "pending_confirmation_items": [
+      "确认教材版本",
+      "确认本课所在单元",
+      "确认课题编号和教材活动落点",
+      "确认单元任务链",
+      "确认本课在单元中的位置"
+    ]
+  },
+  "prompt_must_not_include": [
+    "full_curriculum_standard_text",
+    "official_case_original_text_copy",
+    "database_write_instruction",
+    "formal_apply_instruction",
+    "memory_write_instruction",
+    "feishu_write_instruction"
+  ],
+  "future_model_call_allowed": false,
+  "candidate_envelope_only": true,
+  "prompt_envelope_only": true,
+  "degraded_preview_only": true,
+  "preview_only": true,
+  "normal_candidate_generation_allowed": false,
+  "provider_called": false,
+  "model_called": false,
+  "candidate_text_generated": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "runtime_schema_applied": false,
+  "full_standard_text_dumped_to_prompt": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

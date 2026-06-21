@@ -1,0 +1,95 @@
+{
+  "navigation_id": "big_unit_preview_surface_navigation_1013K_R6",
+  "stage": "1013K_R6_BIG_UNIT_REVIEW_ACTION_STATE_TO_PREVIEW_SURFACE_FIXTURE",
+  "source_preview_surface_id": "big_unit_preview_surface_fixture_1013K_R6",
+  "items": [
+    {
+      "preview_section_id": "preview_surface_section_curriculum_basis_1013K_R3",
+      "order": 1,
+      "teacher_label": "课标依据",
+      "display_state": "preview_visible"
+    },
+    {
+      "preview_section_id": "preview_surface_section_core_literacy_goals_1013K_R3",
+      "order": 2,
+      "teacher_label": "核心素养",
+      "display_state": "preview_visible"
+    },
+    {
+      "preview_section_id": "preview_surface_section_student_starting_point_1013K_R3",
+      "order": 3,
+      "teacher_label": "学生起点",
+      "display_state": "preview_visible"
+    },
+    {
+      "preview_section_id": "preview_surface_section_unit_questions_1013K_R3",
+      "order": 4,
+      "teacher_label": "单元问题",
+      "display_state": "preview_visible"
+    },
+    {
+      "preview_section_id": "preview_surface_section_knowledge_and_skills_1013K_R3",
+      "order": 5,
+      "teacher_label": "知识与技能",
+      "display_state": "preview_visible"
+    },
+    {
+      "preview_section_id": "preview_surface_section_performance_task_1013K_R3",
+      "order": 6,
+      "teacher_label": "表现任务",
+      "display_state": "preview_visible"
+    },
+    {
+      "preview_section_id": "preview_surface_section_learning_progression_1013K_R3",
+      "order": 7,
+      "teacher_label": "学习推进",
+      "display_state": "preview_visible"
+    },
+    {
+      "preview_section_id": "preview_surface_section_lesson_task_chain_1013K_R3",
+      "order": 8,
+      "teacher_label": "课时任务链",
+      "display_state": "preview_visible"
+    },
+    {
+      "preview_section_id": "preview_surface_section_assessment_evidence_1013K_R3",
+      "order": 9,
+      "teacher_label": "评价证据",
+      "display_state": "preview_visible"
+    },
+    {
+      "preview_section_id": "preview_surface_section_materials_and_scaffolds_1013K_R3",
+      "order": 10,
+      "teacher_label": "材料与支架",
+      "display_state": "preview_visible"
+    }
+  ],
+  "item_count": 10,
+  "preview_surface_fixture_only": true,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

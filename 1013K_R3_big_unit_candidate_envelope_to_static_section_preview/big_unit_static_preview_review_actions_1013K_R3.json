@@ -1,0 +1,328 @@
+{
+  "action_surface_id": "big_unit_static_section_preview_actions_1013K_R3",
+  "stage": "1013K_R3_BIG_UNIT_CANDIDATE_ENVELOPE_TO_STATIC_SECTION_PREVIEW",
+  "source_bundle_id": "big_unit_static_section_preview_bundle_1013K_R3",
+  "section_action_count": 10,
+  "actions": [
+    {
+      "section_preview_id": "static_section_preview_curriculum_basis_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    },
+    {
+      "section_preview_id": "static_section_preview_core_literacy_goals_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    },
+    {
+      "section_preview_id": "static_section_preview_student_starting_point_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    },
+    {
+      "section_preview_id": "static_section_preview_unit_questions_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    },
+    {
+      "section_preview_id": "static_section_preview_knowledge_and_skills_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    },
+    {
+      "section_preview_id": "static_section_preview_performance_task_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    },
+    {
+      "section_preview_id": "static_section_preview_learning_progression_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    },
+    {
+      "section_preview_id": "static_section_preview_lesson_task_chain_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    },
+    {
+      "section_preview_id": "static_section_preview_assessment_evidence_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    },
+    {
+      "section_preview_id": "static_section_preview_materials_and_scaffolds_1013K_R3",
+      "actions": [
+        {
+          "action": "accept_to_preview",
+          "teacher_label": "采纳到预览",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "revise",
+          "teacher_label": "再改一版",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        },
+        {
+          "action": "reject",
+          "teacher_label": "暂不采用",
+          "allowed_now": true,
+          "formal_apply_performed": false,
+          "writes_unit_package": false,
+          "writes_lesson_body": false
+        }
+      ]
+    }
+  ],
+  "preview_only_actions": true,
+  "static_preview_fixture_only": true,
+  "degraded_preview_only": true,
+  "teacher_review_required": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "model_candidate_text_generated": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "full_standard_text_dumped_to_prompt": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

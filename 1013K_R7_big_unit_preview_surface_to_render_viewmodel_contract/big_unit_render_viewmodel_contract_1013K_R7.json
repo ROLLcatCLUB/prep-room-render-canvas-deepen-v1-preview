@@ -1,0 +1,82 @@
+{
+  "contract_id": "big_unit_render_viewmodel_contract_1013K_R7",
+  "stage": "1013K_R7_BIG_UNIT_PREVIEW_SURFACE_TO_RENDER_VIEWMODEL_CONTRACT",
+  "source_preview_surface_id": "big_unit_preview_surface_fixture_1013K_R6",
+  "contract_role": "define_frontend_render_shape_for_big_unit_preview_surface",
+  "viewmodel_kind": "prep_room_big_unit_design_preview",
+  "version": "1013K_R7",
+  "top_level_shape": {
+    "viewmodel_id": "string",
+    "viewmodel_kind": "prep_room_big_unit_design_preview",
+    "header": "object",
+    "status_strip": "object",
+    "material_prompt": "object|null",
+    "section_chunks": "array<object>",
+    "side_reference": "object",
+    "action_bar": "object",
+    "progressive_render": "object",
+    "boundary": "object"
+  },
+  "section_chunk_shape": {
+    "chunk_id": "string",
+    "source_preview_section_id": "string",
+    "order": "number",
+    "teacher_label": "string",
+    "render_as": "reading_section",
+    "title_number": "string",
+    "paragraphs": "array<string>",
+    "summary": "string",
+    "status_badges": "array<string>",
+    "side_note_ref": "string",
+    "actions": "array<object>",
+    "render_state": "pending|visible|updating|hidden"
+  },
+  "progressive_render_contract": {
+    "section_chunks_renderable_independently": true,
+    "whole_document_blob_required": false,
+    "initial_chunk_ids": [
+      "header",
+      "status_strip",
+      "material_prompt"
+    ],
+    "can_stream_section_by_section": true,
+    "can_reorder_without_rewriting_text": true,
+    "can_update_single_section_preview": true,
+    "stable_chunk_identity_required": true
+  },
+  "teacher_surface_rules": {
+    "hide_engineering_field_names": true,
+    "show_teacher_labels": true,
+    "keep_side_notes_collapsed_by_default": true,
+    "show_preview_only_status_lightly": true,
+    "do_not_show_contract_words_to_teacher": true
+  },
+  "render_viewmodel_contract_only": true,
+  "render_viewmodel_fixture_only": true,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

@@ -1,0 +1,72 @@
+{
+  "endpoint_contract_id": "big_unit_render_viewmodel_readonly_endpoint_contract_1013K_R8",
+  "stage": "1013K_R8_BIG_UNIT_RENDER_VIEWMODEL_READONLY_ENDPOINT_CONTRACT",
+  "source_viewmodel_id": "big_unit_render_viewmodel_fixture_1013K_R7",
+  "contract_role": "define_future_readonly_endpoint_for_chunked_big_unit_render_viewmodel",
+  "route_registered": false,
+  "method": "GET",
+  "path_template": "/api/prep-room/big-unit-preview-viewmodel/{viewmodel_id}",
+  "query_params": {
+    "include": [
+      "header",
+      "status_strip",
+      "material_prompt",
+      "section_chunks",
+      "side_reference",
+      "action_bar"
+    ],
+    "chunk_id": "optional stable render chunk id for incremental fetch",
+    "mode": "preview"
+  },
+  "response_shape": {
+    "ok": "boolean",
+    "stage": "1013K_R8_BIG_UNIT_RENDER_VIEWMODEL_READONLY_ENDPOINT_CONTRACT",
+    "viewmodel": "object",
+    "chunked": "boolean",
+    "whole_document_blob_required": "boolean",
+    "boundary": "object"
+  },
+  "allowed_response_modes": [
+    "full_viewmodel_fixture",
+    "single_chunk_fixture"
+  ],
+  "forbidden_runtime_behavior": [
+    "provider_call",
+    "model_call",
+    "database_write",
+    "memory_write",
+    "feishu_write",
+    "formal_apply",
+    "unit_package_write",
+    "lesson_body_write"
+  ],
+  "section_chunks_renderable_independently": true,
+  "whole_document_blob_required": false,
+  "readonly_endpoint_contract_only": true,
+  "runtime_connected": false,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}
