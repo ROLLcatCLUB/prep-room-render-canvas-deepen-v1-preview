@@ -1,0 +1,73 @@
+{
+  "visual_smoke_id": "hydrated_viewmodel_visual_smoke_1013L_R12",
+  "stage": "1013L_R12_EXISTING_PAGE_HYDRATED_VIEWMODEL_VISUAL_SMOKE",
+  "source_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R11_existing_page_readonly_viewmodel_static_hydration_apply/prep_room_render_canvas_deepen_v1_1013L_R11_static_hydration_apply.html",
+  "case_count": 4,
+  "cases": [
+    {
+      "case_id": "desktop_normal_hydrated_courseware_rail",
+      "suffix": "?r12=normal",
+      "width": 1920,
+      "height": 1080,
+      "screenshot": "ui_smoke_1013L_R12_desktop_normal.png",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/ui_smoke_1013L_R12_desktop_normal.png",
+      "actual_width": 1920,
+      "actual_height": 1080,
+      "bytes": 734636,
+      "pass": true
+    },
+    {
+      "case_id": "desktop_courseware_expanded_hydrated",
+      "suffix": "?r12=courseware#coursewareExpanded",
+      "width": 1920,
+      "height": 1080,
+      "screenshot": "ui_smoke_1013L_R12_desktop_courseware_expanded.png",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/ui_smoke_1013L_R12_desktop_courseware_expanded.png",
+      "actual_width": 1920,
+      "actual_height": 1080,
+      "bytes": 388640,
+      "pass": true
+    },
+    {
+      "case_id": "desktop_display_preview_hydrated",
+      "suffix": "?preview=display&screen=03#coursewareExpanded",
+      "width": 1920,
+      "height": 1080,
+      "screenshot": "ui_smoke_1013L_R12_desktop_display_preview.png",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/ui_smoke_1013L_R12_desktop_display_preview.png",
+      "actual_width": 1920,
+      "actual_height": 1080,
+      "bytes": 458996,
+      "pass": true
+    },
+    {
+      "case_id": "mobile_normal_hydrated",
+      "suffix": "?r12=mobile",
+      "width": 390,
+      "height": 844,
+      "screenshot": "ui_smoke_1013L_R12_mobile_normal.png",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/ui_smoke_1013L_R12_mobile_normal.png",
+      "actual_width": 390,
+      "actual_height": 844,
+      "bytes": 112931,
+      "pass": true
+    }
+  ],
+  "visual_smoke_pass": true,
+  "boundary": {
+    "visual_smoke_only": true,
+    "existing_page_reused": true,
+    "new_visible_page_created": false,
+    "new_shell_standard_created": false,
+    "runtime_connected": false,
+    "real_fetch_performed": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false,
+    "formal_frontend_binding_allowed": false
+  }
+}

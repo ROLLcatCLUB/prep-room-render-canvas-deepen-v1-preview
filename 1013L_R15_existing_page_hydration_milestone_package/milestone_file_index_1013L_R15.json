@@ -1,0 +1,140 @@
+{
+  "index_id": "milestone_file_index_1013L_R15",
+  "stage": "1013L_R15_EXISTING_PAGE_HYDRATION_MILESTONE_PACKAGE",
+  "file_count": 33,
+  "missing_files": [],
+  "files": [
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R11_existing_page_readonly_viewmodel_static_hydration_apply/1013L_R11_result.json",
+      "bytes": 2335
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R11_existing_page_readonly_viewmodel_static_hydration_apply/1013L_R11_report.md",
+      "bytes": 653
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R11_existing_page_readonly_viewmodel_static_hydration_apply/readonly_viewmodel_static_hydration_payload_1013L_R11.json",
+      "bytes": 66864
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R11_existing_page_readonly_viewmodel_static_hydration_apply/visible_hydration_browser_smoke_1013L_R11.json",
+      "bytes": 1640
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R11_existing_page_readonly_viewmodel_static_hydration_apply/prep_room_render_canvas_deepen_v1_1013L_R11_static_hydration_apply.html",
+      "bytes": 790118
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/1013L_R12_result.json",
+      "bytes": 1511
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/1013L_R12_report.md",
+      "bytes": 361
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/hydrated_viewmodel_visual_smoke_1013L_R12.json",
+      "bytes": 2880
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/ui_smoke_1013L_R12_desktop_normal.png",
+      "bytes": 734636
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/ui_smoke_1013L_R12_desktop_courseware_expanded.png",
+      "bytes": 388640
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/ui_smoke_1013L_R12_desktop_display_preview.png",
+      "bytes": 458996
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/ui_smoke_1013L_R12_mobile_normal.png",
+      "bytes": 112931
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R13_existing_page_big_unit_viewmodel_visible_hydration/1013L_R13_result.json",
+      "bytes": 2156
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R13_existing_page_big_unit_viewmodel_visible_hydration/1013L_R13_report.md",
+      "bytes": 603
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R13_existing_page_big_unit_viewmodel_visible_hydration/big_unit_visible_hydration_payload_1013L_R13.json",
+      "bytes": 28630
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R13_existing_page_big_unit_viewmodel_visible_hydration/big_unit_visible_hydration_browser_smoke_1013L_R13.json",
+      "bytes": 1782
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R13_existing_page_big_unit_viewmodel_visible_hydration/prep_room_render_canvas_deepen_v1_1013L_R13_big_unit_visible_hydration.html",
+      "bytes": 849713
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/1013L_R14_result.json",
+      "bytes": 1496
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/1013L_R14_report.md",
+      "bytes": 330
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/big_unit_viewmodel_visual_smoke_1013L_R14.json",
+      "bytes": 2851
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/ui_smoke_1013L_R14_desktop_big_unit.png",
+      "bytes": 823915
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/ui_smoke_1013L_R14_desktop_normal.png",
+      "bytes": 734636
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/ui_smoke_1013L_R14_mobile_big_unit.png",
+      "bytes": 238872
+    },
+    {
+      "path": "scripts/build_1013L_R11_existing_page_readonly_viewmodel_static_hydration_apply.py",
+      "bytes": 18718
+    },
+    {
+      "path": "scripts/validate_1013L_R11_existing_page_readonly_viewmodel_static_hydration_apply.py",
+      "bytes": 5397
+    },
+    {
+      "path": "scripts/build_1013L_R12_existing_page_hydrated_viewmodel_visual_smoke.py",
+      "bytes": 7132
+    },
+    {
+      "path": "scripts/validate_1013L_R12_existing_page_hydrated_viewmodel_visual_smoke.py",
+      "bytes": 3267
+    },
+    {
+      "path": "scripts/build_1013L_R13_existing_page_big_unit_viewmodel_visible_hydration.py",
+      "bytes": 19884
+    },
+    {
+      "path": "scripts/validate_1013L_R13_existing_page_big_unit_viewmodel_visible_hydration.py",
+      "bytes": 4939
+    },
+    {
+      "path": "scripts/build_1013L_R14_existing_page_big_unit_viewmodel_visual_smoke.py",
+      "bytes": 8140
+    },
+    {
+      "path": "scripts/validate_1013L_R14_existing_page_big_unit_viewmodel_visual_smoke.py",
+      "bytes": 3443
+    },
+    {
+      "path": "scripts/build_1013L_R15_existing_page_hydration_milestone_package.py",
+      "bytes": 13632
+    },
+    {
+      "path": "scripts/validate_1013L_R15_existing_page_hydration_milestone_package.py",
+      "bytes": 4568
+    }
+  ]
+}

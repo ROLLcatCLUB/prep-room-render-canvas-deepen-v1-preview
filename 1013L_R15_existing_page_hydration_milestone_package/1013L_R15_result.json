@@ -1,0 +1,79 @@
+{
+  "stage": "1013L_R15_EXISTING_PAGE_HYDRATION_MILESTONE_PACKAGE",
+  "final_status": "PASS_1013L_R15_EXISTING_PAGE_HYDRATION_MILESTONE_PACKAGE",
+  "source_chain": [
+    "1013L_R11_EXISTING_PAGE_READONLY_VIEWMODEL_STATIC_HYDRATION_APPLY",
+    "1013L_R12_EXISTING_PAGE_HYDRATED_VIEWMODEL_VISUAL_SMOKE",
+    "1013L_R13_EXISTING_PAGE_BIG_UNIT_VIEWMODEL_VISIBLE_HYDRATION",
+    "1013L_R14_EXISTING_PAGE_BIG_UNIT_VIEWMODEL_VISUAL_SMOKE"
+  ],
+  "r11_pass": true,
+  "r12_pass": true,
+  "r13_pass": true,
+  "r14_pass": true,
+  "existing_page_reused": true,
+  "original_horizontal_tool_strip_preserved": true,
+  "original_view_switching_preserved": true,
+  "resident_agent_input_preserved": true,
+  "courseware_viewmodel_visible_hydrated": true,
+  "display_preview_uses_hydrated_courseware_viewmodel": true,
+  "big_unit_viewmodel_visible_hydrated": true,
+  "big_unit_chunk_count": 10,
+  "desktop_big_unit_visual_smoke_pass": true,
+  "desktop_normal_visual_smoke_pass": true,
+  "mobile_big_unit_smoke_dom_pass": true,
+  "mobile_layout_polish_required": true,
+  "mobile_reason": "mobile screenshot still shows the legacy left notebook consuming the viewport before the big-unit body; do not allow formal frontend binding from this milestone",
+  "formal_frontend_binding_allowed": false,
+  "new_visible_page_created": false,
+  "new_shell_standard_created": false,
+  "runtime_connected": false,
+  "real_fetch_performed": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "main_project_pushed": false,
+  "github_uploaded": true,
+  "github_review_package_uploaded": true,
+  "next_stage": "1013L_R16_EXISTING_PAGE_MOBILE_LAYOUT_POLISH_AND_TEACHER_TEST_ENTRY",
+  "boundary": {
+    "milestone_package_only": true,
+    "existing_page_reused": true,
+    "new_visible_page_created": false,
+    "new_shell_standard_created": false,
+    "runtime_connected": false,
+    "real_fetch_performed": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false,
+    "formal_frontend_binding_allowed": false
+  },
+  "failed_checks": [],
+  "r14_visual_cases": [
+    {
+      "case_id": "desktop_big_unit_viewmodel_hydrated",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/ui_smoke_1013L_R14_desktop_big_unit.png",
+      "pass": true,
+      "bytes": 823915
+    },
+    {
+      "case_id": "desktop_normal_shell_still_available",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/ui_smoke_1013L_R14_desktop_normal.png",
+      "pass": true,
+      "bytes": 734636
+    },
+    {
+      "case_id": "mobile_big_unit_viewmodel_hydrated",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/ui_smoke_1013L_R14_mobile_big_unit.png",
+      "pass": true,
+      "bytes": 238872
+    }
+  ]
+}

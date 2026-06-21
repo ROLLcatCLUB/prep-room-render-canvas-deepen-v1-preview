@@ -1,0 +1,58 @@
+{
+  "smoke_id": "big_unit_visible_hydration_browser_smoke_1013L_R13",
+  "stage": "1013L_R13_EXISTING_PAGE_BIG_UNIT_VIEWMODEL_VISIBLE_HYDRATION",
+  "case_count": 3,
+  "cases": [
+    {
+      "case_id": "normal_shell_not_forced_to_big_unit",
+      "expected_markers": [
+        "data-1013l-r13-big-unit-hydrated=\"true\"",
+        "ai-tool-strip",
+        "courseware_screen_seed_03_color_comparison_1013K_R25"
+      ],
+      "missing_markers": [],
+      "pass": true
+    },
+    {
+      "case_id": "big_unit_route_visible_chunks",
+      "expected_markers": [
+        "data-1013l-r13-big-unit-hydrated=\"true\"",
+        "data-1013l-r13-big-unit-surface=\"true\"",
+        "第一单元《多变的色彩》",
+        "课标依据",
+        "核心素养",
+        "课时任务链",
+        "缺教材目录、单元页或课时安排"
+      ],
+      "missing_markers": [],
+      "pass": true
+    },
+    {
+      "case_id": "big_unit_hash_route_visible_chunks",
+      "expected_markers": [
+        "data-1013l-r13-state=\"big_unit_visible_hydration\"",
+        "材料与支架",
+        "评价证据"
+      ],
+      "missing_markers": [],
+      "pass": true
+    }
+  ],
+  "big_unit_visible_hydration_smoke_pass": true,
+  "boundary": {
+    "visible_hydration_apply_only": true,
+    "existing_page_reused": true,
+    "new_visible_page_created": false,
+    "new_shell_standard_created": false,
+    "runtime_connected": false,
+    "real_fetch_performed": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false,
+    "formal_frontend_binding_allowed": false
+  }
+}

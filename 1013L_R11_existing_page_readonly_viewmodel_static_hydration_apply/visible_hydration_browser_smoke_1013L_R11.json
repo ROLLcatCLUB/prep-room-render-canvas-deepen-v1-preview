@@ -1,0 +1,54 @@
+{
+  "smoke_id": "visible_hydration_browser_smoke_1013L_R11",
+  "stage": "1013L_R11_EXISTING_PAGE_READONLY_VIEWMODEL_STATIC_HYDRATION_APPLY",
+  "case_count": 3,
+  "cases": [
+    {
+      "case_id": "normal_prep_page_courseware_rail",
+      "expected_markers": [
+        "data-1013l-r11-hydrated=\"true\"",
+        "courseware_screen_seed_03_color_comparison_1013K_R25",
+        "哪一组颜色更安静"
+      ],
+      "missing_markers": [],
+      "pass": true
+    },
+    {
+      "case_id": "courseware_expanded_workspace",
+      "expected_markers": [
+        "data-1013l-r11-hydrated=\"true\"",
+        "courseware_screen_seed_03_color_comparison_1013K_R25",
+        "比较两组颜色"
+      ],
+      "missing_markers": [],
+      "pass": true
+    },
+    {
+      "case_id": "display_preview_overlay",
+      "expected_markers": [
+        "data-1013l-r11-display=\"true\"",
+        "courseware_screen_seed_03_color_comparison_1013K_R25",
+        "哪一组颜色更安静"
+      ],
+      "missing_markers": [],
+      "pass": true
+    }
+  ],
+  "visible_hydration_smoke_pass": true,
+  "boundary": {
+    "static_hydration_apply_only": true,
+    "existing_page_reused": true,
+    "new_visible_page_created": false,
+    "new_shell_standard_created": false,
+    "runtime_connected": false,
+    "real_fetch_performed": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false,
+    "formal_frontend_binding_allowed": false
+  }
+}
