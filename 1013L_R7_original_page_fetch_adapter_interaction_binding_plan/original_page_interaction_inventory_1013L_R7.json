@@ -1,0 +1,39 @@
+{
+  "inventory_id": "original_page_interaction_inventory_1013L_R7",
+  "stage": "1013L_R7_MAIN_SHELL_READONLY_FETCH_ADAPTER_TO_ORIGINAL_PAGE_INTERACTION_BINDING_PLAN",
+  "source_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R6_main_shell_original_ui_readonly_fetch_visible_smoke/prep_room_render_canvas_deepen_v1_1013L_R6_original_ui_fetch_visible_smoke.html",
+  "markers": {
+    "viewTabs": true,
+    "toolRail": true,
+    "ai_tool_strip": true,
+    "selectView_function": true,
+    "bindEvents_function": true,
+    "chatInput": true,
+    "coursewareExpanded_hash": true,
+    "display_preview_route": true,
+    "main_shell_fetch_adapter_metadata": true,
+    "r6_original_ui_smoke_metadata": true
+  },
+  "data_view_ids": [
+    "${html(view.id)}",
+    "prepNotebook",
+    "weekCalendar"
+  ],
+  "data_tool_ids": [
+    "${html(tool.id)}"
+  ],
+  "data_view_count": 3,
+  "data_tool_count": 1,
+  "boundary": {
+    "binding_plan_only": true,
+    "visible_dom_changed": false,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false
+  }
+}

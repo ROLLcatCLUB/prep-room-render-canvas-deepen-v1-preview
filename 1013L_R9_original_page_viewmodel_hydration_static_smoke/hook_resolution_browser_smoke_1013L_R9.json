@@ -1,0 +1,74 @@
+{
+  "smoke_id": "hook_resolution_browser_smoke_1013L_R9",
+  "stage": "1013L_R9_ORIGINAL_PAGE_VIEWMODEL_HYDRATION_STATIC_SMOKE",
+  "source_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R8_original_page_static_readonly_fetch_hook/prep_room_render_canvas_deepen_v1_1013L_R8_static_readonly_fetch_hook.html",
+  "smoke_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R9_original_page_viewmodel_hydration_static_smoke/prep_room_render_canvas_deepen_v1_1013L_R9_hook_smoke.html",
+  "browser": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "case_count": 5,
+  "cases": [
+    {
+      "case_id": "default_single_lesson",
+      "suffix": "?r9test=default",
+      "expected_state_id": "single_lesson_design",
+      "actual_state_id": "single_lesson_design",
+      "readonly_endpoint": "/api/prep-room/main-shell/viewmodel/state/single_lesson_design",
+      "active_capability": "single_lesson_prep",
+      "real_fetch_performed": false,
+      "pass": true
+    },
+    {
+      "case_id": "week_calendar",
+      "suffix": "?r9test=weekCalendar",
+      "expected_state_id": "week_calendar",
+      "actual_state_id": "week_calendar",
+      "readonly_endpoint": "/api/prep-room/main-shell/viewmodel/state/week_calendar",
+      "active_capability": "schedule_context",
+      "real_fetch_performed": false,
+      "pass": true
+    },
+    {
+      "case_id": "prep_notebook",
+      "suffix": "?r9test=prepNotebook",
+      "expected_state_id": "single_lesson_design",
+      "actual_state_id": "single_lesson_design",
+      "readonly_endpoint": "/api/prep-room/main-shell/viewmodel/state/single_lesson_design",
+      "active_capability": "single_lesson_prep",
+      "real_fetch_performed": false,
+      "pass": true
+    },
+    {
+      "case_id": "courseware_expanded",
+      "suffix": "?r9test=courseware#coursewareExpanded",
+      "expected_state_id": "courseware_workspace",
+      "actual_state_id": "courseware_workspace",
+      "readonly_endpoint": "/api/prep-room/main-shell/viewmodel/state/courseware_workspace",
+      "active_capability": "courseware_workspace",
+      "real_fetch_performed": false,
+      "pass": true
+    },
+    {
+      "case_id": "display_preview",
+      "suffix": "?r9test=display&preview=display&screen=03#coursewareExpanded",
+      "expected_state_id": "classroom_display_preview",
+      "actual_state_id": "classroom_display_preview",
+      "readonly_endpoint": "/api/prep-room/main-shell/viewmodel/state/classroom_display_preview",
+      "active_capability": "classroom_display_preview",
+      "real_fetch_performed": false,
+      "pass": true
+    }
+  ],
+  "hook_resolution_smoke_pass": true,
+  "boundary": {
+    "static_browser_smoke_only": true,
+    "visible_dom_changed": false,
+    "runtime_connected": false,
+    "real_fetch_performed": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false
+  }
+}

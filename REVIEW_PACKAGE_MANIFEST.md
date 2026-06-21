@@ -1,28 +1,33 @@
 # Review Package Manifest
 
-Current local milestone: `1013L_R6_MAIN_SHELL_ORIGINAL_UI_READONLY_FETCH_VISIBLE_SMOKE`
+Current milestone: `1013L_R10_EXISTING_PAGE_READONLY_VIEWMODEL_BINDING_MILESTONE_PACKAGE`
 
-## Key Files
+## Included Line
 
-- `1013J_R1M_courseware_classroom_display_preview_static/prep_room_render_canvas_deepen_v1_1013J_R1M_classroom_display_preview.html`
-- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/shiwei_main_render_shell_1013L_R5_fetch_adapter_static.html`
-- `1013L_R6_main_shell_original_ui_readonly_fetch_visible_smoke/prep_room_render_canvas_deepen_v1_1013L_R6_original_ui_fetch_visible_smoke.html`
-- `1013L_R6_main_shell_original_ui_readonly_fetch_visible_smoke/1013L_R6_result.json`
-- `1013L_R6_main_shell_original_ui_readonly_fetch_visible_smoke/1013L_R6_report.md`
-- `source_delta_1013L_R5/`
-- `source_delta_1013L_R6/`
-- `scripts/build_1013L_R5_main_shell_fetch_adapter.py`
-- `scripts/validate_1013L_R5_main_shell_fetch_adapter.py`
-- `scripts/build_1013L_R6_original_ui_fetch_visible_smoke.py`
-- `scripts/validate_1013L_R6_original_ui_fetch_visible_smoke.py`
-- `GPT_REVIEW_PROMPT_1013L_R6.md`
+- `1013L_R7_original_page_fetch_adapter_interaction_binding_plan/`
+- `1013L_R8_original_page_static_readonly_fetch_hook/`
+- `1013L_R9_original_page_viewmodel_hydration_static_smoke/`
+- `1013L_R10_existing_page_readonly_viewmodel_binding_milestone_package/`
+- `source_delta_1013L_R7/`
+- `source_delta_1013L_R8/`
+- `source_delta_1013L_R9/`
+- `source_delta_1013L_R10/`
+
+## Critical Files
+
+- `1013L_R10_existing_page_readonly_viewmodel_binding_milestone_package/1013L_R10_result.json`
+- `1013L_R10_existing_page_readonly_viewmodel_binding_milestone_package/1013L_R10_report.md`
+- `1013L_R10_existing_page_readonly_viewmodel_binding_milestone_package/milestone_file_index_1013L_R10.json`
+- `1013L_R9_original_page_viewmodel_hydration_static_smoke/hook_resolution_browser_smoke_1013L_R9.json`
+- `1013L_R8_original_page_static_readonly_fetch_hook/prep_room_render_canvas_deepen_v1_1013L_R8_static_readonly_fetch_hook.html`
 
 ## Boundary
 
+- `new_visible_page_created=false`
 - `new_shell_standard_created=false`
-- `simplified_shell_used_as_visible_shell=false`
 - `formal_frontend_binding_allowed=false`
 - `runtime_connected=false`
+- `real_fetch_performed=false`
 - `provider_called=false`
 - `model_called=false`
 - `database_written=false`
@@ -30,4 +35,3 @@ Current local milestone: `1013L_R6_MAIN_SHELL_ORIGINAL_UI_READONLY_FETCH_VISIBLE
 - `feishu_written=false`
 - `formal_apply_performed=false`
 - `main_project_pushed=false`
-- `github_uploaded=true`

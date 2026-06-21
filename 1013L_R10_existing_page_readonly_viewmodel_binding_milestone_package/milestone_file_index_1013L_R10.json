@@ -1,0 +1,96 @@
+{
+  "index_id": "milestone_file_index_1013L_R10",
+  "stage": "1013L_R10_EXISTING_PAGE_READONLY_VIEWMODEL_BINDING_MILESTONE_PACKAGE",
+  "file_count": 22,
+  "missing_files": [],
+  "files": [
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R7_original_page_fetch_adapter_interaction_binding_plan/1013L_R7_result.json",
+      "bytes": 1106
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R7_original_page_fetch_adapter_interaction_binding_plan/original_page_interaction_inventory_1013L_R7.json",
+      "bytes": 1271
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R7_original_page_fetch_adapter_interaction_binding_plan/original_ui_to_render_state_map_1013L_R7.json",
+      "bytes": 3638
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R7_original_page_fetch_adapter_interaction_binding_plan/main_shell_fetch_adapter_to_original_page_binding_plan_1013L_R7.json",
+      "bytes": 6183
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R7_original_page_fetch_adapter_interaction_binding_plan/1013L_R7_report.md",
+      "bytes": 396
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R8_original_page_static_readonly_fetch_hook/1013L_R8_result.json",
+      "bytes": 1291
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R8_original_page_static_readonly_fetch_hook/static_readonly_fetch_hook_contract_1013L_R8.json",
+      "bytes": 10768
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R8_original_page_static_readonly_fetch_hook/static_hook_state_resolution_fixture_1013L_R8.json",
+      "bytes": 1005
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R8_original_page_static_readonly_fetch_hook/prep_room_render_canvas_deepen_v1_1013L_R8_static_readonly_fetch_hook.html",
+      "bytes": 668311
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R8_original_page_static_readonly_fetch_hook/1013L_R8_report.md",
+      "bytes": 402
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R9_original_page_viewmodel_hydration_static_smoke/1013L_R9_result.json",
+      "bytes": 1202
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R9_original_page_viewmodel_hydration_static_smoke/hook_resolution_browser_smoke_1013L_R9.json",
+      "bytes": 3093
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R9_original_page_viewmodel_hydration_static_smoke/prep_room_render_canvas_deepen_v1_1013L_R9_hook_smoke.html",
+      "bytes": 669948
+    },
+    {
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R9_original_page_viewmodel_hydration_static_smoke/1013L_R9_report.md",
+      "bytes": 432
+    },
+    {
+      "path": "scripts/build_1013L_R7_original_page_interaction_binding_plan.py",
+      "bytes": 9885
+    },
+    {
+      "path": "scripts/validate_1013L_R7_original_page_interaction_binding_plan.py",
+      "bytes": 5074
+    },
+    {
+      "path": "scripts/build_1013L_R8_original_page_static_readonly_fetch_hook.py",
+      "bytes": 9186
+    },
+    {
+      "path": "scripts/validate_1013L_R8_original_page_static_readonly_fetch_hook.py",
+      "bytes": 5405
+    },
+    {
+      "path": "scripts/build_1013L_R9_original_page_viewmodel_hydration_static_smoke.py",
+      "bytes": 9033
+    },
+    {
+      "path": "scripts/validate_1013L_R9_original_page_viewmodel_hydration_static_smoke.py",
+      "bytes": 3978
+    },
+    {
+      "path": "scripts/build_1013L_R10_existing_page_readonly_viewmodel_binding_milestone_package.py",
+      "bytes": 10930
+    },
+    {
+      "path": "scripts/validate_1013L_R10_existing_page_readonly_viewmodel_binding_milestone_package.py",
+      "bytes": 3873
+    }
+  ]
+}

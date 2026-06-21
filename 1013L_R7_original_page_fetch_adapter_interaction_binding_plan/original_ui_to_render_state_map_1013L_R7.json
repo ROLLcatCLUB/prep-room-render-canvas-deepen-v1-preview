@@ -1,0 +1,80 @@
+{
+  "map_id": "original_ui_to_render_state_map_1013L_R7",
+  "stage": "1013L_R7_MAIN_SHELL_READONLY_FETCH_ADAPTER_TO_ORIGINAL_PAGE_INTERACTION_BINDING_PLAN",
+  "mapping_count": 7,
+  "mappings": [
+    {
+      "original_trigger": "initial model.active_view=weekCalendar",
+      "original_hook": "model.active_view",
+      "render_state_id": "week_calendar",
+      "readonly_fetch": "/api/prep-room/main-shell/viewmodel/state/week_calendar",
+      "binding_action": "hydrate schedule context into existing weekCalendar view without replacing UI",
+      "visible_ui_change_allowed": false
+    },
+    {
+      "original_trigger": "data-view=prepNotebook",
+      "original_hook": "selectView('prepNotebook')",
+      "render_state_id": "single_lesson_design",
+      "readonly_fetch": "/api/prep-room/main-shell/viewmodel/state/single_lesson_design",
+      "binding_action": "hydrate current lesson notebook context into existing prepNotebook view",
+      "visible_ui_change_allowed": false
+    },
+    {
+      "original_trigger": "prepNotebook active_big_unit_id or big-unit entry",
+      "original_hook": "existing big-unit entry inside prep notebook tree",
+      "render_state_id": "big_unit_design",
+      "readonly_fetch": "/api/prep-room/main-shell/viewmodel/state/big_unit_design",
+      "binding_action": "hydrate big-unit chunks into existing big-unit reading surface",
+      "visible_ui_change_allowed": false
+    },
+    {
+      "original_trigger": "data-courseware-expanded or #coursewareExpanded",
+      "original_hook": "courseware_workspace_expanded=true",
+      "render_state_id": "courseware_workspace",
+      "readonly_fetch": "/api/prep-room/main-shell/viewmodel/state/courseware_workspace",
+      "binding_action": "hydrate courseware screen outline into existing expanded courseware workspace",
+      "visible_ui_change_allowed": false
+    },
+    {
+      "original_trigger": "?preview=display",
+      "original_hook": "renderDisplayPreview1013JR1M()",
+      "render_state_id": "classroom_display_preview",
+      "readonly_fetch": "/api/prep-room/main-shell/viewmodel/state/classroom_display_preview",
+      "binding_action": "hydrate selected screen data into existing fullscreen display preview",
+      "visible_ui_change_allowed": false
+    },
+    {
+      "original_trigger": "chatUploadBtn / material chips / material status",
+      "original_hook": "chatUploadBtn and existing material placeholders",
+      "render_state_id": "material_intake",
+      "readonly_fetch": "/api/prep-room/main-shell/viewmodel/state/material_intake",
+      "binding_action": "show readonly material intake state until real upload gate is opened",
+      "visible_ui_change_allowed": false
+    },
+    {
+      "original_trigger": "bottom Agent composer",
+      "original_hook": "chatInput",
+      "render_state_id": "home_scene",
+      "readonly_fetch": "/api/prep-room/main-shell/viewmodel/state/home_scene",
+      "binding_action": "keep resident Agent input as shell-level context entry, not a route key",
+      "visible_ui_change_allowed": false
+    }
+  ],
+  "agent_routing": {
+    "canonical_agent_role": "unified_renameable_agent",
+    "routing_depends_on_display_name": false,
+    "routing_key_field": "active_capability"
+  },
+  "boundary": {
+    "binding_plan_only": true,
+    "visible_dom_changed": false,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false
+  }
+}

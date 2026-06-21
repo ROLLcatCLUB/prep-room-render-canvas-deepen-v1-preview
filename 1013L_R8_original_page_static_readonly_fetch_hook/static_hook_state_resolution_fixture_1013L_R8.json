@@ -1,0 +1,35 @@
+{
+  "fixture_id": "static_hook_state_resolution_fixture_1013L_R8",
+  "stage": "1013L_R8_ORIGINAL_PAGE_STATIC_READONLY_FETCH_HOOK",
+  "expected_resolutions": [
+    {
+      "url_hint": "default",
+      "expected_state_id": "week_calendar"
+    },
+    {
+      "url_hint": "#coursewareExpanded",
+      "expected_state_id": "courseware_workspace"
+    },
+    {
+      "url_hint": "?preview=display&screen=03#coursewareExpanded",
+      "expected_state_id": "classroom_display_preview"
+    },
+    {
+      "dom_hint": "active data-view=prepNotebook",
+      "expected_state_id": "single_lesson_design"
+    }
+  ],
+  "boundary": {
+    "static_hook_only": true,
+    "visible_dom_changed": false,
+    "runtime_connected": false,
+    "real_fetch_performed": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false
+  }
+}
