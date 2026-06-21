@@ -1,47 +1,16 @@
-# Latest Review Entry
+# README
 
-STAGE=1013K_M2_BIG_UNIT_RENDER_VIEWMODEL_BACKEND_MILESTONE_PACKAGE
-FINAL_STATUS=PASS_1013K_M2_BIG_UNIT_RENDER_VIEWMODEL_BACKEND_MILESTONE_PACKAGE
-NEXT_STAGE=1013K_R9_BIG_UNIT_READONLY_ENDPOINT_DRY_RUN_WITHOUT_ROUTE_REGISTRATION
-MILESTONE_PACKAGE_CREATED=true
-GITHUB_UPLOAD_READY=true
-GITHUB_UPLOADED=false
-PROVIDER_MODEL_CALL_ALLOWED=false
-FORMAL_APPLY_ALLOWED=false
-DATABASE_WRITE_ALLOWED=false
-MEMORY_WRITE_ALLOWED=false
+This package contains 1013K_M3 backend readonly route/client/renderer milestone evidence for GPT review.
 
-1013K_M2 archives the backend derivation line from curriculum-standard control to chunked big-unit render ViewModel and future readonly endpoint contract.
+Latest stage: 1013K_M3_READONLY_ROUTE_CLIENT_RENDERER_MILESTONE_PACKAGE
 
-Review chain:
+Important files:
 
-```text
-1013K_R0_CURRICULUM_STANDARD_DERIVATION_BACKEND_CONTRACT
--> 1013K_R1_CURRICULUM_DERIVATION_PROFILE_RUNTIME_DRY_RUN
--> 1013K_R2_CURRICULUM_PROFILE_TO_BIG_UNIT_CANDIDATE_ENVELOPE
--> 1013K_R3_BIG_UNIT_CANDIDATE_ENVELOPE_TO_STATIC_SECTION_PREVIEW
--> 1013K_R4_STATIC_SECTION_PREVIEW_TO_REVIEW_SURFACE_FIXTURE
--> 1013K_M1_CURRICULUM_TO_BIG_UNIT_REVIEW_MILESTONE_PACKAGE
--> 1013K_R5_BIG_UNIT_REVIEW_ACTION_STATE_DRY_RUN
--> 1013K_R6_BIG_UNIT_REVIEW_ACTION_STATE_TO_PREVIEW_SURFACE_FIXTURE
--> 1013K_R7_BIG_UNIT_PREVIEW_SURFACE_TO_RENDER_VIEWMODEL_CONTRACT
--> 1013K_R8_BIG_UNIT_RENDER_VIEWMODEL_READONLY_ENDPOINT_CONTRACT
--> 1013K_M2_BIG_UNIT_RENDER_VIEWMODEL_BACKEND_MILESTONE_PACKAGE
-```
+- GPT_REVIEW_PROMPT_1013K_M3.md
+- 1013K_M3_result.json
+- 1013K_M3_report.md
+- 1013K_R11_readonly_route_registration_static_apply_gated/1013K_R11_result.json
+- 1013K_R12_readonly_route_response_contract_and_client_fetch_fixture/client_fetch_fixture_1013K_R12.js
+- 1013K_R13_renderer_readonly_fetch_adapter_fixture/renderer_readonly_fetch_adapter_fixture_1013K_R13.js
 
-Key result:
-
-```text
-section_chunks_renderable_independently=true
-whole_document_blob_required=false
-route_registered=false
-runtime_connected=false
-provider_called=false
-model_called=false
-database_written=false
-memory_written=false
-feishu_written=false
-formal_apply_performed=false
-```
-
-This package is for GPT review. It does not push or modify the main project runtime.
+Boundary: review package only. The validators passed locally in xiaobei-core; this repository is for review evidence and raw-link audit.

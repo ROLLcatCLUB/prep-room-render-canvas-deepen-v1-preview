@@ -1,0 +1,54 @@
+{
+  "trace_id": "big_unit_readonly_endpoint_dry_run_trace_1013K_R9",
+  "stage": "1013K_R9_BIG_UNIT_READONLY_ENDPOINT_DRY_RUN_WITHOUT_ROUTE_REGISTRATION",
+  "event_count": 3,
+  "events": [
+    {
+      "event_id": "r9_event_01_r8_contract_loaded",
+      "event_type": "load_r8_endpoint_contract_and_response_fixture",
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r9_event_02_request_fixtures_created",
+      "event_type": "create_full_single_chunk_and_error_requests",
+      "request_count": 3,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r9_event_03_dry_run_responses_created",
+      "event_type": "handle_requests_in_function_without_route_registration",
+      "response_count": 3,
+      "side_effects_performed": false
+    }
+  ],
+  "side_effects_performed": false,
+  "readonly_endpoint_dry_run_only": true,
+  "route_registered": false,
+  "http_server_started": false,
+  "runtime_connected": false,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

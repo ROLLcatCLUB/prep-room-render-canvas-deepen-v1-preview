@@ -1,0 +1,25 @@
+{
+  "route_smoke_id": "readonly_route_registration_static_smoke_1013K_R11",
+  "stage": "1013K_R11_READONLY_ROUTE_REGISTRATION_STATIC_APPLY_GATED",
+  "flask_test_client_used": true,
+  "http_server_started": false,
+  "runtime_connected": false,
+  "target_route_registered_in_url_map": true,
+  "url_rule_count": 61,
+  "status_code": 200,
+  "response_ok": true,
+  "response_mode": "full_viewmodel_fixture",
+  "route_registered_in_response": true,
+  "readonly_route_registered_in_response": true,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "payload_sample": {
+    "viewmodel_id": "big_unit_render_viewmodel_fixture_1013K_R7",
+    "chunk_count": 10,
+    "route_stage": "1013K_R11_READONLY_ROUTE_REGISTRATION_STATIC_APPLY_GATED"
+  }
+}

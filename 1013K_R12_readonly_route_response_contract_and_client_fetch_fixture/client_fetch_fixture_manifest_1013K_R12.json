@@ -1,0 +1,9 @@
+{
+  "fixture_id": "client_fetch_fixture_manifest_1013K_R12",
+  "stage": "1013K_R12_READONLY_ROUTE_RESPONSE_CONTRACT_AND_CLIENT_FETCH_FIXTURE",
+  "fixture_file": "client_fetch_fixture_1013K_R12.js",
+  "mounted_into_frontend": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false
+}

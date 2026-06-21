@@ -1,0 +1,32 @@
+{
+  "registration_record_id": "readonly_route_registration_static_apply_1013K_R11",
+  "stage": "1013K_R11_READONLY_ROUTE_REGISTRATION_STATIC_APPLY_GATED",
+  "inherits_from": "1013K_R10_READONLY_ROUTE_REGISTRATION_REVIEW_GATE",
+  "r10_pass": true,
+  "route_module_created": true,
+  "routes_py_import_present": true,
+  "routes_py_register_present": true,
+  "route_path_present": true,
+  "proposed_flask_path": "/api/prep-room/big-unit-preview-viewmodel/<viewmodel_id>",
+  "methods": [
+    "GET",
+    "OPTIONS"
+  ],
+  "readonly_handler_source": "prep_room_big_unit_readonly_endpoint_dry_run_1013K_R9.handle_readonly_viewmodel_request",
+  "route_registered": true,
+  "routes_py_modified": true,
+  "http_server_started": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false
+}

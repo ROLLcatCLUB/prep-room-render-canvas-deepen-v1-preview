@@ -1,0 +1,44 @@
+{
+  "trace_id": "readonly_client_fetch_contract_trace_1013K_R12",
+  "stage": "1013K_R12_READONLY_ROUTE_RESPONSE_CONTRACT_AND_CLIENT_FETCH_FIXTURE",
+  "event_count": 3,
+  "events": [
+    {
+      "event_id": "r12_event_01_r11_route_contract_loaded",
+      "event_type": "load_r11_static_route_result",
+      "r11_pass": true,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r12_event_02_response_modes_defined",
+      "event_type": "define_full_single_chunk_and_error_fetch_modes",
+      "mode_count": 3,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r12_event_03_client_fetch_fixture_created",
+      "event_type": "create_standalone_client_fetch_fixture_js",
+      "frontend_page_modified": false,
+      "side_effects_performed": false
+    }
+  ],
+  "side_effects_performed": false,
+  "client_fetch_contract_only": true,
+  "frontend_page_modified": false,
+  "runtime_connected": false,
+  "http_server_started": false,
+  "preview_only": true,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true
+}

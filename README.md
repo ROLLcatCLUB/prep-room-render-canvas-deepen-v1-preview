@@ -1,7 +1,16 @@
-# Prep Room Review Package
+# README
 
-Latest stage: `1013J_R1M_COURSEWARE_CLASSROOM_DISPLAY_PREVIEW_STATIC`
+This package contains 1013K_M3 backend readonly route/client/renderer milestone evidence for GPT review.
 
-Production/editing surface: `1013J_R1M_courseware_classroom_display_preview_static/prep_room_render_canvas_deepen_v1_1013J_R1M_classroom_display_preview.html#coursewareExpanded`.
+Latest stage: 1013K_M3_READONLY_ROUTE_CLIENT_RENDERER_MILESTONE_PACKAGE
 
-Display preview: `1013J_R1M_courseware_classroom_display_preview_static/prep_room_render_canvas_deepen_v1_1013J_R1M_classroom_display_preview.html?preview=display&screen=03#coursewareExpanded`.
+Important files:
+
+- GPT_REVIEW_PROMPT_1013K_M3.md
+- 1013K_M3_result.json
+- 1013K_M3_report.md
+- 1013K_R11_readonly_route_registration_static_apply_gated/1013K_R11_result.json
+- 1013K_R12_readonly_route_response_contract_and_client_fetch_fixture/client_fetch_fixture_1013K_R12.js
+- 1013K_R13_renderer_readonly_fetch_adapter_fixture/renderer_readonly_fetch_adapter_fixture_1013K_R13.js
+
+Boundary: review package only. The validators passed locally in xiaobei-core; this repository is for review evidence and raw-link audit.

@@ -1,0 +1,42 @@
+{
+  "trace_id": "readonly_route_registration_static_apply_trace_1013K_R11",
+  "stage": "1013K_R11_READONLY_ROUTE_REGISTRATION_STATIC_APPLY_GATED",
+  "event_count": 4,
+  "events": [
+    {
+      "event_id": "r11_event_01_r10_gate_loaded",
+      "event_type": "load_r10_route_registration_review_gate",
+      "r10_pass": true,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r11_event_02_route_module_created",
+      "event_type": "create_readonly_route_module",
+      "route_module_created": true,
+      "side_effects_performed": true,
+      "side_effect_scope": "static_source_file_only"
+    },
+    {
+      "event_id": "r11_event_03_routes_py_static_registration_added",
+      "event_type": "add_import_and_register_lines_to_routes_py",
+      "routes_py_modified": true,
+      "side_effects_performed": true,
+      "side_effect_scope": "static_source_file_only"
+    },
+    {
+      "event_id": "r11_event_04_flask_test_client_smoke",
+      "event_type": "verify_route_with_flask_test_client_without_http_server",
+      "status_code": 200,
+      "http_server_started": false,
+      "side_effects_performed": false
+    }
+  ],
+  "static_source_files_modified": true,
+  "runtime_side_effects_performed": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false
+}

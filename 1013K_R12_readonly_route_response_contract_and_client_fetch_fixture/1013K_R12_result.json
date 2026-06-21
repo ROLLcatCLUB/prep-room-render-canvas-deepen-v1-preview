@@ -1,0 +1,89 @@
+{
+  "stage": "1013K_R12_READONLY_ROUTE_RESPONSE_CONTRACT_AND_CLIENT_FETCH_FIXTURE",
+  "generated_at": "2026-06-21T03:18:39+00:00",
+  "final_status": "PASS_1013K_R12_READONLY_ROUTE_RESPONSE_CONTRACT_AND_CLIENT_FETCH_FIXTURE",
+  "inherits_from": "1013K_R11_READONLY_ROUTE_REGISTRATION_STATIC_APPLY_GATED",
+  "next_stage": "1013K_R13_RENDERER_READONLY_FETCH_ADAPTER_FIXTURE",
+  "github_upload_deferred_until_next_milestone": true,
+  "r11_pass": true,
+  "backend_adapter_created": true,
+  "response_contract_created": true,
+  "client_fetch_fixture_created": true,
+  "client_fetch_fixture_manifest_created": true,
+  "fetch_trace_created": true,
+  "fetch_mode_count": 3,
+  "full_viewmodel_fetch_mode_present": true,
+  "single_chunk_fetch_mode_present": true,
+  "readonly_error_fetch_mode_present": true,
+  "chunked_rendering_supported": true,
+  "whole_document_blob_required": false,
+  "renderer_can_request_single_chunk": true,
+  "fixture_exports_fetch_function": true,
+  "fixture_uses_get": true,
+  "fixture_uses_chunk_id_param": true,
+  "fixture_not_mounted_into_frontend": true,
+  "trace_event_count": 3,
+  "trace_side_effects_performed": false,
+  "teacher_visible_deprecated_agent_hits": [],
+  "secret_scan_hits": [],
+  "response_contract_id": "readonly_route_response_contract_1013K_R12",
+  "route_public_template": "/api/prep-room/big-unit-preview-viewmodel/{viewmodel_id}",
+  "viewmodel_id": "big_unit_render_viewmodel_fixture_1013K_R7",
+  "first_chunk_id": "render_chunk_curriculum_basis_1013K_R3",
+  "supported_fetch_modes": [
+    {
+      "mode": "full_viewmodel",
+      "method": "GET",
+      "path": "/api/prep-room/big-unit-preview-viewmodel/{viewmodel_id}",
+      "required_response_fields": [
+        "ok",
+        "status",
+        "viewmodel",
+        "render_queue",
+        "chunk_count"
+      ]
+    },
+    {
+      "mode": "single_chunk",
+      "method": "GET",
+      "path": "/api/prep-room/big-unit-preview-viewmodel/{viewmodel_id}?chunk_id={chunk_id}",
+      "required_response_fields": [
+        "ok",
+        "status",
+        "chunk",
+        "chunked",
+        "can_update_independently"
+      ]
+    },
+    {
+      "mode": "readonly_error",
+      "method": "GET",
+      "path": "/api/prep-room/big-unit-preview-viewmodel/{viewmodel_id}?chunk_id={missing_chunk_id}",
+      "required_response_fields": [
+        "ok",
+        "status",
+        "error_code",
+        "teacher_visible_message"
+      ]
+    }
+  ],
+  "client_fetch_contract_only": true,
+  "frontend_page_modified": false,
+  "runtime_connected": false,
+  "http_server_started": false,
+  "preview_only": true,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "failed_checks": [],
+  "validator_pass": true
+}

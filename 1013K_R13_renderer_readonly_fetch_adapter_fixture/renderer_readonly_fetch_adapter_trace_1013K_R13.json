@@ -1,0 +1,44 @@
+{
+  "trace_id": "renderer_readonly_fetch_adapter_trace_1013K_R13",
+  "stage": "1013K_R13_RENDERER_READONLY_FETCH_ADAPTER_FIXTURE",
+  "event_count": 3,
+  "events": [
+    {
+      "event_id": "r13_event_01_r12_fetch_contract_loaded",
+      "event_type": "load_r12_fetch_contract",
+      "r12_pass": true,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r13_event_02_renderer_output_shape_defined",
+      "event_type": "define_renderer_render_state_output_shape",
+      "progressive_rendering_supported": true,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r13_event_03_adapter_fixture_created",
+      "event_type": "create_standalone_renderer_adapter_fixture_js",
+      "frontend_page_modified": false,
+      "side_effects_performed": false
+    }
+  ],
+  "side_effects_performed": false,
+  "renderer_fetch_adapter_fixture_only": true,
+  "frontend_page_modified": false,
+  "runtime_connected": false,
+  "http_server_started": false,
+  "preview_only": true,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true
+}

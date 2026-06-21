@@ -1,0 +1,67 @@
+{
+  "trace_id": "readonly_route_registration_trace_1013K_R10",
+  "stage": "1013K_R10_READONLY_ROUTE_REGISTRATION_REVIEW_GATE",
+  "event_count": 4,
+  "events": [
+    {
+      "event_id": "r10_event_01_r9_sources_loaded",
+      "event_type": "load_r9_endpoint_dry_run_sources",
+      "r9_pass": true,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r10_event_02_existing_routes_reviewed",
+      "event_type": "review_existing_xiaobei_ai_route_files_for_collision",
+      "reviewed_route_file_count": 9,
+      "route_collision_detected": false,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r10_event_03_future_mount_plan_created",
+      "event_type": "create_future_route_module_import_and_register_plan",
+      "future_route_module": "backend/xiaobei_ai/prep_room_big_unit_readonly_routes_1013K_R11.py",
+      "route_registration_performed": false,
+      "side_effects_performed": false
+    },
+    {
+      "event_id": "r10_event_04_gate_decision_recorded",
+      "event_type": "record_route_registration_review_gate_decision_without_applying",
+      "route_registration_gate_pass": true,
+      "next_stage": "1013K_R11_READONLY_ROUTE_REGISTRATION_STATIC_APPLY_GATED",
+      "side_effects_performed": false
+    }
+  ],
+  "side_effects_performed": false,
+  "route_registration_review_gate_only": true,
+  "route_registration_allowed_after_gate": true,
+  "route_registered": false,
+  "routes_py_modified": false,
+  "route_module_created": false,
+  "http_server_started": false,
+  "runtime_connected": false,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}

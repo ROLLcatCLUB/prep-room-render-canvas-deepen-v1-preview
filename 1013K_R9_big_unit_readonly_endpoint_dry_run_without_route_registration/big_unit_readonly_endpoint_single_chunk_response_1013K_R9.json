@@ -1,0 +1,98 @@
+{
+  "stage": "1013K_R9_BIG_UNIT_READONLY_ENDPOINT_DRY_RUN_WITHOUT_ROUTE_REGISTRATION",
+  "request_id": "r9_request_single_chunk",
+  "method": "GET",
+  "viewmodel_id": "big_unit_render_viewmodel_fixture_1013K_R7",
+  "route_registered": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep",
+  "ok": true,
+  "status": 200,
+  "response_mode": "single_chunk_fixture",
+  "chunked": true,
+  "chunk": {
+    "chunk_id": "render_chunk_curriculum_basis_1013K_R3",
+    "source_preview_section_id": "preview_surface_section_curriculum_basis_1013K_R3",
+    "source_review_section_id": "review_section_curriculum_basis_1013K_R3",
+    "order": 1,
+    "teacher_label": "课标依据",
+    "render_as": "reading_section",
+    "title_number": "01",
+    "summary": "本单元先按艺术课程方向生成预览：通过观察、比较、尝试和表达，让学生理解色彩组合会改变画面感觉，并尝试用色彩表达一种较明确的情绪或氛围。",
+    "paragraphs": [
+      "本单元先按艺术课程方向生成预览：通过观察、比较、尝试和表达，让学生理解色彩组合会改变画面感觉，并尝试用色彩表达一种较明确的情绪或氛围。",
+      "具体课标来源和教材锚点仍需教师补充或确认；确认前，这一段只作为大单元预览内容。"
+    ],
+    "status_badges": [
+      "已进入预览",
+      "教师确认前不生效"
+    ],
+    "side_note_ref": "side_note_curriculum_basis_1013K_R3",
+    "actions": [
+      {
+        "action": "revert",
+        "teacher_label": "撤回预览",
+        "allowed_now": true,
+        "preview_only": true,
+        "formal_apply_performed": false
+      },
+      {
+        "action": "revise",
+        "teacher_label": "再改一版",
+        "allowed_now": true,
+        "preview_only": true,
+        "formal_apply_performed": false
+      },
+      {
+        "action": "reject",
+        "teacher_label": "暂不采用",
+        "allowed_now": true,
+        "preview_only": true,
+        "formal_apply_performed": false
+      }
+    ],
+    "render_state": "visible",
+    "accepted_to_preview": true,
+    "writes_unit_package": false,
+    "writes_lesson_body": false,
+    "formal_apply_performed": false
+  },
+  "whole_document_blob_required": false,
+  "can_update_independently": true,
+  "boundary": {
+    "readonly_endpoint_dry_run_only": true,
+    "route_registered": false,
+    "http_server_started": false,
+    "runtime_connected": false,
+    "preview_only": true,
+    "teacher_review_required": true,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "unit_package_written": false,
+    "lesson_body_modified": false,
+    "html_body_modified": false,
+    "runtime_schema_applied": false,
+    "official_curriculum_claim_created": false,
+    "main_project_pushed": false,
+    "github_upload_deferred_until_next_milestone": true
+  }
+}

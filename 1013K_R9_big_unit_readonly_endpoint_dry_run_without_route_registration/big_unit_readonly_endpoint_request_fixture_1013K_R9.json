@@ -1,0 +1,65 @@
+{
+  "request_fixture_id": "big_unit_readonly_endpoint_request_fixture_1013K_R9",
+  "stage": "1013K_R9_BIG_UNIT_READONLY_ENDPOINT_DRY_RUN_WITHOUT_ROUTE_REGISTRATION",
+  "requests": [
+    {
+      "request_id": "r9_request_full_viewmodel",
+      "method": "GET",
+      "viewmodel_id": "big_unit_render_viewmodel_fixture_1013K_R7",
+      "query": {
+        "mode": "preview"
+      },
+      "expected_response_mode": "full_viewmodel_fixture"
+    },
+    {
+      "request_id": "r9_request_single_chunk",
+      "method": "GET",
+      "viewmodel_id": "big_unit_render_viewmodel_fixture_1013K_R7",
+      "query": {
+        "mode": "preview",
+        "chunk_id": "render_chunk_curriculum_basis_1013K_R3"
+      },
+      "expected_response_mode": "single_chunk_fixture"
+    },
+    {
+      "request_id": "r9_request_missing_chunk",
+      "method": "GET",
+      "viewmodel_id": "big_unit_render_viewmodel_fixture_1013K_R7",
+      "query": {
+        "mode": "preview",
+        "chunk_id": "missing_chunk_for_error_fixture"
+      },
+      "expected_response_mode": "readonly_error_fixture"
+    }
+  ],
+  "request_count": 3,
+  "readonly_endpoint_dry_run_only": true,
+  "route_registered": false,
+  "http_server_started": false,
+  "runtime_connected": false,
+  "preview_only": true,
+  "teacher_review_required": true,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true,
+  "agent_role": "unified_teacher_agent",
+  "assistant_profile": {
+    "display_name": "小教",
+    "display_name_customizable": true,
+    "wake_name": "小教",
+    "voice_profile_id": null,
+    "tts_enabled": false
+  },
+  "active_space": "prep_room",
+  "active_capability": "lesson_prep"
+}
