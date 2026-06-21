@@ -1,0 +1,74 @@
+{
+  "stage": "1013M_R1_R3_ART_DEMONSTRATION_BACKEND_BINDING_PACKAGE",
+  "normalization_id": "art_demonstration_normalized_output_1013M_R3",
+  "source_candidate_id": "art_demo_static_candidate_1013M_R3",
+  "process_step_insert": {
+    "id": "demo",
+    "name": "示范与支架",
+    "time": "8分钟",
+    "summary": "教师用三步口令、技法示范、错例辨析和同龄作品支架，帮助学生在创作前知道怎样用颜色表达感觉。",
+    "tags": [
+      "技法示范",
+      "三步口令",
+      "同龄作品"
+    ],
+    "intent": {
+      "role": "帮助学生在创作前知道怎样用一组颜色表达感觉，而不是随意把颜色铺满。",
+      "design": "把学生动手前最容易卡住的工具、技法、步骤和视觉标准讲清楚。",
+      "transition": "承接探究中的色彩感受分类和理由表达。 进入个人色彩小练习或作品表现。",
+      "student": "学生知道颜色可以表达感觉，但还不知道从哪里开始，也容易照着老师画。",
+      "teacher": "用色卡或小稿演示：先定主色，再找伙伴，最后一点亮；再展示错例和同龄作品。",
+      "activity": "跟读三步口令，选择自己的主色和伙伴色，说出动手前检查。",
+      "screen": "大屏显示示范步骤、三步口令、错例对比、同龄作品和动手前检查。",
+      "material": "色卡、示范小稿、错例、同龄作品、学习单。",
+      "evidence": "学生能说明选色理由，作品有自己的表达而不是照抄范画。",
+      "risk": "若学生照抄范画，提醒只借鉴方法；困难学生可借鉴局部，但需改成自己的画面。"
+    }
+  },
+  "field_patch_candidate": {
+    "field_patch_id": "field_patch_art_demo_step_1013M_R3",
+    "target_section": "teaching_process",
+    "target_step_id": "demo",
+    "target_field": "process_steps",
+    "patch_type": "insert_step",
+    "before_summary": "教学过程从探究直接进入表现，学生动手前缺少示范、技法和视觉标准支架。",
+    "after_candidate": "在探究与表现之间加入“示范与支架”。",
+    "reasoning_basis": [
+      "小学美术创作前需要教师示范工具和技法。",
+      "三步口令能帮助学生记住绘画过程。",
+      "同龄作品能打开思路，但必须避免照抄。"
+    ],
+    "impact_scope": [
+      "big_screen",
+      "handout",
+      "rubric",
+      "student_activity"
+    ],
+    "teacher_review_required": true,
+    "formal_apply_performed": false
+  },
+  "assessment_link": {
+    "assessment_focus": "方法迁移与原创表达",
+    "observable_evidence": [
+      "作品能否看出一种主要感觉",
+      "学生能否说明自己的选色理由",
+      "作品是否有自己的想法，而不是照抄范画"
+    ],
+    "copy_boundary": "可以学习别人怎样配色、怎样留白、怎样点亮，但不能把老师范画或同学作品照着画成自己的作品。"
+  },
+  "backend_binding_package_only": true,
+  "request_envelope_only": true,
+  "prompt_binding_only": true,
+  "normalization_fixture_only": true,
+  "courseware_seed_fixture_only": true,
+  "preview_only": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "main_project_pushed": false
+}

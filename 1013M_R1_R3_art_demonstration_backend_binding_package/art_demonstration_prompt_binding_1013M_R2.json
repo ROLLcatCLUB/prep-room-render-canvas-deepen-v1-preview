@@ -1,0 +1,61 @@
+{
+  "stage": "1013M_R1_R3_ART_DEMONSTRATION_BACKEND_BINDING_PACKAGE",
+  "prompt_binding_id": "art_demonstration_prompt_binding_1013M_R2",
+  "source_envelope_id": "art_demonstration_request_envelope_1013M_R1",
+  "system_prompt_patch": "你是师维备课室的小教，负责小学美术课时设计协作。当课程包含绘画、设计、制作或视觉表现任务时，必须生成“示范与支架”环节。示范不是让学生照抄范画，而是帮助学生看清方法、步骤、工具技法和视觉标准。",
+  "user_prompt_patch": {
+    "lesson_title": "1-2《色彩的感觉》",
+    "teacher_task": "请为本课生成 art_demonstration_and_visual_scaffold 候选。",
+    "must_include_teacher_visible_parts": [
+      "示范目的",
+      "观察看点",
+      "工具与技法",
+      "绘画步骤",
+      "三步口令",
+      "常见问题与修正",
+      "同龄作品支架",
+      "不照抄提醒",
+      "动手前检查",
+      "评价关联"
+    ],
+    "must_not_write": [
+      "不要只写“教师示范”。",
+      "不要让学生照抄老师范画。",
+      "不要把工程字段名放进教师主阅读区。",
+      "不要生成正式教案正文。"
+    ],
+    "style": [
+      "短句，教师能直接放进教学过程。",
+      "包含可记忆的三步口令。",
+      "明确错例和修正方法。",
+      "同龄作品用于打开思路，不用于临摹。"
+    ]
+  },
+  "expected_output_shape": {
+    "process_step": "demo",
+    "field_patch_candidate": "teaching_process/demo",
+    "courseware_screen_seeds": [
+      "teacher_demo_screen",
+      "step_mantra_screen",
+      "mistake_comparison_screen",
+      "peer_example_screen",
+      "pre_creation_check_screen"
+    ],
+    "assessment_link": "original_expression_and_method_use"
+  },
+  "backend_binding_package_only": true,
+  "request_envelope_only": true,
+  "prompt_binding_only": true,
+  "normalization_fixture_only": true,
+  "courseware_seed_fixture_only": true,
+  "preview_only": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "main_project_pushed": false
+}

@@ -1,0 +1,60 @@
+{
+  "stage": "1013M_R0_ART_DEMONSTRATION_AND_VISUAL_SCAFFOLD_CONTRACT",
+  "final_status": "PASS_1013M_R0_ART_DEMONSTRATION_AND_VISUAL_SCAFFOLD_CONTRACT",
+  "created_at": "2026-06-22",
+  "base_page": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R36_existing_page_static_patch_consolidation/prep_room_render_canvas_deepen_v1_1013L_R36_consolidated.html",
+  "copied_page": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013M_R0_art_demonstration_and_visual_scaffold_contract/prep_room_render_canvas_deepen_v1_1013M_R0_art_demo_visual_scaffold.html",
+  "r36_baseline_overwritten": false,
+  "new_disconnected_page_created": false,
+  "contract_created": true,
+  "schema_created": true,
+  "prompt_policy_created": true,
+  "courseware_mapping_created": true,
+  "sample_fixture_created": true,
+  "page_embedding_created": true,
+  "inserted_step_id": "demo",
+  "inserted_step_name": "示范与支架",
+  "inserted_between_steps": [
+    "explore",
+    "make"
+  ],
+  "demonstration_required_fields": [
+    "demo_purpose",
+    "visual_attention_points",
+    "tools_and_techniques",
+    "drawing_process_steps",
+    "memory_phrase",
+    "common_mistakes_and_repairs",
+    "peer_example_scaffold",
+    "anti_copy_guidance",
+    "pre_creation_check",
+    "assessment_link"
+  ],
+  "page_teacher_visible_micro_titles": [
+    "明确看点",
+    "示范技法",
+    "记住口令",
+    "辨析错例",
+    "借鉴不照抄"
+  ],
+  "courseware_targets_defined": [
+    "teacher_demo_screen",
+    "step_mantra_screen",
+    "mistake_comparison_screen",
+    "peer_example_screen",
+    "pre_creation_check_screen"
+  ],
+  "preview_only": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "main_project_pushed": false,
+  "github_uploaded": false,
+  "validator_pass": true,
+  "failed_checks": [],
+  "next_recommended_stage": "1013M_R1_ART_DEMONSTRATION_FIELD_TO_GENERATION_REQUEST_ENVELOPE"
+}

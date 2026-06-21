@@ -1,0 +1,509 @@
+{
+  "stage": "1013M_R1_R3_ART_DEMONSTRATION_BACKEND_BINDING_PACKAGE",
+  "package_id": "1013M_R1_R3_ART_DEMONSTRATION_BACKEND_BINDING_PACKAGE",
+  "request_envelope": {
+    "stage": "1013M_R1_R3_ART_DEMONSTRATION_BACKEND_BINDING_PACKAGE",
+    "envelope_id": "art_demonstration_request_envelope_1013M_R1",
+    "case": {
+      "case_id": "color_feeling_art_demo_binding_1013M_R1_R3",
+      "grade": "三年级",
+      "subject": "美术",
+      "unit": "第一单元 · 多变的色彩",
+      "lesson_title": "1-2《色彩的感觉》",
+      "lesson_design_mode": "standard_daily",
+      "teacher_input": "学生需要在创作前知道怎么用颜色表达感觉，不要照抄老师范画。",
+      "performance_task": "用一组颜色表达一种明确感觉，并能说出选色理由。",
+      "duration_minutes": 40,
+      "resource_constraints": [
+        "可使用图片、色卡、黑板、学习单",
+        "不接真实资料库"
+      ]
+    },
+    "art_demonstration_and_visual_scaffold_required": true,
+    "requirement_reason": "本课包含美术创作或视觉表现任务，需要在学生动手前生成示范与支架。",
+    "matched_keywords": [
+      "美术",
+      "画",
+      "创作",
+      "色彩"
+    ],
+    "insert_position_policy": {
+      "insert_after_step_id": "explore",
+      "insert_before_step_id": "make",
+      "insert_step_id": "demo",
+      "insert_step_name": "示范与支架",
+      "fallback_if_no_explore_step": "insert_before_student_creation"
+    },
+    "required_fields": [
+      {
+        "field_key": "demo_purpose",
+        "teacher_label": "示范目的",
+        "required": true,
+        "description": "这次示范要解决学生动手前的哪一个困难。"
+      },
+      {
+        "field_key": "visual_attention_points",
+        "teacher_label": "观察看点",
+        "required": true,
+        "description": "学生看示范时要注意什么。"
+      },
+      {
+        "field_key": "tools_and_techniques",
+        "teacher_label": "工具与技法",
+        "required": true,
+        "description": "本课需要教师示范的工具使用、材料控制、绘画手法或制作方法。"
+      },
+      {
+        "field_key": "drawing_process_steps",
+        "teacher_label": "绘画步骤",
+        "required": true,
+        "description": "学生开始创作前需要记住的操作顺序。"
+      },
+      {
+        "field_key": "memory_phrase",
+        "teacher_label": "三步口令",
+        "required": true,
+        "description": "朗朗上口、便于学生记住的过程口令。"
+      },
+      {
+        "field_key": "common_mistakes_and_repairs",
+        "teacher_label": "常见问题与修正",
+        "required": true,
+        "description": "学生最容易出现的画面问题，以及教师如何示范修正。"
+      },
+      {
+        "field_key": "peer_example_scaffold",
+        "teacher_label": "同龄作品支架",
+        "required": true,
+        "description": "用同龄作品帮助学生建立视觉标准、打开思路。"
+      },
+      {
+        "field_key": "anti_copy_guidance",
+        "teacher_label": "不照抄提醒",
+        "required": true,
+        "description": "明确学生可以借鉴方法，但不能照抄教师范画或同伴作品。"
+      },
+      {
+        "field_key": "pre_creation_check",
+        "teacher_label": "动手前检查",
+        "required": true,
+        "description": "学生开始前要确认的短句或清单。"
+      },
+      {
+        "field_key": "assessment_link",
+        "teacher_label": "评价关联",
+        "required": true,
+        "description": "示范环节如何连接作品评价和原创表达。"
+      }
+    ],
+    "allowed_step_id_extension": {
+      "base_step_ids": [
+        "intro",
+        "sense",
+        "explore",
+        "make",
+        "share"
+      ],
+      "new_candidate_step_id": "demo",
+      "runtime_contract_patch_applied": false,
+      "reason": "本阶段只生成 request envelope，不直接修改 1013E runtime ALLOWED_IDS。"
+    },
+    "source_contract": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013M_R0_art_demonstration_and_visual_scaffold_contract\\art_demonstration_visual_scaffold_schema_1013M_R0.json",
+    "backend_binding_package_only": true,
+    "request_envelope_only": true,
+    "prompt_binding_only": true,
+    "normalization_fixture_only": true,
+    "courseware_seed_fixture_only": true,
+    "preview_only": true,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false,
+    "main_project_pushed": false
+  },
+  "prompt_binding": {
+    "stage": "1013M_R1_R3_ART_DEMONSTRATION_BACKEND_BINDING_PACKAGE",
+    "prompt_binding_id": "art_demonstration_prompt_binding_1013M_R2",
+    "source_envelope_id": "art_demonstration_request_envelope_1013M_R1",
+    "system_prompt_patch": "你是师维备课室的小教，负责小学美术课时设计协作。当课程包含绘画、设计、制作或视觉表现任务时，必须生成“示范与支架”环节。示范不是让学生照抄范画，而是帮助学生看清方法、步骤、工具技法和视觉标准。",
+    "user_prompt_patch": {
+      "lesson_title": "1-2《色彩的感觉》",
+      "teacher_task": "请为本课生成 art_demonstration_and_visual_scaffold 候选。",
+      "must_include_teacher_visible_parts": [
+        "示范目的",
+        "观察看点",
+        "工具与技法",
+        "绘画步骤",
+        "三步口令",
+        "常见问题与修正",
+        "同龄作品支架",
+        "不照抄提醒",
+        "动手前检查",
+        "评价关联"
+      ],
+      "must_not_write": [
+        "不要只写“教师示范”。",
+        "不要让学生照抄老师范画。",
+        "不要把工程字段名放进教师主阅读区。",
+        "不要生成正式教案正文。"
+      ],
+      "style": [
+        "短句，教师能直接放进教学过程。",
+        "包含可记忆的三步口令。",
+        "明确错例和修正方法。",
+        "同龄作品用于打开思路，不用于临摹。"
+      ]
+    },
+    "expected_output_shape": {
+      "process_step": "demo",
+      "field_patch_candidate": "teaching_process/demo",
+      "courseware_screen_seeds": [
+        "teacher_demo_screen",
+        "step_mantra_screen",
+        "mistake_comparison_screen",
+        "peer_example_screen",
+        "pre_creation_check_screen"
+      ],
+      "assessment_link": "original_expression_and_method_use"
+    },
+    "backend_binding_package_only": true,
+    "request_envelope_only": true,
+    "prompt_binding_only": true,
+    "normalization_fixture_only": true,
+    "courseware_seed_fixture_only": true,
+    "preview_only": true,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false,
+    "main_project_pushed": false
+  },
+  "static_generation_candidate": {
+    "candidate_id": "art_demo_static_candidate_1013M_R3",
+    "source": "sample_fixture_color_contrast_harmony_1013M_R0.json",
+    "candidate_only": true,
+    "process_step": {
+      "step_id": "demo",
+      "step_name": "示范与支架",
+      "duration": "8分钟",
+      "step_role": "帮助学生在创作前知道怎样用一组颜色表达感觉，而不是随意把颜色铺满。",
+      "design_intent": "把学生动手前最容易卡住的工具、技法、步骤和视觉标准讲清楚。",
+      "student_state_before": "学生知道颜色可以表达感觉，但还不知道从哪里开始，也容易照着老师画。",
+      "student_state_after": "学生能说出自己的主色、伙伴色、点亮位置和不照抄的创作打算。",
+      "teacher_action": "用色卡或小稿演示：先定主色，再找伙伴，最后一点亮；再展示错例和同龄作品。",
+      "student_action": "跟读三步口令，选择自己的主色和伙伴色，说出动手前检查。",
+      "big_screen_state": "大屏显示示范步骤、三步口令、错例对比、同龄作品和动手前检查。",
+      "learning_sheet_state": "学习单增加主色、伙伴色、点亮位置和我想表达的感觉。",
+      "assessment_evidence": "学生能说明选色理由，作品有自己的表达而不是照抄范画。",
+      "transition_from_previous": "承接探究中的色彩感受分类和理由表达。",
+      "transition_to_next": "进入个人色彩小练习或作品表现。",
+      "risk_and_adjustment": "若学生照抄范画，提醒只借鉴方法；困难学生可借鉴局部，但需改成自己的画面。"
+    },
+    "demonstration_block": {
+      "demo_purpose": "帮助学生在创作前知道怎样用一组颜色表达感觉，而不是随意把颜色铺满。",
+      "visual_attention_points": [
+        "哪一种颜色最能表达主要感觉",
+        "哪些颜色可以互相陪衬",
+        "哪里需要少量对比色来点亮"
+      ],
+      "tools_and_techniques": [
+        "用色卡先试主色和伙伴色",
+        "用小面积对比色强调重点",
+        "避免每一处都用强烈颜色"
+      ],
+      "drawing_process_steps": [
+        "先定主色",
+        "再找伙伴",
+        "最后一点亮"
+      ],
+      "memory_phrase": "先定主色，再找伙伴，最后一点亮。",
+      "common_mistakes_and_repairs": [
+        {
+          "mistake": "颜色太多，画面没有重点。",
+          "repair": "删掉一两种抢眼颜色，只保留一个点亮位置。"
+        },
+        {
+          "mistake": "全部颜色都一样重，感觉不明确。",
+          "repair": "让主色占大一些，伙伴色轻一些。"
+        }
+      ],
+      "peer_example_scaffold": [
+        "看同龄作品中主色占画面多数的例子",
+        "看同龄作品中只用一点对比色点亮的例子",
+        "讨论可以学习配色方法，但不能照抄画面"
+      ],
+      "anti_copy_guidance": "可以学习别人怎样配色、怎样留白、怎样点亮，但不能把老师范画或同学作品照着画成自己的作品。",
+      "pre_creation_check": [
+        "我想表达什么感觉？",
+        "我的主色是什么？",
+        "伙伴色在哪里？",
+        "我只点亮一个关键地方了吗？"
+      ],
+      "assessment_link": [
+        "作品能否看出一种主要感觉",
+        "学生能否说明自己的选色理由",
+        "作品是否有自己的想法，而不是照抄范画"
+      ]
+    },
+    "backend_binding_package_only": true,
+    "request_envelope_only": true,
+    "prompt_binding_only": true,
+    "normalization_fixture_only": true,
+    "courseware_seed_fixture_only": true,
+    "preview_only": true,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false,
+    "main_project_pushed": false
+  },
+  "normalized_output": {
+    "stage": "1013M_R1_R3_ART_DEMONSTRATION_BACKEND_BINDING_PACKAGE",
+    "normalization_id": "art_demonstration_normalized_output_1013M_R3",
+    "source_candidate_id": "art_demo_static_candidate_1013M_R3",
+    "process_step_insert": {
+      "id": "demo",
+      "name": "示范与支架",
+      "time": "8分钟",
+      "summary": "教师用三步口令、技法示范、错例辨析和同龄作品支架，帮助学生在创作前知道怎样用颜色表达感觉。",
+      "tags": [
+        "技法示范",
+        "三步口令",
+        "同龄作品"
+      ],
+      "intent": {
+        "role": "帮助学生在创作前知道怎样用一组颜色表达感觉，而不是随意把颜色铺满。",
+        "design": "把学生动手前最容易卡住的工具、技法、步骤和视觉标准讲清楚。",
+        "transition": "承接探究中的色彩感受分类和理由表达。 进入个人色彩小练习或作品表现。",
+        "student": "学生知道颜色可以表达感觉，但还不知道从哪里开始，也容易照着老师画。",
+        "teacher": "用色卡或小稿演示：先定主色，再找伙伴，最后一点亮；再展示错例和同龄作品。",
+        "activity": "跟读三步口令，选择自己的主色和伙伴色，说出动手前检查。",
+        "screen": "大屏显示示范步骤、三步口令、错例对比、同龄作品和动手前检查。",
+        "material": "色卡、示范小稿、错例、同龄作品、学习单。",
+        "evidence": "学生能说明选色理由，作品有自己的表达而不是照抄范画。",
+        "risk": "若学生照抄范画，提醒只借鉴方法；困难学生可借鉴局部，但需改成自己的画面。"
+      }
+    },
+    "field_patch_candidate": {
+      "field_patch_id": "field_patch_art_demo_step_1013M_R3",
+      "target_section": "teaching_process",
+      "target_step_id": "demo",
+      "target_field": "process_steps",
+      "patch_type": "insert_step",
+      "before_summary": "教学过程从探究直接进入表现，学生动手前缺少示范、技法和视觉标准支架。",
+      "after_candidate": "在探究与表现之间加入“示范与支架”。",
+      "reasoning_basis": [
+        "小学美术创作前需要教师示范工具和技法。",
+        "三步口令能帮助学生记住绘画过程。",
+        "同龄作品能打开思路，但必须避免照抄。"
+      ],
+      "impact_scope": [
+        "big_screen",
+        "handout",
+        "rubric",
+        "student_activity"
+      ],
+      "teacher_review_required": true,
+      "formal_apply_performed": false
+    },
+    "assessment_link": {
+      "assessment_focus": "方法迁移与原创表达",
+      "observable_evidence": [
+        "作品能否看出一种主要感觉",
+        "学生能否说明自己的选色理由",
+        "作品是否有自己的想法，而不是照抄范画"
+      ],
+      "copy_boundary": "可以学习别人怎样配色、怎样留白、怎样点亮，但不能把老师范画或同学作品照着画成自己的作品。"
+    },
+    "backend_binding_package_only": true,
+    "request_envelope_only": true,
+    "prompt_binding_only": true,
+    "normalization_fixture_only": true,
+    "courseware_seed_fixture_only": true,
+    "preview_only": true,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false,
+    "main_project_pushed": false
+  },
+  "courseware_screen_seed_bundle": {
+    "stage": "1013M_R1_R3_ART_DEMONSTRATION_BACKEND_BINDING_PACKAGE",
+    "seed_bundle_id": "art_demonstration_courseware_screen_seeds_1013M_R3",
+    "source_normalization_id": "art_demonstration_normalized_output_1013M_R3",
+    "screen_seed_count": 5,
+    "screen_seeds": [
+      {
+        "screen_id": "art_demo_screen_seed_01_teacher_demo_1013M_R3",
+        "screen_order": 1,
+        "screen_title": "老师示范",
+        "screen_type": "teacher_demo_screen",
+        "source_lesson_section_refs": [
+          "teaching_process",
+          "demo"
+        ],
+        "teacher_visible_purpose": "怎样让颜色有主要感觉",
+        "visual_priority": "image_or_demo_primary_text_light",
+        "material_slots": [
+          {
+            "slot_id": "slot_teacher_demo_1",
+            "slot_label": "示范小稿",
+            "expected_count": 1,
+            "status": "pending_material"
+          },
+          {
+            "slot_id": "slot_teacher_demo_2",
+            "slot_label": "色卡",
+            "expected_count": 1,
+            "status": "pending_material"
+          }
+        ],
+        "classroom_prompt": "怎样让颜色有主要感觉",
+        "interaction_hint": "先看老师怎样选主色。",
+        "status": "pending_material",
+        "preview_only": true
+      },
+      {
+        "screen_id": "art_demo_screen_seed_02_step_mantra_1013M_R3",
+        "screen_order": 2,
+        "screen_title": "三步口令",
+        "screen_type": "step_mantra_screen",
+        "source_lesson_section_refs": [
+          "teaching_process",
+          "demo"
+        ],
+        "teacher_visible_purpose": "先定主色，再找伙伴，最后一点亮",
+        "visual_priority": "image_or_demo_primary_text_light",
+        "material_slots": [],
+        "classroom_prompt": "先定主色，再找伙伴，最后一点亮",
+        "interaction_hint": "跟着口令说一遍。",
+        "status": "ready_as_text_screen",
+        "preview_only": true
+      },
+      {
+        "screen_id": "art_demo_screen_seed_03_mistake_compare_1013M_R3",
+        "screen_order": 3,
+        "screen_title": "哪里容易乱",
+        "screen_type": "mistake_comparison_screen",
+        "source_lesson_section_refs": [
+          "teaching_process",
+          "demo"
+        ],
+        "teacher_visible_purpose": "颜色太多时，画面会失去重点",
+        "visual_priority": "image_or_demo_primary_text_light",
+        "material_slots": [
+          {
+            "slot_id": "slot_mistake_compare_1",
+            "slot_label": "错例小稿",
+            "expected_count": 1,
+            "status": "pending_material"
+          }
+        ],
+        "classroom_prompt": "颜色太多时，画面会失去重点",
+        "interaction_hint": "如果只留一个点亮位置，会不会更清楚？",
+        "status": "pending_material",
+        "preview_only": true
+      },
+      {
+        "screen_id": "art_demo_screen_seed_04_peer_examples_1013M_R3",
+        "screen_order": 4,
+        "screen_title": "同龄作品",
+        "screen_type": "peer_example_screen",
+        "source_lesson_section_refs": [
+          "teaching_process",
+          "demo"
+        ],
+        "teacher_visible_purpose": "学方法，不照抄",
+        "visual_priority": "image_or_demo_primary_text_light",
+        "material_slots": [
+          {
+            "slot_id": "slot_peer_examples_1",
+            "slot_label": "同龄作品 2-3 张",
+            "expected_count": 1,
+            "status": "pending_material"
+          }
+        ],
+        "classroom_prompt": "学方法，不照抄",
+        "interaction_hint": "你想学习哪一种配色方法？",
+        "status": "pending_material",
+        "preview_only": true
+      },
+      {
+        "screen_id": "art_demo_screen_seed_05_pre_creation_check_1013M_R3",
+        "screen_order": 5,
+        "screen_title": "动手前看一眼",
+        "screen_type": "pre_creation_check_screen",
+        "source_lesson_section_refs": [
+          "teaching_process",
+          "demo"
+        ],
+        "teacher_visible_purpose": "我的主色是什么？我想表达什么感觉？",
+        "visual_priority": "image_or_demo_primary_text_light",
+        "material_slots": [],
+        "classroom_prompt": "我的主色是什么？我想表达什么感觉？",
+        "interaction_hint": "开始前先确认自己的选择。",
+        "status": "ready_as_text_screen",
+        "preview_only": true
+      }
+    ],
+    "lesson_to_courseware_binding": {
+      "target_step_id": "demo",
+      "target_step_name": "示范与支架",
+      "binding_policy": "paragraph_level_courseware_cards",
+      "right_rail_target": "大屏草稿"
+    },
+    "backend_binding_package_only": true,
+    "request_envelope_only": true,
+    "prompt_binding_only": true,
+    "normalization_fixture_only": true,
+    "courseware_seed_fixture_only": true,
+    "preview_only": true,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "lesson_body_modified": false,
+    "main_project_pushed": false
+  },
+  "reuse_policy": {
+    "reuse_1013E_lesson_reasoning_contract": true,
+    "reuse_1013E_staged_derivation_pipeline": true,
+    "reuse_1013K_courseware_screen_seed_shape": true,
+    "runtime_contract_patch_applied": false,
+    "new_disconnected_page_created": false
+  },
+  "backend_binding_package_only": true,
+  "request_envelope_only": true,
+  "prompt_binding_only": true,
+  "normalization_fixture_only": true,
+  "courseware_seed_fixture_only": true,
+  "preview_only": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "main_project_pushed": false
+}

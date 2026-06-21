@@ -1,0 +1,63 @@
+{
+  "stage": "1013M_R0_ART_DEMONSTRATION_AND_VISUAL_SCAFFOLD_CONTRACT",
+  "fixture_status": "sample_only_preview",
+  "lesson_example": {
+    "grade": "小学中段",
+    "subject": "美术",
+    "topic": "色彩的对比与和谐",
+    "can_adapt_to_current_fixture": "1-2《色彩的感觉》"
+  },
+  "art_demonstration_and_visual_scaffold": {
+    "demo_purpose": "帮助学生在创作前知道怎样用一组颜色表达感觉，而不是随意把颜色铺满。",
+    "visual_attention_points": [
+      "哪一种颜色最能表达主要感觉",
+      "哪些颜色可以互相陪衬",
+      "哪里需要少量对比色来点亮"
+    ],
+    "tools_and_techniques": [
+      "用色卡先试主色和伙伴色",
+      "用小面积对比色强调重点",
+      "避免每一处都用强烈颜色"
+    ],
+    "drawing_process_steps": [
+      "先定主色",
+      "再找伙伴",
+      "最后一点亮"
+    ],
+    "memory_phrase": "先定主色，再找伙伴，最后一点亮。",
+    "common_mistakes_and_repairs": [
+      {
+        "mistake": "颜色太多，画面没有重点。",
+        "repair": "删掉一两种抢眼颜色，只保留一个点亮位置。"
+      },
+      {
+        "mistake": "全部颜色都一样重，感觉不明确。",
+        "repair": "让主色占大一些，伙伴色轻一些。"
+      }
+    ],
+    "peer_example_scaffold": [
+      "看同龄作品中主色占画面多数的例子",
+      "看同龄作品中只用一点对比色点亮的例子",
+      "讨论可以学习配色方法，但不能照抄画面"
+    ],
+    "anti_copy_guidance": "可以学习别人怎样配色、怎样留白、怎样点亮，但不能把老师范画或同学作品照着画成自己的作品。",
+    "pre_creation_check": [
+      "我想表达什么感觉？",
+      "我的主色是什么？",
+      "伙伴色在哪里？",
+      "我只点亮一个关键地方了吗？"
+    ],
+    "assessment_link": [
+      "作品能否看出一种主要感觉",
+      "学生能否说明自己的选色理由",
+      "作品是否有自己的想法，而不是照抄范画"
+    ]
+  },
+  "boundaries": {
+    "sample_only": true,
+    "preview_only": true,
+    "provider_called": false,
+    "model_called": false,
+    "formal_apply_performed": false
+  }
+}

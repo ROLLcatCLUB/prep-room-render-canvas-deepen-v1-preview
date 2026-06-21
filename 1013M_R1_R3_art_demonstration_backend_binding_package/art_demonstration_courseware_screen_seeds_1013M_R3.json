@@ -1,0 +1,141 @@
+{
+  "stage": "1013M_R1_R3_ART_DEMONSTRATION_BACKEND_BINDING_PACKAGE",
+  "seed_bundle_id": "art_demonstration_courseware_screen_seeds_1013M_R3",
+  "source_normalization_id": "art_demonstration_normalized_output_1013M_R3",
+  "screen_seed_count": 5,
+  "screen_seeds": [
+    {
+      "screen_id": "art_demo_screen_seed_01_teacher_demo_1013M_R3",
+      "screen_order": 1,
+      "screen_title": "老师示范",
+      "screen_type": "teacher_demo_screen",
+      "source_lesson_section_refs": [
+        "teaching_process",
+        "demo"
+      ],
+      "teacher_visible_purpose": "怎样让颜色有主要感觉",
+      "visual_priority": "image_or_demo_primary_text_light",
+      "material_slots": [
+        {
+          "slot_id": "slot_teacher_demo_1",
+          "slot_label": "示范小稿",
+          "expected_count": 1,
+          "status": "pending_material"
+        },
+        {
+          "slot_id": "slot_teacher_demo_2",
+          "slot_label": "色卡",
+          "expected_count": 1,
+          "status": "pending_material"
+        }
+      ],
+      "classroom_prompt": "怎样让颜色有主要感觉",
+      "interaction_hint": "先看老师怎样选主色。",
+      "status": "pending_material",
+      "preview_only": true
+    },
+    {
+      "screen_id": "art_demo_screen_seed_02_step_mantra_1013M_R3",
+      "screen_order": 2,
+      "screen_title": "三步口令",
+      "screen_type": "step_mantra_screen",
+      "source_lesson_section_refs": [
+        "teaching_process",
+        "demo"
+      ],
+      "teacher_visible_purpose": "先定主色，再找伙伴，最后一点亮",
+      "visual_priority": "image_or_demo_primary_text_light",
+      "material_slots": [],
+      "classroom_prompt": "先定主色，再找伙伴，最后一点亮",
+      "interaction_hint": "跟着口令说一遍。",
+      "status": "ready_as_text_screen",
+      "preview_only": true
+    },
+    {
+      "screen_id": "art_demo_screen_seed_03_mistake_compare_1013M_R3",
+      "screen_order": 3,
+      "screen_title": "哪里容易乱",
+      "screen_type": "mistake_comparison_screen",
+      "source_lesson_section_refs": [
+        "teaching_process",
+        "demo"
+      ],
+      "teacher_visible_purpose": "颜色太多时，画面会失去重点",
+      "visual_priority": "image_or_demo_primary_text_light",
+      "material_slots": [
+        {
+          "slot_id": "slot_mistake_compare_1",
+          "slot_label": "错例小稿",
+          "expected_count": 1,
+          "status": "pending_material"
+        }
+      ],
+      "classroom_prompt": "颜色太多时，画面会失去重点",
+      "interaction_hint": "如果只留一个点亮位置，会不会更清楚？",
+      "status": "pending_material",
+      "preview_only": true
+    },
+    {
+      "screen_id": "art_demo_screen_seed_04_peer_examples_1013M_R3",
+      "screen_order": 4,
+      "screen_title": "同龄作品",
+      "screen_type": "peer_example_screen",
+      "source_lesson_section_refs": [
+        "teaching_process",
+        "demo"
+      ],
+      "teacher_visible_purpose": "学方法，不照抄",
+      "visual_priority": "image_or_demo_primary_text_light",
+      "material_slots": [
+        {
+          "slot_id": "slot_peer_examples_1",
+          "slot_label": "同龄作品 2-3 张",
+          "expected_count": 1,
+          "status": "pending_material"
+        }
+      ],
+      "classroom_prompt": "学方法，不照抄",
+      "interaction_hint": "你想学习哪一种配色方法？",
+      "status": "pending_material",
+      "preview_only": true
+    },
+    {
+      "screen_id": "art_demo_screen_seed_05_pre_creation_check_1013M_R3",
+      "screen_order": 5,
+      "screen_title": "动手前看一眼",
+      "screen_type": "pre_creation_check_screen",
+      "source_lesson_section_refs": [
+        "teaching_process",
+        "demo"
+      ],
+      "teacher_visible_purpose": "我的主色是什么？我想表达什么感觉？",
+      "visual_priority": "image_or_demo_primary_text_light",
+      "material_slots": [],
+      "classroom_prompt": "我的主色是什么？我想表达什么感觉？",
+      "interaction_hint": "开始前先确认自己的选择。",
+      "status": "ready_as_text_screen",
+      "preview_only": true
+    }
+  ],
+  "lesson_to_courseware_binding": {
+    "target_step_id": "demo",
+    "target_step_name": "示范与支架",
+    "binding_policy": "paragraph_level_courseware_cards",
+    "right_rail_target": "大屏草稿"
+  },
+  "backend_binding_package_only": true,
+  "request_envelope_only": true,
+  "prompt_binding_only": true,
+  "normalization_fixture_only": true,
+  "courseware_seed_fixture_only": true,
+  "preview_only": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "lesson_body_modified": false,
+  "main_project_pushed": false
+}

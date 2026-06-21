@@ -1,0 +1,78 @@
+{
+  "stage": "1013M_R0_ART_DEMONSTRATION_AND_VISUAL_SCAFFOLD_CONTRACT",
+  "mapping_status": "preview_only_fixture",
+  "screen_mappings": [
+    {
+      "field": "visual_attention_points",
+      "screen_type": "observation_focus",
+      "teacher_visible_title": "看什么",
+      "example_screen": "看这一组颜色哪里最抢眼"
+    },
+    {
+      "field": "tools_and_techniques",
+      "screen_type": "teacher_demo_screen",
+      "teacher_visible_title": "老师示范",
+      "example_screen": "怎样让主色更稳"
+    },
+    {
+      "field": "drawing_process_steps",
+      "screen_type": "step_mantra_screen",
+      "teacher_visible_title": "三步口令",
+      "example_screen": "先定主色，再找伙伴，最后一点亮"
+    },
+    {
+      "field": "common_mistakes_and_repairs",
+      "screen_type": "mistake_comparison_screen",
+      "teacher_visible_title": "哪里容易乱",
+      "example_screen": "颜色太多时，画面会失去重点"
+    },
+    {
+      "field": "peer_example_scaffold",
+      "screen_type": "peer_example_screen",
+      "teacher_visible_title": "同龄作品",
+      "example_screen": "学方法，不照抄"
+    },
+    {
+      "field": "pre_creation_check",
+      "screen_type": "pre_creation_check_screen",
+      "teacher_visible_title": "动手前看一眼",
+      "example_screen": "我定好主色了吗？我想表达什么感觉？"
+    }
+  ],
+  "current_page_mapping": {
+    "source_page": "prep_room_render_canvas_deepen_v1_1013M_R0_art_demo_visual_scaffold.html",
+    "inserted_step_id": "demo",
+    "inserted_step_name": "示范与支架",
+    "paragraph_screen_map": [
+      {
+        "paragraph_title": "明确看点",
+        "screen_id": "screen_03_compare"
+      },
+      {
+        "paragraph_title": "示范技法",
+        "screen_id": "screen_06_whiteboard"
+      },
+      {
+        "paragraph_title": "记住口令",
+        "screen_id": "screen_04_words"
+      },
+      {
+        "paragraph_title": "辨析错例",
+        "screen_id": "screen_08_summary"
+      },
+      {
+        "paragraph_title": "借鉴不照抄",
+        "screen_id": "screen_07_show"
+      }
+    ]
+  },
+  "boundaries": {
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false
+  }
+}

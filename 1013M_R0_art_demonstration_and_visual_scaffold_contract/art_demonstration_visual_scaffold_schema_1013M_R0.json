@@ -1,0 +1,88 @@
+{
+  "stage": "1013M_R0_ART_DEMONSTRATION_AND_VISUAL_SCAFFOLD_CONTRACT",
+  "schema_name": "art_demonstration_and_visual_scaffold",
+  "schema_status": "contract_only_preview",
+  "applies_when": [
+    "lesson_contains_student_visual_creation",
+    "lesson_contains_drawing_or_painting_or_design_or_craft",
+    "lesson_contains_tool_or_technique_risk",
+    "lesson_contains_peer_work_or_visual_standard_reference"
+  ],
+  "demonstration_block": {
+    "demo_purpose": {
+      "teacher_label": "示范目的",
+      "required": true,
+      "description": "这次示范要解决学生动手前的哪一个困难。"
+    },
+    "visual_attention_points": {
+      "teacher_label": "观察看点",
+      "required": true,
+      "description": "学生看示范时要注意什么。"
+    },
+    "tools_and_techniques": {
+      "teacher_label": "工具与技法",
+      "required": true,
+      "description": "本课需要教师示范的工具使用、材料控制、绘画手法或制作方法。"
+    },
+    "drawing_process_steps": {
+      "teacher_label": "绘画步骤",
+      "required": true,
+      "description": "学生开始创作前需要记住的操作顺序。",
+      "min_items": 3
+    },
+    "memory_phrase": {
+      "teacher_label": "三步口令",
+      "required": true,
+      "description": "朗朗上口、便于学生记住的过程口令。"
+    },
+    "common_mistakes_and_repairs": {
+      "teacher_label": "常见问题与修正",
+      "required": true,
+      "description": "学生最容易出现的画面问题，以及教师如何示范修正。"
+    },
+    "peer_example_scaffold": {
+      "teacher_label": "同龄作品支架",
+      "required": true,
+      "description": "用同龄作品帮助学生建立视觉标准、打开思路。"
+    },
+    "anti_copy_guidance": {
+      "teacher_label": "不照抄提醒",
+      "required": true,
+      "description": "明确学生可以借鉴方法，但不能照抄教师范画或同伴作品。"
+    },
+    "pre_creation_check": {
+      "teacher_label": "动手前检查",
+      "required": true,
+      "description": "学生开始前要确认的短句或清单。"
+    },
+    "assessment_link": {
+      "teacher_label": "评价关联",
+      "required": true,
+      "description": "示范环节如何连接作品评价和原创表达。"
+    }
+  },
+  "courseware_targets": [
+    "teacher_demo_screen",
+    "step_mantra_screen",
+    "mistake_comparison_screen",
+    "peer_example_screen",
+    "pre_creation_check_screen"
+  ],
+  "reuse_targets": {
+    "lesson_process": "insert_before_student_creation",
+    "courseware_viewmodel": "screen_seed_generation",
+    "assessment_evidence": "original_expression_and_method_use",
+    "teacher_edit_surface": "section_level_preview_only_editing"
+  },
+  "boundaries": {
+    "contract_only": true,
+    "preview_only": true,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false
+  }
+}
