@@ -1,0 +1,28 @@
+{
+  "policy_id": "unified_renameable_agent_policy_1013L_R0",
+  "stage": "1013L_R0_MAIN_RENDER_SHELL_BASELINE_AND_BACKEND_REUSE_REGISTRY",
+  "canonical_agent_role": "unified_renameable_agent",
+  "default_display_name": "小备",
+  "display_name_customizable": true,
+  "wake_name_customizable": true,
+  "legacy_visible_names": [
+    "小备",
+    "小教"
+  ],
+  "legacy_backend_roles": [
+    "unified_teacher_agent"
+  ],
+  "routing_depends_on_display_name": false,
+  "routing_key_field": "active_capability",
+  "profile_shape": {
+    "agent_role": "unified_renameable_agent",
+    "assistant_profile": {
+      "display_name": "小备",
+      "display_name_customizable": true,
+      "wake_name": "小备",
+      "voice_profile_id": null,
+      "tts_enabled": false
+    }
+  },
+  "migration_rule": "Existing backend payloads that still expose unified_teacher_agent or legacy visible names must be normalized at the render-shell boundary. Do not use display names as route keys."
+}

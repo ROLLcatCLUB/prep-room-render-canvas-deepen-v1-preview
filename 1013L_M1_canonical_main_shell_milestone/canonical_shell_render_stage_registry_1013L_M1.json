@@ -1,0 +1,67 @@
+{
+  "registry_id": "canonical_shell_render_stage_registry_1013L_M1",
+  "stage": "1013L_M1_CANONICAL_MAIN_SHELL_MILESTONE",
+  "states": [
+    {
+      "state_id": "home_scene",
+      "label": "开始",
+      "role": "scene_entry",
+      "source": "workbench_preview_viewmodel_builder_071B",
+      "status": "static_baseline"
+    },
+    {
+      "state_id": "big_unit_design",
+      "label": "大单元",
+      "role": "big_unit_reading_chunks",
+      "source": "1013I_R6S_R6 / 1013K_R7-R13",
+      "status": "mounted_as_render_stage_state"
+    },
+    {
+      "state_id": "single_lesson_design",
+      "label": "单课",
+      "role": "single_lesson_notebook",
+      "source": "1013F_R2C_RESTORED / 1013I_R6S_R6",
+      "status": "mounted_as_render_stage_state"
+    },
+    {
+      "state_id": "courseware_workspace",
+      "label": "课件",
+      "role": "courseware_workspace",
+      "source": "1013J_R1M + 1013K_R29A normalized viewmodel",
+      "status": "mounted_as_render_stage_state"
+    },
+    {
+      "state_id": "classroom_display_preview",
+      "label": "大屏",
+      "role": "fullscreen_display_preview",
+      "source": "1013J_R1M display preview state",
+      "status": "mounted_as_render_stage_state"
+    },
+    {
+      "state_id": "material_intake",
+      "label": "资料",
+      "role": "material_intake_placeholder",
+      "source": "kb routes + official_unit_field_dictionary_v1",
+      "status": "placeholder_until_upload_gate"
+    },
+    {
+      "state_id": "week_calendar",
+      "label": "周课表",
+      "role": "schedule_context",
+      "source": "prep_room_feishu_schedule_1013A",
+      "status": "readonly_route_available"
+    }
+  ],
+  "state_count": 7,
+  "top_shell_persistent": true,
+  "render_stage_dynamic": true,
+  "bottom_agent_bar_persistent": true,
+  "agent_profile": {
+    "canonical_agent_role": "unified_renameable_agent",
+    "default_display_name": "小备",
+    "display_name_customizable": true,
+    "routing_depends_on_display_name": false,
+    "routing_key_field": "active_capability"
+  },
+  "new_disconnected_page_created": false
+}

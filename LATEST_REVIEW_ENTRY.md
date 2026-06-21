@@ -1,14 +1,16 @@
 # Latest Review Entry
 
-STAGE=1013K_R20_ISOLATED_STATIC_BINDING_POLISH_VISUAL_SMOKE
-FINAL_STATUS=PASS_1013K_R20_ISOLATED_STATIC_BINDING_POLISH_VISUAL_SMOKE
-NEXT_STAGE=1013K_R21_ISOLATED_STATIC_BINDING_REVIEW_PACKAGE_MILESTONE
-LOCAL_ONLY_SMALL_PACKAGE=true
-GITHUB_UPLOAD_DEFERRED_UNTIL_NEXT_MILESTONE=true
-PROVIDER_MODEL_CALL_ALLOWED=false
-FORMAL_APPLY_ALLOWED=false
-DATABASE_WRITE_ALLOWED=false
-MEMORY_WRITE_ALLOWED=false
-FORMAL_FRONTEND_PAGE_MODIFIED=false
+STAGE=1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER
+FINAL_STATUS=PASS_1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER
+NEXT_STAGE=1013L_R6_MAIN_SHELL_READONLY_FETCH_VISIBLE_SMOKE
+GITHUB_UPLOADED=false
 
-1013K_R20 runs desktop and mobile screenshot smoke for the R19 polished isolated static binding fixture. It does not mount into formal frontend pages or connect runtime.
+R5 adds a thin readonly ViewModel fetch adapter for the canonical main shell. It continues the single-shell direction from 1013L_M1 and does not create a disconnected page line.
+
+Key outputs:
+- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/shiwei_main_render_shell_1013L_R5_fetch_adapter_static.html`
+- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/main_shell_backend_viewmodel_fetch_contract_1013L_R5.json`
+- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/main_shell_state_fetch_adapter_map_1013L_R5.json`
+- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/main_shell_viewmodel_readonly_response_fixture_1013L_R5.json`
+
+Boundary remains clean: no provider/model, no runtime write, no database/memory/Feishu, no formal apply, no formal frontend binding.

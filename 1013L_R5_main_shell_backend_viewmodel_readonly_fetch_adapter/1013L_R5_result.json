@@ -1,0 +1,28 @@
+{
+  "stage": "1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER",
+  "final_status": "PASS_1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER",
+  "canonical_shell_source": "1013L_M1_canonical_main_shell_milestone/shiwei_main_render_shell_1013L_M1.html",
+  "fetch_adapter_static_shell": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/shiwei_main_render_shell_1013L_R5_fetch_adapter_static.html",
+  "readonly_routes_created": [
+    "/api/prep-room/main-shell/viewmodel",
+    "/api/prep-room/main-shell/viewmodel/state/<state_id>"
+  ],
+  "state_fetch_adapter_count": 7,
+  "reuse_existing_surfaces": true,
+  "new_disconnected_page_created": false,
+  "screenshot_smoke_pass": true,
+  "visual_smoke_screenshots": [
+    "ui_smoke_1013L_R5_desktop_courseware.png"
+  ],
+  "formal_frontend_binding_allowed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "main_project_pushed": false,
+  "github_uploaded": false,
+  "next_stage": "1013L_R6_MAIN_SHELL_READONLY_FETCH_VISIBLE_SMOKE"
+}

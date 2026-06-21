@@ -1,0 +1,19 @@
+{
+  "stage": "1013L_R2_EXISTING_SURFACE_RENDER_STAGE_MOUNT",
+  "final_status": "PASS_1013L_R2_EXISTING_SURFACE_RENDER_STAGE_MOUNT",
+  "existing_surface_mount_map_created": true,
+  "courseware_workspace_mapped": true,
+  "big_unit_design_mapped": true,
+  "single_lesson_design_mapped": true,
+  "source_reuse_required": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "formal_frontend_binding_allowed": false,
+  "main_project_pushed": false,
+  "github_uploaded": false
+}

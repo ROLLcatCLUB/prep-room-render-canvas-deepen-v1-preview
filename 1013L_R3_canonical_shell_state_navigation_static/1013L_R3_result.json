@@ -1,0 +1,18 @@
+{
+  "stage": "1013L_R3_CANONICAL_SHELL_STATE_NAVIGATION_STATIC",
+  "final_status": "PASS_1013L_R3_CANONICAL_SHELL_STATE_NAVIGATION_STATIC",
+  "state_navigation_created": true,
+  "state_count": 7,
+  "courseware_overlay_available": true,
+  "agent_bar_persistent_after_state_switch": true,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "formal_frontend_binding_allowed": false,
+  "main_project_pushed": false,
+  "github_uploaded": false
+}

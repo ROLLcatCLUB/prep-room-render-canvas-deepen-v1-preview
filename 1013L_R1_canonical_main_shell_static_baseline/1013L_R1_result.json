@@ -1,0 +1,19 @@
+{
+  "stage": "1013L_R1_CANONICAL_MAIN_SHELL_STATIC_BASELINE",
+  "final_status": "PASS_1013L_R1_CANONICAL_MAIN_SHELL_STATIC_BASELINE",
+  "canonical_shell_static_created": true,
+  "top_shell_persistent": true,
+  "render_stage_dynamic": true,
+  "bottom_agent_bar_persistent": true,
+  "new_disconnected_feature_page_created": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "formal_frontend_binding_allowed": false,
+  "main_project_pushed": false,
+  "github_uploaded": false
+}

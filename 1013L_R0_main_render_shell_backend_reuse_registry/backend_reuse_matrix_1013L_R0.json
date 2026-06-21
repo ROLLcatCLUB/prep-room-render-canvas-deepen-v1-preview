@@ -1,0 +1,84 @@
+{
+  "matrix_id": "backend_reuse_matrix_1013L_R0",
+  "stage": "1013L_R0_MAIN_RENDER_SHELL_BASELINE_AND_BACKEND_REUSE_REGISTRY",
+  "reuse_groups": [
+    {
+      "group_id": "workbench_shell_viewmodel",
+      "reuse_now": true,
+      "files": [
+        "backend/xiaobei_ai/workbench_preview_viewmodel_builder_071B.py",
+        "backend/xiaobei_ai/workbench_preview_viewmodel_routes_071C.py"
+      ],
+      "route": "/api/xiaobei/workbench/preview_viewmodel/dry_run",
+      "notes": "Use as a safe ViewModel normalizer and gate policy reference for the persistent shell."
+    },
+    {
+      "group_id": "big_unit_readonly_chunks",
+      "reuse_now": true,
+      "files": [
+        "backend/xiaobei_ai/prep_room_big_unit_render_viewmodel_1013K_R7.py",
+        "backend/xiaobei_ai/prep_room_big_unit_viewmodel_endpoint_contract_1013K_R8.py",
+        "backend/xiaobei_ai/prep_room_big_unit_readonly_endpoint_dry_run_1013K_R9.py",
+        "backend/xiaobei_ai/prep_room_big_unit_readonly_routes_1013K_R11.py",
+        "backend/xiaobei_ai/prep_room_big_unit_client_fetch_contract_1013K_R12.py",
+        "backend/xiaobei_ai/prep_room_big_unit_renderer_fetch_adapter_1013K_R13.py"
+      ],
+      "route": "/api/prep-room/big-unit-preview-viewmodel/{viewmodel_id}",
+      "notes": "Already supports full viewmodel and single chunk fetch. Reuse for staged rendering."
+    },
+    {
+      "group_id": "curriculum_and_big_unit_derivation",
+      "reuse_now": true,
+      "files": [
+        "backend/xiaobei_ai/prep_room_curriculum_standard_derivation_1013K_R0.py",
+        "backend/xiaobei_ai/prep_room_curriculum_derivation_runtime_dry_run_1013K_R1.py",
+        "backend/xiaobei_ai/prep_room_curriculum_profile_candidate_envelope_1013K_R2.py",
+        "backend/xiaobei_ai/prep_room_big_unit_static_section_preview_1013K_R3.py",
+        "backend/xiaobei_ai/prep_room_big_unit_review_surface_1013K_R4.py",
+        "backend/xiaobei_ai/prep_room_big_unit_review_action_state_1013K_R5.py",
+        "backend/xiaobei_ai/prep_room_big_unit_preview_surface_1013K_R6.py"
+      ],
+      "route": "fixture builders only",
+      "notes": "Reuse before adding any new big-unit fields. Do not rewrite this chain."
+    },
+    {
+      "group_id": "courseware_viewmodel",
+      "reuse_now": true,
+      "files": [
+        "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013K_R25_curriculum_chunk_to_courseware_screen_seed_contract/",
+        "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013K_R26_courseware_screen_seed_to_viewmodel_fixture/",
+        "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013K_R27_courseware_viewmodel_to_existing_page_hidden_data_injection/",
+        "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013K_R29A_courseware_viewmodel_normalization_before_visible_render/"
+      ],
+      "route": "existing 1013J_R1M hidden viewmodel data",
+      "notes": "Promote into shell state after registry. Do not create a new courseware page."
+    },
+    {
+      "group_id": "knowledge_and_official_unit_sources",
+      "reuse_now": true,
+      "files": [
+        "docs/contracts/official_unit_field_dictionary_v1.json",
+        "docs/contracts/official_unit_field_prompt_standard_v1.json",
+        "docs/contracts/official_unit_field_question_flow_v1.json",
+        "subject_packs/art/",
+        "business_packs/education/",
+        "knowledge-base/"
+      ],
+      "route": "/api/xiaobei/kb/* readonly routes where applicable",
+      "notes": "Use existing official field and subject-pack assets before defining new big-unit fields."
+    }
+  ],
+  "shell_registry_only": true,
+  "render_stage_registry_created": true,
+  "backend_reuse_registry_created": true,
+  "formal_frontend_binding_allowed": false,
+  "new_disconnected_page_created": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "main_project_pushed": false
+}

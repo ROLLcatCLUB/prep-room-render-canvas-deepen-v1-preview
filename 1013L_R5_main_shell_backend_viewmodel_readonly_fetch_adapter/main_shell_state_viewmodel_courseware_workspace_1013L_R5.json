@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "stage": "1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER",
+  "viewmodel_id": "main_shell_state_viewmodel_courseware_workspace_1013L_R5",
+  "state_id": "courseware_workspace",
+  "state": {
+    "state_id": "courseware_workspace",
+    "teacher_label": "课件制作",
+    "render_stage_role": "courseware_screen_outline_and_workspace",
+    "backend_source": "1013K_R25_to_R29A courseware viewmodel assets",
+    "route_or_adapter": "hidden normalized courseware render viewmodel in existing 1013J_R1M page",
+    "reuse_action": "reuse_current_viewmodel_normalization_before_visible_render",
+    "status": "available_for_shell_mapping_after_R30"
+  },
+  "fetch_adapter": {
+    "state_id": "courseware_workspace",
+    "teacher_label": "课件",
+    "active_capability": "courseware_workspace",
+    "render_slot": "stage_body",
+    "readonly_endpoint": "/api/prep-room/main-shell/viewmodel/state/courseware_workspace",
+    "source_endpoint": null,
+    "source_fixture": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013K_R29A_courseware_viewmodel_normalization_before_visible_render/normalized_courseware_render_viewmodel_1013K_R29A.json",
+    "fetch_policy": "fixture_fallback_until_courseware_route",
+    "adapter_status": "ready_for_shell_fetch"
+  },
+  "agent_profile": {
+    "agent_role": "unified_renameable_agent",
+    "assistant_profile": {
+      "display_name": "小备",
+      "display_name_customizable": true,
+      "wake_name": "小备",
+      "wake_name_customizable": true,
+      "voice_profile_id": null,
+      "tts_enabled": false
+    },
+    "routing": {
+      "routing_depends_on_display_name": false,
+      "routing_key_field": "active_capability",
+      "legacy_visible_names": [
+        "小备",
+        "小教"
+      ],
+      "legacy_backend_roles": [
+        "unified_teacher_agent"
+      ]
+    }
+  },
+  "boundary": {
+    "readonly_fetch_adapter_only": true,
+    "formal_frontend_binding_allowed": false,
+    "new_disconnected_page_created": false,
+    "runtime_connected": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false
+  }
+}

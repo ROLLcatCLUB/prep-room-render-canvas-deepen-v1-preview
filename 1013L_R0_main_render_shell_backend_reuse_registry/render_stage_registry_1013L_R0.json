@@ -1,0 +1,99 @@
+{
+  "registry_id": "render_stage_registry_1013L_R0",
+  "stage": "1013L_R0_MAIN_RENDER_SHELL_BASELINE_AND_BACKEND_REUSE_REGISTRY",
+  "shell_shape": {
+    "top_shell_persistent": true,
+    "render_stage_dynamic": true,
+    "bottom_agent_bar_persistent": true,
+    "content_pages_are_render_stage_states": true,
+    "standalone_static_pages_are_rollback_or_review_artifacts_only": true
+  },
+  "state_count": 8,
+  "states": [
+    {
+      "state_id": "home_scene",
+      "teacher_label": "首页场景",
+      "render_stage_role": "scene_level_entry",
+      "backend_source": "workbench_preview_viewmodel_builder_071B",
+      "route_or_adapter": "/api/xiaobei/workbench/preview_viewmodel/dry_run",
+      "reuse_action": "reuse_as_shell_scene_viewmodel_safety_base",
+      "status": "available_for_shell_mapping"
+    },
+    {
+      "state_id": "prep_notebook",
+      "teacher_label": "备课本",
+      "render_stage_role": "lesson_notebook_reading_and_preview",
+      "backend_source": "prep_room_lesson_reasoning_contract_1013E",
+      "route_or_adapter": "existing 1013F/1013E static and reasoning fixtures",
+      "reuse_action": "reuse_existing_single_lesson_surface_and_lesson_reasoning_contracts",
+      "status": "available_for_static_shell_mapping"
+    },
+    {
+      "state_id": "big_unit_design",
+      "teacher_label": "大单元设计",
+      "render_stage_role": "big_unit_reading_chunks_and_preview_actions",
+      "backend_source": "prep_room_big_unit_render_viewmodel_1013K_R7",
+      "route_or_adapter": "/api/prep-room/big-unit-preview-viewmodel/{viewmodel_id}",
+      "reuse_action": "reuse_existing_readonly_viewmodel_endpoint_and_chunk_rendering",
+      "status": "available_for_shell_mapping"
+    },
+    {
+      "state_id": "single_lesson_design",
+      "teacher_label": "单课备课",
+      "render_stage_role": "single_lesson_inherits_big_unit_context",
+      "backend_source": "prep_room_staged_derivation_pipeline_1013E_R4",
+      "route_or_adapter": "local staged derivation pipeline fixture",
+      "reuse_action": "reuse_for_lesson_derivation_after_shell_state_packet",
+      "status": "needs_thin_shell_adapter"
+    },
+    {
+      "state_id": "courseware_workspace",
+      "teacher_label": "课件制作",
+      "render_stage_role": "courseware_screen_outline_and_workspace",
+      "backend_source": "1013K_R25_to_R29A courseware viewmodel assets",
+      "route_or_adapter": "hidden normalized courseware render viewmodel in existing 1013J_R1M page",
+      "reuse_action": "reuse_current_viewmodel_normalization_before_visible_render",
+      "status": "available_for_shell_mapping_after_R30"
+    },
+    {
+      "state_id": "classroom_display_preview",
+      "teacher_label": "大屏预览",
+      "render_stage_role": "fullscreen_classroom_display_overlay",
+      "backend_source": "1013J_R1M classroom display preview static assets",
+      "route_or_adapter": "existing static overlay state",
+      "reuse_action": "reuse_overlay_and_screen_ratio_controls",
+      "status": "available_for_static_shell_mapping"
+    },
+    {
+      "state_id": "material_intake",
+      "teacher_label": "资料补充",
+      "render_stage_role": "material_upload_and_text_intake_placeholder",
+      "backend_source": "kb_evidence_service and official_unit_field_dictionary_v1",
+      "route_or_adapter": "/api/xiaobei/kb/* readonly routes",
+      "reuse_action": "reuse_kb_search_and_lesson_resource_routes_later_without_write",
+      "status": "needs_upload_gate_before_real_file_intake"
+    },
+    {
+      "state_id": "week_calendar",
+      "teacher_label": "周课表",
+      "render_stage_role": "schedule_context_for_prep_room",
+      "backend_source": "prep_room_feishu_schedule_1013A",
+      "route_or_adapter": "/api/xiaobei/prep-room/schedule",
+      "reuse_action": "reuse_readonly_schedule_adapter",
+      "status": "available_readonly"
+    }
+  ],
+  "shell_registry_only": true,
+  "render_stage_registry_created": true,
+  "backend_reuse_registry_created": true,
+  "formal_frontend_binding_allowed": false,
+  "new_disconnected_page_created": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "main_project_pushed": false
+}
