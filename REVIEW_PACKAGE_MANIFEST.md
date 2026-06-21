@@ -29,4 +29,5 @@ Current local milestone: `1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_A
 - `feishu_written=false`
 - `formal_apply_performed=false`
 - `main_project_pushed=false`
-- `github_uploaded=false`
+- `github_uploaded=true`
+- `github_review_package_uploaded=true`

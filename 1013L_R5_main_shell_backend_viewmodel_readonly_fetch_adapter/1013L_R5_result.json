@@ -23,6 +23,7 @@
   "feishu_written": false,
   "formal_apply_performed": false,
   "main_project_pushed": false,
-  "github_uploaded": false,
+  "github_uploaded": true,
+  "github_review_package_uploaded": true,
   "next_stage": "1013L_R6_MAIN_SHELL_READONLY_FETCH_VISIBLE_SMOKE"
 }

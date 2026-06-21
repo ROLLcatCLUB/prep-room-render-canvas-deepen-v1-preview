@@ -129,7 +129,8 @@ def main() -> None:
         "feishu_written": False,
         "formal_apply_performed": False,
         "main_project_pushed": False,
-        "github_uploaded": False,
+        "github_uploaded": True,
+        "github_review_package_uploaded": True,
         "next_stage": "1013L_R6_MAIN_SHELL_READONLY_FETCH_VISIBLE_SMOKE",
     }
     write_json(STAGE_DIR / "1013L_R5_result.json", result)
@@ -163,7 +164,9 @@ No provider/model call, no runtime write, no database/memory/Feishu write, no fo
 STAGE=1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER
 FINAL_STATUS=PASS_1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER
 NEXT_STAGE=1013L_R6_MAIN_SHELL_READONLY_FETCH_VISIBLE_SMOKE
-GITHUB_UPLOADED=false
+GITHUB_UPLOADED=true
+GITHUB_REVIEW_PACKAGE_UPLOADED=true
+MAIN_PROJECT_PUSHED=false
 
 R5 adds a thin readonly ViewModel fetch adapter for the canonical main shell. It continues the single-shell direction from 1013L_M1 and does not create a disconnected page line.
 
@@ -208,7 +211,8 @@ Current local milestone: `1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_A
 - `feishu_written=false`
 - `formal_apply_performed=false`
 - `main_project_pushed=false`
-- `github_uploaded=false`
+- `github_uploaded=true`
+- `github_review_package_uploaded=true`
 """
     write_text(BASE / "REVIEW_PACKAGE_MANIFEST.md", manifest)
 
