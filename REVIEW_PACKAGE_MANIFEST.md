@@ -1,46 +1,22 @@
-# 1013L R18 · Teacher Test Entry Milestone Package
+﻿# Review Package Manifest · 1013L R29-R36
 
-## Status
+## Included Directories
 
-`PASS_1013L_R18_TEACHER_TEST_ENTRY_MILESTONE_PACKAGE`
+- `1013L_R29_lesson_courseware_marker_and_inline_edit_scope_patch/`
+- `1013L_R30_remove_center_courseware_hints_and_restore_edit_bubble/`
+- `1013L_R31_intercept_edit_clicks_and_pointed_bubble/`
+- `1013L_R32_restore_right_rail_courseware_cards_only/`
+- `1013L_R33_process_courseware_cards_and_independent_scroll/`
+- `1013L_R34_process_courseware_cards_visible_fix/`
+- `1013L_R35_paragraph_level_courseware_cards/`
+- `1013L_R36_existing_page_static_patch_consolidation/`
+- `source_delta_1013L_R29/` through `source_delta_1013L_R36/`
+- `scripts/` validators/build helpers for R29-R36
 
-This milestone packages the existing-page teacher-test line from R16 through R17 and includes the R16A closure of the older R5 review guards.
+## Latest File
 
-## Included Stages
+`1013L_R36_existing_page_static_patch_consolidation/prep_room_render_canvas_deepen_v1_1013L_R36_consolidated.html`
 
-- R16: mobile layout polish and teacher test entry.
-- R16A: R5 guard closure note for the current line.
-- R17: desktop teacher-test smoke for big-unit, courseware edit, and classroom display preview.
+## Important Boundary
 
-## Teacher Entry
-
-Open:
-
-`1013L_R17_existing_page_teacher_test_desktop_smoke_package/prep_room_render_canvas_deepen_v1_1013L_R17_teacher_test_desktop.html`
-
-Suggested URLs:
-
-- Big unit: `?r13=bigUnit`
-- Courseware edit: `?mode=edit#coursewareExpanded`
-- Display preview: `?preview=display&screen=03#coursewareExpanded`
-
-## Boundary
-
-- Runtime connected: false
-- Provider/model called: false
-- Database/memory/Feishu written: false
-- Formal apply performed: false
-- Main project pushed: false
-
-## Validators
-
-From the main project root, the current local validators are:
-
-```text
-python scripts/validate_1013L_R16_existing_page_mobile_layout_polish_and_teacher_test_entry.py
-python scripts/validate_1013L_R16A_r5_guard_closure_note_for_current_line.py
-python scripts/validate_1013L_R17_existing_page_teacher_test_desktop_smoke_package.py
-python scripts/validate_1013L_R18_teacher_test_entry_milestone_package.py
-```
-
-The review package also contains copies under `scripts/` for path inspection.
+No main project push. No formal frontend binding. No runtime connection. No provider/model/database/memory/Feishu writes.

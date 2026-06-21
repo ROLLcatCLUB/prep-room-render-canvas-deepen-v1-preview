@@ -1,0 +1,31 @@
+{
+  "stage": "1013L_R29_LESSON_COURSEWARE_MARKER_AND_INLINE_EDIT_SCOPE_PATCH",
+  "source_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R28_existing_page_function_completion_milestone_package/prep_room_render_canvas_deepen_v1_1013L_R28_function_completion_milestone.html",
+  "output_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R29_lesson_courseware_marker_and_inline_edit_scope_patch/prep_room_render_canvas_deepen_v1_1013L_R29_marker_edit_scope_patch.html",
+  "patches": [
+    "remove big-screen markers from non-teaching-process sections",
+    "remove overview big-screen rail under teaching process heading",
+    "keep big-screen markers only inside process steps",
+    "clicking big-screen marker focuses right-rail big-screen draft instead of opening switch popover",
+    "single-lesson paragraph edit opens aligned inline popover",
+    "big-unit section view/edit opens aligned inline popover"
+  ],
+  "native_renderer_replacements": [
+    "native_section_markers_disabled",
+    "native_process_overview_markers_disabled"
+  ],
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "upload_implemented": false,
+  "search_implemented": false,
+  "material_library_connected": false,
+  "whiteboard_library_connected": false,
+  "formal_apply_performed": false,
+  "formal_frontend_binding_performed": false,
+  "main_project_pushed": false,
+  "github_uploaded": false
+}

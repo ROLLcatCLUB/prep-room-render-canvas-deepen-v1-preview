@@ -1,0 +1,26 @@
+{
+  "stage": "1013L_R30_REMOVE_CENTER_COURSEWARE_HINTS_AND_RESTORE_EDIT_BUBBLE",
+  "source_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R29_lesson_courseware_marker_and_inline_edit_scope_patch/prep_room_render_canvas_deepen_v1_1013L_R29_marker_edit_scope_patch.html",
+  "output_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R30_remove_center_courseware_hints_and_restore_edit_bubble/prep_room_render_canvas_deepen_v1_1013L_R30_center_hints_edit_bubble_fix.html",
+  "patches": [
+    "remove center big-screen hint rails and chips",
+    "hide R29 extra top right draft block",
+    "hide R29 custom left/top popover",
+    "reuse existing right-side big-screen draft with small note",
+    "restore nb-edit-bubble style for single lesson and big unit edits"
+  ],
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "upload_implemented": false,
+  "search_implemented": false,
+  "material_library_connected": false,
+  "whiteboard_library_connected": false,
+  "formal_apply_performed": false,
+  "formal_frontend_binding_performed": false,
+  "main_project_pushed": false,
+  "github_uploaded": false
+}
