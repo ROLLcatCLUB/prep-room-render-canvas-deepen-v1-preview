@@ -1,0 +1,41 @@
+{
+  "binding_plan_id": "frontend_readonly_render_binding_plan_1013K_R14",
+  "stage": "1013K_R14_FRONTEND_READONLY_RENDER_BINDING_REVIEW_GATE",
+  "m3_pass": true,
+  "recommended_binding_mode": "isolated_static_fixture_first",
+  "main_frontend_mount_allowed": false,
+  "isolated_static_binding_allowed_next": true,
+  "target_route": "/api/prep-room/big-unit-preview-viewmodel/{viewmodel_id}",
+  "client_fetch_fixture_source": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013K_R12_readonly_route_response_contract_and_client_fetch_fixture/client_fetch_fixture_1013K_R12.js",
+  "renderer_adapter_fixture_source": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013K_R13_renderer_readonly_fetch_adapter_fixture/renderer_readonly_fetch_adapter_fixture_1013K_R13.js",
+  "required_next_stage_outputs": [
+    "isolated_static_frontend_binding_fixture_html",
+    "readonly_fetch_binding_smoke_result",
+    "renderer_chunk_mount_map",
+    "no_main_frontend_patch_confirmation"
+  ],
+  "forbidden_next_stage": [
+    "modify_frontend_xiaojiao_preview_html",
+    "modify_frontend_home_html",
+    "connect_provider_or_model",
+    "write_database_or_memory_or_feishu",
+    "formal_apply"
+  ],
+  "frontend_binding_review_gate_only": true,
+  "frontend_page_modified": false,
+  "runtime_connected": false,
+  "http_server_started": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true
+}

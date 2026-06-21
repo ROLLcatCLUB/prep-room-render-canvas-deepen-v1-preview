@@ -1,0 +1,44 @@
+{
+  "binding_risk_review_id": "frontend_readonly_render_binding_risk_review_1013K_R14",
+  "stage": "1013K_R14_FRONTEND_READONLY_RENDER_BINDING_REVIEW_GATE",
+  "risk_count": 3,
+  "risks": [
+    {
+      "risk_id": "r14_risk_formal_frontend_surface_not_yet_selected",
+      "severity": "medium",
+      "mitigation": "Use isolated static binding fixture before touching formal frontend pages."
+    },
+    {
+      "risk_id": "r14_risk_static_preview_line_has_many_html_versions",
+      "severity": "medium",
+      "mitigation": "Bind to a copied fixture and record exact source file instead of patching all HTML variants."
+    },
+    {
+      "risk_id": "r14_risk_backend_route_registered_but_runtime_not_started",
+      "severity": "low",
+      "mitigation": "Use Flask test-client or mocked fetch fixture until explicit runtime smoke gate."
+    }
+  ],
+  "formal_frontend_candidate_count": 3,
+  "static_fixture_candidate_count": 8,
+  "risk_review_pass": true,
+  "frontend_binding_review_gate_only": true,
+  "frontend_page_modified": false,
+  "main_frontend_mount_allowed": false,
+  "isolated_static_binding_allowed_next": true,
+  "runtime_connected": false,
+  "http_server_started": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true
+}

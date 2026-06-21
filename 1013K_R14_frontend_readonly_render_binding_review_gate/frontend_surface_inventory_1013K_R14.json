@@ -1,0 +1,92 @@
+{
+  "frontend_surface_inventory_id": "frontend_readonly_render_binding_surface_inventory_1013K_R14",
+  "stage": "1013K_R14_FRONTEND_READONLY_RENDER_BINDING_REVIEW_GATE",
+  "formal_frontend_candidates": [
+    {
+      "path": "frontend\\xiaojiao-preview.html",
+      "exists": true,
+      "mentions_big_unit": false,
+      "mentions_prep_room": true,
+      "recommended_for_direct_mount": false
+    },
+    {
+      "path": "frontend\\xiaobei_workbench.html",
+      "exists": true,
+      "mentions_big_unit": false,
+      "mentions_prep_room": true,
+      "recommended_for_direct_mount": false
+    },
+    {
+      "path": "frontend\\home.html",
+      "exists": true,
+      "mentions_big_unit": false,
+      "mentions_prep_room": true,
+      "recommended_for_direct_mount": false
+    }
+  ],
+  "formal_frontend_candidate_count": 3,
+  "static_fixture_candidates": [
+    {
+      "path": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013F_R2C_RESTORED_single_lesson_teaching_design_surface\\prep_room_render_canvas_deepen_v1_RESTORED_1013F_R2C_single_lesson_teaching_design.html",
+      "recommended_for_isolated_binding_fixture": true,
+      "is_output_fixture": true
+    },
+    {
+      "path": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6I_big_unit_prep_html_fixture_after_review_approval\\big_unit_prep_html_fixture_1013I_R6I.html",
+      "recommended_for_isolated_binding_fixture": true,
+      "is_output_fixture": true
+    },
+    {
+      "path": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6K_big_unit_prep_original_page_static_integration_run\\prep_room_render_canvas_deepen_v1_R6K_integrated_static.html",
+      "recommended_for_isolated_binding_fixture": true,
+      "is_output_fixture": true
+    },
+    {
+      "path": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6L_teacher_action_guidance_copy_patch_for_big_unit_static_integration\\prep_room_render_canvas_deepen_v1_R6L_teacher_guidance_patch.html",
+      "recommended_for_isolated_binding_fixture": true,
+      "is_output_fixture": true
+    },
+    {
+      "path": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6M_big_unit_design_teacher_readable_static_patch_for_review\\prep_room_render_canvas_deepen_v1_R6M_big_unit_design_teacher_readable_static.html",
+      "recommended_for_isolated_binding_fixture": true,
+      "is_output_fixture": true
+    },
+    {
+      "path": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6N_big_unit_design_text_reading_patch_for_review\\prep_room_render_canvas_deepen_v1_R6N_big_unit_design_text_reading.html",
+      "recommended_for_isolated_binding_fixture": true,
+      "is_output_fixture": true
+    },
+    {
+      "path": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6N_R1_centered_numbered_text_reading_patch\\prep_room_render_canvas_deepen_v1_R6N_R1_centered_numbered_text_reading.html",
+      "recommended_for_isolated_binding_fixture": true,
+      "is_output_fixture": true
+    },
+    {
+      "path": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6N_R2_centered_page_left_aligned_text_patch\\prep_room_render_canvas_deepen_v1_R6N_R2_centered_page_left_aligned_text.html",
+      "recommended_for_isolated_binding_fixture": true,
+      "is_output_fixture": true
+    }
+  ],
+  "static_fixture_candidate_count": 8,
+  "formal_frontend_direct_mount_recommended": false,
+  "isolated_static_fixture_recommended": true,
+  "frontend_binding_review_gate_only": true,
+  "frontend_page_modified": false,
+  "main_frontend_mount_allowed": false,
+  "isolated_static_binding_allowed_next": true,
+  "runtime_connected": false,
+  "http_server_started": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true
+}

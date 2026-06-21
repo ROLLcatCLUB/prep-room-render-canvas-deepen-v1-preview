@@ -1,0 +1,98 @@
+{
+  "chunk_mount_map_id": "renderer_chunk_mount_map_1013K_R15",
+  "stage": "1013K_R15_ISOLATED_STATIC_FRONTEND_READONLY_BINDING_FIXTURE",
+  "source_viewmodel_id": "big_unit_render_viewmodel_fixture_1013K_R7",
+  "chunk_count": 10,
+  "chunks": [
+    {
+      "chunk_id": "render_chunk_curriculum_basis_1013K_R3",
+      "mount_id": "chunk-render_chunk_curriculum_basis_1013K_R3",
+      "teacher_label": "课标依据",
+      "order": 1,
+      "can_update_independently": true
+    },
+    {
+      "chunk_id": "render_chunk_core_literacy_goals_1013K_R3",
+      "mount_id": "chunk-render_chunk_core_literacy_goals_1013K_R3",
+      "teacher_label": "核心素养",
+      "order": 2,
+      "can_update_independently": true
+    },
+    {
+      "chunk_id": "render_chunk_student_starting_point_1013K_R3",
+      "mount_id": "chunk-render_chunk_student_starting_point_1013K_R3",
+      "teacher_label": "学生起点",
+      "order": 3,
+      "can_update_independently": true
+    },
+    {
+      "chunk_id": "render_chunk_unit_questions_1013K_R3",
+      "mount_id": "chunk-render_chunk_unit_questions_1013K_R3",
+      "teacher_label": "单元问题",
+      "order": 4,
+      "can_update_independently": true
+    },
+    {
+      "chunk_id": "render_chunk_knowledge_and_skills_1013K_R3",
+      "mount_id": "chunk-render_chunk_knowledge_and_skills_1013K_R3",
+      "teacher_label": "知识与技能",
+      "order": 5,
+      "can_update_independently": true
+    },
+    {
+      "chunk_id": "render_chunk_performance_task_1013K_R3",
+      "mount_id": "chunk-render_chunk_performance_task_1013K_R3",
+      "teacher_label": "表现任务",
+      "order": 6,
+      "can_update_independently": true
+    },
+    {
+      "chunk_id": "render_chunk_learning_progression_1013K_R3",
+      "mount_id": "chunk-render_chunk_learning_progression_1013K_R3",
+      "teacher_label": "学习推进",
+      "order": 7,
+      "can_update_independently": true
+    },
+    {
+      "chunk_id": "render_chunk_lesson_task_chain_1013K_R3",
+      "mount_id": "chunk-render_chunk_lesson_task_chain_1013K_R3",
+      "teacher_label": "课时任务链",
+      "order": 8,
+      "can_update_independently": true
+    },
+    {
+      "chunk_id": "render_chunk_assessment_evidence_1013K_R3",
+      "mount_id": "chunk-render_chunk_assessment_evidence_1013K_R3",
+      "teacher_label": "评价证据",
+      "order": 9,
+      "can_update_independently": true
+    },
+    {
+      "chunk_id": "render_chunk_materials_and_scaffolds_1013K_R3",
+      "mount_id": "chunk-render_chunk_materials_and_scaffolds_1013K_R3",
+      "teacher_label": "材料与支架",
+      "order": 10,
+      "can_update_independently": true
+    }
+  ],
+  "progressive_rendering_supported": true,
+  "single_chunk_update_supported": true,
+  "whole_document_blob_required": false,
+  "isolated_static_binding_fixture_only": true,
+  "formal_frontend_page_modified": false,
+  "runtime_connected": false,
+  "http_server_started": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "unit_package_written": false,
+  "lesson_body_modified": false,
+  "html_body_modified": false,
+  "runtime_schema_applied": false,
+  "official_curriculum_claim_created": false,
+  "main_project_pushed": false,
+  "github_upload_deferred_until_next_milestone": true
+}
