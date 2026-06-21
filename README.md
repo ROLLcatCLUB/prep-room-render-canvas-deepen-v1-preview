@@ -1,12 +1,7 @@
-﻿# 1013K_R17 Isolated Static Binding User Review Package
+# Prep Room Render Canvas Deepen V1 Preview
 
-This package contains the frontend readonly binding review gate and isolated static binding fixture from R14-R16.
+Latest package: `1013L_R18_TEACHER_TEST_ENTRY_MILESTONE_PACKAGE`.
 
-Open first:
+Open `LATEST_REVIEW_ENTRY.md` first, then review `REVIEW_PACKAGE_MANIFEST.md` and `GPT_REVIEW_PROMPT_1013L_R18.md`.
 
-- GPT_REVIEW_PROMPT_1013K_R17.md
-- 1013K_R15_isolated_static_frontend_readonly_binding_fixture/isolated_static_frontend_readonly_binding_fixture_1013K_R15.html
-- 1013K_R16_isolated_static_binding_visual_smoke/ui_smoke_screenshot_1013K_R16_desktop.png
-- 1013K_R16_isolated_static_binding_visual_smoke/ui_smoke_screenshot_1013K_R16_mobile.png
-
-No formal frontend page was modified.
+This repository is an independent review package repo. The main project dirty tree is not pushed here.

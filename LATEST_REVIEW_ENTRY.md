@@ -1,37 +1,34 @@
 # Latest Review Entry
 
-STAGE=1013L_R15_EXISTING_PAGE_HYDRATION_MILESTONE_PACKAGE
-FINAL_STATUS=PASS_1013L_R15_EXISTING_PAGE_HYDRATION_MILESTONE_PACKAGE
-NEXT_STAGE=1013L_R16_EXISTING_PAGE_MOBILE_LAYOUT_POLISH_AND_TEACHER_TEST_ENTRY
-GITHUB_UPLOADED=true
-GITHUB_REVIEW_PACKAGE_UPLOADED=true
+```text
+REVIEW_STAGE=1013L_R18_TEACHER_TEST_ENTRY_MILESTONE_PACKAGE
+FINAL_STATUS=PASS_1013L_R18_TEACHER_TEST_ENTRY_MILESTONE_PACKAGE
+LATEST_COMPLETED_STAGE=1013L_R18_TEACHER_TEST_ENTRY_MILESTONE_PACKAGE
+NEXT_RECOMMENDED_STAGE=1013L_R19_TEACHER_MANUAL_TEST_FEEDBACK_INTAKE
 FORMAL_FRONTEND_BINDING_ALLOWED=false
+RUNTIME_CONNECTED=false
+PROVIDER_MODEL_CALL_ALLOWED=false
 MAIN_PROJECT_PUSHED=false
+```
 
-R15 packages R11-R14 as the existing-page hydration milestone.
+## Summary
 
-Key result:
+R18 packages the existing-page teacher-test line. It includes R16 mobile polish, R16A closure of the older R5 review guards, and R17 desktop smoke for the big-unit reading surface, courseware edit workspace, and classroom display preview.
 
-- R11 hydrates courseware readonly ViewModel into the existing 1013J/R8 page functions.
-- R12 screenshots normal page, courseware workspace, display preview, and mobile normal shell.
-- R13 hydrates the big-unit readonly ViewModel into the existing big-unit surface.
-- R14 screenshots desktop big-unit, desktop normal shell, and mobile big-unit route.
-
-Important caveat:
-
-`mobile_layout_polish_required=true`; mobile DOM hydration passes, but the legacy notebook column still consumes the viewport before the big-unit body. Do not enter formal frontend binding from this milestone.
-
-Boundary fields:
+Teacher entry:
 
 ```text
-runtime_connected=false
-real_fetch_performed=false
-provider_called=false
-model_called=false
-database_written=false
-memory_written=false
-feishu_written=false
-formal_apply_performed=false
-main_project_pushed=false
-formal_frontend_binding_allowed=false
+1013L_R18_teacher_test_entry_milestone_package/1013L_R17_existing_page_teacher_test_desktop_smoke_package/prep_room_render_canvas_deepen_v1_1013L_R17_teacher_test_desktop.html
 ```
+
+Suggested checks:
+
+```text
+?r13=bigUnit
+?mode=edit#coursewareExpanded
+?preview=display&screen=03#coursewareExpanded
+```
+
+## Boundary
+
+No runtime, provider/model, database, memory, Feishu, formal apply, or main-project push.

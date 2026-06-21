@@ -1,0 +1,111 @@
+{
+  "stage": "1013L_R16A_R5_GUARD_CLOSURE_NOTE_FOR_CURRENT_LINE",
+  "review_source": "GPT review of older 1013L_R5 with ACCEPT_WITH_R6_GUARDS",
+  "current_line_checked": [
+    "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R13_existing_page_big_unit_viewmodel_visible_hydration/prep_room_render_canvas_deepen_v1_1013L_R13_big_unit_visible_hydration.html",
+    "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R16_existing_page_mobile_layout_polish_and_teacher_test_entry/prep_room_render_canvas_deepen_v1_1013L_R16_mobile_polish_teacher_test_entry.html"
+  ],
+  "guards": [
+    {
+      "guard_id": "R5_GUARD_A_VISIBLE_AGENT_NAME",
+      "review_issue": "R5 response fixture/screenshot used 小备.",
+      "current_line_status": "CLOSED_FOR_VISIBLE_CURRENT_LINE",
+      "evidence": {
+        "deprecated_visible_phrase_hits": [],
+        "required_current_phrase_hits": [
+          "小教草稿",
+          "对小教说一句",
+          "编辑会在弹窗里处理，教师确认前不写入正式备课本。"
+        ],
+        "legacy_hidden_payload_contains_xiaobei": true
+      },
+      "decision": "Current teacher-visible courseware and prep-room copy uses 小教. Legacy hidden adapter profile may still contain 小备 as customizable display/wake name; routing must remain active_capability-based."
+    },
+    {
+      "guard_id": "R5_GUARD_B_STATE_COUNT_ALIGNMENT",
+      "review_issue": "R5 registry state_count=8 but fetch adapter state_count=7.",
+      "current_line_status": "DOCUMENTED_AS_INTENTIONAL_ALIAS_GAP",
+      "evidence": {
+        "registry_state_count": 8,
+        "adapter_state_count": 7,
+        "registry_states": [
+          "home_scene",
+          "prep_notebook",
+          "big_unit_design",
+          "single_lesson_design",
+          "courseware_workspace",
+          "classroom_display_preview",
+          "material_intake",
+          "week_calendar"
+        ],
+        "adapter_states": [
+          "home_scene",
+          "big_unit_design",
+          "single_lesson_design",
+          "courseware_workspace",
+          "classroom_display_preview",
+          "material_intake",
+          "week_calendar"
+        ],
+        "registry_only_states": [
+          "prep_notebook"
+        ]
+      },
+      "decision": "prep_notebook is a registry/shell alias for the existing single-lesson notebook surface. The readonly fetch path maps the concrete render state to single_lesson_design. Do not add a separate prep_notebook fetch adapter unless runtime later needs a distinct endpoint."
+    },
+    {
+      "guard_id": "R5_GUARD_C_ROUTE_EVIDENCE",
+      "review_issue": "R5 routes.py evidence was incomplete because routes.py was dirty.",
+      "current_line_status": "HELD_FOR_REAL_RUNTIME_ROUTE_SMOKE",
+      "evidence": {
+        "r5_routes_registration_note": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/source_delta_1013L_R5/routes_registration_note_1013L_R5.md",
+        "current_line_mode": "static hydration / existing page visible smoke",
+        "runtime_connected": false
+      },
+      "decision": "Current line is still static hydration, so route evidence is not required for this milestone. Before any real runtime binding, create an independent route map and fetch smoke covering all concrete state endpoints."
+    }
+  ],
+  "name_scan": {
+    "scan_scope": "current R13/R16 visible teacher-facing phrase scan",
+    "deprecated_visible_phrase_hits": [],
+    "required_current_phrase_hits": [
+      "小教草稿",
+      "对小教说一句",
+      "编辑会在弹窗里处理，教师确认前不写入正式备课本。"
+    ],
+    "legacy_hidden_payload_contains_xiaobei": true,
+    "legacy_hidden_payload_policy": "R5/R8 embedded adapter payload may still include 小备 as a legacy/customizable assistant_profile value, but current routing uses active_capability and current visible courseware/prep-room copy uses 小教."
+  },
+  "next_runtime_guard": {
+    "required_before_real_runtime_binding": true,
+    "suggested_stage": "1013L_R17_ROUTE_MAP_AND_READONLY_FETCH_SMOKE_BEFORE_RUNTIME_BINDING",
+    "must_check": [
+      "/api/prep-room/main-shell/viewmodel",
+      "/api/prep-room/main-shell/viewmodel/state/home_scene",
+      "/api/prep-room/main-shell/viewmodel/state/big_unit_design",
+      "/api/prep-room/main-shell/viewmodel/state/single_lesson_design",
+      "/api/prep-room/main-shell/viewmodel/state/courseware_workspace",
+      "/api/prep-room/main-shell/viewmodel/state/classroom_display_preview",
+      "/api/prep-room/main-shell/viewmodel/state/material_intake",
+      "/api/prep-room/main-shell/viewmodel/state/week_calendar"
+    ],
+    "prep_notebook_policy": "alias_to_single_lesson_design_unless_distinct_runtime_need_appears"
+  },
+  "boundary": {
+    "guard_closure_note_only": true,
+    "existing_page_reused": true,
+    "new_visible_page_created": false,
+    "new_shell_standard_created": false,
+    "runtime_connected": false,
+    "real_fetch_performed": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false,
+    "github_uploaded": false,
+    "formal_frontend_binding_allowed": false
+  }
+}

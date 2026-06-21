@@ -1,0 +1,85 @@
+{
+  "smoke_id": "teacher_test_desktop_smoke_1013L_R17",
+  "stage": "1013L_R17_EXISTING_PAGE_TEACHER_TEST_DESKTOP_SMOKE_PACKAGE",
+  "source_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R17_existing_page_teacher_test_desktop_smoke_package/prep_room_render_canvas_deepen_v1_1013L_R17_teacher_test_desktop.html",
+  "cases": [
+    {
+      "case_id": "teacher_big_unit_reading_entry",
+      "suffix": "?r13=bigUnit",
+      "screenshot": "ui_smoke_1013L_R17_desktop_big_unit.png",
+      "markers": [
+        "第一单元《多变的色彩》",
+        "课标依据",
+        "课时任务链",
+        "小教"
+      ],
+      "url": "file:///D:/Documents/SmartEdu/xiaobei-core/outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R17_existing_page_teacher_test_desktop_smoke_package/prep_room_render_canvas_deepen_v1_1013L_R17_teacher_test_desktop.html?r13=bigUnit",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R17_existing_page_teacher_test_desktop_smoke_package/ui_smoke_1013L_R17_desktop_big_unit.png",
+      "bytes": 821211,
+      "png_size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "missing_markers": [],
+      "pass": true
+    },
+    {
+      "case_id": "teacher_courseware_edit_entry",
+      "suffix": "?mode=edit#coursewareExpanded",
+      "screenshot": "ui_smoke_1013L_R17_desktop_courseware_edit.png",
+      "markers": [
+        "课件草稿",
+        "小教草稿",
+        "比较两组颜色",
+        "进入大屏预览"
+      ],
+      "url": "file:///D:/Documents/SmartEdu/xiaobei-core/outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R17_existing_page_teacher_test_desktop_smoke_package/prep_room_render_canvas_deepen_v1_1013L_R17_teacher_test_desktop.html?mode=edit#coursewareExpanded",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R17_existing_page_teacher_test_desktop_smoke_package/ui_smoke_1013L_R17_desktop_courseware_edit.png",
+      "bytes": 388640,
+      "png_size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "missing_markers": [],
+      "pass": true
+    },
+    {
+      "case_id": "teacher_display_preview_entry",
+      "suffix": "?preview=display&screen=03#coursewareExpanded",
+      "screenshot": "ui_smoke_1013L_R17_desktop_display_preview.png",
+      "markers": [
+        "哪一组颜色更安静",
+        "16:9",
+        "退出预览",
+        "小教草稿"
+      ],
+      "url": "file:///D:/Documents/SmartEdu/xiaobei-core/outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R17_existing_page_teacher_test_desktop_smoke_package/prep_room_render_canvas_deepen_v1_1013L_R17_teacher_test_desktop.html?preview=display&screen=03#coursewareExpanded",
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R17_existing_page_teacher_test_desktop_smoke_package/ui_smoke_1013L_R17_desktop_display_preview.png",
+      "bytes": 459291,
+      "png_size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "missing_markers": [],
+      "pass": true
+    }
+  ],
+  "smoke_pass": true,
+  "boundary": {
+    "teacher_test_desktop_smoke_only": true,
+    "existing_page_reused": true,
+    "new_visible_page_created": false,
+    "new_shell_standard_created": false,
+    "runtime_connected": false,
+    "real_fetch_performed": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false,
+    "github_uploaded": false,
+    "formal_frontend_binding_allowed": false
+  }
+}

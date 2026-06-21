@@ -1,0 +1,61 @@
+{
+  "smoke_id": "mobile_layout_polish_smoke_1013L_R16",
+  "stage": "1013L_R16_EXISTING_PAGE_MOBILE_LAYOUT_POLISH_AND_TEACHER_TEST_ENTRY",
+  "source_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R16_existing_page_mobile_layout_polish_and_teacher_test_entry/prep_room_render_canvas_deepen_v1_1013L_R16_mobile_polish_teacher_test_entry.html",
+  "case_count": 2,
+  "cases": [
+    {
+      "case_id": "desktop_big_unit_still_available",
+      "suffix": "?r13=bigUnit",
+      "width": 1920,
+      "height": 1080,
+      "screenshot": "ui_smoke_1013L_R16_desktop_big_unit.png",
+      "markers": [
+        "data-1013l-r16-mobile-polished=\"true\"",
+        "课标依据",
+        "课时任务链"
+      ],
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R16_existing_page_mobile_layout_polish_and_teacher_test_entry/ui_smoke_1013L_R16_desktop_big_unit.png",
+      "actual_width": 1920,
+      "actual_height": 1080,
+      "bytes": 821211,
+      "missing_markers": [],
+      "pass": true
+    },
+    {
+      "case_id": "mobile_big_unit_body_visible",
+      "suffix": "?r13=bigUnit",
+      "width": 390,
+      "height": 1200,
+      "screenshot": "ui_smoke_1013L_R16_mobile_big_unit.png",
+      "markers": [
+        "data-1013l-r16-mobile-polished=\"true\"",
+        "第一单元《多变的色彩》",
+        "课标依据"
+      ],
+      "path": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R16_existing_page_mobile_layout_polish_and_teacher_test_entry/ui_smoke_1013L_R16_mobile_big_unit.png",
+      "actual_width": 390,
+      "actual_height": 1200,
+      "bytes": 166376,
+      "missing_markers": [],
+      "pass": true
+    }
+  ],
+  "smoke_pass": true,
+  "boundary": {
+    "mobile_static_polish_only": true,
+    "existing_page_reused": true,
+    "new_visible_page_created": false,
+    "new_shell_standard_created": false,
+    "runtime_connected": false,
+    "real_fetch_performed": false,
+    "provider_called": false,
+    "model_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_apply_performed": false,
+    "main_project_pushed": false,
+    "formal_frontend_binding_allowed": false
+  }
+}

@@ -1,45 +1,46 @@
-# Review Package Manifest
+# 1013L R18 · Teacher Test Entry Milestone Package
 
-Current milestone: `1013L_R15_EXISTING_PAGE_HYDRATION_MILESTONE_PACKAGE`
+## Status
 
-## Included Line
+`PASS_1013L_R18_TEACHER_TEST_ENTRY_MILESTONE_PACKAGE`
 
-- `1013L_R11_existing_page_readonly_viewmodel_static_hydration_apply/`
-- `1013L_R12_existing_page_hydrated_viewmodel_visual_smoke/`
-- `1013L_R13_existing_page_big_unit_viewmodel_visible_hydration/`
-- `1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/`
-- `1013L_R15_existing_page_hydration_milestone_package/`
-- `source_delta_1013L_R11/`
-- `source_delta_1013L_R12/`
-- `source_delta_1013L_R13/`
-- `source_delta_1013L_R14/`
-- `source_delta_1013L_R15/`
+This milestone packages the existing-page teacher-test line from R16 through R17 and includes the R16A closure of the older R5 review guards.
 
-## Critical Files
+## Included Stages
 
-- `1013L_R15_existing_page_hydration_milestone_package/1013L_R15_result.json`
-- `1013L_R15_existing_page_hydration_milestone_package/1013L_R15_report.md`
-- `1013L_R15_existing_page_hydration_milestone_package/milestone_file_index_1013L_R15.json`
-- `1013L_R13_existing_page_big_unit_viewmodel_visible_hydration/prep_room_render_canvas_deepen_v1_1013L_R13_big_unit_visible_hydration.html`
-- `1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/ui_smoke_1013L_R14_desktop_big_unit.png`
-- `1013L_R14_existing_page_big_unit_viewmodel_visual_smoke/ui_smoke_1013L_R14_mobile_big_unit.png`
+- R16: mobile layout polish and teacher test entry.
+- R16A: R5 guard closure note for the current line.
+- R17: desktop teacher-test smoke for big-unit, courseware edit, and classroom display preview.
+
+## Teacher Entry
+
+Open:
+
+`1013L_R17_existing_page_teacher_test_desktop_smoke_package/prep_room_render_canvas_deepen_v1_1013L_R17_teacher_test_desktop.html`
+
+Suggested URLs:
+
+- Big unit: `?r13=bigUnit`
+- Courseware edit: `?mode=edit#coursewareExpanded`
+- Display preview: `?preview=display&screen=03#coursewareExpanded`
 
 ## Boundary
 
-- `existing_page_reused=true`
-- `new_visible_page_created=false`
-- `new_shell_standard_created=false`
-- `formal_frontend_binding_allowed=false`
-- `runtime_connected=false`
-- `real_fetch_performed=false`
-- `provider_called=false`
-- `model_called=false`
-- `database_written=false`
-- `memory_written=false`
-- `feishu_written=false`
-- `formal_apply_performed=false`
-- `main_project_pushed=false`
+- Runtime connected: false
+- Provider/model called: false
+- Database/memory/Feishu written: false
+- Formal apply performed: false
+- Main project pushed: false
 
-## Caveat
+## Validators
 
-`mobile_layout_polish_required=true`. Desktop direction can be reviewed. Mobile should remain on hold before formal frontend binding.
+From the main project root, the current local validators are:
+
+```text
+python scripts/validate_1013L_R16_existing_page_mobile_layout_polish_and_teacher_test_entry.py
+python scripts/validate_1013L_R16A_r5_guard_closure_note_for_current_line.py
+python scripts/validate_1013L_R17_existing_page_teacher_test_desktop_smoke_package.py
+python scripts/validate_1013L_R18_teacher_test_entry_milestone_package.py
+```
+
+The review package also contains copies under `scripts/` for path inspection.
