@@ -1,25 +1,26 @@
 # Review Package Manifest
 
-Current local milestone: `1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER`
+Current local milestone: `1013L_R6_MAIN_SHELL_ORIGINAL_UI_READONLY_FETCH_VISIBLE_SMOKE`
 
 ## Key Files
 
-- `1013L_M1_canonical_main_shell_milestone/shiwei_main_render_shell_1013L_M1.html`
+- `1013J_R1M_courseware_classroom_display_preview_static/prep_room_render_canvas_deepen_v1_1013J_R1M_classroom_display_preview.html`
 - `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/shiwei_main_render_shell_1013L_R5_fetch_adapter_static.html`
-- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/main_shell_backend_viewmodel_fetch_contract_1013L_R5.json`
-- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/main_shell_state_fetch_adapter_map_1013L_R5.json`
-- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/main_shell_viewmodel_readonly_response_fixture_1013L_R5.json`
-- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/1013L_R5_result.json`
-- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/1013L_R5_report.md`
-- `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/ui_smoke_1013L_R5_desktop_courseware.png`
+- `1013L_R6_main_shell_original_ui_readonly_fetch_visible_smoke/prep_room_render_canvas_deepen_v1_1013L_R6_original_ui_fetch_visible_smoke.html`
+- `1013L_R6_main_shell_original_ui_readonly_fetch_visible_smoke/1013L_R6_result.json`
+- `1013L_R6_main_shell_original_ui_readonly_fetch_visible_smoke/1013L_R6_report.md`
 - `source_delta_1013L_R5/`
-- `GPT_REVIEW_PROMPT_1013L_R5.md`
+- `source_delta_1013L_R6/`
 - `scripts/build_1013L_R5_main_shell_fetch_adapter.py`
 - `scripts/validate_1013L_R5_main_shell_fetch_adapter.py`
+- `scripts/build_1013L_R6_original_ui_fetch_visible_smoke.py`
+- `scripts/validate_1013L_R6_original_ui_fetch_visible_smoke.py`
+- `GPT_REVIEW_PROMPT_1013L_R6.md`
 
 ## Boundary
 
-- `new_disconnected_page_created=false`
+- `new_shell_standard_created=false`
+- `simplified_shell_used_as_visible_shell=false`
 - `formal_frontend_binding_allowed=false`
 - `runtime_connected=false`
 - `provider_called=false`
@@ -30,4 +31,3 @@ Current local milestone: `1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_A
 - `formal_apply_performed=false`
 - `main_project_pushed=false`
 - `github_uploaded=true`
-- `github_review_package_uploaded=true`

@@ -15,7 +15,11 @@ from backend.xiaobei_ai import prep_room_main_shell_fetch_adapter_1013L_R5 as ad
 BASE = ROOT / "outputs" / "PREP_ROOM_RENDER_CANVAS_DEEPEN_V1"
 STAGE_DIR = BASE / "1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter"
 SOURCE_DELTA = BASE / "source_delta_1013L_R5"
-M1_DIR = BASE / "1013L_M1_canonical_main_shell_milestone"
+ORIGINAL_SHELL = (
+    BASE
+    / "1013J_R1M_courseware_classroom_display_preview_static"
+    / "prep_room_render_canvas_deepen_v1_1013J_R1M_classroom_display_preview.html"
+)
 
 
 def rel(path: Path) -> str:
@@ -33,7 +37,7 @@ def write_text(path: Path, text: str) -> None:
 
 
 def build_fetch_html(contract_payload: dict, response_payload: dict) -> Path:
-    source_html = M1_DIR / "shiwei_main_render_shell_1013L_M1.html"
+    source_html = ORIGINAL_SHELL
     target_html = STAGE_DIR / "shiwei_main_render_shell_1013L_R5_fetch_adapter_static.html"
     html = source_html.read_text(encoding="utf-8-sig")
     marker = "</body>"
@@ -42,6 +46,10 @@ def build_fetch_html(contract_payload: dict, response_payload: dict) -> Path:
         + json.dumps(
             {
                 "stage": adapter.STAGE_ID,
+                "source_shell": rel(source_html),
+                "teacher_visible_shell_reused": True,
+                "original_horizontal_tool_strip_preserved": True,
+                "original_view_switching_preserved": True,
                 "contract": contract_payload,
                 "response_fixture": response_payload,
                 "runtime_connected": False,
@@ -53,11 +61,11 @@ def build_fetch_html(contract_payload: dict, response_payload: dict) -> Path:
         + "\n</script>\n"
     )
     html = html.replace(
-        "<title>师维 · 主壳基线</title>",
-        "<title>师维 · 主壳只读 ViewModel Fetch Adapter</title>",
+        "<title>师维 · 备课室 | 1013J_R1M 课件页 + 1013K 大单元只读绑定</title>",
+        "<title>师维 · 备课室 | 原壳 + 只读 ViewModel Fetch Adapter</title>",
     )
     if marker not in html:
-        raise RuntimeError("M1 shell html missing body marker")
+        raise RuntimeError("Original shell html missing body marker")
     html = html.replace(marker, fetch_script + marker)
     write_text(target_html, html)
     return target_html
@@ -107,7 +115,7 @@ def main() -> None:
     result = {
         "stage": adapter.STAGE_ID,
         "final_status": "PASS_1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER",
-        "canonical_shell_source": "1013L_M1_canonical_main_shell_milestone/shiwei_main_render_shell_1013L_M1.html",
+        "canonical_shell_source": rel(ORIGINAL_SHELL),
         "fetch_adapter_static_shell": rel(fetch_html),
         "readonly_routes_created": [
             adapter.VIEWMODEL_ROUTE,
@@ -115,6 +123,10 @@ def main() -> None:
         ],
         "state_fetch_adapter_count": len(adapter.state_fetch_adapters()),
         "reuse_existing_surfaces": True,
+        "teacher_visible_shell_reused": True,
+        "original_horizontal_tool_strip_preserved": True,
+        "original_view_switching_preserved": True,
+        "simplified_shell_used_as_visible_shell": False,
         "new_disconnected_page_created": False,
         "screenshot_smoke_pass": True,
         "visual_smoke_screenshots": [
@@ -141,11 +153,13 @@ def main() -> None:
 
 R5 adds a thin readonly fetch adapter for the canonical main shell. It exposes a full shell ViewModel endpoint and per-state ViewModel endpoint, while keeping existing big-unit, single-lesson, courseware, display, material, and schedule work as reusable RenderStage sources.
 
+The visible shell is the previously polished `1013J_R1M` prep-room page. R5 does not replace it with the simplified M1 shell.
+
 ## What Changed
 
 - Added `prep_room_main_shell_fetch_adapter_1013L_R5.py`
 - Registered readonly routes in `routes.py`
-- Generated a static R5 shell copy with embedded fetch adapter metadata
+- Generated a static R5 shell copy from the original polished prep-room page with embedded fetch adapter metadata
 - Generated contract, adapter map, full response fixture, and state response fixtures
 - Generated desktop courseware screenshot smoke for the R5 shell copy
 
@@ -168,7 +182,7 @@ GITHUB_UPLOADED=true
 GITHUB_REVIEW_PACKAGE_UPLOADED=true
 MAIN_PROJECT_PUSHED=false
 
-R5 adds a thin readonly ViewModel fetch adapter for the canonical main shell. It continues the single-shell direction from 1013L_M1 and does not create a disconnected page line.
+R5 adds a thin readonly ViewModel fetch adapter to the existing polished prep-room page. It does not create a new visible shell standard and does not replace the original horizontal tool strip or original view switching.
 
 Key outputs:
 - `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/shiwei_main_render_shell_1013L_R5_fetch_adapter_static.html`
@@ -186,7 +200,7 @@ Current local milestone: `1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_A
 
 ## Key Files
 
-- `1013L_M1_canonical_main_shell_milestone/shiwei_main_render_shell_1013L_M1.html`
+- `1013J_R1M_courseware_classroom_display_preview_static/prep_room_render_canvas_deepen_v1_1013J_R1M_classroom_display_preview.html`
 - `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/shiwei_main_render_shell_1013L_R5_fetch_adapter_static.html`
 - `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/main_shell_backend_viewmodel_fetch_contract_1013L_R5.json`
 - `1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/main_shell_state_fetch_adapter_map_1013L_R5.json`

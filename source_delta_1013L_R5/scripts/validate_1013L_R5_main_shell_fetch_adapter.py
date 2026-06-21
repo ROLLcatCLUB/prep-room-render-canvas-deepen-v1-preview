@@ -39,11 +39,13 @@ def main() -> None:
         fail("missing R5 static shell html")
     html = html_path.read_text(encoding="utf-8-sig")
     for marker in [
-        "render-stage-registry",
         "main-shell-fetch-adapter-1013L-R5",
-        "stateList",
-        "stageBody",
-        "agent-bar",
+        "ai-tool-strip",
+        "toolRail",
+        "viewTabs",
+        "data-view",
+        "coursewareExpanded",
+        "chatInput",
     ]:
         if marker not in html:
             fail(f"R5 html missing marker: {marker}")
@@ -52,6 +54,14 @@ def main() -> None:
         fail("unexpected R5 final status")
     if result.get("state_fetch_adapter_count") != 7:
         fail("unexpected R5 state adapter count")
+    if result.get("teacher_visible_shell_reused") is not True:
+        fail("R5 did not reuse the teacher-visible original shell")
+    if result.get("original_horizontal_tool_strip_preserved") is not True:
+        fail("original horizontal tool strip was not preserved")
+    if result.get("original_view_switching_preserved") is not True:
+        fail("original view switching was not preserved")
+    if result.get("simplified_shell_used_as_visible_shell") is not False:
+        fail("simplified shell was still used as visible shell")
     if result.get("screenshot_smoke_pass") is not True:
         fail("screenshot smoke did not pass")
     for screenshot in result.get("visual_smoke_screenshots", []):

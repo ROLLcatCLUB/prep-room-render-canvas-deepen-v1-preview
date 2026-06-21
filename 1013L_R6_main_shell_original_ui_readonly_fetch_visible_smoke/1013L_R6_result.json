@@ -1,0 +1,33 @@
+{
+  "stage": "1013L_R6_MAIN_SHELL_ORIGINAL_UI_READONLY_FETCH_VISIBLE_SMOKE",
+  "final_status": "PASS_1013L_R6_MAIN_SHELL_ORIGINAL_UI_READONLY_FETCH_VISIBLE_SMOKE",
+  "source_stage": "1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER",
+  "source_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/shiwei_main_render_shell_1013L_R5_fetch_adapter_static.html",
+  "visible_smoke_html": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R6_main_shell_original_ui_readonly_fetch_visible_smoke/prep_room_render_canvas_deepen_v1_1013L_R6_original_ui_fetch_visible_smoke.html",
+  "original_horizontal_tool_strip_preserved": true,
+  "original_view_tabs_preserved": true,
+  "original_data_view_switching_preserved": true,
+  "courseware_expanded_route_preserved": true,
+  "bottom_agent_input_preserved": true,
+  "fetch_adapter_metadata_present": true,
+  "new_shell_standard_created": false,
+  "simplified_shell_used_as_visible_shell": false,
+  "screenshot_smoke_pass": true,
+  "visual_smoke_screenshots": [
+    "ui_smoke_1013L_R6_desktop_default.png",
+    "ui_smoke_1013L_R6_desktop_courseware_expanded.png",
+    "ui_smoke_1013L_R6_mobile_default.png"
+  ],
+  "formal_frontend_binding_allowed": false,
+  "runtime_connected": false,
+  "provider_called": false,
+  "model_called": false,
+  "database_written": false,
+  "memory_written": false,
+  "feishu_written": false,
+  "formal_apply_performed": false,
+  "main_project_pushed": false,
+  "github_uploaded": true,
+  "github_review_package_uploaded": true,
+  "next_stage": "1013L_R7_MAIN_SHELL_READONLY_FETCH_ADAPTER_TO_ORIGINAL_PAGE_INTERACTION_BINDING_PLAN"
+}

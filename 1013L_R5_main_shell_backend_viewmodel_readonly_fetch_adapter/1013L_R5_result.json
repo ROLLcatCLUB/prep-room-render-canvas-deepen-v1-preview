@@ -1,7 +1,7 @@
 {
   "stage": "1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER",
   "final_status": "PASS_1013L_R5_MAIN_SHELL_BACKEND_VIEWMODEL_READONLY_FETCH_ADAPTER",
-  "canonical_shell_source": "1013L_M1_canonical_main_shell_milestone/shiwei_main_render_shell_1013L_M1.html",
+  "canonical_shell_source": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013J_R1M_courseware_classroom_display_preview_static/prep_room_render_canvas_deepen_v1_1013J_R1M_classroom_display_preview.html",
   "fetch_adapter_static_shell": "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013L_R5_main_shell_backend_viewmodel_readonly_fetch_adapter/shiwei_main_render_shell_1013L_R5_fetch_adapter_static.html",
   "readonly_routes_created": [
     "/api/prep-room/main-shell/viewmodel",
@@ -9,6 +9,10 @@
   ],
   "state_fetch_adapter_count": 7,
   "reuse_existing_surfaces": true,
+  "teacher_visible_shell_reused": true,
+  "original_horizontal_tool_strip_preserved": true,
+  "original_view_switching_preserved": true,
+  "simplified_shell_used_as_visible_shell": false,
   "new_disconnected_page_created": false,
   "screenshot_smoke_pass": true,
   "visual_smoke_screenshots": [
